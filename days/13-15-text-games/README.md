@@ -1,4 +1,4 @@
-# 13-15 Text-based Games Challenges
+# Days 13-15 Text-based Games Challenges
 
 Now that you have seen the videos from day 13 and have some experience with classes and objects, we are going to build another, slightly more complex (but fun!) game.
 
@@ -38,7 +38,7 @@ Now, to your challenges!
 
 ## Day 14: Write standard **Rock, Paper, Scissors**
 
-You will model **Rock, Paper, Scissors** with classes and a game loop. Recall the three rolls (Rock, Paper, and Scissor). These can be just hard coded into your game.
+You will model **Rock, Paper, Scissors** with classes and a game loop. Recall the three rolls (Rock, Paper, and Scissors). These can be just hard coded into your game.
 
 ### Classes
 
@@ -88,6 +88,8 @@ def game_loop(player1, player2, rolls):
 
     # Compute who won
 ```
+
+Bonus points for address the possibility of a tie after three rounds.
 
 ## Day 15: Write standard **Rock, Paper, Scissors**
 
