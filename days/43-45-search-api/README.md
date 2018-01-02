@@ -63,7 +63,7 @@ Movie = collections.namedtuple('Movie',
 
 Define a corresponding `namedtuple` for search results and refactor your code to use this type instead of passing raw dictionaries.
 
-Now for the interaction cleanup. Once you display the results, ask the use if they want to view any of them (use an index, ask for a number of the listed ones). 
+Now for the interaction cleanup. Once you display the results, ask the user if they want to view any of them (use an index, ask for a number of the listed ones or use the episode ID returned from the service (e.g. 142)). 
 
 When they pick one, use the URL from the service response and open the users default web browser to that page. Sounds complicated, in Python it's just:
 
