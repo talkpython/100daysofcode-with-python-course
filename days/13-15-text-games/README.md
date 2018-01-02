@@ -96,3 +96,11 @@ Modify the game you created above on Day 14. Use the data in [`battle-table.csv`
 Remember if you want to try to parse the CSV, you can borrow code from [`sample_reader.py`](data/sample_reader.py). 
 
 Alternatively, you could simply hard code the table into the creation of the classes by creating the 15 types and setting who they defeat or are defeated by manually when creating them.
+
+### Time to share what you've accomplished!
+
+Be sure to share your last couple of days work on Twitter or Facebook. Use the hashtag **#100DaysOfCode**. 
+
+Here are [some examples](https://twitter.com/search?q=%23100DaysOfCode) to inspire you. Consider including [@talkpython](https://twitter.com/talkpython) and [@pybites](https://twitter.com/pybites) in your tweets.
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/100daysofcode-with-python-course/issues) or fix it and [submit a PR](https://github.com/talkpython/100daysofcode-with-python-course/pulls).*
