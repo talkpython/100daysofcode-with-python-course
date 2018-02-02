@@ -16,6 +16,9 @@ Today is mostly watching the corresponding videos from the course. Be sure to wa
 8. Import requests inside the `api.py`, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
 9. Install [Postman](https://www.getpostman.com/) for exploring the API.
 
+[![](./readme_resources/post-sm.jpg)](./readme_resources/post.png)
+
+
 ## Day 44: Calling the API
 
 Today, you will work with the search backend of [Talk Python To Me](https://talkpython.fm/): 
