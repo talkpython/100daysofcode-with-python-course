@@ -8,11 +8,11 @@ Perhaps you've heard of [**Rock Paper Scissors**](https://www.wikihow.com/Play-R
 
 We are going to build **Rock Paper Scissors**. That will be day 13, 14, and 15. 
 
-For those of you who get through this challenge quickly and want a bigger challenge, we have something special to stretch yourself with.
-
-Behold **15-way Rock Paper Scissors**!
+For those of you who get through this challenge quickly and want a bigger challenge, we have something special to stretch yourself with. Behold, **15-way Rock Paper Scissors**!
 
 ![](./rps15.jpg)
+
+Image credit: [David Lovelace](http://www.umop.com/rps15.htm)
 
 Now, onto your challenges!
 
