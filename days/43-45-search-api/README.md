@@ -9,11 +9,11 @@ Today is mostly watching the corresponding videos from the course. Be sure to wa
 1. Create a new empty Python project with a virtual environment
 2. Reminder: Virtual environments are created using the commend `python3 -m venv .env` (use python rather than python3 for the command on Windows).
 3. Activate the environment:
-	4. macOS / Linux: `. .env/bin/activate`
-	5. Windows: `.env/scripts/activate'
-6. Install requests with pip
+	* macOS / Linux: `. .env/bin/activate`
+	* Windows: `.env/scripts/activate`
+6. Install `requests` with `pip`
 7. Create a `program.py` Python file and supporting `api.py` file 
-8. Import requests inside the api.py, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
+8. Import requests inside the `api.py`, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
 9. Install [Postman](https://www.getpostman.com/) for exploring the API.
 
 ## Day 44: Calling the API
