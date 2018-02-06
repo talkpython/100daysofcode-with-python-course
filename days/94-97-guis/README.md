@@ -42,6 +42,10 @@ Your goal today will be to flesh out `program.py`:
 
 Once you have your app running the same but in a GUI version, you're done!
 
+Here's an example of a fun little app I converted using GUI.
+
+![Pyramid starter app, based on Gooey](readme_resources/app.png)
+
 ## Day N+2: Packaging the application
 
 Now that you have an amazing GUI app in Python, let's make it sharable. 
