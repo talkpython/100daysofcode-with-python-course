@@ -54,7 +54,7 @@ Activate your virtual environment from your app. Install `pyinstaller` with `pip
 
 Create a build.spec file. I suggest you "borrow" this one and just change the path and name:
 
-[**`./days/94-97-guis//demos/final_search_app/build.spec`**](days/94-97-guis/demos/final_search_app/build.spec)
+[**`demos/final_search_app/build.spec`**](demos/final_search_app/build.spec)
 
 Put this file next to your `program.py`. Run Pyinstaller with the following command.
 
