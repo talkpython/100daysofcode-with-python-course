@@ -1,4 +1,4 @@
-# Days 94-97 Searching via JSON APIs
+# Days 94-97 Packaging Python apps as GUIs
 
 Now you have seen the videos from this chapter, you're ready to build your first Python GUI application. This is a fun one and a skill most Python enthusiasts never develop!
 
