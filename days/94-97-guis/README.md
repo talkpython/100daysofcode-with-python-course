@@ -34,10 +34,10 @@ Now look through the applications that you have built for this course. Choose on
 Your goal today will be to flesh out `program.py`:
 
 1. Implement the details of the app you selected
-2. Mark the main method or entry point with @Gooey()
-3. Create a GooeyParser()
-4. Configure it for the inputs
-5. Call parse_args() on the parser
+2. Mark the main method or entry point with `@Gooey()`
+3. Create a `GooeyParser()`
+4. Configure it for the inputs with `parser.add_argument()`
+5. Call `parse_args()` on the parser
 6. Use the resulting object to make the program work with those inputs
 
 Once you have your app running the same but in a GUI version, you're done!
