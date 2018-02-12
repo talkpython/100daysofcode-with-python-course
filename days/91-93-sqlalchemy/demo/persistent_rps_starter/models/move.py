@@ -3,7 +3,6 @@ import datetime
 
 class Move:
     def __init__(self):
-        self.created = datetime.datetime.now()
         self.roll_id = None
         self.game_id = None
         self.roll_number = None
