@@ -9,6 +9,9 @@ Movie = collections.namedtuple('Movie', 'imdb_code, title, director, keywords, '
 
 
 def find_movie_by_title(keyword: str) -> List[Movie]:
+    if not keyword or not keyword.strip():
+        raise ValueError('Must specify a search term.')
+
     url = f'http://movie_service.talkpython.fm/api/search/{keyword}'
 
     resp = requests.get(url)
@@ -31,13 +34,9 @@ def create_random_errors(results):
     # more types.
 
     num = random.randint(1, 20)
-    if num <= 14:
-        return results  # No errors here.
-    elif 14 < num <= 15:
+    if 16 < num <= 18:
         return {}  # Whoops! No data.
-    elif 15 < num <= 17:
-        raise ValueError("TEST ERROR: JSON")
-    elif 17 < num <= 20:
+    elif 18 < num <= 20:
         raise StopIteration()
 
-    return results
+    return results  # no errors here.
