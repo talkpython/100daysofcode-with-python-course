@@ -1,80 +1,49 @@
 # Days 27-27 Error handling
 
-TBD
+One of the key differentiators of professional programs and scripts thrown together by beginners is pro app does not crash. It anticipates all the error conditions and puts the proper error handling and user feedback to keep working. 
 
-## Day N: Application skeleton
+Ok, pro apps still crash, but they do so much less often. When they do, we have [logging](https://logbook.readthedocs.io) and other error monitoring such as [Rollbar](https://rollbar.com/?dr) so that we can get notified and fix these once we encounter them. This allows apps to grow stronger and more resilient over time.
 
-Today is mostly watching the corresponding videos from the course. Be sure to watch the videos first. Then:
+Your goal during these three days is to solidify one of your apps you've already built.
 
-1. Create a new empty Python project with a virtual environment
-2. Reminder: Virtual environments are created using the commend `python3 -m venv .env` (use python rather than python3 for the command on Windows).
-3. Activate the environment:
-	* macOS / Linux: `. .env/bin/activate`
-	* Windows: `.env/scripts/activate`
-6. Install `requests` with `pip`
-7. Create a `program.py` Python file and supporting `api.py` file 
-8. Import requests inside the `api.py`, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
-9. Install [Postman](https://www.getpostman.com/) for exploring the API.
+## Day N: Pick your application
+
+Today is mostly watching the corresponding videos from the course. Be sure to watch the videos first. 
+
+Then look through the apps we've already built or other applications you may have created that could use so proper error handling. 
+
+One example that comes to mind is the text games apps we built. What happens when you enter invalid input?
+
+Once you picked your app, you'll be ready to improve it over the next two days. 
 
 ## Day N+1: Adding error handling to the demo app
 
-Today, you will work with the search backend of [Talk Python To Me](https://talkpython.fm/): 
+Your goal today will be to consider all the error cases in your application. What might go wrong? How will you test or discover these?
 
-**[search.talkpython.fm](http://search.talkpython.fm/)**
-
-Open that link and poke around a bit.
-
-Now to properly explore the API, open Postman (you did install it the day before right?) and explore some of the search end-points. Study the structure of the resulting JSON.
-
-[![](./readme_resources/post-sm.jpg)](./readme_resources/post.png)
-
-Your goal today will be to flesh out `program.py` and `api.py` to:
-
-1. Get a search word from the user
-2. Call the search service via requests
-3. Verify the success of this
-4. Return basic dictionaries to `program.py` and list the resulting titles
-
-You'll be done when you see something like:
-
-```
-$ python3 program.py
-
-******* SEARCH TALK PYTHON *******
-What keywords to search for? <ENTER WORDS>
-There are 7 matching episodes:
-1. Past, Present, and Future of IronPython
-2. Deep Dive into Modules and Packages
-3. Python at Netflix
-4. ...
-```
+Once you have a list of potential problems, run the app in ways that will trigger those errors. Make a list of the exception types so that you'll be able to handle them individually in the app.
 
 ## Day N+2: Add error handling to one of your applications
 
-Your app is basically working. Today we'll polish it up a bit with some code cleanup and user interaction.
+Now that you know the error conditions in your applications, it's time to add error handling.
 
-Start with code cleanup. We have been passing dictionaries around. These are not so much fun. Let's use `nametuples`. You create one link this:
-
-```python
-import collections
-
-Movie = collections.namedtuple('Movie', 
-   'imdb_code, title, director, keywords,'
-   'duration, genres, rating, year, imdb_score')
-```
-
-Define a corresponding `namedtuple` for search results and refactor your code to use this type instead of passing raw dictionaries.
-
-Now for the interaction cleanup. Once you display the results, ask the user if they want to view any of them (use an index, ask for a number of the listed ones or use the episode ID returned from the service (e.g. 142)). 
-
-When they pick one, use the URL from the service response and open the users default web browser to that page. Sounds complicated, in Python it's just:
+Recall, this looks something like:
 
 ```python
-import webbrowser
-webbrowser.open(full_url, new=2)
+try:
+    method1()
+    method2()
+    method3()
+except ExceptionType1 as x:
+    # details with x
+except ExceptionType2 as x:
+    # details with x
+Except Exception:
+    # general error fallback.
+finally:
+    # code that runs regardless of error or success.
 ```
 
-Once you have that interaction working, you're done with these three days of the challenge!
+Add the error handling to your app and verify that it's catching and handling errors as expected.
 
 ### Time to share what you've accomplished!
 
