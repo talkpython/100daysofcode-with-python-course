@@ -19,7 +19,7 @@ Today is mostly watching the corresponding videos from the course. Be sure to wa
 7. Create a `program.py` Python file
 8. Import `sqlalchemy` inside the `program.py` and run `program.py` to make sure it's wall hanging together.
 
-## Day N+1: Building the GUI
+## Day N+1: Building the database models
 
 Today you will model your data with SQLAlchemy classes and create the database. If this is your first SQLAlchemy attempt, keep it simple in the beginning.
 
