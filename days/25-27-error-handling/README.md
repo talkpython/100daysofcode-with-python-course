@@ -37,7 +37,7 @@ except ExceptionType1 as x:
     # details with x
 except ExceptionType2 as x:
     # details with x
-Except Exception:
+except Exception:
     # general error fallback.
 finally:
     # code that runs regardless of error or success.
