@@ -42,7 +42,7 @@ Recall that you define an endpoint method inside the class as:
 ```python
 Class MyClass(uplink.Consumer):
 
-    @uplink.get('/path/to/api/with/{data}
+    @uplink.get('/path/to/api/with/{data}')
     def call_api(data):
        pass
        
