@@ -2,9 +2,9 @@
 
 Are you ready to be a data-driven investigative journalist and put your Python and CSV parsing skills to work? That's your job for the next three days.
 
-Now you have seen the videos from day 37 and have some experience with CSV files. The first of these three days will be to just practice what you've learned 
+Now you have seen the videos from day 37 and have some experience with CSV files. The first of these three days will be to just practice what you've learned.
 
-## Day 37: Study and then choose your question and data set
+## Day N: Study and then choose your question and data set
 
 Today is mostly watching the corresponding videos from the course. Be sure to watch the videos first. 
 
@@ -29,7 +29,7 @@ Here's an example of how you might get started.
 4. Output a "region appropriate" menu of 5 items 
 
 
-## Day 38: Application skeleton
+## Day N+1: Application skeleton
 
 Now that you've chosen a topic (so you know what to name your app), you will just build the skeleton app to load the CSV file.
 
@@ -39,12 +39,12 @@ Now that you've chosen a topic (so you know what to name your app), you will jus
 	* macOS / Linux: `. .env/bin/activate`
 	* Windows: `.env/scripts/activate'
 7. Create a `program.py` Python file
-8. Import csv inside the `program.py`
+8. Import `csv` inside the `program.py`
 9. Create a data folder next to `program.py`
 10. Save the **raw** version of the relevant CSV file to that folder
 11. In your program, use `open(full_file_name, 'r')` and `csv.DictReader(file_stream)` to print the CSV rows to the screen.
 
-## Day 39: Analyze the data
+## Day N+2: Analyze the data
 
 Today, you answer the big question (whatever you selected on the first day) 
 
