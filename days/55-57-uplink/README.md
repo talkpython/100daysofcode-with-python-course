@@ -40,7 +40,7 @@ Your goal today will be to build an API client class in `api.py`.
 Recall that you define an endpoint method inside the class as:
 
 ```python
-Class MyClass(uplink.Consumer):
+class MyClass(uplink.Consumer):
 
     @uplink.get('/path/to/api/with/{data}')
     def call_api(data):
