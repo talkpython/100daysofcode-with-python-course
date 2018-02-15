@@ -31,7 +31,7 @@ Here's an example of how you might get started.
 
 ## Day N+1: Application skeleton
 
-Now that you've chosen a topic (so you know what to name your app), you will just build the skeleton app to load the CSV file.
+Now that you've chosen a topic (so you know what to name your app), you will just build the skeleton app to load the CSV file.
 
 1. Create a new empty Python project with a virtual environment
 2. Reminder: Virtual environments are created using the commend `python3 -m venv .env` (use python rather than python3 for the command on Windows).
