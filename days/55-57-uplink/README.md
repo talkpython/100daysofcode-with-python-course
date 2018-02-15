@@ -1,8 +1,8 @@
-# Days 43-45 Searching via JSON APIs
+# Days 55-57 Structured APIs with `uplink`
 
-Now you have seen the videos from day 43 and have some experience with JSON APIs. Over the next three days, we will build an application that lets you search Talk Python To Me using a JSON API.
+Remember the [movie search service](http://movie_service.talkpython.fm/) we discussed when we first worked with HTTP services? It's back and you're going to build a proper API client for it using `uplink`.
 
-## Day 43: Application skeleton
+## Day N: Application skeleton
 
 Today is mostly watching the corresponding videos from the course. Be sure to watch the videos first. Then:
 
@@ -11,70 +11,47 @@ Today is mostly watching the corresponding videos from the course. Be sure to wa
 3. Activate the environment:
 	* macOS / Linux: `. .env/bin/activate`
 	* Windows: `.env/scripts/activate`
-6. Install `requests` with `pip`
+6. Install `uplink` with `pip`
 7. Create a `program.py` Python file and supporting `api.py` file 
-8. Import requests inside the `api.py`, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
-9. Install [Postman](https://www.getpostman.com/) for exploring the API.
+8. Import `uplink` inside the `api.py`, import api in `program.py`, and run `program.py` to make sure it's wall hanging together.
 
-## Day 44: Calling the API
+## Day N+1: Model the API
 
-Today, you will work with the search backend of [Talk Python To Me](https://talkpython.fm/): 
+Visit the movie search service: [movie_service.talkpython.fm](http://movie_service.talkpython.fm/).
 
-**[search.talkpython.fm](http://search.talkpython.fm/)**
+You'll see there are three RESTful operations.
 
-Open that link and poke around a bit.
+    Search movies
+    GET /api/search/{keyword}
 
-Now to properly explore the API, open Postman (you did install it the day before right?) and explore some of the search end-points. Study the structure of the resulting JSON.
+    Movies by director
+    GET /api/director/{director_name}
 
-[![](./readme_resources/post-sm.jpg)](./readme_resources/post.png)
+    Movie by IMDB code
+    GET /api/movie/{imdb_number}
 
-Your goal today will be to flesh out `program.py` and `api.py` to:
+Your goal today will be to build an API client class in `api.py`.
 
-1. Get a search word from the user
-2. Call the search service via requests
-3. Verify the success of this
-4. Return basic dictionaries to `program.py` and list the resulting titles
+1. Create a class (name it something like `MovieSearchClient`).
+2. Indicate `uplink.Consumer` as the base class.
+3. Add a `__init__` method to pass `http://movie_service.talkpython.fm/` as the `base_url` to the super class.
+2. Add a method for each of the three HTTP endpoints
 
-You'll be done when you see something like:
-
-```
-$ python3 program.py
-
-******* SEARCH TALK PYTHON *******
-What keywords to search for? <ENTER WORDS>
-There are 7 matching episodes:
-1. Past, Present, and Future of IronPython
-2. Deep Dive into Modules and Packages
-3. Python at Netflix
-4. ...
-```
-
-## Day 45: Polishing the application
-
-Your app is basically working. Today we'll polish it up a bit with some code cleanup and user interaction.
-
-Start with code cleanup. We have been passing dictionaries around. These are not so much fun. Let's use `nametuples`. You create one link this:
+Recall that you define an endpoint method inside the class as:
 
 ```python
-import collections
+Class MyClass(uplink.Consumer):
 
-Movie = collections.namedtuple('Movie', 
-   'imdb_code, title, director, keywords,'
-   'duration, genres, rating, year, imdb_score')
+    @uplink.get('/path/to/api/with/{data}
+    def call_api(data):
+       pass
+       
+    # ...
 ```
 
-Define a corresponding `namedtuple` for search results and refactor your code to use this type instead of passing raw dictionaries.
+## Day N+2: Create the search app
 
-Now for the interaction cleanup. Once you display the results, ask the user if they want to view any of them (use an index, ask for a number of the listed ones or use the episode ID returned from the service (e.g. 142)). 
-
-When they pick one, use the URL from the service response and open the users default web browser to that page. Sounds complicated, in Python it's just:
-
-```python
-import webbrowser
-webbrowser.open(full_url, new=2)
-```
-
-Once you have that interaction working, you're done with these three days of the challenge!
+Now that you have your API client, write a simple UI in `program.py` that uses your class. You might give the user a chance to search by any of the three endpoints and then display the results.
 
 ### Time to share what you've accomplished!
 
