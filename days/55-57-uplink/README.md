@@ -51,7 +51,7 @@ class MyClass(uplink.Consumer):
 
 ## Day N+2: Create the search app
 
-Now that you have your API client, write a simple UI in `program.py` that uses your class. You might give the user a chance to search by any of the three endpoints and then display the results.
+Now that you have your API client, write a simple UI in `program.py` that uses your class. You might give the user a chance to search by any of the three endpoints and then display the results.
 
 ### Time to share what you've accomplished!
 
