@@ -1,4 +1,4 @@
-# Days 27-27 Error handling
+# Days 25-27 Error handling
 
 One of the key differentiators of professional programs and scripts thrown together by beginners is pro app does not crash. It anticipates all the error conditions and puts the proper error handling and user feedback to keep working. 
 
