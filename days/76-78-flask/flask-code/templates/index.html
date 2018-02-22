@@ -1,0 +1,32 @@
+<!doctype html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Favourite Beer Tracker</title>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body style="margin-left:50px">
+
+<h1>Favourite Beers</h1>
+
+<div>
+	<table class="table-responsive table-striped table-bordered">
+		<tr>
+            <th>Name</th>
+            <th>Beer of Choice</th>
+        </tr>
+		{% for name, beer in fave_beer.items() %}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{beer}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+
+</body>
