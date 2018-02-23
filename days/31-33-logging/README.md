@@ -33,11 +33,15 @@ In your fresh Python3 virtual environment:
 Then you have to register the logging. Recall, this looks something like:
 
 ```python
-Import logbook
+import logbook
 level = logbook.TRACE
 log_filename = ...
 
-if not log_filename:    logbook.StreamHandler(sys.stdout, level=level).push_application()else:    logbook.TimedRotatingFileHandler(log_filename, level=level,                                     date_format='%Y-%m-%d').push_application()
+if not log_filename:
+    logbook.StreamHandler(sys.stdout, level=level).push_application()
+else:
+    logbook.TimedRotatingFileHandler(log_filename, level=level).push_application()
+   
 ```
 
 Then to log something, you create a logbook instance like this:
