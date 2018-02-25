@@ -10,7 +10,7 @@ Your goal during these three days is to solidify one of your apps you've already
 
 Today is mostly watching the corresponding videos from the course. Be sure to watch the videos first. 
 
-Then look through the apps we've already built or other applications you may have created that could use so proper error handling. 
+Then look through the apps we've already built or other applications you may have created that could use some proper error handling. 
 
 One example that comes to mind is the text games apps we built. What happens when you enter invalid input?
 
