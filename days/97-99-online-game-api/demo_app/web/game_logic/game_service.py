@@ -136,8 +136,7 @@ def create_roll(name: str) -> 'Roll':
     session.commit()
     session.close()
 
-    roll = session.query(Roll).filter(Roll.id == roll.id).first()
-    return roll
+    return find_roll(name)
 
 
 def find_roll_by_id(roll_id):

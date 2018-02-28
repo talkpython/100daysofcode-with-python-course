@@ -104,3 +104,4 @@ ENV/
 .idea
 days/91-93-sqlalchemy/demo/persistent_rps/db/rock_paper_scissors.sqlite
 days/91-93-sqlalchemy/demo/persistent_rps_starter/.vscode/settings.json
+rock_paper_scissors.sqlite
