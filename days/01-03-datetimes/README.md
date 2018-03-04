@@ -16,9 +16,9 @@ After watching the videos, use your Python shell to play around with some timest
 
 Head on over to [CodeChalleng.es](https://codechalleng.es) and sign up if you haven't already.
 
-Use the following URL to unlock Bite 7 for free: 
+Use the following URL to unlock Bite 7 for free: [https://codechalleng.es/bites/promo/datetimes](https://codechalleng.es/bites/promo/datetimes)
 
-Work on *Bite 7 - Parsing dates from logs* as your second day of learning datetime.
+Work on *Bite 7 - Parsing dates from logs* for your second day of learning datetime.
 
 
 ## Day N+2: Your Turn!
