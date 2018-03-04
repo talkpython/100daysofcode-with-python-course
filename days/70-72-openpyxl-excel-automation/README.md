@@ -27,10 +27,11 @@ Again, once you've finished watching the *Maxrow* and *Inserting Data* videos, c
 
 You've got the basics down so now start scripting around your own Excel file.
 
-Examples for you to try: 
-Monitor or allow a script to edit an employee shift roster.
-Try adding to or creating a financial budget based on spending data entered into a script.
-Populate a spreadsheet with data pulled down from an API of some sort.
+Examples for you to try:
+
+- Monitor or allow a script to edit an employee shift roster.
+- Try adding to or creating a financial budget based on spending data entered into a script.
+- Populate a spreadsheet with data pulled down from an API of some sort.
 
 Give it a go! I'm sure you'll... EXCEL at it!
 
