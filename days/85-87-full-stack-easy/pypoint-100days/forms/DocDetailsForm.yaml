@@ -1,0 +1,59 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"DNHJUG":15,"JCESCE":45,"ELLICF":15,"LLBXUV":45,"GLAPWR":15,"HEERCI":45}'}
+components:
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '',
+    visible: true, text: Document details, font_size: 28, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_subtitle
+  layout_properties: {grid_position: 'WVCRYU,ZZNMYW'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Title, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'JZPWOP,GLAPWR'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: '', font_size: 24, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_title
+  layout_properties: {grid_position: 'JZPWOP,HEERCI'}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Created, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'ABSXYH,DNHJUG'}
+- type: Label
+  properties: {}
+  name: label_date
+  layout_properties: {grid_position: 'ABSXYH,JCESCE'}
+  data_bindings: []
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Category, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'RFNREN,ELLICF'}
+- type: Label
+  properties: {}
+  name: label_category
+  layout_properties: {grid_position: 'RFNREN,LLBXUV'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: '', font_size: 18, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_contents
+  layout_properties: {grid_position: 'OQYTJI,QDEAGK'}
+  data_bindings:
+  - {property: text, code: 'self.item[''contents'']'}

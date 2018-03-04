@@ -1,0 +1,188 @@
+<style>
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica","Arial",sans-serif;
+  }
+    
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+  }
+
+  header {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    padding: 0px 40px;
+    height: 64px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+  }
+  
+  header>.title {
+    font-size: 20px;
+  }
+  
+  header>.nav-links>span {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+  }
+  
+  .ribbon {
+    width: 100%;
+    height: 40vh;
+    background-color: #009688; /*#3F51B5;*/
+  }
+  
+  
+  main {
+    margin-top: -35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(95vh - 64px);
+  }
+
+  body.anvil-show-banner main {
+    min-height: calc(95vh - 64px - 50px);
+  }
+  
+  main>.cards {
+    width: calc(67% - 16px);
+    max-width: 960px;
+  }
+  
+  main>.cards>.card {
+    background: white;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    margin-bottom: 40px;
+    padding: 60px;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 839px) {
+    main>.cards {
+      width: calc(100% - 16px);
+    }
+    
+    main>.cards>.card {
+      padding: 28px;
+    }
+  }
+  
+  main>footer {
+    width:100%;
+    background: #424242;
+    padding: 32px 40px;
+    color: #9e9e9e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  main>footer a {
+    color: #9e9e9e;
+  }
+  
+  main>footer>div>span {
+    margin: 0px 10px;
+  }
+  
+  main>footer>.footer-links>span {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+  }
+ 
+  /* Global overrides */
+  
+  .anvil-bs-container {
+    padding: 0;
+  }
+  
+  /* Designer fixups */
+  .designer .ribbon {
+    height: 300px;
+  }
+  .designer main {
+    margin-top: -200px;
+    min-height: 500px;
+  }
+  
+  /* Designer-specific styles */
+  .link-drop-zone {
+    position: absolute;
+    left: -10px;
+    width: 5px;
+    height: 40px;
+  }
+  .new-link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin-left: 0 !important;
+    border: 1px dotted #bbb;
+  }
+  [anvil-if-slot-empty=title] {
+    border: 1px dotted #bbb;
+    color: #888;
+    padding: 5px;
+  }
+  .new-card {
+    background: white;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    color: #888;
+    padding: 15px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+  }
+  
+</style>
+
+
+<div anvil-drop-default anvil-drop-container=">main>div.cards .anvil-container" anvil-drop-redirect=".new-card">
+  <header anvil-drop-redirect=">.nav-links [anvil-drop-slot],>.nav-links>span>div.link-drop-zone,>.title>[anvil-drop-here]">
+    <div class="title" anvil-slot="title">
+      <div class="anvil-designer-only" anvil-if-slot-empty="title" anvil-drop-here>Drop title here</div>
+    </div>
+    
+    <div class="nav-links" anvil-drop-redirect=">span>.link-drop-zone,>.anvil-designer-only">
+      <span anvil-slot-repeat="nav-links">
+        <div class="link-drop-zone" anvil-drop-here></div>
+      </span>
+      <span class="anvil-designer-only new-link" anvil-drop-slot="nav-links"><i class="glyphicon glyphicon-plus"></i></span>
+    </div>
+  </header>
+  <div class="ribbon"></div>
+  <main>
+    <div class="cards">
+      <div class="card" anvil-slot-repeat="default"></div>
+      <div class="anvil-designer-only new-card" anvil-drop-slot="default">
+        <i class="fa fa-info-circle"></i> Add
+        <img src="https://anvil.works/template-assets/column-panel-icon.png" style="height: 30px; margin-right: -7px; margin-top: -5px"> ColumnPanel components to create new cards.
+      </div>
+   </div>
+    <footer anvil-drop-redirect=">.footer-links [anvil-drop-slot],>.footer-links>span>.link-drop-zone">
+      <div class="footer-links" anvil-drop-redirect=">span>.link-drop-zone,>.anvil-designer-only">
+        <span anvil-slot-repeat="footer-links-left">
+          <div class="link-drop-zone" anvil-drop-here></div>
+        </span>
+        <span class="anvil-designer-only new-link" anvil-drop-slot="footer-links-left"><i class="glyphicon glyphicon-plus"></i></span>
+      </div>
+      <div class="footer-links" anvil-drop-redirect=">span>.link-drop-zone,>.anvil-designer-only">
+        <span anvil-slot-repeat="footer-links-right">
+          <div class="link-drop-zone" anvil-drop-here></div>
+        </span>
+        <span class="anvil-designer-only new-link" anvil-drop-slot="footer-links-right"><i class="glyphicon glyphicon-plus"></i></span>
+      </div>
+    </footer>
+  </main>
+</div>

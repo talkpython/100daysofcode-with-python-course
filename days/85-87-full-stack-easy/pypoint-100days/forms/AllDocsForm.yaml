@@ -1,0 +1,34 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"BIBWRZ":15,"RFXBVD":45}'}
+components:
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '',
+    visible: true, text: All documents, font_size: 28, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_subtitle
+  layout_properties: {grid_position: 'KPLHVX,HYTIAV'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Filter documents, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'EXTWSA,BIBWRZ'}
+- type: TextBox
+  properties: {role: null, width: default, align: left, hide_text: false, placeholder: Search within your documents,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_filter
+  layout_properties: {grid_position: 'EXTWSA,RFXBVD'}
+  event_bindings: {change: text_box_filter_change}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'UAROCY,KOVPNC'}
+- type: RepeatingPanel
+  properties: {item_template: DocListItemTemplate}
+  name: repeating_panel_docs
+  layout_properties: {grid_position: 'YTHURW,DKEOGM'}

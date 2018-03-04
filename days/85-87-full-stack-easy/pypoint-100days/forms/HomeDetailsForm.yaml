@@ -1,0 +1,24 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '',
+    visible: true, text: PyPoint Home, font_size: 28, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_subtitle
+  layout_properties: {grid_position: 'PMAGCL,EMKFQV'}
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '',
+    visible: true, text: Recent documents, font_size: 18, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'GSZYCE,GPPGQE'}
+- type: RepeatingPanel
+  properties: {role: null, width: default, border: '', foreground: '', items: null,
+    visible: true, spacing_above: small, spacing_below: small, item_template: DocListItemTemplate,
+    background: ''}
+  name: repeating_panel_1
+  layout_properties: {grid_position: 'QXRTLU,YUTPPU'}

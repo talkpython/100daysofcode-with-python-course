@@ -1,0 +1,162 @@
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  min-height: 100%;
+}
+
+body.anvil-show-banner #appGoesHere {
+    margin-top: 50px;
+    position: relative;
+}
+
+.body {
+  background-color: #d7d7d7;
+}
+
+a, a:visited {
+  color: #009688;
+}
+
+a:hover, a:active, a:focus {
+  color: #00796B; /* Material design: Teal 700 */
+}
+
+.placeholder {
+  padding: 5px;
+  border: 2px dashed #888;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  overflow-y: hidden;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  box-shadow: 0 1px 3px #888;
+
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-right {
+  float: right;
+  color: #333;
+}
+
+.nav-elt {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  position: relative;
+}
+
+.nav-elt.placeholder {
+  margin-top: 5px;
+  opacity: 0.8;
+  color: #888;
+  visibility: hidden;
+}
+
+body.anvil-highlight .nav-elt.placeholder {
+  visibility: visible;
+}
+
+.nav-elt .drop-here {
+  position: absolute;
+  top: 0;
+  left: -7.5px;
+  bottom: 0;
+  width: 5px;
+}
+
+.anvil-role-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Responsive bits: Make the menu overlay the screen
+   (and hidden by default) rather than displacing it
+   on small screens
+*/
+
+@media(max-width:767px) {
+
+  .cards {
+    padding: 24px 0px;
+  }
+
+}
+
+
+/* From https://fonts.googleapis.com/css?family=Roboto */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

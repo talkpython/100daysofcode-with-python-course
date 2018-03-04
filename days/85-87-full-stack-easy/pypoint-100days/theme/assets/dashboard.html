@@ -1,0 +1,309 @@
+<!--<link href="_/theme/dashboard.css" rel="stylesheet">-->
+<style>
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    flex-shrink: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar .placeholder {
+    text-align: center;
+}
+
+.sidebar-elt::first {
+    border-top: 1px solid #888;
+}
+
+.sidebar-elt {
+    position: relative;
+    border-bottom: 1px solid #888;
+}
+
+.sidebar-elt .drop-here {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.sidebar-elt>.content a {
+font-size: 16px;
+color:white;
+text-transform: uppercase;
+}
+
+.sidebar-elt>.content a:hover {
+background: #444;
+}
+
+.sidebar-elt .content a.anvil-component {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.sidebar-elt a {
+    color: #ddd;
+}
+
+.sidebar-elt a:hover, .sidebar-elt a:active {
+    color: white;
+}
+
+/* Responsive bits: Make the menu overlay the screen
+   (and hidden by default) rather than displacing it
+   on small screens
+*/
+
+@media(max-width:767px) {
+    .runner .sidebar {
+        display: none;
+        position: absolute;
+        top: 62px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .runner .sidebar-click-guard {
+        display: none;
+        position: absolute;
+        top: 62px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: #888;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .designer .sidebar {
+        max-width: 30%;
+    }
+
+    .sidebar.floating {
+        top: 62px;
+    }
+
+}
+
+.sidebar.floating {
+    position: absolute;
+    top: 62px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.body {
+    position: relative;
+    padding-top: 62px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+
+.nav {
+    background-color: white;
+    padding: 11px 16px 11px; /* expect 5px margin */
+    height: 62px;
+    font-size: 16px;
+    color: #009688; /* Material Design: "Teal 500" */
+}
+
+.nav .title, .nav .menu-btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 7px;
+}
+.nav .menu-btn, .nav .title.placeholder {
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+.nav > .menu-btn {
+    color: #333;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    padding: 5px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.nav > .menu-btn:hover {
+    background-color: #ccc;
+}
+
+.nav-right {
+    float: right;
+    color: #333;
+}
+
+.nav-elt {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    position: relative;
+}
+
+.nav-elt.placeholder {
+    margin-top: 5px;
+    opacity: 0.8;
+    color: #888;
+    visibility: hidden;
+}
+
+body.anvil-highlight .nav-elt.placeholder {
+    visibility: visible;
+}
+
+.nav-elt .drop-here {
+    position: absolute;
+    top: 0;
+    left: -7.5px;
+    bottom: 0;
+    width: 5px;
+}
+
+.body {
+    position: relative;
+    padding-top: 62px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.cards {
+    flex-grow: 1;
+
+    font-weight: bold;
+    font-color: #555;
+    font-size: 24px;
+
+    padding: 24px 16px;
+    max-width: 100%;
+}
+
+.cards > .anvil-container {
+    outline: none !important;
+}
+
+.cards .anvil-container .anvil-container,
+.designer .anvil-highlight .cards .anvil-container .anvil-container {
+    background-color: white;
+    box-shadow: 1px 2px 4px #888;
+
+    /* Font back to defaults */
+    font-weight: normal;
+    /*color: #333;*/
+    font-size: 14px;
+
+    outline: none;
+
+    padding: 7px 0;
+}
+
+.designer .anvil-highlight .cards .anvil-container .anvil-container .anvil-container,
+.cards .anvil-container .anvil-container .anvil-container {
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.designer .anvil-highlight .cards .anvil-container .anvil-container .anvil-container {
+    outline: 1px dashed rgba(0,0,0,0.3)
+}
+
+.body .instructions {
+    padding: 24px 16px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+</style>
+      
+<script>
+function toggleSidebar() {
+    var s = $('.sidebar');
+    if (!s.is(':hidden')) {
+        $('.sidebar-click-guard').hide();
+        s.addClass('floating').animate({left: -s.width()}, {complete: function() { s.hide(); }});
+    } else {
+        $('.sidebar-click-guard').show();
+        s.show().addClass('floating').css('left', '-100%').css('left', -s.width())
+            .animate({left: 0}, {complete: function() { s.removeClass('floating'); }});
+    }
+}
+
+$(function() {
+    $('.sidebar').on("click", function() {
+        if (window.innerWidth <= 767) {
+            toggleSidebar();
+        }
+    });
+    $('.sidebar-click-guard').on("click", toggleSidebar);
+})
+</script>
+
+<!-- Put body before nav so that it sits underneath -->
+
+<div class="body" anvil-drop-default anvil-drop-container=">.cards .anvil-container" anvil-drop-redirect=">.cards > .placeholder">
+    <div class="sidebar" anvil-drop-redirect=">.drop-here">
+        <div anvil-slot-repeat="sidebar" class="sidebar-elt">
+            <div anvil-drop-here class="drop-here"></div>
+            <div anvil-slot class="content"></div>
+        </div>
+        <div class="sidebar-elt anvil-designer-only drop-here" anvil-drop-slot="sidebar">
+            <div class="content placeholder"><i class="glyphicon glyphicon-plus"></i></div>
+        </div>
+    </div>
+    <div class="sidebar-click-guard"></div>
+
+    <div class="cards anvil-measure-content">
+        <div anvil-if-slot-empty="default"
+             anvil-drop-slot="default"
+             class="placeholder">
+             Drop a ColumnPanel here to add content
+        </div>
+
+        <div anvil-slot="default"></div>
+
+        <div class="anvil-designer-only instructions">
+            <i class="fa fa-info-circle"></i> Add
+            <img src="https://anvil.works/template-assets/column-panel-icon.png" style="height: 30px; margin-right: -7px; margin-top: -5px"> ColumnPanel components to create new cards.
+        </div>
+    </div>
+</div>
+
+<div class="nav" anvil-drop-redirect=".title.placeholder, .nav-elt.placeholder, .nav-elt .drop-here">
+
+    <div class="nav-right" anvil-drop-redirect=".nav-elt">
+        <div anvil-slot-repeat="nav-right" class="nav-elt">
+            <div anvil-drop-here class="drop-here"></div>
+        </div>
+        <div class="nav-elt placeholder anvil-designer-only" anvil-drop-slot="nav-right">
+            <i class="glyphicon glyphicon-plus"></i>
+        </div>
+    </div>
+
+    <div class="menu-btn" onclick="toggleSidebar();">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div anvil-if-slot-empty="title" anvil-drop-slot="title" class="title placeholder anvil-designer-only">
+        Drop a title here
+    </div>
+    <div anvil-slot="title" class="title"></div>
+</div>

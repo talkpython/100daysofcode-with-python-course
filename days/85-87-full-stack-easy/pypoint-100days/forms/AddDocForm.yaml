@@ -1,0 +1,65 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"JOCGQM":15,"WPNYAI":45,"GQHPEC":15,"SSLEBU":45}'}
+components:
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '',
+    visible: true, text: Add a new document, font_size: 28, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_subtitle
+  layout_properties: {grid_position: 'IIGYZM,LRYSUF'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Document name, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'XYEAKB,JOCGQM'}
+- type: TextBox
+  properties: {role: null, width: default, align: left, hide_text: false, placeholder: document name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_doc_name
+  layout_properties: {grid_position: 'XYEAKB,WPNYAI'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Category, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'APMKDY,GQHPEC'}
+- type: DropDown
+  properties: {}
+  name: drop_down_categories
+  layout_properties: {grid_position: 'APMKDY,SSLEBU'}
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: Contents, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'KOMUDF,ESPOFP'}
+- type: TextArea
+  properties: {role: null, width: default, align: left, height: 169, placeholder: Add document contents here,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_area_contents
+  layout_properties: {grid_position: 'KSRZHC,WQFRHQ'}
+- type: Button
+  properties: {role: null, width: default, align: right, border: '', enabled: true,
+    foreground: '#fff', visible: true, text: Create document, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#367498',
+    bold: false, underline: false, icon: 'fa:plus'}
+  name: button_save
+  layout_properties: {grid_position: 'USGITF,CTBUTN'}
+  event_bindings: {click: button_save_click}
+- type: Label
+  properties: {role: null, width: default, align: center, border: '', foreground: '#941100',
+    visible: true, text: This is an error, font_size: 18, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_errors
+  layout_properties: {grid_position: 'ASTSPJ,XBGAYX'}

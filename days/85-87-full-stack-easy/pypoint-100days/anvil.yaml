@@ -1,0 +1,9 @@
+package_name: pypoint100days
+name: pypoint-100days
+startup_form: HomeForm
+renamed: true
+runtime_options: {server_version: python2-sandbox}
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}

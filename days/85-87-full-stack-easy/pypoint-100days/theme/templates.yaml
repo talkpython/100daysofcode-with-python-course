@@ -1,0 +1,30 @@
+- name: Card-based layout with sidebar
+  description: A page with a card-based layout, and a sidebar menu for links
+  img: img/form-templates/dashboard.png
+  form:
+    class_name: Form
+    container:
+      type: HtmlTemplate
+      properties: {html: '@theme:dashboard.html'}
+    components:
+    - type: ColumnPanel
+      properties: {}
+      name: content_panel
+      layout_properties: {slot: default}
+    code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self,\
+      \ **properties):\n    # You must call self.init_components() before doing anything\
+      \ else in this function\n    self.init_components(**properties)\n\n    # Any\
+      \ code you write here will run when the form opens.\n    \n"
+- name: Single-column layout
+  description: A page with a single-column layout and a large header
+  img: img/form-templates/material-single-column.png
+  form:
+    class_name: Form
+    container:
+      type: HtmlTemplate
+      properties: {html: '@theme:single-column.html'}
+    components: []
+    code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self,\
+      \ **properties):\n    # You must call self.init_components() before doing anything\
+      \ else in this function\n    self.init_components(**properties)\n\n    # Any\
+      \ code you write here will run when the form opens.\n"

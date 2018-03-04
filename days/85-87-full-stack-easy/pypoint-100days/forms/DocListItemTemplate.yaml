@@ -1,0 +1,28 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"JKNUPK":30,"TIDSGW":20,"KEEGAO":10}'}
+  event_bindings: {show: form_show}
+components:
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_title
+  layout_properties: {grid_position: 'KYKPJJ,JKNUPK'}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
+- type: Label
+  properties: {}
+  name: label_created
+  layout_properties: {grid_position: 'KYKPJJ,TIDSGW'}
+  data_bindings: []
+- type: Link
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: details, font_size: null, row_spacing: 10, wrap_on: mobile,
+    font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: link_details
+  layout_properties: {grid_position: 'KYKPJJ,KEEGAO'}
+  event_bindings: {click: link_details_click}
+item_type: {table_id: 9224}

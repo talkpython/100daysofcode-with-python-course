@@ -1,0 +1,40 @@
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- type: Label
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: 'PyPoint: Home', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_title
+  layout_properties: {slot: title}
+- type: Link
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: HOME, font_size: null, row_spacing: 10, wrap_on: mobile,
+    font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+  name: link_home
+  layout_properties: {slot: sidebar}
+  event_bindings: {click: link_home_click}
+- type: Link
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: ALL DOCS, font_size: null, row_spacing: 10, wrap_on: mobile,
+    font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:file-word-o'}
+  name: link_all_docs
+  layout_properties: {slot: sidebar}
+  event_bindings: {click: link_all_docs_click}
+- type: Link
+  properties: {role: null, width: default, align: left, border: '', foreground: '',
+    visible: true, text: ADD DOC, font_size: null, row_spacing: 10, wrap_on: mobile,
+    font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:plus'}
+  name: link_add_doc
+  layout_properties: {slot: sidebar}
+  event_bindings: {click: link_add_doc_click}
