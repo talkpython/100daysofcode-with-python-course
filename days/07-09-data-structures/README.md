@@ -25,13 +25,13 @@ Follow the instructions on page once you've redeemed the Bite and see if you can
 
 ## Day N+2: Your Turn!
 
-Create a script that imports the data structures contained in the following script file in our Repo: 
+Create a script that imports the US States data structures contained in the following script file in our Repo:  
 
-Perform the following tasks on the data structures:
+Perform the following tasks on the list and dict without looking at their contents first! Hint: Dicts are unsorted.
 
 - Print out the 10th item in each.
 
-- Print out the 18th key in the dictionary.
+- Print out the 45th key in the dictionary.
 
 - Print out the 27th value in the dictionary.
 
