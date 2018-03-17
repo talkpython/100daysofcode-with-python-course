@@ -25,9 +25,9 @@ Follow the instructions on page once you've redeemed the Bite and see if you can
 
 ## Day N+2: Your Turn!
 
-Create a script that imports the US States data structures contained in the following script file in our Repo:  
+Create a script that imports the US States data structures contained in the following script file in our Repo: [https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/07-09-data-structures/code/data.py](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/07-09-data-structures/code/data.py) 
 
-Perform the following tasks on the list and dict without looking at their contents first! Hint: Dicts are unsorted.
+Perform the following tasks on the list and dict. The less you look at them, the better this exercise will be. Remember: **Dicts are unsorted**.
 
 - Print out the 10th item in each.
 
