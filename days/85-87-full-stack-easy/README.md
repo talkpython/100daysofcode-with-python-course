@@ -12,6 +12,14 @@ Create an account via: [**talkpython.fm/anvil100**](https://talkpython.fm/anvil1
 
 [![](readme_resources/register.png)](https://talkpython.fm/anvil100)
 
+If you want to use the demo app in your account, the easiest way is to "clone it online" using this link:
+
+[anvil.works/ide#clone:5CHGY3Q6SBHQGA27=7WPAVZAGTUKSFK3QVI2XGV5U](https://anvil.works/ide#clone:5CHGY3Q6SBHQGA27=7WPAVZAGTUKSFK3QVI2XGV5U)
+
+You can also see the live, read-only version of the demo app at:
+
+[pypoint-100days.anvilapp.net](https://pypoint-100days.anvilapp.net/)
+
 Once you have your account, create a new app (material design, side-bar style). Then
 
 1. Add links to the various pages in the sidebar
