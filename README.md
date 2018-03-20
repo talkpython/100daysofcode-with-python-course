@@ -2,6 +2,8 @@
 
 [![Visit the course page](readme_resources/100days-course.png)](https://training.talkpython.fm/courses/explore_100days_in_python/100-days-of-code-in-python)
 
+Course details page: [**talkpython.fm/100days**](https://talkpython.fm/100days?utm_source=github)
+
 ## Course Summary
 
 #100DaysOfCode in Python is your perfect companion to take the 100 days of code challenge and be successful. This course is 1-part video lesson, 2-parts guided projects. You will be amazed at how many Python technologies and libraries you learn on this journey. Join the course and get started.
