@@ -26,7 +26,9 @@ For your last day, I'm going to suggest you head to our [codechalleng.es](https:
 The following 3 links will get you free access to the Bites:
 
 [Bite 64](https://codechalleng.es/bites/promo/itertools-fun1)
+
 [Bite 17](https://codechalleng.es/bites/promo/itertools-fun2)
+
 [Bite 65](https://codechalleng.es/bites/promo/itertools-fun3)
 
 You don't need to do them in any particular order, they're just there for you to learn something!
