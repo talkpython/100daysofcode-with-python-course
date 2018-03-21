@@ -14,7 +14,7 @@ Course details page: [**talkpython.fm/100days**](https://talkpython.fm/100days?u
 
 Just a small sampling of the projects you’ll work on include:
 
-* Understating basic Python data structures
+* Understanding basic Python data structures
 * Searching large text corpuses with regular expressions
 * Consume HTTP services including the Twitter and GitHub APIs among others
 * Visual data with graphs using plotly
