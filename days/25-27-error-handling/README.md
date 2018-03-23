@@ -1,6 +1,6 @@
 # Days 25-27 Error handling
 
-One of the key differentiators of professional programs and scripts thrown together by beginners is pro app does not crash. It anticipates all the error conditions and puts the proper error handling and user feedback to keep working. 
+One of the key differentiators of professional programs and scripts thrown together by beginners is that the pro app does not crash. It anticipates all the error conditions and puts the proper error handling and user feedback to keep working. 
 
 Ok, pro apps still crash, but they do so much less often. When they do, we have [logging](https://logbook.readthedocs.io) and other error monitoring such as [Rollbar](https://rollbar.com/?dr) so that we can get notified and fix these once we encounter them. This allows apps to grow stronger and more resilient over time.
 
