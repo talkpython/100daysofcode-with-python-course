@@ -1,0 +1,70 @@
+00:00 Michael here.
+00:01 It's time to show you how I set up the tools
+00:02 when I'm writing code.
+00:04 Now, I'm going to be using a Mac,
+00:06 Mac OS High Sierra for this course.
+00:08 That's the latest at the time of the recording.
+00:10 However, you can use Windows, you can use Linux.
+00:12 They're all basically the same as far as that goes.
+00:15 I'm going to be using the editor PyCharm
+00:17 and I'm going to be using Python,
+00:19 the one that I got from python.org
+00:22 not installed any other way.
+00:23 So let's see how that goes.
+00:25 First off, when you're on a Mac if you've taken no actions
+00:28 you don't have Python 3.
+00:30 You'll know if you open up your terminal.
+00:32 Come over here and type python3 -V
+00:37 and you would get the same error
+00:39 something like python3 not found
+00:42 as if there's a python4.
+00:43 Someday, maybe, not right now.
+00:56 So if you type python3 -V
+00:59 not lowercase v and you get not found
+01:02 you need to install it.
+01:03 If you get something like, 3.5 or above,
+01:06 you're fine, you're done with Python.
+01:08 All you got to do is come over here, go to downloads,
+01:10 download right now the latest is 3.6.4.
+01:13 So download that, it gives you an installer.
+01:15 Run the installer; you're good to go.
+01:17 The other tool that I use a lot is something called PyCharm.
+01:20 It's an editor for Python.
+01:22 One of the richest and most powerful editors.
+01:25 And I really think it's great both for beginners
+01:28 and for professional developers.
+01:30 And it comes in two versions.
+01:31 You can see the full fledge Professional
+01:33 or the Community Edition.
+01:35 So you can download the Professional
+01:37 or the Community Edition.
+01:38 The Professional one costs money.
+01:40 You can pay for it monthly or you can buy a license.
+01:42 Whatever, it's like about eight or nine dollars a month.
+01:45 You can get the Community Edition.
+01:46 It's free and open source, okay.
+01:48 This also comes with a month long free trial
+01:50 so you can try it.
+01:51 If you care about the features,
+01:53 say which one comes in which, you can compare them
+01:55 down here at the bottom under choose your edition.
+01:58 So it's up to you which one you get.
+02:00 So we can come down here and download this and install it.
+02:04 One thing that's cool that you might consider getting
+02:05 is this Toolbox App.
+02:07 This one will sort of keep track of updates for you.
+02:10 It looks like this and it gives you access to
+02:12 all of the tools that JetBrains has.
+02:14 So if you're going to install more than one,
+02:15 this might be handy but you don't have to get it.
+02:18 Either way, get either PyCharm Pro or Community Edition
+02:21 or get this JetBrains Toolbox which I have up here.
+02:24 You can see apparently there's an update
+02:26 for my PyCharm Professional.
+02:28 If I want a data grip, I can just click that and install it.
+02:31 Once you have it you can run PyCharm
+02:33 and you'll be able to start creating
+02:35 and editing Python projects.
+02:37 That's it, I don't really have anything else
+02:39 installed for working with the code.
+02:41 It's just Python, my OS, and PyCharm and we're good to go.

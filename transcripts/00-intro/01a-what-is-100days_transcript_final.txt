@@ -1,0 +1,65 @@
+00:00 Hello, and welcome to 100 Days of Code
+00:02 in Python, written by Bob Belderbos,
+00:05 Julian Sequeira, and myself, Michael Kennedy.
+00:11 Maybe you're wondering what is this #100DaysOfCode.
+00:15 You've probably seen it all over social media.
+00:17 In fact, it's really, really taken off
+00:19 and people are finding this concept of
+00:21 100 days of code really powerful
+00:24 for getting them to focus over a long time
+00:26 to actually get over the hump,
+00:28 and become capable developers,
+00:30 or maybe learn a new language, like, say, Python.
+00:33 Here's an example of what you might see on Twitter.
+00:35 Rene Sanchez says, "Day 11. #100DaysOfCode progress.
+00:39 Today I worked some more on bite 18.
+00:42 Find the most common word from codechalleng.es/bites."
+00:46 This code challenge platform they're referring to
+00:48 is actually from your co-authors, Bob and Julian.
+00:51 We'll talk more about that later.
+00:52 Here's another Tweet: "Day Five of 100.
+00:55 Did some short exercises about modules.
+00:57 Imported modules, did a couple of my own.
+00:59 Tomorrow IO. #100DaysOfCode #Python."
+01:03 Way to go, Bricks.
+01:04 Here we have "Round one, day 101.
+01:07 Had to do an extra day due to
+01:09 one day off sick earlier in #100DaysOfCode.
+01:12 Today more Python debugging, tomorrow starts round two."
+01:17 And Jeff says, "Round one, day 19. #100DaysOfCode.
+01:20 Did three exercises in the book.
+01:23 Basically my average, been taking it slow
+01:25 these last few days. #CodeNewbiePythonIndieDevIndieGameDev"
+01:30 And finally, let's look at one more.
+01:32 Amit Kumar says, "#Day32. Another autowebcompat
+01:36 PR pull request, just got merged.
+01:39 Way to go, Python Tkinter, #100DaysOfCode."
+01:42 So he added some new feature or bug fix
+01:44 to auto Web Compat, very, very cool.
+01:47 So you've seen this stuff probably all over
+01:49 social media, Facebook, Twitter, and so on.
+01:52 What's it about?
+01:53 Well, this is actually a very structured project
+01:55 put together by this guy, Alexander Calloway.
+01:59 So Alexander, he was studying in business school
+02:02 but also wanted to learn programming.
+02:05 And he was having a hard time making progress.
+02:09 So he came up with this idea of #100DaysOfCode.
+02:12 Here's a quote from him: "The idea of
+02:14 #100DaysOfCode originally came from
+02:16 my personal frustration with my inability
+02:18 to consistently learn to code after work.
+02:21 I'd find other less involved activities to
+02:23 spend my time on, like binge watching a TV series.
+02:26 One of those days, I was sitting in a restaurant
+02:27 with my wife, and sharing my frustrations with her.
+02:30 I suggested maybe I should make the public commitment
+02:32 to learning for at least an hour every day.
+02:35 I thought it would go for three months,
+02:36 but it turned out 100 days was the right one."
+02:39 How about that?
+02:41 Well, thank you for creating this project, Alexander.
+02:42 This is really a great thing for many people
+02:45 getting started, and this is what this course is all about.
+02:47 We're going to give you lessons and exercises
+02:51 for every one of these 100 days.

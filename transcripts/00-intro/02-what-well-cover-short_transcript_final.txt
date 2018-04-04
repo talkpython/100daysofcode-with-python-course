@@ -1,0 +1,81 @@
+00:00 We are going to cover so much
+00:02 content in this course, it's going to be amazing.
+00:04 You'll learn many, many different things over these
+00:07 #100DaysOfCode.
+00:09 In fact, there's so many I can't really
+00:11 enumerate all of them, it'll just take too long,
+00:14 but I do want to give you a quick sample
+00:15 into what we're going to cover.
+00:16 We're going to talk about collections,
+00:18 lists, dictionaries, working with them.
+00:20 We're going to test our code with pytest to make sure we
+00:22 build reliable apps.
+00:23 We're going to create games, Dungeons and Dragons style with
+00:26 classes and inheritance and object-oriented programming.
+00:29 We're going to deal with errors
+00:31 and proper error handling in Python.
+00:33 We'll do logging to keep a history
+00:35 of what our application has done.
+00:37 We're going to work with the popular exchange format
+00:39 called JSON, and it's a really great way to exchange data
+00:43 between Python applications and any web service.
+00:46 Speaking of services, we're going to learn how to call
+00:49 JSON based web services from Python,
+00:52 and if there's no service, can still go to the website
+00:55 and do web scraping.
+00:56 You can turn any HTML page, anything on the internet,
+00:59 into a data source using web scraping.
+01:03 Another source that we might go and consume, RSS feeds,
+01:06 really popular among blogs and podcasts,
+01:08 but also other types of subscriptions.
+01:11 We're going to use the Twitter and the GitHub API
+01:13 to interact with those services automatically from Python.
+01:17 Want to send an email?
+01:17 Maybe a new user registered for your site,
+01:20 well we'll see how to do that as well in this course.
+01:23 Excel has got to be the most popular database in the world.
+01:26 It's not really a database, but people use it like one,
+01:29 and you may need to program against it.
+01:31 Turns out, we have the trick for you right here.
+01:33 Want to automate something on the web?
+01:35 Go login here, navigate over there, click this button,
+01:38 make that thing happen.
+01:39 We'll see how to do that with something called Selenium.
+01:41 You want to write a web application, well we'll do that with
+01:44 something called Flask, it's probably the easiest way
+01:46 to write a web app in Python.
+01:49 SQLite is a database built into Python,
+01:52 it's what's called an embedded database,
+01:53 and you'll see how to program it, either directly,
+01:56 or from what's called an ORM from SQLAlchemy
+01:59 where you create these classes and you map them
+02:01 to objects in your database,
+02:03 so we'll have a couple of places where we talk
+02:06 about SQLite and relational data.
+02:09 Graphs are wonderful, they explain so many things,
+02:11 and so we're going to use something called Plotly
+02:14 and draw graphs for you,
+02:16 based on a set of data that you have,
+02:17 and typically when you're doing
+02:19 science like stuff like this,
+02:21 that's done in something called
+02:22 Jupyter Scientific Notebooks,
+02:23 and a good portion of this class will be presented
+02:26 in these notebooks.
+02:27 Not all of it, maybe about a quarter.
+02:30 GUIs and Python, they typically don't go together,
+02:32 but in this course, they do.
+02:33 You'll see in just a few lines of code that we can
+02:36 create a really powerful and cool GUI or
+02:39 desktop application, and this will run on all the platforms,
+02:42 Windows, Linux, and macOS.
+02:45 And finally, it's fun to consume APIs,
+02:47 but sometimes you want to build them,
+02:49 so we're going to actually take Flask and extend it
+02:52 to create our very own API and put that out on the internet.
+02:55 This is a ton of stuff right, isn't this exciting?
+02:58 Well, it's only a small part
+02:59 of what we're going to cover in this course,
+03:01 so I hope you're really excited,
+03:02 Bob, Julian and I definitely are excited
+03:04 to teach it to you, so let's get to it.

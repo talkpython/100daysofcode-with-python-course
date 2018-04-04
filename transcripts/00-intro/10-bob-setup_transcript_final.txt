@@ -1,0 +1,84 @@
+00:00 I'm using Anaconda for this course,
+00:02 a pre-bundled, Python distribution widely used
+00:06 in the Data Science community.
+00:08 And it comes with a lot of packages already.
+00:10 You're not required to use this distribution.
+00:14 You can also pip install my requirements,
+00:16 which we will see in a bit.
+00:17 You can download the full version here.
+00:19 We recommend that you use 3.6.
+00:22 Really no reason to start a new project in Python 2 anymore.
+00:26 You can also install Miniconda, which is a smaller version,
+00:30 which only includes the base packages.
+00:33 And, mainly, what you need to know is
+00:36 for almost all the lessons, I will be using
+00:39 Jupyter Notebooks, which is a great way to experiment
+00:42 with Python code and more in the browser.
+00:45 It's a great tool to both teach and learn Python.
+00:49 You can try it out if you want to play a little bit
+00:52 at this point by going to try.jupyter.org,
+00:55 but I encourage you to install it
+00:57 to follow along with my lessons.
+00:59 To install it, again, the recommended way is
+01:02 to use Anaconda, but you can also use pip install jupyter,
+01:07 and that should get it as well.
+01:08 And let me show you that quickly.
+01:10 So, first I need to clone the 100 Days of Code repo.
+01:14 You cd into that.
+01:15 At this point you really want to make
+01:17 your virtual environment to work
+01:19 on the project's requirement in isolation
+01:22 to not mess up your global space.
+01:24 And in every lesson, I have a video how to pip install
+01:27 the requirements for that lesson, but I also
+01:29 have 'em all wrapped together in a requirements file.
+01:35 So, for all the notebooks, you need Jupyter;
+01:37 and ipykernel, which I will explain why in a bit;
+01:41 and then I listed out the requirements for each lesson.
+01:44 There are various ways to make a virtual environment.
+01:47 The classic way is to use pyvenv built in module.
+01:51 You can also use pipenv, the new way,
+01:54 which should be perfectly fine.
+01:57 And Anaconda comes with Conda,
+01:59 a utility to manage environments as well.
+02:03 However, I am used to virtualenv, just the classic one.
+02:06 So, in this course I am making a virtual environment
+02:09 with this alias:
+02:10 virtualenv -p, pointing to the Python binary
+02:13 that comes with my Anaconda installation,
+02:16 and the name of my virtual environment.
+02:17 So, let's run that now.
+02:20 And then you have to activate it.
+02:21 And that's what I'm doing, that a lot I have another alias,
+02:25 ae, and now I'm in my virtual environment,
+02:29 where I don't have anything installed.
+02:31 At this point, you can just do it video by video,
+02:34 but if you want to have all the packages up-front,
+02:36 you can do pip install -r,
+02:38 requirements/requirements,
+02:41 and that might take a bit because
+02:43 it's not only pulling the dependencies,
+02:45 but some of the dependencies have other dependencies.
+02:48 With that done, you can launch a Jupyter notebook like this.
+02:56 And you can go in today's and do any lesson.
+03:00 For example, Selenium.
+03:02 And you can open the notebook like this,
+03:07 and you can follow the lesson.
+03:11 And you see that the notebook discovered
+03:13 my virtual environment.
+03:15 If that is not the case, you might have to tweak it
+03:18 a little bit, and that's why I pip install ipykernel
+03:22 and Tornado was pulled in as well.
+03:24 That should have been enough.
+03:25 If that's not the case, you might have to run
+03:28 ipythonkernel install <username> <projectname>
+03:32 And this will be venv, or the name
+03:34 of the virtual environment.
+03:35 And then back to the notebook.
+03:37 You should have the kernel, venv,
+03:39 or whatever you named the virtual environment, here,
+03:41 and you can switch to that, but I already have it here.
+03:44 So, then your dependency should work.
+03:46 It's in your virtual environment and you can follow along
+03:49 with the lesson and make any modifications in the code
+03:52 and experiment and that's how you learn.

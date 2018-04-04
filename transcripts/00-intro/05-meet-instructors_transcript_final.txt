@@ -1,0 +1,42 @@
+00:00 Hi, I'm Bob Belderbos, and I've been
+00:02 programming since ten years.
+00:04 And for the last six years, I've been using Python,
+00:07 which is now the language of my choice.
+00:09 I'm very excited to teach you Python in this course.
+00:12 We're going to cover a lot of angles,
+00:14 so be prepared to learn a lot of Python.
+00:17 These days I'm a web developer, software engineer
+00:20 at Oracle, and since end of 2016 co-founder of PyBites,
+00:25 together with Julian, where we blog about Python
+00:29 and do code challenges which we lately have
+00:32 transformed in a code challenge platform.
+00:34 We are super passionate about getting people to code,
+00:37 have a very hands-on approach
+00:40 and really want people to get to the next level of Python.
+00:43 And that's why we're so passionate about
+00:45 the #100DaysOfCode and this course
+00:47 because we get you to write a lot of Python.
+00:50 I'm honored to teach you Python
+00:51 and look forward to our journey.
+00:53 Hi everyone, I'm Julian Sequeira,
+00:55 and welcome to the course.
+00:57 I've been coding with Python for roughly two years now.
+01:00 I currently work at AWS, but surprisingly not with Python.
+01:05 Python is something I've taken up on the side,
+01:07 and something I'm super passionate about
+01:09 and absolutely love doing in my spare time.
+01:12 I'm co-founder of PyBites, along with Bob.
+01:15 And everything I do with Python
+01:17 is purely out of love for the programming language.
+01:20 And I'm totally looking forward to teaching you
+01:23 everything I've learnt over the past couple of years
+01:25 throughout the course.
+01:27 Hey, welcome to our course.
+01:28 I'm Michael Kennedy, nice to meet you.
+01:30 A little background on me,
+01:31 I'm primarily a web developer as well as the founder
+01:33 of the Talk Python To Me podcast and Talk Python Training.
+01:36 I've been a professional developer for 20 years,
+01:39 and I'm really excited to share that experience
+01:41 with you throughout this course.
+01:43 Welcome to the #100DaysOfCode and Python.

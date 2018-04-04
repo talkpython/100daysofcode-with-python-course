@@ -1,0 +1,49 @@
+00:00 You've chosen Python for your #100DaysOfCode.
+00:03 Maybe you're a Python developer who has lots of experience.
+00:06 You just want to go through this
+00:07 whole challenge, and that's great.
+00:09 You probably already know the power
+00:11 and popularity of Python.
+00:13 But if you're just getting into programming,
+00:15 and you're coming here and saying,
+00:16 "Well, let's try Python for this 100 days.
+00:18 That seems like a great way."
+00:20 I want to tell you, you have chosen wisely.
+00:23 So check out this graphic.
+00:27 This comes from one of the best sources on the internet
+00:29 for popularity in adoption of technology, Stack Overflow.
+00:34 And the data scientists at Stack Overflow
+00:36 did some predictions and said, "Well, how are
+00:39 the various languages doing over time?
+00:42 Are they becoming more popular, less popular?"
+00:45 Based on their view into the industry.
+00:47 And they did this up to mid-2017, and then you can see
+00:51 the gray part where they're projecting out.
+00:54 One of these languages is unlike the others.
+00:57 It is just going up, and up, and increasingly up.
+01:01 Your other best bet is JavaScript, which is
+01:04 barely logarithmically going up.
+01:07 Java looks like it's topping off.
+01:09 The rest of them are going down.
+01:10 So if you're going to focus on something,
+01:12 pick one particular language.
+01:14 Pick the one that's got all the momentum
+01:15 and the popularity behind it, and that's Python.
+01:18 Now, you might say, "Okay, Michael,
+01:20 this actually is against all these
+01:22 older languages, C#, Java, and so on.
+01:25 What about the new languages like Go and Rust?
+01:28 They're probably even more amazing
+01:31 and more powerful, and growing quicker."
+01:33 Well, let's see.
+01:36 Yeah, they're growing up, they're going upward,
+01:38 not downward, that's really great.
+01:40 Swift is going up, TypeScript's going up, Go is going up,
+01:43 but they are nowhere near Python in this graph.
+01:48 I just want to leave you with these two pictures
+01:49 in your mind that Python is really a great place
+01:52 to put your energy and be learning.
+01:54 My rough rule of thumb here is I would like to
+01:57 bet my career on things that are going up, not down.
+02:02 So which one of these do you want to pick?
+02:04 Well, you're in a good place.

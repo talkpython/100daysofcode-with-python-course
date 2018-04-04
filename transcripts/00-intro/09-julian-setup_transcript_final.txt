@@ -1,0 +1,59 @@
+00:00 'Kay, guys. This is Julian here,
+00:02 and I just wanted to quickly walk you through my environment
+00:05 for the duration of the course.
+00:08 There's actually not much to it, and that's because
+00:10 I'm using Windows, and I really wanted to keep it simple.
+00:15 Okay, I wanted to show that you don't need to use
+00:17 anything crazy.
+00:18 Not that there's anything wrong with that,
+00:20 but pretty much bare-bones on Windows, you're able to
+00:23 code anything you want and just get into it, okay.
+00:28 So the first thing you're going to need to do
+00:30 is go and download Python.
+00:32 And you can do that at python.org/downloads. Okay.
+00:36 And it will detect you're on Windows if you using Windows,
+00:40 and you can download Python 3.6.4,
+00:43 the current latest version, and install it.
+00:46 It's just an Microsoft installer file.
+00:49 It will install to a default path.
+00:50 You don't have to change anything.
+00:52 Don't worry about it.
+00:53 Nice and simple.
+00:55 And once you're done, you can actually just launch IDLE.
+00:59 Okay, that's I-D-L-E. Right?
+01:02 You type that into your Windows search, and that will
+01:05 actually bring it up into the Start menu. Right?
+01:08 Once that's up, you'll see something that
+01:10 looks similar to this, the Python shell,
+01:13 which you can just type in Python code.
+01:17 Okay? And you can live code just like that.
+01:20 This is the Python shell.
+01:22 Now with IDLE, this Integrated Development Environment,
+01:26 okay, that's what IDLE stands for:
+01:28 Integrated Development and Learning Environment.
+01:31 With that, you can actually create a Python file.
+01:34 Okay. This is actually going to be pretty much a
+01:38 plain text file, but when you save it,
+01:40 it will automatically save it as a .py file.
+01:43 So your Python file.
+01:45 That's what I like about using IDLE.
+01:46 I never have to worry about accidentally
+01:49 using the wrong format.
+01:51 Okay? And other than that, you've seen some of my videos
+01:55 that I run my scripts through the command prompt.
+01:59 Okay? There's my path to my environment,
+02:01 to where I'm storing everything for this course,
+02:04 and I will just run the scripts straight from there
+02:08 using the Python command.
+02:10 And that is pretty much the bulk of my setup.
+02:14 You won't see anything else.
+02:16 You won't see anything different.
+02:18 That's it, okay?
+02:19 So standard command prompt on Windows.
+02:21 I don't even use PowerShell.
+02:23 I've go the Python shell here, and I just save the files
+02:28 using the new document section of the Python IDLE.
+02:33 And that's pretty much it.
+02:34 So, I say keep it simple.
+02:37 One day I probably will make the move to to PyCharm
+02:40 or something, but for now, I'm happy with this.

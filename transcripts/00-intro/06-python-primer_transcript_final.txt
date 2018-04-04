@@ -1,0 +1,18 @@
+00:00 Do you need a little help with the Python language?
+00:02 Of course, we'll cover much of the little details
+00:05 and definitely the advanced features
+00:07 as we go through this course,
+00:08 but we don't start from the absolute beginning.
+00:10 What is a variable?
+00:11 What is a loop?
+00:12 Instead, we've included a Python language primer.
+00:15 So when you look at Python,
+00:16 if it's, you know, a little fuzzy,
+00:17 maybe you've done it a long time ago, but you've forgotten.
+00:20 You haven't done very much of it.
+00:21 Well, we put something in here to help clear it up.
+00:24 So anytime you're confused about something in the language,
+00:28 just jump down to the appendix, Python Language Concepts.
+00:32 Find that thing, watch the one to two-minute video.
+00:35 Hopefully, that'll clear things right up.
+00:37 You'll find this at the end of the course.

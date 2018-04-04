@@ -1,0 +1,47 @@
+00:00 When you dedicate yourself to taking a course,
+00:02 and carefully working the way
+00:05 that the instructor, the author, is working,
+00:07 you are effectively gaining much of the experience
+00:09 that that particular author or developer
+00:11 has gained through their career, through their jobs.
+00:15 This course is special because it's taught by three people.
+00:18 That means you get three experiences in one.
+00:21 And this is super valuable.
+00:22 Imagine that you have a job at this place.
+00:24 You get to work with cool VR gear and
+00:27 on hardware and IoT things.
+00:29 You'll gain one set of experiences.
+00:31 But if you took a different job,
+00:33 say, you're starting a fashion start-up
+00:35 with your friend, this woman, from college,
+00:38 and you're just working on this coffee shop.
+00:40 Being scrappy, working, trying to get
+00:42 venture capital and launch your application,
+00:44 you have a totally different experience
+00:46 than this dude in a VR headset.
+00:49 Or maybe you go the corporate route,
+00:50 work at Microsoft like this guy here.
+00:52 He's, you know, working on some new programming,
+00:55 language tooling around Python.
+00:57 These are all super different experiences.
+00:59 And these experiences are very positive.
+01:02 They give you a different perspective
+01:03 and more perspectives on programming.
+01:06 That's awesome.
+01:07 How's that relevant to this course?
+01:08 Well, with the three instructors,
+01:09 we each have a slightly different set of tools.
+01:12 And slightly different way of working.
+01:15 We're going to show you next,
+01:16 how each of us gets set up.
+01:18 What you need to follow along with each of us:
+01:20 Julian, Bob, and myself during our particular segments.
+01:24 You don't have to work like us,
+01:25 but if you want to do exactly what we're doing,
+01:27 we'll show you how we got started.
+01:29 And we feel this is super valuable for you.
+01:31 You'll have not just one experience,
+01:33 but three experiences kind of bundled up into one.
+01:37 And so on the other side of this course,
+01:39 you're going to have a broader perspective.
+01:41 And that's pretty awesome.

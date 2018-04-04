@@ -1,0 +1,82 @@
+00:00 As Michael stated,
+00:01 there are 2 important
+00:03 rules for the 100 Days.
+00:05 And it is code an hour a day,
+00:07 and track your progress.
+00:08 Do a daily tweet of what you have accomplished that day.
+00:11 In order to help you guys do that for this course,
+00:14 we made a feature on our code challenges platform.
+00:17 So head over to codechalleng.es
+00:19 and sign in with GitHub
+00:23 and go straight to 100DaysOfCode.
+00:26 So here you see a template where you
+00:28 can start the #100DaysOfCode,
+00:30 but we made it easier
+00:31 and made a direct link to populate
+00:34 the 100 Days for you.
+00:35 Head over to
+00:38 start talkpython
+00:44 and here you get a grid of 100 Days
+00:48 with exactly the materials of each day.
+00:51 So for example,
+00:52 Day 1 you start with day times.
+00:54 Day 1 is a lectures.
+00:55 Day 2 is the practice,
+00:57 and Day 3 is even more practice.
+00:59 And you can just click on the Tweet icon
+01:04 and that prepares a tweet for you,
+01:06 so you can just tweet this out
+01:08 or you can modify it as you want.
+01:11 And then you can start to put things
+01:13 into complete.
+01:15 So here for example I hit Day 1, done.
+01:18 And you see that this percent counter
+01:20 then goes up and the items that you've done
+01:22 are under done.
+01:25 And so,
+01:26 2.
+01:28 And here you can document additional
+01:30 learning, so here I learned that
+01:34 time Delta, for example,
+01:38 and here you are at the second lesson.
+01:40 So this is Day 4 and here you're going to
+01:42 look in the collections module, here.
+01:46 Watch the videos.
+01:48 And on 4% and here I did an exercise,
+01:55 and marked complete.
+01:57 So this is the grid of the whole
+01:58 100 Days.
+01:59 All the materials we have prepared for
+02:01 this course,
+02:03 and once you're done,
+02:04 you have a nice love of all the stuff
+02:06 you have coded and accomplished.
+02:07 For example this is our #100DaysOfCode
+02:10 which I imported from Twitter.
+02:12 As you see we did a ton of coding
+02:15 and you have it all nicely in one place,
+02:18 and you can refer back to it which
+02:20 we do often.
+02:21 We go back to our script a lot,
+02:23 pull out stuff we learned,
+02:25 reuse it, and that's why it's nice to have
+02:27 a #100DaysOfCode log.
+02:29 Apart from that the tweeting is a very easy
+02:33 and we encourage you to do that.
+02:35 It's also a way to notify us what cool
+02:37 stuff you are building for this course.
+02:40 Completing the 100 Days is not easy.
+02:42 It's a lot of work and dedication,
+02:44 but at the end, it's a great accomplishment.
+02:46 And you will have grown as a developer.
+02:49 So you should be proud when you see this
+02:51 honor of accomplishment when you hit the
+02:53 hundred percent done.
+02:55 So we hope this will help you
+02:57 make it easy to keep track of your progress
+02:59 during this course,
+03:00 and if you want to tweet along is
+03:03 stated in one of the rules.
+03:04 This should make it very easy.
+03:06 Alright and with that good luck
+03:08 and prepare to learn a lot of of Python.

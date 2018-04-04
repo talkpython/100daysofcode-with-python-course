@@ -1,0 +1,28 @@
+00:00 There are a lot of things that people do
+00:01 to support each other and encourage themselves
+00:04 to stay focused and keep going on #100DaysOfCode.
+00:07 But there's really just two main rules
+00:09 and they're really really simple.
+00:11 The first rule is to code a minimum of an hour
+00:15 every day for the next 100 days.
+00:17 And I would say taking a coding class
+00:20 like learning the lessons in this course
+00:22 and then coding a little bit counts, right?
+00:24 You're immersing yourself in code
+00:25 for at least an hour a day every single day
+00:28 for the 100 days.
+00:29 And if you got sick, like you saw the person before
+00:31 had gotten sick, had to take a day off,
+00:33 that's okay you just add some days on the end.
+00:35 Have sick days and just move it to the end.
+00:38 The second rule is a public commitment
+00:40 to making progress and keeping with it.
+00:43 And they way that works is to tweet
+00:45 or to put onto somewhere like Facebook
+00:47 #100DaysOfCode with an update every day.
+00:51 The PyBytes platform actually is going
+00:53 to help you a lot with this, but however you want to do it
+00:55 it's code an hour a day and
+00:57 share your progress every day.
+01:00 Super simple rules, and we hope this course
+01:02 really makes this work for you.

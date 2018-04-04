@@ -1,0 +1,243 @@
+00:00 Hello and welcome to #100DaysOfCode in Python,
+00:04 written by Bob Belderbos, Julian Sequeira
+00:06 and myself, Michael Kennedy.
+00:10 Maybe you're wondering,
+00:12 what is this #100DaysOfCode?
+00:15 You've probably seen it all over social media.
+00:17 In fact, it's really, really taken off
+00:19 and people are finding this concept of
+00:21 a #100DaysOfCode really powerful for
+00:24 getting them to focus over a long time
+00:27 to actually get over the hump and become capable developers,
+00:30 or, maybe learn a new language like, say, Python.
+00:33 Here's an example of what you might see on Twitter,
+00:35 Renee Sanchez says, "Day11 #100DaysofCode progress.
+00:39 Today I worked some more on bite 18,
+00:42 find the most common word from codechalleng.es/bites."
+00:46 This code-challenge platform they're referring to
+00:48 is actually from your co-authors Bob and Julian.
+00:51 We'll talk more about that later.
+00:52 Let's look at one more.
+00:53 Amit Kumar says, " #Day32 another autowebcompat PR,
+00:59 pull request, just got merged.
+01:01 Way to to go #Python #tkinter #100DaysofCode.
+01:04 So he added some new feature or bug fix to autowebcompat.
+01:07 Very, very cool.
+01:09 So you've seen this stuff probably all over social media
+01:11 Facebook, Twitter and so on.
+01:14 What's it about?
+01:15 Well, this is actually a very structured project
+01:17 put together by this guy, Alexander Callaway.
+01:21 So Alexander, he was studying in business school
+01:24 but also wanted to learn programming
+01:27 and he was having a hard time making progress.
+01:30 So, he came up with this idea of #100DaysofCode.
+01:34 Here's a quote from him.
+01:35 "The idea of #100DaysOfCode originally came from
+01:37 my personal frustration with my inability
+01:40 to consistently learn to code after work.
+01:43 I'd find other less-involved activities
+01:45 to spend my time on like binge-watching a TV series.
+01:48 One of those days,
+01:48 I was sitting in a restaurant with my wife, Anna,
+01:50 sharing my frustrations with her.
+01:51 I suggested maybe I should make a public commitment
+01:54 to learning for at least an hour every day.
+01:56 And I thought it would go for three months
+01:58 but it turned out, 100 days was the right one."
+02:01 How about that?
+02:02 Well, thank you for creating this project Alexander.
+02:04 This is really a great thing for many people getting started
+02:07 and this is what this course is all about.
+02:09 We're going to give you lessons and exercises
+02:12 for every one of these 100 days.
+02:16 We're going to cover so much content in this course,
+02:19 it's going to be amazing.
+02:20 You'll learn many, many different things
+02:23 over these hundred days of code.
+02:25 In fact there's so many
+02:26 I can't really innumerate all of them.
+02:29 It'll just take too long.
+02:30 But I do want to give you a quick sampling
+02:32 of what we're going to cover.
+02:33 We're going to talk about collections, lists,
+02:35 dictionaries working with them.
+02:36 We're going to test our code with pytest
+02:38 and make sure we build reliable apps.
+02:40 We're going to create games, Dungeons and Dragons style,
+02:42 with classes and inheritance
+02:44 and objected oriented programming.
+02:46 We're going to deal with errors
+02:47 and proper error handling in Python.
+02:50 We'll do logging to keep a history
+02:51 of what our application has done.
+02:53 We're going to work with
+02:54 the popular exchange format called JSON
+02:57 and this is a really great way
+02:58 to exchange data between Python applications
+03:01 and any web service.
+03:03 Speaking of services, we're going to learn how to
+03:05 call JSON based web services from Python.
+03:09 And, if there's no service
+03:10 you can still go to the website and do web scraping.
+03:13 You can turn any HTML page, anything on the internet,
+03:16 into a data source using web scraping.
+03:19 Another source that we might go and consume, RSS feeds.
+03:22 Really popular among blogs and podcasts,
+03:24 but also other types of subscriptions.
+03:27 We're going to use the Twitter and the GitHub API
+03:30 to interact with those services automatically from Python.
+03:33 Want to send an email?
+03:34 Maybe a new user registered for your site?
+03:36 Well we'll see how to do that as well in this course.
+03:39 Excel has got to be the most popular database in the world.
+03:43 It's not really a database, but people use it like one,
+03:45 and, you may need to program against it.
+03:47 Turns out, we have the trick for you right here.
+03:50 Want to automate something on the web,
+03:52 go login here, navigate over there,
+03:54 click this button and make that thing happen?
+03:56 We'll see how to do that with something called Selenium.
+03:58 You want to write a web application?
+04:00 Well, we'll do that with something called Flask.
+04:02 It's probably the easiest way to write a web app in Python.
+04:06 SQLite is a database built into Python.
+04:08 It's what's called an embedded database.
+04:10 And you'll see how to program it, either directly
+04:13 or, from what's called an ORM from SQLAlchemy
+04:15 where you create these classes
+04:17 and you map them to objects in your database.
+04:20 So we'll have a couple of places
+04:22 where we talk about SQLite and relational data.
+04:26 Graphs are wonderful.
+04:26 They explain so many things,
+04:28 and, so, we're going to use something called Plotly
+04:30 and draw graphs for you
+04:32 based on a set of data that you have.
+04:34 And, typically,
+04:35 when you're doing science-like stuff like this,
+04:37 that's done in something called Jupyter Scientific Notebooks
+04:40 and a good portion of this class
+04:41 will be presented in these notebooks.
+04:43 Not all of it.
+04:44 Maybe about a quarter.
+04:46 GUIs and Python, they typically don't go together.
+04:48 But, in this course they do.
+04:50 You'll see, in just a few lines of code,
+04:52 that we can create a really powerful
+04:53 and cool GUI or desktop application
+04:57 and this will run on all the platforms.
+04:59 Windows, Linux and macOS.
+05:01 And finally, it's fun to consume APIs
+05:04 but sometimes you want to build them.
+05:06 So we're going to actually take Flask
+05:07 and extend it to create our very own API
+05:10 and put that out on the internet.
+05:12 This is a ton of stuff, right?
+05:13 Isn't this exciting?
+05:14 Well, it's only a small part
+05:16 of what we're going to cover in this course,
+05:17 so I hope you're really excited.
+05:19 Bob, Julian and I definitely are excited to teach it to you,
+05:22 so let's get to it.
+05:23 You've chosen Python for your #100DaysofCode.
+05:27 Maybe you're a Python developer who has lots of experience.
+05:29 You just want to go through this whole challenge
+05:32 and that's great.
+05:33 You probably already know the power
+05:34 and popularity of Python.
+05:36 But if you're just getting into programming
+05:38 and you're coming here and say,
+05:39 "Well, let's try Python for this 100 days.
+05:42 That seems like a great way."
+05:43 I want to tell you, you have chosen wisely.
+05:46 So check out this graphic.
+05:50 This comes from one of the best sources on the internet
+05:53 for popularity and adoption of technology, Stack Overflow.
+05:58 And the data scientists at Stack Overflow
+06:00 did some predictions and said
+06:02 "Well how are the various languages doing over time?
+06:06 Are they becoming more popular, less popular?"
+06:08 based on their view into the industry.
+06:10 And, they did this up to mid-2017
+06:14 and then, you can see the gray part
+06:16 where they're projecting out.
+06:18 One of these languages is unlike the others.
+06:21 It is just going up and up and increasingly up.
+06:24 Your other best bet is JavaScript
+06:27 which is barely logarithmically going up.
+06:30 Java looks like it's topping off.
+06:32 The rest of them are going down.
+06:34 So if you're going to focus on something,
+06:36 pick one particular language,
+06:37 pick the one that's got all the momentum
+06:39 and the popularity behind it, and that's Python.
+06:42 Now you might say, "Okay, Michael,
+06:44 this is actually against all these older languages,
+06:47 C#, Java and so on.
+06:49 What about the new languages like Go and Rust?
+06:52 They're probably even more amazing
+06:54 and more powerful and growing quicker."
+06:57 Well, let's see.
+07:00 Yeah, they're growing up.
+07:01 They're going upward not downward.
+07:02 That's really great.
+07:03 Swift is going up.
+07:04 TypeScript's going up.
+07:05 Go is going up.
+07:07 But they are nowhere near Python in this graph.
+07:11 I just want to leave you with
+07:12 these two pictures in your mind
+07:13 that Python is really a great place
+07:16 to put your energy and be learning.
+07:18 My rough rule of thumb here is
+07:21 I would like to bet my career
+07:22 on things that are going up, not down.
+07:25 So, which one of these do you want to pick?
+07:27 Well, you're in a good place.
+07:29 When you dedicate yourself to taking a course
+07:31 and carefully working the way that the instructor,
+07:35 the author, is working,
+07:36 you're effectively gaining much of the experience
+07:39 that that particular author or developer
+07:41 has gained through their career, through their jobs.
+07:44 This course is special because it's taught by three people.
+07:47 That means you get three experiences in one
+07:50 and this is super valuable.
+07:52 Imagine that you have a job at this place.
+07:54 You get to work with cool VR gear
+07:56 and on hardware and IoT things.
+07:58 You'll gain one set of experiences.
+08:00 But if you took a different job,
+08:02 say, you're starting a fashion startup with your friend,
+08:05 this woman from college,
+08:07 and you're just working in this coffee shop,
+08:09 being scrappy, working, trying to get venture capital
+08:12 and launch your application,
+08:14 you have a totally different experience
+08:16 than this dude in a VR headset.
+08:18 Or, maybe you go the corporate route,
+08:19 work at Microsoft like this guy here.
+08:22 He's working on some new programming,
+08:24 language tooling, around Python.
+08:27 These are all super different experiences
+08:28 and these experiences are very positive.
+08:31 They give you a different perspective
+08:33 and more perspectives on programming.
+08:35 That's awesome.
+08:36 How's that relevant to this course?
+08:37 Well with the three instructors,
+08:39 we each have a slightly different set of tools
+08:41 and a slightly different way of working.
+08:44 We're going to show you next how each of us gets set up.
+08:47 What you need to follow along with each of us,
+08:49 Julian, Bob and myself, during our particular segments.
+08:53 You don't have to work like us
+08:54 but if you want to do exactly what we're doing
+08:56 we'll show you how we got started.
+08:58 And we feel this is super valuable for you.
+09:01 You'll have not just one experience
+09:03 but three experiences kind of bundled up into one.
+09:06 And so, on the other side this course,
+09:08 you're going to have a broader perspective.
+09:10 And that's pretty awesome.

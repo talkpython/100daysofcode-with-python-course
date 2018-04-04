@@ -1,0 +1,37 @@
+00:00 Let's take just a moment and talk about
+00:01 how you're going to experience this course.
+00:04 Yes, it is #100DaysOfCode,
+00:06 but it's not 100 different topics.
+00:09 What we've done is we've broken
+00:11 the course into three day segments.
+00:13 So day one, two, and three,
+00:15 days four, five, and six, and so on.
+00:17 So, for example, on day 10, we're going to
+00:20 introduce a new topic, teach you how to work with it,
+00:24 the ideas behind it, do some live code demos,
+00:27 and then after that, you'll get a chance to write
+00:29 just a little bit of code, 'cause you're going to
+00:31 spend a long time actually watching the videos.
+00:34 These vary, they would be between 15 minutes,
+00:36 maybe to 20, 25 minutes on average.
+00:39 There's a few that are really involved
+00:40 that go out longer than that.
+00:41 But basically, the first day of any three day segment
+00:45 on a single topic is going to be mostly learning
+00:48 about that subject, writing a little code.
+00:51 The next day is almost entirely writing code.
+00:54 We'll have a video for you, it may be just two minutes long,
+00:57 and we're also going to have in our GitHub repository
+00:59 instructions with hints and tips, and things for you to do.
+01:03 So you'll be able to follow along there.
+01:05 Then the last day is really about finalizing your code,
+01:08 maybe putting the polishing touches on the code
+01:10 that you wrote on day one and day two.
+01:12 Again, we'll probably have some instructions to guide you,
+01:15 but if you want to deviate, that's fine.
+01:17 This is your #100DaysOfCode.
+01:19 We're just here to support you along the way.
+01:21 So you can think of this course as 33
+01:24 three day journeys through it.
+01:27 And each one of those journeys will go through a particular
+01:29 topic: SQLAlchemy, Flask, Collections, whatever.

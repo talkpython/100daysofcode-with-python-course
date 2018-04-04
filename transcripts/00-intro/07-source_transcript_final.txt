@@ -1,0 +1,54 @@
+00:00 We've made all the code we've written over our 100 days
+00:03 worth of topics available to you in GitHub right here.
+00:07 gitHub.com/talkpython/100daysofcode-with-python-course.
+00:12 You can go over here and check it out.
+00:14 This is also super important because some of the projects
+00:17 that you work on have either data that you've got to
+00:20 start with, or they've got some instructions
+00:22 and all of that you'll find here.
+00:24 Let's jump over to GitHub and have a look.
+00:27 Here we are at the GitHub repository.
+00:29 You have a little bit of a description here
+00:31 at the beginning.
+00:31 But the main thing you care about is the days.
+00:34 You can come in here and see the day one to three.
+00:38 This is the stuff with JavaScript.
+00:40 Here's day 13 to 15.
+00:42 This is our text-based games.
+00:44 Down over here is a Search API.
+00:46 Let's just check this one out and see what's in here.
+00:48 Here's demo that we built, and if you need the code for it
+00:51 you can see actually here's what we've written and so on.
+00:55 These three pieces work together.
+00:58 But what's most important is this ReadMe.
+01:00 It's automatically displayed by GitHub when you come here.
+01:03 You can see it talks about now that you've seen the videos
+01:07 what do you do?
+01:08 Here it talks about, okay, so you watch this.
+01:10 And the first thing on the day 43,
+01:13 that's the first day of these three,
+01:14 this is what we're going to do.
+01:16 On day two, it talks about working with API.
+01:18 It shows you how to use it with this thing called Postman.
+01:21 And then finally, it also shows you how to build your app,
+01:24 and then finally it says, okay, on the last day,
+01:26 we're going to make it even better.
+01:28 For the very grand finale, we're going to open it
+01:30 in a web browser if somebody picks something inside
+01:33 your application.
+01:34 You can see that as you go through you want to make sure
+01:36 that you go to each day, look at the instructions.
+01:39 They're going to be there to help you follow along,
+01:41 both the code demo we wrote as well as the steps and data
+01:45 that we put together for you.
+01:48 Of course, to download this, you'll want to download it.
+01:50 I would also say star and fork it if you have
+01:53 a GitHub account.
+01:54 You could either come here and copy this and Git clone it
+01:56 if you're familiar, or if you don't want to mess with Git
+01:59 you can just download the Zip file and it will
+02:00 be a folder you can unzip somewhere to work with.
+02:03 But definitely download this.
+02:04 You're going to want it locally.
+02:05 You're going to want to save it.
+02:07 You're going to use it throughout this course.
