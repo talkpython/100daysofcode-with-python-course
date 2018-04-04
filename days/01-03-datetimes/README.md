@@ -20,6 +20,10 @@ Use the following URL to unlock Bite 7 for free: [https://codechalleng.es/bites/
 
 Work on *Bite 7 - Parsing dates from logs* for your second day of learning datetime.
 
+Edit: We decided to simplify Bite 7 slightly after some feedback we received from students. We've now removed the requirement to read in the file which should keep the Bite focused on the theme.
+
+Additionally, we've added another Bite that should be more appropriate for beginners. Unlock it here: [https://codechalleng.es/bites/promo/datetimes_starter](https://codechalleng.es/bites/promo/datetimes_starter)
+
 
 ## Day N+2: Your Turn!
 
