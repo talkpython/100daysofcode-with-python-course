@@ -33,7 +33,7 @@ View the [full course outline](https://training.talkpython.fm/courses/explore_10
 
 This course is for anyone who wants to immerse themselves in Python for 100 days worth of learning and hands-on projects.
 
-We don’t start from absolution zero in terms of programming but if you are new to Python we have a language appendix and we start somewhat slow. By the end of the course, we get into intermediate-level Python projects.
+We don’t start from absolute zero in terms of programming but if you are new to Python we have a language appendix and we start somewhat slow. By the end of the course, we get into intermediate-level Python projects.
 
 ## Course flow and the 33 projects
 
