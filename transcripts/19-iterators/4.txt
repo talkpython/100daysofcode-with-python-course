@@ -1,0 +1,111 @@
+00:00 So we're going to kick off our foray into EdiTools
+00:03 by using EdiTools.cycle.
+00:06 This is one of the infinite usages of EdiTools.
+00:11 Okay, in the since that when you use it, it's just going
+00:14 to keep iterating over the item or series of items
+00:19 over and over again.
+00:20 It doesn't stop until something tells it to stop, okay?
+00:25 So, let's have a go.
+00:27 First thing we're going to do is import EdiTools.
+00:32 Now we're going to import, I'll explain all of this
+00:34 in a second, we're going to import sis
+00:36 and we're going to import time.
+00:38 What we're going to make, and this is a really cool one,
+00:40 I absolutely love this one, we're going to make
+00:43 one of those little, cool spinny line things, you know?
+00:47 Like a little loading line that you see on the command line.
+00:50 You might actually like this or you might hate it
+00:53 depending how many times you've seen it.
+00:55 So, to make that, we're going to go symbols,
+00:59 let's create a little item here called symbols.
+01:03 And it's going to be EdiTools.cycle.
+01:08 Now what we have to specify between the brackets is,
+01:11 tool tip gave it away, is the iterable,
+01:14 the item that we're going to iterate over with cycle, okay?
+01:18 Now that could be a variable, could be anything really,
+01:21 it could be any object, but,
+01:23 we're going to use just a specific set in a specific order.
+01:29 So if you think about this, take a look at how these
+01:32 are lining up.
+01:33 This looks like a spinner right now.
+01:35 So it's going to start with a horizontal dash,
+01:38 then it's going to go into the slash, then the pipe,
+01:40 and then the other, then the forward slash,
+01:42 and so on and so forth, okay?
+01:44 And it's going to iterate through that.
+01:46 It's going to keep cycling through this and you'll see
+01:50 that it actually starts to spin.
+01:52 Alright, it gives you that sort of feeling of a spin.
+01:56 Now, to do this, we need to put it in a loop.
+01:59 So we're going to give it a while loop.
+02:02 So while true, and again, dangerous, this is just going to
+02:05 keep going until you control c out of it all.
+02:08 Snap out of it in some way, shape, or form.
+02:12 To get this to work the way we want it to work,
+02:16 we need to use the sis module, okay?
+02:21 So, I won't go into sis now
+02:23 because this is pretty straightforward
+02:26 and you may already know it
+02:28 and it's out of the scope, so we're going to essentially
+02:31 send this data to standard out, okay,
+02:34 on the system, wherever you're running this from.
+02:37 And the little trick we want to do here is,
+02:42 I'll just show you, we're going,
+02:43 let me type it in first.
+02:45 We're going to go next, symbols...
+02:47 Alright so what this line is going to do
+02:49 for every single loop it's going to do the next.
+02:53 Remember we covered next.
+02:54 It's going to go through the next iteration
+02:56 of EdiTools.cycle, okay?
+03:00 And this here, the slash r, is going to negate
+03:06 putting this on a new line, okay so,
+03:08 it's not going to return,
+03:10 it's not going to put it down on a new line, mkay?
+03:15 Now, sis, this one here we sort of have to put in
+03:17 just for safekeeping.
+03:19 Just in case, okay?
+03:21 Oops, not flash.
+03:22 Flash, so sis standard out flash, this guarantees,
+03:26 this will force whatever you're putting to standard out
+03:30 to appear on the screen because from time to time
+03:33 you might actually get what you're writing to standard out
+03:37 going into a buffer and we don't want that.
+03:39 We want it to be flushed out of the buffer
+03:41 and onto the screen.
+03:43 And then we're going to put a time delay.
+03:45 That's why the imported time up above.
+03:47 Let's just make it one second, okay?
+03:49 So, our while loop, it's going to start iterating using next
+03:53 through EdiTools.cycle, okay,
+03:56 it's going to cycle through this infinitely.
+03:59 It's going to flash it and make sure it appears on the screen
+04:02 and then it's going to take a second,
+04:04 okay it's going to sleep for one second
+04:06 and it's going to do that for,
+04:10 well, for eternity, until we exit out, okay?
+04:15 So look at that, we're starting to go through here.
+04:17 Just ignore the two here.
+04:20 This is a by product of actually running through this
+04:24 in the python shell.
+04:26 So what we're actually going to do is we're going to put this
+04:30 into a, an actual python file
+04:32 and we're going to run it from our Windows command line
+04:36 and you'll see how it actually works.
+04:39 Okay, with some magic here we now have all of that
+04:42 in a little script and now all we have to do
+04:46 is run python and what did we call it?
+04:49 We called it cycle_demo,
+04:53 and look at that.
+04:55 Look at this funky little spinner over there.
+04:57 So, that looks kind of boring now...
+05:02 Mkay, so let's go into this and change this in seconds
+05:07 to be zero point,
+05:10 five seconds.
+05:14 Let's try it again.
+05:17 And look it's speeding up, okay it's gettin' quicker.
+05:19 It's gettin' quicker.
+05:20 And just, just for the fun of it, let's make it super fast.
+05:24 And look at that, now it looks like a proper spinner.
+05:27 So this is a perfect, perfectly awesome and usable example
+05:31 of EdiTools.cycle

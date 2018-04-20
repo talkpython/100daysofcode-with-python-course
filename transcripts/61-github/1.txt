@@ -1,0 +1,17 @@
+00:00 Welcome back to the 100 Days of Python, Day 61.
+00:04 Wow, that means you're already 60% in.
+00:07 Way to go and keep going.
+00:09 I hope you enjoy it.
+00:10 The next 3 days, I will be your guide,
+00:13 showing you how you can use the GitHub API with Python.
+00:17 We will be using a module called PyGitHub,
+00:20 which makes it pretty easy to work with the API.
+00:23 We will both retrieve data from the API,
+00:26 as well as post data to the API.
+00:29 While doing that, I will also show you
+00:32 the builtin help and their functions in Python,
+00:35 to retrieve more documentation from the API.
+00:38 And finally, I will also show you how to use pdb,
+00:42 the debugger, to look at your code in realtime.
+00:45 Working with APIs is a very useful skill to have.
+00:48 So I'm very excited to show you how to do that.

@@ -1,0 +1,42 @@
+00:00 Over here at consumer_services_api.talkpython.fm,
+00:04 we have at least three services that you can play with.
+00:09 So this is the backend for the blog,
+00:11 and it gives you the operations right here.
+00:14 So you can get, and it'll list,
+00:16 if you just do a getting into this,
+00:18 it will give you all of the blog posts.
+00:19 If you do a get against that, some particular id,
+00:23 you'll get the details only about that blog post.
+00:26 Create a new one you do an HTTP POST.
+00:28 To update one you do a PUT,
+00:29 and to actually remove one you do a
+00:31 DELETE against these particular URL's here.
+00:33 So this can be totally done with requests,
+00:36 but it's a lot of juggling the pieces.
+00:38 And if you use the restricted version,
+00:40 then you've got to use the authentication settings
+00:43 that actually go into the headers and stuff like that.
+00:45 There's also this kind of crazy SOAP version,
+00:48 we're going to stay away from that.
+00:49 So, we're just going to focus with this one here,
+00:51 but if you wanted to get more interesting stuff
+00:54 going on, you could actually use like
+00:56 basic authentication with those, and so on.
+00:59 So if we look here,
+01:01 and you'll see we have a list, and then just
+01:03 blog post, blog post, blog post.
+01:05 Now these are not super interesting here, right?
+01:08 They're just title, content, view count, id,
+01:11 which is kind of like a primary key,
+01:13 and then the date it was published, okay?
+01:16 They're not advanced, but it's plenty for us to play with.
+01:20 Right, so we're going to use this URL,
+01:22 and I would just leave this open,
+01:24 we might come back in and refer to these
+01:26 as we build out our service here.
+01:27 You guys can play with this, you can update and
+01:31 delete posts however you want.
+01:33 Actually, it's each person that comes and works with
+01:36 the service gets their own copy.
+01:37 So don't worry you're not going to mess it up
+01:39 for someone, have fun with it.

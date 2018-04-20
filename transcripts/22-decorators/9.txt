@@ -1,0 +1,37 @@
+00:00 Welcome back.
+00:01 For this final day of the decorators lesson,
+00:03 I got another code challenge for you.
+00:07 It's more an open challenge, which you also can do
+00:10 on the Code Challenge platform,
+00:12 and basically it's to write a decorator
+00:14 of your own choice.
+00:15 You can just look at your code maybe,
+00:17 refactor things that are repetitive,
+00:19 but I leave you totally free to build something
+00:22 that's useful for your needs.
+00:24 For example, when we did the #100DaysOfCode,
+00:27 at Day 95, we used a decorator of our own.
+00:34 By the way, here you see how cool it is
+00:36 to keep a log of your progress, 'cause you can always
+00:38 go back to all the scripts you have written.
+00:41 So here, Day 95, we used a decorator
+00:45 to cache movie results.
+00:49 And here we wrote a decorator to store
+00:51 or cache movie results.
+00:53 It's doing that in the store helper,
+00:55 which you can see here.
+00:56 So that's an example of how we used the decorator
+00:59 for our own needs.
+01:00 And that's what I challenge you to do
+01:02 by taking this challenge.
+01:03 And, of course, we invite you to PR,
+01:06 or pull request, your work.
+01:08 And there are instructions here to get set up with git
+01:11 and pull request your work, which you can also
+01:14 do here on the platform.
+01:17 By the way, don't forget to share your awesome scripts
+01:20 on Twitter using #100DaysOfCode
+01:23 and feel free to include us.
+01:26 Tag Python and PyBites.
+01:27 We are really happy to see what you all come up with.
+01:30 So enjoy, and learn a lot about decorators.

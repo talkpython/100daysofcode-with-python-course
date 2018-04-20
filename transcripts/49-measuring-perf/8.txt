@@ -1,0 +1,68 @@
+00:00 Alright, so all of this was really
+00:01 useful and helpful and I think we did a lot
+00:03 of good stuff with it, but this text view,
+00:06 while it is technically helpful, you really can do better.
+00:12 In this simple program, what I'm going to show you
+00:14 doesn't come out really that great
+00:16 because there's so much overhead,
+00:18 like I said, a sort of programmed start-up and stuff.
+00:20 But in a real complex application,
+00:22 you would really be able to make great use
+00:25 of what I'm going to show you.
+00:26 So, we saw that we can come over here
+00:30 and run the profiler externally like this.
+00:33 And that works fine,
+00:34 or we can even use the API internally.
+00:36 Let me show you one other option.
+00:39 Now for this to work, we need to go back,
+00:42 we need to take a bit of a step back into this mode here
+00:46 where we're running the profiler from the command line.
+00:50 Just the whole program basically.
+00:52 So let's drop in this program PyCharm bit.
+00:54 Let's drop this enabling and disabling and printing
+00:58 and we can still leave everything else the same.
+01:02 But we're going to take away the profiler API internally.
+01:05 And we're going to run this just like normal, and it runs.
+01:08 There's no output that is anything special.
+01:11 But once you have a run configuration--
+01:13 now this is only for those of you
+01:15 who care about PyCharm and have the Pro Edition.
+01:17 If you're using something else like Visual Studio Code
+01:19 or something, you're going to have to do
+01:21 what we've already seen, alright?
+01:22 There are ways to implement these tools
+01:24 outside of PyCharm, but this is pretty nice.
+01:27 Once we create this,
+01:28 we can run it here but if you go over there,
+01:30 it'll say profile that. We click it, wait a second.
+01:34 First of all, if you look up at the top, way at the top,
+01:38 it is running the cProfiler.
+01:43 And this list here is the list that you already saw.
+01:46 But we can click on, say 'time'
+01:49 and see, here's main, here's the
+01:52 research py stuff we're doing,
+01:54 here's the Hot Days, all that kind of stuff.
+01:57 Here's the init that we're calling.
+01:59 Same thing, but you can quickly jump around.
+02:02 You can even say, "Show this on the call graph."
+02:04 Well, of course, you see it right there.
+02:07 This is a visualization of that result.
+02:09 Let me come down here and zoom in, this will become useful.
+02:14 Notice, here's our program, it's calling main,
+02:17 it's calling "Hot Days, Wet Days, Cold Days."
+02:18 These are pretty quick. Now we're calling this "Init."
+02:22 We're calling this one 99 times,
+02:25 but we're only going through the parse row
+02:27 365 times. Remember, that's one year's worth of data,
+02:32 365 rows, so even though we call this 99 times,
+02:35 we're not actually parsing it 99 times,
+02:38 we're just doing that for one round through the file.
+02:41 So here you can see where you're spending your time.
+02:43 You can actually visually go through it.
+02:45 Like I said, in a real app, this is actually more helpful
+02:48 because the overall program start-up is not
+02:51 so significantly shown in the graph.
+02:54 It's where your app's doing most of its work.
+02:56 This is so simple that it kind of
+02:57 gets lost in the noise, but this graphical view
+03:01 is really, really nice as well.

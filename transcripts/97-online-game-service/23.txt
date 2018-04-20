@@ -1,0 +1,49 @@
+00:00 That was a big one, wasn't it?
+00:01 Quite a bit of stuff we covered there
+00:03 but I hope it was worth it.
+00:04 I hope you really feel like you have
+00:06 this great, cool power.
+00:08 What I would like you to attempt with whatever
+00:10 time you have remaining for these 3 days,
+00:13 make it as far as you can, if you don't
+00:14 get done like, no big deal.
+00:17 Try to create a game, kind of like we did,
+00:20 but do it remotely.
+00:22 Set it up so you that you can play a game
+00:26 and people can have their high scores
+00:27 and a record of the game and a history and so on,
+00:31 players that can come back and resume
+00:33 playing other games and so on.
+00:35 If they get some kind of ranking or something right,
+00:37 like experience or points.
+00:40 One game I had in mind, it's really simple.
+00:42 Simpler than what we were doing by quite a bit
+00:45 that you could work on is the high,
+00:47 low or guess that number game.
+00:49 Just goes like this, what's your name?
+00:50 Pick a number between 0 and 100.
+00:52 50, too high.
+00:53 30, too high.
+00:54 10, too low.
+00:55 15, too low.
+00:56 19, boom, you win.
+00:58 Simple game and you don't even have to write it.
+01:00 The whole thing actually exists right here,
+01:02 you can grab it but your goal is to move this logic
+01:05 and the persistence to the server.
+01:07 So hopefully this is a simpler version
+01:09 of what we talked about.
+01:11 In addition to watching the videos today,
+01:14 if you have extra time, take this high, low game
+01:17 or some other game you want to do
+01:18 and add database persistence to it.
+01:21 Feel free to borrow heavily from the code that we dropped
+01:25 in there as well on this one, right?
+01:26 You've got to, remember you've got to create the sequel
+01:28 off of your base, you've got to define the classes,
+01:31 you've got to create the factory, you can just copy
+01:33 that stuff over, change the names of the classes
+01:35 in the columns 'till it works for you.
+01:37 Okay, so that should be pretty quick,
+01:40 if you rob the code from a previous day
+01:43 that you've already done.

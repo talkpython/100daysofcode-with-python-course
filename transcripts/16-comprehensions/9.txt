@@ -1,0 +1,78 @@
+00:00 Welcome back.
+00:01 I hope yesterday's exercise was reasonable for you
+00:04 but starting today I will show you a possible solution.
+00:08 If it was very easy for you,
+00:10 feel free to skip to the next video
+00:12 where I have some other exercises lined up for you.
+00:15 Okay, so the first thing we needed to do
+00:17 was to title case the names using a list comprehension.
+00:22 That should be pretty easy now.
+00:24 So, name title for name in names.
+00:31 Oops and names is not defined
+00:33 because I did not run the cell and let's run it again.
+00:37 Okay, cool. So, every name is title cased.
+00:40 And then we have to write a list comprehension,
+00:42 reverse the first and the last name
+00:45 using a helper function.
+00:47 So, let's define reverse the first, last names
+00:55 and it takes a name, split the name in first and last
+01:02 so this is a nice example of unpacking.
+01:04 So the name splitted by defaults space, get you two elements
+01:09 and you can assign them directly to first and last.
+01:13 Then, we return them and I was using a join but in 3.6
+01:18 you can use f-strings where you can embed the variables,
+01:21 which is very nice.
+01:28 And let's do the list comprehension to use that function.
+01:31 Reverse first, last names, name for name in names.
+01:42 Right. And yeah, I dropped the title case requirement here
+01:45 but that worked.
+01:47 Then we move on to generators
+01:48 and the exercise was to generate random pairs of names.
+01:53 So, name one teams up with name two, etc.
+01:57 First, define a function.
+02:02 And, let's get the first names and we can again
+02:06 use a list comprehension for that.
+02:11 So, we split them again
+02:12 and we take the first element with indexing.
+02:15 We title case that. That's nice with python,
+02:19 that you can chain all these operations for name in names.
+02:27 So, let's do an infinite loop.
+02:30 Which I usually do with while true.
+02:34 I initialize first and second.
+02:42 And this little while, I'll explain in a bit
+02:45 was that I had to add later.
+02:51 And I used a random sample to take the first names list
+02:57 and pick two items.
+02:59 Why you needed the while? Well, it turned out that
+03:01 I could have two teams of a Julian
+03:04 so the same name came out of random sample.
+03:06 So, while that's the case, keep picking two names basically.
+03:10 So that was a little tweak I had to do to make sure
+03:13 that both names were always different.
+03:15 And then again, I used a f-string to return first,
+03:21 teams up with second.
+03:26 And let's see if that works.
+03:28 So, I assign the generator two pairs.
+03:35 So for underscore in range and the underscore is just a way
+03:41 in Python to say throw away variable
+03:43 I don't care really what that loop variable is.
+03:46 Print next pairs. I can adjust to four variable in 10 pairs
+03:53 because that will go on infinitely.
+03:56 So I'm making sure I'm making
+03:57 next to retrieve one value at a time.
+04:04 Okay, I did not import random.
+04:10 And there you go. Jewel teams up with Julian.
+04:12 Ali teams up with Bob, etc.
+04:16 One final thing I wanted to show you is itertools, islice
+04:19 because I said before you can not just loop over
+04:21 an infinite generator, it will probably hang your system
+04:24 because it never ends but islice, you can slice a generator
+04:28 just as you would slice a normal list but that overcomes
+04:31 that problem, so I can just do, itertools.islice
+04:39 give it the generator and the number I want,
+04:42 that gives an islice object and
+04:45 I can materialize those in a list by doing this.
+04:52 There you go. Okay, those were two possible solutions
+04:56 of the small exercises I gave you yesterday
+04:59 and in the next video,
+05:01 I will show you some more exercises you can do today.

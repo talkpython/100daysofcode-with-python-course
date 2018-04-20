@@ -1,0 +1,42 @@
+00:00 Okay, very quickly,
+00:01 here's how your first three days for pyperclip
+00:04 are going to pan out.
+00:05 So for the first day, you're actually just going
+00:07 to learn how to use pyperclip.
+00:09 That shouldn't take long, only a couple of minutes,
+00:11 because it's very simple.
+00:13 And after that, you're going to generate
+00:15 an affiliate link using pyperclip.
+00:18 That's a script that we use,
+00:19 and it's actually quite useful.
+00:21 You've got a used case there that you can probably change
+00:26 to suit your needs, so that's a great script
+00:28 to be creating on Day 1. Okay?
+00:31 Day 2, you're going to do the same thing,
+00:33 you're going to create another script.
+00:35 So these are going to be a few easy days,
+00:37 you're just creating stuff for yourself, right?
+00:40 Create a text replacer script.
+00:42 Now this one will, well, you can read here.
+00:44 It allows you to replace text using pyperclip.
+00:48 I won't give too much away, watch the videos.
+00:51 And last but not least, Day 3,
+00:54 come up with something yourself using pyperclip.
+00:57 Okay, so you've got the basics down,
+00:59 well, it's all basic, right?
+01:02 And what you need to do is create a challenging project
+01:05 for yourself, okay?
+01:06 You can complete it or not on Day 3, it doesn't matter,
+01:09 but one great idea is a persistent clip board.
+01:14 Something that will, I guess, save the things
+01:18 that you copy to the clipboard,
+01:19 and then allow you to paste them all back later.
+01:22 That's a really cool idea.
+01:24 Another one would be a sort of password vault.
+01:27 It doesn't have to be secure.
+01:28 I wouldn't actually recommend using it,
+01:30 but create a password vault that uses pyperclip
+01:33 to do the copying of your password
+01:35 for when you want to paste it out somewhere.
+01:38 So these are some cool used case ideas,
+01:41 use your imagination, and make something great.

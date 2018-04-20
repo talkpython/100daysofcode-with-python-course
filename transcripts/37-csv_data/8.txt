@@ -1,0 +1,144 @@
+00:00 Alright we're ready to answer the questions,
+00:01 let's go through this again.
+00:03 I'm going to move this down just so it fits right here,
+00:06 so we initialize the data.
+00:07 Boom, we're doing that.
+00:09 The next thing we need to do is say
+00:10 research dot let's say hot days.
+00:14 Now what we're going to do is we're going to write a function here
+00:18 that is going to give us all the days, hottest to coldest.
+00:23 And we come over here and say days equals this,
+00:27 then we could loop over and say for d in days,
+00:30 and that would show all of them.
+00:31 But we want just the top five, and so the way you do that
+00:34 in Python is using something called slicing.
+00:37 So you can come over here,
+00:38 and say I would like to go from index 0 to index 5.
+00:43 Alright so this gives us a little subset of our thing,
+00:46 and when it starts at zero or ends at the length
+00:48 you can just omit it.
+00:50 So we can write it like this,
+00:51 and that will process the first five of em'.
+00:55 And then let's just say, print d for a second.
+00:58 So we're going print out what that looks like.
+01:00 So let's go write this hot days function.
+01:05 Alright so we want to go through our data,
+01:07 and figure out the hot days.
+01:09 And it turns out, the easiest way to do this
+01:11 is just to sort it.
+01:12 So we can say return sorted data.
+01:16 Now that's going to sort it by, jeez I don't know, maybe the
+01:18 first element, alphabetical, by date, I'm not really sure.
+01:23 So we want to control what it's sorted by,
+01:25 and in here we can say there's a function
+01:28 that is going to take basically one of these items,
+01:32 one of these rows,
+01:33 and tell us what we're going to use to sort for it.
+01:36 So we're going to say key equals lambda
+01:39 this is a little in line function.
+01:41 Lambda says there's a function,
+01:43 then the next thing we put is the argument.
+01:44 So let's say r for record,
+01:47 we do a colon and then we have the body of the function,
+01:50 the implementation.
+01:51 Where do we want to sort by for hot days?
+01:53 Let's say with a max temperature for the hot days.
+01:56 Actual max temp is what we want.
+01:59 So we're going over here and I'll say r.actual_max_temp.
+02:04 Now this is close,
+02:07 this is going to actually give us the lowest value first,
+02:11 and then the highest value to the end.
+02:13 So the default sort is going to go from low to high,
+02:16 how do you reverse it?
+02:18 There's two ways, we could say reversed=True,
+02:23 I'll spell it correctly, that's one way,
+02:25 or another way a little more flexible,
+02:27 is to just put a negation here and say
+02:30 multiply that by a negative number.
+02:31 So take your pick, you can do it either way.
+02:34 While we're here let's write the cold days function,
+02:38 that should be easy.
+02:40 On the cold days take away that.
+02:42 And let's do wet days.
+02:47 And this time we're not going to sort by that,
+02:49 we're going to sort by actual precipitation.
+02:52 And again wet days are where we have more,
+02:54 so we want to sort that in reverse.
+02:56 Now the format is a little off so reformat the code.
+02:58 So PEP 8 is happy.
+03:01 Alright so those three functions actually
+03:03 should do what we need.
+03:05 So let's go over here and we'll just print out the five hottest days.
+03:08 Now this is probably not how we want to view it,
+03:11 so let's print this out slightly differently.
+03:13 So I would actually like the index,
+03:14 like this is the number 1 hot day,
+03:16 this is number 3 hot day, so I can come over
+03:18 and say idx, and instead of just looping over the days,
+03:21 I can innumerate them and then loop over.
+03:24 And that will give us the index and the day, for each time.
+03:28 So then in here we'll put something like a little dot to
+03:31 say what day it is and we'll say the temperature in terms of
+03:34 Fahrenheit on such and such day.
+03:36 And we'll just do a little string format on this.
+03:39 So what this is idx and it's zero base, you don't talk in
+03:42 terms of 0 1 2, you talk in 1 2 3 so plus 1.
+03:46 And then we need the day, dot.
+03:49 Now notice we're not getting any help here,
+03:52 let's go back to these real quick.
+03:53 So we can come over here and tell Python this is a record.
+03:58 Now if we do that,
+03:59 sorry not a record, you can tell it it's a list of record.
+04:04 Now this is a Python 3.5 feature,
+04:07 and if we come over here we import this typing.List.
+04:11 So at the very top, we have from typing import List,
+04:15 and we put this here, and I'll go ahead and while we're here
+04:18 just put it on the others because they're all the same type.
+04:21 We come over here and now we go back to this,
+04:23 and I say let's try that again, d.
+04:25 Oh yeah, now our editor is smart, now it can help us.
+04:29 What we want here, we want the actual max temperature,
+04:32 and then we want d.date.
+04:35 Alright, let's go and run it,
+04:37 see if this whole thing's hanging together.
+04:40 Boom, look at that, hottest five days, 96-94-92-91-90.
+04:45 And those are your dates, that's awesome, right?
+04:48 See how easy it is to answer the question.
+04:50 The challenge was not actually answering that question,
+04:52 the challenge was taking the data, reading it in,
+04:56 and then converting it to a workable format
+04:58 and storing it in our record.
+05:01 Once it's stored like that it is easy.
+05:03 Let's go ahead and do the same thing for the coldest days.
+05:08 So we'll say that days is not the hot ones but now it's
+05:11 research.cold_days, should do exactly the thing.
+05:16 And let's do a little print in between just so there's some
+05:18 spacing, and you guessed it,
+05:21 the wet days, same thing, just ask for the wet days.
+05:25 Let's run it, so there's our hot days,
+05:27 the cold days look really cold,
+05:28 well doesn't look that cold does it?
+05:31 Did I get the cold?
+05:32 That might be the high on the cold days.
+05:34 Let's go down here yeah.
+05:35 Yeah, yeah, careful.
+05:37 This going to be actual min temp,
+05:41 like so, and this is going to be actual precipitation.
+05:45 There we go.
+05:48 Let's say, inches of rain,
+05:52 there we go.
+05:54 Oh yeah, now that's starting to look cold isn't it.
+05:56 23 Fahrenheit, that's like negative negative 5 Celsius
+05:59 for those of you who are on the Celsius scale,
+06:01 this is like 36-37.
+06:04 Alright so pretty hot, pretty cold.
+06:07 I notice the sorting is correct.
+06:09 The weather stays, the heaviest amount of rain
+06:11 during that time was 2.2 inches, or 5 centimeters.
+06:15 And then it goes down pretty quickly from there.
+06:19 So hopefully you really got a good sense of how to take the
+06:23 CSV file in, read it, parse it,
+06:26 convert it to a usable format
+06:28 and then just quickly answer questions.
+06:30 We stored it in a list and sorted the list, there might be
+06:32 other data structures you need to use for your data.

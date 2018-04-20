@@ -1,0 +1,85 @@
+00:00 Alright let's create our little application for our demo
+00:03 that will let us work with the CSV data.
+00:05 I'm over here in the actual GitHub repository
+00:09 and we're going to create our application here.
+00:12 Now I want to create a virtual environment in here
+00:15 before we get started
+00:16 and maybe I'll even name it venv
+00:20 So, I'm going to go to that same folder in my terminal here
+00:24 and I'm going to run the command
+00:26 to create the virtual environment
+00:27 before I open this in PyCharm.
+00:29 Alright.
+00:30 If you were going to continue working in the terminal here
+00:32 and you wanted to say, run Python commands
+00:34 you would do this on Mac and that would activate it,
+00:39 and if you were on Windows you would just
+00:41 say venv\scripts\activate.bat like that.
+00:46 Either way, I guess you would use backslashes wouldn't you?
+00:48 But, until you get started here
+00:50 I'm not going to worry about this because
+00:51 I'm going to work in PyCharm and so
+00:53 if I throw this over here or on Windows or Linux
+00:56 say file, open directory it'll open this up
+00:59 and I'll go ahead and let it add the GitHub root
+01:02 doesn't matter so much for you guys
+01:03 but I'm going to of course check all the stuff in.
+01:06 Now, we can just go to our virtual environment
+01:08 and say let's just ignore this,
+01:10 it doesn't really matter
+01:12 and we're just going to get started like we have been
+01:14 by creating a program.py
+01:17 this is going to be our little way to explore,
+01:19 and this is going to be the top level thing
+01:21 that we want to work with.
+01:23 So, I'm just going to print out kind of the basic structure
+01:27 of what we're going to do in terms of working with this data
+01:30 and then we'll actually go write the code to implement that.
+01:34 So, I'm going to define a main method here
+01:37 and just for a minute I'm going to do the pass.
+01:40 We'll do this little structure that is very common in Python
+01:42 that says only directly execute this code
+01:45 if it's being invoked directly,
+01:48 if it's being used as a library.
+01:50 Don't run main just leave the other functions here.
+01:52 So this is the common pattern
+01:53 and we're going to print out a few things.
+01:55 We'll print out a little header value.
+01:57 Alright, so weather research for Seattle 2014 to 2015
+02:00 and we'll just put a blank line like that.
+02:03 And then we're going to need to initialize the data.
+02:12 Spelling is hard that's why PyCharm can fix it for us.
+02:15 Okay, so that's going to be great
+02:17 and once we get down here,
+02:18 we want to answer the questions.
+02:20 What, say, the hottest five days?
+02:24 And then we'll say to do show the days.
+02:28 And we're going to do this for a couple of different ways.
+02:31 I'm going to come in here and I want to answer
+02:32 the coldest five days and the wettest five days.
+02:41 So, this is our goal is to run
+02:43 basically answer these questions
+02:45 and we're going to do that by reading that CSV file.
+02:48 Before we do, let's just really quickly run
+02:50 and make sure this works.
+02:52 Hey, it tells us basically here are the days,
+02:55 but doesn't yet show them to us.
+02:57 So we're going to need to get the data.
+02:59 Let me actually make a little folder to organize that here.
+03:02 I'll call this data.
+03:04 And into that data file, I'm going to drop
+03:05 this thing we downloaded in the previous video.
+03:08 Drop that there.
+03:09 PyCharm will put it over in the right place
+03:12 and we can look.
+03:13 Does it look correct?
+03:14 Yes.
+03:15 Apparently PyCharm can help out with CSV files.
+03:18 I don't really care.
+03:20 But I do care about what the header values are going to be.
+03:22 We're going to work with that later.
+03:24 So maybe go ahead and copy that preemptively.
+03:27 Now, I think we're pretty much ready to write the code
+03:31 that is going to read that file
+03:34 and then provide the data
+03:35 so we can answer these questions here.

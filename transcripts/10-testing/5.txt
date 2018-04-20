@@ -1,0 +1,97 @@
+00:00 Alright. Back to our guessing game.
+00:02 So, how do we want to test this program?
+00:04 Ideally, you want to test one function or functionality
+00:08 in one pytest function.
+00:11 So let's start with the Get Random Number.
+00:14 I'm going to open a file test on the scoreguess.py.
+00:20 Again, using pytest I have the convenience to not
+00:23 having to import any module to run the test.
+00:26 What I do need is to import the actual program.
+00:29 So from guess import get random number and the game class.
+00:35 Now, one thing I want to show you in this video is how to
+00:38 mark an object. Because Get Random Number, as you can see
+00:42 at the right, uses a random integer from start to end.
+00:45 And random returns to something randomly every time.
+00:49 So how do you actually test that? And the way to do that
+00:52 in testing land is to mark an object.
+00:54 And for this I'm just going to use the unittest
+00:57 patch method on the mark module
+01:00 because it's a perfect fit for this scenario.
+01:05 So from unittest.mark, import patch.
+01:10 I actually need to import to random module
+01:12 because that's the one we're going to mark.
+01:15 And you can use it as patch object
+01:20 and that's to random module. Just specify the function
+01:24 or method you want to patch.
+01:29 And then in your test function
+01:35 you can pass in an argument and you can give that argument
+01:38 a fixed return value. And that's key because
+01:42 instead of having random return something else every time
+01:46 you can give it a fixed value.
+01:49 So it's kind of an override of what randint() normally does
+01:53 which is randomness. Now we're saying every time
+01:56 random gets called it gives us 17,
+02:00 and it makes that at least we can call our function,
+02:02 which is get random number, and we know that it returns 17.
+02:08 Yeah, and this is pretty basic, but it should show you
+02:11 how you can override certain things in your program you
+02:14 cannot really control and I have another example later
+02:17 about the input function where we ask for user input,
+02:21 which is another area that can be anything,
+02:24 so you want to mark that out.
+02:27 So with this code written,
+02:28 let's go back to the command line and run this test.
+02:31 And I'm using Control Z on a Mac with foreground to
+02:35 toggle back and forth between
+02:37 my file editor and the terminal.
+02:40 And here I can just run pytest, and that's funny
+02:44 because the previous example I put in a hello subdirectory
+02:47 and it's actually cool that we see this because
+02:49 pytest is smart enough to look recursively for test files.
+02:54 So in this case it found two and ran them both.
+02:57 So I'm going to move this out to somewhere else,
+03:02 because we now want to focus on the guessing game.
+03:05 And yeah it runs fine, and what I also want to see
+03:08 from now on is how much coverage we have of our tests.
+03:13 So we installed
+03:16 pytest-cov and to use it was a bit of a
+03:21 trial-and-error for me, but I found this syntax
+03:24 to work well for me. So I want a coverage report
+03:27 term missing coverage dot current directory.
+03:31 And the term missing is cool because
+03:33 it starts to index all the--
+03:35 okay, I actually have to give it something more specific
+03:39 because it starts to look in my virtual environment.
+03:41 Alright, what I did was in the end moving the files into a
+03:45 subdirectory so we got our venv
+03:47 and we got our guess new subdirectory with the
+03:50 script and the test file in there.
+03:53 And when I specify a subdirectory in the minus minus scuff
+03:57 argument then it just rounds on our code,
+04:00 and what's cool about the missing argument is that
+04:02 it shows the lines in the code that are not having
+04:05 test yet, which is of course is a lot
+04:07 because we just got started.
+04:09 But even so, we have 24 percent coverage so
+04:11 we are up for a good start. And you can then
+04:14 map those lines back to the actual program so
+04:18 this is not tested 29.
+04:22 This is not tested, et cetera.
+04:25 One final thing, as I use Vim I'm going to use the
+04:27 coverage command quite a lot so
+04:29 in my Vim RC, which I mapped to VRC to edit it,
+04:35 I have a comma T which maps to save the file or
+04:39 run a command with the exclamation mark
+04:41 and then I run this command and I'm going to--
+04:43 yeah, I think that's fine because we're going to work
+04:46 in the guess directory from now on
+04:48 and the venv is not sitting there
+04:50 so the dot should work there. And we can confirm that by
+04:53 going into guess, run a test, run a coverage report
+05:01 with a dot. Yeah that's fine.
+05:05 So when I'm writing my tests, I can just hit comma T,
+05:11 it saves the file and it runs my coverage.
+05:14 So that's a bit of Vim trick or shortcut
+05:18 for Pycharm or another editor. There must be a similar way
+05:21 to do this but this is my way of
+05:23 running coverage with one keystroke in Vim.

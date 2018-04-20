@@ -1,0 +1,136 @@
+00:00 All right, let's look at that blank slate,
+00:03 it's a bit daunting, isn't it?
+00:04 So let's fill it up.
+00:06 Now, this one here is going to have a few different sections,
+00:10 okay?
+00:11 It might be a bit complex if you're quite new to this stuff
+00:14 but just roll with it and let's see how we do, okay?
+00:18 So we're going to start off our application
+00:20 using Python 3 and we're going to import our smtplib.
+00:26 Nice, all right.
+00:28 So when we send an email using smtplib,
+00:31 we need an address that we're sending from.
+00:35 That's going to be our Gmail, right?
+00:38 And we need to send the email to someone,
+00:40 so let's just set up two variables for ourselves, okay?
+00:46 from_address, let's use the PyBites email.
+00:52 Feel free to spam, no actually don't spam us on that, please
+00:55 and you can send us some fan mail,
+00:59 maybe some, "Hey guys, you're doing a great job," emails.
+01:04 Or Julien is cooler than Bob.
+01:05 No, I'm just kidding.
+01:07 So we have to_address,
+01:08 well, we're going to send it to ourselves, okay?
+01:11 That way I don't accidentally spam someone
+01:13 'cause that actually did happen.
+01:15 Now, the email needs body, right?
+01:18 This is the text that's going to be populating
+01:22 our email script, or our email that we send out, okay?
+01:26 Now, I use this script for sending out my email
+01:31 to myself for new releases on Steam,
+01:34 you know, the game platform.
+01:36 So this just going to be a string of some sort, okay?
+01:40 It could be a paragraph, it could be whatever you want.
+01:43 However it shows up here is going to be the plain text
+01:45 that shows up in your email, okay?
+01:48 That includes carriage returns and whatnot,
+01:51 so we'll just go new releases on
+01:54 and sales on Steam.
+01:59 Click the links below to check them out.
+02:04 Excellent, done.
+02:06 Get that right.
+02:08 Now, for the nitty-gritty, all right?
+02:10 So the first thing we need to tell our script
+02:13 is what smtp server we're using.
+02:17 So while we in our heads are thinking
+02:18 yes, let's use some Gmail,
+02:20 our script actually has no idea.
+02:23 So we're going to set up a little...
+02:25 Oops, smtp, not pt, I always get that wrong
+02:29 server equals and now we start using our...
+02:33 Oh jeez, every time.
+02:34 Now we start using our smtplib module so
+02:39 smtp and within the brackets,
+02:41 this is where we want to use the Gmail settings.
+02:44 Now, these just copy off me smtp.gmail.com.
+02:50 You can easily google for these, okay?
+02:52 If you just search for Gmail smtp settings,
+02:55 you'll get them, okay?
+02:57 And the port number to use is 587.
+03:01 That's just a number, you don't need to put
+03:04 the apostrophes around it, the quotes around it, okay?
+03:08 Now, one cool thing that smtplib does is it essentially...
+03:13 It requires you to send a hello message,
+03:16 almost think of it like a heartbeat, right?
+03:18 It has to send this hello message to the smtp server.
+03:24 And that way, if there is a failure,
+03:28 if, for some reason, the server is unreachable,
+03:31 you will get an error in return and your script won't run,
+03:35 it won't go through all of these steps for nothing, okay?
+03:39 And we do that using smtpserver.ehlo,
+03:45 that's it, okay?
+03:47 By calling that, by running that,
+03:49 we send the sort of heartbeat off to the smtp server
+03:53 going, "Are you there? Can you respond?"
+03:56 That sort of thing, all right?
+03:58 Next up, we want to start the encryption, okay?
+04:01 We're using TLS because it's Gmail.
+04:05 This is all you googly available, all right?
+04:08 Google it, you'll find out, okay?
+04:11 So start TLS, that's it.
+04:15 Start our encrypted session, right?
+04:17 And now, we do the login.
+04:20 So makes a bit of sense, right?
+04:22 We want to start an encrypted line first
+04:24 before we put in any sort of cryptic details, okay?
+04:31 So smtp, now we want to actually provide our details
+04:34 to the server so we'll logging in, all right?
+04:36 So smtpserver.login
+04:39 and we're going to put our email
+04:43 that we're sending the email from, okay?
+04:46 This is your Gmail account that you'll be using
+04:49 for automation that you're sending the emails from.
+04:52 And now, in this section here,
+04:57 you put your application ID, password,
+05:01 whatever you want to call it, okay?
+05:04 Now, I'm obviously not putting mine in there
+05:07 because I don't want you to use my email to spam me
+05:10 or get up to other sort of mischief, right?
+05:13 Now that that's there, we can go smtpserver.sendmail.
+05:19 Yay, send mail, this is the actual fun part,
+05:22 this is where we're sending our email.
+05:24 So we need three things here.
+05:26 What do we need?
+05:27 We need the from_address,
+05:28 we need to know where we're sending the email from.
+05:31 We need to know where we're sending the email to
+05:33 and we need the stuff that populates the email, all right?
+05:37 So we have from_address,
+05:40 we have to_address
+05:42 and then we have the body.
+05:45 There we go, from_address, to_address and body.
+05:50 That's it.
+05:51 That's all, we're done.
+05:52 Now, as we've come to learn a lot of modules require us
+05:57 to close the connection, okay?
+06:00 So we're going to close our connection to this and smtp server
+06:03 and I like to add something just for login,
+06:08 email sent successfully and that is that.
+06:14 So if you've done all of that right,
+06:16 and you run this script,
+06:18 you will end up with an email, okay?
+06:21 And it will just be a nice, simple plain text email,
+06:23 you'll notice a few things about it
+06:24 which I'll show you in just a second.
+06:27 Obviously, I can't run this one,
+06:28 so I actually have this script fully written
+06:31 with my application ID elsewhere,
+06:34 here's one I prepared earlier.
+06:35 And this is what the email looks like.
+06:40 And we just bring up Gmail here,
+06:43 and there we go.
+06:44 So you can see there's an email that was sent,
+06:46 it says new releases and sales on Steam,
+06:48 click the links below to check them out.
+06:51 That's it, right?
+06:52 We only specified

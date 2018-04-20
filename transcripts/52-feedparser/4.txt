@@ -1,0 +1,106 @@
+00:00 Okay, we have our xml feed downloaded
+00:03 and saved, and now we're going to
+00:05 actually parse it with feedparser.
+00:08 So, what we need to do is import feedparser.
+00:13 Okay, and that's half the work done.
+00:16 No, I'm just kidding.
+00:18 What we want to do now is we need to actually
+00:22 tell feedparser what file it's going to be passing.
+00:25 Now, you could actually use the url, okay.
+00:29 You could use the url from, directly,
+00:32 but the problem with that is,
+00:34 is that it requires the internet connection,
+00:36 and if it can't get that, it's going to fail.
+00:39 So, it's actually better from and application standpoint
+00:43 to download the parse, the feedparser, sorry the feed,
+00:48 and then parse it using a separate script.
+00:50 That's why we've done it in two different scripts.
+00:53 We could have done it in one just by
+00:55 telling feedparser to point directly to the url,
+00:58 but we're going to do it parsing a local file.
+01:01 Okay, so feedfile
+01:06 is a newreleases.xml.
+01:08 So, the same file that we just downloaded and saved.
+01:12 Okay, now what do we want to do?
+01:14 We want to actually parse that file, alright?
+01:17 And that's an argument for feedparser.
+01:21 So, we're going to parse it
+01:23 and store it in the feed variable.
+01:26 Okay, so feedparser.parse.
+01:29 Now, it's as the name implies, right?
+01:32 It's going to just parse over the file,
+01:34 and store all of those contents inside the feed variable.
+01:41 Okay?
+01:42 Now, if we bring up our xml file.
+01:46 Where have you gone?
+01:47 Let's open it here, open it again in internet explorer.
+01:52 Don't hate me, let's make it a little bit bigger.
+01:55 Okay, so what we notice here is that,
+02:00 we can see it's staggered out, it's xml.
+02:01 We've all seen that before, but it's pretty much,
+02:04 once it's loaded into feed,
+02:06 it becomes a sort of dictionary, okay?
+02:09 With your title, your link, your description,
+02:13 and these are the sort of keys that we want to pull out.
+02:16 Okay, and by doing that,
+02:19 so to do that we actually use these tags.
+02:23 Okay, and that's what feedparser does.
+02:25 It parses, and let's you pull data based on these tags.
+02:28 Alright, so you'll see that.
+02:30 Here's what we'll do, so this is the...
+02:33 what I think we should try getting is the title.
+02:37 So, we want the title of the feed, the feed entry.
+02:42 So, Midweek Madness, Dragon's Dogma, blah blah blah.
+02:45 That's what we want to pull.
+02:47 We also want the published date.
+02:50 Okay, now most xml feeds,
+02:53 or most rss feeds should have this.
+02:57 Some don't, but we'll get to that in a minute.
+02:59 So, we want the publication date, alright?
+03:01 So we know what date.
+03:02 And then I think we should get the link as well,
+03:04 because we would like to get the url for this deal,
+03:08 or this new game launch, or whatever it is.
+03:11 Alright, so we go back to our file here,
+03:14 to our script, and we will go.
+03:17 We're going to use a for loop
+03:18 to parse over this data, okay?
+03:21 So, we're going to go for entry in feed,
+03:25 that's this, in feed.entries.
+03:30 Okay, that's why I've said for entry.
+03:32 So, for every entry within all of the entries within feed.
+03:37 What are we going to do? Well, we're going to print something.
+03:40 So, this is just for the sake of this script.
+03:42 So, we're going to print entry.published,
+03:46 so even though I will point this out,
+03:49 this one got me at the start.
+03:51 Even though it says pub date here,
+03:55 that is not actually what feedparser gets.
+03:58 That's actually called published
+03:59 from the feedparser standpoint.
+04:01 So, entry.published.
+04:03 Just going to use some standard string stuff here,
+04:07 so bare with me, then we're going to choose the title.
+04:10 So, imagine this as you're writing it.
+04:12 The date, and then the title, alright?
+04:16 So, for entry.title, throw in a colon there,
+04:21 and what's next?
+04:23 entry.link
+04:24 So, all we're doing is we're printing out the date,
+04:29 the title, and then the link for that, and that's it.
+04:34 Okay, nice and simple, and you won't believe me,
+04:38 but that's it.
+04:41 Okay, so it's pretty simple.
+04:44 So, we'll go python parser.py,
+04:49 and that's it.
+04:50 Let's maximize this, so look at that.
+04:53 We have the date, Friday the 5th of January, 2018.
+04:57 At that time, watch live on Steam,
+04:59 Paladins World Championships, and then,
+05:02 we have the url.
+05:04 How simple is that?
+05:06 We've parsed this entire feed,
+05:11 ignored all the extra stuff in there that doesn't matter,
+05:15 and we've taken just these titles,
+05:19 with the date, and the url.
+05:22 Very, very...

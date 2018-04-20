@@ -1,0 +1,119 @@
+00:00 Okay for this script we're going
+00:02 to create a text replacer.
+00:04 So this is a quick script that will take in,
+00:07 off the clipboard, some text,
+00:10 and will allow you to then substitute
+00:12 certain words in that text with other words,
+00:16 and then paste it back to the clipboard.
+00:19 Again, this is something I've used and I keep handy,
+00:22 because there's a few times,
+00:24 especially at work that I need to do stuff like this.
+00:26 So let's import pyperclip.
+00:33 Let's throw in this as usual.
+00:38 Let's create our functions first.
+00:41 We need to create a function
+00:42 that will paste in the information, right?
+00:45 So paste_from_clipboard.
+00:47 I'm making these very detailed names,
+00:50 just so we know what we're talking about.
+00:52 And we'll say the text
+00:55 that we're going to deal with is pyperclip.paste
+01:00 And we'll return that.
+01:03 So, return text.
+01:06 I'm keeping this super clean and simple.
+01:09 So we've got our text, we've read it in from the clipboard,
+01:12 and we're going to return it.
+01:16 Now we need to take that text,
+01:19 and replace it.
+01:22 We're going to do that with a replace_text.
+01:26 So def replace_text.
+01:30 Let's read in old text.
+01:32 We'll just change the name like that
+01:34 to make it interesting and descriptive.
+01:38 Now what do we want to do?
+01:39 We want to replace some text,
+01:42 so we're going to ask the user what they would like to replace,
+01:45 rather than hard code it in.
+01:47 So we'll just create a target, is input:
+01:52 What would you like to replace?
+01:58 Then we're going to actually do the:
+02:01 What do they want to replace it with?
+02:04 First, they're specifying the word
+02:06 they would like to have replaced,
+02:07 and now they're saying what they want
+02:09 to have it replaced with.
+02:11 So replacement = input,
+02:16 and what would you like to replace it with?
+02:25 Let's just hit enter.
+02:26 There we go.
+02:33 We're going to build a new text block
+02:36 after we've done the replacement.
+02:38 To do that, we're going to go new text is...
+02:41 So old text.replace,
+02:45 cause we can do that.
+02:47 It's Python, it's cool!
+02:49 Old text.replace target,
+02:53 and replacement,
+02:55 and that just does a simple search for the target,
+02:58 and then replaces it with the replacement text.
+03:03 Then we'll return that.
+03:04 Return new text.
+03:08 Let's call these down here,
+03:09 so first we're going to say old text,
+03:14 cause remember we're calling that in here?
+03:16 Old text is...
+03:21 paste_from_clipboard,
+03:27 and then new text
+03:31 is replace text
+03:36 and loading in the old text.
+03:40 And now we need to copy it back.
+03:44 It's going to be similar to the paste_from_clipboard,
+03:46 we're going to def copy_to_clipboard.
+03:52 And we'll load the new text into that.
+03:56 And then all it needs to do is run that same pyperclip.
+04:01 pyperclip.copy
+04:04 New text.
+04:06 Now obviously, this is a simple enough script,
+04:08 you don't actually have to break it down into functions.
+04:12 I just thought that'd be much easier
+04:13 for displaying that.
+04:16 Then we'll just print a little message saying,
+04:19 the new string is now copied to the clipboard.
+04:27 That's it.
+04:31 So we'll get rid of the bright, white space.
+04:33 Let's call that function here, okay?
+04:36 And we go copy to clipboard
+04:40 New text.
+04:44 So we'll save that.
+04:47 Let me just copy a block of text for us to actually do this.
+04:52 We will do this.
+04:57 So here's the block of text, alright?
+05:03 Let's run the script.
+05:07 Alright, what would you like to replace?
+05:08 Let's replace Julien.
+05:12 And what would you like to replace it with?
+05:14 Bob.
+05:16 The new string is copied to the clipboard.
+05:19 What's cooler than cool?
+05:20 Bob.
+05:21 Now that's a blatant lie,
+05:22 but that's a great demonstration point.
+05:26 Let's try it again.
+05:27 So we'll go run the script.
+05:31 What would you like to replace?
+05:32 Let's replace Bob with Mike.
+05:37 New string is copied, let's hit paste.
+05:39 What's cooler than cool?
+05:41 Mike.
+05:44 I'm not going to comment.
+05:46 Sorry, Mike.
+05:49 Let's run it one more time.
+05:52 What would you like to replace?
+05:54 Let's replace Mike with ice cold.
+06:00 And paste. What's cooler than cool?
+06:02 Ice cold.
+06:03 And that's it.
+06:04 Really cool, simple script.
+06:05 Something usable, I'm sure it's something
+06:07 you can make use of in day-to-day life.
+06:10 Enjoy it, use it, and that's pretty's much...

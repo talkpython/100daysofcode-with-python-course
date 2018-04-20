@@ -1,0 +1,93 @@
+00:00 The last video I forgot
+00:01 to run my coverage report, so let's do that now.
+00:05 So I'm in test, and we see an improvement.
+00:09 We went from 24% to 56%,
+00:12 and it still shows the missing lines,
+00:14 which are going further down into the script.
+00:17 So let's continue. Next up, validate guess.
+00:21 And the doc string says: verify if guess is correct?
+00:24 If so print, guess is correct, otherwise it's too low.
+00:28 Whoops.
+00:31 Guess is too high or too low, depending what it is.
+00:34 And it returns a boolean.
+00:36 So let's write: def test, validate guess.
+00:42 And I'm going to show you another feature of pytest,
+00:45 which I will explain you in a bit,
+00:47 which is capfd.
+00:49 And that will capture the standard output
+00:52 of the program and execution.
+00:54 Very useful because for this method,
+00:56 I not only want to check for the boolean return value
+00:59 but I also want to see if the actual output
+01:03 by the function to print,
+01:04 that the function does because we made this a game,
+01:06 prints to the console
+01:08 and I want to have accurate information for the user.
+01:11 So let's make a game.
+01:14 I set the answer.
+01:19 So let's validate that one is not a winning number.
+01:23 Validate guess. So I call this with one.
+01:28 One goes into this method. It checks against answer.
+01:32 If it's answer, true, if it's not answer, false.
+01:35 And to say false in pytest, you can just say,
+01:38 assert not this method is truthy.
+01:41 So this return false, not false is true.
+01:44 So let's run this.
+01:48 And that one passes as well.
+01:50 Then of course it's easy to do the same
+01:53 for higher an assertion.
+01:57 So if it's three, it's still not good,
+02:01 and if it's two, it's good
+02:02 because that's the answer defined.
+02:06 And now back to capfd.
+02:08 If I actually want to see what the print is printing
+02:11 to the console, because that's what you see before,
+02:13 if we run the game.
+02:18 It's printing these kind of feedbacks to the user.
+02:21 So I want to test if these are what I'm expecting.
+02:24 And one very useful trick is to redirect the output,
+02:28 standard output, the error I just throw away
+02:31 and I use capfd, which I passed into the function,
+02:35 and I'm calling its readout error: method.
+02:39 And let's just see what that gives me.
+02:42 I'm not going to do this for now.
+02:44 If you want to print inside your test,
+02:47 one way with pytest to show that to the console
+02:50 is to add the -s.
+02:51 And that actually stands for:
+02:53 shortcut for capture equals no.
+02:56 So it's not capturing the output,
+02:58 meaning in this scenario it prints it to the console.
+03:03 So when it's been intermingled into these dots
+03:06 but this is the actual print statement,
+03:08 there's also a new line. So one is too low.
+03:11 I captured that in the output variable,
+03:13 which I printed to the console.
+03:14 So capfd is very cool to capture output printed
+03:18 by your program.
+03:19 And now it can make assertions on that,
+03:21 as on any other thing.
+03:23 So I can say, out,
+03:25 and that's strip of the new line,
+03:29 right strip equals one is too low.
+03:36 Save, control z, pytest, and it worked.
+03:40 And if I would say too high, it would fail.
+03:45 And look at that nice output.
+03:47 So that works and I can do the same for the other two.
+03:51 So let's just copy this.
+03:55 Too high and two is the right answer.
+03:58 So in that case, two is correct.
+04:01 Let me just not do it 100% correct I you'll see.
+04:07 Oh, one is too high. Oh sorry, this is three.
+04:12 So you'll be targeting a lot between running tests
+04:15 and writing test code,
+04:16 that's something you need to make a habit of.
+04:18 Still something bad: assert not true.
+04:22 Wait a second. Ah!
+04:25 Typical copy and past error.
+04:27 Ah. And here, it's nice how pytest shows that,
+04:29 not only the diff, but also,
+04:32 the actual character that's missing.
+04:36 So that's now very easy to spot and fix.
+04:41 There you go, we are green again, and let me run comma T.
+04:47 Wow we have 68% coverage now.

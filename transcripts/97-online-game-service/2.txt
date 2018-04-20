@@ -1,0 +1,65 @@
+00:00 Now before we write some code and we're going to do
+00:02 some pretty interesting things, I think,
+00:04 in terms of organization and the way
+00:05 we put this all together but let's just think
+00:07 at a really high level, what operations
+00:10 does our website need to support?
+00:12 So we'll talk about how to build these.
+00:14 But let's just sit back and think about,
+00:16 if you can remember back to our 15-way persistent
+00:20 Rock Paper Scissors, pretty recent,
+00:22 we had a couple of things that were happening in that game.
+00:26 Here's what I think we're going to need to do in order
+00:29 to move all the logic and persistence to the server
+00:32 and still let the client communicate with it.
+00:35 So first of all, you're going to need to be able to
+00:37 register a user or get an existing user
+00:40 and I broke those apart you know, with a website,
+00:42 it just kind of seemed like you should either
+00:44 kind of login or register as two separate things.
+00:47 You can put them separate or if you want to,
+00:49 you can combine them back like we had get or create user.
+00:52 We want to start a new game, now this is really important
+00:55 because what we're going to do is we're going to create
+00:57 basically an id for the game and all subsequent
+01:00 operations will exchange that game id as part of
+01:04 who they are and how they're interacting so if you ask
+01:07 for, show me the history, who won, play a round,
+01:10 you're going to pass around this id that
+01:12 we get by starting a new game,
+01:13 we will show the rolls and let the user pick
+01:17 the rolls from an existing list.
+01:19 Now we could just hard code the 15 rolls into the client
+01:21 but what if we want to someday upgrade it?
+01:24 Maybe around St. Paddy's Day, you could throw a leprechaun
+01:27 and you want to make that a feature of the game,
+01:28 you want to add it, it just automatically have everybody
+01:30 pick those up or you want to convert it to 25-way
+01:33 Rock Paper Scissors or something along those lines.
+01:35 So we're going to get the rolls from the server
+01:38 so that we're always consistent
+01:39 with what the server expects.
+01:41 We can ask, what is the game status?
+01:43 Most importantly, is it over and who won and things
+01:46 like that but this will kind of give us the history
+01:49 and the status of whether it's over and so on
+01:51 and finally one of the critical parts
+01:54 is actually playing a round.
+01:56 I want to roll the devil and see what happens, right.
+01:58 We'll have a computer player on the other side
+02:01 and they'll randomly choose something and you'll see
+02:03 if they win, whether you win and so on.
+02:05 But this is sort of the playing of the game
+02:08 and we'll just play the rounds until
+02:09 we find out that the game is over.
+02:12 And finally, one of the fun things we had in the original
+02:14 game, the persistent one, was when it started it showed
+02:17 that the players with the top scores.
+02:20 Of course, those were just the players on your machine
+02:22 that you happened to have played previously.
+02:24 We're going to add a top scores operation so basically
+02:28 you get the global top scores and you can be ranked
+02:31 in the top ten, in the entire world in 15way
+02:34 Rock Paper Scissors demo app, wouldn't that be cool?
+02:37 So you'll be able to see that here, as it comes along.
+02:41 So these are the operations we're going to build in Flask.

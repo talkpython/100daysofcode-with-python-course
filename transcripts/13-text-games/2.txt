@@ -1,0 +1,77 @@
+00:00 Before we actually write the code
+00:02 and get into the syntax of working with classes,
+00:05 I want to just talk briefly about the idea of two things:
+00:08 inheritance and the difference between
+00:10 classes and objects.
+00:12 So, in our game we have this concept
+00:14 of a creature, how it'd be like the tiger,
+00:16 that would be, say, the dragon,
+00:19 the bat that the wizard defeated,
+00:21 things like that and in fact, the wizard himself
+00:24 is also a creature.
+00:25 This creature concept has the basic ideas of
+00:28 what it means to be an actor in the game.
+00:31 It has, let's say, a level, a name,
+00:33 and it can sort of defend, at least against being attacked.
+00:38 But we can, say, well, there's special things
+00:41 in the game that have more distinction than that.
+00:44 So, there's a tiger, maybe the tiger
+00:47 has a special way to defend and so
+00:49 its mechanism for defense, it's a little bit different
+00:52 than, say, a toad or a standard creature.
+00:55 We have a dragon, maybe the dragon takes into effect
+00:57 whether it can fly, whether it has scales,
+00:59 whether it's fire breathing, things like that.
+01:03 And this aspect of the dragon means
+01:07 we probably need to model those features
+01:09 that make it different from a creature separately.
+01:12 So it's like a specialization of this creature.
+01:15 Now also, the wizard itself.
+01:16 When you model like this, you're modeling what's called
+01:19 an is-a relationship.
+01:21 So, the tiger is a creature.
+01:23 The dragon is a creature and so on, right?
+01:26 So tigers are creatures.
+01:27 So we're going to model this type of thing
+01:30 and I'll show you how simple this is to do in Python.
+01:32 The other important distinction to make
+01:34 over here is, let's look at this wizard concept.
+01:37 You need to think of these classes
+01:39 that we're going to define.
+01:40 I haven't shown you how to do it yet,
+01:41 you may know but if you don't know,
+01:43 you got to think of these as blue prints.
+01:45 Let's think about a tiger for a second.
+01:47 There's a tiger that's in the San Diego Zoo,
+01:51 there's a tiger that's in the wild, in the jungle.
+01:54 These tigers were created from the same blue print,
+01:57 from the same DNA.
+01:58 That's kind of like the class.
+02:00 But the actual tiger in the zoo and the tiger in the forest,
+02:03 those have different properties
+02:04 and they evolve in different ways over time.
+02:07 They're not exactly the same thing.
+02:09 So you'll see, the same thing is happening
+02:11 here in codes.
+02:12 So we have this line gandalf = Wizard()
+02:15 and this line is going to create a new wizard
+02:18 from the blue print of the class.
+02:19 It's going to create what's called an object.
+02:22 And over here we're going to have sort of in memory
+02:24 this thing, it knows it's a wizard
+02:25 and it knows its name is Gandalf,
+02:26 and it's Level 70 and those can change,
+02:28 sort of on their own.
+02:30 But the evil wizard we're creating, it's going to be
+02:32 a separate thing out there in memory
+02:35 called evil wizard with the name and the level 100.
+02:37 And once they're created they can
+02:39 be changed and evolve independently like the wizard
+02:42 that is Gandalf can level up to 71
+02:44 and it would have no effect on the evil wizard.
+02:46 The thing at the bottom of the two arrows,
+02:48 the wizard Gandalf and the wizard that's evil,
+02:50 those are objects.
+02:52 The modeling blue print thing at the top, those are classes.
+02:55 Hopefully that illuminates the confusion around those
+02:58 which is always hard when you're getting started.

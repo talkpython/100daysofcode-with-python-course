@@ -1,0 +1,30 @@
+ 0:01 When you are new to object-oriented programming, 
+0:03 the idea of classes and objects often can seem interchangeable 
+0:07 and some people use them interchangeably; that's not really correct 
+0:12 and so let's take just a moment and really clarify the relationship 
+0:15 and differences between classes and objects. 
+0:18 So here we have a Creature class, you can it has an initializer and a walk method, 
+0:23 and notice that the walk method does something different if the creature is powerful, 
+0:27 if its power is greater than 10 versus if it's lower. 
+0:30 This class is a blueprint for creating creatures. 
+0:34 We could create a squirrel, we could create a dragon, 
+0:37 we could create a tiger, and those would all be specific 
+0:40 objects or instances of the Creature class.
+0:43 So down here we’re going to create a squirrel and a dragon, 
+0:46 and notice the squirrel is created with power 7, the dragon is created with power 50. 
+0:50 Now these are both creatures, but they are now distinct things in memory. 
+0:55 Objects are created via classes and the squirrel object is somewhere in memory 
+1:00 and it has a power 7 and it has this walk behavior it gets from its class, 
+1:03 but all of its variables are specific to it. 
+1:07 We have also the dragon creature, with its own variables, 
+1:10 so it's power is 50 and if we change its power, it won't change the squirrel 
+1:13 or any other creature, just the dragon.
+1:15 And when we call squirrel.walk(), the squirrel is going to walk in some specific way 
+1:19 based on its own power. 
+1:22 So you can see the Creature class test is a power greater than 10 or less than 10 
+1:26 and if it's greater than 10, it does something special, 
+1:29 maybe it walks in a powerful way versus a non-powerful way, who knows,
+1:32 but that will mean the squirrel walks in one way 
+1:35 and the dragon walks in another way, 
+1:38 even though they are both instances of the Creature class. 
+1:40 So I hope that clears up the relationship between classes and objects. 

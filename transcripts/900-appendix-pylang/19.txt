@@ -1,0 +1,34 @@
+ 0:01 A key design feature for working with classes and object-oriented programming 
+0:04 is modeling and layers, going from the most general to the most specific. 
+0:09 So, we started with a creature class, 
+0:12 and a creature class has a name and a level and it's just a generic creature,
+0:16 it could be anything, so it could be a squirrel as we saw, 
+0:20 it could be a dragon, it could be a toad. 
+0:23 Any kind of creature we can think of, we could model with the original creature class, 
+0:26 and that's great because it's very applicable but there are differences 
+0:30 between a dragon and a toad, for example, 
+0:33 maybe the dragon breathes fire, not too many toads breed fire, 
+0:36 and so we can use inheritance to add additional specializations to our more specific types,
+0:43 so we can have a specific dragon class, which can stand in for a creature, 
+0:47 it is a creature but it also has more behaviors and more variables. 
+0:51 Here we have our initializer, the __init__ 
+0:54 and you see we take the required parameters 
+0:57 and data to pass along to the creature class, 
+1:00 in order to create a creature, in order for the dragon to be a creature, 
+1:03 it has to supply a name and a level, 
+1:05 so we can get to the creature's initializer saying super().__init__ 
+1:09 and pass name and level and that allows the creature to do 
+1:12 whatever sort of setup it does when it gets created, 
+1:14 but we also want to have a scale thickness for our dragon, 
+1:17 so we create another field specific only to dragons, 
+1:20 and we say self.scale_thickness = whatever they passed in. 
+1:23 So in addition to having name and level we get from Creature, 
+1:26 we also have a scale thickness, 
+1:28 so that adds more data we can also add additional behaviors, 
+1:30 here we have added a breed_fire method. 
+1:33 So the way we create a derived type in Python, 
+1:36 is we just say class, because it is a class, the name of the class, Dragon, 
+1:40 and in parenthesis the name of the base type. 
+1:44 And then, other than that, and using "super", 
+1:46 this is basically the same as creating any other class.
+

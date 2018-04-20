@@ -1,0 +1,41 @@
+00:00 Let's dive straight into a notebook
+00:02 I've prepared for this class.
+00:04 It's sometimes said that I have a problem,
+00:07 I use a regular expression knife too,
+00:09 and in a sense that's true,
+00:11 that they're intimidating when you start.
+00:13 But there are only a few rules so
+00:17 get some practice and you will see that
+00:18 they're not that difficult.
+00:20 Let's import the re module.
+00:22 First of all, there are cases that you don't
+00:24 want to use a regex.
+00:26 The standard string methods are pretty powerful
+00:29 and cover some of your needs already.
+00:31 For example, I have a text.
+00:33 'Awesome, I'm doing the #100DaysOfCode challenge'
+00:36 And we want to see if that string starts with 'Awesome'
+00:39 so no regular expression needed for that
+00:42 you can just do text starts with
+00:45 Awesome and True.
+00:49 Or does it end with
+00:53 'challenge'?
+00:55 It does.
+00:57 Or does the case insensitive version
+01:01 of text has '100DaysOfCode' in it?
+01:04 Now for that you'd first want to lowercase the string
+01:08 and then you want to see if
+01:11 100DaysOfCode
+01:14 is in that string.
+01:19 And it is.
+01:21 And what about replacing?
+01:23 So I am bold and I'm taking 200 days of code.
+01:28 I don't recommend that by the way.
+01:30 Well you can just do a text, replace
+01:36 100 text strings
+01:38 by 200
+01:41 and awesome, I'm doing the 200 days of code.
+01:45 So for these kind of string operations,
+01:48 you don't really need a regex.
+01:50 So look at the string operations that are available
+01:53 in Python and use those instead.

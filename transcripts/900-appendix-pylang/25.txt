@@ -1,0 +1,13 @@
+ 0:01 So you've reached the end of the Python refresher and reference, 
+0:04 if you feel like you still need more help getting started with Python,
+0:08 you want to practice more, dig much more into the language features that we just talked about, 
+0:13 then please consider my Python Jumpstart By Building Ten Apps course. 
+0:17 You can find it at talkpython.fm/course, 
+0:20 and it covers almost exactly the same set of topics 
+0:23 that we covered in the refresher as well as more, 
+0:26 but it does it by building ten applications, seeing them in action, 
+0:29 writing tons of code and it's done over seven hours, 
+0:33 rather than packing just the concepts into a quick refresher. 
+0:37 So, check out the Jumpstart Course,
+0:40 if you want to go deeper into Python the language 
+0:43 and its features so that you can get the most out of this course. 

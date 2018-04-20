@@ -1,0 +1,133 @@
+00:00 Now that we've created our actors in the game,
+00:03 our creature, our dragon, and our wizard,
+00:05 let's go and actually use them to put the behaviors
+00:09 or the implementation of the game together.
+00:12 So over here, let's also import wizard and dragon.
+00:16 Now down here, these bats, and toads, and tigers,
+00:19 they're fine, but this one, we're going to create a dragon,
+00:22 and this will be called the black dragon
+00:25 or something like that.
+00:26 And notice PyCharm says the black dragon
+00:27 actually takes, breathes fire and a scaliness.
+00:31 Alright, so let's do that.
+00:32 Let's say this one,
+00:34 its scaliness is 2.
+00:36 We can make that super explicit
+00:37 and I'll say breathe fire, false.
+00:40 Okay, so we have a chance to defeat it, but it's still,
+00:42 it's going to be tough.
+00:43 And here we'll make this a wizard.
+00:46 This is an evil wizard.
+00:48 So we can have our standard concept of a creature,
+00:51 or we can have these specialized ones,
+00:53 but we're going to end up treating them all as creatures.
+00:56 We don't need this.
+00:57 We'll come over here,
+00:58 and now we're going to create our hero like this.
+01:01 And his name is going to be Gandalf,
+01:06 and his level is going to be 75.
+01:09 So, it's going to be a little tough for him to beat that,
+01:11 he should be able to beat this wizard, he's got no chance.
+01:15 Well, he has a chance, but it's highly unlikely, okay?
+01:18 Alright, so now we need to randomly choose a creature.
+01:21 Now let's go up here and say, import random.
+01:27 There's a really great way in Python
+01:28 to randomly choose a creature.
+01:30 You could say, create the integer,
+01:32 figure out how many there were, use the index,
+01:34 end to this list of creatures.
+01:36 Or you could just say choice, and say,
+01:38 give it the creatures, and given a collection here,
+01:41 and we'll just grab one.
+01:43 Okay, so now we need to print out some information
+01:46 about the creature.
+01:47 So we can say activecreature.,
+01:50 now we're not getting very much help here
+01:52 from our IntelliSense, but that's okay.
+01:56 So then we say name, activecreature.value,
+02:00 and that's going to print out a nice little thing.
+02:02 And we should be able to actually run it now.
+02:03 Let's go ahead and run it and see what happens.
+02:06 If it's nice and big, um, not so happy.
+02:09 Where did we make this mistake?
+02:10 I typed value, this would be level.
+02:14 Okay, a tiger of level 12 has appeared.
+02:18 Okay, so run away.
+02:19 The wizard runs away.
+02:21 A black dragon of level 50, has appeared.
+02:23 Run away.
+02:24 The evil wizard, definitely ran away.
+02:26 Okay?
+02:27 Then we just hit Enter to exit.
+02:28 So it looks like our actors are working.
+02:31 All we have to do is have them battle,
+02:32 so if they say attack, we'll just have this.
+02:35 If a hero.attack(activecreature),
+02:40 if that's true then they win.
+02:42 So what we actually want to do is make them leave the game.
+02:44 So we'll say creatures.remove(activecreature)
+02:48 and then we'll say print,
+02:50 something like, the wizard defeated them.
+02:53 So we'll say just something like that,
+02:54 the wizard defeated such and such.
+02:56 And we're all good there.
+02:58 Wizards run away, there's nothing to that.
+03:00 If the wizard looks around,
+03:01 we just want to show all the creatures.
+03:03 So that's easy.
+03:04 We'll just say, for seeing creatures.
+03:08 Now we'll do a little format string.
+03:13 Like this, and so we'll say, see.name, see.level.
+03:17 And notice,
+03:18 all we're using are the features of the base creature.
+03:21 Not the scaliness, not whether it's breathing fire,
+03:24 we're just talking about the standard creature,
+03:27 which means we can treat these all uniformly.
+03:30 Alright.
+03:31 That looks like we've written the game.
+03:33 I think we're done.
+03:34 I think the last, final thing to do is to play it,
+03:38 and it seems more fun to play if we play it full screen.
+03:41 So, let's say this, Python 3 a lot.
+03:45 Excellent, an evil wizard has appeared.
+03:48 Shall we try to attack it?
+03:49 I'm sure we'll lose.
+03:51 Oh, we're not printing anything if we lose.
+03:53 Alright, let's do that one more time.
+03:54 So we'll say, if else print the wizard
+04:00 has been dealt a defeat.
+04:03 Alright, so the wizard has been dealt a defeat.
+04:05 Now the wizard doesn't actually lose.
+04:09 The game's not over.
+04:10 Maybe it could be, but right now it's not.
+04:12 So we could attack, first let's look around.
+04:15 Alright.
+04:16 So we see the bat, the toad, all the things.
+04:19 Now if we attack the toad, we should defeat it.
+04:22 We do, luckily. If we look around, you'll see now the bat,
+04:25 no, the toad is gone.
+04:27 This level 12 tiger, we can attack it, and this wizard here,
+04:30 let's run away.
+04:32 We can look around again.
+04:33 Now we just have the bat, the dragon, and the wizard.
+04:36 The wizard we're going to run away from.
+04:37 The bat we can attack.
+04:38 Now what's left?
+04:40 Just the dragon and the wizard.
+04:41 Alright, we're going to run away from that.
+04:43 Maybe we can beat the dragon?
+04:44 The wizard has been, guess I got a spelling there,
+04:48 the wizard has been defeat by the powerful black dragon,
+04:51 has been defeated.
+04:52 And we probably,
+04:53 it would be nice to see the two roles that came back,
+04:55 but that's okay.
+04:56 Alright, so if we look around, there's still that.
+04:59 Run away, run away, run away.
+05:00 Okay, maybe we beat the dragon?
+05:03 Yes! Now if we look around, all there is this,
+05:04 the chances that we beat this evil wizard,
+05:07 not so high, so we're just going to leave.
+05:10 But we've defeated all the other creatures.
+05:13 There you have it. We've built a game and we've modeled it with classes
+05:15 and objects.

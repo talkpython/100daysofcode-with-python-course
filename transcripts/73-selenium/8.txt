@@ -1,0 +1,31 @@
+00:00 Welcome back.
+00:01 This is the third day of the Python Selenium lesson.
+00:04 I hope the exercise of yesterday
+00:06 to test our little Django app was not too hard.
+00:10 If you're still working on it, no problem.
+00:12 I think it's a good workout so
+00:14 then just use this third day to complete that.
+00:18 If you're done or you're bored,
+00:19 you want something else,
+00:20 we looked at two core examples in this lesson,
+00:23 Packt and automated banner generation.
+00:26 Maybe you want to try those,
+00:28 build them out,
+00:29 or maybe even better scratch your own itch.
+00:31 What are some of your boring stuff
+00:33 that you can automate and write tools for?
+00:35 Maybe you have a log in you want to automate to
+00:38 your favorite site or social media,
+00:40 retrieve some data,
+00:42 or maybe even post some data.
+00:43 The options are endless
+00:45 and the best you can do is practice some more
+00:48 because it's the practice with the new technology
+00:50 that makes you a master
+00:51 and it's also the most fun.
+00:53 So enjoy and don't forget to share your work.
+00:56 Use the #100DaysOfcode
+00:57 and feel free to include @TalkPython
+01:00 or @PyBites in your tweets
+01:02 because we would love to see what you come up with.
+01:04 Good luck and have fun.

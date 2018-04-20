@@ -1,0 +1,33 @@
+00:00 Next up, counting inside a loop.
+00:03 So sometimes you want to keep track of an index
+00:06 when you loop over a sequence,
+00:07 and when you come from C or another language
+00:11 you would typically do something like this.
+00:14 Let's define a list of days
+00:16 and let's loop through them showing the day
+00:19 prepended by the number.
+00:26 Alright, so that's straightforward.
+00:30 Now, and this is correct, right?
+00:31 I mean you can do it like this,
+00:33 it's all 100% correct.
+00:35 But the more idiomatic or Pythonic way
+00:38 is to use enumerate.
+00:40 And a way to do it is to wrap your sequence in enumerate,
+00:46 which returns the index and the item
+00:48 in the sequence on every loop.
+00:49 So I can just,
+00:52 now,
+00:53 print those,
+00:57 and it should give me, oops,
+00:58 obviously, I should not hard code days.
+01:02 So I'm using f-strings by the way because I'm on
+01:05 Python 3.6.
+01:06 And yes, this gives me the same result,
+01:08 and there's even a nice little trick with enumerate,
+01:12 which is, you can give it a starting point.
+01:14 So I can just copy this,
+01:17 and again give enumerate a second argument of 1.
+01:20 So I want to start the counter at 1,
+01:23 and then I don't have to do this menu
+01:25 plus 1 inside the loop.
+01:26 And that gives me the same result.

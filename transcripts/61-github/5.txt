@@ -1,0 +1,99 @@
+00:00 Alright, let's post to the GitHub API,
+00:03 creating a gist.
+00:05 Now, with the current access,
+00:06 we cannot just post to the API.
+00:09 It would mean not very secure, right?
+00:11 So we need to create some sort of access token.
+00:14 And there are various levels of access.
+00:18 I mean the GitHub API is pretty granular.
+00:20 But for this one,
+00:21 I'm going to create a personal access token.
+00:25 Let's go to my GitHub account,
+00:28 settings,
+00:32 developer settings,
+00:35 personal access tokens,
+00:37 and click on generate new token.
+00:42 I'm just giving the description.
+00:50 And look at all the scopes.
+00:52 There's a lot of different access levels,
+00:54 but I'm interested now in creating gist.
+00:57 So I click on the corresponding access.
+01:01 And I click on generate token.
+01:05 That gives us our token.
+01:06 And next I will show you
+01:08 how to load that into the notebook.
+01:10 As per best practice,
+01:11 never leave such a token in your code.
+01:14 But load it from the environment.
+01:16 So back at the terminal,
+01:19 deactivate the virtual environment,
+01:21 open your venv virtual environment,
+01:24 the name of your virtual environment.
+01:25 venv, activate script with your favorite editor.
+01:30 Go to the end,
+01:31 and let's export
+01:33 github_gist_create_token,
+01:39 fit a token your just copy over.
+01:42 Save this,
+01:43 activate the virtual environment again.
+01:47 Source or I have my alias set up.
+01:53 And now I should have the variable in my environment.
+01:58 Okay, great.
+01:59 We can now post to the API.
+02:02 Let's load in the token.
+02:06 It would not be available
+02:07 that would give me a keyerror.
+02:08 So we are good.
+02:10 Let's create a new object.
+02:16 Passing in the token.
+02:18 And to come back on those rate limits,
+02:22 look at the difference.
+02:26 Look at that.
+02:27 Now we can make five thousand calls to the API.
+02:30 Compare that to the, what was it?
+02:32 50 or 60 before,
+02:33 so authorizing with a token gives you more power.
+02:37 Let's get my user.
+02:42 And you see that I'm an authenticated user.
+02:45 And now, let's create a gist.
+02:52 Hold on there.
+02:54 I'm missing required arguments.
+02:56 Yeah, that's not going to work straight away, of course.
+02:59 And I did that on purpose,
+03:01 to go back to the help.
+03:04 Look at that,
+03:05 that's the contract or the interface we have
+03:08 to this method of the API.
+03:10 We defined if the gist is going to be public or not.
+03:14 We give it files and a description.
+03:17 And notice that the files need
+03:19 to be of an input file contact type,
+03:22 which I imported at the start.
+03:24 So let's first, write some code to be posted.
+03:29 So I have some code here,
+03:31 that's actually the code we wrote before
+03:33 to get the repo stats.
+03:35 I'm not going to share this with the world.
+03:37 Excitement!
+03:38 So that would be me,
+03:40 create, gist, public True.
+03:45 And then we need to patch it
+03:46 in a dictionary of the file name.
+03:49 The name of the gist,
+03:51 I'm going to call it,
+03:53 repostats.py.
+03:55 And the value would be that input file content object.
+04:02 And I pass it in my code.
+04:04 And lastly,
+04:05 we give a description.
+04:08 GitHub users most popular repos.
+04:12 Alright, let's run this.
+04:14 And it comes back with a gist.
+04:17 Let's go over to GitHub.
+04:24 And look at this.
+04:25 There is a repo_stats.py,
+04:29 which was just created by my user.
+04:33 And look at that.
+04:34 This code is now available to the world.
+04:36 And it was automatically posted via the GitHub API,
+04:40 using Python.

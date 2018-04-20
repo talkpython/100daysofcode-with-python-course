@@ -1,0 +1,36 @@
+00:00 Okay, that concludes the basic coverage
+00:02 of decorators in Python.
+00:04 In this section I provide you some more pointers
+00:06 to study some more decorators today.
+00:10 I did an article on Twilio,
+00:12 and in this app I used a login required decorator
+00:15 to check if the user is logged in.
+00:18 And you can see that in the code.
+00:21 This is what you already saw in this lesson.
+00:24 The wraps, and the wrapper.
+00:26 It takes the arguments and just checks
+00:28 if login is in the session.
+00:30 If so, return to function.
+00:32 If not, do a flash message and redirect to the login page.
+00:37 That's similar to what Django is doing,
+00:40 which, I pointed to the source.
+00:41 You can check that out as well.
+00:43 There's some more stuff going on
+00:44 so I challenge you to take a look at this code
+00:47 if you have time left today.
+00:49 And on PyBites we did an article,
+00:52 "Learning Python Decorators By Example,"
+00:55 which partly overlaps with
+00:56 what you have seen in the lesson so far,
+00:58 but there are also some more examples for caching,
+01:01 some more decorators in the wild.
+01:04 And I point you to another article.
+01:07 Sometimes you need a decorator that takes arguments
+01:10 like speed decorator that takes seconds
+01:13 and it's not always straightforward
+01:14 how optional arguments work
+01:16 so I wrote an article about that.
+01:17 So if you still have time left today
+01:19 and you want to know decorators a bit more in detail
+01:22 you can read this article as well.
+01:26 And that concludes the lesson of Day 1.

@@ -1,0 +1,20 @@
+00:00 So a quick overview of we've learned so far,
+00:02 namedtuples, an elegant and readable way to create tuples,
+00:07 and instead of user index zero, and index one,
+00:10 you can say user.name and user.role.
+00:13 A defaultdict is great way
+00:15 to buildup a nested data structure,
+00:18 you don't get key errors, because the internals
+00:20 make sure that the value gets initialized
+00:23 before appending to it.
+00:25 Counter, don't reinvent the wheel,
+00:28 so here at the top you see all the code
+00:30 I needed to get the top five words in a string,
+00:34 and below we did the same,
+00:35 but only with one line of code, very powerful.
+00:38 A deque, so lists are your best friend,
+00:41 but if you have to insert at them at the start,
+00:45 for example, they get very slow.
+00:48 So deques are great if you need to insert
+00:50 and remove at both ends of the sequence.
+00:52 And now it's your turn.

@@ -1,0 +1,90 @@
+00:00 Welcome back to the 100 days of Python
+00:02 and the second day of the collections module.
+00:04 Today, we're going to get practical with a code challenge.
+00:08 That will be highest rated movie directors.
+00:12 We will load in a data set and convert it
+00:14 into a default dictionary of directors as keys
+00:18 and movie namedtuples as values.
+00:20 If you want to try it yourself on scratch,
+00:22 I encourage you to pause the video now
+00:25 and read through this link and try to code it up yourself.
+00:29 What I will do in the rest of this video,
+00:31 is to guide you how to get the data loaded
+00:34 into the directors variable.
+00:36 So parse the CSV, convert it into defaultdict,
+00:39 and also will have a Counter example,
+00:42 how to get the directors with the most amount of movies.
+00:46 So if you need some guidance, keep watching
+00:48 but maybe you want to try it yourself first.
+00:52 Welcome back.
+00:53 I hope you had fun doing the other exercise.
+00:56 In the next session, I will show you how to load
+00:58 in the data and parse it into a defaultdict.
+01:02 So we're going to load this data in
+01:04 and the goal is to make a defaultdict
+01:08 where the keys are the directors
+01:10 and the values are a list of movies
+01:13 and every movie will be stored in a namedtuple.
+01:16 So let's define the namedtuple first.
+01:22 We've defined a namedtuple called movie
+01:24 with title, year, and score.
+01:26 Those are the only fields I'm interested in for now.
+01:29 We need to parse the CSV
+01:32 and load the data into defaultdict.
+01:34 I'm not going to touch too much upon the CSV part
+01:37 because there's a whole lesson dedicated to that.
+01:39 I will write out the function and come back
+01:42 and comment it line by line.
+01:52 And let's see if that works.
+01:59 And let's get the movies of Christopher Nolan,
+02:03 one of my favorite directors.
+02:08 Wow. Look at that.
+02:10 I can look up a director and I get a list of movies
+02:14 and each movie is a name tuple with title, year, and score.
+02:19 Okay, let's go back to the code I've just written.
+02:22 We make a function and receives data
+02:25 which by default is movies CSV which we retrieved here.
+02:30 I initialize a defaultdict of lists called directors.
+02:35 I open the data with a with statement.
+02:39 Then I use the CSV dict reader to parse every line
+02:43 into an OrderedDict.
+02:44 Every line, I extract the director name, movie title,
+02:48 title year, and IMDB score and store them in variables.
+02:53 The year, I convert to int.
+02:55 The score, I convert to float.
+02:57 With data analysis, there's always bad data
+02:59 and this is no exception.
+03:01 A value error got raised for some rows.
+03:03 So when that happens, I just ignore the row.
+03:06 I'm not interested in incomplete data.
+03:08 I initialize the movie namedtuple
+03:10 and give it movie, year, and score.
+03:12 That namedtuple gets appended
+03:14 to the director in a directors named list.
+03:17 So here you see the defaultdict in action.
+03:19 I don't have to initialize an empty list
+03:23 for every director up front.
+03:25 defaultdict handles that all behind the scene.
+03:27 And then I return the directors defaultdict.
+03:30 Then I call the function and store the results
+03:32 in the directors variable and then I can look up directors.
+03:36 So there's a lot of stuff you can do with this data.
+03:40 Let's do one more exercise.
+03:42 I'm going to use Counter to find the directors
+03:44 that have most movies in this dataset.
+03:47 So I use a counter and I'm going to loop over...
+03:53 the directors...
+03:54 we stored before.
+04:00 I can loop over dictionary with items
+04:04 which gives me the value pairs.
+04:06 Then I'm going to store the director...
+04:11 in the counter object.
+04:13 I'm going to sum up the length of the movies.
+04:17 You can do this by hand, but the nice thing
+04:20 of having a counter object that now I can do counter...
+04:24 Most common.
+04:27 Five.
+04:28 And there you go.
+04:30 Spielberg, Woody Allen, this is pretty plausible.
+04:33 So here you got some more practice
+04:35 using the collections data types.

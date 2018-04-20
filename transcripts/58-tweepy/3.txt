@@ -1,0 +1,45 @@
+00:00 Next we create our virtual environment,
+00:03 and normally I would do that with python -m venv venv.
+00:12 Here I got an error and I think that's
+00:14 because I'm using Anaconda.
+00:16 So I got another way of doing it,
+00:21 which is virtualenv -p path to the Anaconda's Python
+00:26 and then the name of the virtual environment.
+00:29 I'm going to remove the one I had and run that.
+00:37 Right, as I'm deactivating
+00:39 and activating virtual environments
+00:41 all the time, I made another useful alias to activate them.
+00:47 So here we activated the virtual environment,
+00:50 and to get out of the virtual environment,
+00:53 deactivate currently there's nothing installed.
+00:56 With the virtual environment activated I'm going
+00:59 to install the dependencies.
+01:02 pip install tweepy and wordcloud.
+01:12 Right?
+01:14 See what we have and notice that it
+01:16 brought in some other dependencies
+01:18 like pillow, which is an image library.
+01:20 Numpy, matplotlib, I think those are
+01:23 dependencies of wordcloud to show the nice visualization
+01:27 we see towards the end of this lesson.
+01:29 One final thing we need is to export
+01:31 the Twitter, key, secret, and access token.
+01:34 Let's do at the virtual environment level.
+01:37 First, I'm going to deactivate it.
+01:40 Then I'm going to edit the venv bin activate script.
+01:44 That's a script that runs every time we
+01:47 enable or activate this virtual environment.
+01:50 You can ignore all this setup and go straight to the end.
+01:54 I'm going to make more environment variables
+01:57 and here you have to enter the key, secret,
+02:00 and access token and secret you got
+02:03 when you created the Twitter app.
+02:05 I'm going to save that, activate the virtual environment
+02:12 and now, if I look in my env,
+02:18 we have these access tokens available in our environment.
+02:22 In the next video you'll see how I use the os module
+02:27 with the environment method to access
+02:29 those variables in my notebook.
+02:31 And that concludes the setup process.
+02:33 In the next video we're finally going to write some code
+02:36 to access data from our PyBites Twitter account.

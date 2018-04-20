@@ -1,0 +1,29 @@
+00:00 Alright, you're almost there.
+00:02 To get some more practice, I put together
+00:04 two smaller exercises, or bites,
+00:08 and one bigger co-challenge.
+00:11 This one, you will recognize the name's list
+00:14 but it's a little different
+00:15 because you have to take duplicate names out
+00:17 and sort the names and find the shortest first name
+00:21 and, of course, you will be using this comprehensions.
+00:24 Secondly, what we did not touch upon,
+00:27 is dictionary comprehensions,
+00:29 so, you might look that up
+00:31 and go through bite 26, where you have to
+00:34 do some operations on this dictionary
+00:38 and this set using a dictionary comprehension.
+00:41 And the co-challenge is Generators for Fun
+00:44 and Profit, a challenge we run some time ago.
+00:46 And this will be a fun one because you have to
+00:48 turn this Unix pipline into multiple generators.
+00:51 So, I think that's a great way to get some
+00:54 more practice using generators.
+00:56 Three exercises, see how far you can get
+00:59 during this third day of this lesson
+01:02 and, of course, share your work.
+01:03 Put a tweet out with #100DaysOfCode.
+01:06 It's a great way to get visibility of your work
+01:09 and, of course, we'll be happy to see
+01:11 how you progressed this section.
+01:13 Good luck. Have fun. Keep calm and code in Python.

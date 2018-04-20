@@ -1,0 +1,64 @@
+00:00 Alright, so let's get our project ready
+00:02 and everything set up here.
+00:04 So I'm over here in the GitHub repository and
+00:09 Day 97 to 99 in the demo app.
+00:12 So, what I want to do is just create a
+00:14 virtual environment and then
+00:15 we'll do the rest from within PyCharm.
+00:21 Okay, so we can just open this folder
+00:22 on Windows you would type "start."
+00:25 on Mac you type "open".
+00:31 So here we have our empty app and we've done this
+00:33 many, many times throughout this course
+00:36 but this time is different.
+00:37 We want to actually have two separate applications
+00:40 contained within this project.
+00:43 Let's go and create a folder for the client
+00:48 and let's create a folder for the web.
+00:52 Alright, so there's our client, there's our web,
+00:54 each one of these is going to have it's own
+00:56 set of requirements, so let's go ahead and add those.
+01:06 Okay, this is a pretty good start.
+01:08 So we have our set of requirements for a client
+01:10 and we have the set of requirements for the web.
+01:14 And notice we have our virtual environment active here
+01:17 and if we ask what is installed,
+01:20 there's nothing, of course.
+01:22 So we're going to entirely focus on the beginning.
+01:25 Just on the web application, okay?
+01:28 So we're going to close up this client here but before
+01:31 we do there's one really quick thing we should do.
+01:33 When we have files over here,
+01:35 we kind of want to treat this as the whole project, right?
+01:38 You might have a api.py and a program.py
+01:41 and the program might import api.
+01:43 In order for that to work easily in PyCharm is what we
+01:46 need to mark this directory as the source's root,
+01:48 say this is kind of its own little area.
+01:50 Same thing for web.
+01:53 It's effectively adding that thing to the Python path
+01:57 and making that the working directory and things like that.
+02:00 Okay, so, this is just the basic stuff
+02:03 that we've got going on here.
+02:06 Alright, that's the web one.
+02:07 We're going to tell the web one
+02:08 that we require Flask and SQLAlchemy.
+02:11 Those are the things that we're going to need.
+02:14 So, we'll go over here to web.
+02:18 pip install -r requirements.txt
+02:20 install everything in that file.
+02:26 And last thing, let's go ahead and add an app.py
+02:31 this is pretty standard in Flask
+02:32 and we'll just print Flask coming soon.
+02:37 And let's go ahead and run this.
+02:39 Yay, Flask is coming soon.
+02:41 Let's get this run configuration set up
+02:43 for a few good things here.
+02:45 So we'll go over here and say
+02:46 this is going to be the web app.
+02:49 And we also want to have it restart
+02:51 because the web apps open a port,
+02:53 this one will be port 5000 and if you try to run
+02:56 a second one without closing this one it'll crash,
+02:58 so this will tell PyCharm obviously to do that correctly.
+03:01 Alright, well, I think our structure is in place.

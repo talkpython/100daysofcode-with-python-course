@@ -1,0 +1,19 @@
+00:01 Welcome back to the 100 days of Python.
+00:03 In the coming three days I will guide you
+00:04 through the collections module,
+00:06 a very convenient module
+00:08 to work with more advanced data structures.
+00:10 First we look at namedtuples
+00:12 and how they can make your code
+00:13 more readable and elegant.
+00:15 Next we look at defaultdict,
+00:17 which is convenient to build up
+00:18 a nested data structure.
+00:20 Third, counter, saves a lot of code
+00:22 to find the most common thing in a collection,
+00:26 and lastly, deque, which can tremendously improve
+00:29 your performance based on the operations
+00:31 you want to do on your sequence,
+00:33 and for the second and third day
+00:35 I got a movie dataset
+00:36 where you can put the collections module into practice.

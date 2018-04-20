@@ -1,0 +1,202 @@
+00:00 Alright, we have everything set up
+00:01 and ready to go.
+00:02 We can access the database all we want.
+00:04 Now we just need to decide what do we want to do
+00:07 with the database?
+00:08 So if you recall over here in program,
+00:10 there's this game service
+00:12 that's being used in a couple places.
+00:14 Find or create a player.
+00:16 Alright so one is going to be us, the other is the computer.
+00:19 Down here, get the game count, get the all players.
+00:21 Now this is really a nice design pattern
+00:24 because that means the only data access
+00:26 that's really happening in the entire program
+00:28 is in this one file.
+00:30 If you have a really complicated app,
+00:31 maybe you create different types of these little
+00:34 data access layers service type things.
+00:35 But, you isolate it into one place.
+00:37 That means if you decide like,
+00:39 hey, I'd like to switch to some entirely different type
+00:41 of database or completely change this around to call web
+00:44 service is instead of to call
+00:46 data access layer uh, direct database access.
+00:49 It's one place that you change.
+00:51 So, I strongly encourage you to create this kind of pattern
+00:54 that isolates all the database stuff into one place.
+00:56 In order to make this work, we really just have to
+00:58 write the code to make these things go.
+01:01 Let's start over here.
+01:02 If we want to say get the history
+01:04 of a game, how do we do that?
+01:05 Well, remember that session
+01:06 thing we talked about.
+01:07 This is how it's going to start over and over and over again.
+01:10 So we'll say session factory
+01:13 and we'll import this up at the top.
+01:18 And down here we can say sessionfactory.create_session.
+01:21 Notice that we do not have a factory.
+01:24 Alright, there's no factory.
+01:25 Uh, so we're just going to say create session.
+01:27 And that's going to create this and at the end,
+01:31 we're going to do session.close.
+01:35 If we had made changes, we would say commit.
+01:38 But, we're not going to do that.
+01:39 Okay so we've created our session
+01:40 and now we can create a query.
+01:42 So I'll say the query is going to be
+01:44 session.query, and you give it some kind of type.
+01:47 We're going to look for moves.
+01:49 So what we'd want to get back is a list of moves.
+01:51 So we want to come in here and say query of move
+01:53 and then we can do a bunch of things.
+01:54 Orderby, filter, all, first and so on.
+01:58 So we're going to say filter and the way you do this is
+02:00 you go to the class and you say what are we looking for?
+02:02 Game id equals, do a double equals, not a single,
+02:05 equals this.
+02:07 Now we can wrap that around and we want to do
+02:09 an order, orderby, and then want to say we want to
+02:12 orderby move, roll number.
+02:15 Here we're going to say roll one,
+02:17 then roll two, then roll three within this particular game.
+02:20 And then we want to return all of those as a list.
+02:23 So we'll say .all, we'll say moves equals list of query.
+02:27 And then we'll return the moves.
+02:28 Now, you might say it's slightly less efficient
+02:31 to turn this into a list,
+02:32 instead of like return this back and iterate over it,
+02:35 and that would be cool.
+02:36 However, this means that all the
+02:38 data access is done by line 21.
+02:41 Then we close the session
+02:42 and we can just say forget about database access.
+02:45 We are now back to just working with Python objects.
+02:48 So, this is great.
+02:49 Let's go ahead and write the rest of them.
+02:53 To figure out how many wins a player has,
+02:55 we'll create a session again or create a query on the move.
+02:58 I want to say, I want to find the move that is for this
+03:02 particular player and is a winning move.
+03:04 This is the move that wins the game
+03:06 for that particular player.
+03:08 If they lose the game, this never gets set.
+03:10 So, that doesn't count.
+03:11 So, this thing here will get us all
+03:12 the moves, then we can call .count instead of get the
+03:15 objects back, this'll just give us a number called wins,
+03:18 close the session and carry on.
+03:23 Now for find and create a player, this one has sort of two
+03:25 modes, which is, makes it somewhat, uh, more cumbersome.
+03:28 But, what we're going to do is we're going to come in and
+03:29 create a session.
+03:30 This is how it always begins.
+03:32 Create a query for the player.
+03:33 When I say I would've liked to find the player by name
+03:36 and this time just give me the first one.
+03:37 Remember, the name is unique so this is one or zero
+03:40 we're getting back.
+03:41 If we got one back we'd just close the
+03:42 session and say, "Here, this one already existed.".
+03:45 But if we don't get one back, that means it's time
+03:47 to create a new player.
+03:48 Right, we've never seen this player.
+03:50 So, what we're going to do is create a player object,
+03:52 set the various values, the only one that doesn't have
+03:54 a default of any form is the name so it's kind of boring.
+03:58 But, we just set the name.
+03:59 We'd set all the things, if we're setting more.
+04:01 And then the way it gets in the database,
+04:03 so we say session.add and then session.commit.
+04:06 Now, if we were not using player again, the object,
+04:10 and we just wanted to create it and forget it,
+04:13 this should be fine.
+04:14 We'd just be done.
+04:15 However, once you call commit,
+04:16 all the properties of this object get stale.
+04:19 And you have to like reset them and try to get them back.
+04:22 Which is kind of, uh, annoying.
+04:23 So, what we're going to do is just get a new object
+04:25 back from the database and this one,
+04:27 uh, will not, this one will not be stale.
+04:30 Right, the commit flag won't tell that we got to re-read
+04:33 that data. So, sort of refresh this object after it's in
+04:35 the database and send it back.
+04:39 Getting all the players, actually this is the easiest query
+04:42 we're going to write.
+04:43 All we have to do is go to the session,
+04:44 create a query player and say all, hit that with a list to
+04:48 read through it, close the session and now
+04:50 we have all players.
+04:51 We might want to do an orderby,
+04:53 alright maybe order by name.
+04:54 But, if you don't care about ordering, this is all it takes.
+04:58 While we're at it, let's do all rolls.
+05:02 This one's basically the same.
+05:03 We're going to get all the rolls, and this time
+05:04 we actually do want to order them by name.
+05:06 So they're alphabetical, that'll just make it easier to find
+05:09 in our UI. Convert that to a list and return them.
+05:11 It's all good.
+05:12 Oh, except for I put that into the wrong spot, didn't I?
+05:16 There, there's all our rolls.
+05:19 Want to find a roll?
+05:22 Here, we're just going to go through and say create a query
+05:24 based on roll, where the name is that and go first.
+05:27 It's either going to give us one back or not, which we've
+05:29 indicated with a optional roll.
+05:31 Rather than it's just a roll, it's a return value.
+05:35 Now, for creating a roll, it's going to be very similar
+05:38 to what we did before.
+05:40 I'm going to come down here, create a session,
+05:42 we're going to create a roll and this time
+05:45 I think we just got to say roll.name == name.
+05:47 There's no more constructor initializer there.
+05:50 Save it and re-refresh
+05:51 it so that it's not stale, and give it back, all good.
+05:55 Only have one more left here and that's record roll.
+05:57 This has probably got the most going on in terms of data.
+06:00 So we'll come down here and we'll set all these properties.
+06:02 And we're going to create a session, create the moves,
+06:04 here we set all the things we care about that don't have
+06:07 default values.
+06:08 Again out of the session, commit, close.
+06:10 We don't even return it back.
+06:11 We don't care about getting the record of the move,
+06:14 we're just going to say put it in the database,
+06:15 I'll ask for it back some other time.
+06:17 Now that defines all of our functions.
+06:19 Let's see if we run it, if it'll even work.
+06:22 First of all, before I run this, look over here.
+06:25 If I do a quick refresh, sync.
+06:28 We now, that I already ran it, just this second actually
+06:31 created this rockpaperscissors.sqlite.
+06:34 And notice that it's a database icon.
+06:35 That's not because of the extension,
+06:37 that's because PyCharm looked at it and said,
+06:39 "I understand what that is.".
+06:42 So, we're going to be able to work with that in a second.
+06:44 Let's see if our game just runs.
+06:45 We may have to go fix it up.
+06:48 Michael, here's all our rolls, I'm going to throw some water,
+06:51 and I'm going to throw some fire,
+06:52 just keep him off guard there, maybe some more fire.
+06:55 Uh, how 'about we throw down a tree and let's see if we
+06:58 can hit him with some scissors.
+06:59 4 to 1, dominated.
+07:02 That's pretty cool, let's run it again.
+07:04 Look at this.
+07:05 Now here's our player history.
+07:08 In a historical perspective,
+07:09 Michael's won one time and the computer's won no times.
+07:12 Let's throw Jennifer in here, see how she does, uh, 2.
+07:17 She's going to throw some air, lots of air, who wouldn't want to
+07:21 throw a sponge in there?
+07:22 Maybe a little wolf action.
+07:24 Boom, Jennifer also wins.
+07:25 Now if you run it again you'll see
+07:27 Michael and Jennifer won, the computer zero.
+07:29 How cool is that?
+07:30 And this is in our little database.
+07:32 Let's look at that a little bit deeper.

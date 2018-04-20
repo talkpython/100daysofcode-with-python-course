@@ -1,0 +1,90 @@
+00:00 We were getting to a pretty interesting one here.
+00:02 Let's look at our create_user request
+00:04 that we expect to send.
+00:07 We're going to send over a PUT,
+00:10 in JSON form,
+00:11 who's body is this JSON object.
+00:14 Now it's pretty simple here, but it could be
+00:15 way more interesting.
+00:19 The moves, or powers,
+00:22 could be a list of power one, you know,
+00:25 jumping, running, whatever, hunting.
+00:29 All right, we're not actually doing that.
+00:30 But we could send a rich document over,
+00:33 it just happens to be pretty straight forward.
+00:34 Want to do a PUT to that URL.
+00:36 So how do we deal with this,
+00:38 how do we get that data?
+00:39 We saw,
+00:42 over here this really cool way of doing this
+00:44 little thing in the URL, and it would come out there,
+00:47 but we don't have that here, so what do we do?
+00:52 Let's do a try/except,
+00:58 thing, just for a second.
+00:59 So let's do a little work in here,
+01:00 because there's certain things that can go wrong.
+01:03 So what we can do to get to this body,
+01:05 is we can flask.request.json.
+01:08 But it might not be there if,
+01:10 there was some sort of invalid input.
+01:12 So we got to test.
+01:13 We'll say if,
+01:17 so, if it's not there,
+01:22 or they didn't supply the user field,
+01:26 or they supplied it but it was null, or somehow otherwise
+01:30 empty, any of those cases, this is a problem,
+01:33 so we'll raise an exception.
+01:35 Then it will just kick us right down here.
+01:39 Okay, so this is our error handling.
+01:46 Here we go, so let's do that,
+01:48 this is going to be our username,
+01:49 and now, what do you do with that?
+01:52 So let's say player = game_service.create_player,
+01:57 and it takes a name.
+01:58 What happens if that already exists?
+02:00 It's going to raise an exception that the player
+02:02 already exists, which is another case that's going to
+02:05 kick us down here.
+02:06 But if we made it through all these levels of tests here,
+02:09 we'll say return,
+02:13 Whew, okay, so test for this, make sure we get this.
+02:16 This is going to do a little bit more testing in here,
+02:19 and then we'll just send this back.
+02:21 However, if there's a problem, we can do this.
+02:25 Instead of kicking it over to our handler, we can be
+02:28 very specific and say we want a flask response,
+02:33 and the response is going to be,
+02:43 and the status we'll set to be 400,
+02:45 which is typically bad request,
+02:46 like these are all bad requests.
+02:48 This, it could be some other reason that causes it,
+02:51 but let's blame it on the client this time, how's that?
+02:55 All right, you want to try to create the user Michael?
+02:57 Let's, before we do that, let's try to get the user
+02:59 Michael and just see that they do not exist.
+03:01 Page was not found, page maybe that's the wrong word,
+03:05 but entity not found.
+03:07 So just create the user Michael.
+03:10 We got this richer object back,
+03:12 which gave us the name again.
+03:14 But also when it was created, the id,
+03:16 everything out of the database,
+03:17 and now if we go and we say look for Michael,
+03:20 hey there it is.
+03:21 We can run that as many times as we want.
+03:23 'Course if we try to recreate him again,
+03:25 boom invalid request, player already exists, 400.
+03:29 So literally if we go over here and we change the body,
+03:31 don't pass the user field,
+03:34 invalid request, no value for user.
+03:36 So all of our error handling is really rocking, rocking on.
+03:39 All right, let's create one more.
+03:42 We'll create a Mark.
+03:43 Boom, now Mark exists as well.
+03:47 That's it, so we're going to come in, we're going to
+03:49 try/except, just 'cause there's a lot of conditions here.
+03:52 Work with flask.request.json.
+03:54 If it's invalid it can be parsed it would just be none,
+03:57 otherwise we're going to check the values within it,
+04:00 and then we're just going to do the logic,
+04:02 and return the newly created player back to the user.

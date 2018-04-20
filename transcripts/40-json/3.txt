@@ -1,0 +1,40 @@
+00:00 Okay, so to start we're going to look at
+00:02 a basic example of JSON output or JSON schema.
+00:07 Okay so it is pretty complex at times,
+00:10 especially when it starts getting really deep.
+00:14 So just look at this basic example to understand it.
+00:17 So from Python perspective, it looks pretty simple for now.
+00:22 This is a really basic one again
+00:23 and it's about a sort of person object
+00:25 so you've got a title of a person.
+00:28 You got the type, it's an object.
+00:29 And then what are the properties of that?
+00:31 Well there is a first name, a last name, an age,
+00:35 a description, and so on and so forth.
+00:38 What really gets people and gets me sometimes
+00:42 with a JSON is once it's decoded in Python,
+00:47 all of these become nested dictionaries and lists.
+00:51 And it makes it quite difficult when you're writing loops
+00:55 and what not to try and drill down
+00:57 to those nested dictionaries.
+01:00 So looking at this, if this was formatted
+01:03 like a dictionary in Python, your first level
+01:07 of the dictionary has the key title value person,
+01:11 key type value object.
+01:14 Key properties but the value of properties is
+01:18 another dictionary and that dictionary goes
+01:21 all the way down to here, okay.
+01:24 And within that dictionary, you then have
+01:28 another key called first name whose value is
+01:31 yet another dictionary, okay.
+01:34 And then that closes off here and then you have
+01:37 another key whose value is yet another dictionary and so on.
+01:42 When you break it down visually, it makes a lot more sense.
+01:47 That said, it is still a little bit of a crazy process
+01:53 trying to drill down, okay.
+01:55 And we're going to work through that
+01:56 in the next couple of videos.
+01:58 So this is just a nice basic example
+02:00 of what JSON schema looks like.
+02:02 So have a good look at this.
+02:04 Wrap your head around it and move onto the next video.

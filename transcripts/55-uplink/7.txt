@@ -1,0 +1,78 @@
+00:00 Now, before we move on from our read posts,
+00:02 let's actually do one more thing.
+00:04 Let's add another method here,
+00:06 that's going to correspond to this.
+00:10 So, what we've done so far is we've just gotten
+00:12 the general info for all of them.
+00:13 Let's get the details for one in particular.
+00:16 Theoretically, this one might return more information
+00:19 and more details, whereas, the get all of them
+00:21 might just have high level info.
+00:23 This is going to be interesting
+00:24 because we have to pass the post id,
+00:26 so, what we're going to do down here
+00:28 is let's change this to "show a number"
+00:31 so we can say "which number do you want to see".
+00:34 The way that, the easiest way to do that
+00:35 is to enumerate this and tell it to start at 1.
+00:38 And change this to a little number here like this.
+00:45 So, that's going to print it out
+00:47 and then let's do a, so, we'll ask which number
+00:51 they want to view and then we'll say selected_id.
+00:56 It's going to be, we're going to go to our posts,
+00:58 and we're going to use the selected index
+01:00 but we're showing them 1 based in arrays
+01:02 but lists are 0 based would you like this dot get_id.
+01:08 Now, let's just print out selected_id really quick.
+01:13 Just to prove that this little bit is working.
+01:15 Now, this is totally missing error handling
+01:17 at lots of levels but just to see that it works.
+01:21 Just read them, which number do we want to view,
+01:23 I want to view 3, alright, so, that's cool.
+01:25 It pulls out that id and I'm sure you know
+01:27 that that's correct, actually, you have no way of knowing
+01:30 but I'm pretty sure it's working.
+01:31 So, what we want to do is actually
+01:32 go and use this to get some details.
+01:35 So, back here we go, and this is going to to be
+01:36 similar to what we had before
+01:38 but slightly more interesting.
+01:39 I'll say, entry my_id, and here we'll pass post_id.
+01:46 Now remember, the way this went, was up here,
+01:48 we had a slash curly id like this,
+01:51 and if we want to call it, you don't want
+01:53 to call it id in Python, because id is a built-in
+01:55 and it overrides the name, so, you would just put
+01:57 this like so, so, when we call this function this value,
+02:01 that is going to be replaced right there.
+02:03 So, let's say get, so we'll get one particular detail.
+02:07 Now, instead of doing this, we'll say selected post,
+02:12 entry by id and then we'll pass in the selected_id.
+02:16 Now, again, no error checking to make
+02:18 sure that this worked and so on but that's okay.
+02:20 So, here we'll actually, I need to say response,
+02:24 then response.raise_for_status,
+02:25 we'll make this a little bit cleaner in a second
+02:27 and then we'll have to come over here
+02:28 and say response.json because it comes back as JSON,
+02:31 until we do this, it doesn't become a thing
+02:33 and then let's just print out the details about it,
+02:37 here. So, we get it back. Get the response back.
+02:40 Make sure it worked. We get the JSON
+02:43 and then that turns it into an object
+02:44 and we're going to print out here.
+02:45 Let's just try this and make sure it works.
+02:49 Let's look at the easy breezy Python HTTP clients.
+02:53 Look at that, it totally worked.
+02:55 We went and got it from the server,
+02:57 here's it's id and it's easy breezy.
+03:00 Here's it when it was written.
+03:01 Here's it's body content and so on.
+03:04 This is pretty cool, and so, this is really nice
+03:07 the way this is working; it turns out that this
+03:09 raise_for_status is a little bit annoying
+03:11 that we have to do this each time.
+03:13 It would be better if we could tell
+03:14 this whole thing just like "hey, don't even
+03:16 give me back anything if it didn't work".
+03:19 We'll do that next.

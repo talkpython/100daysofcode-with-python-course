@@ -1,0 +1,195 @@
+00:00 Okay, now we've got our site, let's make it interesting.
+00:03 Let's deal with some actual data.
+00:05 So, earlier I got you to create a data.py file.
+00:09 That would be this one here.
+00:10 It's nice and empty.
+00:12 So, this is where we're going to create our data.
+00:15 As you can imagine, with most applications,
+00:17 you're not going to have the data inside one file.
+00:21 Everything's going to be spread out.
+00:22 So, let's put the data in one file here,
+00:25 and we're going to call it fav_beer
+00:28 because that's what I wish I was drinking right now.
+00:33 So, what's my favorite beer?
+00:35 Let's run it through.
+00:36 So, I'm just creating a dictionary here, a dict,
+00:40 that has a name as the key, and the type of beer,
+00:45 or the name of the beer, as the value.
+00:48 So, I'm just going to populate this with five entries
+00:51 and show you that.
+00:53 So, here comes some magic.
+00:55 And we are back.
+00:56 Take a look at that.
+00:57 So, I've populated this quick dictionary here.
+01:01 Going to save the data.py file,
+01:03 and then we're going to call it in our Flask app.
+01:05 We're going to import it, okay?
+01:07 So, what do we run here to import it?
+01:10 We're going to go from, woops, clicked in the wrong spot.
+01:13 We're going to run from data, the data file,
+01:16 we're going to import that actual dict, all right?
+01:21 So, you can, deer.
+01:23 I don't like deer, I like beer.
+01:24 So, you can imagine if you had multiple variables,
+01:27 or dictionaries, or lists in that file,
+01:30 you would import them here, all right?
+01:33 So, from data import fav_beer.
+01:35 Now, how do pass that dictionary off to the Jinja2 template?
+01:41 Alright, we're going to do that in this rendered template,
+01:44 'cause we're returning, we're returning that variable.
+01:47 We're going to return this dictionary to the template,
+01:50 we're passing it off, handing it off, all right?
+01:55 If you could've seen my hand gestures just now,
+01:56 it would've been hilarious.
+01:58 So, fav_beer.
+02:01 But is that right?
+02:02 Not quite.
+02:04 With Flask, you've got a bit of a special way of
+02:08 specifying these variables, all right?
+02:10 So what we're doing is, at this point here,
+02:13 we've said fav_beer=fav_beer, right?
+02:18 Now, what we're doing is we're assigning
+02:20 the fav_beer dictionary to the fav_beer object
+02:27 that is going over to the template, okay?
+02:32 That's just how it works.
+02:33 I know it looks odd, and I know it probably
+02:35 is a little bit confusing, but that's how it works.
+02:38 You can't just say, you can't delete this
+02:42 and just have the one object going across.
+02:47 You have to tell it, okay, I'm assigning this object,
+02:50 this data, this dictionary to the actual Flask object
+02:55 that's going to be accessible from
+02:58 the Jinja2 template, all right?
+03:02 So, that's actually nice and easy.
+03:03 That's all we have to actually edit in our Flask app.
+03:08 Then most of this is actually done
+03:10 in the index file.
+03:12 So, let's bring up Notepad again,
+03:15 where we've got this.
+03:17 Now, I'm going to do a bit of magic here again,
+03:20 because I don't want you to see me
+03:21 have to type all of this stuff out.
+03:23 All right, so let's just add in
+03:25 a whole bunch of extra HTML stuff
+03:27 to make the page a little nicer.
+03:29 Let me do that now, and fade to black.
+03:32 And we're back.
+03:33 So, look at this, I've thrown in a head tag,
+03:36 I've thrown in some extra lines for style sheets, okay?
+03:42 I did not want to have to deal with CSS myself,
+03:44 so I've gone to bootstrap and grabbed all of their
+03:48 yummy style sheet stuff, all right?
+03:50 We've thrown in title, favorite beer tracker,
+03:54 and we've got our body tag.
+03:57 I've done some in-line CSS here,
+03:59 just to add a margin on the left of 50 pixels,
+04:01 got a H1 tag header in there.
+04:04 Now, if we run this, let's just see how it looks
+04:06 without any actual Python code running here.
+04:11 So, we'll quickly go back here, run python app.py,
+04:15 kicks off the server, normal 127.
+04:20 Bring up my browser, load that, and bang, favorite beers.
+04:24 We've got that little margin here, got the H1 tag,
+04:27 and we've got the title up there.
+04:29 Now, how are we going to do this?
+04:31 How are we going to present that dictionary worth of data?
+04:34 We have a key, we have a value.
+04:36 Well, you can think, you're probably going to want
+04:38 a table of some sort, some sort of a spreadsheet.
+04:41 We'll go with a table, that sounds nicer.
+04:44 Now, to run a table tag, we run,
+04:48 we'll type this sort of thing in there.
+04:50 Now, I'm just going to quickly copy and paste this
+04:54 specific bootstrap tag, which will make our table
+04:59 look really nice.
+05:01 That way, I don't embarrass myself.
+05:04 All right, chuck that in there.
+05:07 Now, we're going to create the table row.
+05:09 Now, you know, for this you do need some basic HTML,
+05:11 but you know, just head to W3 schools, or what have you,
+05:15 and you'll have yourself up and running in no time.
+05:18 So, we're going to have a table header called name.
+05:20 I'm going to have a table header called beer, or beverage.
+05:25 We'll go with "beer of choice," I think that works better.
+05:30 All right, close off the table row.
+05:37 Now, how are we going to do this?
+05:39 You think to yourself, we've got a dictionary
+05:42 that could potentially grow.
+05:43 If this was some sort of a production thing,
+05:45 it's going to grow, so we can't manually specify
+05:50 every single line one by one.
+05:52 This is where the Python code comes in.
+05:54 Now, we're going to run a for loop,
+05:56 just like, if you could imagine,
+05:58 for a script on the command line,
+06:00 you're going to run a for loop to print out
+06:02 all of the keys and values of that dictionary.
+06:05 We're going to do that now, but we're going to do it
+06:07 with a table wrapped around it.
+06:09 So, no matter what data gets added to our dictionary,
+06:13 this table will grow every time the page is launched,
+06:16 so that's pretty cool, right?
+06:18 So, to run Python code within the Jinja2 template,
+06:23 there's a certain format, and that's the
+06:26 left curly brace with a percent sign.
+06:30 If you see that opening on one of these Jinja templates,
+06:34 that denotes you're about to execute some code.
+06:37 So, for name and beer.
+06:40 You could write for k,v, whatever you want to do.
+06:43 Remember, these are arbitrary.
+06:44 So, for name, beer in fav_beer.items.
+06:50 That's how we open the dictionary
+06:51 to access the keys and values,
+06:54 and then we close that off.
+06:57 Now what are we going to do?
+06:58 Well, every time you pass through this loop,
+07:04 you're going to create a table row,
+07:05 and in that table row, you're going to create
+07:08 one cell, so to speak, and the first one
+07:13 is going to be titled "name."
+07:17 So what this is is this is a substitute
+07:22 flag for the Jinja2 templates.
+07:24 So, anything that goes in here
+07:27 within these two brackets has to be a variable.
+07:30 So, we're going to put in whatever the key is, name.
+07:35 So again, if you put the letter k there
+07:37 as you normally would, you'd put k in here.
+07:40 So, the name from that name key in our dictionary
+07:44 is going to pop into this cell here, all right?
+07:50 So, TD and the next one is going to be our beer, all right?
+08:01 And that's it.
+08:02 So now, no matter how many people you add
+08:05 to your beer tracker table, or dictionary, I should say,
+08:10 this table will grow every time
+08:13 you reload the page, all right?
+08:15 So, let's close this off, and now,
+08:21 we can close off the for loop.
+08:24 Now, this is very important.
+08:25 If you do not close off the for loop,
+08:29 your Python code will fail.
+08:32 It will tell you that there was no closure
+08:34 of the actual for loop.
+08:35 And last but not least, we close our table.
+08:40 And that, my friends, is it.
+08:43 Now let's launch it.
+08:45 So, to do that, we make sure we save,
+08:49 make sure everything's saved,
+08:50 go back into app.py, and we rerun
+08:57 the script, and there you go, it's run the web server,
+09:01 load up the website, bang, look at that.
+09:05 We have this nice, cool table.
+09:09 Julian likes White Rabbit Dark Ale.
+09:11 Mm, yummy.
+09:13 Bob, I'm guessing, likes some sort of light beer, I assume,
+09:16 'cause that's Bob, right?
+09:17 Mike B. From Oregon, well, Oregano beer, Oregano beer?
+09:22 I have no idea.
+09:23 And Cornelius and Dan, who happen to be
+09:26 friend of mine at work, like these beers.
+09:28 So, that's it.
+09:30 That was dealing with data, with a dictionary,
+09:35 and passing it to Jinja2 templates
+09:38 to create yourself a little bit of a front end.
+09:40 So, this is really cool.
+09:41 This is now where you can start
+09:43 seeing your own application.

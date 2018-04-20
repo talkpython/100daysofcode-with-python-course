@@ -1,0 +1,124 @@
+00:01 Now, let's go ahead and define the columns
+00:03 that are going to be in our tables,
+00:06 and also, how they appear in the classes.
+00:09 So, here we're defining the name property
+00:11 and in memory usually the thing that defines
+00:14 what specific item you have is just the address in memory.
+00:19 Like, when you created the pointer to the thing,
+00:21 that is kind of it's id,
+00:23 but in the database world we typically need
+00:25 to set and id to a particular thing.
+00:27 Let's say none for second and we're going to set the name
+00:30 to something else.
+00:32 We can also control
+00:34 what table this gets mapped to.
+00:37 So, if we do nothing it will just be added to role,
+00:40 like capitol 'R' role and I'm not a super fan of that.
+00:42 So, let's say table name is going to be roles.
+00:45 Plural, lower case, I kind of like that better.
+00:47 Alright, so how do we tell SQLAlchemy,
+00:50 if this is an and id, and even a primary key,
+00:53 and auto incrementing, unique, and all that stuff?
+00:56 Simple enough we say SQLAlchemy and we add that
+00:59 to the top and we say column capitol 'C',
+01:01 not lower case 'C'. There's two for some reason
+01:04 and here we'll say
+01:05 what type of things SQLAlchemy.Integer.
+01:09 We'll say primary key is True.
+01:11 Auto increment, True.
+01:13 Okay, so that's great.
+01:14 That's going to get us started there
+01:15 and this is going to be a string,
+01:19 that's what we say, string.
+01:21 Now, we might want to add some other features
+01:24 like this role is supposed to be the one and only
+01:26 dragon, or rock, or paper, or something.
+01:28 So, we could come over here
+01:30 and say unique equals True, as well.
+01:32 No creative uniqueness constraint for the database.
+01:36 This go moved out of the way by it's own self,
+01:38 but that's okay.
+01:40 If a role, it's going to have an id and a name
+01:42 and whenever I'm working with databases
+01:44 there's one other thing I really like to know.
+01:46 Like, when was this record created?
+01:48 Is this old, is this new?
+01:50 It doesn't matter so much for the role,
+01:51 but for players and the history that's going to matter a lot.
+01:55 Let's go ahead and add one here as well.
+01:56 It's going to be a SQLAlchemy.DateTime.
+02:00 This is pretty good, it doesn't have to be unique,
+02:02 but what we would like is to not have to bother
+02:04 to manually set this,
+02:05 but just have this happen automatically.
+02:07 Saved role, the created time was when it was first created
+02:10 in the database.
+02:12 So, we can come over here and set the default,
+02:13 simply some kind function, how about date time,
+02:17 and I'll have to import that .date.time.now.
+02:21 Now, it's super critical you don't put
+02:23 these parentheses here. You just put the functions here.
+02:26 You put the parentheses, everything is going to be created
+02:29 when the program starts.
+02:30 If you put a function it will be called
+02:32 every time something is inserted.
+02:34 So, we want this kind of now and I'm going to copy this
+02:37 because we're going to use it actually,
+02:39 probably want both of these top ones here.
+02:43 Perfect. So, this role class, this role model
+02:46 is going to be mapped to the database is 100% done.
+02:48 Let's quickly knock out the other two.
+02:54 Now, the only other thing we're going to have here
+02:56 is the players name again.
+02:57 So, this will be super easy.
+03:01 It'll say novel is false.
+03:03 This is a required value you have to give it to us.
+03:06 Okay, we can also put that in our role while we're at it.
+03:10 Here, you have to say the name.
+03:12 So, again the player classes are pretty much ready to go.
+03:19 Now, it turns out that this move is the most complicated
+03:21 and we're going to sort of stop short of some,
+03:23 maybe some full modeling here.
+03:26 Just for the sake of keeping us time bounded here,
+03:29 but we're going to say the table is moves.
+03:31 Then I'm going to put in a bunch of columns
+03:32 we're going to talk about .
+03:37 So, like before we have the id
+03:39 of when it was created and now we have some
+03:41 sort of relationship thing.
+03:43 So, what role is it associated with
+03:46 and what player is it associated with?
+03:48 So, these are integers
+03:49 and it's going to be foreign keys back to the other thing.
+03:52 Now, we could model these relationships,
+03:54 but like I said, this is a super quick intro
+03:56 to SQLAlchemy and not to deep dive into it.
+03:59 There's a lot of complexity to those relationships.
+04:01 So, we're just going to kind of keep them loose for
+04:03 the time being.
+04:04 We'll have a string, which is like some sort of UUID
+04:06 type thing for the game.
+04:07 So, we know when the game is played, which it is,
+04:10 this is the role, like this is the first round,
+04:12 second round, third round.
+04:14 Who played that particular role,
+04:16 and is this the play that wins the game?
+04:19 Alright, is this the final play that beaks this up.
+04:23 You typically might say well,
+04:24 that's always going to be the fifth one.
+04:25 Unless, there's some kind of tie
+04:27 and we tie, and tie, tie,
+04:28 and this keeps going.
+04:30 Alright. So, it can get slightly more complicated because of ties.
+04:32 So, we need to know when the last,
+04:34 and when the particular play is the final one
+04:37 that is the winning play.
+04:38 Okay.
+04:39 So, with this we have our classes all defined.
+04:41 We've got our role, our player,
+04:44 and then for historical reasons,
+04:46 we have our moves.
+04:47 Of course they all derive from this model base,
+04:49 which is super simple to create.
+04:51 Not obvious, but very, very simple to do
+04:53 and we did that in our model_base.py file.

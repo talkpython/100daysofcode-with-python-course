@@ -1,0 +1,35 @@
+00:00 Right, welcome back to the third day of
+00:02 the GitHub API project.
+00:04 I hope you had some fun by now using the GitHub API
+00:07 and you chose an interesting project to work on,
+00:10 and this gives you some more links.
+00:12 So here's the GitHub Developer REST API
+00:15 Version 3 documentation.
+00:17 You probably will use this a lot,
+00:20 although it should also try to help in the pdb inspection
+00:24 techniques I showed you in this lesson.
+00:26 And maybe if you're not making the GitHub objects
+00:29 with a token, you might run into limitations
+00:33 of the amount of calls you can do to the API.
+00:35 Here is an article about request cache.
+00:38 The cache is close to the API in an SQI database,
+00:42 so when you're developing your cool app,
+00:45 and you do a lot of calls to the API,
+00:48 this could actually be useful to
+00:49 keep that limit down.
+00:51 The other thing is that this might
+00:52 speed up the response from the API,
+00:55 because it just creates your local database.
+00:57 So this just an extra pointer you might
+00:59 want to check out when working with
+01:02 any API actually.
+01:03 And don't forget to share your work.
+01:06 You can use #100DaysOfCode, there's a lot of people
+01:09 doing that, and that's getting quite some traction.
+01:13 And of course, feel free to include
+01:15 Talk Python and PyBites in your tweets.
+01:17 We are really passionate about this stuff,
+01:20 and love to see what you guys are doing
+01:23 and coming up with.
+01:24 Have fun and go learn a lot of API GitHub goodness,
+01:28 and Python of course.

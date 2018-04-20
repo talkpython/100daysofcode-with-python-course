@@ -1,0 +1,108 @@
+00:00 Lets go over what we've learned so far, 10 refactorings.
+00:03 One.
+00:05 Having a big if elif else block
+00:07 is not really maintainable and looks pretty ugly.
+00:10 Rather, use a dict and just look up the items.
+00:14 Much better.
+00:15 Next, keeping an index when looping over a sequence.
+00:21 In Python, you can just use enumerate.
+00:24 And look at that, you can even give it a start value of one
+00:27 and you get the same result but it looks way more concise.
+00:32 Next, context managers.
+00:36 Don't use files like this.
+00:38 If an exception gets raised,
+00:39 the file handle won't be closed.
+00:43 This is a bit better because the finally block
+00:46 will make sure that your file handle will get closed.
+00:49 Yet, much better, is to use a with statement
+00:53 which automatically closes the file handle after it's done.
+00:58 Four, use builtins and learn about the standard library.
+01:04 For example, here we saw a pretty verbose example
+01:06 how to get the maximum duration of a couple of workouts.
+01:10 Not the best way.
+01:12 You can just use max and min which are built into Python.
+01:17 Here are two examples how you can do it in one line of code.
+01:22 Tuple unpacking and named tuples.
+01:25 You need to swap variables and using a temp variable?
+01:28 Or what about indexing a tuple?
+01:31 By indices?
+01:32 Not optimal.
+01:35 Use tuple unpacking.
+01:37 For example, you can just swap the variables around.
+01:40 No need for a temporary variable.
+01:43 Or, to access to access elements in a tuple,
+01:46 make an attribute thanks to a named tuple.
+01:49 Now you can just print, work out that day,
+01:51 work out that routine, and work out that duration.
+01:54 And it's way more readable.
+01:58 List comprehensions and generators.
+02:00 Once you need to build up a sequence,
+02:03 you don't really need to build up that list.
+02:06 You can use a list comprehension.
+02:08 That's way shorter.
+02:09 Or use a generator which when your dataset grows,
+02:13 will be more efficient.
+02:16 Here's another generator to get a random day.
+02:19 String formatting and concatenation.
+02:21 Don't concatenate strings like this.
+02:24 It's ugly and less performant.
+02:28 Rather, use f-strings if you're on three dot six or later.
+02:31 Otherwise, use format as a more elegant way
+02:33 to format your strings.
+02:36 Another thing we saw was string concatenation
+02:39 when you build up your long string, don't do this.
+02:41 It's not efficient.
+02:43 Python will make a new string object with every operation.
+02:46 You rather want to put all the string objects in a list
+02:50 and just join them together.
+02:52 And here you see an example of that.
+02:57 PEP 8 and the Zen of Python, your new best friends.
+03:00 You will refer back to them, a lot.
+03:04 First of all, to understand Python a bit better,
+03:07 why things are designed the way they are,
+03:09 read through Zen of Python and, I guess,
+03:12 print it out and put it next to your screen
+03:14 because it's a very concise list
+03:16 and it really explains a lot about Python.
+03:20 And equally important, look at the PEP 8 style guide
+03:23 and try to abide those principles
+03:25 because they make for more readable code
+03:27 and more consistency across code bases.
+03:30 There's an awesome resource under PEP8.org
+03:33 that makes it easier to understand.
+03:35 And I forgot to mention in the lesson,
+03:37 you probably have a shortcut under PyCharm or Vim
+03:40 that you can just run PEP 8 checks
+03:43 or Flake 8 upon save and catch those errors early on.
+03:47 Definitely something where you want to go from average
+03:51 to awesome.
+03:53 Explicit is better than implicit.
+03:55 That's literally quoted from the Zen.
+03:57 Don't do try-except paths, like never do that.
+04:00 Don't mute all the exceptions, being kind of a black hole,
+04:03 beam into an obscure box, it's just bad.
+04:08 Rather, be explicit in catching your exceptions.
+04:11 So in this case, dividing num one by num two.
+04:14 You can have a ZeroDivision error
+04:16 or a type error or any other exception
+04:18 and all have their specific message and handling.
+04:25 Code quality overall.
+04:26 Which the Software Improvement Group has nicely wrapped
+04:29 into ten principles.
+04:30 In short, keep your methods small,
+04:32 don't pass along too many function arguments,
+04:35 keep your code organized in modules or files,
+04:38 and automate your testing.
+04:40 Of course, there's more to it.
+04:42 It's a whole study in itself.
+04:44 So you can read their building maintainable software book
+04:48 but I also recommend Clean Code by Uncle Bob
+04:51 and Refactoring by Martin Fowler.
+04:54 That's really where you want to go from coding horror
+04:57 to writing awesome code.
+04:59 Your code can be very Pythonic,
+05:01 but if you're writing methods of like 50 lines or more,
+05:03 you still want to go back
+05:05 to general code quality principles.
+05:07 Alright, now it's your turn.
+05:09 Keep calm and code in Python.

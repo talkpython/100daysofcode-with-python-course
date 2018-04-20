@@ -1,0 +1,47 @@
+00:00 Now one takeaway from this here
+00:02 is that we're actually spending a ton
+00:04 of startup time and other things.
+00:06 And depending on how your code is working,
+00:09 if it's intended to be called over and over again,
+00:12 this is very common if you use like a web app,
+00:14 and you start it and every time somebody hits this page,
+00:16 some stuff is going to happen over and over.
+00:19 You might not want to measure
+00:20 the start up time so much as steady state time.
+00:24 So let's do one real quick thing
+00:25 before we actually get fully to the CPython API.
+00:29 Let's just run this a lot.
+00:31 So, then here we have this main.
+00:33 Let's just run main like 100 times, or 50 times,
+00:36 or something like that.
+00:37 And measure that.
+00:39 That will get rid of some of the variation.
+00:40 It'll definitely suppress
+00:42 some of the module Python startup times.
+00:44 So we'll just say this.
+00:47 Let's do it 25 times.
+00:50 Now we're here and we'll run the same thing.
+00:53 Once again, but it'll take a little bit longer.
+00:55 Still, not long, right?
+00:58 But you can see, it's going over and over again
+01:00 it's doing this little printout here.
+01:02 So now if we look over here,
+01:03 here's our main, spending a little bit of time there.
+01:07 Doing our research initialization,
+01:09 we're spending a decent amount of time in parse row.
+01:13 Over here, these are cumulative times.
+01:15 So, like, for example, we're spending 210 milliseconds in module load,
+01:18 but now we're spending 180 milliseconds in main.
+01:23 That may be totally fast enough, maybe not.
+01:25 On the Talk Python Training website,
+01:28 we try to get things down to 10 milliseconds, 20 milliseconds.
+01:33 Some of the pages that are really complicated,
+01:34 you know, there's a lot going on.
+01:36 It's like 50 milliseconds.
+01:37 But you certainly want to try to get that number down.
+01:39 I think if this was a web app,
+01:41 that number would be too high.
+01:43 Of course it's not, but what we're going to do is
+01:45 we're going to look at what we're doing here
+01:47 and at first try to understand why this is happening
+01:50 and how we can make it faster.

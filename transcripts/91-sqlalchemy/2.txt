@@ -1,0 +1,71 @@
+00:00 Let's get right into writing some code.
+00:03 Now, if you look in the GitHub Repository,
+00:05 there's two sets of code here.
+00:08 They look exactly the same right now
+00:10 but they're going to be very different at the end.
+00:12 In this project, we're going to start
+00:14 from an existing application.
+00:16 One that's already done and all we're going to do
+00:19 is add database access to it.
+00:22 It's a bit of a trade off that happens to be
+00:23 more realistic, more entertaining,
+00:25 but slightly more complex by starting with something
+00:28 instead of entirely from scratch.
+00:29 But we'll isolate the SQLAlchemy pieces really well.
+00:32 So this one, this persistent RPS starter,
+00:35 this is going to stay in the starter state.
+00:37 This one on the other hand, we're going to evolve
+00:40 to the final version.
+00:41 Now before I open this in PyCharm,
+00:43 let me come over here and create a virtual environment.
+00:48 And now on MAC OS we can drop it here,
+00:50 or on Windows or Linux, you say file, open .directory.
+00:54 So let's go through and have a
+00:55 quick look at what we got here.
+00:56 First, tell PyCharm to chill out on the virtual directory.
+01:01 Start up the program.
+01:02 So this is the thing that we're going to run.
+01:04 Let's just go ahead and run it so you see what happens here,
+01:06 in fact, yeah just run it like this.
+01:09 So we're going to play, you might've guessed from the RPS,
+01:11 Rock Paper Scissors.
+01:13 And we're going to use a database to store
+01:15 all the players who have played the games,
+01:17 all the games that have been played,
+01:19 the roles, who has won, who has the highest score,
+01:22 we'll do reporting on that so we'll
+01:24 sort of show the high score screen
+01:26 by just doing a database query
+01:27 and order by times they won, things like that.
+01:31 It starts out asking what your name is.
+01:34 And then we're going to play not rock paper scissors,
+01:37 but we're going to play 15-way rock paper scissors.
+01:39 So really fun, we have things like:
+01:41 the devil, and the dragon, and the sponge, and so on.
+01:44 So let's start by throwing standard rock.
+01:48 I need that a little higher
+01:49 so we can see what's going on here.
+01:50 Oh! I've been defeated.
+01:52 I threw rock, but the computer threw water.
+01:53 Apparently, water beats rock.
+01:55 How about fire?
+01:57 I'm defeated again, this is not going to be good.
+01:59 I'll throw a snake.
+02:00 The computer also threw the snake,
+02:02 so let's throw eight.
+02:06 Paper. They threw tree.
+02:08 I'm not looking... I don't think
+02:10 it's going to matter what I'll throw
+02:12 so let's throw a tree.
+02:14 I threw a tree, they threw a scissors,
+02:15 I win, but the computer wins 3-1.
+02:17 We had one tie, three wins for the computer, one for me.
+02:20 Therefore, I lose.
+02:22 So we're going to take this game,
+02:23 as you can see it lets you play
+02:25 but it doesn't show you a high score.
+02:27 It has no history of the game.
+02:28 If I run it again, it just entirely starts from scratch.
+02:32 So we're going to go over here
+02:33 and we're going to upgrade this by using SQLAlchemy
+02:36 to make it remember.

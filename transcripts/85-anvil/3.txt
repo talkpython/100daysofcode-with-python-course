@@ -1,0 +1,24 @@
+00:00 Let's take a look at the app that we're going to build.
+00:03 The app is called HighPoint,
+00:05 kind of like SharePoint but with Python.
+00:07 So it's just this knockoff off on a really simple
+00:10 document management application.
+00:12 But you'll see that it's quite involved.
+00:14 So here on our homepage, we've got a couple operations.
+00:17 You go view all the documents or create a new document.
+00:20 Here's the most recent ones.
+00:22 You can click and see the details.
+00:24 So when it was created, all the info about it, and so on.
+00:28 You go over to all the documents and you could filter.
+00:31 For example, one of these has
+00:33 the word atoms in it, that one.
+00:36 Another one has grass-fed request for example.
+00:39 So really nice and again you can see the details.
+00:41 And then finally you want to add a new document,
+00:43 you come down here, you pick a category,
+00:46 create it, you have validation, all this kind of stuff.
+00:48 So we're going to build this in a really short amount of time.
+00:52 And then put it on the internet with a full deployment.
+00:55 How about that?
+00:56 Hopefully you're looking forward to it.
+00:58 It's a cool technology and it's going to be a lot of fun.

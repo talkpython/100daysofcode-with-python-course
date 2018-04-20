@@ -1,0 +1,40 @@
+00:00 Let's look quickly how you can get help in Python.
+00:03 And some time ago we did an article
+00:06 describing the main functions you can use.
+00:09 So we have help, dir, combining them, pydoc.
+00:13 So let's see if we can use pydoc on the Github module.
+00:17 And to use an outside command in you Jupyter notebook
+00:20 you can use the ! or exclamation mark
+00:23 followed by the command.
+00:29 Right, I thought I mistyped a module,
+00:31 but doing it on the package and on the module name,
+00:34 the importer there is no Python documentation found.
+00:39 But not to worry, you can just use help on an object.
+00:43 For example, we just created pb, the get_user PyBites
+00:47 and I can now type help on pb, and look at that.
+00:53 It's a named user and it shows the class
+00:55 and the methods and even the URL to the Github API.
+01:00 So in the next example we want to see
+01:02 the get_repos in action.
+01:05 So I can just go to get_repos,
+01:09 see what it receives, see what it returns.
+01:12 And see the endpoint in the API.
+01:21 That's pretty useful.
+01:23 And another command is dir,
+01:25 you can use it like that, and here we see all the
+01:28 attributes on that object.
+01:31 So you see the dunder methods,
+01:32 the internal methods and the public interface.
+01:36 And now I know I can for example, get followers.
+01:42 How cool is that!
+01:44 Later we will see git gists, and look at how
+01:47 huge the API is, how many methods
+01:50 and attributes an object has.
+01:52 You can get a lot of data out of it.
+01:55 We can also just call help on a method like this.
+01:58 So we already saw this one before
+02:00 but instead of scrolling through the whole object or class
+02:04 we can just look at a single method.
+02:07 And that's all there is to the basics.
+02:10 I use this heavily when I was working with the API
+02:13 and let's look at a practical example next.

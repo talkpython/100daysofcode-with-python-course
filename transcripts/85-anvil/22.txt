@@ -1,0 +1,47 @@
+00:00 Well, I'm sure it was fun to watch me build that app
+00:02 with Anvil, but now it's your turn to do some full stack
+00:05 web development the easy way.
+00:08 As usual, we've broken this up into 3 days.
+00:11 Let's start with day one.
+00:13 Today you've watched quite a few videos,
+00:16 so there's just a few quick, simple things, just so you
+00:18 actually get your hands dirty a little bit everyday, right?
+00:21 So today, the first thing you need to do
+00:24 is create a new account and register at Anvil.
+00:26 So be sure to use that URL right there.
+00:29 You can just click on GitHub.
+00:30 It's talkpython.fm/anvil100, and that will get you 10% off.
+00:34 If for some reason,
+00:35 you do want a subscription in the future.
+00:37 If not, obviously, you don't have to buy anything.
+00:40 You can build what we built with the free version.
+00:44 Alright. So come over here, log in, create your account.
+00:47 Once you have your account, I thought today would be fun
+00:50 to maybe play with just a little bit of the UI,
+00:52 a little bit of the designer.
+00:54 So you are going to create a new app,
+00:57 and you're going to choose "Material Design,"
+00:58 and then it'll give you some suboptions.
+01:01 Choose the sidebar style.
+01:02 Then you saw, just like we did,
+01:04 add a few links to the sidebar define a few subforms,
+01:07 and make sure that you chose the blank,
+01:09 the simple one, for those.
+01:11 And if for some reason, you literally just need one form,
+01:14 just use the form that you get right away, right there.
+01:16 But it if you're building something more interesting
+01:18 like we did, you'll need some subforms.
+01:20 And then just fill out the visual designer.
+01:21 Just, you know, drag and drop this stuff over here
+01:24 till it looks this way.
+01:25 Be sure to name the elements like label_title,
+01:27 label_created, textbox_search or textbox_filter,
+01:30 rather than label1, label2, label3.
+01:33 textbox1, textbox2, textbox3.
+01:34 That is a real recipe for some spaghetti code
+01:37 that's hard to understand.
+01:38 So a little bit of care there but just define the UI
+01:41 for the app you have in mind.
+01:42 You don't have to write any logic, nothing like that.
+01:44 And you mine as well go and press "Run"
+01:46 just to see it come to life, 'cause that's pretty cool.

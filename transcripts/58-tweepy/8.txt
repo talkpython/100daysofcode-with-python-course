@@ -1,0 +1,47 @@
+00:00 Lets quickly summarize what we've learned so far
+00:03 you can use Tweepy to interface with the Twitter API
+00:07 always load API keys and secrets from your environment
+00:11 and a way to do that is to use the os.environ.
+00:14 Here's how you make a Tweepy API object, then
+00:19 we can use that object to get our way to cursor
+00:22 till you see we get all the tweets
+00:24 from your timeline, then we did a top ten
+00:25 of most popular tweets.
+00:29 First we looked over all the tweets
+00:33 and used sorted to get a written line down
+00:35 to get the most popular tweets as defined by
+00:38 an average of total likes and retweets per tweet
+00:41 and voila.
+00:43 I guess some marketing folks out there
+00:46 will be interesting to know which tweets
+00:47 are doing well, well you can and it's only
+00:50 a few lines of code.
+00:53 Next is most used hashtags and mentions.
+00:56 What are we talking about the most,
+00:57 so we define a couple of regular expressions
+00:59 and put all the tweets in a big string
+01:02 then we use find all in combination with calender
+01:05 and we saw that before in the collections
+01:07 and regex lessons.
+01:08 To get to most common hashtags,
+01:11 which were these, and similarly to get
+01:15 the most mentioned Twitter handles,
+01:17 which were those, very useful info.
+01:20 Lastly, we made a Wordcloud of all the tweets
+01:23 and we used the wordcloud module, we define
+01:26 the mask which was our pilots logo,
+01:30 added some stump words to get a better result
+01:33 and constructed the word cloud object.
+01:35 To get the Wordcloud to show in the notebook
+01:38 we used a little bit of matte lot lip
+01:42 and look at that, we got a word cloud
+01:46 in the shape PyBites logo.
+01:51 How cool is that right?
+01:52 I mean visually its beautiful but
+01:55 its also informative in that we really see
+01:58 some words standing out.
+02:00 Alright, with these practical examples
+02:02 under your belt now its your turn
+02:04 to go through, the practical exercises
+02:07 we have lined up for you in Day 2 and 3.
+02:09 Good luck.

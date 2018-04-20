@@ -1,0 +1,50 @@
+00:01 All right, a quick primer on decorators.
+00:04 What is a decorator?
+00:05 I think the best way to explain it
+00:07 is that a decorator can add behavior to a function,
+00:10 so you pass the function into a decorator,
+00:13 it can do something before and or after
+00:16 and returns the newly decorated object.
+00:19 And it's just one of those common design patterns
+00:22 as described in design patterns
+00:24 the elements of reusable object oriented software.
+00:27 So let's import the modules we're going to use.
+00:32 And let's define our first decorator.
+00:35 Just a very basic one to show the syntax.
+00:49 Alright, now you can use the mydecorator
+00:52 to decoratate a function, and this is the syntax for that.
+00:58 I will go into some of the details in a bit before,
+01:01 example, why should you use wraps which is not required.
+01:04 And the whole aspect of args and keyword args.
+01:08 For now, at the very basic level, just remember,
+01:11 a decorator takes you function, needs an inner function
+01:15 to pass in the arguments and keyword arguments
+01:18 and calls the function and see this sandwich effect here,
+01:22 so you can do something before calling the function
+01:25 and after it, so for example,
+01:26 when you write a decorator to time your function,
+01:29 here you would start the timing,
+01:31 here you would call the function,
+01:32 and here you would stop the timing.
+01:34 You can look at it as adding behavior before
+01:37 and after the function.
+01:39 The function gets called, but additional logic
+01:41 is added around it and that's what a decorator is for.
+01:44 And then here is the syntax how to use it.
+01:47 So right before the function you
+01:50 use the at sign, @decorator.
+01:52 If you have been using any web framework
+01:55 like Flask for Django, you're familiar with this syntax.
+01:58 As we will see towards the end,
+02:00 there is a login required decorator for example in Django
+02:04 that uses this concept of adding a behavior
+02:07 which is that case is to see if the user is logged in
+02:10 and it adds that behavior to a function
+02:13 which is that case is usually the logic of a web page.
+02:17 A route to a certain web page.
+02:20 And keep in mind that this is just syntax,
+02:23 the same thing could be written as...
+02:27 So here you see actually that myfunction
+02:31 gets passed into the decorator,
+02:34 but this is the common way
+02:35 how you would use a decorator.

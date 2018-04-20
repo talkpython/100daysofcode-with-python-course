@@ -1,0 +1,123 @@
+00:01 Okay with the files created, app.py, data.py,
+00:05 and index.html let's get started.
+00:08 Now the first thing we need to do as with any application
+00:11 is pretty much import any of the modules
+00:13 that we're going to use.
+00:14 And in this case it's Flask.
+00:16 Now Flask has so much to it that, you know,
+00:20 it's not really that Pythonic to import everything.
+00:24 So we're going to tell our application
+00:26 what we're importing here.
+00:28 And specifically we want to import Flask itself,
+00:31 you know, go figure and we want to install
+00:34 the render template.
+00:36 Now this is what allows Flask, your flask app.py file
+00:40 to communicate and work with your
+00:43 index.html Jinja2 template.
+00:45 All right, now we need to actually create
+00:50 our application, our Flask application object.
+00:54 Now everything that runs in your Flask app
+00:56 is running pretty much underneath this app
+01:00 that you are specifying here.
+01:01 Now this name here can be whatever you want, you know,
+01:04 so I'm just using app 'cause it's pretty self explanatory.
+01:07 Now, we're going to use this name dunder
+01:11 to say it's this file, it's this app
+01:16 that's going to be assigned to this variable here,
+01:18 to this object here all right.
+01:21 Next up, and we're almost done actually
+01:23 believe it or not, we have to specify
+01:27 a function, okay, just ignore that decorator
+01:31 for one second, just one second.
+01:34 And all right, so this is our index function.
+01:39 Now I've named it index because,
+01:41 it's going to be the function that
+01:43 operates the route directory of our website.
+01:46 The forward slash of our website,
+01:49 the home page of our website.
+01:50 However you want to phrase that.
+01:52 Now the app.route decorator, what this does is
+01:58 it assigns this path, this route
+02:01 according to Flask terminology.
+02:04 It assigns this to this function so when you access
+02:09 this page, this is the function that's going to run.
+02:13 Okay, so now you're starting to visualize how
+02:15 everything ties together, all right.
+02:17 Now what we need to do is we need to return
+02:21 something to send to that page
+02:23 and how we're going to do that, well we're going to return.
+02:27 Now if we wanted to make this super simple,
+02:30 really basic, we could do something like this.
+02:34 All right, hello world, now what this is going to do
+02:39 is this is going to ignore that index.html file
+02:43 because if you, as with anything, we haven't specified
+02:47 index.html anywhere in this Flask code, in this Python code.
+02:52 So how does this application.py file, app.py,
+02:56 how does it know how to talk to that index.html file?
+02:59 Well right now it doesn't.
+03:00 All that's going to happen when you run this
+03:02 is it's going to print hello world
+03:05 in the top left hand corner of your page and that's it.
+03:09 We don't want to be that boring, well,
+03:10 it's going to be that boring but in a different way.
+03:13 So what we're going to do
+03:16 is we're going to actually tell our Flask application
+03:19 that when you get to the route directory
+03:23 of your website, you're going to load index.html.
+03:30 So now we, anything that this page presents the html
+03:34 is going to be in that index.html template, all right.
+03:40 You can imagine what we're going to put in there.
+03:43 So now the one last thing that we are missing
+03:47 is the line of code that actually tells
+03:51 our program to run.
+03:53 app.run().
+03:57 Oh come on, got to get that right.
+04:00 This app is this.
+04:04 You can see this variable being referenced
+04:07 multiple times now.
+04:09 Everything is linked together via this object here.
+04:13 All right.
+04:14 So app.run() if you don't have that,
+04:17 if you comment it out, it's not going to work.
+04:19 Your website's not going to run
+04:21 when this file is invoked, okay.
+04:25 So all that's going to happen now when we run
+04:27 the website is we're going to hit the route page
+04:31 it's going to load that html file, and that's it.
+04:36 Nothing will, you'll actually get a blank page
+04:38 because we haven't specified what to run, all right.
+04:43 So here's our index.html file that we've created.
+04:46 I've opened it up in Notepad++
+04:48 and all we're going to do is put
+04:50 some really basic html in there.
+04:53 So never fear if you've never worked with html.
+04:56 Let's get this really, really basic.
+05:00 Going to open the body tag, I'm going to throw a paragraph
+05:03 tag in there and we're going to say, "Hello planet."
+05:08 Yeah, let's, let's be slightly different, all right.
+05:11 And close the body tag and we're good as gold.
+05:18 Now let's actually try and run the app.
+05:21 To run it all you actually have to do is
+05:23 hop into your command prompt, or whatever you're using,
+05:26 and just from your app.py file
+05:30 just like any other Python script, python app.py.
+05:34 Bang, now this line here tells you the default
+05:39 IP address that Flask uses for your website.
+05:41 So it's launched the web server and it's going to respond
+05:44 on local host 127.0.0.1, port 5000 all right.
+05:50 Now that we have port 5000 ready, we'll bring up
+05:53 this that, here's one I prepared earlier
+05:56 and we're going to hit enter and that's it.
+06:00 How simple is that?
+06:01 So if you think about it, we've just got
+06:03 just a handful of lines of code.
+06:06 So you've got a couple of lines
+06:08 in the html file, a Jinja2 template,
+06:10 and this and that is your Flask website.
+06:13 So what I'd like you to do now is have a play with this.
+06:17 Just play around with it, that's your day.
+06:19 Follow along with the video, run your very first Flask
+06:22 website, and see how you go.
+06:24 On the next video, we're going to deal
+06:26 with some actual data.
+06:28 Very exciting.

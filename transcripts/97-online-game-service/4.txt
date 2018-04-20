@@ -1,0 +1,51 @@
+00:00 Alright, so this Flask is coming soon.
+00:02 Flask is coming now, let's do it.
+00:03 So we're going to import flask,
+00:05 and down here, remember, you have to create the Flask app.
+00:08 And I'm going to use it like this, so we always see
+00:10 the full namespace of flask,
+00:12 just so it's really clear what's going on here.
+00:14 And let's just build, like, a hello world,
+00:16 or welcome to our site, little view method here.
+00:20 So let's call this index.
+00:22 And you have to add the app.route decorator
+00:25 and in here we're just going to put forward slash.
+00:28 So that's going to tell it what to do,
+00:29 and then we'll just say return hello world.
+00:33 And just for good measure, just so we can keep track of this
+00:36 in the future, 'cause we're going to run into issues,
+00:38 let's add a not found 404 handler,
+00:41 and we'll just return the page was not found.
+00:46 So that's great.
+00:47 And then let's go down here and we'll actually
+00:50 have a main method, let's put that right at the top.
+00:52 That's my style.
+00:54 So we'll say app.run like so.
+00:57 And let's even say debug=True.
+01:00 That's going to be really nice for us, we'll see why in a bit.
+01:03 And then we'll say down here, we'll do our little
+01:05 main convention, that is in Python,
+01:07 and we'll run the main method if that's the case.
+01:10 Whew, okay, is it ready to run?
+01:11 Let's run our web app and see.
+01:14 Whoa, success.
+01:15 We have something here.
+01:17 Click on it.
+01:19 Hello world, awesome, how about that.
+01:20 What if we go to abc?
+01:24 Page was not found. Okay, so it looks like both the regular index
+01:28 and the not found stuff is working really well.
+01:31 So this is cool, and just so you know,
+01:33 what this debug=True is it'll watch these files
+01:37 and see if you make a change and automatically reload it.
+01:40 So let's go to hello world, three exclamation marks.
+01:44 Go over here, if I refresh.
+01:46 Automatically, I didn't have to do anything.
+01:49 Because down here, you can see
+01:50 it detected a change in that file.
+01:53 Restarting, debugger is active.
+01:54 Beautiful.
+01:55 Okay, so, this is all really good,
+01:57 we got our Flask up and running.
+01:59 But this doesn't feel very much like
+02:01 a JSON API method, does it?

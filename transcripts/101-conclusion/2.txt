@@ -1,0 +1,33 @@
+00:00 Now, let's just take a moment
+00:01 and reflect upon what you've learned,
+00:03 what you've gotten in this course.
+00:06 If you've done every one of the 100 Days projects,
+00:09 you have done an incredible amount.
+00:11 And it's easy to think, well these
+00:13 are just small little things, little tiny projects.
+00:16 But that's really the secret of software development,
+00:19 is it's just the sum of many, many small projects.
+00:23 It's not this grand skill that
+00:25 somehow you acquire eventually.
+00:27 Rather it's, well, what 50 little things
+00:29 do I actually need to know in order
+00:32 to build this website or that mobile app,
+00:34 or this other IoT thing, whatever it is you want to build?
+00:38 I'd think you've learned so many little things
+00:41 that are going to add up to
+00:43 be really, really powerful for you.
+00:45 And I just want you to keep this ethos,
+00:47 this I'm going to learn one little thing every day going.
+00:50 Because one little thing every day
+00:52 continuously will put you right
+00:54 at the top of the software industry,
+00:56 and that's a super-fun place to be.
+00:58 But you have learned so much,
+01:00 I don't really want to go through all
+01:01 of the details and call them out,
+01:03 but you know, you work with databases,
+01:05 emails, websites, APIs, and so on and so on.
+01:10 So just take a moment and reflect upon how far
+01:13 you've come and how many things you have gained,
+01:15 but most importantly, just keep learning
+01:18 one thing a day, and it'll do amazing things for you.

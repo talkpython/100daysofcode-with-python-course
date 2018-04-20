@@ -1,0 +1,22 @@
+00:00 Let's look at the Selenium hello world example.
+00:04 And let's look quickly what happens when I run this.
+00:08 And I have to move the browser into my recording area.
+00:13 I put the PyCon into the search box, hits return,
+00:19 looks at the results and makes an assertion.
+00:22 Now how cool is that, that it just opens a browser,
+00:24 does all this stuff automatically?
+00:27 And when you're dealing with web pages
+00:29 you probably want to inspect them so you can do that here,
+00:32 and you can look at the developer tools
+00:35 and here you see that input has a name of queue,
+00:38 so that's Selenium here is finding.
+00:41 Sending PyCon, hitting return and no results found
+00:46 should not be in the driver page source.
+00:48 So here to back to the results.
+00:51 Yes there are results for PyCon obviously.
+00:54 And the talk a lot about automating tasks,
+00:56 but one of the most common use cases is actually
+00:59 to automate your testing, go through your dev sites,
+01:02 filling out forms, looking and returns
+01:04 and automate that as part of your functional testing.
+01:08 So that's the hello world example of Selenium.

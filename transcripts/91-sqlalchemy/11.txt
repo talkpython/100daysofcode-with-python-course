@@ -1,0 +1,29 @@
+00:00 Now you've seen SQLAlchemy in action,
+00:02 it's your turn to put it in action
+00:03 on whatever you want to build.
+00:05 So, jump over here to the GitHub repository
+00:07 and check out the SQLAlchemy section.
+00:09 What we're going to start with is,
+00:11 we're going to pick some application
+00:13 that you've already built.
+00:14 You're most of the way through this class,
+00:16 so you should have a lot of apps.
+00:17 You can pick one of the games.
+00:18 You can pick another application.
+00:20 It doesn't really matter.
+00:22 And you're going to add database persistence to it.
+00:25 And you're going to add the ability
+00:26 to use that to run reports,
+00:28 or keep sessions going across runs of the program.
+00:32 Something to that effect.
+00:33 So we're going to start out on the first day
+00:35 by just really picking out an application,
+00:37 and then creating a virtual environment and
+00:40 installing SQLAlchemy.
+00:42 We'll get this all set up.
+00:43 If you get a program that can import
+00:46 SQLAlchemy and run, then you're pretty much ready.
+00:48 Today was mostly about just watching
+00:51 the videos and learning.
+00:52 So this is just to give you something to
+00:54 start with the next day.

@@ -1,0 +1,23 @@
+00:01 Welcome back to 100 Days of Python.
+00:03 The second day of list comprehensions and generators.
+00:06 Now that we've got some theory down,
+00:08 it's all about getting practice.
+00:10 I've got some small exercises to get practice.
+00:14 So, here you're provided with a names list
+00:18 of names and surnames.
+00:19 And can you write a simple list comprehension
+00:22 to convert those names to title case, and reverse the
+00:25 first and the last name?
+00:27 Then we use that data to make a simple
+00:30 generator that generates output like this.
+00:35 So, we initialize the generator.
+00:37 We look through a range of 10,
+00:40 and call next on the generator.
+00:42 And every time we call next
+00:44 it returns name one teams up with name two.
+00:47 And those names are randomly chosen
+00:50 That should not be too hard
+00:52 after yesterday's lesson.
+00:54 So have fun, and tomorrow
+00:55 we'll show you the solution to
+00:56 these two exercises.

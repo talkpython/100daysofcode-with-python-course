@@ -1,0 +1,23 @@
+00:00 Now that you've seen the application
+00:02 that we're going to build,
+00:03 our SharePoint document management knock-off thing,
+00:06 you might be thinking there's no way we'll be able
+00:09 to build that in like 30 minutes
+00:11 or whatever this is going to take.
+00:13 Well, it turns out,
+00:14 if we use this thing called Anvil, we can.
+00:17 So Anvil is this new product that came out
+00:19 that lets you write Python code for everything that you do,
+00:23 and it's really this cool visual designer
+00:27 and application builder for Python web applications
+00:30 with both the service side and client side component.
+00:33 Now there's a free version of Anvil that you can get,
+00:35 and it has some restrictions.
+00:37 And so I was a little bit hesitant to use it for this course
+00:40 because for it to really take full advantage of it,
+00:42 you have to pay for it.
+00:43 But on the other hand, it's so powerful.
+00:46 I think a lot of you will really appreciate
+00:48 what you can do with it
+00:49 and might actually find it super useful
+00:51 and not mind paying the small bit that you pay anyway.

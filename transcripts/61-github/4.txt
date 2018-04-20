@@ -1,0 +1,74 @@
+00:00 All right. Enough introduction.
+00:03 Let's write some code and get something usable working.
+00:06 So, I mentioned the git repos method before.
+00:10 And we're now going to use it on the PyBites
+00:12 or pb object to get all the repos and sort them
+00:16 by most popular.
+00:17 And I define popularity as
+00:19 the amount of stars the repo has at this moment.
+00:27 So we're going to use get_repos.
+00:31 And the GitHub API tells me it's in paginated list.
+00:36 Let's define a namedtuple as best practice
+00:40 to better describe what we're working with.
+00:42 So we have a repo that holds a name, stars and forks.
+00:47 Let's write a method, get_repo_stats.
+00:55 Let's collect the repos in a list
+00:59 which we then can easily sort.
+01:11 Let's ignore the forks.
+01:21 Right.
+01:22 There's some stuff to take in.
+01:24 Just run quickly over it.
+01:25 So we keep a list of repos, appending namedtuples,
+01:29 which we initialize with data
+01:32 we're getting back from the get_repos.
+01:34 So every element in that paginated list
+01:38 contains attributes of which we want name, stars,
+01:42 which are called stargazers in the GitHub API,
+01:45 and the fork count.
+01:46 Then we return to repos list
+01:48 and we give it to sorted
+01:51 and the great thing about sorted is that it takes
+01:53 an optional key argument which can receive any callable.
+01:58 Now a lambda is a quick way to define an inline function
+02:01 or anonymous function that we use here
+02:05 to indicate that we want to sort on the number of stars.
+02:08 And we want the high stars up at the top, most popular,
+02:12 so we say reversed=True.
+02:14 That gives the whole list.
+02:16 I put a second argument to this function,
+02:19 the number of items we want to see,
+02:21 so I can then slice the list like this.
+02:24 So, take the first up until n.
+02:27 So this will give me item 0, 1, 2, 3, 4.
+02:30 And let's call it.
+02:34 get_repo_stats on pb user and I leave n off
+02:39 so it will default to five.
+02:42 An error.
+02:43 All right, this already looked weird to me
+02:46 and stargazers does not have a count object.
+02:49 That's me mistyping it.
+02:51 Repo has a stargazers_count.
+02:58 And forks is with an s.
+03:04 All right, so here we see our most popular repos.
+03:07 The challenge is, by far,
+03:08 wins and, look at that, 100 Days Of Code,
+03:11 very applicable in this course,
+03:13 and, if you want to see what we did in our
+03:16 100 Days Of Code, we kept a log.
+03:20 We saving that the number's correct.
+03:22 And here we logged what we did every day.
+03:24 And I encourage you to do the same actually
+03:26 because when you log it and tweet it out,
+03:28 you make yourself accountable
+03:30 and it's very likely that you make it to the end
+03:32 and you have a great collection of scripts
+03:34 to later use in your further Python career.
+03:38 Let's look at another user, for example, Mike Kennedy.
+03:43 And his user
+03:48 is mikeckennedy.
+03:53 So, I create an object and I call get_repo_stats
+03:58 on mk.
+04:01 Now look at that. You can see from this output that his Jumpstart course
+04:05 is popular, as well as Write Pythonic Code.
+04:08 So that's pretty cool.
+04:09 And next, we're going to post to the API, creating a gist.

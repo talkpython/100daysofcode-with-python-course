@@ -1,0 +1,22 @@
+ 0:01 Working with files in Python, especially text files 
+0:03 is something that you are likely to need in your application. 
+0:06 So let's take a really simple example. 
+0:09 Here we are going to create a file, 
+0:11 we have three items in our data structure we want to save on the three separate lines, 
+0:15 so we have cat, hat, mat and a list, and these are just strings. 
+0:18 We are going to use the "open" method, 
+0:20 and the "open" method takes a file name and a modifier, 
+0:23 and then this "open" method, the open string that comes back 
+0:26 can be used as a context manager, so we are putting into a "with" block, 
+0:30 and naming the variable fout for file output, 
+0:33 and this automatically closes the file stream, as soon as we leave this with block. 
+0:38 So that's really nice and safe, makes sure we flush, it close it, all those kinds of things. 
+0:42 Once we get the file open, we are going to loop over each item 
+0:45 and we are just going to say "fout.write" and pass it the item, so cat, hat or mat. 
+0:50 Now, write does not append a new line, it just writes characters to the file, 
+0:54 so we want to say "\n" to append a new line, 
+0:57 so each one of these items up here is on a separate line in the file. 
+1:01 And notice this "w" modifier, this means write only and truncate the file if it exists. 
+1:06 We could also say "a" for append, "a+" for create an append 
+1:11 or "r" if we just wanted to read from the file but not write to it. 
+1:15 There is also a "b" modifier for binary files, but you'll use that less often. 

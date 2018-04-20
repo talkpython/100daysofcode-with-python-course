@@ -1,0 +1,56 @@
+00:00 Alright. List comprehension generators.
+00:02 I did a whole class on this topic.
+00:05 So, I just want to quickly recap what we learned here.
+00:08 Because it should really be mentioned in refactoring.
+00:12 Because it's one of those candidates
+00:14 to make your code more readable, and Pythonic.
+00:16 Let's get the days starting with a T and let's do
+00:20 the old style keeping a list.
+00:29 There you go, Tuesday and Thursday.
+00:31 And again, this is fine, right?
+00:32 However, you can write this in a
+00:34 more concise way.
+00:35 Let's use a list comprehension.
+00:42 So look at that, one, two, three, four, five lines
+00:45 of code reduced to one.
+00:47 Awesome.
+00:48 Next, let's do a quick generator example.
+00:51 So, just to recap, let's make a random day generator.
+00:55 So, we need some random function, and we're going
+00:59 to use choice.
+01:03 So while True initiates an infinite look,
+01:06 I'm just going to yield the count,
+01:09 and a random choice of days.
+01:12 Let's initiate that generator.
+01:15 I call it daysgen.
+01:22 And you can see that that's the generator object.
+01:24 And a generator I can call next on.
+01:31 And it gives me a random day.
+01:34 Lets call it again, and I get Monday again,
+01:40 Tuesday, Saturday.
+01:43 So it's random. Okay?
+01:44 I can use it in a loop.
+01:48 So let's get five more days.
+01:52 There you go.
+01:53 Remember that the index was at four, so now
+01:55 it's five, six, seven, eight, nine random days.
+01:58 And then the last nice thing to know about generators
+02:01 is you can use itertools islice.
+02:08 And that lets you get a slice of the generator.
+02:10 Because if I now put this generator in a list,
+02:13 my system would hang because this never ends.
+02:16 It keeps on adding values, consuming memory,
+02:19 and there's no way to stop.
+02:21 There's not a StopIteration, or a stop clause in here.
+02:24 islice is nice.
+02:26 It can just get a slice of the generator.
+02:28 Just like you do a normal slice on your list,
+02:32 like first 20 items.
+02:33 This is similar but works for a generator.
+02:36 So, let's take an islice of daysgen,
+02:39 and I want to start it at position 100
+02:42 and stop it at 105.
+02:43 And then it's safe to put this in a list,
+02:45 because this is a finite sequence.
+02:48 And there you go.
+02:50 And that wraps up list comprehensions and generators.

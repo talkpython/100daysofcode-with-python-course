@@ -1,0 +1,94 @@
+00:00 The second thing I want to test is the guess method.
+00:02 It takes a user input and input is not static,
+00:06 you can change and it can be random.
+00:08 Even worse, when you run this program
+00:10 it's waiting at the prompt to get input
+00:11 so your test would hang, quickly demo this.
+00:17 Let's make a game object, and run it.
+00:26 Actually it's not hanging, it's throwing an error,
+00:29 pretty soon, reading from standard input
+00:31 output is captured, so that's cool.
+00:33 And look at the output, it's pretty verbose
+00:35 which is a nice feature of pytest.
+00:38 But anyway, we definitely don't want to use input
+00:40 literally in tests, so I'm going to use patch again.
+00:44 And I'm going to patch the built-ins input,
+00:50 and this is another way of marking.
+00:52 Here I can give it side effects.
+00:56 And a list of expected returns in a row.
+01:00 Because I'm having all these exceptions here,
+01:02 I'm going to give it a bunch of inputs
+01:04 to go through all these scenarios and see
+01:06 if each scenario throws the value error
+01:09 or accepts the guess as a correct one.
+01:11 And will also show you how you can check for
+01:14 exceptions in pytest which are important
+01:17 because raising exceptions is a common Python pattern.
+01:21 So what we're doing here is setting up
+01:23 a sequence of return values as if input was
+01:26 called that many times.
+01:28 So it will return a 11, then 12 as a string,
+01:31 then bob, then 12,
+01:36 then five minus one, 21
+01:40 seven and None.
+01:43 And those are the values that we're going to work with,
+01:45 and you have to give it an argument,
+01:47 it can be called anything.
+01:49 And now we have some return data from input to work with.
+01:52 So I'm making a game, and again,
+01:54 the constructor sets defaults
+01:56 for all the internal variables,
+01:57 so that should be fine,
+01:59 and then I can start to make assertions.
+02:02 And the first two side effects or returns are good.
+02:10 and again I will show you guess,
+02:11 so guess goes through getting an input,
+02:14 looking for all the bad inputs and raise a value error
+02:17 if so, and if it's good it ends up adding
+02:19 it to it's internal set which is the underscore guesses,
+02:23 and returning the guess.
+02:24 So 11 is good,
+02:30 12 is a string should be fine
+02:33 because that can be converted into a int.
+02:36 The second one, bob, is not a number.
+02:38 And the way in pytest to check if an exception is raised
+02:42 is to use pytest, and you need to import that,
+02:48 and do a with pytest.raises,
+02:51 the name of the exception and then the statement
+02:57 that would trigger that exception.
+02:59 So the next return value from input in the row
+03:03 is bob's string, if I call guess with that
+03:06 it should raise a value error
+03:07 and we're telling pytest to check if
+03:10 it actually raises that exception.
+03:12 And the same is true for the next one with is 12.
+03:16 If I guess again, the guess is already in the guesses set
+03:20 and the function manually raises a value error.
+03:23 I can just copy this and it will be the same.
+03:26 So every new call of guess triggers this input statement
+03:31 or call, which triggers a new value in the return list.
+03:35 So 12 is done, five should be fine.
+03:42 Right let's run what we have so far
+03:44 because it's a lot of code and see if it works.
+03:50 All right that looks good.
+03:51 So now let's do the complete list again.
+03:55 And after five comes minus one and 21
+03:59 which should be two exceptions because
+04:00 they are out of range.
+04:08 Another good one, and finally None should not be a good one,
+04:15 that falls into this one, if not guess
+04:17 raise a value error, please enter a number.
+04:19 So we wrap up with...
+04:24 So that's save, Control + Z, pytest
+04:29 you're still happy.
+04:30 I mean if it would say...
+04:34 Game guess returns None when given None it will fail.
+04:41 So we have please enter a number
+04:43 so it actually raised a value error,
+04:45 and it was not catching that.
+04:47 Here I do, and it works.
+04:52 So that's how I use mocking to circumvent
+04:56 this input function waiting for input.
+04:59 I'm going through all these scenarios
+05:01 by giving various side effects.
+05:03 Next up, validate guess.

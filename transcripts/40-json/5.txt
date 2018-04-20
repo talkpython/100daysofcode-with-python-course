@@ -1,0 +1,155 @@
+00:00 Okay, so carrying on from the last video,
+00:02 we have this gargantuan bit of JSON response,
+00:06 and it's been formatted nicely by pretty print,
+00:10 to look just like this.
+00:12 And what we want to do, the aim of this exercise here
+00:16 is to take the names of these mounts.
+00:20 These in the game I've collected all of these mounts
+00:24 in this list here.
+00:25 In this list of dictionaries,
+00:28 and I want to get the list of them.
+00:29 So how do we do that?
+00:31 Well it's easy enough using key and value calls
+00:33 for a dictionary, to get this data here, so we're not
+00:37 going to cover that.
+00:38 What we want to do, is talk to the data that's nested
+00:43 below these lists and dictionaries.
+00:47 So we need to talk to mounts, the mounts key,
+00:52 then we need to talk to the collected key, and so on
+00:54 down to what we want.
+00:56 So how do we do that, how do we do that in Python code?
+01:01 Well the first thing we need to do is we need to start off
+01:03 our normal for loop.
+01:06 So we're going to do for item in data,
+01:11 but instead of doing items as we normally would
+01:15 for keys and values, we're actually going to do some
+01:19 tags, so the key that we want to look at specifically
+01:24 is mounts, isn't it?
+01:26 So let's just double check that.
+01:28 Go back to the file, and sure enough yes it is mounts
+01:31 we want to talk to mounts.
+01:33 And this is where things are slightly different
+01:36 and this is where things get a bit out of hand
+01:38 when it comes to handling nested dictionaries,
+01:41 you really have to investigate the JSON output, okay?
+01:48 So we're going to go for item in data mounts, well let's
+01:53 just pprint item and see what we come up with.
+01:58 Well, we get collected, num not collected, and
+02:02 number collected.
+02:03 And where did those come from?
+02:04 Let's go back to the file.
+02:06 So we have collected here, that's the first key, okay?
+02:10 We're going to scroll all the way to the bottom,
+02:12 and then we have the next key, number collected
+02:14 and number not collected.
+02:15 And that's exactly what popped up here.
+02:18 We just wanted the first key for mounts.
+02:25 But we want to drill into the rest of this stuff.
+02:29 We want to get further into mounts.
+02:30 And this is where we further talk to collected.
+02:33 So you can see we are now going to start staggering
+02:38 our way down, almost like a staircase.
+02:40 So now we're going to go for item in data mounts,
+02:48 and we know that's collected, okay, well what's going to
+02:54 happen now?
+02:56 I'll give you a clue so we don't flood the screen.
+02:59 Printing item is going to print all of this stuff here,
+03:05 and we don't want to flood our screen yet again, okay?
+03:08 What we do want however, is something in every single one
+03:14 of these dictionaries, so in this list, we have this
+03:17 dictionary, which comes down to here for the
+03:21 Albino Drake.
+03:22 And underneath that we have this dictionary for the
+03:25 Amber Scorpion which ends here.
+03:27 And we want the name; each one of these little dictionaries
+03:31 has a name key.
+03:35 So we call 'em that.
+03:37 So we've drilled down now with our code
+03:40 to mounts and collected, and now we're going to start
+03:42 talking to these keys here.
+03:48 So, we're not going to pprint item, we're actually going to
+03:50 pprint the items, but only the name tag.
+03:57 So we've got for item in data mounts, we're drilling down
+04:00 from the top level to collected, and then pprint the item
+04:04 with just the name tag.
+04:08 And watch this.
+04:11 There we have all of those mounts from the game,
+04:16 in the order that they are in those dictionaries,
+04:20 and that's all we got, which is exactly what we wanted,
+04:23 okay?
+04:24 So we go back in here, you can see we got that name,
+04:27 Albino Drake, Amber Scorpion, Argent Hippogryph.
+04:30 And so on.
+04:32 All the way down here.
+04:34 And it's really, really cool.
+04:37 So that's how we've just worked our way down
+04:40 and passed our way down through the steps of the nested
+04:44 dictionary. So what can we so with this?
+04:46 Let's make it interesting.
+04:49 Hop into this, now what's something that differs
+04:51 between these mounts?
+04:54 Well this mount here, the Albino Drake is a flying mount
+04:59 because it's set to True.
+05:00 But the Scorpion is not flying.
+05:04 The flying is set to False.
+05:07 And this is a boolean operator.
+05:08 It's just True or False.
+05:10 Not a string, if you considered it a string
+05:13 it would have had the quotes around it.
+05:17 This is completely boolean, is aquatic and ground
+05:21 and everything.
+05:23 How 'about we just try and get the flying mounts,
+05:26 the ones that are capable of flying through the air?
+05:29 Let's narrow it down, do something a little more usable.
+05:32 So we're going to create a list first that we're going to
+05:35 throw these mounts in, so is flying, just create an
+05:40 empty list, alright?
+05:43 Now we're going to use the same code for mount in data
+05:48 mounts, we're going to drill down to the next level again,
+05:53 collected, well what do we want to do?
+06:01 We're going to say if mount is flying, we're going to
+06:09 do something.
+06:10 Now note that we don't actually have to check
+06:12 for the truthiness so to speak, we don't have to do
+06:17 if mount is flying equals equals True,
+06:22 because Python assumes True from default.
+06:28 And it is in a string so we don't have to try and
+06:30 match it with a string called True.
+06:32 We can just go if mount is flying, if it is,
+06:37 then we're just going to append it.
+06:39 So is flying.append mount, alright?
+06:48 And that's it.
+06:49 So what this has stored now, it's actually stored
+06:55 this entire dictionary.
+06:58 Each one of these dictionaries is now stored in the
+07:01 is flying. What we can now do is talk to this thing,
+07:08 we can go Len is flying, we got 65 entries there.
+07:17 Let's compare that with here.
+07:19 We know our collected has 204.
+07:24 I've collected 204 of these mounts in the game.
+07:27 But we only had 65 stored in here, 65 of these
+07:31 dictionaries stored.
+07:32 So we know this worked.
+07:34 We know that it took just the flying mounts, the ones
+07:37 that are capable of flying.
+07:39 So what we can do now, just to show you, we can go
+07:42 for i in is flying, print, we'll just keep pretty print
+07:52 just in case, pprint I, and you'll see
+07:56 we actually got all of that data, didn't we?
+07:59 So we got the entire dictionary for each one
+08:03 of those flying mounts.
+08:05 So again I'm sure you can guess, if we want just the data
+08:10 that we want, which is the name,
+08:12 we can go for I in is flying, pprint I, and then we use
+08:21 the tag again that we want to take,
+08:26 name, and there we go.
+08:28 So our list has changed yet again, we no longer have
+08:31 things like that Scorpion, it goes straight onto the next
+08:35 flying mount that I've collected.
+08:38 And that's it, so this is really really cool.
+08:40 This is the best part about JSON.
+08:42 It's got all the data there, it's just really hard
+08:45 to get to sometimes, so using this method
+08:48 you should be able to drill down through all of the
+08:51 sub dictionary or the nested dictionaries
+08:55 and find the data you want, and then you can

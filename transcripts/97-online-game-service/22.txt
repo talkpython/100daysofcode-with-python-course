@@ -1,0 +1,62 @@
+00:00 Let's review just a few of the core concepts
+00:02 that are new for this set of days.
+00:06 We interacted with a lot of powerful, and honestly,
+00:09 a little bit tricky bit of code, with SQLAlchemy,
+00:12 and some of the other stuff, configuring Flask.
+00:16 The stuff that was new was using these Flask view methods
+00:20 as api methods, so, how do we do that?
+00:23 Well we start out by defining the route,
+00:25 this is standard Flask stuff.
+00:27 We particularly focused on the methods
+00:29 because this really strongly drives how RESTful API's work.
+00:33 some of them are GET, some of them are POST, and so on.
+00:35 So we set the methods there.
+00:38 Then we'd write our standard implementation,
+00:41 nothing really to do with Flask at all in this one.
+00:44 We just go to the data base, convert our wins
+00:47 into something that we'll be able to send back.
+00:49 So, dictionaries, or dictionaries
+00:51 of dictionaries, things like that.
+00:53 Here's a list where each item is first, the player,
+00:56 which is the dictionary and the scorer which is a number.
+00:59 Okay. And then once we have our data to send back,
+01:02 we just call, return flask.jsonify, the data we wanted.
+01:06 Here we grab the top ten wins
+01:08 sorted by the most winning players.
+01:12 So this is super simple and super straightforward
+01:14 for these GET methods.
+01:16 The other type that we worked with was the POST.
+01:19 Now this one's a little bit more interesting
+01:22 because typically there is some kind
+01:24 of body being sent to us.
+01:26 A JSON body with lots of data in it.
+01:29 We're going to come in here, have a route again.
+01:31 This method is set to POST this time.
+01:34 But now we're going to check
+01:35 that the body was understood as JSON,
+01:38 and if it's not, we're going to send a 400
+01:40 which is a bad request.
+01:44 You saw in the code that you can actually abort
+01:46 within a Flask response, which is richer.
+01:49 You could give 'em a description of what went wrong
+01:51 and things like that.
+01:53 Then we have to get the data.
+01:55 Once we know that we have a JSON body,
+01:57 we have to get the data out of it.
+01:59 So here we're pulling the game id,
+02:01 but in our play round example,
+02:03 there's actually a bunch of stuff
+02:04 we had to pull out and validate.
+02:05 So a lot of validation, what ended up,
+02:07 we actually moved that to a separate method,
+02:10 and in the very end we just, again, returned
+02:12 some jsonify result of whatever we wanted to tell them
+02:16 We created, or was the outcome of this post.
+02:19 So that's it, you also have PUT and DELETE,
+02:21 but you can imagine they're really quite similar.
+02:24 So you should be able to implement those.
+02:26 It's just more of a conceptual thing for your API
+02:29 than it is actually different in code.
+02:32 So you now know how to make these APIs in Flask.
+02:35 Hope you enjoy it, there's really cool
+02:37 stuff you can do with it.

@@ -1,0 +1,28 @@
+00:00 Welcome back to the 100 Days of Python.
+00:02 In the coming 3 days I will guide you
+00:04 through refractoring and writing Phythonic code.
+00:08 One thing is to write Python, the other thing
+00:10 is to really leverage all the great stuff Python has.
+00:14 The Zen of Python states there should be one
+00:17 and preferably one way to do something,
+00:20 and that's great because in Python there usually is one best
+00:24 way to something, and the more you know these constructs
+00:27 and idioms, the more readable and elegant
+00:30 your code will become.
+00:31 For this lesson I've prepared a Jupyter notebook
+00:34 with 10 practical examples how you can improve your code.
+00:38 For example use a with statement
+00:40 instead of a try, accept, finally block.
+00:43 Or use enumerate to not keep a manual counter
+00:47 or what about refractoring a long if,
+00:50 elif else statement using a dictionary.
+00:53 We will touch upon list comprehensions,
+00:56 generators, using explicit is better than implicit
+00:59 in your exceptions, string formatting, tuple unpacking,
+01:03 PEP 8, the Zen of Python, and even some common
+01:06 best practices writing maintainable code.
+01:09 And for day two and three I have you refractor
+01:12 your code or the code of somebody else
+01:14 to really put into practice what you've learned.
+01:17 So there's a lot to cover, I'm really excited.
+01:19 Let's dive straight in.

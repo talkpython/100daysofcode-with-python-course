@@ -1,0 +1,48 @@
+00:00 Now, before we go and write this,
+00:01 I want to give you a quick glimpse at
+00:03 how we define API's with Uplink.
+00:06 Just so you know, where we're going,
+00:07 and what we're working with.
+00:09 So here is a, API, a structured API,
+00:13 granted, it only has one method we could
+00:15 implement many others, That consumes the GitHub API.
+00:19 Now, there's a couple of interesting things here.
+00:21 First of all, we have this function called list_repos.
+00:24 If you look at its implementation, it's empty.
+00:27 It's literally just a string, that says,
+00:29 get the users public repository.
+00:31 This is the docstring so you get a little help about it.
+00:34 Technically you could just put the word, pass.
+00:36 You don't actually have to write this function,
+00:37 you use the signature of the function
+00:40 to let Uplink hook into the API.
+00:44 Notice there's an at get decorator,
+00:45 it has user /{user}/repos,
+00:49 and that {user}, anything that goes in the curly's,
+00:51 that actually becomes an argument.
+00:54 So if we call this function, list_repos,
+00:57 and we say user equals 772, that's going to go into that URL,
+01:01 and that's what the path annotation indicates here.
+01:03 There's also a sort_by, notice its a query.
+01:06 This is really cool, so the URL will actually be users,
+01:10 slash, whatever you pass for users, slash repos,
+01:13 question mark, sort equals the value of sort_by.
+01:16 So, stars for example, something like that.
+01:19 So, this way we'd basically declare or imitate our ways
+01:25 we're going to access the service, and it's almost
+01:27 entirely up to Uplink to make this happen.
+01:30 Now, to use it is crazy simple.
+01:32 So we're going to come down here and we just create an,
+01:34 instance of this class, pass the URL.
+01:36 We could hard code that in and we will in our example.
+01:39 Then you just call it, gitHub.list_repos,
+01:42 and you pass in say, octocat, that's the username,
+01:44 and sort by its creted here,
+01:47 and you get the repos back, look at this.
+01:49 So, really, really nice way to create structured API's
+01:53 that let you work with headers, body, query strings,
+01:57 the particular URL's and not actually
+02:00 have to juggle all those details.
+02:02 So, that's what we're going to build for an API
+02:05 that we haven't even talked about yet.
+02:06 So, let's get to that.

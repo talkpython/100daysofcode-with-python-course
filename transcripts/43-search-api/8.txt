@@ -1,0 +1,98 @@
+00:00 Let's make two quick improvements before we wrap up
+00:03 this application. First, we're always searching for runner.
+00:05 How exciting is it to always run this program
+00:08 and just get the same results?
+00:09 Let's actually make this a thing that the users can input.
+00:13 So we'll begin by creating a variable.
+00:14 We could just go and type a variable name, assign the value
+00:17 and put it over here, and use PyCharm to refactor.
+00:20 Say I want a variable called keyword.
+00:22 That's pretty cool.
+00:23 Make sure it still runs, it does.
+00:25 But let's actually go and say input.
+00:27 We'll ask the user for input, and we'll give them a prompt.
+00:31 We'll say keyword of title search for movie,
+00:34 or something like this.
+00:36 So now when we run it down here I can search for away
+00:39 and we get The Runaways.
+00:41 I can search for runner and we should get Bladerunner,
+00:46 and we can search for fight, Fight Club, whatever.
+00:50 Whatever we want to search for, we can now do that.
+00:52 This is already really awesome, but notice the API is,
+00:56 I'm going to call it crummy.
+00:57 So we're going to fix that with one more thing.
+00:59 We're going to use this thing called collections.namedtuple
+01:03 So down here I'll say I'm going to define this type that
+01:05 represents a movie.
+01:07 It's going to be a collection.namedtuple, and the way it works
+01:10 is you say the name that it thinks its own name is,
+01:13 and then you say all the fields that go in there.
+01:16 Now this turns out to be quite a pain, so let's go back
+01:19 over here and see what we get.
+01:21 IMDB score, we have a rating, an we have all these things.
+01:24 So this is the typical value here, it's going to look like this
+01:29 So in order for this to work well, we have to have all these
+01:32 values listed in series over here.
+01:35 So, I'm just going to type this in, then I'll speed it up.
+01:43 Phew, there I've typed them all in and I'll maybe do a few
+01:45 line breaks here just so it fits on the screen.
+01:48 I just typed in the top level elements here.
+01:50 So what we can do, is we can actually instead of just
+01:54 churning JSON results, we can actually go over them
+01:57 and return these types, and we'll see why that's a benefit
+02:00 in just a second.
+02:01 So we'll say this, we'll say for our end results,
+02:06 you know, the hits, maybe H, I don't know.
+02:09 We're going to need a list, going to say movies, that's a list.
+02:12 I'm going to put this in here, so we'll say movies.append
+02:15 and we need to append one of these movies.
+02:18 So we can create a new one and we have to type all of these
+02:21 values in here.
+02:22 We have to say IMDB code equals R.get IMDB code.
+02:26 Title equals R.get title, and so on.
+02:31 Or, there's a way to unpack a dictionary, which is what this
+02:34 is, back into keyword arguments with the names being the
+02:38 keys just like that.
+02:40 And, the way you do that is you
+02:42 say **, the dictionary name.
+02:44 So it's as if you said IMDB code equals whatever value it
+02:47 has for IMDB code.
+02:49 Title equals whatever value it has for title.
+02:52 It's just a super short, simple way to do that.
+02:54 So now if we return movies, up here is not going to work the
+02:58 same, but now we can just say R.title, and things like that.
+03:05 HasScore, take that little bit away.
+03:09 HasScore, let's say,r., what did we call it?
+03:13 IMDB Score, that, now let's try that.
+03:19 Now we are going to search for runner, stick with that.
+03:22 Boom! Look how cool that is.
+03:24 Now, we're still not where we quite really wanted to be.
+03:26 If I hit dot, we get not, so as in not helpful!
+03:31 One final trick of what we're going to do, let's go over here
+03:34 and we can use what's called type hint in Python .
+03:38 Python is a dynamic language, it has no syntactical typing,
+03:42 but you can give the editors hints, and I can say this
+03:44 is actually a string, so you say colon type name and the
+03:48 return value is a list which is actually defined in a
+03:52 typings module, so got to import that.
+03:55 So we want typings.List.
+03:56 Notice the, let's put at the top here.
+03:59 And it's going to be a list of movies like this, okay.
+04:03 So with a little bit of a hint, I can come over here and
+04:07 now I type r., look at that, director, duration,
+04:10 IMDB code, IMDB score.
+04:13 Let's just add one more.
+04:15 With code r.code, now that's the way we like to write.
+04:22 All the help we can get.
+04:24 Let's search one more.
+04:26 Anything on computer, of course!
+04:28 Hackers with code TT whatever HasScore 6.2.
+04:32 Awesome, there you have it.
+04:34 This is how we can consume the movie API.
+04:37 When you've broken apart into our, our sort of user
+04:41 interaction bit of code here, our API access code here.
+04:46 We use requests to actually get the data and convert it
+04:51 to JSON and we used a namedtuple to help package it up into
+04:55 something that makes more sense to our program, as well
+04:58 as adding a little type hints, so that the editor actually
+05:01 leverages that help we gave it.

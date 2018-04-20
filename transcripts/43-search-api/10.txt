@@ -1,0 +1,17 @@
+00:00 Now you've seen me build an application
+00:02 using requests to consume a JSON API.
+00:05 It's your turn to consume a different API.
+00:10 So drop over here in GitHub,
+00:12 and we're going to go through the various things
+00:16 and the read me here for what you do
+00:17 for this particular day.
+00:19 We're going to start out by basically just making the skeleton,
+00:23 create a virtual environment,
+00:24 create a program .py and an api.py,
+00:27 and just make sure that you can import one
+00:29 from the other, and we're going to install Postman.
+00:33 So make sure you install the Postman application.
+00:35 Most of what today was
+00:37 was just watching the corresponding videos.
+00:40 So get everything setup and get ready
+00:42 for the next day.

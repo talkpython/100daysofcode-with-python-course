@@ -1,0 +1,202 @@
+00:00 Okay, so here's our general program.
+00:02 Let's put that aside for a minute,
+00:03 and go work on the various creatures that we're going to model.
+00:06 And I'll call this actors to kind of say,
+00:08 here's where I'm going to put a creature,
+00:09 the wizard, and so on.
+00:11 So what we need to do is create what we talked about,
+00:13 something called a class,
+00:14 and this is going to be the blueprint of a creature.
+00:17 So, the way you create a class in Python
+00:19 is really straightforward. You say class, and then you say the name of it.
+00:23 Okay, we're going to model everything at the lowest level
+00:26 as a creature, and use a colon to define the block
+00:29 that is the class, like you do
+00:31 all the various blocks in Python.
+00:33 Now, there's a couple of things which we can do
+00:36 to get started, but, commonly, you want to store
+00:39 pieces of data and behaviors with the creature.
+00:42 So, for the data part we're going to use
+00:44 what's called an initializer.
+00:45 So we'll say def init, and there's this dunder init,
+00:48 in fact if I say double underscore,
+00:51 these methods are called dunder because it's
+00:52 double underscores on both ends.
+00:55 These are all part of what makes up classes,
+00:58 and they all have special meaning.
+00:59 The one that we care about is this init.
+01:01 This is very common.
+01:03 So down here, we might want to have a name for it.
+01:06 Equals, let's call it, toad, and it might have a level.
+01:10 And the level of the toad is 1, or something like that.
+01:13 Now, this is not really helpful
+01:15 because every creature is going to be a toad of level one.
+01:19 So what we can do is, we can when we create them say,
+01:21 this particular creature is a tiger,
+01:23 this creature is a bat, and so on,
+01:25 and so we could pass in the name here,
+01:27 and we could pass in the level.
+01:29 So we're going to go like this.
+01:31 So, here we've defined this blueprint.
+01:32 What is a creature?
+01:33 A creature is anything that can be created
+01:36 and given explicitly a name and a level.
+01:38 We could go farther and give those types,
+01:40 as you can in Python 3,
+01:42 but we're not going to do that right now.
+01:44 The other thing, this is the data part we have so far,
+01:47 the other thing is going to be some kind of
+01:51 behaviors around it.
+01:52 So, a creature, can, let's suppose that one creature
+01:56 can be defensive against some kind of attack.
+02:00 So we could say it like this.
+02:02 So the creature's going to roll a defensive roll.
+02:05 And now, you might want this to be
+02:07 somewhat based on the creature's level.
+02:10 So let's create some sort of randomness.
+02:13 Let's say roll equals,
+02:15 well I'll go over here and we'll say random.
+02:16 Now this comes from the standard library
+02:18 so we have to import it here, put like that at the top.
+02:22 Then we can say randint(), and you give a lower bound,
+02:26 of let's say 1 to 12, and if you want to know whether this
+02:31 goes from 1 to 12, 1 to 11, and things like that,
+02:34 we can say view quick documentation.
+02:37 And what does it say?
+02:39 It returns a number such that A,
+02:41 the number that comes back is
+02:42 less than or equal to the upper and lower bound.
+02:45 Perfect. So this is our, let's say, 12-sided die.
+02:48 And then we'll return roll times self.level.
+02:52 Anytime you want to refer to your own items,
+02:55 your own values, you have to say self dot.
+02:58 So to get back to this, we say self.level.
+03:02 Alright, so this is going to be some kind of defense here.
+03:05 Now let's go and create our various creatures in the game.
+03:09 There's this little to do here.
+03:11 We had a couple of things, we had a bat, we had a toad,
+03:14 we had a tiger, we had a wizard, an evil one, and so on.
+03:18 So we'll type creature and of course
+03:20 we have to import that at the top here, just like any type.
+03:25 We go like this and if I ask Python to
+03:28 show me the parameters, you'll see it takes a name.
+03:30 So let's call this a bat, and this is a level 5 bat.
+03:34 I think we had a toad which is a level 1.
+03:38 And we had a tiger which was level 12, let's say.
+03:41 And we had a dragon, which is a level 50.
+03:46 And for now, I'm going to put it this way,
+03:48 evil wizard was a 1000.
+03:51 I think that's what it said.
+03:53 Okay, so if we just run this and
+03:56 we could print out our creatures,
+03:59 we need to make sure that we're running the main.
+04:02 Remember, up here, at the very top, we wrote this,
+04:04 but at the bottom we have to do our little main.
+04:07 Like this, to say are we running this script as a program?
+04:10 Or are we just importing it?
+04:12 If this is true, we're running it
+04:13 as a program, then we want to invoke our main method.
+04:16 So let's go over here and say run,
+04:19 and there's some stuff that
+04:20 went a little bit crazy somewhere along the way
+04:23 because we didn't finish it.
+04:25 But here, you'll see that we've created
+04:27 a creature object here, and a
+04:28 creature object there, and so on.
+04:32 Our little creature part worked,
+04:33 but then the code that we sort of commented out below,
+04:36 isn't quite done.
+04:38 So this is close, but remember I said
+04:40 you might want to have special features.
+04:42 So let's just focus on the dragon for a minute.
+04:45 You might want to have special features that
+04:46 take into account the scaliness, the fire-breathingness,
+04:49 have a different mechanism for defense, and so on.
+04:52 So let's say we're going to have a class called dragon.
+04:55 And the dragon also is going to have a defensive roll,
+04:58 like this, and maybe the dragon also
+05:01 wants to have this information.
+05:03 Woops, copy that.
+05:05 So the dragon is going to go like this,
+05:06 and then it's going to copy it,
+05:07 and this seems really, really tedious.
+05:10 It is and I'll fix it in just a second.
+05:12 You'll see that we can model this differently.
+05:14 But when we create a dragon, it will have this.
+05:16 And let's also say that it has
+05:18 a scaliness factor and breathes fire.
+05:26 Alright, so we want to store these here, so I'll say,
+05:31 "self dot", that equals that.
+05:34 In fact, in PyCharm you can hit alt enter
+05:36 and it will even write that whole bit for you
+05:38 because it knows that this is what you should do.
+05:40 But you probably see a lot of duplication here, and here.
+05:44 And if I want to change something about this,
+05:46 like add a feature to all creatures,
+05:48 well I'll have to go in and add it everywhere, like this.
+05:51 So, we'll be able to something a little bit better here
+05:53 in just a second.
+05:54 But let's go ahead and write this.
+05:56 Let's take that and let's say
+06:00 we're going to multiply that times the self.scaliness,
+06:06 let's go that equals that.
+06:07 We'll say if self.breathes_fire,
+06:11 then value equals value times 2.
+06:14 So it's even worse, stronger if it breathes fire.
+06:18 Okay, great, so there's that.
+06:20 Now, this is not really super helpful.
+06:25 Any change we make over here, we would kind of like
+06:29 to copy them over there, and really, we would like
+06:31 to treat the dragon as just a specialization of a creature.
+06:34 Remember, this is a relationship.
+06:37 So we can model that by saying this dragon is a creature,
+06:42 like this, alright?
+06:44 And when we say that, what it lets us do is
+06:47 actually take on all the attributes here.
+06:50 Notice this is giving us a little warning,
+06:52 it says, "you need to say super dot",
+06:55 and in pass the name and the level.
+06:57 And this basically says we're going to run
+06:59 this bit of code, and we don't actually need
+07:01 this stuff here, we're just going to store
+07:04 let it pass on through, then we're just going to store
+07:06 the things that are special about the dragon.
+07:09 Similarly, this right here, we could say the role
+07:12 is actually whatever the regular creature does.
+07:20 And then we could say, okay we're going to do
+07:21 that same thing, and we're going to factor in
+07:24 the scaliness and the firebreathing, here.
+07:28 You can see right here that PyCharm is saying that
+07:30 you're actually getting this detail here
+07:33 from your creature class that you're driving from.
+07:36 Okay, so this is all well and good.
+07:39 Let's do one more thing.
+07:40 Let's have a wizard.
+07:47 Now the wizard is also going to be a creature,
+07:49 and the wizard actually has no special items or a passing
+07:53 to it, so we can just leave this init thing off.
+07:55 We're just going to add one behavior
+07:57 to the wizard, which is going to be attack.
+07:59 So he's going to have a creature he's going to attack,
+08:02 and it's going to return True or False.
+08:04 So it'll go something like this.
+08:09 Now notice, both the wizard can get this defensive role,
+08:12 or offensively, but it's fine,
+08:14 and the creature also knows how to get a defensive role.
+08:16 And we'll just compare those, we'll say return,
+08:19 my role is greater than or equal to their role.
+08:25 Alright, so what we're going to do is have the wizard attack
+08:28 another creature, and then if we roll something higher
+08:31 than we win, otherwise we lose.
+08:32 And we're indicating that by returning True or False.
+08:35 Alright, so we were able to take on a lot of the features
+08:39 and the blueprint of the creature to get this
+08:43 defensive role, and all we're doing is adding
+08:45 an attack mechanism.
+08:46 Whereas the dragon, we said we're going to change the way
+08:49 defense works for dragons as well as,
+08:50 like, storing additional stuff.
+08:53 So we're able to model these
+08:55 various actors in our game, all the while
+08:58 keeping a sort of common functionality so they can interact
+09:00 with each other.

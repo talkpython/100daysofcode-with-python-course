@@ -1,0 +1,54 @@
+00:00 The next three days are
+00:01 going to be pretty jam-packed
+00:02 with content for you guys to consume.
+00:05 So, for itertools day one, what I'd like you
+00:08 to do is actually just watch the videos.
+00:10 There are four videos to do, and they involve
+00:13 cycle product combinations and permutations, okay?
+00:19 I'd like you to pay specific attention
+00:21 to cycle, I'll explain why in a second.
+00:24 But, pretty much, that's all you have to do for day one.
+00:28 Nice and easy. Just grasp the concept and play in the shell.
+00:32 I cannot stress that enough.
+00:34 Actually do some live coding in your Python shell, okay?
+00:40 Do that to really grasp the concepts
+00:42 of cycle product combinations and permutations.
+00:46 For day two, you're going to create a traffic light script.
+00:52 Okay, now what this script is going to do,
+00:55 it's actually going to pretty much just emulate
+00:58 or simulate traffic lights.
+01:00 Red, amber, and green.
+01:02 Okay, nice and simple, it uses cycle.
+01:06 Which is why I want you to learn itertools cycle
+01:10 and pay attention to that one specifically.
+01:13 And you're going to create it before
+01:14 you watch the traffic lights video, okay.
+01:18 The video is there, it'll be right after combinations
+01:21 and permutations, but please try not to do that
+01:23 until you actually give this an attempt.
+01:27 Okay, give this a go yourself, and then check
+01:30 the video to see how you went, okay?
+01:34 Now for your last day, after you've finished
+01:37 your traffic lights, I would like you to have a play
+01:43 with bite 64,
+01:45 bite 17, or bite 65
+01:48 on the code challenges platform, okay?
+01:52 These are three bites that are free
+01:56 for you because you're in this course.
+01:58 And they will actually make you use itertools
+02:03 in some way, shape, or form, okay.
+02:06 Some of them are easy, this one's intermediate here,
+02:10 and this one's also intermediate, okay.
+02:13 So have a good play with these three bites.
+02:18 There's nothing much to it; you'll code within the browser
+02:21 and you'll hit test to run some tests against your code.
+02:24 A really great way to spend your third day.
+02:26 Nice and easy, it's all laid out in front of you,
+02:29 you just have to focus on the code.
+02:31 So if you want to go
+02:32 to bite 64, 17, and 65
+02:35 using these three links, you'll get them for free, and then
+02:38 you can spend your last day just plain coding.
+02:42 And that is pretty much your three-day wrap-up.
+02:45 Go through it, if you have any questions, always reach out.
+02:48 But, other than that, move on to the

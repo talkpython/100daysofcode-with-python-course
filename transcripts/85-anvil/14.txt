@@ -1,0 +1,68 @@
+00:00 All right, looks like our categories are working, so we can delete that bit.
+00:03 Now, here we have the To-Do, Create a Document.
+00:07 What we need to do because the security we put
+00:09 on our document, our database,
+00:11 we need to put over here.
+00:13 Let's get rid of this output so we have more room...
+00:16 ...to our data layer and add one more function,
+00:18 and just for time's sake, I'll paste this in,
+00:20 it's really simple.
+00:21 So we're going to call Add a Document, and it's going to take
+00:23 a Category Name, a Contents, and a Views.
+00:26 We also have that created
+00:28 which we're going to generate on the server,
+00:30 and a little print of what we're going to do.
+00:33 And then we'll come over here,
+00:34 and we'll call Category by Name,
+00:36 give it a category name
+00:37 'cause when you have these linked tables,
+00:39 you can't just put a value
+00:41 that would determine their relationship,
+00:43 you actually have to put the row,
+00:44 so we're going to get the row back,
+00:46 and then set the relationship this way.
+00:49 And we have...
+00:51 Make sure we have this right here...
+00:52 Name, Created, Content, Views, and Category.
+00:56 So this needs to be Name,
+00:58 Content, Views,
+00:59 Created, and Category.
+01:00 It looks good.
+01:01 So we're just going to go and create this.
+01:02 Now, all we have to do is call this Add Doc here.
+01:12 There it is.
+01:15 And what does it take?
+01:16 It's going to take-
+01:17 Look at that, it's pretty awesome to show this-
+01:18 it takes the document name,
+01:21 Name, Category,
+01:23 Contents, and Views,
+01:25 and let's just put zero for views when we create it.
+01:30 So Name,
+01:36 something like that,
+01:44 So this selected value here,
+01:47 that's just going to be the name,
+01:49 and that's what we'll use in our look-up on the server site,
+01:51 and the Content.
+01:58 Something as well.
+01:59 All right, so that should do it.
+02:01 Let's see if this works.
+02:09 So this is going to be some documentation.
+02:12 All right, let's see if this works.
+02:13 Create Document,
+02:15 ha-ha, datetime and Data Layer.
+02:19 Yes, yes.
+02:20 Import datetime.
+02:22 So close, let's try again.
+02:28 Alright, let's try it with this.
+02:32 Boom. Look at that.
+02:33 On the server it says it's creating the new document.
+02:35 Does that really mean it was created?
+02:36 Let's go to the database.
+02:43 Oh my goodness!
+02:44 There it is.
+02:45 Look! That's it.
+02:46 And we linked it over to the documentation.
+02:49 Now even the categories.
+02:50 That's so super awesome.
+02:52 Love it.

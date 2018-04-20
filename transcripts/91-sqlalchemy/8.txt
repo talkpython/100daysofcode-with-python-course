@@ -1,0 +1,25 @@
+00:00 For the grand finale, let's just play one more game,
+00:02 full-screen, not stuck inside of PyCharm there.
+00:04 So we'll come over here, you can see
+00:06 I have my virtual environment activated,
+00:07 so I'll say python program, and in here,
+00:09 we're already reading from that database.
+00:12 I've got Michael's wins once, Jennifer
+00:14 wins once, and computer.
+00:15 Now, if I say Michael, it's going to go
+00:17 and find that same player again,
+00:18 and I'll just play some dragon, some dragon,
+00:21 a little bit of lightning.
+00:22 Am I doing, doing alright, I won that last round.
+00:25 Let me try a little snake, and we'll finish it
+00:27 off with some fire, five to zero, amazing.
+00:30 Alright, now if I run it again,
+00:31 you'll see, now I have two wins, Jennifer
+00:34 has one win, computer getting crushed this time.
+00:36 This is the game I built, and you can see
+00:39 it wasn't totally easy to build up those relational classes
+00:43 and so on, but it really wasn't that hard.
+00:45 And we built our little separate database service,
+00:48 our game service, code, so all
+00:51 of our data access is contained
+00:53 within just that little set of files.

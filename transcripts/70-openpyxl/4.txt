@@ -1,0 +1,69 @@
+00:00 All right, we're going to start off pretty simple,
+00:03 because Excel automation can be a bit complex at times.
+00:07 Let's open up the Python shell in our virtual environment.
+00:11 Okay, and we will import from openpyxl.
+00:16 We're going to import load_workbook, okay?
+00:20 Now this is going to allow us to actually load
+00:25 the Excel workbook, the actual Excel file.
+00:29 So I've got the Excel file here.
+00:31 This is a financial sample I pulled off the net
+00:34 just filled with lots of random data.
+00:36 I hope it's not actually real stuff .
+00:38 Now terminology, workbook.
+00:42 Workbook is the name for this entire file,
+00:45 our Excel file, alright?
+00:47 That is the workbook.
+00:49 So when you hear the term workbook, envision that.
+00:52 What you need to then remember if you're not versed
+00:56 with Excel is that these tabs down here,
+00:58 these are worksheets.
+01:00 Okay, so the overall file, the parent file,
+01:04 is the workbook and these here are the worksheets.
+01:09 Okay, the different spreadsheets inside the workbook,
+01:11 alright?
+01:13 So visualize that and then you won't get the two confused.
+01:16 Now if we want to open the workbook,
+01:19 we want to load it in,
+01:22 we use workbook or wb = load_workbook, okay?
+01:28 And then we need the name of the file.
+01:30 So this is financial-sample.xlsx, okay.
+01:37 Right and that loaded and then now we can actually
+01:41 start to interrogate the workbook.
+01:43 So we can go wb.sheetnames
+01:47 and that gives us the sheets,
+01:50 or the spreadsheets down here so already you see we can
+01:55 with interrogating that file,
+01:56 we're talking to it, it's pretty cool, right?
+01:58 Now one really cool thing that you'll probably see
+02:02 is you need to be able to drill down into these sheets.
+02:09 So if we're going to import any data or pull any data,
+02:12 how are we going to know which sheet we're talking to?
+02:16 Well, that's the next step.
+02:18 Alright and one of the default things that a lot of people
+02:21 go onto is saying okay, my worksheet, worksheet one,
+02:25 is going to be the active, the active worksheet, alright,
+02:31 and the problem with this is and it's perfectly fine
+02:35 if you only have one worksheet
+02:36 and you've got some file saves and tests involved here
+02:40 but you need to understand this catch.
+02:42 wb.active will put you on the first worksheet
+02:50 or the last worksheet, I should say,
+02:52 that had any sort of data entered or edited,
+02:56 whatever, on it, any action on that, any activity, okay?
+03:00 So you can see ws one, wb.active,
+03:04 is our finances 2017 worksheet.
+03:07 If we go in here and we enter in some bogus data,
+03:13 we save that.
+03:15 Now we obviously need to reload the workbook
+03:20 so I'll do that very quickly.
+03:23 We reload the workbook.
+03:26 Now when we do, let's go ws two equals wb.active.
+03:36 We get yearly totals.
+03:40 WS one is still pointing at finances 2017.
+03:46 So don't let that catch you out.
+03:48 If you always want to talk to the active sheet
+03:51 or the last sheet that was edited,
+03:53 that's perfectly fine but if you want to talk
+03:58 to a specific sheet,
+03:59 don't assume that workbook dot active is going to get you
+04:02 to the right worksheet.

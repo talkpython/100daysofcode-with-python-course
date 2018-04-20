@@ -1,0 +1,37 @@
+00:00 All right, let's do the top scores.
+00:02 Over here in Postman we get, these are the top scores
+00:08 as HTML, not what we want.
+00:10 So let's write these.
+00:11 Go ahead and put a little bit of code here like before
+00:14 We're going to go get all the players
+00:15 and we're going to compute the wins.
+00:17 We're going to store the player as JSON
+00:20 and the score as the number of wins for that player.
+00:23 So this is a list of dictionaries that contains
+00:28 two things, the player and the score.
+00:30 And there's no particular order to this,
+00:32 but because it contains the score,
+00:35 what we can do is simply go down here
+00:36 and say we're going to sort, give it the function
+00:39 that's going to say, go get the score for each one
+00:42 and sort in reverse order with that negative there.
+00:46 Okay?
+00:47 So now we want a return flask.jsonify.
+00:51 Do you want to return all of them?
+00:52 What if there's 100,000 players?
+00:54 Not a great idea, so let's just return the top 10,
+00:57 and we can use a slice.
+00:59 So it'll construct here, if we haven't talked
+01:01 about it previously we'll say,
+01:02 given a large array, return either
+01:04 the whole array or just the first 10
+01:06 if it's larger than 10.
+01:09 Now this is not going to return anything too amazing yet.
+01:14 It's given our two players, but they both have score,
+01:17 actually our three players, we all have the score
+01:19 0, 0, and 0.
+01:20 But at least you can kind of see that it's working and then
+01:23 what do you think, you can't say the sort's wrong,
+01:25 because it is sorting, but as we start playing,
+01:27 you'll see the highest winning players
+01:29 appearing at the top here, of course.

@@ -1,0 +1,26 @@
+00:00 Let's get started.
+00:01 The first thing I need you to do is open up your browser
+00:04 and head to sqlitebrowser.org.
+00:09 It's this website here.
+00:10 And this is for a database browser for SQLite.
+00:14 It's a sort of GUI, a graphical user interface,
+00:17 that allows you to see the contents of your database.
+00:21 And this is important because sometimes
+00:24 when you're checking things on the command line,
+00:25 it's quite difficult to figure out.
+00:28 You get that visual representation
+00:29 of the columns and how everything looks like in the table.
+00:33 Looking at this screenshot here, this is a Mac screenshot.
+00:36 You can see there's your table here called Total Members.
+00:41 There's the different columns and so on.
+00:44 Now, we're going to use this a bit later on, but this is
+00:47 pretty much the only setup step you're going to need to do.
+00:49 So go ahead and download it
+00:51 for your operating system of choice.
+00:53 I'm using Windows, obviously, and my one,
+00:57 once installed, looks like this.
+00:59 Okay, no database is actually loaded into it.
+01:02 We can use the open database button here
+01:04 to load one in once we actually have it.
+01:07 But for now, just get it installed.
+01:10 That's sqlitebrowser.org.

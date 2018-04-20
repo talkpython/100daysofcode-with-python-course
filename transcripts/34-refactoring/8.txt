@@ -1,0 +1,66 @@
+00:00 Right, next stop:
+00:01 string formatting and concatenation.
+00:03 And pretty important because you will be doing this
+00:05 a lot in your code. It's funny the other day
+00:07 I bought some clay with my daughter
+00:09 and we were making python figures
+00:12 and obviously we were very bad at it
+00:14 and then we got better. And I found it a nice analogy
+00:18 with string formatting. As the Zen says there's
+00:20 preferably one best way to do it
+00:22 and there are various ways to do string formatting
+00:25 but in the end there is a best way
+00:28 which is now the f-string in 3.6
+00:30 but if you're not on 3.6 then at least you can use format
+00:33 that's basically the gist for me of doing formatting
+00:36 the right way. But let's also demo that with some code
+00:39 And I hope you agree that those last two figures were
+00:41 definitely better than the first.
+00:43 Alright, total hours
+00:45 is six
+00:47 print.
+00:48 the course
+00:50 takes
+00:51 plus total hours
+00:57 to complete. Okay a type error, not good
+01:01 so I cannot add an 'int' to a 'string'
+01:03 and vice versa. So I need to make this a string
+01:08 and then it works. But yeah, it's not the best way to do it.
+01:12 And the best way is using f-strings in Python 3.6
+01:20 and look at that I can just embed the variable.
+01:23 This can even take operations, its pretty awesome
+01:28 but yeah, this is faster and it's much easier to read
+01:32 and I don't have to concatenate
+01:33 or even doing any type conversion.
+01:35 So go with f-strings, but maybe you're not on 3.6
+01:38 for some reason and then you can use format.
+01:41 So you would write this as
+01:46 in the same curly braces
+01:52 and then you use format on that string
+01:55 and give it a variable. And you don't have to worry
+01:58 about type conversion because format is,
+02:00 sorry, not using f-strings anymore
+02:04 format is smart enough to convert this 'int' into a 'string'
+02:07 or whatever is needed to make this work.
+02:09 And then last note about concatenation
+02:12 so as said before, building up a string like this is
+02:16 not the way, and its slower
+02:18 if you're working with a lot of data
+02:22 and how true is that, right?
+02:24 Every day you get to write python is a happy day
+02:27 but, it's not happy for your performance
+02:31 and readability I would say, it's not really looking nice
+02:34 in this case you really want to use join
+02:37 so you want to really have your strings in a sequence
+02:39 or a list, and then just join them together
+02:42 and you can specify what to join on
+02:46 and there you go, here's my same string as above
+02:49 but using the Pythonic way of joining
+02:52 and, you know, you can do what you want
+02:54 you can also join it on dash, even better
+02:57 I can leave off the spaces here
+03:01 and give join a space.
+03:03 So I'm going from multiple spaces
+03:05 or worry about spacing in the first place
+03:07 by doing that in one place at the join level
+03:10 so much better.

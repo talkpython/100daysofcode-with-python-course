@@ -1,0 +1,52 @@
+00:00 Alright, let's do some coding.
+00:02 Finally. First, let's import the modules
+00:05 we're going to use and do some set up.
+00:08 Then, I'm going to define a namedtuple called Tweet.
+00:16 And next, I'm going to set some global variables,
+00:20 which, in Python, are uppercase,
+00:23 and words divided by underscore.
+00:26 So, we're going to look at Twitter data from our account
+00:29 and here are the environment variables explained
+00:31 in last video, loaded into the notebook.
+00:34 And you can use os environment or os.environ
+00:39 and you can make a script in your favorite editor.
+00:42 Or follow along in the notebook
+00:44 but notice to load a virtual environment in iPython,
+00:49 there is some set up you might need to do.
+00:52 So, here's a link and a command you can run
+00:55 to get the virtual environment loaded into your notebook.
+00:58 That's all set. Lets dive straight into getting
+01:02 PyBite's Twitter history which is over two thousand tweets.
+01:06 And we're going to look at the most popular tweets
+01:09 by the number of likes and retweets
+01:10 the most common hashtags and mentions
+01:14 and finally, create a nice Wordcloud and we will see that
+01:17 Tweepy is awesome in making this very easy.
+01:20 Alright, let's make an API object first.
+01:31 Alright, and then let's define a function
+01:34 to get all our tweets.
+01:47 Wow, that's a lot going on here.
+01:49 So, we use a Tweepy cursor, which is an efficient
+01:53 way to loop all over the tweets.
+01:56 And, I'm going to access the user time line,
+01:59 which is basically all our tweets,
+02:02 screen name is PyBites and for now,
+02:05 I'm not going to show replies
+02:06 because I need them later.
+02:08 I'm going to include the retweets,
+02:10 so, basically I get everything.
+02:13 And that's good because we can always discard stuff later.
+02:16 But we can not put stuff back that was initially not there.
+02:20 So, then to loop over it, I use the items
+02:23 on that cursor, we had a namedtuple at the beginning,
+02:26 with id text created likes and retweets fields,
+02:29 and I'm just populating those and yielding
+02:32 each tweet one by one.
+02:34 So, this is basically a generator,
+02:36 which we covered in Day 16.
+02:40 Then let's load it on to a list,
+02:42 which might take a while,
+02:43 but makes it easier to inspect.
+02:48 And let's see how big that is.
+02:53 Great, so, we have 2400 tweets.
+02:56 Let's see what we can do with those tweets.

@@ -1,0 +1,34 @@
+00:00 Now you've seen how error handling
+00:01 works in Python,
+00:02 it's time to put it into action for your code.
+00:05 Before we get started, I just want to make the point
+00:07 that one of the key differentiators
+00:08 of professional programs and applications
+00:11 as opposed to simple scripts that
+00:14 people just throw together, or code that beginners write,
+00:17 really often has to do with the error handling
+00:20 and ability to continue working when something goes wrong.
+00:24 This error handling and exception processing in Python
+00:28 that we just covered that is really central to it.
+00:30 Professional apps still crash of course,
+00:33 we still run into problems,
+00:34 but they do so much less often
+00:36 and when they do we typically have logging
+00:38 and real-time error monitoring with things like Rollbar
+00:42 to let us know and so when they happen
+00:44 we get lots of details and we go back and fix them.
+00:46 That sort of hardens our app over time.
+00:49 Right, so your goal is to add this error handling
+00:52 to one of the applications.
+00:53 So you've already watched the video so that's great.
+00:56 The thing you're going to do for Day 1
+00:58 is you're going to go and look through the applications
+01:01 you've already created as part of
+01:02 this #100DaysOfCode challenge.
+01:04 Or if you want to pick something else
+01:06 that you've maybe written outside of this course
+01:08 you're also welcome to pick that,
+01:10 and we're going to take that application and improve it.
+01:12 So that's today, you've already done most of the learning
+01:15 and then just pick the app you're going to work on
+01:17 for the next two days.

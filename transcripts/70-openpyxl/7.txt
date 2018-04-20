@@ -1,0 +1,135 @@
+00:00 Alright, for this video,
+00:01 I thought I'd quickly show you what this could
+00:03 potentially look like in a script.
+00:07 So we'll do a standard import here,
+00:10 from openpyxl import load_workbook,
+00:13 and we are going to load the same workbook.
+00:19 Now we're going to choose worksheet 1,
+00:23 try and format this a little nicer,
+00:25 ws1 = wb, we're still specifying the same file,
+00:32 finances 2017, that same worksheet I should say.
+00:37 Now what do we want to do?
+00:41 Let's create a quick function here.
+00:43 We are going to select our L column again, now where's
+00:48 that file going?
+00:50 Let's bring this up here nice and quick.
+00:53 We want to take the same profit column, and this time
+00:59 we want to calculate the overall profit of whatever this
+01:02 data sample happens to be of.
+01:06 And we want to dump it below here.
+01:08 So how are we going to do that?
+01:13 Well let's just pop back to the file quickly.
+01:16 We're looking here, okay.
+01:19 Let's give ourselves some white space,
+01:21 let's throw in the default under there,
+01:24 let's create a function.
+01:25 We're going to call this function insert_sum.
+01:32 Because what we're going to do is we're going to insert
+01:35 an actual function here, and insert one of those
+01:39 standard Excel sum workers equals sum and so on.
+01:46 Now to do that, let's create the function, def insert_sum
+01:51 Alright we don't actually need to pass any variables
+01:56 into this one, working at global level nice and simple.
+02:00 Okay so what do we need to do?
+02:02 Well we need to figure out what cell, what row, what column
+02:08 we're working with, same with all the other videos
+02:11 we've seen so far.
+02:13 Let's work with how about this.
+02:17 We're in row L, so why don't we go with L703.
+02:24 So how do we do that?
+02:25 We go ws1, still doing the same thing that we did
+02:29 on the Python show before, ws1, and we're going to
+02:33 specify L703, now we're hide coding it.
+02:40 I'll show you to get around this in a minute.
+02:42 Is, is being assigned, now this is where we throw in
+02:48 that function, so sum L2, 'cause we don't want the header,
+02:55 2L, let's see, what was the last row, 701, so L701.
+03:05 Very simple Excel sum there.
+03:10 And then what do we need to do?
+03:13 Well something we haven't covered yet,
+03:15 we actually need to save.
+03:16 So we go wb.save.
+03:19 And we're saving the workbook.
+03:22 Now we don't necessarily have to put it in the function
+03:24 here, we can throw it down under here,
+03:29 so wb.save.
+03:33 Then we save it as the actual file name.
+03:35 So financial-sample.xlsx.
+03:41 And that's it.
+03:42 So what this code will do is it's going to run this
+03:45 function here insert sum, and it's going to insert
+03:48 this sum function here
+03:53 into this actual cell here.
+03:56 Let's run that.
+04:00 Python Excel Automation.
+04:05 Now why didn't that work?
+04:06 Ah, why do you think?
+04:08 Permission denied, and that is because the file is still
+04:11 open.
+04:12 So let's close it, let's not save it, and let's
+04:16 try again.
+04:18 Bang, there we go.
+04:19 Okay, let's open the file again.
+04:23 And let's see what we've got.
+04:25 Alright, so there's our total there.
+04:27 We can format, you can see there's the sum that we put
+04:30 in our code, let's quickly format the cell's currency,
+04:35 we get a 16.8 million dollar, 16.9 million dollars
+04:39 pretty much.
+04:41 Again we run into that problem with max_row.
+04:45 What if this spreadsheet grows?
+04:47 Then we're kind of screwed, aren't we.
+04:49 So let's incorporate max_row in,
+04:51 let's get rid of this,
+04:53 delete that, save the file so there's nothing there,
+04:59 and close it off so we don't have any issues.
+05:03 Now how can we change this?
+05:04 Well let's give ourselves a max_row variable,
+05:10 max_row equals ws1.max_row.
+05:15 We've figured that out in the last video,
+05:18 now let's change this up.
+05:20 We don't necessarily need to know L703.
+05:23 We just need to know it's L.
+05:25 So ws1['L'], let's just do some string work here,
+05:31 I'm going to keep it nice and simple.
+05:33 String max_row.
+05:36 So L max_row.
+05:39 Remember the max_row could be 700, 800, 900, 10,000.
+05:43 It's always going to build that with this here.
+05:48 Now we're going to equal assign it, the sum.
+05:52 But again the sum, we don't know what that end value
+05:55 is going to be, so let's build that.
+05:58 So we'll go sum L to L, and we'll do a little add here
+06:04 of max_row, but think of it this way.
+06:09 If we do max_row, but we're trying to insert max_row
+06:14 into max_row, you're trying to insert the highest cell
+06:18 into the same cell it's not going to work, because it's
+06:20 going to try and override itself.
+06:22 So we're going to do max_row minus one.
+06:26 We want to go one row down from the max_row.
+06:31 And then we have to throw in that bracket at the end.
+06:35 Alright.
+06:37 That should be it.
+06:39 Let's go back across here, get rid of some white space.
+06:45 Alright, let's save that and give it a go.
+06:53 So far so good, I was always confident.
+06:57 Open the Excel, and there we go, it's down here.
+07:00 Now why is that?
+07:01 We know it's because there's some white space or something
+07:05 in one of these cells here, and our max_row is 705.
+07:11 So what it's done is it's actually done the max_row
+07:14 minus one from our code, max_row here, minus one,
+07:19 and that's made our last section here of the range
+07:24 to be L704.
+07:28 So now if this spreadsheet grows, max_row let's say
+07:31 grows up to be 710, max_row will be 710 but our sum
+07:37 will point to L2 to L709.
+07:42 And we have a nice little, oh let's cancel this, whatever.
+07:45 And I assume I've broken that now, look at that.
+07:48 I've absolutely broken it.
+07:51 So let's pretend I didn't do that.
+07:54 And let's open that file again.
+07:57 And by doing this we now have this nice little figure there.
+08:01 And that's pretty much it.
+08:03 That's how you add a sum, some sort of a function,
+08:07 or whatever you want.

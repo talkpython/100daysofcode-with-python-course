@@ -1,0 +1,18 @@
+00:00 So we'll bring up the program here.
+00:03 I've got mine open already.
+00:04 Control + O will actually open up our open dialogue,
+00:09 and there is our address book database.
+00:12 So let's open that up.
+00:15 You can get a bit of information here,
+00:17 although this isn't the most detailed view,
+00:19 but straight away, you can see
+00:21 there's one table within this database,
+00:23 with the name of details,
+00:25 and it's got these three columns.
+00:28 So let's actually go to browse data.
+00:31 This looks more like what you sort of want to see
+00:33 when you visualize your database.
+00:36 There's the table name, there's our name column,
+00:39 address column, and our phone number column.
+00:42 In the next video, I'm going to show you
+00:45 how to set this up automatically.

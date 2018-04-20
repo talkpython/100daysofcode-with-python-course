@@ -1,0 +1,36 @@
+00:00 Welcome back to 100 Days of Python.
+00:03 Wow, you're almost done.
+00:04 It's the third day of the regex 3 days block.
+00:08 I hope you're enjoying this and getting a good grasp
+00:11 of writing regular expressions in Python.
+00:13 So in this third day, let's get you some more practice,
+00:17 and I have some exercises lined up for you.
+00:21 First of all, we have, on our Code Challenges platform,
+00:24 Bite 2, Regex Fun, where you can solve this problem
+00:28 of extracting course times out of a string,
+00:32 getting hashtags and links, and match the first paragraph.
+00:38 Then we have mastering regular expressions
+00:41 also as a blog challenge.
+00:43 And if you like to work more in your own environment,
+00:45 I encourage you to do this one because you get
+00:48 a branch on the code challenges repo
+00:52 and you can just work on your system.
+00:54 And finally, I mean, those exercise,
+00:57 we think are good practice, but of course feel free
+00:59 to get your own data, and parse it,
+01:03 use regular expressions to clean the data, etc.
+01:07 It's actually how we got started with code challenges.
+01:10 We came up with this exercise where we saw this
+01:14 JavaScript course and we saw all these timings,
+01:17 but there was not a total so the first
+01:20 pilot code challenge was, go filter out these timestamps
+01:25 and calculate what the total course time is.
+01:28 It's not necessarily curriculum stuff,
+01:30 but it gets you to practice.
+01:33 And with practice comes mastery.
+01:36 So use any data you want.
+01:38 The goal is to use more regular expressions.
+01:41 And don't forget to share your work on Twitter.
+01:44 You can mention the handle @100DaysOfPython.
+01:49 Good luck, have fun, and remember:
+01:51 Keep calm and code in Python.

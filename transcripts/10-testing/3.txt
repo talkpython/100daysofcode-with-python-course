@@ -1,0 +1,70 @@
+00:00 Let's make a virtual environment
+00:02 and install pytest and also pytest coverage,
+00:06 which I will use to show you how much
+00:08 of the code is covered by tests.
+00:11 Let's head over to my terminal
+00:13 and make a virtual environment, and I'm using Anaconda,
+00:17 so I'm pointing virtualenv
+00:19 to the python binary in my Anaconda path.
+00:23 As by convention,
+00:24 I use venv for all my virtual environments,
+00:27 that I can just run this.
+00:30 Then I have another alias, ae,
+00:35 which will source the venv activate script.
+00:39 So that's basically enabling my virtual environment.
+00:43 And we have nothing installed,
+00:44 and let's now install pytest and pytest coverage.
+00:52 Let's look at that little guessing game
+00:55 we're going to write test for.
+00:56 It lets me guess 5 times, a number between 1 and 20,
+01:00 and it will feedback if I'm too low or too high.
+01:04 That's funny.
+01:07 9 is too high.
+01:10 Wow, I'm a good guesser.
+01:17 Right. You see here,
+01:19 there are some validations we need to do.
+01:21 So a number I cannot guess again,
+01:23 I need to have a valid number,
+01:26 I need to have a valid range and I cannot just do strings.
+01:30 So that is all stuff that's in
+01:32 that program I will show you next
+01:33 and we have to write test for. And we have 5 guesses.
+01:40 Right. So here, I didn't guess it,
+01:43 and it bailed out after 5 times.
+01:45 So that's the program.
+01:46 Now look at how that looks in code.
+01:48 So we have to max number of guesses,
+01:50 the start and end of the range,
+01:52 we have a function to get a random number,
+01:55 using the random module.
+01:56 So we have to constructer
+01:58 that sets the guess's internal set, sets the answer,
+02:02 and it sets when bullion to falls.
+02:05 Then we have the guess method which takes a user input
+02:09 and see if there was actually a number,
+02:11 if it was an integer, if it was in the range,
+02:14 and if it was already guessed.
+02:16 And if nothing bails out,
+02:17 then we can add it to the guesses set, and return it.
+02:21 Then we have an internal validate guess method,
+02:23 which just sees if the guess equals the answer,
+02:26 otherwise, it gives feedback if it's too low or too high.
+02:29 If a property of number of guesses
+02:31 that's basically just the length
+02:33 of the internal guesses variable,
+02:35 and there's a dunder call which makes
+02:37 that I can instantiate the class
+02:40 and call that object as if it was a function.
+02:43 That will initialize a while loop,
+02:46 checking if the number of guesses is below the limit,
+02:49 try to get a guess, check for a failure error,
+02:52 print that and continue, validate the guess.
+02:55 If there was a win or done,
+02:57 make sure that the print guess or guesses,
+03:00 reset the win to true and re-break.
+03:02 If the while loop exits without breaking,
+03:05 then we know that you have guessed the maximum number
+03:08 of times and you didn't find it.
+03:10 Although some people are against this,
+03:11 I do find this construct useful in this particular case.
+03:16 This gives us a nice playground to start using pytest.

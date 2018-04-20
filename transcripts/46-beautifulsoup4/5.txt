@@ -1,0 +1,39 @@
+00:00 Alright, one quick public service announcement
+00:02 regarding this code that we've just written.
+00:04 This section here, the pulling of the site.
+00:09 Not actually kosher to keep that in this script.
+00:12 The reason for that is we don't want
+00:15 to submit a request to a website
+00:17 every time we want to scrape some data.
+00:20 We might run a scraper like this at a different
+00:23 interval set to actually pulling the website.
+00:27 The reason for that is, you think about it,
+00:29 not every site is going to update every few minutes.
+00:32 Not every site is going to update every day.
+00:35 So if you keep pinging that site with a request,
+00:39 you're going to very quickly spam them.
+00:42 You might even get yourself blocked.
+00:43 And you could use up their bandwidth limit.
+00:46 There are certain websites that, you know,
+00:48 can only support a certain amount of hits per
+00:51 per minute, alright?
+00:52 And if you keep doing that, you're going to make the website
+00:56 that you enjoy viewing so much pretty unhappy.
+00:59 So the best practice here is to put all of this
+01:04 into a different script, run that on a cron job
+01:06 at a different interval
+01:08 or whatever other automated way you want to do that,
+01:11 and then using Beautiful Soup 4,
+01:15 point at the downloaded HTML file
+01:18 or at the page that you have pulled down
+01:22 from requests, alright.
+01:24 Nice and easy.
+01:26 It's actually much more pleasant for everyone
+01:29 to do it that way, and I would totally recommend doing it.
+01:32 The only reason we've done it this way right now
+01:34 is just for demonstration purposes.
+01:36 It's much easier.
+01:38 But in production, definitely put your requests
+01:41 in a different script and use Beautiful Soup 4
+01:44 to talk to a static file, not the actual URL,
+01:48 unless of course it's a one off thing.

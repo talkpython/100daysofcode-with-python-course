@@ -1,0 +1,138 @@
+00:00 Alright for the final two test methods
+00:02 that I actually want to run a whole game from end to end.
+00:06 And I'm going to use the same technique as before
+00:08 because we're still stuck with this input method
+00:11 that requires us to input data which we don't have
+00:15 in an automated way of running test with pytest.
+00:18 So I'm going to do a patch of the input again
+00:21 and I'm going to just simulate a whole game.
+00:24 So I'm going to enter 4, 22, 9, 4, and 6.
+00:31 They're going to play a win scenario
+00:34 and I'm going to give it the input
+00:35 which is the requirement of the patch
+00:37 but I'm also going to capture the standard out
+00:40 as I did before.
+00:42 So I make a game.
+00:45 And I need to give it a right answer
+00:47 to make sense of these numbers.
+00:49 So in this scenario win but at the fifth attempt,
+00:53 which is 6. So the answer is 6.
+00:58 I call the game and assert that the game state
+01:02 is underscore win equals true.
+01:08 Let's run this.
+01:12 Okay. So what it actually did, calling game,
+01:15 is it went through all these numbers
+01:17 and when it got to the final one, the fifth attempt,
+01:21 it asserted answers true, so the win was set to true.
+01:25 And again, you can see in the call,
+01:29 an actual look that when validate guess returns true,
+01:33 which is on the previous test,
+01:35 there is an intermediate variable win set to true
+01:37 and it also sets the inner, or internal variable win,
+01:40 to true. And that's what we are asserting here.
+01:44 But what I'm also interested in
+01:45 is how the output looks of the program.
+01:48 So I can just again do capfd,
+01:56 read out err,
+01:57 and you can also just call this with zero indexing
+02:00 then you don't need the throw-away variable at all.
+02:04 And I have a bunch of expected states
+02:08 which I'm going to copy in.
+02:09 Let's actually assimilate this program.
+02:11 So I have these steps I'm just going to
+02:14 hard code the answer for a minute, 6.
+02:19 So these are the steps.
+02:22 So what the test is doing is pretty pretty cool.
+02:24 So I'm simulating 4, 22, which is not in range.
+02:30 9, 4, 6. So here you see the typical program,
+02:37 and that's what we are asserting here
+02:39 with these expected values.
+02:41 So 4 is too low, number not in range.
+02:43 9 is too high, already guessed.
+02:45 6 is correct.
+02:46 Plus an additional statement of it took you three guesses.
+02:50 So let's reset this.
+02:51 Let's clean the output from capfd a little,
+02:54 with a list comprehension.
+02:56 For line in out split by new line.
+03:02 Only take lines with one or more characters.
+03:05 So ignore blank lines basically.
+03:11 And give me the strip lines. So I'm stripping off new lines.
+03:18 Alright. And then we can just match it line by line.
+03:22 I can use a zip to look over two sequences.
+03:25 So you have line and expected in zip output and expected.
+03:33 So this will look over expected
+03:35 and look over output in parallel.
+03:37 So the first value of output
+03:39 would match the first value in expected and etc.
+03:46 Alright. Look at that. What's my coverage?
+03:52 94 percent, very nice.
+03:54 So they're only a couple lines missing: 83, 87, 88
+04:00 And 87 I'm okay with because this is just a calling code
+04:04 if this is called as a script, which we've done before,
+04:07 if I call it like this.
+04:10 And line 83. Let's see if we can get
+04:13 to this scenario as well.
+04:15 So this is a lose scenario, where we tried it 5 times
+04:18 and still did not assert the answer.
+04:21 So let's set up a filled scenario.
+04:25 Test, game, lose.
+04:29 That's going to follow the same signature as above.
+04:35 But I need more stamps.
+04:38 So let's do a none, which should not count right away.
+04:41 5, 9, 14, 11, 12, doesn't really matter
+04:46 because what I need to do now
+04:47 is to give it an answer that's just totally different.
+04:50 So let's make a game.
+04:53 And the game answer is 13. So it's not in all my guesses.
+04:59 But this also test that none doesn't count
+05:03 towards my guesses. So I can actually do 6 inputs
+05:07 and this would be the fifth guess.
+05:09 So I'm actually getting here in the first place.
+05:13 Play the game.
+05:16 I won't win this game.
+05:23 And it should pass, right,
+05:26 but the coverage should still be the same
+05:29 because I'm not hitting that line yet.
+05:31 I do. Yeah, I did.
+05:32 So just to recap, this was line 83,
+05:36 which corresponds to this line.
+05:38 And what happened here, I played,
+05:40 actually what I forgot is that this plays the whole game.
+05:43 When I launch game, it goes through all these outputs.
+05:46 And having guessed 5 times,
+05:48 and not asserting this answer, I did get to the L's block.
+05:52 I can actually show that. If I turn on non-capture mode.
+05:57 See? It just prints the whole thing.
+05:59 5's too low, 9 is too low, then I guessed 5 times.
+06:02 Answer is 13. So I made it to this actual print statement.
+06:06 And that was the final thing
+06:08 to actually increase the coverage.
+06:11 If you take main out, we have a 100% coverage
+06:14 of our tests. You still need to have a critical eye
+06:18 to your code and your tests
+06:20 because one thing is to test it,
+06:21 but, for example, I can get a 100%
+06:24 on this earlier validation of the guesses,
+06:27 sorry, this one,
+06:29 but here I made sure that I'm going
+06:31 into all the different kind of value errors.
+06:33 Actually let's do an experiment.
+06:35 If I'm not doing the not-a-number test,
+06:38 would my coverage go down?
+06:44 Wow, look at that, how cool.
+06:46 So I took a test out
+06:47 and now it's complaining that 35 and 36 are missing.
+06:50 And 35 36 is they should be a number,
+06:54 and that's the thing we just deleted.
+06:56 So I had a string here,
+06:58 and that not-a-number should raise an exception.
+07:01 And coverage spotted that. So that's very cool,
+07:03 that you can just pinpoint exactly which code
+07:06 is not being tested versus which code it is.
+07:08 But again, you still need to have a critical eye
+07:10 of what you're testing.
+07:11 Because one thing is to have all your lines, some were called,
+07:14 but the other thing is how you call them.
+07:16 What are you testing? Are you testing all the edge cases?
+07:19 So testing is an art in itself.

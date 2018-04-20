@@ -1,0 +1,75 @@
+00:00 We've seen that, calling this API, may raise errors.
+00:04 And notice the WiFi being off,
+00:06 pretty much anything we search for
+00:08 is going to result in an error.
+00:10 So, we're going to turn the WiFi back on.
+00:12 But before we do, let's convert this full on crash
+00:14 to something we can catch, maybe log,
+00:16 send a message to the user.
+00:17 Or we could try again, who knows?
+00:19 Here's how error handling in Python works.
+00:23 What we're going to do is,
+00:25 there's a couple options.
+00:26 We could treat this as a separate section.
+00:29 Let's say, this part that actually interacts
+00:31 with the data does the request.
+00:33 We're going to treat this as a block
+00:34 that should either work,
+00:36 or not work here.
+00:37 So, we can come up here and type the word try:
+00:41 And indent that into the block.
+00:43 Then if something might go wrong,
+00:44 we'll say, except:
+00:45 And I'll say, print
+00:47 Oh, that didn't work.
+00:48 And we'll just print that out.
+00:50 Yeah?
+00:51 Now Python says this is a little aggressive,
+00:54 it's too broad, but, that's okay.
+00:56 This is going to work for now,
+00:57 and then we'll refine this a little bit.
+01:00 So now if I run it,
+01:02 oh that didn't work.
+01:03 It's a big bad crash, um, we just say,
+01:05 "You know, that didn't work."
+01:06 We could've logged it.
+01:07 We could actually loop around and try again.
+01:09 All sorts of things.
+01:10 But at least we're giving proper feedback
+01:12 to system here.
+01:15 Let's turn this back on.
+01:18 WiFi's back.
+01:19 Let's try again.
+01:20 Let's search for capital again.
+01:22 Boom, it's working.
+01:24 Here's how the flow goes.
+01:25 We're going to run every function here.
+01:28 And if it succeeds, it's just going to run
+01:31 from here to there and then skip
+01:33 over this except block.
+01:34 But if at any step something goes wrong, like,
+01:36 suppose, say right here, this title doesn't exist,
+01:39 and it's going to be an error
+01:40 the first time through or something.
+01:41 It's going to immediately stop what it's doing
+01:44 and jump down here.
+01:45 If this throws an error,
+01:46 we're not even going to run this prank code.
+01:48 We're just going to jump straight from here
+01:49 to there to deal with it.
+01:51 So, we can try some stuff, didn't find anything.
+01:54 Eventually, we'll run into these random errors.
+01:57 That one didn't work. So, this is great, but what didn't work?
+02:01 Wouldn't it be nice to know what is going on?
+02:04 It turns out there's three or four categories of errors.
+02:07 One of which is the network is down.
+02:09 But there's actually others.
+02:10 So, we're going to adjust this
+02:13 to handle these particular errors.
+02:15 So, here's how we can stop the errors
+02:17 from crashing our program.
+02:19 But let's see how we can actually deal with the errors
+02:21 in a more fine grained way.
+02:23 One message for say, network errors.
+02:25 Another message for say,
+02:27 if you didn't input any keyword to search for.

@@ -1,0 +1,29 @@
+0:01 Tuples are a lightweight, immutable data structure in Python 
+0:04 that's kind of like a list but that can't be changed once you create them. 
+0:07 And you'll see many very cool techniques that make Python readable 
+0:11 and easy to use are actually clever applications of tuples. 
+0:16 On the first line here, we are defining a tuple m, 
+0:19 the way you define a tuple is you list out the values and you separate them by commas.
+0:23 When you look at it, it appears like the parenthesis are part of the definition, 
+0:27 and when you print tuples you'll see that the parenthesis do appear 
+0:31 but it's not actually the parenthesis that create them, it's the commas. 
+0:35 We want to get the value out over here we want to get the temperature, 
+0:37 which is the first value, we would say m[0], so zero-based index into them. 
+0:41 If we want the last value, the fourth one, 
+0:44 we would say m[3], that's the quality of the measurements.
+0:47 Notice below we are redefining m, this time without the parentheses, 
+0:50 just the commas and we print it out and we get exactly the same thing again, 
+0:54 so like I said, it's the commas that define the tuple not the parentheses, 
+0:58 there is a few edge cases where you will actually need to put the parentheses 
+1:01 but for the most part, commas. 
+1:04 Finally, tuples can be unpacked, 
+1:07 or assigned to a group of variables that contain the individual values.
+1:11 So down here you can see we have a "t" for temperature, 
+1:15 "la" for latitude "lo" for longitude, and "q" for quality, 
+1:19 and those are the four measurements in our tuple, 
+1:22 we want to assign those and instead of doing like we did above 
+1:24 where you index each item out and assign them individually, 
+1:27 we can do this all in one shot, so here we can say variable, 
+1:32 four variables separated by commas equals the tuple, 
+1:34 and that reverses the assignment so you can see "t" has the right value of 22, 
+1:39 latitude 44, longitude 19 and the quality is strong. 

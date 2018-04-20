@@ -1,0 +1,41 @@
+00:00 Let's review what we've learned so far.
+00:02 First, we did some setup.
+00:06 We had to create a virtual environment
+00:08 and pip install pygithub.
+00:11 Then, we looked at how you can create a Github object
+00:14 to interface with the API.
+00:19 Use the get_user method to get info off our PyBites user
+00:24 and we've seen that you can use help
+00:27 to inspect that object
+00:29 to see all the methods and attributes available.
+00:34 The same with there.
+00:37 And even more interesting, you can use pdb
+00:39 to live inspect your code as it is running.
+00:42 That was very useful for me working with this module.
+00:45 Then we wrote a script
+00:46 to get the most popular repos of PyBites.
+00:51 We use the get_repos method of the API
+00:53 and saw how you can use lambda to sort on an attribute,
+00:57 in this case, stars, of the namedtuple
+01:00 to get the most popular repo at the top.
+01:05 Which lead to this output
+01:06 and the Github API offers a ton of data.
+01:09 And lastly, we did a post request
+01:11 to the API by creating a gist.
+01:15 We created an access token and we saw how you can load it
+01:18 into your script via the os.environ method.
+01:23 We made a Github object with the token
+01:26 and saw that the rate limiting increased.
+01:29 So you can make more calls to the API
+01:30 when you're authenticated.
+01:33 Then we used to create_gist method
+01:36 to get all of the input file content
+01:38 to post code to the Github API.
+01:40 So we had some code, which was actually a script we wrote,
+01:44 and we used the method saying public True, script name,
+01:48 code, wrapped into the input file content method,
+01:52 and a description.
+01:53 Look at that.
+01:54 That created a gist on Github.
+01:58 And now it's your turn.
+01:59 Keep calm and code in Python.

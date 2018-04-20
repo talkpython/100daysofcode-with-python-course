@@ -1,0 +1,54 @@
+00:00 One thing that the Zen is saying is explicit is
+00:02 better than implicit and I want to show you
+00:05 that concept with a couple of examples here.
+00:08 For example, if you do a from module import *,
+00:10 it imports everything in your namespace if this would
+00:14 import full or bar and you define such a variable or
+00:18 function that will override it
+00:19 and that leads to very obscure box.
+00:22 So don't do import *.
+00:24 Make it explicit what you're importing.
+00:26 So from module import full, bar.
+00:29 Another coding horror is something like
+00:32 try and except pass.
+00:36 Now this is like the black hole or monster that
+00:39 absorbs all possible errors, muting them away
+00:42 and you won't see anything in return.
+00:45 So whatever happens, even if I were to interrupt
+00:48 the program with a control C which would raise
+00:51 the keyboard interrupt exception,
+00:53 that will be silenced as well so I cannot even
+00:56 kill my program basically.
+00:58 So don't do this.
+00:59 No bare exceptions, make it explicit.
+01:02 So a little bit better will be for example,
+01:13 at least I get some information,
+01:16 or let's divide it by 0, I'm still shouting
+01:19 and I get another error.
+01:20 And you see these operations lead to different exceptions
+01:24 so the best way to do it is
+01:26 to explicitly name the exceptions.
+01:32 Again, try to divide number one by number two
+01:38 and let's go through the different exceptions we might get.
+01:44 Here for example, if I get a ZeroDivision error,
+01:46 I just return 0.
+01:47 That's my handling of the exception.
+01:49 If I get a type error,
+01:54 and here I just print a message but I don't
+01:56 really have a way to allow this
+01:59 and so I just reraise the exception.
+02:01 And if something else goes wrong you still can instead of
+02:04 doing accept pass or accept print something you can at least
+02:08 say accept exception as variable and browse that variable.
+02:12 And you can send this to a log file for example.
+02:14 To have at least a little bit more information
+02:16 when you're debugging the problem.
+02:18 So now it's from the cell and call it with a string.
+02:31 And here you see that it entered the type error
+02:33 and I get the message related to type error
+02:36 and it reraised the exception and if I divide by 0,
+02:42 here we don't have to crash anymore because I explicitly
+02:46 handled ZeroDivision error.
+02:47 Printed the message and return 0.
+02:49 Great, and that concludes number 9.
+02:52 Explicit is better than implicit.

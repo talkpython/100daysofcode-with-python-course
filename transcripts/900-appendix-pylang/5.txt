@@ -1,0 +1,23 @@
+ 0:02 Sometimes within a control structure like if or while loops, things like that, 
+0:05 we need to have complex tests 
+0:07 tests against more than one variable and negations, things like that. 
+0:10 So, here is a pretty comprehensive example of testing for both multiple values 
+0:15 as well as taking over the precedence by using parenthesis and negation using not. 
+0:20 many languages use symbols for this combination, 
+0:23 like the C-based languages use double ampersand for and,
+0:27 and exclamation mark for not, those kinds of things. 
+0:30 Python is more verbose and uses the English words. 
+0:33 So here we are going to test for two conditions that both have to be True, 
+0:37 it's not the case that x is truthy so x has to be falsie, from the previous discussions, 
+0:43 so an empty sequence, None, zero, are False, something like that, 
+0:47 and the combination of one of two things- z is not equal to two or y itself is falsie. 
+0:53 So, using this as an example, 
+0:55 you should be able to come up with pretty comprehensive conditional statements. 
+0:59 Now, one final note is Python is a short circuiting conditional evaluation language, 
+1:04 for example, if x was True, the stuff to the right and the end would not be evaluated. 
+1:11 You might wonder why that matters, a lot of times it doesn't, in this case, nothing really would happen. 
+1:15 Sometimes you want to work with like sub values of an object, 
+1:19 so you might test that x is not None, 
+1:22 so you would say "if x and x.is_registered" or something like that. 
+1:26 Whereas if you just said x.is_registered, x was None, 
+1:29 your app of course would crash. 

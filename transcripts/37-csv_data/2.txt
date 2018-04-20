@@ -1,0 +1,54 @@
+00:00 Let's talk about our data sets real quickly.
+00:02 You're probably familiar with CSV data,
+00:04 but just in case you're not, it looks like this.
+00:07 It's a plain text file and there's a set of headers
+00:11 across the top that tell you what each column is.
+00:13 So here we can see we've got data,
+00:15 an actual mean temperature, an actual minimum temperature,
+00:18 and an actual maximum temperature.
+00:21 And then we have a bunch of columns
+00:22 that correspond to that data.
+00:25 Now I told you we're going to work with
+00:26 some interesting data sets and it's true,
+00:28 I found a good collection here for us to play with.
+00:32 Now you may be familiar with a place called FiveThirtyEight.
+00:36 It's like a data-driven journalistic news site
+00:41 where they gather up a bunch of data
+00:43 and they use it to write articles
+00:45 and do investigative journalism type things.
+00:48 And it turns out every article they have,
+00:51 the data that they use to derive those conclusions
+00:54 is available online on GitHub, so that's pretty awesome.
+01:00 So over at github.com/fivethirtyeight/data,
+01:03 that is where we're going to be working
+01:05 for the next three days.
+01:08 All right, so let's jump over to my web browser here
+01:10 and we'll just have a quick look through all the data.
+01:12 I told you there's a lot,
+01:13 look at the size of that scroll bar.
+01:14 There's a ton of options here.
+01:15 So let's skip down past all the folders
+01:17 and just go to this section.
+01:19 So here you can see all of the articles
+01:21 written by FiveThirtyEight and then
+01:23 the corresponding data that goes with it.
+01:28 So let's just grab one here, American Chess is Great Again,
+01:31 and if we come back, click on it and you can see
+01:32 here's the actual article that they wrote about,
+01:35 and you can see here's the graphs
+01:37 that they drew based on the data and so on.
+01:40 But here is the actual data, so you can come over here
+01:43 and it actually describes what it is and so on.
+01:47 If you click on it, you can see here's all the data
+01:50 that they were using to make these conclusions.
+01:53 So what we're going to do in this section of the course
+01:56 is we're going to take one set of CSV files
+01:59 and use that for our demos
+02:00 and ask and answer interesting questions.
+02:03 And then for the next three days afterwards,
+02:05 you'll be turned loose to build
+02:07 your own investigative journalism app.
+02:10 You'll choose one of these CSV files
+02:12 and come up with a set of questions,
+02:13 and it's going to be a ton of fun
+02:14 so I hope you're ready to get started on that.

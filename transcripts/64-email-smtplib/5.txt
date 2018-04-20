@@ -1,0 +1,151 @@
+00:00 Before we get started with the actual code,
+00:03 let's just understand a bit what MIME is.
+00:06 MIME is actually an acronym for
+00:09 Multipurpose Internet Mail Extensions.
+00:13 I'd rather say MIME than all of that.
+00:16 With MIME, it actually extends email functionality.
+00:21 You think about all the cool HTML stuff,
+00:24 and audio, video, images and so on
+00:27 that you can attach to emails, and all of that.
+00:30 That's all thanks to MIME.
+00:33 It's not plain text.
+00:35 It actually allows you to give your emails multiple parts
+00:41 such as header information, and all of those nice things.
+00:44 One thing you'll notice looking at the screen here
+00:46 is without email from the previous video,
+00:49 the SMTPlib sendmail, we don't have a subject.
+00:53 We don't really have much at all.
+00:55 There was nothing for BCC.
+00:58 There was nothing.
+01:00 That was the real basic, basic stuff.
+01:04 With MIME we get to go a bit further than that.
+01:07 Let's hop into the emailer-mime.py file you created,
+01:11 and let's get cracking.
+01:13 Now we're import smtplib as we did before.
+01:20 We'll keep that the same.
+01:22 Now we need to actually start importing the MIME modules.
+01:26 It's not too bad.
+01:29 Just roll with it here, alright?
+01:30 This seems a bit complex, but from email.MIME,
+01:37 this is all just the stuff in the module
+01:39 that we're taking out, okay?
+01:42 We're not going to import everything, just what we need.
+01:45 From email.mime.multipart, import MIMEMultipart.
+01:51 This is the module that's going to allow us to,
+01:55 I guess, section up our email.
+01:58 Build our email together, alright?
+02:01 You'll see what that means in a minute so just roll with it.
+02:04 from email.mime.text, import MIMEText.
+02:11 This is just to do with the text section.
+02:14 Again, you'll see how this all fits together in a minute.
+02:18 Alright, so we'll stick with what we know.
+02:20 We get a from_address.
+02:22 pybitesblog@gmail.com, okay?
+02:26 Now we want a to_address.
+02:29 Now one thing I would like you to consider here
+02:33 is the BCC, the essence of BCC, alright?
+02:38 That was a carbon copy, blind carbon copy.
+02:42 That means no one can see who's been BCC'd on an email.
+02:47 Now with that, you'll notice that MIME actually fails us.
+02:51 I'm going to touch on that in the next video,
+02:54 so don't panic.
+02:55 Let's just go with this, okay?
+02:58 To address, let's again stick with what we know.
+03:04 pybytesblog@gmail.com.
+03:07 Alright, now what we want to do is we want to take
+03:13 the ability to build our email using multipart.
+03:19 We're going to take that function and we're going to assign it
+03:23 to the message object, alright?
+03:25 We're going to make that our message object.
+03:29 Why do we do that?
+03:30 Just because it's easier to use message
+03:32 instead of my multipart.
+03:34 Again, you will see what I mean.
+03:37 Alright, so what are the different sections
+03:38 that we want to build?
+03:39 Well we want to build our header.
+03:41 To build our header, this is the format.
+03:44 We want to have a from field, so message from...
+03:51 Is what?
+03:52 Well it's going to be our from_address, that's it.
+03:57 What we've done is we've actually built
+03:58 this little header tag that will actually extend
+04:01 the functionality of our email.
+04:03 Our email will look nicer and will have that as a valid id
+04:08 for the from field.
+04:10 Next, we want to have to, so message to...
+04:16 We're going to use our to address.
+04:19 Nice and easy so far, right?
+04:22 Now for the fun part.
+04:24 Now we get to specify a subject.
+04:27 Message subject equals, well how about we take
+04:31 that first line from the last one?
+04:33 New releases and sales on steam, okay?
+04:40 You can call that obviously whatever you want
+04:41 for this practice round.
+04:43 Now back to this, we'll build our body.
+04:47 I'm just going to take the exact same text
+04:51 from our previous script, dump it in there, right?
+04:57 Now we want to build it all together.
+05:00 We go message.attach, and now we're going to attach,
+05:06 if you just paid attention for a second there
+05:09 you would've seen that we just created body.
+05:11 We didn't actually assign it to message.
+05:15 This isn't included in our message.
+05:18 That's what this attach thing is doing.
+05:19 It's attaching our bulk, our body to the message.
+05:24 Message.attach, and this is where MIMEText comes in.
+05:30 Now we're taking our body.
+05:32 Again, that's this object here, this variable.
+05:35 What kind of an email, what kind of a body
+05:39 is this going to be?
+05:40 Well it's just going to be plain text, not okay text.
+05:44 Yes, to answer your question, you can put HTML there.
+05:48 Your body can be filled with HTML tags.
+05:52 You can literally write HTML between these three here,
+05:56 and it will form your HTML email.
+05:59 That's just a bit beyond the scope of this
+06:01 as it's a bit too much.
+06:02 Alright, now we move into our normal SMTP stuff,
+06:07 so a bit of magic.
+06:09 We're just going to make all of that appear here,
+06:12 and we're back.
+06:13 It's exactly the same smtplib stuff
+06:18 that we saw in the previous video.
+06:20 Just chuck it in there.
+06:21 You can feel free to edit your existing script,
+06:23 whatever you want to do.
+06:25 Now when we run sendmail, if you remember
+06:29 we threw the body in there, okay?
+06:32 We had the from_address, the to_address, and the body.
+06:36 In this case, body has already been thrown into our message,
+06:41 so how do we combine that?
+06:42 How do we get this working?
+06:43 Well sendmail needs string, it needs text.
+06:49 It doesn't like an object like the message object
+06:54 being thrown in there, okay?
+06:56 What we need to do is get our message as a string.
+07:03 message.as_string, and we'll assign that to text.
+07:10 Again, this here text, you can make that whatever you want.
+07:13 Let's give ourselves some white space.
+07:15 Delete that in a minute.
+07:17 Alright, and then we get back down to smtpserver.sendmail,
+07:22 and we're going to go from_address, oops.
+07:26 We're going to go to_address, and we're going to go text.
+07:32 Then as usual, SMTPserver.quit, and we're done, okay?
+07:40 Now let's just quickly throw in this
+07:43 print email sent successfully.
+07:46 Save that.
+07:48 Now when you run your script,
+07:50 you should get an almost identical email.
+07:54 The body should be exactly the same, because again,
+07:57 we didn't do anything differently here.
+07:59 The thing that's cool is that you should have a subject,
+08:02 and some more header information.
+08:05 Let's have a look at that.
+08:08 Alright, so there's the email.
+08:10 New releases and sales on steam.
+08:13 And now you can see the same information there.
+08:16 When we drop that down we can see a to_address,
+08:20 and which is my email ,
+08:22 and yeah, that's it.

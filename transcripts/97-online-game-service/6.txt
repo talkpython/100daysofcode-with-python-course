@@ -1,0 +1,40 @@
+00:00 All right, it's time to move some existing code and data
+00:04 over here, just from our previous persistent
+00:06 Rock Paper Scissors.
+00:08 Remember, one of the things that we used in the 15-way
+00:10 Rock Paper Scissors was we needed this CSV file to
+00:14 basically determine who wins and who loses
+00:18 for any combination of those 15-way battles.
+00:22 Let's paste that over here.
+00:24 We're going to have our CSV file that tells us that,
+00:27 and we'll also have this DB folder thing,
+00:29 we already saw that.
+00:30 This just tells us easy way to get back to this location
+00:33 base and generate either read or writable files here.
+00:36 We're going to put our SQLAlchemy data in there as well.
+00:40 That has to do with reading the data in the games.
+00:43 The other thing we had was lots of stuff around SQLAlchemy
+00:45 defining the models and saving and querying who played
+00:50 a game, does the player exist, all of that stuff.
+00:52 We're just going to take that and drop it in here.
+00:55 We're not really going to change that hardly at all.
+00:59 But I'm going to make this folder called game_logic,
+01:02 and you can see we have our SQLAlchemy declarative base.
+01:05 We have our move.
+01:06 This literally is the same thing as before.
+01:08 It's not changed at all.
+01:09 We have our game decider, our GameService.
+01:12 These are all basically the same.
+01:14 I had to add just a couple of methods to GameService,
+01:16 but they're super trivial, like find a roll by id,
+01:18 and things like that.
+01:20 Nothing important or new here,
+01:24 other than this only change really is that this game,
+01:27 it used to have all the loop logic and all that stuff,
+01:31 and now we need to really separate that.
+01:33 That's going to go down into the client,
+01:35 but there's still a little bit of work that our game class
+01:37 is going to do.
+01:38 We'll have this over here.
+01:41 There we've moved in the code from our game previously.
+01:44 Now our job is to integrate it into our web application.

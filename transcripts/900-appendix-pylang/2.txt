@@ -1,0 +1,15 @@
+ 0:02 Variables are the heart of all programming languages. 
+0:05 And variables in Python are no nonsense. 
+0:08 Let's look at the top one, I am declaring a name variable 
+0:11 and assigning it the value of Michael, 
+0:13 and age variable and assigning it the variable of 42. 
+0:16 Some languages you have to put type descriptors in the front 
+0:19 like you might say string name, integer age, 
+0:22 you might put semicolons at the end, things like that. 
+0:25 None of that happens in Python, it's about as simple as it possibly can be. 
+0:28 So we can declare them and assign them to constant values, 
+0:32 we can increment their value in this case of the birthday 
+0:35 and we can assign them to complex values like the hobby, 
+0:39 which is really the list or array of strings, the hobbies that we have. 
+0:42 So we assign these on creation, and we can even take the return values of functions 
+0:47 and assign them to these variables, like so. 

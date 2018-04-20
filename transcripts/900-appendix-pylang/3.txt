@@ -1,0 +1,29 @@
+ 0:03 Any interesting program has conditional tests 
+0:06 and various branching control structures in it. 
+0:08 And  many of these control structures you have to pass some kind of test, 
+0:12 a boolean, a True or False value. 
+0:15 Go down this path, or don't. Continue looping through this loop or stop. 
+0:18 Let's talk for a moment about this general idea of True and False in Python; 
+0:22 and I am referring to it as truthiness, because in Python 
+0:26 all objects are imbued with either a True value or a False value. 
+0:30 And the easiest way to understand this is to think of the list of things that are False, 
+0:34 they are clearly spelled out, it's right here- False, the keyword False, 
+0:37 the boolean keyword False is false obviously.
+0:40 But things that might not be so obvious to that are False, 
+0:43 are as well, for example any empty sequence, 
+0:46 so an empty list, an empty dictionary, an empty set, empty strings. 
+0:50 All of these things are False, even though they point to a real life object. 
+0:55 We also have the zero values being False, 
+0:58 so integer zero and floating point zero - False.
+1:02 Finally, if you have some kind of pointer and it points to nothing, 
+1:05 so the keyword none, that is also considered to be False. 
+1:09 Now, there is this small addition where you can overwrite 
+1:12 certain methods in your custom types to define False, 
+1:15 but outside of this list, and those implementations, everything else is true. 
+1:19 So if it's not in this list and it's not a custom implementation of a magic method 
+1:23 that describes the truthiness of an object, you pretty much know the way it works. 
+1:27 Now, in Python, we often leverage this truthiness or falseness of objects, 
+1:32 so we might do an "if" test just on a list to see if it's empty, 
+1:37 rather than testing for the length of the list to be greater than zero, things like that. 
+1:41 So you'll run into this all the time 
+1:43 and it's really important to keep in mind what's True and what's False. 

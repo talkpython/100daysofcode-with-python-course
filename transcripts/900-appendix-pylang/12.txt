@@ -1,0 +1,40 @@
+ 0:01 Now that we saw there is over 88 thousand packages at pypi.org, 
+0:04 we can just grab and bring into our projects and add great functionality 
+0:08 HTTP processing, web services, web frameworks, database access, you name it, 
+0:14 the question becomes how do we get those form pypi into our system 
+0:19 or, any distributable package even if we actually just have a zip file of the contents, 
+0:25 and the answer is pip. Pip knows about the Python Package Index 
+0:29 and when we type "pip install" a package, here we are typing "pip install requests", 
+0:33 one of the most popular packages in Python, which is an HTTP client, 
+0:37 pip will go and look in a certain location on the Python Package Index. 
+0:42 And here you can see it found it, it downloaded version 2.9.1 and it unzipped it, 
+0:46 installed it in the right location, cleaned everything up, beautiful. 
+0:50 So, this is how we install something on the command line, 
+0:52 if you need to install it machine-wide, you will likely have to do 
+0:57 "sudo pip install requests" or alternatively on Windows, 
+1:00 you will have to running in a command line that is running as administrator. 
+1:04 Now, be aware, you really want to minimize doing this 
+1:07 because when you install one of these things it runs the setup.py file 
+1:10 that comes with the package that thing can have anything at once in it, 
+1:14 and it could do anything that that package want to do to your machine, really, 
+1:18 you are running as admin some sort of untrusted code, 
+1:22 so be aware and try to install it locally, 
+1:25 but if you've got to install it machine-wide, this is how you do it. 
+1:28 If you have Python 3.3 or earlier, you probably don't have pip. 
+1:32 Some of the new versions of Python 2 do have it, 
+1:34 but most of the versions of Python 2 also don't have pip, 
+1:38 so if you need to get pip, just follow this link and install it,
+1:41 then you carry on in exactly the same way. 
+1:43 All the newer versions, Python 3.4, and later 
+1:46 come with pip included, which is excellent. 
+1:49 If you are using PyCharm, PyCharm has a really great support for pip as well,
+1:53 here you can see under the preferences tab, 
+1:56 we found the project interpreter and you can see it's listing a bunch of packages, 
+1:59 a version and the latest version, some of them have little blue arrows, 
+2:03 indicating that we are using an older version rather than a newer version. 
+2:07 So we could actually upgrade it. 
+2:09 The little up arrow in the bottom left, once you select something 
+2:12 will let you upgrade it and the plus will pull up a listing like a little search box 
+2:15 that you can explore all those 88 thousand packages and more. 
+2:18 So if you are using PyCharm, there is a really nice way to see 
+2:22 what packages are installed in your active environment and manage them.

@@ -1,0 +1,15 @@
+00:00 Good day, this is Julian Sequeira
+00:02 and welcome to the course.
+00:03 We're going to open things up with playing with datetimes.
+00:07 Probably not the most interesting thing for most of us
+00:10 and if you're like me, you probably hate it
+00:13 because they can be very finicky.
+00:15 So, with datetimes I wanted to run us through
+00:19 some of the more basic concepts of it.
+00:21 Just go with it, there will be more advanced stuff coming up
+00:25 but for now we're going to stick with
+00:26 just the basics to get you through with datetimes
+00:29 specifically around datetimes.date
+00:33 and then datetimes.timedelta.
+00:36 So, we'll flick through into that,
+00:38 carry on, and let's get started.

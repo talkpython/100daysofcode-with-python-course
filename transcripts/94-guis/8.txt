@@ -1,0 +1,25 @@
+00:00 The next day is you're going to actually build your GUI.
+00:03 So the steps to make this happen are pretty straightforward.
+00:06 They're just right here.
+00:07 You're going to have a main method.
+00:08 You're going to put an @gooey directive decorator on it.
+00:12 Somewhere near the beginning we'll create a GooeyParser.
+00:15 You've seen how to add the arguments.
+00:17 At the end you call parser.parse_args.
+00:20 Get that back, that'll give you your data.
+00:23 You should have your UI running, right?
+00:25 Remember, the goal is going to be to look through
+00:28 the applications that you've built
+00:31 and find one that's kind of fire and forget.
+00:33 You give it some information
+00:34 and press go do that and it will.
+00:37 So find an application that you built,
+00:39 that you like along these lines
+00:41 and convert it to a UI version of that same application.
+00:45 Right, so through these steps here.
+00:47 Here's an example of one I had
+00:48 that was a sort of project creation thing
+00:51 for Pearman Web Apps and it would take Cookiecutter
+00:55 and the various types of templates
+00:56 and ask you the questions but it does it visually right here
+00:59 so you're going to end up with something like this in the end.

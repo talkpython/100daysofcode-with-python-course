@@ -1,0 +1,29 @@
+00:00 Third day, it's time to improve
+00:02 the performance of your application.
+00:03 You've chosen it.
+00:04 You've gone through and found out where it's slow.
+00:06 So what you're going to do is focus one by one
+00:08 on the five slow functions and try to make it faster.
+00:12 Look at it, try to understand where it's slow,
+00:14 and if you can change something
+00:16 about the way that it works, right,
+00:18 in our example we said, well,
+00:19 we're parsing the CSV and we're actually converting
+00:21 12 columns of data and actually we're only using four.
+00:24 Let's just throw away the other eight columns
+00:26 because we're never using them,
+00:28 and that conversion is entirely wasteful.
+00:31 We'll look for things like that.
+00:32 Go through each one of the five functions,
+00:34 change 'em one at a time,
+00:36 rerun the profiler compared against
+00:38 your times from the previous day,
+00:40 and if it gets better, keep that change.
+00:43 If it actually gets slower, forget it.
+00:44 Just leave it alone or try something different.
+00:46 All right, that's it.
+00:47 So now you should have an app that's faster.
+00:49 Hopefully, much faster than it was before
+00:52 and you now have this new skill
+00:54 with profiling to understand
+00:55 the performance of Python applications.

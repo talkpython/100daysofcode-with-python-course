@@ -1,0 +1,45 @@
+ 0:01 The primary way error handling is done in Python is exceptions.
+0:04 Exceptions interrupt the regular flow, execution of your methods and your code, 
+0:08 and unwind and stop executing a code until they find what's called an except clause, 
+0:13 that is the explicit error handling that you've written, 
+0:16 or if they never find one, your application just crashes. 
+0:20 That's not amazing, so let's talk about error handling. 
+0:22 Here we have three methods on the screen, method one, two and three, 
+0:25 and maybe there are potentially error-prone, something can go wrong, 
+0:29 maybe work with the file system, a web service, a database, 
+0:31 things that are not always well known or can't rely on them always working.
+0:36 It could even just be that someone's input incorrect data 
+0:39 and there is going to be a problem there as well. 
+0:41 So if we want to make sure that when we run these bits of code, 
+0:43 we can catch and handle those errors, 
+0:45 we have to put this into what's called a "try...except" block. 
+0:48 So we put a "try:", we indent the code, so it is part of the try block, 
+0:52 then we add the error handling the except block and it could just be except: 
+0:56 an empty catch-all, which is not really recommended. 
+1:00 In this case, we are going to catch a particular type of exception, 
+1:04 one of the most based types that we'll catch many of the errors 
+1:07 that we might not expect, so we'll just say "Exception as x". 
+1:10 We say as x then we can get a hold of the actual object that is the exception 
+1:14 and ask it what went wrong. So, look at the error message, 
+1:17 if this is a custom database error, maybe it has the record id that caused the problem, 
+1:22 or something like that, who knows. 
+1:24 It depends on the type of exception that you get. 
+1:26 So here is a general one, but we're only handling errors in a general way, 
+1:30 we can't handle say database exceptions differently than web service exceptions, 
+1:36 so we can have multiple except blocks with multiple exception types, 
+1:40 and Python will find the most specific one, 
+1:43 so if we want to make sure that we can catch when we have a connection error, 
+1:46 trying to talk to a web service or something on the network, and it won't connect, 
+1:51 we might want to handle that differently than say the users typed in something incorrect.
+1:56 So we would add another except clause with the more specific type. 
+2:00 The order of these except blocks is really important, the way it works, 
+2:03 is Python will try to run the code, if an exception comes up, it will just go through 
+2:07 and ask does this exception object derived from the first thing it finds, 
+2:11 and the next, and the next, and if the first one answers yes to,
+2:14 it will just stop and that's the error handling at run. 
+2:17 So if we switch these, almost everything including connection error derives from exception,
+2:22 so it would run the code, throw the exception and ask, 
+2:26 hey, does this exception derive from exception, 
+2:29 yes, boom handle the general error and it will never make it to the connection error 
+2:33 so it has to go from most specific error handling to least 
+2:36 or most general error handling.  

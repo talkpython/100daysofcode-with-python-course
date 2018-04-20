@@ -1,0 +1,47 @@
+00:00 As usual, I have a Jupyter notebook
+00:03 prepared for this lesson and first,
+00:05 let's actually head over to the terminal
+00:08 to install the external modules we're going to use.
+00:13 I'm going to create a directory.
+00:16 cd into it. I was explaining before I use
+00:20 a virtual venv with my Python path
+00:23 set to my Anaconda installation.
+00:25 I'm using Anaconda because it comes
+00:27 with all the data science libraries
+00:28 and Jupyter notebook and all that.
+00:30 If you're not using Anaconda, you can make
+00:33 a virtual environment just by using the standard
+00:36 module in Python, like this but I'm using this
+00:40 to make it all work with my environment.
+00:45 Right. Then I need to enable it.
+00:47 I have an as for that as well
+00:48 because I'm using virtual environments for anything
+00:51 because I always want to isolate my dependencies.
+00:54 So, now I'm in the virtual environment
+00:57 and you see a nice indication in my prompt.
+01:02 As expected there's nothing installed
+01:04 and it's exactly what we want because we want
+01:05 to have all of our stuff in this namespace.
+01:09 I'm going to pip install feedparser
+01:12 serve to parse our blog feed
+01:14 and plotly to do the graphical work.
+01:21 That's all now in our virtual environment,
+01:23 so, we can get started.
+01:26 So, I'm heading back to my notebook
+01:27 and let's import the modules we're going to use.
+01:34 Right, by the way, one thing I have
+01:36 the virtual environment here enabled
+01:38 that's probably not what happens by default for you.
+01:42 So, what I did to get the virtual environment
+01:46 inside my notebook, was to pip install ipykernel
+01:48 so then you run this self install script
+01:53 and the name should be your virtual environment.
+01:55 So, in my case, that's venv and after we started
+01:59 the notebook then I have an option here
+02:01 to select my virtual environment.
+02:03 So, I put the link here in notebook
+02:05 if you want to work from a similar set up
+02:07 as I have, you should go through this link.
+02:10 That's it for set up, in the next video,
+02:12 we're going to use feeds bars
+02:14 to pull data from our PyBites blog.

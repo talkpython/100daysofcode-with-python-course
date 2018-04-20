@@ -1,0 +1,39 @@
+00:00 Alright, we have the stubs for our APIs in place.
+00:04 And we're going to start focusing on
+00:06 some of these that are easy.
+00:07 For example, this all_rolls, this one is really easy.
+00:11 top_scores, somewhat easy.
+00:13 play_round, we're going to save that one for later.
+00:15 But I've already sort of configured
+00:17 Postman to deal with this.
+00:19 So Postman is cool because you can create these groups,
+00:21 like here I have Online RPS,
+00:24 and here are all the operations,
+00:26 and you can see GET, PUT, POST, POST, GET, GET, GET.
+00:28 So if I go get_user, we have api/game/users/mark,
+00:32 and you can see down here would find user Mark.
+00:36 Come over here and say create_user,
+00:37 the body's already set,
+00:38 here's the user that didn't exist yet.
+00:42 But if we do this,
+00:45 response is would create user 200 okay.
+00:49 So what we're going to do is we're going to
+00:50 go through and work on these.
+00:51 Let's start with all_rolls.
+00:53 Right now we're getting would create all_rolls.
+00:55 I think we're going to start knocking out
+00:57 some of these simple ones, game_status, all_rolls,
+01:00 new game, create user, these types of things.
+01:02 And then the play_round and the top_scores
+01:04 those are a little bit trickier.
+01:06 But you'll see that we can configure these in Postman
+01:10 like for example, this play_round is going to pass the body,
+01:14 here's the game id, here's the user, here's the roll,
+01:17 alright, so we're going to want to make sure
+01:19 we have a user, we could create a user over here,
+01:23 want to make sure we have, Michael for example,
+01:25 so that other one would work.
+01:27 Things like that. So we're going to use Postman to exercise
+01:30 and get our API just right,
+01:32 and then, then we're going to go write
+01:34 the client side code that consumes it.

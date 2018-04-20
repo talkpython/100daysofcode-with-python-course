@@ -1,0 +1,73 @@
+00:00 Now, the first thing we need to do
+00:01 to use SQLAlchemy is to create some classes
+00:04 that map to our database.
+00:06 Now, these are classes,
+00:07 theoretically, we could read and write them to the database
+00:10 but there's a specific way in SQLAlchemy.
+00:12 So, there's basically two steps that we have to follow.
+00:15 The first one is to declare, create this base class
+00:18 that SQLAlchemy knows about.
+00:20 So, we're going to declare a specific base class
+00:23 that SQLAlchemy knows about
+00:25 and then everything that derives from it
+00:26 is automatically going to be related to a database table.
+00:31 And SQLAlchemy, by way of this derived aspects,
+00:35 will learn about those tables and those classes.
+00:38 So, the first thing that we're going to do is
+00:40 going to look really, really lightweight.
+00:42 It's going to look like, why did you
+00:43 create a separate file for this,
+00:45 but if you're going to do this nice partitioning
+00:47 or have, one move class in one file,
+00:49 one player class in it's own file,
+00:51 one role class in it's own file, and so on,
+00:53 it makes sense to go ahead and make one more,
+00:55 albeit, super small class,
+00:57 we're going to call this model base, like so.
+01:00 And we're going to start just by importing SQLAlchemy.
+01:04 Now, this is not going to go so well
+01:05 because we don't have SQLAlchemy installed.
+01:07 So, let's go over here
+01:09 and actually make a requirements.txt file,
+01:13 and put sqlalchemy.
+01:15 Now, this is not set up.
+01:16 Notice over here we have our virtual environment
+01:18 if we do a pip list, there's only those few things here.
+01:22 So, let's do a pip install --upgrade setuptools
+01:26 don't know why this is so old
+01:27 but it's like 10 versions out of date.
+01:29 So, let's get it out of the way.
+01:32 Now, we want, go ahead and let PyCharm install SQLAlchemy,
+01:35 and it's all good.
+01:37 So, go back to our model base here, this is good.
+01:39 And what we actually want, is we're going to say
+01:41 from sqlalchemy.ext.declarative
+01:46 we're going to import declarative_base.
+01:48 Now, this is a function, which when called
+01:51 will create a class not an object, a class.
+01:54 It's a little bit funky but here's how it works.
+01:56 Instead of say it defining a class like this,
+02:01 and you put some kind of base class and details,
+02:04 we're going to let this function do it.
+02:06 And we do it like this.
+02:08 That's all there's to it, this whole file is now finished.
+02:11 But anything that needs to become an entity
+02:14 that's stored in our database, it derives from this.
+02:17 So, now we can come over here and say,
+02:18 hey role, you want to map to a database table?
+02:21 We just import this,
+02:24 like so,
+02:25 and we're good.
+02:28 Do the same for player.
+02:32 And the move.
+02:35 Now, PyCharm can go a little crazy here
+02:37 and say oh, you need to add this to your requirements.
+02:39 No, no, I don't.
+02:41 This thing right here, that is their requirements.
+02:44 You can come over here and put this little statement
+02:46 to say, you know,
+02:47 this is not actually an external thing, calm down.
+02:50 Okay, so we're halfway there.
+02:53 Step one is to derive from this model base,
+02:55 on all the things we're going to map to the database.
+02:58 Step two is going to be to define the columns.

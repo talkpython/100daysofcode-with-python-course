@@ -1,0 +1,166 @@
+00:00 Now SQLAlchemy is powerful because it can connect
+00:02 to any type of database that is relational.
+00:06 Oracle, SQLServer, SQLite, MySQL,
+00:09 you name it.
+00:10 But that means we have to tell SQLAlchemy
+00:13 where the database is, what is the connection string,
+00:16 how do we get to it?
+00:18 So we're going to to real quick things to get started here.
+00:20 We're going to create a quick directory.
+00:24 In here, we're going to do a little trick
+00:25 just to find this folder super, super easy.
+00:27 Call this db folder.
+00:30 We'll define one function, get_db_path.
+00:34 And it's going to take a base file name
+00:36 and this'll be like rps.bin or something like that.
+00:39 And from that, we need the full path.
+00:41 So we're going to use a cool little trick here, using os.
+00:44 And we'll say base folder is os.path.dirname
+00:49 of this particular file.
+00:51 So what folder is this file located in?
+00:55 It's in here, and we want our database to also be created
+00:58 in that same folder.
+00:59 So we're just going to say return os.path.join,
+01:02 base folder, base file.
+01:04 So not a whole lot going on here,
+01:06 but this is going to make it nice and easy for us to create,
+01:08 we're create just a SQLite file that's going to live here.
+01:13 And we'll create a data access bit here.
+01:16 And let's add a new part here, say,
+01:19 create this to be a session factory.
+01:21 These are not the models that we're modeling the data on,
+01:24 these are the sort of connection,
+01:26 low level infrastructure type things.
+01:28 So we're going to create the session factory thing
+01:30 and its job is going to be
+01:32 to create what's called a unit of work.
+01:33 And SQLAlchemy, the way it works,
+01:35 is you create this session,
+01:36 you do queries, inserts, updates, deletes.
+01:39 And you can either commit those changes
+01:41 or throw them away.
+01:42 So the job of this is to set up the connection
+01:45 and create these sessions
+01:46 that we can do the rest of our work with.
+01:49 So we're going to need a few things here.
+01:50 We're going to need the ORM,
+01:52 this is the object relational mapper,
+01:53 this is really interesting.
+01:55 We're going to need the db folder.
+01:57 We're going to need our model base,
+01:59 we'll work with that.
+02:00 Now there's one final thing that's a little bit weird
+02:03 but we're going to need it.
+02:04 Now at this stage in the program's life cycle,
+02:08 it may not have interacted with these files,
+02:11 the move, the player and the role.
+02:13 For what's about to happen,
+02:15 SQLAlchemy has to have seen and loaded into memory
+02:19 all of these things.
+02:20 And if that hasn't happened yet,
+02:22 we're going to miss some things.
+02:23 Like maybe one of the tables won't get created
+02:25 or something weird like that.
+02:26 So we can make sure that this is not a problem here
+02:29 by just importing everything we need.
+02:32 So move import, move player role.
+02:36 Whew, so that's a lot of imports that we're going to need
+02:38 but we are all ready.
+02:40 Now we're going to create a thing called a factory.
+02:43 And it's going to be nothing in the beginning.
+02:45 So we need to do is write a function
+02:46 that will get called one time and initialize everything.
+02:50 So we'll say def.
+02:52 It's going to work with this factory
+02:53 so we'll say global factory so it can change this
+02:56 from outside without,
+02:58 and overwrite it with a local variable bit.
+03:00 We want to change this, one and only factory,
+03:02 there should be one of these in the entire process
+03:04 per database, not a bunch.
+03:06 So let's use our little db folder thing to get the path,
+03:11 and let's call this rock_paper_scissors.bin.
+03:15 Extension doesn't matter,
+03:16 just something I like to stick with,
+03:18 or actually let's change it to sqlite, how's that?
+03:21 Even more clear what it's supposed to be.
+03:22 And we can create our connections string,
+03:24 this you saw already,
+03:25 is going to be sqlite:///.
+03:29 So this tells SQLAlchemy what kind of database
+03:32 it's talking to.
+03:33 Is it SQLServer, is it SQLite, is it Oracle?
+03:35 And then for SQLite the connection string
+03:37 is just the file name.
+03:38 So this is nice and straightforward.
+03:40 The next thing we're going to do,
+03:41 is we need what's called an engine.
+03:43 This manages all the connections and the connection pooling
+03:45 and stuff like that.
+03:46 And just like the factory, there's one of these
+03:48 per database connection.
+03:52 So we say create_engine,
+03:54 and then all we have to do is give it the connection string.
+03:57 And you can also, if you wanted to debug this,
+03:59 you could say echo equals True.
+04:01 I'm going to say false, so we can see what's going on,
+04:03 but if you switch this to true,
+04:04 you'll see every command issued to the database
+04:07 by SQLAlchemy in SQL form.
+04:10 So that's really nice.
+04:11 Now the next thing we need to do
+04:13 is actually create the structure.
+04:15 If the database doesn't exist,
+04:16 like right now, there's no database file here,
+04:18 we would like to have SQLAlchemy get it up and running
+04:21 and get everything connected.
+04:22 So we can say model_base.metadata.create_all,
+04:27 and we'll have to give it the engine.
+04:29 So this is going to run
+04:30 and actually look at all of these classes up here,
+04:32 and it's going to create the related tables
+04:35 that we told it about.
+04:36 And finally, after all of that,
+04:37 we're ready to create our factory.
+04:39 So we'll say sqlalchemy.orm.sessionmaker.
+04:45 And the session needs to talk to the database.
+04:46 So the way that happens is we bind the engine
+04:49 to the session factory, therefore all created sessions
+04:53 know how to get back to the database.
+04:54 Whew, okay, and that is that.
+04:57 The other thing we're going to need to do,
+04:58 just from making this work a little nicer,
+05:01 is we want to be able to safely create these sessions.
+05:04 We could directly work with that but it's problematic.
+05:07 What if we forget to call this,
+05:08 how do we check that, and so on.
+05:09 So let's do a little create_session function here.
+05:12 Instead of forcing other people to call that
+05:15 we can just check, do we need this to be called.
+05:17 So we'll say global, we'll say if factory is none,
+05:22 like it hasn't been created yet,
+05:23 then we'll call global in it.
+05:26 Otherwise, this is super easy.
+05:27 We'll just say factory, and again, you call it,
+05:30 it's a session factory, when you call it,
+05:32 it creates a session.
+05:34 Okay so, that's all we got to do.
+05:35 The last thing I would like to do here
+05:37 well, maybe two things.
+05:38 One is, PyCharm thinks we're not using these,
+05:40 but they're important that they're here,
+05:43 so let's go over here and say suppress that.
+05:45 That's good.
+05:47 Great, okay so no more complaints up there,
+05:49 everybody's happy.
+05:50 The other thing to do, is when we import the session factory
+05:54 and hit dot, we'll see factory, we'll see create_session,
+05:57 and global in that, what I'd kind of like to do
+05:59 is make this not accessible from the outside
+06:02 so we can do that by refactoring it to a double underscore
+06:06 and then it'll be hidden by Python from the outside.
+06:09 That's kind of a private variable for this module.
+06:12 Our database is all configured, our models are built,
+06:15 now all we have left to do
+06:17 is just use this database access layer
+06:19 to actually create some history in our game.

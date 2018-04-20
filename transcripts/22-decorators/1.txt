@@ -1,0 +1,18 @@
+00:00 Welcome back to the 100 days of Python.
+00:02 Today we look at an important concept which are decorators.
+00:05 It might be daunting at first,
+00:07 but they're not that hard to grasp,
+00:09 and they take your Python knowledge to the next level.
+00:11 First we write a simple decorator
+00:13 and see how we can decorate a function
+00:16 to add additional behavior.
+00:18 Then we make a quick detour
+00:19 to explain the different ways functions
+00:21 and Python can receive different kind of arguments.
+00:24 Then we write a second decorator
+00:26 and see how they can be stacked up.
+00:28 Then we look at some further references,
+00:30 and for the second and third day,
+00:32 I got a couple of practical exercises
+00:35 to hone your newly gained decorator skills.
+00:38 All right, let's do this.

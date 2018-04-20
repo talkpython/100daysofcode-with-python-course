@@ -1,0 +1,91 @@
+00:00 Let's quickly review some of the concepts that we learned.
+00:03 We saw everything started with our model base
+00:05 and we got that by calling declarative base
+00:07 that gave us a type back
+00:10 which then we could use to derive from.
+00:12 So we get this base class,
+00:13 and then we derive all of our various entities from it.
+00:17 In this particular example
+00:18 when we're looking at an online record store
+00:20 with albums, tracks, purchases, users, and so on.
+00:23 We'd create an album, track, and purchase
+00:24 all deriving from our SQLAlchemy base that we create.
+00:28 When we want to model one of these classes,
+00:30 we want to use the class to model some data.
+00:33 We set the dunder table name,
+00:35 pick out the various columns we need.
+00:36 So here we have a primary key auto-incrementing id.
+00:39 We have a name, year, price.
+00:42 We saw that we can put uniqueness constraints.
+00:44 We can put indexes to make queries on that data
+00:47 or ordering by that data super, super fast.
+00:49 And we can even set up relationships.
+00:51 But like I said, we're not going into relationships.
+00:53 We've already spent a lot of time on discussing SQLAlchemy.
+00:56 It's time for you to jump in and write some code.
+00:59 Once we've modeled all of the classes,
+01:01 then we need to actually create the database connection
+01:04 and make sure the database is in sync
+01:06 with what we define the classes to be.
+01:08 Here we're going to create a connection string
+01:10 which is just a sqlite:///.
+01:12 Put it in a file.
+01:14 We'll create an engine based on that connection string.
+01:16 We're going to create,
+01:17 go to the metadata for the SQLAlchemy base
+01:19 and call create all.
+01:21 Pass at the engine so it knows how to do that.
+01:23 Then finally we're going to create a session factory
+01:25 by calling the session maker, giving it the engine.
+01:28 We'll being using that for our unit of work
+01:30 for all the queries and transactions and so on
+01:33 throughout the rest of our app.
+01:34 If we want to to create a query and pull back a single record,
+01:37 here we'd create the session.
+01:39 We say, "query of the type".
+01:41 So we're going to query the account table,
+01:42 say, "filter emails this.filter".
+01:45 Password hash is that.
+01:46 Now this double filter is basically an and.
+01:49 So, here we're doing a query
+01:50 where the email is what we specify,
+01:52 and the passwordhash is what we specify.
+01:54 Or we're going to get nothing.
+01:55 And then, we can just get one back.
+01:57 So we can either say one or first
+01:59 and then we're going to return the account
+02:01 that we got back here.
+02:02 What does that look like in the database?
+02:04 It's select star from account
+02:05 where account email is some parameter,
+02:08 and account.passwordhash at some other parameter.
+02:10 And the params happen to be my Gmail address,
+02:13 and some random text I threw in there.
+02:16 Finally, you might be familiar
+02:17 with the SQL query language but not SQLAlchemy.
+02:20 And wonder how do these things map over?
+02:23 So equals, simple that's a double equal.
+02:26 Not equal, that's also kind of simple.
+02:28 Not equal goes in the middle here,
+02:30 and then it gets a little interesting.
+02:32 If you want to do a like query that's like a substring,
+02:34 I want all the names that contain the substring ed.
+02:37 That's a .like('%ed%).
+02:41 So the percents are like wild cards, can match anything.
+02:43 Long as ed is in there somewhere we'll get that as a match.
+02:46 N, so I want all the users whose name
+02:48 is either Ed, Wendy, or Jack.
+02:50 You and put the little tilde
+02:51 in front of this whole thing and say, not in.
+02:52 You can say null is None.
+02:54 And is just multiple filters.
+02:56 Or is a little more complex, but there's an or operator
+02:59 that let's you pass a tuple along.
+03:01 Or actually just multiple parameters
+03:03 and that will turn those all into an or.
+03:04 So you can see the link for all of these
+03:06 and there's more as well over at the SQLAlchemy website.
+03:10 Alright so that's SQLAlchemy.
+03:12 I hope you really enjoy it.
+03:13 It's really a great way to build professional,
+03:16 data driven applications.

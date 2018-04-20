@@ -1,0 +1,52 @@
+00:00 Time to finally input some data
+00:02 into that address book database, okay.
+00:05 So I've just opened up a Python shell
+00:07 within that same directory, and the first thing
+00:10 we'd need to do is import sqlite3.
+00:13 Alright, we need to do that every time we invoke the shell.
+00:16 Next, we need to open that connection to the database.
+00:21 So, we'll do that, same style as before.
+00:23 Connection=SQLite3.connect
+00:26 addressbook.db
+00:29 Make sure you get the name of the database correct,
+00:33 because again it will just generate another database
+00:36 if you don't connect exactly
+00:39 to the same name as you're trying to, okay.
+00:42 Next, we need to actually create that cursor
+00:45 that allows us to interact with the database.
+00:47 So, c=connection.cursor
+00:52 And now we get to execute the code.
+00:56 So, execute, what are we inserting,
+00:59 well what are we doing, rather, we're inserting data into
+01:06 our details table within the address book database
+01:10 okay, and this is all SQL now.
+01:13 So the values that we're putting in there,
+01:16 now visualize this from left to right
+01:18 column zero and onwards.
+01:20 Column zero was name, column one was address,
+01:24 and column two was the phone number.
+01:27 So, the first column is going to be, my name.
+01:32 The second column is going to be my address.
+01:36 I promise this is correct.
+01:38 And, my last column is going to be my phone number.
+01:44 Don't call me after 9:00.
+01:46 And, once we're done, we close off
+01:49 the actual execute, the SQL.
+01:52 And bang we get that nice little return message.
+01:55 Now, that would normally be if you were, sort of,
+01:59 using that in a script within a With statement or whatnot
+02:02 but, we're doing this all manually
+02:04 so we actually need to commit our
+02:09 session here.
+02:10 So, connection.commit,
+02:13 now it's actually saved to the database.
+02:16 Alright, so let's close, connection.close.
+02:20 Alright, let's bring up our database,
+02:23 now I already have this open within SQLite browser,
+02:27 so lets refresh here using these little funky arrows.
+02:31 And there's our data.
+02:33 Let's expand that out so you can see it.
+02:35 Now, we've got Julian 123 Fake St.
+02:39 and my phone number, alright.
+02:41 And that's it, that's how we pop data into there
+02:43 one line at a time, in a very manual method.

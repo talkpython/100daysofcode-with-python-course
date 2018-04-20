@@ -1,0 +1,114 @@
+00:00 So, we've seen that we can run our app,
+00:02 and let's actually run it over here.
+00:04 We could go to somebody and say,
+00:06 all right here's what you need to do
+00:07 to run our little program.
+00:09 You have to create the virtual environment
+00:10 and then you have to activate the virtual environment.
+00:13 They have to pip install the actual requirements.
+00:19 Once that's all set up, you can Python your program,
+00:22 and whew, it runs, finally.
+00:24 Okay, so that's not really the way you want to hand out
+00:27 a general application, is it?
+00:29 You want to say, here, double click this.
+00:31 It looks just like your Firefox, or your Word,
+00:34 or whatever application people are used to working with.
+00:36 So, we're going to use a program,
+00:38 or a utility, called PyInstaller.
+00:41 So, over here, the first thing have to do
+00:44 to use PyInstaller, is install it.
+00:50 Now, PyInstaller works on all of the platforms,
+00:53 so that's really nice, and the easiest way to run it
+00:56 is to create a file called build.spec.
+01:00 And if you go to the PyInstaller page,
+01:02 it'll say, here's an example one.
+01:04 So we're going to do, basically, grab this.
+01:10 I'm going to grab some text, basically, that I got from there,
+01:12 other than I put in the name, so you can see like
+01:15 right here, Movie Search App is the name.
+01:19 But it does things like, don't you have the console,
+01:21 make it windowed, things like that.
+01:23 And the other thing it needs is the Python path,
+01:26 so I'm going to say, which Python,
+01:28 with my virtual environment activated.
+01:30 So in that case, we're going to use
+01:31 this great long one there, okay.
+01:37 That should pretty much be it.
+01:39 Go through, set the name of your application
+01:41 and things like this.
+01:42 So once this is here, we can come over here, and we can,
+01:46 in our terminal, either one will do,
+01:48 we just say PyInstaller, let's do it over
+01:50 in this bigger one, 'cause you'll see
+01:52 all the stuff that comes out.
+01:53 So again, the virtual environment is there,
+01:56 this build spec is here,
+01:57 so we'll say PyInstaller ...
+02:01 So PyInstaller build.spec.
+02:07 It's done. It's completed successfully.
+02:09 How awesome it that?
+02:10 That took a moment, but let's go see
+02:11 what we have in here now.
+02:13 Just minimize everything.
+02:14 And now, in our final search app, we have a build folder,
+02:17 which is kind of a temporary working directory
+02:18 and it will be quicker if you rerun the PyInstaller
+02:21 based for that stuff is there.
+02:23 But this is what we care about. Look at this.
+02:25 This one .app file, put it over here.
+02:29 Now, what happens if I double click it?
+02:32 Wait for a second.
+02:33 And there's our UI. Let's go search for something.
+02:36 I'm going to search for "action,"
+02:39 and this will be a general keyword.
+02:41 Boom, there are eight movies, the action in it.
+02:43 So, Last Action Hero, Looney Tunes: Back in Action,
+02:46 Civil Action, things like that.
+02:48 How cool is that?
+02:49 Now, you may notice this
+02:50 little thing back here, this terminal.
+02:53 That is actually what I would call not cool,
+02:55 so I'm going to close that.
+02:56 Now, if I go over to my Windows virtual machine,
+02:59 and I run the exact same process.
+03:01 I pip install, I run the requirements,
+03:03 and then I pip install, PyInstaller,
+03:05 and I run PyInstaller build.spec, I will get a single .exe,
+03:10 and that single exe will run just like we saw.
+03:14 But it has no command prompt.
+03:16 It literally runs as just a Windows application.
+03:18 If I do the same thing on the Linux
+03:19 after I get the funky stuff to install with Aptitude,
+03:22 then I run the PyInstaller,
+03:24 I get this to show the Gooey, no terminal.
+03:27 For some reason, I think it's a minor bug
+03:28 with PyInstaller that this is shown,
+03:32 even when I'm in the command thing.
+03:34 We told it not to, but still,
+03:36 the benefit of having a thing I can double click right here,
+03:40 and that Gooey comes up in Python, that is really sublime.
+03:44 And the fact that this is all bundled up.
+03:45 I literally just compressed this .app and I send it around.
+03:49 There's no dependencies. Even better.
+03:51 So, I really hope you like this ability create
+03:54 a Gooey and then package it up for reuse,
+03:56 because I think that really broadens the reach
+03:59 of what you can do with Python.
+04:01 Now, these are not super, super general applications
+04:03 that you've seen.
+04:04 There are some nice examples.
+04:06 If we go to the Gooey page and we scroll down here,
+04:09 scroll, scrolling, you see some nice examples,
+04:10 even at the bottom, I think there's some here.
+04:13 Yeah, you can see tabbed groups, custom groups,
+04:16 sidebar navigation, all kinds of stuff going on here.
+04:19 But what I want to show you is, if you go to the examples,
+04:23 there's actually a different repository
+04:25 with a bunch of different examples.
+04:27 Success screen, error screen, flat versus column layout,
+04:31 all that kind of stuff. So you can go over here and play around with those,
+04:33 just even like a dynamically generated one.
+04:35 So, you can do a lot, but you can't build
+04:38 entirely general applications.
+04:40 This is a quick way to turn command line apps
+04:43 into rich Gooey apps, and I think it does it really well.

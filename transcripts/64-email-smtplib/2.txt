@@ -1,0 +1,54 @@
+00:00 Okay, the first thing we want to do
+00:02 is generate an application password or an application ID.
+00:06 This is a specific code, a string
+00:08 that we are going to insert into our script
+00:12 that allows your script or you program to talk to Google
+00:16 okay, this is going to talk to your Google account
+00:19 and it'll give you a script access
+00:21 into your Gmail account in order
+00:23 to be able to send these emails, okay.
+00:27 Naturally that needs to happen
+00:28 or just anyone could script your account, right?
+00:32 So we kind of want to have something like this.
+00:34 Now I'm looking at a support.goggle Article 185833,
+00:41 just write that number down, 185833
+00:46 that is the article all about signing in
+00:49 using application passwords.
+00:51 If you go down to How To Generate An App Password
+00:54 you can click on App Passwords here
+00:57 that takes you to security.google.com
+01:00 Settings, Security, App Passwords okay
+01:06 don't worry these will all pop up on the screen
+01:08 as you're watching this.
+01:10 Now, let's just copy and paste that.
+01:16 You'll be asked to log in, okay
+01:19 enter your Gmail password or your
+01:21 Google account password I should say
+01:23 and then you can progress to the next screen.
+01:33 Once we're logged in you can then see
+01:35 any existing application passwords you might have running.
+01:40 Probably the safest thing to do would be
+01:42 to create one of these passwords per application, okay.
+01:46 That way if it ever gets compromised
+01:49 it's only really one, you can delete that
+01:51 and you'll only impact one application.
+01:55 Now to do this, to set one up, you click on
+01:57 Select The App, now we want to work with our mail,
+02:02 okay, so that's what we're going to select
+02:04 select a device, now in this case,
+02:07 we're going to choose Other, Custom Name
+02:09 let's just call it 100 Days Script
+02:13 alright and then we click on Generate.
+02:17 And this will give us a nice pop up
+02:19 with the application password in a yellow rectangle.
+02:22 So like I said, it's going to be mapped to one application
+02:27 store it in there maybe save it in a password vault
+02:31 if you feel you're going to lose the application
+02:33 or the environment variable just keep
+02:36 very close tabs on this, understanding that
+02:40 it has full access to your account, okay.
+02:43 So be careful, be very careful
+02:46 and, click on Done and then you'll be able to see it
+02:49 in your current application passwords
+02:52 and that's it, keep that password handy
+02:54 we're going to need it in the next script.

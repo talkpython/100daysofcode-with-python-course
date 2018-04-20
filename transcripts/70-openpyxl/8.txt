@@ -1,0 +1,171 @@
+00:00 And that's pretty much the basics of openpyxl.
+00:04 So it's really cool,
+00:05 it's really interesting and you can see how
+00:08 with a little bit of work
+00:09 you can start to automate
+00:11 adding data to specific cells
+00:14 or specific columns.
+00:16 Really it's all just about knowing the column numbers,
+00:19 isn't it?
+00:20 So let's go over everything we've learned
+00:23 for the past couple of days.
+00:25 Alright, so first and foremost,
+00:27 there's the Excel workbook
+00:28 that we're playing with.
+00:30 By now you probably hate it
+00:32 as do I.
+00:33 I don't blame you.
+00:34 So we pretty much dealt with the L column here
+00:38 where we were looking at the profit.
+00:40 Okay, we did touch on the country column
+00:42 just to show how to list out everything
+00:44 in a specific column.
+00:46 Alright, so how do we start?
+00:49 Well, we import it, openpyxl,
+00:51 load_workbook.
+00:54 Okay, that's pretty much all we needed really.
+00:56 And we use load workbook to load in
+00:59 our workbook.
+01:00 Nice and easy, so far and
+01:04 we assign that to the variable WB
+01:07 and we can then call .sheetnames.
+01:11 And that allows us to print
+01:13 all of the worksheets in the workbook
+01:15 remembering that your worksheets
+01:17 they're sort of tabbed spreadsheets
+01:20 that at along the bottom
+01:21 of your Excel workbook.
+01:24 Okay.
+01:26 Now, the little gotcha.
+01:28 Workbook.active,
+01:30 the active assigns the last active worksheets.
+01:34 So the last worksheet that had an edit
+01:37 saved to it.
+01:39 Okay, that is what active does.
+01:41 So that is something that can catch you out
+01:43 if you're not careful.
+01:44 The safer bet is to just assign
+01:48 the actual spreadsheet name.
+01:51 The actual worksheet name.
+01:53 So, we used Finances 2017.
+01:56 We assign that to the other actual worksheet
+01:59 Two Variable, ws2.
+02:01 Okay?
+02:03 Same sort of thing.
+02:05 This time we're specifying a specific cell.
+02:10 Okay? So we chose C9, ws1, C9,
+02:15 and then we wanted the value of that cell.
+02:18 Okay, if we got rid of value
+02:19 and we just click that
+02:20 we'd get just the object, okay?
+02:25 So this is how we got value.
+02:28 And finally, on that day
+02:30 we did go through putting all of this together
+02:33 into a four loop, okay?
+02:35 And what this did was it went over that list L,
+02:38 we took the column L, and we made it a list
+02:41 and we iterated over it
+02:43 with every row that we had
+02:46 and we went all the way to 101.
+02:48 So, pretty much, 100 cells, we looked at
+02:52 and then we built the cell number here,
+02:55 and then took that cell number
+02:57 and added the value,
+02:59 so it was a dollar value.
+03:00 We added all of that together
+03:02 and threw it in the profit total variable.
+03:05 Okay?
+03:06 And then printed that out.
+03:07 So that's a nice little use case
+03:09 of openpyxl.
+03:14 Then we talked about how to actually
+03:16 specify the maximum row because we don't always
+03:19 want to hard code a cell in there
+03:22 as the higher end of our range.
+03:25 So that's where max_row comes in handy.
+03:28 Okay?
+03:29 So it gets the number of the maximum row
+03:31 that is used even if you have blank rows,
+03:35 some of them maybe active
+03:37 because they have a space in there
+03:39 or they had data,
+03:40 or that was selected when it was saved.
+03:42 And that will result in max_row being
+03:46 whatever that cell was.
+03:47 Okay?
+03:50 Now we put that in place
+03:52 in the range, okay.
+03:55 As a range argument and therefore,
+03:58 we were able to go from cell two
+04:01 all the way to the last row,
+04:03 and then print that out
+04:04 and this column B was our country column
+04:07 and that allowed us to printout
+04:09 all of the countries that were used in that specific column,
+04:13 all 701 of them or something like that.
+04:18 Alright, now, moving on.
+04:19 We then did something similar
+04:22 but we were dealing with the actual sum,
+04:26 the actual Excel function that we can put in there,
+04:29 the formula.
+04:30 Okay?
+04:31 So we wanted to hard code
+04:34 in cell L703,
+04:37 The Excel sum formula or function.
+04:40 Okay?
+04:41 And we specified L2 to L701,
+04:44 sum it up, throw it into that cell there.
+04:49 And then we saved it. Super important.
+04:50 Have to save it.
+04:51 And just remember, the issue that we had
+04:54 was that we tried to save it
+04:55 while the document was open,
+04:56 in Excel itself.
+04:57 And it won't do that, okay?
+04:58 It won't save,
+04:59 you'll get an error code.
+05:01 Now to implement max_row into this sum,
+05:05 we then did something similar, okay?
+05:08 We just rebuilt this entire line here,
+05:11 but substituted the actual cells,
+05:14 with the max_row command.
+05:16 Alright.
+05:17 So we put in max_row here,
+05:19 to get our cell that we wanted to put
+05:21 the actual data into at the end of it.
+05:26 Then, in order for the calculation to work
+05:30 so there would be no sort of conflicts,
+05:32 we then took max_row
+05:34 minus one, so we wanted the max_row
+05:38 but this, the cell above it
+05:41 and that should get us the last dollar value
+05:45 and then there would be no overrides
+05:49 and no sort of conflict, okay?
+05:51 So there we go at the minus one
+05:53 to prevent clashes with calculations
+05:56 and then we saved it again.
+05:57 Now obviously, this is not fool proof.
+06:00 This is just working for this specific spreadsheet.
+06:02 You'd obviously have to do those checks
+06:04 in detail for yours.
+06:07 Okay, now it's your turn.
+06:09 So what can you do with this?
+06:11 Well, I think and I pretty well
+06:14 used use case,
+06:15 something that's obvious,
+06:17 would be to monitor a spreadsheet.
+06:20 So a lot of places might use Spreadsheets
+06:22 for things like say, rosters
+06:24 or financial tracking or your budget,
+06:27 so you could potentially use a script
+06:29 to monitor a certain cell
+06:33 or to add data in as you go,
+06:36 just to come up with with something intuitive,
+06:38 something interesting to do.
+06:41 I think a budget is a really good example
+06:43 or some sort of a rostering system.
+06:45 So have a play with openpyxl,
+06:47 see what you can insert and add and edit and whatever
+06:52 to an Excel spreadsheet
+06:54 and do that for Day 3.
+06:56 Just how.

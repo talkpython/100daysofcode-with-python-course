@@ -1,0 +1,26 @@
+00:00 We've seen how to poke at our API
+00:02 with just doing a GET request.
+00:03 We've seen Postman lets us explore better
+00:06 but if we want to access it from code, we need another way.
+00:09 Now, Python has a built in mechanism
+00:12 for accessing HTTP APIs
+00:14 but it's not the prettiest thing in the world.
+00:16 So a guy named Kenneth Reitz created
+00:19 this thing called Requests.
+00:20 Maybe you've heard of it.
+00:21 It's definitely one of the most popular packages, period.
+00:25 And to use it is really, really simple.
+00:27 We're going to use it in just a moment.
+00:28 If you want to get a URL, you just say GET.
+00:30 Here you can even pass the auth,
+00:31 check the status code, check the encoding, check the text,
+00:34 and even convert the JSON back to Python dictionaries.
+00:37 So this is a very popular library.
+00:39 It's definitely the most-used for accessing HTTP services
+00:43 or Python directly.
+00:44 So, unless for some reason, you are very adverse
+00:46 to having a dependency on an external package,
+00:48 this is the way,
+00:49 this is the way we're going to do it in Python.
+00:51 So, next up, let's get started
+00:53 and actually write some code.

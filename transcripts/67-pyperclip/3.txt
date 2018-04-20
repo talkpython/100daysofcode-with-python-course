@@ -1,0 +1,17 @@
+00:00 Righty oh, let's get cracking.
+00:02 All right, so a quick setup for us.
+00:04 Let us quickly create our virtual environment.
+00:11 Create the venv and all we have to do for this video
+00:15 for it to work for the rest of
+00:16 this lesson is pip install.
+00:20 First let's activate it.
+00:23 Okay, so, pip install pyperclip
+00:27 because it isn't in standard lib.
+00:30 And once that is installed, I'd like you to go through
+00:33 and just create the following two files
+00:36 text-replacer.py and affiliate.py.
+00:41 That should give you a hint as to
+00:42 what these scripts are going to be.
+00:44 So once you've got everything installed,
+00:47 and pip installed and whatnot,
+00:49 just go ahead and move onto the next video.

@@ -1,0 +1,52 @@
+00:00 Now, before we actually add Gooey, let's just change this
+00:03 around a little bit so that we can have a cleaner separation
+00:07 of where we get our data versus where we run it.
+00:11 Notice we're asking for the mode here, and then based on the
+00:13 mode we're doing these three things.
+00:16 I'm going to come over here and make a new function,
+00:19 put that down on the bottom, and call this get_parameters,
+00:23 or get_params, something like that.
+00:25 We're going to do the same thing here.
+00:27 We're just going to keep it the same.
+00:28 Instead of doing the search, we're just going to
+00:32 return which thing it is that we want to do.
+00:35 We're going to return the mode.
+00:38 Let's say, yeah, return mode from director.
+00:45 We're not going actually going to do the search.
+00:46 We're going to return the mode and the code.
+00:49 And finally, down here we're going to say return mode
+00:54 and keyword.
+00:56 We can come over here and say
+00:59 we're going to come over here and say mode and value
+01:03 with the comma there.
+01:04 Sorry, your equals get_params.
+01:07 These two values that come back are going to go here.
+01:10 I guess we could even put this little part down here,
+01:14 this little print statement.
+01:15 It belongs together.
+01:16 Instead of doing this, if the mode is that, we're going
+01:18 to say we're going to pass the value over here.
+01:21 Instead of doing this, we already asked that question.
+01:23 It stored a value.
+01:24 Instead of doing this, we're going
+01:26 to go over here and say value.
+01:28 Let's just see if this runs.
+01:29 All right, I want to search by a director, Cameron.
+01:33 Seems that works.
+01:34 Let's try one more.
+01:35 I want to search by keyword, capital.
+01:39 Try again.
+01:40 Keyword, capital.
+01:42 There we go.
+01:43 You spell it right,
+01:44 it works really well.
+01:45 Okay, so this is working.
+01:46 It's nice because we just have this one function,
+01:48 and we get these two values back.
+01:50 It's this point where we can plug in our Gooey stuff.
+01:54 All we have to do to create our Gooey is to add
+01:56 a decorator right here, and then basically tell
+02:00 Gooey, G-O-O-E-Y, what the parameters it's supposed to
+02:05 ask for are, and how to describe them to the user.
+02:11 Like is this a drop down with a list?
+02:13 Is it a text input? Things like that.

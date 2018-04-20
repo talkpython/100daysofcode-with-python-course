@@ -1,0 +1,71 @@
+00:00 Alright, let's write some code.
+00:01 So, we're going to begin this first part of our demo
+00:04 by simply creating the general skeleton and flow
+00:07 of our application.
+00:09 We're not going to actually do anything with classes at all,
+00:11 but we're going to get it ready to.
+00:13 So, let's come over here and add a new Python file.
+00:16 I noticed there were none at all,
+00:18 and I'll just have this called program.
+00:20 In here we're going to define a main method,
+00:24 oh, I've got to to configure this, hold on.
+00:30 Alright, now Python is happy.
+00:31 So, what we're going to do is
+00:32 we're going to do a little print the header
+00:34 and that's just going to show these methods
+00:36 don't exist yet,
+00:37 but just think about the ideas.
+00:39 Then we're going to run the game loop, okay,
+00:43 and it's going to go around and around and run.
+00:45 This concept of a game loop you'll find out in a second,
+00:47 but let's put this print header here first.
+00:52 Now maybe we'll put something more interesting here later,
+00:54 but for now, we'll just do like a little line
+00:57 and something like, wizard game.
+01:01 Or, something like that, that should look pretty decent
+01:03 and maybe a little divider there, as well.
+01:06 Then, for our game loop
+01:10 we're going to come in and we're basically
+01:12 going to create the various concepts in the game.
+01:16 We'll create a number of creatures,
+01:17 we'll create our hero,
+01:18 then we'll just say while true,
+01:21 we'll sort of like ask the user for action.
+01:26 Then we'll say like if win or exit,
+01:30 and we'll just brake out of this loop
+01:32 and then we'll just say print, goodbye.
+01:35 Alright, so we just go around and around,
+01:36 and keep asking the user to sort of control the hero.
+01:40 Do you want to attack?
+01:41 Do you want to look around?
+01:42 Things like that.
+01:43 Now, there's a bunch of writing here
+01:44 that is actually not super interesting
+01:47 for you to watch me type it out.
+01:49 So, let me just paste a little bit of code here
+01:51 to a more full featured version of what I just described.
+01:54 There we go.
+01:55 So, now we're going to come in
+01:56 and we're going to create our creatures.
+01:58 We don't have any creaturs yet,
+02:00 remember we have to model those
+02:01 with classes and that's one of our primary goals.
+02:04 We're going to create a hero.
+02:05 We're going to go around and around,
+02:07 we're going to grab randomly,
+02:09 choose one of the creatures to appear.
+02:12 We're going to print out details
+02:13 about the creature that has appeared.
+02:15 Here's the input asking the user
+02:18 do you attack, run away, or look around.
+02:20 Like what is your hero going to do, and then we just check.
+02:24 Do they type A?
+02:25 Do they type R?
+02:26 And so on.
+02:27 So, this not super interesting yet.
+02:29 I'll put a little pass here to show it's not upset
+02:31 with that section there.
+02:33 It's not super interesting yet,
+02:35 because we don't really have a hero.
+02:36 As you can see right here, and we have no creatures.
+02:40 So, let's go and model that next.

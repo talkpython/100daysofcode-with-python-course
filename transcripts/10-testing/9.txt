@@ -1,0 +1,69 @@
+00:01 1 final thing is when to write your test.
+00:02 I think the motto "having tests is better than no tests"
+00:05 is the most important, but there is a whole
+00:08 style of test driven development,
+00:10 which is to write your test before your actual code,
+00:13 and to drive your design by those tests.
+00:16 Let's write the Fizz Buzz program,
+00:19 which is a children's game, and it basically
+00:22 is a sequence where numbers divisible by
+00:25 3 and 5 return Fizz and Buzz ,
+00:28 and if they're both divisible by
+00:30 3 and 5 it returns Fizz Buzz.
+00:32 So let's write that program, but do it in a TDD way,
+00:35 by writing the tests first.
+00:37 And I'm going to use the repetitiveness
+00:40 of these tests to also show you a nice feature
+00:43 of pytest, which is parameterize.
+00:51 So let's do it from the ground up. Test Fizz Buzz.
+00:59 So let's give it a number, and it should return Fizz, Buzz,
+01:02 or Fizz Buzz, or number, right?
+01:04 So if I call it with 1, it should return 1.
+01:08 If I call it with 2, it should return 2.
+01:17 3, Fizz. Actually let me stop there.
+01:27 The TDD way would be to fill at the earliest possible way.
+01:33 And just start adding code in small increments.
+01:44 Alright, so now it is recognized,
+01:47 but it takes zero positional arguments, but 1 was given.
+01:50 So here 1 was given, but I'm not accepting 1.
+01:53 So let's just hard-code that here.
+01:58 And now the return's None. So let's just return 1 for now.
+02:05 And the second test fails, so let's then decide to return N.
+02:13 And then if it's 3, it should return Fizz, okay,
+02:18 so we need some sort of if statement, right?
+02:34 Alright, that works, okay, let's move on then, 4, 4.
+02:46 That still works. 5,
+02:57 That's not working, okay.
+03:01 And let's accommodate that, return Buzz.
+03:09 And we're green again, cool.
+03:10 And you already start to see a lot of repetition, right?
+03:13 Now there's a cool feature in pytest, called parameterize.
+03:20 And let me just copy over the whole test.
+03:25 So I can give that a list of tuples of argument,
+03:30 where I call the function with, and the return value.
+03:33 And then in my test, I can just do this 1 time,
+03:38 call Fizz Buzz with arg, and test it against return.
+03:42 And look at that, how I put all the parameters
+03:44 in a decorator, and I avoid having to write
+03:49 assert, assert, Fizz Buzz, Fizz Buzz, Fizz Buzz,
+03:52 over and over again. So this is pretty neat.
+03:54 I think you will find a use guys for this.
+03:59 I need to pass them into the function.
+04:01 And I see that Fizz does not assert Fizz Buzz,
+04:04 and that this particular call,
+04:07 so if it's 15, it should do Fizz Buzz.
+04:10 There are various ways to solve this.
+04:12 Let's do here, then return, Fizz Buzz.
+04:23 As these are returns, I don't need an elif,
+04:26 because these are like, or early return, or continue.
+04:30 So let's see if this works. And this works.
+04:34 And notice that it's also nice that pytest gives
+04:37 a dot for every parameter test.
+04:40 If 1 would fail, how would that look?
+04:42 Ah, we already saw that, right?
+04:48 We still get all the dots, and you see
+04:50 the actual position of the tuple that failed.
+04:53 And that's also, again, nicely indicated by the output.
+04:56 Alright, so, this was a little bit of TDD, and also,
+05:00 a nice feature of pytest, parameterize,
+05:03 that you probably want to become familiar with.

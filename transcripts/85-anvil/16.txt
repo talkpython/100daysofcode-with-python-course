@@ -1,0 +1,140 @@
+00:00 Let's go mess with the old documents,
+00:02 recall what we had before we had a little filter thing,
+00:04 and I'll go ahead and put the text of it up here.
+00:09 This isn't going to do anything yet, but we'll have our little
+00:11 filter there, and let's put a spacer.
+00:13 And then what we need is,
+00:14 we want a list of all of the documents.
+00:17 How do you do that?
+00:18 So far we've set like the text value and so on,
+00:20 so what we need for the next thing is actually
+00:23 called a linear panel or a repeating panel,
+00:26 we'll go for repeating panel.
+00:29 Now, there's an item template
+00:31 that we've got created right here,
+00:32 and I don't like that name, so let me rename this
+00:34 to doc_list_item_template.
+00:40 If you go down here, we'll see that we have
+00:42 the doc_list_item_template, right there, sorry.
+00:44 And let's set the name to docs, like that.
+00:50 Now, if we actually want to edit that item template,
+00:52 we can double click here or just go there,
+00:54 we'll double click there and it says
+00:56 what items would you like to display?
+00:57 Right on the table, how about documents.
+01:01 And that means there'll be a little item property
+01:03 for each one that comes through here.
+01:05 Alright, so within this, how do you want to show it?
+01:09 Well, let's go do some more stuff,
+01:10 let's set into this thing, we're going to put the title,
+01:18 make that bold and go left.
+01:22 Put another one right there,
+01:31 that's when it's created, and then let's put a link in here,
+01:33 so you can click the link to say navigate over and edit it,
+01:36 and this is going to be details.
+01:47 Alright, make that smaller at that side,
+01:49 that created we can make it a little smaller,
+01:51 leave some room for the title,
+01:53 which is going to be the main thing.
+01:55 This is pretty interesting,
+01:56 but how do I get the data wired into this?
+01:59 Now, we get a little data binding here,
+02:01 check that bad boy out right there.
+02:03 Self.item of what?
+02:04 Well, that is the scheme of our database.
+02:08 How cool is that?
+02:10 Okay, this should be name,
+02:13 and that's looking good. Oops, I don't want this one.
+02:15 Self.name and the created,
+02:17 we're going to set that up a little bit different,
+02:18 but let's just see what we can do to make this work.
+02:23 Come into code here,
+02:26 go to our utilities, remember it's already loaded the data
+02:29 so we shouldn't have to download anything, this is all
+02:32 a single paid app, it's amazing.
+02:35 So all we have to do is say
+02:36 self.repeating_panel.items = utility.docs.
+02:42 Let's see if this works.
+02:45 Alright, moment of truth, wow,
+02:49 it doesn't look like much,
+02:50 but that is out of our database right there.
+02:52 Super, super cool.
+02:54 Let's work on our created date right here.
+02:58 Now, if you look over here at the bindings,
+02:59 I could try to add a binding,
+03:01 and I could have created,
+03:03 but I really wanted something like,
+03:04 kind of complicated for how I do this,
+03:06 like stuff that's happening here.
+03:09 So, instead of doing it this way, let's remove that,
+03:12 and let's actually go and write
+03:13 some code for our doc template.
+03:16 Right, so we come over here, and this little item
+03:18 thing has been set, actually, I believe it's not set yet.
+03:21 We got to be a little careful when the thing is shown,
+03:24 or the doc list is shown, then the item has been set,
+03:27 so we come down here and say self dot label,
+03:31 created dot text, and then we want to use this nice little
+03:36 expression here, where we say item.created,
+03:39 this is the document, that's it's created field,
+03:41 actually, sorry, we got to do it like this.
+03:44 Created, and then store format for the friendly
+03:48 month, then the day, then the year, let's try that.
+03:52 Try all the docs, there you go, March fourth,
+03:56 that's today, that's when I created these things.
+03:58 Super, super cool, I mean we could make those fonts
+04:00 a little bit bigger.
+04:01 Last thing is what happens when we click this?
+04:03 Right now, nothing.
+04:06 So, inside our template,
+04:08 when we double click on these details,
+04:11 something is going to happen.
+04:13 What we want to do is, again tell the home form to navigate
+04:17 somewhere, so what we're going to do is we're going to
+04:19 write one more function here, kind of like the go_home.
+04:35 And we'll tell the home_form to do this thing
+04:38 we're calling go_details,
+04:39 and what is that?
+04:40 Well it's going to show this details form.
+04:42 We haven't put that in place yet,
+04:43 because it's not a top level navigation item you can do,
+04:47 but we'll write it now.
+04:53 It's almost the same,
+04:58 going to add the doc_details_form.
+05:02 Let's pass the doc along,
+05:07 and to kind of keep with the pattern
+05:08 when you do this binding
+05:09 or something is associated with it,
+05:11 it's typically item, so I'm going to say item equals this.
+05:16 Alright, in our doc_details_form, let's just
+05:19 do something like this,
+05:20 print self.item name, just to make sure
+05:24 that we got the name here, so,
+05:29 like that, let's see if the details now work.
+05:39 It doesn't, what are we missing?
+05:40 Let me check.
+05:45 Why didn't it work?
+05:46 Well, it doesn't take a genius to figure that
+05:49 out does it, look at this, forgot to call it, alright, so let's do our import again.
+05:57 Go to details and pass the document that they clicked.
+06:02 Remember, the one I clicked was self.item,
+06:04 that's the thing that's bound to this particular row
+06:07 of our repeating table, so self.item,
+06:10 pass that along.
+06:14 Click it, what happens?
+06:15 Run demo ReadMe,
+06:18 oh we didn't pass enough, what's happening here?
+06:23 I forgot to put the self parameter.
+06:25 Okay, one more time.
+06:29 Ready, let's go see the demo ReadMe.
+06:32 Boom, we loaded the document demo ReadMe,
+06:34 want to try the other, live doc, loaded live doc.
+06:37 Yes, it's working.
+06:38 So we pretty much have our app all in place,
+06:41 the last thing we need to do is sort of replicate this
+06:44 view over here on the home,
+06:45 as well as filter the documents.
+06:47 So what I'm going to do is,
+06:48 I'm going to go add a bunch of documents
+06:50 so we have things to work with, and then,
+06:52 we'll finish out these last two small pieces.

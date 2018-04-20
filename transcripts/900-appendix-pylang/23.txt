@@ -1,0 +1,37 @@
+ 0:01 In Python, functions are first class citizens, 
+0:03 and what that means is they are represented by a class instances of them, 
+0:07 particular functions are objects they can be passed around 
+0:11 just like other custom types you create just like built-in types, like strings and numbers. 
+0:16 So we are going to leverage that fact in a simple little bit of code I have here 
+0:19 called find significant numbers. 
+0:21 Now, maybe we want to look for all even numbers, 
+0:24 all odd numbers, all prime numbers, any of those sorts of things. 
+0:27 But this function is written to allow you to specify what it means 
+0:32 for a number to be significant, so you can reuse this finding functionality 
+0:36 but what determines significance is variable, 
+0:40 it could be specified by multiple functions being passed in 
+0:43 and that's what we are calling predicate 
+0:45 because this ability to pass functions around and create and use them in different
+0:50 ways especially as parameters or parts of expressions,
+0:53 Python has this concept of lambdas.
+0:56 So let's explore this by starting with some numbers, 
+0:58 here we have the Fibonacci numbers 
+1:00 and maybe we want to find just the odd Fibonacci numbers. 
+1:03 So we can start with the sequence and we can use this "find significant numbers" thing 
+1:07 along with the special test method we can write the checks for odd numbers. 
+1:11 So, in Python we can write this like so, 
+1:14 and we can say the significant numbers we are looking for is... call the function, 
+1:17 pass the number set we want to filter on 
+1:19 and then we can write this lambda expression instead of creating the whole new function.
+1:23 So instead of above having the def and a separate block 
+1:26 and all that kind of stuff, we can just inline a little bit of code, 
+1:30 so we indicate this by saying lambda and then we say the parameters, 
+1:34 there can be zero, one or many parameters, 
+1:37 here we just have one called x, and we say colon to define the block that we want to run, 
+1:42 and we set the expression that we are going to return when this function is called, 
+1:46 we don't use the return keyword we just say when you call this function 
+1:49 here is the thing that it does in return, so we are doing a little test, True or False, 
+1:53 and we ask "if x % 2 == 1" that's all the odd numbers, not the even ones, 
+1:58 so when we run this code it loops over all the Fibonacci numbers 
+2:01 runs a test for oddness and it pulls out as you can see below 
+2:05 just the odd ones, for example 8 is not in there. 

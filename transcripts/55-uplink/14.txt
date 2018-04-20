@@ -1,0 +1,16 @@
+00:00 Third day, you have your API client built.
+00:03 You've got your program ready.
+00:04 Now you need to use it.
+00:06 So just fill out program.py.
+00:08 Add a simple UI that just asks
+00:11 the user a questions like, hey, what,
+00:13 or how do you want to search for your movie?
+00:14 By director, by keyword, and so on.
+00:17 And then just use your client to do that search
+00:20 and then present the results to the user, right?
+00:23 Should be pretty straightforward.
+00:25 Remember, you get the response back,
+00:26 you have to make sure that it's valid
+00:28 and then you call json to actually get the data, right?
+00:31 That's it, so hope you enjoyed learning about uplink.
+00:33 It's a really unique and interesting way to models APIs.

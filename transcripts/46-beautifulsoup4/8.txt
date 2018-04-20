@@ -1,0 +1,54 @@
+00:00 This is the readme file for beautifulsoup4,
+00:04 for Day 46 to 48 on web stripping.
+00:08 Now, day N the first day you're going to be
+00:11 working on this course, I would like you be watching
+00:15 the video on setting up the environment,
+00:18 getting a quick overview of beautifulsoup4.
+00:21 This is if you have no familiarity on
+00:23 what it is and how it works, and then
+00:27 build your first Beautiful Soup 4 scrapper.
+00:30 It's actually not too much work, but there is a bit
+00:34 of theory there, with the overview,
+00:36 and you should be able to get it up and running,
+00:38 and then give it a crack yourself, okay?
+00:42 Watch the videos first, because if you're not familiar
+00:45 with it, it does help to watch it start to finish, okay?
+00:49 Pull your first site, use the example site
+00:51 in the video, or if you really want to
+00:54 challenge yourself, grab another one.
+00:57 Day 2, what I'd like you to do is watch
+01:00 this video on requests best practice, okay?
+01:04 This is covering a little thing that people tend to
+01:07 do with requests that is actually the wrong way to do it,
+01:11 and we discuss the best practice for actually
+01:14 doing it, I won't give it away now.
+01:16 Then, what I'd like you to do is follow
+01:19 along with this video, detailed
+01:21 Beautiful Soup 4 scrapping and searching.
+01:25 This will actually go through how to do some
+01:28 targeted searching, so to speak,
+01:31 of the data that you pull down and scrape, okay?
+01:34 It can be a bit tricky and a bit frustrating
+01:37 to find exactly what you want,
+01:39 but stick with it and you'll get there in the end.
+01:42 And Day 3, as usual, it's your turn.
+01:44 So, you've figured out how to scrape a website,
+01:48 you can pull the data that you want,
+01:50 so now I'd like you to actually do something with it, okay?
+01:54 So store it database, display it in something
+01:57 like a Flask app or a GUI, automate it by
+02:00 emailing it, do whatever you can think of, right?
+02:03 So, come up with something and do that.
+02:07 If you can't think of anything, you could try this one.
+02:10 I've added an extra option here for you to try,
+02:13 which is to find a site that looks complex.
+02:17 Think of something that maybe has Flash,
+02:19 or whatever other animations on the website.
+02:23 Pinpoint a data sample, so just something on
+02:25 the website you think that could be interesting,
+02:28 and then see if you can extract
+02:30 it using Beautiful Soup 4, okay?
+02:34 So that's it, give anything like that a try.
+02:36 Day 3 is your freestyle, free-for-all,
+02:39 do whatever you want, and just have a good play.
+02:42 And, move on to the videos and get started.

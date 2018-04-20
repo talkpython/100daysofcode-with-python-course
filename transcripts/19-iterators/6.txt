@@ -1,0 +1,72 @@
+00:00 Next up we're going to look at itertools
+00:02 combinations and permutations.
+00:06 Now let's look at combinations first.
+00:10 Now combinations allows you to get
+00:12 the possible combinations of an iterable
+00:17 of the certain, you know, of a certain string
+00:19 or a certain list, okay?
+00:22 So let's just get our setup here.
+00:25 From itertools import permutations, combinations, okay?
+00:34 Let's say we have Mike, Bob and myself.
+00:37 All right and we'll make a friends list,
+00:40 'cause we're friends right?
+00:42 Please say we're friends.
+00:44 Mike, Bob, and Julian, and we'll split that, not splut,
+00:49 we'll split, okay so we have friends.
+00:51 We have this list, Mike, Bob, and Julian.
+00:56 Now with combinations, we can see how many
+00:59 combinations you'll get of the three of us, okay.
+01:02 Now this will actually give us a generator,
+01:07 so we're going to use list, we're going to force it
+01:10 to be a list okay, so just bear with me here.
+01:14 So print(list(combinations())), okay so this is now
+01:18 we're talking edit tool stuff
+01:20 and in the brackets we have the iterable, okay?
+01:24 And the Iris pretty much what we want
+01:27 the combinations to include how many combinations we want.
+01:31 So for example if we specified Iris two,
+01:34 okay it would say, okay combinations of two.
+01:37 So Mike and Bob, Bob and Julian,
+01:39 Julian and Mike and so on, okay?
+01:41 So we're going to actually choose our friends list, all right?
+01:46 And then we're going to have a length of 2 okay?
+01:50 Let's close all this off.
+01:52 And you'll see that we get, well first of all
+01:53 we'll get return, it returns tuples, or tuples.
+01:59 And look at the combination set that we get there.
+02:01 We get Mike and Bob, get Mike and Julian,
+02:04 and then we get Bob and Julian.
+02:07 And what is it that you've probably noticed?
+02:08 There's no order, okay.
+02:14 There's no, what if the order mattered?
+02:15 If you were trying to return this list
+02:16 but you don't like Mike being first every time,
+02:19 what happens if you want it to return a tuple
+02:23 as Bob, then Mike, Julian, then Mike, Julian then Bob.
+02:27 Well that's where permutations comes in.
+02:31 So combination gives you just a valid combination,
+02:36 it doesn't care about the order, right?
+02:39 Permutation will give you not only the valid combinations
+02:43 but also in whatever possible order they can be in,
+02:49 okay and that's where permutations is super powerful, okay?
+02:54 So we'll do it the same thing,
+02:55 we'll do the exact same things,
+02:57 let's just, may as well copy and paste.
+02:59 We'll do print(list(permutations())
+03:02 works in the same way, see we got the
+03:05 iterable and we got the r.
+03:07 We can go whoops, can't type.
+03:09 We can go friends and we'll do two as well,
+03:12 just so we're keeping this standard.
+03:16 And look at that, we now have Mike and Bob,
+03:19 Mike and Julian, but then we also see,
+03:22 Bob and Mike, so over here we same Mike and Bob,
+03:25 and over here now we see Bob and Mike.
+03:28 Then there's Bob and Julian, then there's the opposite,
+03:30 Julian and Mike, as opposed to Mike and Julian,
+03:34 and Julian and Bob instead of Bob and Julian.
+03:37 And that's why permutations is awesome.
+03:41 I mean they're both awesome but this is such
+03:43 a great way of doing it, it's one line of code,
+03:47 it's just amazing, if again, itertools is awesome.
+03:51 That is permutations and combinations

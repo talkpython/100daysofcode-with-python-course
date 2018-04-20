@@ -1,0 +1,39 @@
+00:00 Before we put the wraps on our game,
+00:01 let's have a quick look inside the database.
+00:03 Julian already talked about DB Browser for SQlite,
+00:06 runs on all the platforms this little thing.
+00:08 This is quite cool and if this is what you want to use
+00:11 I totally recommend it.
+00:12 It looks quite nice.
+00:13 I'm a fan of PyCharm and PyCharm also
+00:16 already has tools for this.
+00:18 So if you go over to database,
+00:19 and you hit the + and say data source.
+00:21 Now if we pick Sqlite serial,
+00:24 you'll have to make sure if it doesn't say driver,
+00:26 there's a little button to say download the driver here.
+00:30 So if you don't do that, this is not going to work.
+00:32 But once that is done,
+00:33 I'm going to drag from here to there,
+00:35 you can actually see what is in our database.
+00:37 Go to schema, to main, hit our moves players rolls.
+00:40 Roll moves is most interesting, let's look there.
+00:42 Here you can see it's all the various pieces.
+00:44 These orange things mean these have indexes.
+00:48 Here's the actual details.
+00:49 I can even come over here, jump to the console
+00:51 and say select star from, move to where,
+00:55 and you get all sorts of details.
+00:56 Like let's say player id equals one, that's probably me.
+01:00 Then there's all the moves that I made
+01:03 since I entered first into the game.
+01:05 Pretty sure my id is one, we can check that.
+01:07 Anyway here's how we query it,
+01:08 and you can see all the different games
+01:11 that this has been running in and so on.
+01:13 So this is really nice when caveat
+01:15 this only works in PyCharm professional.
+01:17 If you have PyCharm community
+01:18 well you're going to need to use something else right.
+01:21 The database access stuff is not part of that
+01:22 so I'd check out that DB browser for Sqlite.

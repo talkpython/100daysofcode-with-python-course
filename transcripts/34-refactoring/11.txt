@@ -1,0 +1,57 @@
+00:00 Alright number 10, bonus, the last refactoring item.
+00:03 I'm just going to talk over some
+00:05 general coding best practices
+00:07 because of course Pythonic code is important
+00:10 and pleasant to read but it's often also a matter
+00:13 of sticking to the best of role coding practices.
+00:16 For example, make sure your units of code are short.
+00:20 Typically, a function or method should
+00:23 be around like 10, 15 lines max.
+00:26 It can be very Pythonic but if you start to
+00:29 write functions of hundreds of lines of code, it's not good.
+00:32 It's not easy to maintain.
+00:33 So this is your 10 guidelines to make
+00:35 your code more maintainable.
+00:37 Some other ones I want to highlight here,
+00:39 write code once duplication is a monster.
+00:42 You really want to prevent having
+00:44 the same code defined in multiple places.
+00:47 Keep unit interfaces small, so that
+00:49 means when you have functions the number
+00:51 of arguments to get if you keep that to a
+00:54 reasonable level, it's easier to maintain.
+00:56 For example, if you have a function that
+00:58 takes 10 arguments, not easy to maintain.
+01:01 You could consider passing around a
+01:03 class or refactoring to a class modules.
+01:06 Again, that's the part of name spaces of the Zen.
+01:10 It's good to have similar behaviors
+01:12 or similar objects grouped together in files.
+01:15 To not have one file holding 10 classes,
+01:18 split those out in files, right?
+01:20 Which makes it easier to reuse them in other programs.
+01:23 Testing of course, you want to automate your testing
+01:27 that when you make changes you have this regression
+01:30 suite that you can just run in seconds
+01:32 and highlight if you introduced a new failure.
+01:35 Which, if your system becomes more complex, might happen.
+01:38 This is an automatic way to catch that
+01:41 and keep the quality of your software high.
+01:43 In day 10 you learned about pytest
+01:45 and how to write tests so that's really important here.
+01:48 There's also a lot of habit around this
+01:50 so if you get into the habit of writing clean
+01:54 code, keeping to high standards, it means
+01:56 that when you go into your code base, you leave
+01:58 the campground cleaner than you found it, right?
+02:01 I love the anology in the pragmatic programmer
+02:05 book about having a small crack in
+02:08 a window if I remember correctly?
+02:10 Leaving that unattended leads to broken windows
+02:14 and the same is true for your code base.
+02:16 If you let small bad habits creep in
+02:18 it might actually lead to a lot of damage in the long term.
+02:21 It's really about having good habits
+02:24 around writing clean code, run the PEP8 checker
+02:27 on your codes, see if it's formatted properly,
+02:30 the right conventions are used, etc.

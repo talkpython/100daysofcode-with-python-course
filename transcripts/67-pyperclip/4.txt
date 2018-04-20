@@ -1,0 +1,52 @@
+00:00 Okay, this might be the quickest demonstration
+00:02 you're going to see in this entire course, so .
+00:05 Alright, in the shell we're just going to import pyperclip.
+00:09 This video is just going to walk you
+00:10 through the pyperclip usage.
+00:14 In your head just think about the whole,
+00:15 the way you copy and paste at the moment,
+00:18 so if you want to copy something
+00:20 from the command line and paste it somewhere else,
+00:23 you're going to copy to put it on the clipboard,
+00:26 and then you're going to paste it off the clipboard.
+00:29 Same sort of concept here, but almost reversed.
+00:33 So, if you want to take the user's text
+00:36 that they have copied to the clipboard,
+00:38 you're going to paste it into your code,
+00:41 and then once you've manipulated it,
+00:42 and you want to put it back on the clipboard,
+00:45 you're going to copy it out of your code.
+00:47 So, if we do pyperclip.paste
+00:53 it's going to show you what I have on my clipboard
+00:55 or the last item on my clipboard, okay, which is this URL.
+01:01 Now, let's say we just want to strip out the HTTPS
+01:04 and have just codechallenge.es there, okay.
+01:09 If we want to push that back to the clipboard,
+01:12 we just go pyperclip.copy
+01:18 and then in here we put whatever we want in, okay.
+01:23 Now, mind you, you can make this a variable.
+01:26 So, this doesn't have to be plain text.
+01:28 If your variable happens to contain an entire, say,
+01:33 book, or an entire chapter,
+01:34 or an entire website worth of text,
+01:39 you can pop that variable in here
+01:41 and it'll copy it back to the clipboard.
+01:43 Okay, and then just to show that that worked,
+01:46 let's just put pyperclip.paste back in,
+01:50 actually, I'm not going to copy that,
+01:51 that'll override the clipboard, won't it?
+01:53 So, pyperclip.paste and there we have it,
+01:58 just the stuff that we sent back
+02:00 to the clipboard using copy.
+02:02 Okay, one thing to then keep in mind,
+02:06 is that as you use this script,
+02:08 as you use this module pyperclip.copy and paste,
+02:12 it will override what you have on your clipboard,
+02:15 so be careful.
+02:17 Just keep that in mind as you're using it,
+02:19 especially when you're using it in a script
+02:22 that you're going to call, few times a day,
+02:26 you might actually end up copying
+02:28 over the top of something important.
+02:29 So, just keep that in mind.
+02:31 And, now let's create some scripts.

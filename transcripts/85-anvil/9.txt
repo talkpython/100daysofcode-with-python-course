@@ -1,0 +1,100 @@
+00:00 So we have our cool little app here, we've got our
+00:02 various forms, and we've got a navigation.
+00:05 Let's go ahead and actually run this,
+00:06 we've not run it yet.
+00:08 So, what happens when you run it?
+00:09 Well it actually just kicks off, I think,
+00:11 a docker image on the Anvil servers.
+00:13 So let's click this and get started.
+00:15 Oh, before we do, let's give it a name.
+00:19 I'm going to call this HighPoint-100days.
+00:23 Now we can hit run.
+00:25 Now notice it's running right here,
+00:27 this little helper thing up at the top,
+00:29 and then press stop and get back.
+00:31 But anything below this, this is our app,
+00:33 this is what people will see.
+00:34 You can even expand and collapse the little side thing.
+00:37 But if we click on these notice, not so much
+00:40 is happening, right?
+00:41 Our forms are not showing.
+00:42 But still, look, our app is running.
+00:44 And if we wanted to see it on other browsers
+00:46 or on our phone or something you can even go over here.
+00:49 But we're not going to that yet, we're just going to hit stop.
+00:52 Now remember, don't close your browser,
+00:54 you're not going back to an editor,
+00:56 you just want to hit stop, you're already here.
+00:58 So how do we link these things together?
+01:01 Well, this is where this goes from kind of interesting
+01:04 to really different and interesting.
+01:06 Watch what happens when I hit code here.
+01:08 We've already seen that we have our code in the background,
+01:10 okay, and let's open our app browser for a minute.
+01:14 So what we need to do is import these other forms,
+01:16 in Python, so here's how it goes.
+01:18 From add_doc_form,
+01:21 import add_dock_form.
+01:25 So this is the standard way you get
+01:27 access to these other forms.
+01:28 You're going to need this for all the various sub forms here.
+01:37 All right, so we have them all imported, now what?
+01:42 So we're going to write a little bit of code here,
+01:44 that when the page loads, after init components,
+01:48 when the page loads we want to show the home details form.
+01:51 So notice we have a content panel here,
+01:56 and what we're going to do, is we're going to put instances
+01:58 of these forms into the content panel,
+02:00 and that's the thing contained in the middle.
+02:03 So we'll say self, notice the nice Intellisense,
+02:05 cotentpanel.items,
+02:07 not items, what you want to say clear, like that.
+02:10 So, in case something was here,
+02:12 we want to get it out, and we're going to do this every time
+02:15 we navigate, but also at the beginning basically.
+02:18 Say self.contentpanel.addcomponent,
+02:21 and we're going to create,
+02:23 we want to create a home details form like that.
+02:27 And that's going to do it.
+02:28 All right, now let's run this and see if it works.
+02:30 Boom! Look at that. HighPoint Home.
+02:32 Now none of this is working, so let's go link those
+02:34 three things up and replicate it for the various
+02:37 operations we have here.
+02:39 So we go back to design, and we just double click home,
+02:41 and notice link home clicked, and here's a function.
+02:44 Go back to design, do it for all docs,
+02:48 do it for add_doc.
+02:50 So notice, here are the various things that we can do.
+02:53 We can go home, and let's actually,
+02:55 do this over here.
+03:00 Call self.link, clicked, home, like so.
+03:04 Do the same thing with the other little forms
+03:06 for the various other pieces.
+03:08 So what have we got here?
+03:11 The all_docs.
+03:15 And this would be add_doc.
+03:17 Okay, great, it's almost finished.
+03:19 Let's run it and see where we are.
+03:23 Notice up here our title, HighPoint Home, HighPoint Home,
+03:26 and we click here, we get all documents,
+03:28 add a new document, but notice this is not changing.
+03:31 This is subtitle, but this is label title.
+03:33 Let's fix that.
+03:38 Now one thing that's cool, is notice over here on the right.
+03:40 These are all the stuff,
+03:41 things we can work with, and if you expand it, it shows you
+03:43 you can set the icon, text, etc., etc.
+03:46 So what we want to do is set the text here.
+03:50 So we'll set it home there.
+03:54 This one let's say All Documents.
+03:56 And this one be Add a document.
+04:01 How cool!
+04:02 Look at that.
+04:03 Very, very nice, I love how this is coming together.
+04:06 So, I think our navigation is basically done.
+04:09 The next thing that we got to do,
+04:10 is let's focus on adding a document.
+04:13 Because it's not super interesting to show the documents,
+04:15 until we have the ability to add them.
+04:17 So we're going to focus on adding a document next.

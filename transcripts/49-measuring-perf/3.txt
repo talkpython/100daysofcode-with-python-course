@@ -1,0 +1,106 @@
+00:00 Let's take a practical example
+00:02 and see how profiling can help us
+00:03 understand this performance.
+00:06 We previously talked about exploring CSV data
+00:10 earlier in the course,
+00:11 so we're going to take that exact same code
+00:14 and we're going to try to understand it,
+00:16 and in fact tweak it a little bit,
+00:17 based on what we see in the performance.
+00:20 So, let's pull this up here.
+00:22 We actually have in our demo code over here,
+00:25 under 'Days 49-51' we have two copies,
+00:29 and right now they're the same,
+00:31 of course the final code'll be changed,
+00:32 the starter code is exactly what you're going to see
+00:34 which we start with.
+00:35 So you can play around with this data over here,
+00:37 this is more or less just the end product
+00:39 from the CSV section.
+00:41 Over here we're going to work on this
+00:43 and we're going to try to understand its performance.
+00:46 We're going to actually step outside of PyCharm here,
+00:50 let me just copy the path to this file,
+00:52 there's a couple things we'll need to do.
+00:56 And first thing we want to activate our virtual environment.
+00:59 What we want to do is we want to use a built in module
+01:02 and we can understand the entire program's behavior
+01:06 from the outside,
+01:07 we don't have to write any code to do this.
+01:08 So what we want to do is we want to run cProfile,
+01:12 and we want to tell it to sort,
+01:14 we'll talk about sorting in a minute,
+01:15 we want to run that against program.py.
+01:17 How's it going to work?
+01:18 Poorly, because it's not a separate program,
+01:20 it's just a module in Python so what we need to do
+01:23 is say python -m to run the module.
+01:26 cProfile, capitalization here, capital 'P' matters.
+01:29 Now we're going to give it this, and let's see if that works.
+01:32 Okay, great, we got a bunch of gibberish-looking stuff here,
+01:35 a lot of things going on about frozen imports
+01:37 and all sorts of things,
+01:38 and it turns out this is not how we want to look at our code.
+01:41 I don't know how it's sorting it but it's not the right way.
+01:44 We would like to sort by cumulative time.
+01:46 There's basically two things that
+01:47 you probably care about here.
+01:49 One is per call, which is how much time
+01:51 is each one individually spending,
+01:54 and I think this is sort of the same thing,
+01:56 like how much time is just in this function.
+01:58 Not functions it calls, or above,
+02:00 but like summed up across the number of calls.
+02:04 But I find that by far the most useful one
+02:06 is this cumtime, cumulative time.
+02:08 So let's go over here,
+02:09 and you need to pass the sort parameter,
+02:11 but it won't work if you put it over here, -S.
+02:15 It needs to be before the script.
+02:16 So we'll say '-S cumtime'.
+02:18 Try it again.
+02:20 Okay, now let's see what we've got.
+02:21 A couple of built in imports,
+02:23 and notice we're working with research.py and program.py
+02:27 so this is some module stuff, this is not a lot we can do.
+02:30 But this right here, research.py init,
+02:33 this is pretty interesting.
+02:35 So this is actually the code that we call to read,
+02:38 basically parse the CSV.
+02:40 So if we look over here, this init is the thing
+02:43 that actually does the loading, the parse row.
+02:46 Over here like this we can look for parse row,
+02:49 and there's that.
+02:50 And we're spending about 300 - about 3 milliseconds
+02:55 on this, not super, super long,
+02:57 but we're calling a bunch of times.
+03:00 Okay, so it turns out that this program's a little hard
+03:03 to understand because it's not doing that much.
+03:06 This is actually an easier job for complex,
+03:09 involved applications I find a lot of times
+03:11 because it's pretty clear where it's spending time.
+03:15 This one, it's actually really quick.
+03:16 But we're still going to analyze it, don't worry.
+03:17 I just want to sort of give you the sense that actually this,
+03:20 even though it's a simple example,
+03:21 it's kind of hard to understand the performance.
+03:25 If you want to just run the whole thing
+03:26 and see how it works, here you go.
+03:28 Just run cProfile, sort by something,
+03:30 give a domain script to run, off you go.
+03:33 This is one way, but notice when we did this
+03:36 there's all sorts of stuff in here that's irrelevant to us.
+03:40 For example, initializing the typing module.
+03:43 I don't care, we can't control that,
+03:45 that's just something we're doing
+03:46 to define some definitions.
+03:48 You could say 'don't use typing' and that's an option,
+03:50 but can you hide that?
+03:53 Does importlib bootstrap find and load?
+03:56 These things, loading the module, we're spending
+03:58 significant time here.
+04:01 We can't control that.
+04:02 So what we want to do is we want to measure the parts
+04:04 that we can really carefully work with and control.
+04:07 So we're going to see how to do that using the API from
+04:10 within Python and we'll get better answers here.

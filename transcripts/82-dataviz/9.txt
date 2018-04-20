@@ -1,0 +1,39 @@
+00:00 Welcome back to the second day
+00:01 of the data visualization lesson
+00:04 and after the first day of theory and practical examples,
+00:08 it's now time to roll your own and now it's going
+00:11 to be fun be because you will be experimenting
+00:14 with data and give it a nice representation.
+00:18 If we head over to our code challenges platform,
+00:21 there are a few challenges I have in mind
+00:24 that will fit this purpose.
+00:26 We have a few data challenges and we're going
+00:29 to show you Marvel and PyBites first here in data.
+00:34 Here are some data sets you can use in these challenges.
+00:39 And for example for the Marvel data,
+00:41 I came up with this quick graph
+00:43 of comic book characters introduced every year.
+00:46 And I used Bokeh for this and that's just one example
+00:49 of a graph you can make of that data.
+00:52 We did a code challenge about analyzing our data
+00:56 and you're free to choose if that's Twitter data
+00:59 or Github or anything PyBites related
+01:03 and then make a data visualization of that data.
+01:08 Another challenge is Bokeh integrating its chart into Flask.
+01:12 I think that's a cool challenge
+01:14 because not only do you have to make the data visualization
+01:18 but also you have to integrate it into a web app
+01:20 which makes it much easier to share it out.
+01:22 Here are some data sets you can use.
+01:27 For the rest, you're just free to make a nice visualization
+01:31 and don't forget to pull request your work.
+01:34 So if you want to follow along
+01:35 with the code challenge platform, you can fork and
+01:38 clone our repo and make a branch and
+01:40 all the instructions are in here.
+01:41 When you're done you can open
+01:43 up a pull request via our platform.
+01:45 So that's that for challenges.
+01:47 Now get your hands dirty and tomorrow I will check in again
+01:51 with you to give you some more pointers
+01:54 and see how it's going.

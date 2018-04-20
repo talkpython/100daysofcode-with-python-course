@@ -1,0 +1,22 @@
+00:00 Okay, very quick setup for this project,
+00:02 we're going to create the feedparser folder,
+00:04 just like I have, and we're going to install our
+00:08 virtual environment, very good practice as always.
+00:12 Once it's up and running, we can launch it, venv\scripts\activate,
+00:18 it because I'm a Windows junkie,
+00:21 alright, now we can install feedparser,
+00:27 alright, that might take a minute or two
+00:29 to install, depending on your speed, and everything.
+00:33 Once that's done, we will try and install requests,
+00:37 and that's pretty much all we need for this project.
+00:40 After that, we're going, we're actually going to use requests
+00:43 to pull down the XML file,
+00:45 and then use feedparser to parse the XML feed,
+00:49 so install requests.
+00:53 Alright, off it goes,
+00:55 and we are done, now folder-wise,
+00:58 inside your directory, I would like you to create
+01:03 two Python files, one called parser.py,
+01:07 and one called pull_xml.py.
+01:10 Okay, just do that, empty files,
+01:13 and we will continue in the next video.

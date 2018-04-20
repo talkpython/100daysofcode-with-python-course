@@ -1,0 +1,32 @@
+00:00 Hello, this is Michael Kennedy
+00:01 and I will be your guide for Day 10, 11 and 12.
+00:05 And during these three days you're
+00:06 going to work with JSON APIs and
+00:09 in particular with a couple of search-based APIs.
+00:12 But of course, what you'll learn here
+00:13 you'll be able to apply to pretty much any JSON API.
+00:18 APIs are really important.
+00:20 These are the way that you reach out and
+00:21 you add superpowers to your code, to your application.
+00:25 You might write an application that has
+00:27 some data in the database,
+00:28 it's got some information that users have input,
+00:31 but maybe you want to add weather information,
+00:34 or integrate with Github or talk to Twitter.
+00:36 All of these use APIs.
+00:38 And so we're going to look at
+00:39 the foundation of APIs in this challenge,
+00:42 which is basically HTTP and JSON.
+00:45 And we're going to do that from Python, of course.
+00:47 So we're going to work with two services.
+00:50 One service I'm going to demonstrate
+00:52 how we write code against it,
+00:54 and then I'll give you another service
+00:55 for your code challenge that you can play with,
+00:58 and if you don't like either of those services
+00:59 for your code challenge, feel free to
+01:01 just go find another one.
+01:02 You'll probably have enough information
+01:04 to do something pretty interesting
+01:06 after this series of videos.
+01:08 So let's go look at this movie db search service.

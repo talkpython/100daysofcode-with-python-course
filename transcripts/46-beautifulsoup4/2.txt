@@ -1,0 +1,25 @@
+00:00 Okay, we just have a little bit of setup
+00:02 to do for this one.
+00:03 First things first, as always,
+00:05 let's create our virtual environment.
+00:09 Same thing, venv.
+00:12 Once that's installed, we need to install
+00:14 Beautiful Soup 4, of course,
+00:16 but we also need to pip install requests.
+00:19 So let's do that quickly.
+00:21 We'll just activate,
+00:24 the virtual environment here.
+00:27 Okay, now we can do pip install requests,
+00:32 and once that's done, we can then do
+00:35 pip install bs4
+00:39 You can probably type in beautifulsoup4,
+00:41 but bs4 is fine, and that's it.
+00:45 We have that installed.
+00:46 The last thing I'd like you to do is just create
+00:50 a file called scraper.py,
+00:53 and throw that into your project directory.
+00:56 When you run it, it will look something like this,
+00:58 scraper.py, just here.
+01:01 Okay, and that's it.
+01:02 So once you've got all that set up,
+01:04 launch your file and let's move on to do some coding.

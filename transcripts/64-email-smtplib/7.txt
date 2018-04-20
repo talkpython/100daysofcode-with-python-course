@@ -1,0 +1,91 @@
+00:00 How easy was that?
+00:01 This is pretty much one of the coolest scripts
+00:03 because you almost just have to write it once.
+00:07 And then you can copy and paste it
+00:08 for whatever project you want,
+00:10 obviously remembering a couple of good practices there
+00:13 which is one of them being to create
+00:15 your own application id for every application, right?
+00:20 Okay, so, what did we do?
+00:22 What's our recap?
+00:23 Well, we got our Gmail application password.
+00:26 There's your quick guide on how to do it.
+00:30 Again, a quick Google will get you everything you need
+00:32 to find out how to do that,
+00:35 but I will provide the links.
+00:38 Next, send email with smtplib.
+00:42 Well, we began by importing smtplib, go figure.
+00:46 Right, then, we specified the server
+00:50 that we're running, specifically the Gmail server.
+00:54 Then, we checked for a heartbeat,
+00:56 using that hello message, okay,
+00:59 that's just to make sure the server's okay and ready to go.
+01:02 And then we started the TLS encryption, all right?
+01:06 Next, we sent through our login details,
+01:10 and just a word of advice, never, ever, ever
+01:13 hardcode your application password into your script.
+01:17 Okay, never do that.
+01:19 The safest thing you can probably do
+01:22 that's also super simple, is make your application
+01:26 password an environment variable, okay?
+01:29 And then use something like os, or whatever
+01:34 to, reference that id, okay, in variable form.
+01:40 Import it, reference it, okay?
+01:43 Next, we sent the email from address to address body
+01:46 with a sendmail and then we quit.
+01:50 We closed that connection to the SMTP server.
+01:53 And we got a nice, plain-text email.
+01:57 Next, we have send an email with MIME.
+02:01 Okay.
+02:03 This one was a little more complex.
+02:05 We started by importing the required modules,
+02:07 right, Multipart and text.
+02:10 Then, we created the Multipart object in Message.
+02:14 Again, that's just nice and easy.
+02:18 All right, we built the header.
+02:20 From, to, and subject, yes?
+02:24 Yes, yes, we all got that.
+02:25 That was so that we had all that extra information,
+02:28 made our emails a little more functional and beautiful.
+02:32 All right, now, we had to attach our body text
+02:37 to this Message object, okay?
+02:39 Remember, when you specify your body text
+02:42 or whatever's going to be in the email,
+02:44 you don't do it using Message,
+02:45 you just sort of create your variable
+02:47 and then you attach it, all right?
+02:49 That's what MIME text is for.
+02:53 And then, we took that entire awesome Message,
+02:57 Body, Header object that we'd created
+03:01 and we turned it into a nice string,
+03:03 and we assigned that to text, and that way,
+03:06 sendmail, beautiful sendmail could talk to it
+03:10 and send the email off, all right?
+03:12 And I've also included this little BCC trick in there.
+03:16 Remember, we took our to_address and made it a list,
+03:19 that's this here, and then we had our existing list
+03:24 of BCC emails, whether we pulled that in from external
+03:27 or, I guess, hardcoded it into the script,
+03:30 whatever floats your boat, and we combined
+03:33 the two lists and sent them out.
+03:36 And that is it, my friends.
+03:38 It is your turn.
+03:39 Now, I reckon, really cool thing you can try
+03:43 is to write this script yourself.
+03:46 As I hinted at in one of the videos,
+03:48 find something that you can populate into your email
+03:52 with some sort of Python data structure or process,
+03:57 whether it be just a list of names,
+03:59 it could be something from a database, whatever,
+04:01 try your hand at that, and if you smash that
+04:04 and you have some extra time,
+04:06 I reckon try and automate it.
+04:08 Set yourself up a cron job if you're running Linux,
+04:11 hopefully, or a scheduler on Windows,
+04:13 whatever you can find, whatever you have,
+04:16 just Google around, find a way to automate it,
+04:19 and maybe send your mates some annoying emails,
+04:22 maybe just your smiley face with a thumbs-up.
+04:24 Do something like that.
+04:26 In fact, I might go and do that to Bob now.
+04:28 So enjoy, keep calm, and code.

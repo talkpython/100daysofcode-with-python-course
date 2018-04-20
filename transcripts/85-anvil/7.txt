@@ -1,0 +1,63 @@
+00:00 Alright, here we are.
+00:01 Let's begin, this is going to be our home_form.
+00:03 Let's begin by renaming this thing,
+00:05 that's not amazing so
+00:06 we can come over here and we can
+00:07 rename it to home_form is what I'm going to call it.
+00:12 Since my resolution is so small,
+00:14 I'm going to hide this thing back.
+00:15 I typically work with that open
+00:16 but for recording I made my resolution really small
+00:20 which means I'll try to compact things.
+00:22 Alright, so let's go over here and put a title.
+00:26 And we're going to give this a name,
+00:27 so in code we refer to these things as
+00:31 you know, whatever their name is here.
+00:33 Label1 is not super helpful, is it?
+00:35 So let's call this label title.
+00:39 And let's set it's default text
+00:41 as HighPoint Home, something like that.
+00:46 Alright, so what we want to do is
+00:47 we want to take some links, some hyper links
+00:50 and put them over here.
+00:51 So we're going to have three of them
+00:55 and let's just set the properties.
+00:58 Give them a name.
+01:00 It's going to be link home,
+01:02 it's text is going to be HOME all caps.
+01:06 This is going to be all_docs
+01:10 and this is going to be add_doc for creating a new document.
+01:15 Now, one thing you may have picked up on
+01:17 in our little demo app was there were some
+01:18 cool icons here and Anvil is integrated with
+01:21 what's called font awesome
+01:23 which I love it, font awesome is so cool.
+01:25 I use it.
+01:26 You've seen plenty of these fonts
+01:27 in the player that you're working with right now I'm sure.
+01:30 So we can come over here
+01:31 and say I'd like to have a home icon,
+01:33 actually this is the ad so let's have a plus.
+01:36 And it's a little plus that appears over here,
+01:37 let's do it for docs.
+01:41 Now if you're going to make a knock off on SharePoint
+01:44 obviously you've got to use word, right?
+01:46 So we've got a word icon down there
+01:48 and for home let's go over here
+01:50 and add an icon and type home.
+01:53 That looks nice, right there.
+01:56 Okay, so we've defined our UI,
+01:58 we've got these pieces here.
+01:59 Now the next thing to do
+02:01 is to actually add the contents.
+02:03 Now the way our navigation is going to work
+02:05 is we're actually going to load up this one page
+02:07 and we're not going to navigate away at all
+02:10 as far as the browser is concerned.
+02:12 So this is kind of what you'd consider
+02:14 a single page application which has a lot of benefits,
+02:18 means every time you interact with this stuff
+02:19 it doesn't necessarily go back to the server.
+02:22 Once the thing is downloaded,
+02:23 it runs really really fast
+02:24 which is a great way to run Anvil apps.

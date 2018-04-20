@@ -1,0 +1,108 @@
+00:00 And here's the final code here on the right.
+00:02 We'll go through it very quickly,
+00:04 not in too much detail.
+00:06 But essentially, start down the bottom.
+00:09 We can see we launched our first launch first, okay?
+00:13 And the reason we do this is this will generate
+00:17 the database for us on first launch.
+00:20 So as soon as this is run, it tries to
+00:22 connect to the SQLite3 database, and then it
+00:25 just fails while the except scenerio here
+00:28 is to just exit out of the app with some
+00:30 error code X that can be expanded on later
+00:33 if you feel like it.
+00:34 And this just ensures the we actually have
+00:37 a database file to talk to, inventory.db
+00:41 on the very first time that you launch this app.
+00:45 Okay? And then we pop back down and we're launching
+00:47 Main Menu here.
+00:48 We're running the main menu.
+00:50 And down here we've seen that before,
+00:53 these are all your different options, okay?
+00:56 Now if you want to add room, we then go down
+00:59 here to Add Room.
+01:00 And again, we've seen the Scrub, we're seen
+01:02 the Create the Table based on the user's input.
+01:05 Done.
+01:06 A room with the name has been added to the database,
+01:09 then we can run the inventory check, add inventory
+01:12 with the check input.
+01:14 Okay, so we'll just do a quick Check Input here.
+01:17 We've seen that again, it just checks to see
+01:20 if the name exists.
+01:24 If it doesn't exist, it just returns.
+01:26 Else it will scrub the selection.
+01:29 It will use that scrub function again here.
+01:33 It'll scrub it and it'll return it to Add Inventory.
+01:36 We'll pop down to Add Inventory here.
+01:39 Now the reason we want it scrubbed is because
+01:42 that selection that the person made is going
+01:45 to be used in our Execute command here
+01:48 into the database.
+01:49 So as they enter the item, it will execute
+01:53 insert into the room that they use as specified.
+01:59 Okay? And then it will enter in the item values.
+02:02 And it will then give them the option to
+02:05 keep entering items or to quit,
+02:08 which will take them back to the main menu.
+02:11 Okay? Back to the main menu.
+02:15 View Inventory, similar sort of thing as Add Inventory.
+02:19 Okay, the user selects a room.
+02:22 And then it will actually go through and add up
+02:26 everything in that room.
+02:27 So you can see we've got data[0] and data[1].
+02:31 It will actually go and print out the total of data[1],
+02:32 one being the value from our SQLite database.
+02:39 So we're selecting from, the room that the
+02:41 user specified, we're selecting everything from there,
+02:45 and then we're going to just add up the values,
+02:49 or those real values, and display it on screen.
+02:52 The other function that we haven't touched on
+02:54 yet is Calc Total, which is pretty much going
+02:57 through every single room, okay?
+03:00 It'll go through every room in the database,
+03:03 add up all the values, add it to the total,
+03:06 and then you'll get a total down the bottom.
+03:09 Okay? So that's pretty simple, right?
+03:10 We've got everything covered there.
+03:12 All right, let's actually run it and
+03:15 see how it works.
+03:16 So this will create a new database file
+03:20 called inventory.db because I don't have one.
+03:23 And then we'll add the room.
+03:26 What name would you like to give the room?
+03:28 Let's call it Kitchen.
+03:31 Okay a room with the name Kitchen has been
+03:33 added to the db.
+03:34 Let's add some inventory.
+03:36 Okay, which room?
+03:38 Okay let's choose Kitchen.
+03:40 And what item do we want to add in?
+03:42 Let's put in Fridge.
+03:45 Monetary value of the fridge is let's say 900 bucks.
+03:49 Okay, let's add something else.
+03:51 Let's add the oven.
+03:54 Let's say it's $1200.00.
+03:56 Okay we'll hit q.
+03:58 And now it can view the inventory list with three.
+04:02 Which room, kitchen, and it came up saying
+04:06 we've got a fridge of 900 bucks, we have an
+04:08 oven of $1200.00, total value of $2100.00.
+04:13 Okay, so we know that's the math there works.
+04:16 All right, let's add another room quickly.
+04:19 Let's call it the Study.
+04:21 All right?
+04:23 Let's add some inventory to the study.
+04:27 Okay let's call it the Computer.
+04:29 And let's say it's a value of $2500.00.
+04:33 Okay we don't want to add anything else.
+04:36 And now if we do View Inventory List,
+04:39 we can see both rooms.
+04:40 We choose the Study, we can see the study
+04:44 just has a computer in it for $2500,
+04:46 total value of $2500.
+04:49 Now if we want to see the total value of
+04:50 the entire house, we can click on number four.
+04:55 Total value of all rooms is $4600.00.
+04:58 And that's it.
+04:59 Okay, that's pretty much

@@ -1,0 +1,57 @@
+00:00 So, you saw the game being played.
+00:01 Let's look at the code that we're going to work with.
+00:04 We're going to come here to our main method and programs.
+00:07 This is where it all gets started.
+00:09 So, we'll print out the header,
+00:10 we'll print the high scores.
+00:11 Right now there are no high scores 'cause
+00:13 we have no memory of stuff.
+00:14 So there's not going to be a whole lot happenin' there.
+00:17 We're going to build up the roles and now,
+00:19 this is worth checking out.
+00:20 Over here, in this battle CSV, we actually have
+00:24 the sort of win-lose table for rocks, guns, lightening and
+00:28 if it, you know, the lightening attacks the devil then
+00:30 apparently the devil beats, uh, the devil beats lightening.
+00:33 Alright, something to this effect.
+00:36 We're going to use that, we're going to build up these roles
+00:38 and sort of indicate which thing can be which.
+00:41 We're going to create a couple players and then,
+00:43 we're going to go to this game loop thing and say, "Run."
+00:46 So we have three parts of the game happening over there.
+00:49 Notice here we're just pulling in this CSV file and we're
+00:52 allocating a row object, which we'll talk about in a second.
+00:56 And here we're just putting in some more details to
+00:58 figure out what opponents this thing loses or wins to.
+01:02 Here's a little header.
+01:03 And here's the high scores.
+01:05 So, let's go ahead and start by looking at this game service.
+01:07 This is where much of the database access is going to happen.
+01:10 So you can see all those little parts here basically become
+01:13 database queries or inserts or updates.
+01:15 So, here we're going to go do a query and find all the roles.
+01:19 Here we're going to find one for, uh, a particular name.
+01:22 So, um, Devil, for example.
+01:25 Here we're going to record a move given by a particular player,
+01:31 a particular role, that was their move, the game id,
+01:33 whether that won the game, if it was the final game play.
+01:37 Uh, what stage in... you know, what step
+01:39 in that particular game.
+01:40 Was it 1, 2, 3, 4 or 5?
+01:42 As we saw, the 5 that we played with.
+01:43 So, we're going to go.
+01:44 Basically our job during this section
+01:46 is to use SQLAlchemy to fill out this section here.
+01:49 And, over in the models we have things like a role,
+01:52 which has almost nothing on it right now.
+01:54 This is like Devil or so on.
+01:56 We have some moves.
+01:57 And this is more interesting.
+01:58 This is like a history.
+01:59 So this is like, uh, what role did they play by id,
+02:03 what game is this associated with, uhm, what position.
+02:06 Right, this is what we're just looking at there.
+02:08 So, we're going to convert these standard classes into
+02:11 classes that map to our database using SQLAlchemy.
+02:14 So, I think that's a good place to start.
+02:16 And, we'll do that next.

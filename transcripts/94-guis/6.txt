@@ -1,0 +1,43 @@
+00:00 Now you've seen how easy it is to create a GUI
+00:02 from a command line application.
+00:05 Let's go and review the core concepts.
+00:07 So it all starts with the Gooey library,
+00:10 so we're going to import GooeyParser,
+00:13 to get the, to actually show the UI
+00:15 and get the input,
+00:16 and then Gooey to indicate
+00:18 here's the method that runs,
+00:19 that triggers the Gooey application.
+00:22 So we got to apply that decorator,
+00:24 uh, the best place I found is right on the
+00:25 main method here,
+00:27 and we can give it things like the name,
+00:29 and the program description,
+00:30 and that actually shows up in the UI,
+00:33 then when we actually want to get the data,
+00:35 we did this is another method
+00:36 but you could just do it straight in line here
+00:38 We're going to configure the parser,
+00:40 create it at a argument,
+00:41 we saw that it can be simple text,
+00:43 or you know all sorts of widgets,
+00:45 that we can put in here and those are cool.
+00:47 And then to actually show the UI
+00:49 we're going to parser.parsarcs,
+00:50 and then what comes back as Gooey args,
+00:53 we just say .whatever your called the variables
+00:56 .mode, .searchterm is the two that we used,
+00:59 of course you can have arbitrarily many,
+01:01 and you can make up those names, so
+01:03 so just make it consistent,
+01:04 and you're off to the races.
+01:05 It's standard python at this point.
+01:08 You provide feedback for, sort of the rest of
+01:10 your app through just print statements,
+01:12 and those will land in that little
+01:14 text window in Gooey
+01:16 in the Gooey GUI
+01:18 so it's really nice. Straightforward and simple.
+01:20 If you just want a quick and simple
+01:22 GUI application,
+01:23 this is what you do!

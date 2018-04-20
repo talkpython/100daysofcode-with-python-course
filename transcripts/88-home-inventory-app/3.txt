@@ -1,0 +1,120 @@
+00:00 Okay, so the first thing we're going to look at
+00:02 is pretty much how you get started.
+00:05 It's a bit daunting,
+00:06 looking at an empty page like this, isn't it?
+00:10 The best way I find to start
+00:12 is to actually think about what you want your app to do,
+00:15 and make a menu for yourself.
+00:17 And normally I would say storyboard it,
+00:19 you know, get an empty document,
+00:21 draw it out with a piece of paper and a pen, whatever.
+00:24 But I think given this is a very basic app,
+00:28 I think this works quite simply, quite easily,
+00:31 to just create a menu.
+00:34 Okay? It's just going to be text based like an old CLI app
+00:36 that has 1, 2, 3, 4, 5
+00:39 with your different options, okay?
+00:41 So, without actually showing you the code,
+00:44 again I'm not going to show you the code until the end,
+00:47 but it is in the repo if you want to have a peek, of course.
+00:50 I'm just going to create under a main menu function,
+00:55 let me just copy and paste it in,
+00:58 just going to create a list, okay?
+01:01 Now this is a dictionary with the menu options in there,
+01:05 okay, and we're creating this with Add Room, Add Inventory,
+01:11 View Inventory List, Total Value, and Exit.
+01:15 So these are the five things we want our app to do,
+01:18 okay, so the idea is when the app launches
+01:21 it's going to give you the option to add a room
+01:24 'cause we're going to add a room to add inventory to.
+01:28 So you got to think about it in that sort of a way, alright.
+01:31 Sequentially, if you want to use this app,
+01:34 you're going to add the room first because by default
+01:36 we don't have a room to add anything to, okay?
+01:39 Once we have a room,
+01:41 then we can actually add some inventory,
+01:45 and then once we have inventory in there against a room,
+01:49 then we can actually view it.
+01:52 And then again, once we have everything in there
+01:55 we can see what the total value per room is,
+01:59 or the total value for the entire house so to speak,
+02:03 and then we can exit.
+02:05 And that's what we're going to wrap our entire app around
+02:07 today and tomorrow and the day after.
+02:11 Now, again, I'm not going to show you the entire app
+02:14 and walk you through every single function just yet,
+02:17 I'm just going to show you the more critical points,
+02:20 the more technical points, okay?
+02:22 So to make this menu,
+02:25 I've decided to put it in a while loop.
+02:28 I'm just going to copy and paste it in
+02:30 rather than make you watch me type it all out, there we go.
+02:34 So we have a while loop here, while true,
+02:37 so this is always going to happen,
+02:40 this list is always going to come up on the screen,
+02:43 unless something else is happening,
+02:45 it's going to come back to this list.
+02:49 So we know with the dictionary that unless you sort it first
+02:54 it's not always going to print in order
+02:57 from 1-2-3-4-5 when you iterate over it.
+03:02 So what I've done here is I've said for the item
+03:07 and for the description in our sorted menu,
+03:12 okay the items in there but sorted,
+03:15 we're going to print the item and the description,
+03:17 we're going to print that and that.
+03:19 And this little for loop here allows us to print this menu
+03:22 on screen, and it allows it to print it in order,
+03:27 that's what sorted is there for.
+03:29 And then we take the user input,
+03:33 so if the user selects one
+03:36 we're going to call a function called Add Room,
+03:38 if they select two, we're going to do Add Inventory,
+03:42 I'll explain this in just a second,
+03:44 if they do three, View Inventory,
+03:46 four Calculate the Total,
+03:48 five sys.exit.
+03:51 Now for sys.exit to work,
+03:53 we have to import sys
+03:58 and this sys.exit just exits out of the program,
+04:02 and if anything else is entered: invalid option, try again.
+04:07 Now the Check Input function here that is being called
+04:11 by Add Inventory and View Inventory is a little function
+04:16 I wrote just to check whether the room exists.
+04:20 So if you're going to add inventory,
+04:22 the first thing you need to know
+04:24 is what room you're adding the inventory to, right?
+04:27 Well that's what this checks here.
+04:30 So I'll quickly copy and paste that in again
+04:33 for you to have a look at.
+04:34 Lets just pop down here.
+04:38 Okay, so here's Check Input.
+04:40 So the first thing we're doing
+04:42 is we're actually printing out a list of the rooms,
+04:45 so this is yet another function ,
+04:48 don't worry you'll see it all in the final code,
+04:50 but it's essentially listing out the rooms that we have
+04:54 and it'll printed on the screen,
+04:55 which allows the user to see what room they want to select.
+04:59 And then the user types in the room,
+05:03 gets converted to lower case,
+05:05 and then if the room, which is assigned to selection,
+05:10 if it does not exist in the list of rooms
+05:15 then you get the message: that room does not exist.
+05:19 Else, we return the selection.
+05:22 Don't worry about what scrub is,
+05:23 we'll cover that on another video.
+05:26 And that's it, okay.
+05:27 So then, once we have the room
+05:31 we add inventory to that room.
+05:35 So all of these functions
+05:37 will be available in the final code,
+05:39 but what I'd like you to do is start thinking about
+05:41 how you would write these functions.
+05:44 How would you write Add Room?
+05:46 How would you write Add Inventory?
+05:48 How would you write View Inventory?
+05:50 Okay, and that's it for this one.
+05:53 In the next video we're going to look at
+05:55 some more of the advanced calls in this program
+06:00 and just for now, again,
+06:02 think about how you would write these different.

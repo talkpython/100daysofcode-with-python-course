@@ -1,0 +1,56 @@
+00:00 Second day of this section is going to
+00:03 actually be to work with
+00:04 an entirely different API,
+00:06 but another one around the podcast
+00:08 just to keep it simple and stable.
+00:10 So what your going to do is we're going to
+00:12 interact with this search.talkpython.fm
+00:15 Now if you're over here and you're
+00:16 on Talk Python,
+00:17 and you try to search,
+00:19 you could say "I would like to search for
+00:21 let's say, a 100DaysOfCode".
+00:22 Pull that up you can see
+00:24 it went back and found a couple of elements,
+00:25 an episode and a transcript,
+00:27 and it did this in a ridiculously
+00:29 fast period of time.
+00:31 But there's actually an API underneath here
+00:34 there's JSON API,
+00:35 and you can write queries you
+00:36 can search yourself right?
+00:37 it's open, and searchable for you
+00:38 and it's exactly like what you've been
+00:41 working with.
+00:42 So let's go over here and play
+00:43 with this a little bit.
+00:45 Click on this, and see the raw data,
+00:47 This is what you get back if you search for
+00:50 tests, so whatever you do is you put
+00:52 the little query string pieces there,
+00:54 so we'll put a100DaysOfCode,
+00:56 uh, and it's going to come back
+00:57 Firefox tries to make that response pretty,
+00:59 but it's going to come back looking
+01:00 something like this.
+01:02 Alright, so this is the API we're
+01:04 going to work with.
+01:05 So the first thing you're donna do is
+01:07 explore the API imposement,
+01:09 and your goal for the day
+01:11 is to create a program that
+01:12 does the following:
+01:14 It gets a search word from the user,
+01:16 It calls the search service using that
+01:18 API we just looked at,
+01:20 it makes sure the response
+01:22 from the server was okay so request.
+01:24 response.raise_for_status I believe,
+01:28 And then you want to return
+01:29 just a basic dictionary of the results,
+01:32 and use that to list out the titles.
+01:35 So it should look something like this on Day 2.
+01:37 Run your program, it has a
+01:38 little header if you want,
+01:39 ask the user for some search terms
+01:40 and it says "Boom. These are the titles."

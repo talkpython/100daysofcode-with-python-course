@@ -1,0 +1,25 @@
+00:00 Now, for Day 2, you're going to
+00:01 work with this movie service.
+00:03 Now, I just copied these over for you.
+00:06 Here are the three API endpoints.
+00:08 So, /api/search/{keyword},
+00:11 /api/director/{directorname},
+00:14 things like that.
+00:15 So, I've kind of laid out the goals of what I
+00:18 would like you to do on this particular day.
+00:21 On the second day, what I want is for you to
+00:23 more or less create the movie search client class.
+00:26 This is the uplink client.
+00:27 Don't have to test it, you don't have to use it,
+00:29 but you're going to need to add three methods to it,
+00:32 one for each endpoint.
+00:33 All right, and there's a few other steps about
+00:35 like setting the base URL, and things like this.
+00:38 And here's just a reminder of how this generally looks.
+00:41 This is not what you do for this one but,
+00:42 you'll have a class, interactional consumer,
+00:44 you have a method,
+00:46 it derives from uplink.get, and you can pass parameters.
+00:50 So, shouldn't be a huge effort for you, I hope.
+00:53 But, fill this out to match these three end
+00:55 points as you see fit.

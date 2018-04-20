@@ -1,0 +1,80 @@
+00:00 Welcome back to the second day of the
+00:03 Twitter API lesson.
+00:05 And in this video, I will show you
+00:07 a couple of ideas and projects you could be working on.
+00:11 The one we prefer, specifically,
+00:13 is how to make your #100DaysOfCode daily tweet.
+00:17 I mean, if you're doing the challenge properly,
+00:19 you should tweet out every day your progress,
+00:21 which is a great way to share your progress and work
+00:24 and also have that extra push to do it.
+00:26 To be accountable.
+00:27 And, so, we made a script when we did the 100 days
+00:31 to automatically tweet out our progress.
+00:34 And, obviously, it uses the Twitter API to automate that.
+00:40 As you noticed in the lessons, we did mostly get,
+00:43 this would be a post request to the API,
+00:46 so that would be a nice extension.
+00:48 And this is a related article,
+00:50 "How To Build a Twitter Bot".
+00:52 Basically, how to automate Twitter.
+00:54 A very useful tool to have.
+00:56 Then there is this three-part code challenge you can do,
+01:00 which we broke down by getting the data
+01:04 and do some Twitter data analysis
+01:06 to find out about similar tweeters.
+01:08 Again, you will be working with Twitter API data
+01:11 and look at what Twitter users are similar.
+01:14 So, that could be interesting.
+01:15 And we have number seven,
+01:17 which is a Twitter sentiment analysis.
+01:19 For this, you don't have to know about,
+01:21 like, very sophisticated machine learning libraries.
+01:24 Back in the day, we used TextBlob.
+01:27 It was quite easy to use.
+01:29 Though your analysis would still be
+01:31 a bit more intelligent.
+01:33 So, you can do one or more of these challenges.
+01:35 And here are some extra links if you're more interest
+01:39 in testing how to test an API,
+01:41 here's an article about parsing Twitter geo-data
+01:46 and mocking API calls.
+01:48 So that could be interesting for you
+01:49 to look at how to use the patch object
+01:52 to mock the Twitter API, or Tweepy, in this case.
+01:57 And so, this could be another thing you could be working on.
+02:00 You could even combine it with the Slack API.
+02:04 For example, to post to a channel every time
+02:06 your domain gets, or whatever search term,
+02:09 gets mentioned, and we did that here,
+02:12 so this is our own 100 Days Of Code repository.
+02:16 And Day 20, we had this domain mention script.
+02:19 So you can take this, adjust it to your needs,
+02:22 or build it up from scratch.
+02:24 And as you see here, we used another library,
+02:28 Twython, which is also very nice
+02:31 to talk with the Twitter API.
+02:33 And we use the Twython streamer to look at Twitter data
+02:36 in real time.
+02:37 So, the other thing that you can do,
+02:39 which is very interesting,
+02:40 is look at Twitter's streaming API
+02:42 and combine that with Slack.
+02:44 It would be a very cool project to work on.
+02:46 Another option is to export your Twitter archive.
+02:50 That'll get you a CSV file.
+02:52 And then Day 37, you should have learned about
+02:54 parsing CSV, so you could also do that to
+02:57 get a similar Twitter archive report with some stats.
+03:02 One other example, we did a guest post
+03:05 the other day on Real Python.
+03:07 Another thing you could do is read through
+03:09 this article and see how you can use the
+03:12 Twitter API to convert tweets of a particular handle
+03:16 into a nice web app.
+03:18 So, those are quite some projects and examples.
+03:21 You can look through them and take whatever interests you.
+03:25 The goal, really, is to get more practice
+03:27 using the Twitter API with Python.
+03:30 And, with that said, don't forget to have fun,
+03:33 and keep calm, and code in Python.

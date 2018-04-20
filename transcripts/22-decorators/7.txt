@@ -1,0 +1,40 @@
+00:00 Alright now it's time to review what we've learned,
+00:02 how to write a decorator.
+00:05 A decorator takes a function to be decorated.
+00:09 It adds behavior before, and or, after.
+00:12 Then it returns the function.
+00:15 Don't forget to use wraps to the preserve the doc string.
+00:19 Args and keyword args.
+00:21 There are various ways you can call a function in Python.
+00:26 The simplest way is to use a required, positional argument.
+00:30 If I leave off this argument, I get an error.
+00:34 The second type, is the keyword argument
+00:37 which can be set to a default.
+00:40 And then we have two arbitrary sequences which are the list,
+00:44 in this case sports, and keyword arguments
+00:47 which always go last.
+00:49 Here is an example how you would call this
+00:50 with all the types of arguments.
+00:54 Let's write a timeit decorator.
+00:56 It takes a function, starts the timer
+00:59 before calling the functions, calls the function,
+01:02 and ends the timer,
+01:03 printing how long the function took to execute.
+01:07 We define the decorator.
+01:10 Here's how to apply it to a function.
+01:14 You can stack decorators.
+01:16 Note that the order matters.
+01:20 As timeit is the outer decorator,
+01:23 that's the one that wraps at the outer level.
+01:26 Some examples of common decorators.
+01:29 Here are two from the Flask documentation.
+01:32 One checks if a user's logged in
+01:34 and the other is performing caching.
+01:37 Those are ideal examples of decorators
+01:40 because they abstract away common behavior
+01:43 which you want to apply to multiple functions.
+01:46 Here's another example of a well known decorator
+01:49 called LRU Cache.
+01:52 You can find those in the Flask
+01:54 and the Python documentation respectively.
+01:58 And now it's your turn.

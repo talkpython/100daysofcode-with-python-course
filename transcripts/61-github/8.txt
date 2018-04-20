@@ -1,0 +1,41 @@
+00:00 Welcome back to the second day
+00:02 of the Github API project and today it's your turn
+00:06 to start using the API with Python to build
+00:09 something practical, something usable, something you like.
+00:13 We've done a couple of code challenges
+00:14 on the PyBites blogs that are related.
+00:17 One was to query your favorite API.
+00:20 And one of the submissions was building a
+00:22 Github profiler that takes a user name
+00:26 and returns a nice profile page using Flask.
+00:30 That could be a nice use case here.
+00:33 Secondly, there was Oktoberfest,
+00:36 by Digital Ocean last October,
+00:38 and you could get a t-shirt if you made four pull requests,
+00:41 and obviously the Github API was used
+00:44 to measure the amount of pull requests
+00:47 so we made a challenge to use bottle
+00:50 to replicate that application,
+00:52 and although that it's not running anymore,
+00:55 it's still a cool app to query the amount
+00:57 of pull requests a user makes during
+01:01 a certain period, so that could be another thing to work on.
+01:04 Then I want to highlight co-challenges.
+01:07 Our platform that uses to Githun API
+01:09 to log in users and we have a dedicated button.
+01:14 And I'm already logged in with Github
+01:16 as you saw in the previous lesson.
+01:18 And another feature for example
+01:20 is the whole integration of our blog challenges.
+01:23 The flow is like write up, setup with git,
+01:27 total whole process of making your branch,
+01:30 and finally you can submit your work.
+01:31 And if you do a PR, we used to get API
+01:35 to reach out to your branch and see if you
+01:38 actually committed Python fouls,
+01:40 which in this case I did not, not yet.
+01:42 And this again is integrating the Github API
+01:45 into our web application, so that's another example.
+01:49 And that's it, that's those are a few ideas,
+01:52 and be creative, remember this is great stuff
+01:55 to show in your Github profile, so have fun and learn a lot.

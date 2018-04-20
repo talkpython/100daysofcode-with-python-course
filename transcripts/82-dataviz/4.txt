@@ -1,0 +1,92 @@
+00:00 So that was some prework, but I have not spoke about
+00:03 yet is what are we going to plot.
+00:05 And there are three graphs I want to make.
+00:08 First, I want to make a bar chart of our
+00:10 posting activity, what months did we put more content out,
+00:13 and what months less.
+00:15 Secondly, I want a pie chart of breakdown of our categories,
+00:19 so each blog post has one category associated,
+00:22 and that will show us what we blog about most.
+00:26 Similarly, that also is true for tags,
+00:29 tags give an indication what we blog about.
+00:31 But we use more tags than categories.
+00:34 One blog post can be a ten tags,
+00:37 so it's a bit more granular.
+00:38 So it still will be another angle,
+00:41 or another inside into our data.
+00:43 Next up, there are three exercises to get the data
+00:47 into a format that I can easily make those three graphs.
+00:52 So first of all, I want to have the published entries.
+00:56 So I'm going to use Counter,
+00:58 to count all the entries by year, month.
+01:01 And here's where the helper comes in,
+01:03 because we're going to use a list comprehension,
+01:07 we've dealt with in, I believe Day 16,
+01:10 and we can say pub dates,
+01:14 and make a list comprehension.
+01:17 And, I can just say for entry in entries,
+01:22 and entries is our complete RSS feed broken down
+01:26 into nice entries by feedparser.
+01:29 And we saw an entry here, laid out.
+01:31 So I'm going to look over these entries
+01:33 and for every entry, here's the helper,
+01:36 I'm going to convert to datetime,
+01:39 entry, and I'll take the published fields
+01:42 and what's funny, I'm actually going to
+01:43 prepare to those two, using the dictionary way.
+01:46 But I should actually be able to do a dot notation
+01:50 which is much nicer.
+01:52 I put that into convert to datetime,
+01:54 and convert to datetime, it's actually not
+01:57 100 percent accurate.
+01:59 It's more like, I mean that was the initial intent,
+02:02 but let's actually call
+02:04 it date, year, month.
+02:10 Because that's actually what it's returning, right?
+02:12 So we should make our functions descriptive.
+02:16 And, yeah let's give the first five to see if
+02:20 I'm going in the right direction.
+02:22 And I am.
+02:23 And the nice thing about Counter as we've seen in day four
+02:28 in the collections module lesson,
+02:30 is that I can give it a list of items,
+02:33 and it just does a count.
+02:34 So if I want to have posts by month,
+02:38 so counter can just get this pub dates list,
+02:42 and look what happens.
+02:44 Wow. Boom.
+02:45 I mean I didn't have to keep track of,
+02:47 well we saw that in the previous lesson right,
+02:49 they can hide it in a manual loophole
+02:51 for all the items, keep in account and etc.
+02:54 But this is all done, understand the library.
+02:57 Secondly, we need to break down the categories.
+03:00 So, similar as list comprehension, we're
+03:04 going to look over the entries.
+03:05 But instead of getting your month,
+03:08 I'm going to use the other helper we defined
+03:09 and just get category.
+03:11 And I'm going to do that on the link.
+03:13 And those are not pub dates, those are categories.
+03:17 Again, counter is your best friend.
+03:26 Tags is almost the same, so I'm going to just copy it over.
+03:30 Tags, that is actually a bit more complex.
+03:32 Let me go from start, so for entry and entries,
+03:36 and here I have an exceptional case
+03:38 for a nested for list comprehension.
+03:42 For each entry, loop through the tag.
+03:46 And each tie has a term, let's lower case
+03:49 that to not have to deal with upper and lower case.
+03:52 So for each entry, because one entry has a list of tags,
+03:56 I'm looping through this list of tags,
+03:58 and I'm taking out the term.
+04:00 That's what I'm basically doing.
+04:01 I lower case that tag, so we have all the tags,
+04:04 for all the entries.
+04:05 And again, I can use a counter to get that all counted up.
+04:09 Let's give most common a limitation of 20,
+04:13 and let's print the first five.
+04:17 And obviously five then is at the top.
+04:19 Right, that was a lot of preparation but the good news,
+04:23 is that the data is now in a structure that
+04:25 we can easily make plots.

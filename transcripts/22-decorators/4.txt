@@ -1,0 +1,33 @@
+00:00 Let's do a more realistic
+00:02 and interesting example, let's write a timeit decorator.
+00:14 And as we said before, we call the decorated function,
+00:17 and we add some behavior before and after calling it.
+00:29 Alright, we got that defined, so we
+00:32 have a decorator called timeit.
+00:34 It receives a function, it wraps the function,
+00:37 and we will see in a bit why that is.
+00:39 We pass it the args and the keyword args.
+00:42 We start a timer, we call the function,
+00:45 we end the timer, and then we print
+00:47 how much time that function took.
+00:49 We return the wrapper, and that's it.
+00:52 Let's then define a function that
+00:53 we can use this decorator on.
+01:02 So that in itself is not decorated yet,
+01:05 so let's define it again using the decorator.
+01:12 And look at that, how cool is that?
+01:14 So the decorator started the timer,
+01:16 it ran the function, it measured the time,
+01:20 and after the function was complete,
+01:22 it reported back how long it took.
+01:24 So it took two seconds which of course is not a surprise.
+01:27 A final note about wraps, so what if
+01:29 I wouldn't have done wraps function?
+01:33 So let's take that temporarily out.
+01:40 And let's inspect that function.
+01:45 Hey, where is my doc string?
+01:50 It disappeared.
+Not good, let's put it back.
+01:55 Let's define the function again using the decorator.
+02:00 And there you go, so that's why you should always use wraps
+02:04 from the functools module, to preserve your doc strings.

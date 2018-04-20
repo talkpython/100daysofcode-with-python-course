@@ -1,0 +1,47 @@
+00:00 I hope it was fun to watch me write this D&D game,
+00:02 but it's going to be way more fun
+00:04 for you to write one yourself.
+00:05 And no, we're not going to write the same game,
+00:07 we're going to do something totally different and fun.
+00:10 So, over here on the GitHub repo,
+00:13 here's the D&D game in case you want to go in
+00:15 and actually look the the code we just wrote.
+00:17 So you can use that to help you come along here
+00:20 as an example.
+00:22 Now, let's go down a little bit here.
+00:23 We're going to work on a different kind of game.
+00:26 Rock, Paper, Scissors.
+00:29 So, here's our wikiHow on how to play Rock, Paper, Scissors,
+00:31 if you've never done it.
+00:32 It's a straightforward, fun little game,
+00:35 slightly more complicated than
+00:36 just guessing a number and those sorts of things.
+00:38 So, it's a pretty interesting game
+00:40 in that sort of three option way.
+00:43 And so what we're going to do,
+00:45 definitely in the first two days,
+00:46 maybe even into the third day,
+00:47 is we're going to build the standard Rock, Paper, Scissor.
+00:50 However, if you feel like you get done early
+00:53 and you want something special,
+00:54 like a big challenge,
+00:55 I've also put a link here to this thing called
+00:59 15 Way Rock, Paper, Scissors.
+01:01 And, by the way, they even go beyond that
+01:03 so you can have more than just 15.
+01:05 I think there's like 25 is probably the highest I've seen,
+01:08 but there's all sort of fun creatures and interesting
+01:11 things going on here.
+01:12 So, let's get to the first day.
+01:13 So, what you're going to do is mostly just watch the videos,
+01:16 learn what you're going to learn by watching them,
+01:19 and let's just create a project
+01:21 that's going to be the foundation of
+01:23 Rock, Paper, Scissors.
+01:24 You don't really need to create a virtual environment
+01:26 or anything like that
+01:27 because there's no dependencies,
+01:28 there's really nothing to pip install,
+01:30 which is the main reason to have a virtual environment.
+01:33 First day, mostly just watch the videos
+01:35 and create that starter project.

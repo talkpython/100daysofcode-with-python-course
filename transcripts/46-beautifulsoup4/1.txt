@@ -1,0 +1,17 @@
+00:00 Okay, everyone welcome back.
+00:02 This is web scraping with BeautifulSoup 4.
+00:05 I'm Julian Sequeira, again,
+00:07 and just a disclaimer, this has nothing to do with dinner.
+00:11 This has everything to do with web scraping.
+00:14 If you're hungry, go get something to eat.
+00:16 If not, crack on, because what we're going to do now
+00:19 is this is going to be a very quick module.
+00:21 We're going to run through
+00:23 pulling down a webpage with requests,
+00:25 not in any detail because we've done that before.
+00:28 Then we're going to parse that webpage information
+00:32 with BeautifulSoup 4.
+00:33 You can do some really cool stuff,
+00:35 so I'm very excited to show you this one.
+00:37 Just set up your environment and the next video,
+00:40 and then we'll get straight to some code.

@@ -1,0 +1,69 @@
+00:00 Hello again, it's Michael.
+00:02 And we're getting really near the end
+00:04 of your 100 day journey.
+00:06 And I think this topic is going to be a really nice one
+00:08 to round out some of the work that you've already done.
+00:11 We're going to talk about building GUI applications.
+00:15 That's right.
+00:16 Windows applications, not terminal applications.
+00:20 You're going to work cross-platform just like Python,
+00:22 in fact, we're going to take it a step farther,
+00:24 we're even going to bundle these up so nobody will even know
+00:27 you wrote them in Python.
+00:29 Right, you give them an .exe, or .app, or linux binary,
+00:32 and they can just run it.
+00:33 It's going to be amazing.
+00:35 Here is the simple application that we're going to build.
+00:38 Now, we're going to start pretty simple.
+00:41 We're not going to build super complicated applications,
+00:45 but we're going to use a framework that basically takes
+00:48 CLI, command line argument apps, and converts those
+00:51 into what we would have in some sort of GUI here.
+00:55 So, what might have been a command line argument,
+00:58 the search term, or the mode, are now UI elements.
+01:02 One you can see is free form text, one is a dropdown.
+01:05 Really, really nice framework.
+01:08 The framework we are going to use to build this
+01:09 is something called Gooey: G-O-O-E-Y.
+01:13 You know, it's a play on the spelling phonetics
+01:15 of GUIs, I'm sure.
+01:17 But it turns almost any Python command-line program
+01:21 into a full GUI application in just,
+01:23 maybe not one line of code, but just a couple lines of code.
+01:27 Really, really simple and easy.
+01:29 So, the bang for the buck on this one is amazing.
+01:31 It's really nice to have a GUI application
+01:35 and yet it's really, actually not much work,
+01:37 if you're willing to accept a simple UI.
+01:39 So, Gooey, we're going to do that.
+01:42 We talked about packaging Python applications.
+01:45 It's one thing to have a script that shows a window,
+01:47 it's an entire another thing
+01:49 to give a simple, single application
+01:51 to a non-technical person who may or may not
+01:54 have Python installed, who may or may not have
+01:57 the right version or any of the dependencies installed.
+01:59 Just give them one thing that they can run.
+02:01 Like on Mac, it'd be great if they could just have
+02:03 like a movie search app
+02:04 they could double-click and it would run.
+02:07 Or on Windows, a movie search app
+02:08 they could double click this .exe.
+02:12 There's nothing more to it.
+02:13 It's literally just this .exe file,
+02:15 you do that and you run it.
+02:17 Or even, over here on Ubuntu.
+02:19 Give them the movie search app,
+02:20 they double click it, it runs.
+02:22 Don't have to set up Python,
+02:23 it doesn't even have to be installed on the machine.
+02:25 Just like any other fully packaged application,
+02:28 it's ready to go.
+02:29 For this, we're going to use something called PyInstaller.
+02:33 So, there's sort of two parts to this whole section.
+02:36 We're going to one, build the GUI application.
+02:38 Two, an additional step to add this sort of
+02:42 packaged element in this distributable version to it.
+02:46 It's really fun.
+02:47 I really hope you enjoy it
+02:48 and we're going to get started right now.

@@ -1,0 +1,65 @@
+00:00 And, that was pyperclip.
+00:01 You can see it's pretty fun, isn't it?
+00:04 So, there are a lot of different things you can do with it.
+00:06 Used cases, I'm sure you're starting to think of,
+00:09 which is good because,
+00:10 well we'll discuss that in just a minute.
+00:12 Let's recap everything we did, okay?
+00:15 Just a quick overview, I'll make it very fast.
+00:18 We're importing pyperclip, okay?
+00:20 We paste what's on the clipboard
+00:23 into your code using pyperclip.paste, okay?
+00:27 Then, we copy anything between the copy brackets,
+00:31 we copy that back to the clipboard using pyperclip.copy.
+00:36 Alright, our affiliate script, okay?
+00:40 We assigned the paste, okay.
+00:42 Everything that was on the clipboard we assigned it
+00:44 to a variable, right?
+00:47 And, then the only tricky thing, I suppose,
+00:49 was that we were checking to see if the word "amazon"
+00:52 was in our URL, and if it wasn't,
+00:55 then we said it was an invalid link.
+00:57 And, if it was, it then appended the affiliate code
+01:01 onto the end of the URL.
+01:04 Really simple stuff, very useful.
+01:06 Obviously, no fact checking to the max, anyway
+01:10 because if you just put amazon.com, that would pass
+01:13 but that's not a valid affiliate link, okay?
+01:18 Right, then we built a text replacer script,
+01:21 which is also a lot of fun.
+01:22 Maybe not as useful, but really really fun anyway.
+01:26 So, we imported pyperclip again.
+01:28 Alright, we pasted what was on the clipboard back in,
+01:32 into our code, alright.
+01:34 We replaced it using user specified text.
+01:39 Okay, they got to choose what they wanted to be replaced,
+01:42 and then they got to typing the word or words
+01:46 that they wanted to replace it with.
+01:49 Alright, and once that was done,
+01:52 it then copied back to the clipboard.
+01:55 Easy peasy.
+01:58 Alright, now it's your turn.
+01:59 So, pyperclip, one really cool thing with clipboards
+02:04 is that you can actually make a clipboard
+02:07 that has persistent memory, so to speak, okay?
+02:12 Once you copy something onto the clipboard,
+02:14 it's saved there and you can look at your history
+02:17 of copies, everything that you've copied to the clipboard.
+02:21 I think that would be a very, very cool use case
+02:24 for pyperclip.
+02:25 So, for you Day 3, think about how you can copy what's
+02:29 on the clipboard, and if anything is copied to the clipboard
+02:33 come up with a way to store it, perhaps
+02:35 and maybe make some sort of application
+02:38 that will then have your history of everything
+02:41 that you've copied.
+02:43 That would be very cool.
+02:44 If not, if that's too complicated
+02:46 and you don't have much time.
+02:47 Well then, just go ahead and think about the things
+02:50 that you copy and paste on a daily basis.
+02:53 You could use this as a simple thing
+02:55 to make your own password vault
+02:58 and whatever else you can think of,
+03:00 so come up with something that uses pyperclip
+03:02 and code that for your Day 3.

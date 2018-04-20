@@ -1,0 +1,51 @@
+ 0:01 Python has this really interesting concept called slicing. 
+0:03 It lets us work with things like lists, here in interesting ways. 
+0:07 It lets us pull out subsets and subsequences if you will, 
+0:10 but it doesn't just apply to lists, 
+0:13 this is a more general concept that can be applied in really interesting way, 
+0:17 for example some of the database access libraries, 
+0:20 when you do a query what you pulled back, 
+0:23 you can actually apply this slicing concept for eliminating the results
+0:27 as well as paging and things like that. So let's look at slicing. 
+0:31 We can index into this list of numbers like so, 
+0:34 we just go to nums list and we say bracket and we give the index, 
+0:37 and in Python these are zero-based, so the first one is zero, 
+0:40 the second one is one and so on. 
+0:42 This is standard across almost every language.
+0:44 However, in Python, you can also have reverse indexes
+0:48 so if I want the last one, I can say minus one. 
+0:50 So this is not slicing, this is just accessing the values. 
+0:53 But we can take this concept and push it a little farther. 
+0:56 So if I want the first four, I could say 0:4 
+1:01 and that will say start at the 0th and go up to but not including the one at index 4. 
+1:06 So we get 2, 3, 5, 7, out of our list. 
+1:09 Now, when you are doing these slices, 
+1:12 any time you are starting at the beginning or finishing at the end, 
+1:15 you can omit that, so here we could achieve the same goal by just saying :4, 
+1:19 assuming zero for the starting point. 
+1:21 So, slicing is like array access but it works for ranges instead of for just individual elements.
+1:27 Now if we want to get the middle, 
+1:30 we can of course say we want to go from the fourth item, so index 3, 
+1:34 remember zero-based, so 3 and then we want to go up to 
+1:37 but not including the sixth index value, 
+1:40 we could say 3:6 and that gives us 7, 11 and 13. 
+1:44 If we want to access items at the end of the list, it's very much like the beginning, 
+1:50 we could say we want to go from the sixth element so zero-based, 
+1:54 that would be 5 up to the end, so 5:9 and it would be 13, 17, 19, 23, 
+1:59 but like I said, when you are either starting at the beginning or ending at the end, 
+2:03 you can omit that number, which means you don't have to compute it, that's great, 
+2:06 so we could say 5: and then it'll get the last one. 
+2:09 But you still need to know where that starts, 
+2:12 if we actually wanted 4, so there is a little bit of math there, 
+2:15 if you just want to think of it starting at the end and give me a certain number of items, 
+2:19 just like where we got the last prime and that came back as 23 when we gave it a minus one, 
+2:23 we can do something similar for slicing 
+2:26 and we could say I'd like to go start 4 in from the back, 
+2:29 so negative 4 and then go to the end. 
+2:32 So that's the idea of slicing, it's all about working with subsets of our collection here, 
+2:36 the example I gave you is about a list,
+2:39 but like I said we could apply this to a database query,
+2:42 we could apply this to many things in Python 
+2:45 and you can write classes that extend this concept and make it mean whatever you want, 
+2:49 so you'll find this is a very useful and common thing to do in Python. 
+

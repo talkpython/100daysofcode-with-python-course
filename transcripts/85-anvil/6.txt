@@ -1,0 +1,56 @@
+00:00 Alright, are you ready to get started?
+00:01 It's time to build something now that
+00:03 you've seen what we're going to build,
+00:04 and some of the building blocks, let's go over to Anvil.
+00:07 Now, I suggest you go to talkpython.fm/anvil to get started,
+00:11 I'm working with the guys there and maybe
+00:13 I'll be able to get you some kind of discount
+00:15 if you do decide to sign up based on this.
+00:18 I'll put more details in the readme in the your turn,
+00:20 but be sure to go there this way, talkpython.fm/anvil.
+00:29 Here's their site, you want to just log in,
+00:32 you'll probably want to sign up.
+00:33 Now, it should take me right there,
+00:34 I think I've logged in in this browser session already.
+00:38 Now, I find when I'm working with Anvil
+00:39 that I really just want to go over here
+00:42 and get the web application to go away
+00:44 and just get it full screen, because everything's
+00:46 going to happen inside here.
+00:51 Here's my HighPoint trial test thing
+00:53 that we were just playing with.
+00:55 You can actually go down here and click on this,
+00:57 and get to some of their interactive tutorials
+00:59 if you want to look through them, that's pretty cool.
+01:01 They've got a lot of helpful little videos and walkthroughs,
+01:04 things like that, so really pretty nice
+01:06 support to get you started.
+01:08 But we're just going to create a new application.
+01:11 I can see we have three basic looks,
+01:14 and this one looks a lot like the
+01:16 app we just build, didn't it,
+01:17 so we're going to go with the material design app.
+01:22 And once you pick material design,
+01:23 you need to pick your layout, there's a lot of options,
+01:26 just blank or custom, or single page,
+01:28 we're going to go with what's called
+01:29 a card-based layout with a sidebar.
+01:32 So here we are in our application.
+01:34 We only have this one view right now,
+01:36 but if you click app browser,
+01:37 you see we can have more than one form,
+01:39 we have our modules, server modules,
+01:41 the services, and things like that.
+01:43 Okay, so I'm going to put this away for now,
+01:45 but that's the way we get started.
+01:46 And what we do is we just go over here
+01:48 and we way, I would like a label over here,
+01:50 for example, on the title.
+01:51 Or I'd like a button to be right there.
+01:53 And we're going to drag the stuff around,
+01:55 arrange it, and then we can flip over
+01:57 to the code side, so here's the code
+02:00 that runs when our form is shown.
+02:03 So we're going to hook the events from these components
+02:05 and they'll call functions back
+02:07 on that code that we just saw there.

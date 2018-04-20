@@ -1,0 +1,67 @@
+00:00 Alright, let's fix up this document details page.
+00:02 I did a little draggy, droppy magic
+00:04 to put title category and labels.
+00:06 Labels and then another label to have their text
+00:09 that will programmatically set in the contents here as well.
+00:13 There's no point in you seeing me drag that over,
+00:15 you would have done that a bunch.
+00:16 So let's just go over here, and go like this.
+00:20 Talk equals self.item.
+00:24 In fact, I think we could probably go over here
+00:26 and do a data binding if we really want.
+00:29 This could be name.
+00:35 This we're going to set in codes,
+00:36 we're going to take that away.
+00:37 This one we also, I think need to set in code.
+00:41 This one we could add a data binding of contents.
+00:44 We'll just run it and see how we're doing.
+00:48 Click on one, boom.
+00:49 How awesome is that?
+00:50 There it is.
+00:51 Okay, so really, really close.
+00:53 We got to set those two cause we
+00:54 don't want to transfer them over directly.
+00:57 Maybe we could do the created category,
+00:59 but we'll just do it in code.
+01:04 Category is going to be doc of category.
+01:09 From the category we'll get the name.
+01:13 Oh, don't forget that's text.
+01:15 Text, text, text.
+01:17 The text here we're going to set that
+01:19 to what we had in our item template.
+01:27 Like that.
+01:28 And, it'll be consistent I guess we'll say doc.
+01:34 Okay, that should do it.
+01:36 Maybe one thing really quick here.
+01:38 Let's take this away, make this font a little bit bigger.
+01:45 Same thing for the title, make it a little bit bigger.
+01:49 Alright, let's run it.
+01:51 Let's see, are we done?
+01:52 Let's try the feed parser.
+01:54 Wow that is cool, isn't it?
+01:56 So document details here probably
+01:58 got to line that up a little,
+01:59 but we got this, here's your nice date.
+02:00 It's under the documentation category,
+02:03 and then, there it is.
+02:04 Let's go find another. Let's go find the Higgs one.
+02:06 There's the Higgs with a little bit of science stuff,
+02:08 has the crystals and it's under science.
+02:10 These are the things we search for
+02:12 and it showed up over here.
+02:14 Like Higgs.
+02:16 Pretty amazing.
+02:17 Let's go check out the day one read me.
+02:18 There's the stuff about day times.
+02:20 Okay, so our application is pretty much done.
+02:23 I'm going to call it done.
+02:25 This is really nice.
+02:26 Of course, there's a lot more we can do.
+02:28 We probably want to save this version,
+02:30 and I'll call this final version.
+02:32 You know I actually I have a really cool version history,
+02:34 that you can publish and roll back versions,
+02:37 all sorts of cool stuff, even clone it with git
+02:40 which I'll do and put into the repository for you guys
+02:43 to look at so you can look at the code
+02:45 but you'll have to come back to Anvil to actually use it.

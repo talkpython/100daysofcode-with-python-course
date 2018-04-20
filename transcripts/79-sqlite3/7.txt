@@ -1,0 +1,136 @@
+00:00 So what just saw in the last video,
+00:02 inserting data line by line,
+00:05 on this Python shell, within this Python shell,
+00:07 is actually quite tedious, right?
+00:09 Imagine trying to enter lots and lots of data.
+00:12 Well, you're not going to do it that way.
+00:14 That was just for demonstrations.
+00:16 So, what I've done is I have actually written a simple
+00:20 populate_db.py Python file,
+00:23 which again is in the materials for this course,
+00:26 and what it does it actually prompts you to enter the data
+00:32 as it is required,
+00:33 and you can run it as many times as you want.
+00:35 It actually keeps looping through until you quit out of it.
+00:38 So, let's take a look at that file here.
+00:40 Now, let's create it.
+00:41 You're again going to use some magic here.
+00:44 You can just copy the file from the actual repo, otherwise,
+00:48 just feel free to pause and tuck this in if you're crazy.
+00:51 Uh, alright.
+00:52 Let's create the file here.
+00:55 Let's save the file as
+00:58 pop, woops, populate_db.py
+01:02 Alright, here comes the magic.
+01:05 Alright, let's take a look at that.
+01:07 Now, this is nowhere near as complex as
+01:09 the generator one we did before.
+01:12 So, first things first,
+01:13 as soon as you click on this or run this script,
+01:16 it's going to run the enter_details function, okay,
+01:19 and the inter details function simply starts a while loop
+01:24 and while true, which is always true, right?
+01:26 Running the script is true.
+01:28 So while true, it creates an info list,
+01:33 an empty one, right?
+01:34 We need to set this here because we are going to to add to it,
+01:37 in a second.
+01:38 Now, it actually runs three inputs and this is where it
+01:42 prompts you to enter the data that you want in the database.
+01:46 So, name=, or name is input,
+01:50 enter a name.
+01:51 So, when you enter a name,
+01:53 this prompt is assigned to the name variable.
+01:55 Same with address, same with phone number.
+01:57 Nice and simple.
+01:58 Now, for I, we are going to run a for loop for I,
+02:02 in name, address, number.
+02:05 That's the three variables.
+02:07 So, it's going to iterate over them.
+02:09 We want to append I,
+02:14 so append the name for I,
+02:16 so, for name let's just break it down.
+02:18 So, for name in name here,
+02:24 we are going to append the data within the name
+02:28 to the info list.
+02:30 Okay, so by running this for loop is where we are
+02:32 populating the info list with these three variables.
+02:35 Simple as that.
+02:36 Now, you remember this from the generator before?
+02:40 We have a with statement, okay,
+02:42 so it's opening the connection, right,
+02:45 and within this width statement
+02:48 it is running connections on cursor,
+02:50 and then it's executing this SQL here.
+02:54 Now, this is the important part.
+02:56 So, we are inserting into our details table
+03:00 these three values,
+03:02 but we are not actually.
+03:03 These are actually wild cards, right,
+03:07 so these are substituted just like you would with a stream,
+03:11 okay, using in the print statement,
+03:13 but with substituting the contents of info.
+03:17 So this is very manual.
+03:20 Just think of it that way.
+03:21 What if info wasn't filled with three name, address, number,
+03:26 three list items?
+03:28 What if it wasn't?
+03:29 Well, this wouldn't work.
+03:31 So this was written specifically for our address book table,
+03:36 details table,
+03:38 because we know it has three columns: one, two, three;
+03:41 and we are going from left to right,
+03:43 name, address book, phone number.
+03:46 So, if again, if this info was any other way,
+03:49 this would mess up.
+03:50 Likewise, if someone wrote an address into enter name,
+03:55 and a name in enter address,
+03:58 you're going to end up putting an address into the name column
+04:01 and the name into the address column.
+04:03 So, just bare in mind those limitations,
+04:05 but the reality is inserting the info list populated
+04:11 with name, address, and number into your database
+04:14 and then it simply prints data inserted to database.
+04:19 Then, it asks you if you want to stop.
+04:24 So, if you hit q, in any case,
+04:29 it's going to break out of the script.
+04:31 Otherwise, it's just going to continue on
+04:34 and go back to the top and ask you the same three questions.
+04:38 So, let's save this file.
+04:41 Lets exit out of our shell
+04:45 and let's run it Python populate_db.py
+04:50 So, enter a name.
+04:52 Let's just give us some white space there.
+04:55 Now, the name is going to be Bob.
+04:58 What's Bob's address?
+05:00 Somewhere over the rainbow.
+05:05 Isn't that lovely?
+05:06 And a phone number.
+05:09 Let's go backwards.
+05:13 Alright, that's Bob's phone number.
+05:14 Data inserted to database.
+05:16 Hit q to quit.
+05:18 Ooh, there we go.
+05:20 We go back to the start.
+05:21 So let's enter name, Mike.
+05:24 Where does Mike live?
+05:25 The US of A.
+05:30 And his phone number?
+05:32 As per every US phone number I see on TV 555,
+05:37 something else, let's go with 3226.
+05:41 Data inserted to database.
+05:44 Alright.
+05:46 We'll hit q to quit and we get out of the script.
+05:49 Done.
+05:50 Alright, and it's safely closed and everything
+05:52 because the SQLite connection was wrapped
+05:54 in that with statement.
+05:58 Refresh our database table
+06:00 and there we have the new data.
+06:03 So you can take something like this script,
+06:06 put it into some sort of automation,
+06:09 and then you'll be able to add people,
+06:12 or users, or whatever to your database.
+06:15 Imagine this in a Flask script.
+06:17 Pretty cool.
+06:18 Alright well, enjoy that and.

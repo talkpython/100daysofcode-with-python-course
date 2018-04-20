@@ -1,0 +1,60 @@
+00:00 Here is your three-day breakdown
+00:02 for this lesson.
+00:03 It's actually pretty simple.
+00:05 There's not much to it because we are dealing
+00:07 with data structures.
+00:08 Super important though, so very important
+00:11 that you get this down.
+00:13 For the first day, we're just going to watch the videos.
+00:16 Okay, there's not too much involved with this.
+00:19 Just watch the videos that we have
+00:21 on lists, tuples, dictionaries, and then just have
+00:25 a play in the Python shell.
+00:26 There's really not much to do.
+00:28 So digest the content in the videos
+00:30 and then hang around for day two.
+00:33 Now the second day, it gets a bit more interesting.
+00:37 What I'd like you to do is follow this link here,
+00:39 this bites of Py code challenges promotion link.
+00:45 This will give you free access to this specific bite.
+00:48 This is a little challenge for you.
+00:51 We just open it in a new tab.
+00:54 Okay, I will log in with GitHub.
+00:57 So you have to have your GitHub account ready.
+01:00 And there you go.
+01:02 So I'm already a premium member obviously,
+01:04 but this will unlock this bite for you to work on
+01:09 if you are not already a premium member.
+01:12 This here is regarding dictionaries.
+01:14 So have a good play with this.
+01:16 Enjoy the challenge.
+01:18 Work on it in the command line within your browser
+01:22 and do that for day two.
+01:26 Back for day three, this gets a little more tricky.
+01:29 What I'd like you to do is a bit different as well.
+01:31 I'd like you to go into this data.py file
+01:36 which is here in the repo.
+01:37 And I'd like you to just have a quick look
+01:39 at the dictionary and the lists that are in there.
+01:43 It is pretty much a list of just the United States states
+01:48 and the acronym used for them.
+01:52 So what you can do then is complete each one
+01:57 of these little tasks, okay.
+02:00 It will involve you actioning or working against
+02:04 the list in the dictionary, pulling out data
+02:06 and just playing around with them.
+02:09 So you'll need to pull them into some,
+02:12 whatever script, import them to whatever script
+02:14 you'll be running this from.
+02:16 And just remember that dictionaries are unsorted
+02:20 so that should make this a little more tricky.
+02:22 Alright, so that's your day three.
+02:24 Just playing around with that data.py file.
+02:26 Obviously if you want to play around with it
+02:28 in any other way, go ahead, feel free.
+02:31 But this is just a couple of quick,
+02:33 these are just a couple of quick tasks for you to do
+02:36 that should give you around 15 or 20 minutes worth
+02:39 of practice which is what we're aiming for.
+02:42 So enjoy, these are your three days
+02:44 and let's get on with the video.

@@ -1,0 +1,51 @@
+00:00 Now, before I turn you loose
+00:01 to go work on the code on your own
+00:04 and do your own profiling,
+00:06 I want to give you a short warning.
+00:08 It's not a major warning,
+00:09 but there is an effect you really need to be aware of.
+00:13 There's some parallels here with quantum mechanics;
+00:15 in quantum mechanics
+00:16 we have Heisenberg's uncertainty principle
+00:18 where it talks about the more precisely you know
+00:21 the position of something, the less precisely
+00:24 you can tell its speed and momentum.
+00:26 So, by measuring one thing really closely
+00:28 you have actually weakened your understanding of the other.
+00:31 And profilers are like this as well.
+00:33 You have your code operating one way
+00:36 and you measure it really deeply,
+00:38 actually put tons of hooks into it to do
+00:40 this monitoring or porting with cProfile
+00:44 and it might actually change the performance of your code.
+00:46 So, when you look at those numbers,
+00:48 like for example we said our program takes
+00:50 610 milliseconds to run.
+00:52 Maybe it only takes 400 milliseconds to run,
+00:53 but with profiling it takes 600
+00:55 and these effects are not evenly distributed.
+00:59 It's not like, "Well, the whole program slows down 20%."
+01:01 No. Some of it is barely affected.
+01:03 Some of it's massively affected
+01:06 and I would say a general rule is:
+01:09 the more things you do in small pieces,
+01:12 that's affected more.
+01:14 The stuff that's kind of pushed into the standard library,
+01:16 it doesn't have it's hooks in there.
+01:18 So, for example that parse row loop
+01:21 looping over every row in CSV
+01:23 probably has some affect where as the sort,
+01:27 that's one line measured
+01:29 and then it's handed off to CPython
+01:31 and then it's time when it's back.
+01:32 So, there might be a ton of operations in there
+01:34 but they're not measured.
+01:36 So, just be aware this Heisenberg uncertainty principle
+01:39 going on with profilers also somewhat applies to debuggers.
+01:43 So, they kind of both apply here
+01:45 but in this context we're concerned about
+01:47 profilers and timing and it really can have a big affect.
+01:50 That said, these profilers are massively helpful
+01:54 and much better than your intuition
+01:55 on understanding where your code's slow
+01:57 and how you should optimize it.

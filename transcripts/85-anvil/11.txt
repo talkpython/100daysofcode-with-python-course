@@ -1,0 +1,116 @@
+00:00 We have our ad new document form here,
+00:03 and it's working pretty well in terms of UI,
+00:05 but it has no responsiveness, nothing happens right?
+00:08 So let's go to the code side and add that.
+00:11 First thing that we want to do is we want to
+00:12 populate this combo box here.
+00:15 Now you can go type in the items,
+00:17 if this was like a set of things you knew,
+00:19 like what color of items you want?
+00:21 we only have three colors, type it in here.
+00:23 Or what month of the year?
+00:25 that doesn't change just type it here.
+00:27 But, when we're working with things
+00:30 that are going to change,
+00:31 like categories out of our database,
+00:33 we want to do that in code.
+00:35 So, let's write some categories.
+00:38 Now, for just until we get to the database part,
+00:40 I'm going to just type them out here.
+00:44 Let's suppose we have four categories that
+00:46 we're ultimately going to store in the database
+00:48 that can change and grow.
+00:50 Then we'd able to do things like go to the database
+00:52 and say show me all the documents that have science,
+00:55 that are tagged with science or something to that effect.
+00:58 So we'll go over here, and we'll go to self.dropdown.items
+01:03 I want to set that to two things.
+01:05 What we need to do is give it a tuple,
+01:07 for everything in the categories,
+01:08 we want to give it a thing to show, and then the actual value.
+01:12 So I actually want to have two things,
+01:14 I want it to start out selected with just nothing.
+01:17 So let's say something like this.
+01:24 So, this is what's going to appear,
+01:25 the words select the category with the value of None,
+01:28 so we can test that they're selected nothing.
+01:30 And in here, we're going to create a c, c
+01:34 maybe we'd use ID or something,
+01:36 for now we're just going to use this.
+01:37 For c categories, I'll test that.
+01:42 Select a category, oh yeah that's sweet.
+01:45 Okay, so this is good.
+01:48 Now the next interesting thing really has to do
+01:50 when we click on this button.
+01:52 I'm going to click on button six,
+01:53 so if I just double click right here,
+01:55 it's going to add that code.
+01:57 Let's tighten that up a little.
+01:58 It's going to call this function.
+02:00 So we either want to save the thing and maybe navigate away,
+02:05 or if there's missing data,
+02:07 like they haven't given it a name,
+02:08 they can't save it right?
+02:09 So let's do a little validation bit here.
+02:14 Now let me just type this out
+02:15 and then I'll talk you through it.
+02:18 Alright, so we're going to do a quick validation.
+02:19 And the way we get the values, out of say the text box,
+02:22 is just the dot text properties.
+02:24 And we're also going to strip that down,
+02:26 make sure they didn't just put white space.
+02:28 For the drop down, it's selected value right,
+02:30 that's the second element right here.
+02:33 Either the text of the category or nothing.
+02:36 And if they haven't typed anything into this textarea,
+02:39 a multiline text box, then we're going to say you
+02:42 can't create empty documents.
+02:43 So let's go over here,
+02:47 we don't have to pass anything along,
+02:49 because these are all part of this object here.
+02:52 Now if there are errors, more than one,
+02:53 we want to show them all.
+02:54 So we'll say if errors, and then what do we do here?
+02:59 Let's add a label where we can put an error,
+03:02 maybe give it a nice color.
+03:05 We can use a little divider here like this.
+03:14 Here we go, made it a little bold,
+03:15 put it in the center, give it a nice red color,
+03:17 say this is an error.
+03:19 Now when it runs, before there's errors,
+03:21 we don't want that to show up right?
+03:22 We don't see this is an error.
+03:25 So let's go and have that removed.
+03:26 Also, I put a divider,
+03:27 but for the sake of size, let's do this.
+03:30 So at the beginning, we're going to come over here
+03:32 and just say
+03:36 clear this out.
+03:37 But if for some reason there is an error,
+03:41 we want to set this.
+03:42 And let's actually do a cool little trick here.
+03:44 We'll say join
+03:48 on the error.
+03:49 So when they get a list of errors,
+03:50 and then we're going to separate them with new lines,
+03:52 which preserve themselves from when this ges to the web.
+03:54 So let's try this, try our validation.
+03:57 So if I just hit go, we should get three errors.
+04:00 Bam, look at that.
+04:01 Document name is required,
+04:02 document category is required,
+04:04 and cannot create empty documents.
+04:05 Let's pick science.
+04:07 Now just the name is required.
+04:09 The name, now some details have to be provided.
+04:16 Now that almost worked, didn't it?
+04:18 Actually, there's no more errors,
+04:20 we just need to call this at the beginning every time.
+04:23 So let's go over here,
+04:25 and zero that out every time we validate,
+04:28 or we could maybe do it here, take your pick.
+04:32 Or do it else, whatever.
+04:33 I'll leave it like this.
+04:38 Now once I fill this out,
+04:40 boom, it's gone.
+04:41 That would've created the document if we had implemented.

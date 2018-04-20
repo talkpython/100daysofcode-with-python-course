@@ -1,0 +1,81 @@
+00:00 Hey, this is Michael, and I'll be
+00:01 your guide for the next 3 days.
+00:03 And over those 3 days, we're going to talk about
+00:06 recording the actions of your application,
+00:09 giving you insight into how your app is running,
+00:11 how users are using or misusing you code,
+00:15 and even capturing crashes that might happen.
+00:20 So, if you run a website, and the user
+00:23 says, "Hey, your site crashed."
+00:26 Here's a 500 server error page from Get Up, for example.
+00:31 If it crashes, what do you do?
+00:33 They say, "Well, I clicked this button,
+00:35 "and it just crashed."
+00:37 Great, if you click the button and the button works,
+00:39 well, you're in a really tough place
+00:41 trying to reproduce that, unless you recorded
+00:43 exactly what they did and exactly what went wrong.
+00:46 So we'll see with logging that that's super easy to do.
+00:49 So next time they call you up and say,
+00:52 "Hey, something crashed," you can actually go look
+00:54 and see what happened, and that will give you
+00:56 a much better chance of, one, reproducing
+00:58 what they did, and two, solving the problem.
+01:01 Let's take a look inside the log file
+01:03 for Talk Python training.
+01:05 So this is somewhat condensed.
+01:07 This is one log file from one day,
+01:10 but it's compacted so you can see
+01:11 the different scenarios within it.
+01:13 And it's also edited to be anonymous.
+01:16 We're actually keeping more information in our log files,
+01:18 but I don't want to share people's private information,
+01:21 so this is what we're going to get.
+01:23 Now, if you look through here you'll see a couple of things.
+01:25 There's notices, there's errors.
+01:27 For example, here's a user action.
+01:30 This particular user from that IP address
+01:32 has successfully logged in.
+01:35 You can see information about their browser,
+01:36 and their IP address, and the time,
+01:38 and all that kind of stuff.
+01:39 We have some more user access.
+01:41 Here somebody's subscribed to get notified.
+01:44 They basically gave us their email address and said,
+01:46 "Hey, mail me when there are new classes."
+01:48 Down here, our user happened to have logged out.
+01:50 They were logged in, and they did some stuff,
+01:52 and now it looks like they're gone.
+01:53 They were running Windows 10, for example, with Firefox.
+01:56 That's cool, so these are the types of things
+01:58 you might record, but we also have other interesting stuff.
+02:01 For example, why is a search engine trying to search
+02:06 a authenticated only lecture page?
+02:09 So, for some reason, it's trying to go to this page.
+02:12 Either it doesn't exist, or it's not allowed to get to it.
+02:15 But, for some reason, people's trying to get here.
+02:18 So maybe we should go and figure out what's going on,
+02:21 either make that page accessible to Google,
+02:23 or maybe we're linking to it in a way we probably shouldn't.
+02:27 Look at this appear, though, this is a little nefarious.
+02:29 We see somebody coming in and trying to go to wplogin.php.
+02:34 That's WordPress log in.
+02:36 This page, this site, is not written in php,
+02:40 it's definitely not WordPress, but here
+02:42 somebody's trying to get into it.
+02:44 And they're telling us that the user agent is Firefox 4.0.
+02:47 That's unlikely, 'cause that's so old.
+02:51 Here we can see somebody's actually trying to break in.
+02:53 If we look carefully, they're doing
+02:55 it again, and actually again.
+02:57 This happens all the time.
+02:59 People are just probing for known ways
+03:01 to get into your site, get into your database, and so on.
+03:04 So knowing what is happening with
+03:05 your application, it's really important.
+03:09 It might be obvious what the users are doing, maybe.
+03:11 It's really unlikely that it was obvious
+03:13 that people are trying hack it, that search engines
+03:15 are trying to search hidden parts of it, things like that.
+03:17 So having this log information is really, really important,
+03:21 and you'll see it's quite easy to add to our apps.

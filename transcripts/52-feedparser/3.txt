@@ -1,0 +1,81 @@
+00:00 Okay, let's get cracking.
+00:01 First thing we need to do is import requests, sorry.
+00:07 import requests.
+00:09 Now I know you probably know how to use requests
+00:12 so I'm not going over this too much.
+00:14 But what I'd like you to do is
+00:15 enter the URL of your feed.
+00:18 Now to get that for example,
+00:20 we're going to be pulling the
+00:23 new releases XML feed from Steam.
+00:26 Stored up, steam powered.
+00:28 Okay,
+00:29 all I've done to get that is just Google
+00:31 "Steam Feed."
+00:33 Came up here,
+00:34 I just grab the first one
+00:35 and there was a link on the website for
+00:38 their RSS feed.
+00:39 Okay, this is the news one,
+00:41 but we're actually
+00:42 going to use the new releases
+00:43 for the video games.
+00:45 So you can feel free to grab whatever you want
+00:47 and once you do that,
+00:49 just pop the URL into here
+00:52 and assign it to URL.
+00:57 So there's mine there.
+00:59 Next, we're just going to use our standard
+01:02 Python and dunder there.
+01:05 Okay,
+01:06 and then what we're going to do is
+01:08 we're going to
+01:10 requests.get.
+01:12 So, essentially,
+01:13 we're going to get that URL
+01:14 and we're going to store it
+01:16 or we're going to assign it to the r variable.
+01:19 Okay, and then we're actually going to
+01:21 write the contents of this file,
+01:24 of this XML feed, this that you're pulling down,
+01:28 we're going to write that down to an XML file.
+01:30 Okay, so to do that,
+01:32 just going to do it the old fashioned way.
+01:34 We're going to open a file, let's just call it
+01:37 newreleases.
+01:39 Just like the actual XML.
+01:42 We're just going to write binary
+01:43 and we're going to open it as f.
+01:46 And I'm using that with Statement as usual
+01:49 just to make sure it closes
+01:50 out right when it's done.
+01:53 So, we're going to write
+01:55 r.content.
+01:58 I'm not explaining this in detail
+01:59 because you would have experienced requests
+02:02 by now, so that should be nice and familiar.
+02:05 But this is necessary to pull down the file.
+02:08 Alright, so we save that, that's all we need.
+02:11 Now, head over here to your shell.
+02:13 Woops, we don't actually want to launch the shell,
+02:18 We want to go Python pull_xml.py.
+02:22 Alright, that completed.
+02:25 Now, if we bring up our folder here,
+02:28 or everything that's inside,
+02:30 you will have seen it's created in newreleases XML file.
+02:34 Alright,
+02:36 that's it there.
+02:38 Now, we'll open that file
+02:42 in explorer.
+02:43 Where are we?
+02:45 Open, let's just choose, okay, don't hate me.
+02:48 Let's just choose internet explorer.
+02:51 So, now that this is open,
+02:53 you can have a good look at what's inside this XML file.
+02:57 Pay attention, maybe while you're doing this for yours, just open this,
+03:01 your XML feed
+03:02 in a browser
+03:04 or in your favorite editor,
+03:06 just so you can have a look at these little tags here.
+03:09 So pay attention to that,
+03:10 we'll talk about them in the next video.

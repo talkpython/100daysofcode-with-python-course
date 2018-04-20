@@ -1,0 +1,135 @@
+00:00 Now we're ready to incorporate Gooey.
+00:02 So, first thing we have to do is install it.
+00:04 Over here, we can say pip install gooey.
+00:08 Now, this works fine on Windows and Mac,
+00:10 I've found there's a little bit of a problem with Linux.
+00:13 I'll show you that in a second.
+00:14 But notice that it's depending on wxPython Phoenix,
+00:17 which is a brand new version of wxPython,
+00:20 a cross platform GUI thing, very nice.
+00:23 The G-U-I version, and then Gooey is built upon that.
+00:26 So while that's installing, let's look over here.
+00:29 I've noticed that there's a problem installing this, and I couldn't get it to work,
+00:32 so if you run these two sets of commands on Ubuntu,
+00:36 at least if you're using Ubuntu,
+00:38 I haven't tried it on anything else,
+00:39 they should get everything set up and ready to go.
+00:42 And then, you'll be able to work with wxPython
+00:45 and Gooey and so on.
+00:46 Without this, I couldn't get it to install.
+00:48 By the way, this takes a really long time,
+00:50 like ten minutes or something crazy like that,
+00:52 so just be aware.
+00:53 Here's the link for it over here in the Phoenix release,
+00:56 the 465.
+00:59 Okay, so this is all set up and ready to go,
+01:01 and the other thing that we want to do,
+01:03 just for completeness sake,
+01:05 is we want to make sure this gets put
+01:07 into the requirements file.
+01:08 Partram will do that for us.
+01:10 So let's say this: from gooey import GooeyParser.
+01:13 We're going to need that to, actually,
+01:15 that's basically the thing that triggers the UI.
+01:17 We need this other thing, Decorator,
+01:19 that will let us basically say run this method,
+01:22 and get the parameters from it.
+01:24 So we'll come over and say Gooey,
+01:25 I'll say Program Name, this will be Movie Search App,
+01:29 and we'll set the description.
+01:31 Search, talk, Python, Demo data for movies.
+01:34 Remember, this is just the search,
+01:37 the movie search jacent API we've already played with.
+01:40 Let's change this to the Gooey Edition here.
+01:43 This is the first thing, we have to put this Decorator,
+01:46 and the other, let's go to this get params.
+01:48 Now all of this stuff, we don't need this at all anymore.
+01:51 What we're going to do is,
+01:52 we're going to create a thing called a parser.
+01:54 That's going to be the GooeyParser.
+01:56 Then, on the parser,
+01:57 we're going to add a couple of arguments.
+01:59 This is super varied,
+02:00 you could have all kinds of flexibility here,
+02:03 but we want to do two things.
+02:04 A basic search term, and well give it,
+02:07 we'll say help equals the search term, or keyword,
+02:11 something to that effect.
+02:13 We want another one that's a little bit more complex.
+02:16 So we'll come up here and say,
+02:17 dest=mode.
+02:19 That's going to be the name of the parameter that comes out.
+02:22 The widget, here's where it gets interesting,
+02:24 this is a dropdown.
+02:25 Alright, there's a lot of different type of widgets,
+02:27 and our choices for our dropdown,
+02:29 tell PyCharm that's spelled correctly.
+02:31 That's going to be by director,
+02:33 by IMDB code,
+02:36 you can just say director, IMDB code,
+02:40 and keyword.
+02:42 Okay, so we got this and then all we need to do,
+02:45 actually, keep that for one more moment,
+02:47 we have to go over here
+02:48 and say args = parser.args
+02:50 parse args.
+02:51 This actually is what triggers the UI.
+02:54 And then in here,
+02:56 this is a dictionary that contains two values,
+02:59 search term and mode.
+03:01 So we can just say return,
+03:03 we return first the bottom mode and then the value.
+03:06 So args.get_mode,
+03:08 args.get_search_term.
+03:12 this little bit of code right here,
+03:16 that should do it.
+03:17 Let's go ahead and run this and see what happens.
+03:19 So we got our new way of getting arguments through the UI.
+03:22 we've got our Gooey, fingers crossed, run it.
+03:27 Look at that. How sweet is this?
+03:29 See our search term right there, and this is our search term
+03:32 and our mode.
+03:33 So the search term is going to be Cameron again,
+03:35 and this time, we're going to go down it.
+03:38 Look, there's our director.
+03:39 Oh, I already, I noticed something we did wrong.
+03:41 This is not going to work so much here, unfortunately.
+03:44 We need to change these to understand what those are.
+03:48 So we could either return different values,
+03:51 like if the mode is director, make it D,
+03:55 or we could just put these back at the top.
+03:57 I'll just change it up here.
+03:58 This was not, I was just going to search under keyword,
+04:01 which is not what we wanted, alright?
+04:03 So this and then else it's going to fall through,
+04:06 but let me just fix the comments.
+04:08 You know, the comments that lie.
+04:10 There we go, mode equals this. Alright, try again.
+04:15 Alright, now let's go and try to find those. Ready? Go.
+04:20 Oh, well I guess you can see what an error looks like.
+04:22 I think, actually we don't do get. We just .mode.
+04:26 It's just dynamic, it's not like a dictionary.
+04:29 There you go. One more time.
+04:34 Go. Boom. Look at that.
+04:37 How cool is this?
+04:38 That we built this Gooey application right here?
+04:41 Our program exited successfully, found ten movies.
+04:44 These are the ones we just saw a little bit before.
+04:46 We can re-run it and it will run again.
+04:48 That doesn't mean a whole lot,
+04:50 it just searched the same thing.
+04:52 Let's go over here and say we're now searching by keyword
+04:54 for capital. Run it, and you'll see something interesting.
+04:57 Notice, it put the data down here, kind of on top of it,
+05:00 so there's this kind of funky weird buildup,
+05:02 whereas if you run it again and again,
+05:05 you get like a history.
+05:06 So this is kind of just like your terminal here,
+05:09 more or less.
+05:10 But I think it's okay.
+05:11 I mean, it's not going to win any design awards,
+05:13 but it's definitely better than handing out
+05:15 a command line application to somebody
+05:17 who's really not into command lines.
+05:20 So, a great way to sort of make your
+05:22 Python application more general.

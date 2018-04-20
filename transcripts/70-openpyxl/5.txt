@@ -1,0 +1,125 @@
+00:00 Let's quickly look at pulling specific cell data
+00:04 out of a spreadsheet.
+00:05 Okay so we've imported openpyxl using
+00:09 load_orkbook, and we've loaded the workbook
+00:13 financial sample into the wb variable.
+00:17 So let's look at the sheet names we have available.
+00:20 And again, we have Finances 2017 and Yearly Totals.
+00:25 That's this stuff here, okay?
+00:29 Now what do we want to do?
+00:30 Well, let's specify the worksheet we
+00:33 want to work on, okay?
+00:34 Now, if we want to specify the exact sheet,
+00:38 we've looked at wb.active and we know that
+00:41 you've got a little catch there.
+00:42 So if we want to specify the actual one,
+00:45 we actually go workbook and then we just
+00:48 put the name of the tab, or the spreadsheet
+00:52 in there that we got from the previous command.
+00:55 Okay so Workbook Finances 2017 is ws1,
+01:00 and there we go.
+01:01 So now, when we write anything using ws1,
+01:05 we are going to be pointing to this worksheet here,
+01:08 which is what we want to have a look at.
+01:11 All right, what's first?
+01:13 Well, if we want to get a cell, okay,
+01:17 we need to know the coordinates of that cell.
+01:21 So your coordinates are your letters along the top,
+01:24 and your numbers down the vertical.
+01:26 And specifically, we want to get the value
+01:30 of the cell, so we're actually going to
+01:33 use the word value.
+01:35 So let's look at just randomly,
+01:38 we'll look at C9.
+01:40 Let's say we want to get the data specifically
+01:42 in this cell, C9.
+01:44 So we're expecting to see Montana returned.
+01:48 How do we do that?
+01:49 Well, we go ws1.
+01:52 And then we just simply put in the cell coordinates.
+01:57 Look at that, ws1['C9'].
+02:00 And look at that, all we got returned was
+02:03 the object, the fact that C9 is a cell
+02:05 in Finances 2017.
+02:08 So what were we missing?
+02:10 Well, as I mentioned, we're going to use value, okay?
+02:16 The value attribute.
+02:17 So ws1['C9'].value.
+02:20 And there we go, we're returned with Montana.
+02:24 And we can try that again just to prove that wasn't
+02:26 a fluke, 'cause there are a lot of Montanas there.
+02:28 We can go well, what's B9?
+02:31 Okay let's say it's the country Canada.
+02:33 Okay?
+02:34 So we'll go ws1['B9'].value.
+02:42 And there's Canada.
+02:44 All right?
+02:45 So nice, very very cool, very easy.
+02:47 You can start pulling data out manually this way.
+02:51 All right, let's do something a little more interesting.
+02:53 Let's say for example we have column L here.
+02:59 And we've got the profit of all of these different
+03:02 transactions or whatever they happen to be.
+03:06 We can actually collect all of this data
+03:10 and get a total for ourselves.
+03:13 So why don't we do that?
+03:15 Let's go to, let's create ourselves a variable here.
+03:18 So profit total equals zero.
+03:24 Now what we're going to do is we're going to
+03:27 create a list.
+03:30 We're going to create a list of this column,
+03:33 of the items in this column.
+03:35 So we're going to say full column in list L.
+03:42 So we've created a list of the L column.
+03:50 Should actually put a column there.
+03:54 We then go for row.
+03:56 So now we've got the column up here.
+04:02 And now we're looking at the rows in this column.
+04:05 Okay so we've got the column, we specified L,
+04:07 now we're going down to each, we're going to
+04:09 individually talk to each one of these cells.
+04:13 So full row in range.
+04:17 Now we're specifically going to look at a range here.
+04:21 So why don't we go from row two down to row,
+04:26 how about 101.
+04:30 Let's try this one here.
+04:31 So we're pretty much looking at exactly 100 cells.
+04:35 So we'll go full row in range.
+04:38 2, 101.
+04:44 We want to get the cell.
+04:47 So we need, remember we need this cell,
+04:49 we need this coordinate, this C9.
+04:52 Okay we need to put that together.
+04:54 So we're going to go
+04:55 column so we go L we know that's our column.
+04:58 And then we want a string of the row
+05:00 because the row is a number.
+05:02 So column, meaning L, string meaning this row here.
+05:10 Okay?
+05:11 So string rows, that's what our cell is made up of.
+05:15 So this is going to generate L2, L3, L4, L5
+05:19 and so on to 101.
+05:26 Now, we want to go, want to actually add it all together.
+05:29 So profit total.
+05:35 Is equal to, we'll make it a float because we
+05:38 know there were actual float things in there.
+05:41 So ws1, because again we're talking of worksheet one.
+05:45 And cell, because remember the code just above
+05:48 was generating our cell for us,
+05:51 and .value.
+05:55 And that should be it.
+05:57 Okay we've closed everything off.
+06:01 All right, profit total has been populated.
+06:04 So now we can print profit total and there we go.
+06:10 There's a lot of money.
+06:11 So 3.2 million dollars pretty much
+06:15 is the profit total of these cells here,
+06:20 two down to 101.
+06:23 So there you have it.
+06:25 We can talk to the cells.
+06:27 We've got our cells here.
+06:28 We can talk to them individually and we can then run
+06:32 some quick little scripts on them, some maths.
+06:35 I know it's easier in the document just to
+06:37 highlight it and get the sum, but now you know
+06:40 how you can do it on

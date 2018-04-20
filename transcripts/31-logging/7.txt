@@ -1,0 +1,62 @@
+00:00 So far, we've got this almost unreadable log goo
+00:04 mixed in with our standard user input/output.
+00:07 So it's really,
+00:09 it's nice that we can see what's going on,
+00:11 but it's really not helpful for us here.
+00:13 So let's change this.
+00:15 Let's just go down here and, to our program,
+00:20 and when we init the logging, instead of passing in nothing,
+00:22 we're going to pass in a file name,
+00:24 and that's going to go to the timed rotating file handler,
+00:28 the same level rather than the standard out.
+00:31 Okay, so let's go down here, and let's,
+00:32 we'll just call this movie app.log, something like this,
+00:39 and run it again.
+00:41 Alright, now it's back to the way it was before
+00:43 in terms of interactions.
+00:45 There's none of that mess around.
+00:46 Let's search for action again.
+00:49 And it runs, and we get our nice output, and, ta-da!
+00:52 Let's run it one more time.
+00:53 Let's search for hero.
+00:55 Ah, we got a bunch of good stuff with heroes and so on.
+00:58 And let's run it with an error.
+01:00 Nope, must search for something.
+01:02 Alright, how about jazz.
+01:04 Anything there? Hmm, looks like there is.
+01:06 Pretty cool, so that's great.
+01:08 Our app is working again, but notice,
+01:10 notice over here, we now have a movie-app.
+01:13 Instead of .log, it has 2018-02-23,
+01:18 because that's today, that's when I'm recording this
+01:21 right now, so let's look and see what's in there.
+01:23 So you can see it's exactly the same messages.
+01:25 Here's the app is starting up.
+01:28 Here's the app starting up again.
+01:31 Things like that, here's another startup.
+01:33 And these are all the messages.
+01:34 We started a search for action, we got a 200.
+01:37 We got eight results, that long.
+01:39 Alright, and you can see the time of day
+01:41 to the super accurate right there.
+01:44 Again, we're starting up, and this time we searched
+01:46 for hero and got 10 results.
+01:48 This time we searched for nothing,
+01:49 and we got a warning, and so on.
+01:51 Okay, so we have this log file here,
+01:53 and it's not super important,
+01:56 it's less important, let's say, when you're writing
+01:57 a regular app, 'cause you could just put
+01:59 the data and time in the log file.
+02:01 But if you're writing a super long running service,
+02:04 like a web application that starts and runs
+02:07 basically indefinitely, or
+02:09 some kind of queuing application that's just listening
+02:13 for messages and is going to run,
+02:15 basically anything on the server
+02:16 that starts and just runs,
+02:18 the ability to have it automatically rotate -
+02:21 when it becomes the 24th, the next log message
+02:24 will just start a new file, for example.
+02:26 So really really nice to have this timed,
+02:28 rotating file handler here.

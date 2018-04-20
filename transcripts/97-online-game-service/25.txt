@@ -1,0 +1,35 @@
+00:00 Final day, Day 99, use Uplink
+00:03 to write a client that then consumes the API.
+00:07 One thing you'll have to be really careful about
+00:09 is you have to have the flask server running
+00:12 while you run your client game code,
+00:16 because obviously the server has to be running
+00:18 for you to talk to it.
+00:20 Other than that, right, it's pretty straightforward
+00:22 to use Uplink, you can borrow the code
+00:25 that we wrote, and those little helpers
+00:27 make the code a little bit cleaner.
+00:29 But use Uplink, or if you'd rather,
+00:30 just use the raw requests code,
+00:32 although it's slightly more cumbersome,
+00:35 but would totally work as well,
+00:36 it's not that big of a difference.
+00:38 And I probably won't get done early
+00:40 but if you and you feel like, hey,
+00:42 I want to do something bigger,
+00:44 you can jump over here to Heroku,
+00:47 Heroku is like a simple platform,
+00:49 it's a service for, really popular among Python developers,
+00:52 and you follow their getting started guide,
+00:54 you could put this not just on your machine,
+00:56 but you could put it on the internet
+00:58 and play it from your phone,
+00:59 play it from all over the place, share it with your friend,
+01:01 whatever you want to do.
+01:02 So that's kind of a stretch goal if you happen to get there,
+01:06 but if you don't, don't feel bad about it.
+01:09 This is a big deal, this is your
+01:10 last major block of three days
+01:12 and so you are almost done with your #100DaysOfCode,
+01:15 it's awesome you made it this far,
+01:17 and I hope you're loving what you're doing.

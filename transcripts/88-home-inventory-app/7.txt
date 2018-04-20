@@ -1,0 +1,121 @@
+00:00 So while the app actually does work
+00:03 there are quite a few things that we've left out.
+00:05 And I've done this on purpose because this is what I'd
+00:08 like you to work on for your Day 3.
+00:11 If not, just work on to expanded just for fun.
+00:14 You can do it after your 100 days is up,
+00:15 whatever you feel like.
+00:17 Or maybe you can use it as an idea
+00:19 to factor it into your own inventory app.
+00:22 This first thing is,
+00:24 is that we haven't actually captured incorrect input.
+00:29 We have here.
+00:30 So for example, if we're at the main menu
+00:32 we put the letter a.
+00:34 We just get invalid option, try again.
+00:37 Even if we do something like 11.
+00:39 We know it's a number but it doesn't
+00:41 match any of these, so we get invalid option try again.
+00:45 Now what happens if we add a room?
+00:48 Now we know we have kitchen in there.
+00:50 But if we add kitchen again, what happens?
+00:54 Kitchen already exists.
+00:56 So we need to be able to capture that.
+00:58 What happens if someone wants to add multiple bedrooms
+01:02 but they just want to call it bedroom.
+01:05 It's a silly scenario because can't think of anyone who'd
+01:08 do that but this is something that needs to be captured.
+01:11 Rather than allowing an error to just suddenly pop up
+01:14 and then exit out of the app.
+01:17 So there's one.
+01:19 Adding multiple rooms can cause a problem.
+01:22 So, see if you can figure out a way to capture that.
+01:26 Now that we have that,
+01:29 let's see if we can add duplicate items.
+01:32 So we'll add a knife for $20.
+01:38 Let's try and add another knife for $20.
+01:41 And that works.
+01:42 So why does that work?
+01:43 Well that actually works because SQLite has its own
+01:47 sort of tagging behind the scenes.
+01:49 It tags each entry with its own id.
+01:53 So you can have duplicates items below a table name.
+01:58 You can't have duplicate table names though.
+02:01 Now is that a problem?
+02:02 For me i don't think it is a problem.
+02:04 But if you wanted to capture that you could.
+02:07 That's something to capture.
+02:09 But what about this?
+02:12 Let's say we want to add a microwave,
+02:17 but by accident instead of hitting $20 we hit 2o.
+02:24 We've entered in a letter instead of a number.
+02:29 What's going to happen?
+02:30 It allowed it didn't it?
+02:31 So it allowed the fact that we had a letter and a
+02:35 number in there.
+02:36 Which is wrong,
+02:38 so if you actually pull up our
+02:40 SQLite database in SQLite viewer.
+02:42 Which I have done here.
+02:44 You can see we now have values
+02:48 but microwave is now accepted to O.
+02:53 So what we'll do now
+02:55 by allowing this to happen,
+02:57 we've probably caused problems here.
+02:59 So view inventory list, let's do kitchen.
+03:04 There we go, it failed because
+03:06 it needs it formatted as a number not a string.
+03:11 This is for the actual value calculation.
+03:15 So it was able to print it all out.
+03:17 Once it got to the actual calculation for the total value,
+03:21 didn't like it.
+03:22 Same thing for actually printing out
+03:24 microwave and its value.
+03:27 So that's something we screwed up and we'd actually,
+03:29 in that case we actually broken the application completely
+03:33 because we have no way in here to code a deletion.
+03:36 Which again is something you could do.
+03:38 So I'm going to go manually into the database here.
+03:42 And we'll delete this record
+03:47 because it's going to cause us problems.
+03:50 I'll demonstrate that again.
+03:51 This time we'll add an item to the inventory.
+03:54 We'll choose the room study.
+03:58 Study.
+03:59 And then let's add ourselves a chair.
+04:02 And instead of actually entering a number at all.
+04:05 Let's just use the word water.
+04:07 And you can see it actually returned
+04:09 and we were able to add it successfully to the table.
+04:11 So again, that's going to cause us issues
+04:14 and we'll have to delete it manually from the database.
+04:17 We can also capture different errors to do with launching
+04:20 the app as we saw.
+04:22 I've only got this sampler here but we can actually put
+04:24 some more scenarios in there if you wanted.
+04:28 That's something you could work on.
+04:30 And the last thing here is, check this out.
+04:35 We just entered an empty room.
+04:38 A room with name space has been added to the database.
+04:43 That's a problem, so.
+04:45 That's something we need to capture as well.
+04:48 This is all stuff you can work towards.
+04:50 If you get bored and if you want to work towards it.
+04:52 But you can see that this is all stuff,
+04:55 if you're creating an app that you have to take
+04:58 into account.
+04:59 And just one other thing as well that is rubbing me
+05:02 the wrong way.
+05:03 Is this elif tree here.
+05:06 I don't like that, I've done it
+05:08 just for demonstration purposes but essentially
+05:11 you would preferably throw all of these into a dictionary
+05:16 and make it a bit more Pythonic.
+05:19 There's no need for it to be this large.
+05:21 But either way, this is your little go to points to
+05:24 see if you can expand on this and improve it.
+05:27 If you wish.
+05:28 You might even just think about writing this app
+05:30 yourself in a way that you see fit.
+05:33 And covering these problems as you build it.
+05:37 So have fun.

@@ -1,0 +1,108 @@
+00:00 Well, I hope you really enjoyed itertools,
+00:02 because it's really one of our favorite modules.
+00:05 It's just so much fun to use, and saves you so much time.
+00:10 So, without further ado, what did we cover?
+00:15 The first thing we covered was itertools.cycle.
+00:19 Okay, so itertools.cycle,
+00:21 we just imported cycle from itertools.
+00:24 Go figure.
+00:26 Then, we specified the iterable.
+00:29 Okay, the iterable that we wanted cycle to go over, okay?
+00:33 and for our little exercise there,
+00:35 it was those weird dashes,
+00:37 so that we can make a little scroller.
+00:39 If you were to use a string, such as the word string
+00:42 or my name, Julian,
+00:44 it would then cycle through those letters
+00:46 in the same way that it's cycling through those.
+00:49 Okay?
+00:50 And that's why cycle is so easy to use.
+00:54 It does exactly what its name implies.
+00:56 It's awesome.
+00:58 Then, what we did was we threw it in a while loop,
+01:01 while True, so that it was infinite,
+01:03 it would just keep running while this app was live.
+01:07 And then we pumped that..
+01:10 Next, we pumped that cycle out to standard out.
+01:14 That way it would work well on the command line.
+01:17 Okay?
+01:18 Using Next, we were able to actually go through
+01:23 one iterable at a time.
+01:25 One iteration at a time.
+01:27 Okay, so we know each iteration, each cycle
+01:31 is going to be one of these characters here.
+01:35 So, Next got us to pull just that one in the first loop.
+01:39 Then, in the Next loop, it then took the backslash,
+01:42 and then the pipe, and then the forward slash.
+01:45 Okay?
+01:46 That's how this works here.
+01:48 And then we just threw in a little time.sleep,
+01:50 just to slow things down a bit.
+01:52 Next we have itertools.product.
+01:54 So again, we imported product, okay?
+01:57 And then what we did was we used repeat, okay?
+02:02 We used the repeat inside product to say
+02:06 how many combinations we wanted.
+02:09 How many times we wanted a single iterable
+02:13 to be repeated or any iteration to be repeated.
+02:17 Okay?
+02:18 So by specifying two, when we iterate over my name,
+02:23 we were able to start getting a giant list just like this.
+02:26 Okay?
+02:27 So J matched with J, J and then U, and so on and so forth.
+02:32 Okay?
+02:33 And that's what product is, it's a Cartesian product,
+02:36 it gives you every possible combination.
+02:39 Okay?
+02:40 It doesn't matter in this instance with the doubles,
+02:44 where you've got J and J.
+02:45 There's no sort of behind the scenes
+02:48 differing index there to say,
+02:50 "Hey this is one J, and this is another one.
+02:52 "So there needs to be double."
+02:54 No.
+02:55 It's just a J, okay?
+02:59 Then we moved on to combinations and permutations,
+03:01 one of my favorites.
+03:03 Imported, nice and easy.
+03:05 And then we created a quick list of super friends,
+03:08 Mike, Bob, and Julian.
+03:10 And this was for us to then use as an example.
+03:13 So we got the combinations, okay?
+03:17 In sets of two...
+03:20 Of Mike, Bob, and Julian.
+03:22 And you can see we have Mike Bob,
+03:24 Mike Julian, and Bob and Julian.
+03:26 And then that's when we pointed out
+03:28 that, well, there's no order here.
+03:31 It takes it into account that, okay
+03:33 Mike and Bob both exist in this one tuple
+03:36 and therefore that's criteria met,
+03:38 that's a combination.
+03:41 But, if we wanted the order to change,
+03:44 if we wanted to take that into account,
+03:46 that's where permutations comes into it.
+03:48 We have Mike and Bob here,
+03:51 but then we also have Bob and Mike over here.
+03:54 So the order actually makes a difference.
+03:58 And that's why permutations is
+03:59 just as awesome as combinations.
+04:02 And that was it.
+04:04 So your turn.
+04:05 If you haven't yet, I would strongly recommend,
+04:08 go and do the traffic lights, okay?
+04:12 Try not to watch the video until you've actually done it.
+04:15 But at this point, you've probably already completed that.
+04:18 So that was for day two.
+04:19 So we're looking at the third day of this lesson set.
+04:23 For this, go back to the three day overview,
+04:26 if you've forgotten what it is that we were talking about,
+04:29 but essentially there are a few bites
+04:31 to go to the Code Challenges Platform,
+04:33 and you have free access to those
+04:35 and all three of them have to do with itertools,
+04:38 and they're actually quite fun.
+04:40 So if you haven't done that,
+04:42 go and give that a crack for day three.
+04:44 Enjoy.
+04:45 Keep calm and code.

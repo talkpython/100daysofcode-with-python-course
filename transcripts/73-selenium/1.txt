@@ -1,0 +1,29 @@
+00:00 Welcome back to the 100 Days Of Python.
+00:03 Wow, Day 73, you're making great progress.
+00:07 The coming 3 days I will be your guide,
+00:09 to teach you how to use Selenium in Python
+00:12 to automate some cool tasks.
+00:14 After some basics, we dive straight into
+00:17 a practical example, where I will show you how
+00:19 you can use Selenium to login to a website.
+00:23 In this case, Packt, where I got some E-books
+00:26 piled up that we will grab with Selenium,
+00:28 making them downloadable from the Command line.
+00:31 That's already pretty cool, but then we will
+00:34 look at a second application.
+00:36 We log into the PyBites banner app,
+00:38 which is a Flask app, we simulate using the
+00:41 forum manually by posting the variables straight
+00:44 to the server.
+00:45 And it comes back with a banner, all in a
+00:47 automated way.
+00:48 And that's pretty powerful.
+00:49 But if you need, like, to make 200 banners,
+00:52 a tool like Selenium can save you
+00:54 a lot of time.
+00:55 So this will be a very practical lesson,
+00:57 a lot of code, and will be a lot of fun.
+00:59 And at the end of it, I will have some
+01:01 practical exercises, so you get your hands dirty
+01:04 with Selenium.
+01:06 Let's dive straight in.

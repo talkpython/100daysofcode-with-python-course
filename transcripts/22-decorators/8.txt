@@ -1,0 +1,16 @@
+00:00 Welcome back to the second day of decorators.
+00:03 Today, you get your hands dirty writing a decorator,
+00:06 and I got an exercise here that you can do
+00:10 on the PyBites Code Challenge Platform.
+00:12 The goal is to make this work, basically.
+00:15 So we have a gettext function
+00:18 that takes a text, and you're going to decorate it
+00:22 with a make_html that basically adds a tag.
+00:26 So you can stack it to add various tags,
+00:30 so when I call it like this, it should output
+00:32 p strong, the text of the function,
+00:35 and closing strong, and closing p.
+00:38 And that's all there is for today.
+00:40 If that's easy for you, you can already
+00:42 try to look at Day 3.
+00:44 Good luck.

@@ -1,0 +1,34 @@
+00:00 It is cool that we have all of our
+00:01 API endpoints doing JSON-ie stuff,
+00:04 but, well not quite yet, almost,
+00:06 but they are sort of set up for RESTful interactions.
+00:10 But they don't return any real data, do they?
+00:14 So, this one's pretty easy.
+00:15 Let's work on this.
+00:18 So what we're supposed to return here is a list of names
+00:21 that then the client can use to show to the player,
+00:25 and say which one do you want to play.
+00:27 We could return rich objects,
+00:29 but really just the names are enough.
+00:32 So we're going to use a list comprehension to
+00:33 take the database objects which have all sorts of stuff,
+00:36 don't go in JSON very well, and just convert those
+00:39 to just the particular names.
+00:41 So we'll have r.name for r in game_service.all_rolls.
+00:48 And then down here remember,
+00:49 we say flask.jsonify(rolls).
+00:54 All right, it's still running down here, see the dot?
+00:56 So it should've restarted, let's give this
+00:57 all rolls here a shot.
+01:00 Remember we've said this before,
+01:01 what'd give you all the rolls?
+01:02 There we go, make that an easier read.
+01:05 Boom, look at that.
+01:06 So we got this back, here's our JSON.
+01:08 We look at the headers we got out of JSON,
+01:11 that's it, we've implemented it.
+01:13 Let's review.
+01:14 We got a list of names, we returned Flask JSON,
+01:18 we listed to the right URL, and the right HTTP verb, done.
+01:21 All right, well, that was easy,
+01:23 let's see another one that's easy.

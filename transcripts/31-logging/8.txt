@@ -1,0 +1,58 @@
+00:00 Now that you've seen logging and logbook
+00:01 in action, let's quickly review some of the concepts.
+00:06 So, we're going to start by importing the logbook,
+00:08 And if we're going to not use a file,
+00:10 we're going to need to also import sys,
+00:12 so we can get to standard out.
+00:15 Then we're going to maybe get a file name,
+00:17 that can come from, like a configuration file,
+00:21 the environment, you could hard-code it, whatever you want.
+00:24 We're going to set a logging level here.
+00:26 Now I didn't actually demonstrate it,
+00:28 but if we went and switched that to say warnings,
+00:31 you would no longer see any of the messages that were trace,
+00:34 right? Only the stuff warning and above would appear in the
+00:37 log file, or in the console, and nothing else.
+00:39 So you can dial this up and down,
+00:41 depending on whether you're running a debug build,
+00:44 or production build, or release build, things like that.
+00:47 So, set this, and that may also be based on configuration,
+00:50 or version, type of app, right?
+00:53 Like it's production or development and so on.
+00:56 Then we have to install a handler,
+00:58 so we're either going to use a stream handler,
+01:00 set that to standard out,
+01:01 set the level of push it to the application.
+01:03 Or, if you want to go to a file, I recommend
+01:06 the timed rotating file handler, and do the same thing.
+01:10 Once this is set up, then it's basically ready to go.
+01:15 So remember this level acts as a filter here,
+01:17 so you can always go logger.trace, logger.info,
+01:22 but only if the level is low enough,
+01:25 will it actually show on these handlers.
+01:29 Now, you do that, what we just saw, once,
+01:32 at the beginning of your app, and then,
+01:34 anytime you want to log something,
+01:35 you're going to create one of these loggers,
+01:37 like, heres a start up logger.
+01:39 And we have this little info message, like,
+01:41 hey, we're getting started like this.
+01:43 Now this just a string, nothing logging about it.
+01:45 But then we can go to our startup log and say notice,
+01:48 this message, right? And that's a pretty high level of
+01:52 log message there, this notice level.
+01:55 And this is going to go, probably near the front,
+01:58 so it'll tell you what level you're logging at,
+02:00 which will help you understand what
+02:01 the rest of the log means.
+02:03 We have different options, we have notice,
+02:05 info, trace, warn, error, and critical.
+02:08 So critical is even more of an error than error, right?
+02:11 We also have exception, if you just want to show
+02:14 a straight up exception.
+02:15 And then the output looks like this,
+02:16 it has the time, it has the level, here, notice,
+02:19 it has the log category, log name, in this case, app,
+02:23 and then it finally has the actual message.
+02:26 Really nice, really easy to set up,
+02:27 and it's super, super flexible.

@@ -1,0 +1,29 @@
+00:00 Welcome back.
+00:01 In this second and third day,
+00:03 it's time to get more practice with Python Selenium.
+00:06 Notice that Selenium is a super important tool
+00:10 often used in addition to functional testing.
+00:13 I've not really explained that or demonstrated that so far,
+00:16 but you're going to just play directly with it
+00:19 because I have a nice code challenge for you.
+00:22 First, take a quick look at this documentation section:
+00:26 Using Selenium to Write Tests.
+00:28 Then head straight to our Code Challenge 32.
+00:31 This is our first Django app we did.
+00:33 So, we made a little scraper of Planet Python,
+00:37 and made a app to keep track
+00:39 of what we were sharing on Twitter.
+00:41 That's basically a listing of articles
+00:43 where we can say we shared 'em or we skipped 'em.
+00:46 Very simple, but it has a login.
+00:49 So, it's a nice app to do some testing on.
+00:52 So, you'll be asked to log in, look at articles,
+00:55 look at various states the articles are in.
+00:58 Look at the HTML of the page, etc.
+01:01 And the whole write-up is here.
+01:03 And I think it's a great exercise
+01:05 to practice more with Selenium.
+01:08 And that's it.
+01:09 Try to do that one today,
+01:10 or even the third day if you lack time.
+01:13 And, I'll see you tomorrow.

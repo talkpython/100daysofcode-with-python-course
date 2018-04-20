@@ -1,0 +1,77 @@
+00:00 You may be just fine having your entire website
+00:02 crammed into a single file, I'm not.
+00:05 It really drives me crazy to have everything jammed in here.
+00:08 And this is a super simple web app, I got to tell you,
+00:10 this was in the training website, for example,
+00:13 this would be many thousands of lines of code here.
+00:16 And it's just not great. We can do so much better.
+00:20 So, let's create two files here,
+00:25 one that holds just the API stuff,
+00:28 and one that holds just the web view,
+00:30 and then we're going to leave
+00:31 the sort of start up stuff in app.
+00:32 Now, you don't have to do this.
+00:33 If you don't want to do this, it's fine.
+00:34 But I'll show you how to do it.
+00:35 So, I'm going to go over here and
+00:36 create a directory called views
+00:41 and something called a game_api
+00:50 and also be home views, just called home.
+00:54 So what we're going to do, try and come up here to the top,
+00:57 and we're going to say, from views
+00:59 import game_api and home
+01:03 And what we need to do, is we need to basically
+01:05 provide it this object, and then use that object
+01:09 to define methods like this.
+01:12 It's going to look a little bit funky.
+01:14 It's probably not obvious, but this is what I like to do.
+01:17 So, I'm going to say game_api.build_views
+01:23 Now, notice this does not exist,
+01:25 PyCharm says "Cannot find a Reference",
+01:27 but if I hit Alt Enter, it will create that function, okay?
+01:31 And then when I'm going to do
+01:32 is I'm going to go down here to all
+01:33 skip, skip, skip
+01:35 here, from this bit down.
+01:45 And just cut those and put them right here, indent it.
+01:48 Indent it. So when we call the function
+01:52 the buildviews function we do these things.
+01:54 I'm probably going to go through
+01:55 and make sure some of this stuff is imported,
+01:57 like import flask.
+02:21 Whew, okay. So I had to go through and import all the stuff,
+02:24 or rather, let PyCharm import the stuff that is needed here,
+02:29 but let's go back to our app. Do a little cleanup,
+02:34 and notice this is looking better.
+02:36 We don't need this. Actually, we need that one
+02:38 in just a second. But these things we don't need,
+02:41 this is looking a little cleaner.
+02:42 So let's do exactly the same thing, but for home.
+02:49 And what's going in there, well,
+02:50 let's give it this index API test travel delete.
+02:57 And this.
+03:03 Now again, we got to import flask at the top.
+03:05 We have our index and we have our not found.
+03:08 Whew, now if you look at this page,
+03:10 if you look at this app file, what does it do?
+03:13 It'll just start update it runs the app.
+03:14 Um, we should probably make this method like so
+03:20 like build_views.
+03:28 Because again, this is simple now,
+03:29 later this is going to be not so simple.
+03:34 Is it still running? Let's see.
+03:37 It is. Does it still work?
+03:40 Um, play around is not going to work.
+03:42 But we can get Tom's scores now. It works, awesome.
+03:45 And let's see then, 4, 4.
+03:50 This works, and if we just go here,
+03:52 test our other API stuff, hello world. Awesome.
+03:54 So we've cleaned up our code, in my opinion, dramatically.
+03:58 You know exactly where to go
+03:59 to work with the main home page webviews.
+04:01 Here's the API just for the game.
+04:04 Here's your startup code, how you config your app.
+04:07 To me, this just is like, ah, so much better,
+04:10 so much cleaner. If it's not that way for you,
+04:13 then, you know, put it some other way. Right?
+04:15 But this is a pattern that I like to use.

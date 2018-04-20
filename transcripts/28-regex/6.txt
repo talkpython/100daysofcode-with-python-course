@@ -1,0 +1,115 @@
+00:00 Compiling regexes.
+00:03 If you want to run a regex multiple times,
+00:06 it can be more efficient and convenient
+00:08 to define it in a re.compile statement.
+00:11 Let's work with some data.
+00:13 Here I define a list of movies
+00:15 and two extra things in Python.
+00:17 You can define a multi-line string with triple quotes,
+00:21 and you can build up a list by splitting
+00:24 a multi-line string, or whatever string,
+00:27 on a space or in this case, a new line.
+00:31 So this gives me a nice list
+00:32 of the first element, one Citizen Kane,
+00:35 second element, Godfather, etc.
+00:37 And the task here is to
+00:39 identify movie titles with exactly two words.
+00:42 Before moving along, maybe you want to
+00:44 give this a try yourself.
+00:45 I hope you had fun working on this little regex problem.
+00:49 And an extra concept I'm going to show you is
+00:50 the use of re.verbose, which allows you to
+00:55 wrap your regular expressions over multiple lines
+00:58 and add commands, which is great to
+01:01 teach them and makes them more readable.
+01:04 So let's load in the data
+01:06 and let's start writing a multi-line,
+01:10 medium advanced, regular expression.
+01:13 And as we're talking about compiling one,
+01:16 the syntax for that is re.compile.
+01:19 I'm using a raw string, and as explained before,
+01:22 you can make a multi-line string with triple quotes.
+01:26 And I'm going to write this out
+01:28 because it's quite a large regular expression.
+01:31 And then we come back
+01:33 and I explain line by line what it does.
+01:36 So here you go.
+01:37 To define the start of a string,
+01:39 we use the caret
+01:41 then we need to match one or more digits.
+01:46 Let me scroll a little bit up to see the data,
+01:48 so the numbering of the movies.
+01:50 Then we match a literal dot,
+01:52 and note that I escape the dot
+01:54 otherwise it would match any character.
+01:57 Then we have one or more spaces.
+01:59 And then I use a non capturing parentheses.
+02:03 So we've seen capturing parentheses before,
+02:07 but if you add inside parentheses, question mark, colon,
+02:13 it kind of undos the capturing.
+02:16 Then you can group the various things together
+02:18 without capturing.
+02:20 And we use a character class then
+02:23 to include uppercase, lowercase, and single quote.
+02:28 And we want one or more of them,
+02:30 followed by a space.
+02:33 And I commanded that all at the right.
+02:36 Then we do the closure of that parentheses.
+02:41 Then we want exactly two of those.
+02:44 So just go back to the data,
+02:47 and that's basically a word.
+02:50 Why don't I do just backslash w?
+02:54 Turns out that was my first approach, but,
+02:57 and that's the funny thing with parsing data or strings,
+03:01 is that they're always these exceptions.
+03:03 And singing has this apostrophe or single quote
+03:07 and I had to account for that,
+03:08 so instead of just word, I had to go with
+03:12 a more specific portion of the regular expression.
+03:17 So two of those because we want to match
+03:19 the ones that have exactly two words.
+03:23 Then, we do a literal open parentheses,
+03:27 and as with the dot, right,
+03:30 all these characters have a special meaning.
+03:33 Dot matches all, parentheses are for capturing,
+03:36 so if you want a literal one, you have to escape them.
+03:39 So here I'm doing the same thing as with the dot,
+03:41 and that's escaping the parentheses.
+03:43 I want literal parentheses, because the years
+03:46 are in parentheses.
+03:50 Then the years are four digits,
+03:52 and then I do a dollar which is the end of the string.
+03:55 Phew, that was quite a regular expression,
+03:58 but the nice thing about verbose is that
+04:00 I could add all these commands,
+04:02 which made it super easy to explain it to you.
+04:06 So run that cell, and it's now stored in pat.
+04:09 And pat is just variable name,
+04:11 and now I can use that pattern
+04:14 to loop over the movies and match them all.
+04:17 So let's do that next.
+04:20 Four movie in movies.
+04:24 Print movie.
+04:26 Just the text.
+04:28 And then I can use match on the pattern.
+04:30 So before we did re.match,
+04:33 but now we can do pattern.match.
+04:36 And I'm interested in match because I want to
+04:38 match the string from beginning to end.
+04:43 Put in a movie
+04:45 and there you go.
+04:46 So let's check if this regular expression is
+04:50 actually correct.
+04:51 Citizen Kane, two words. Match.
+04:53 The Godfather. Match.
+04:55 Casablanca, one word. Not a match.
+04:57 And Schindler's List, this was another tricky one.
+05:00 In the first iteration, I did not match this because
+05:04 again, I had to account for that single quote
+05:07 which I told you before.
+05:09 So this one is actually a match
+05:10 because I consider Schindler's as one word.
+05:14 Vertigo's not and The Wizard of Oz,
+05:15 four words, is not.
+05:17 So how cool is that?
+05:19 Let's move on to advanced string replacing.

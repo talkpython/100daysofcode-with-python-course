@@ -1,0 +1,20 @@
+00:00 On the second day, you'll create the web services.
+00:03 What are the various operations
+00:06 you're going to need to do? You'll probably have a create and find user,
+00:08 a game status, top scores, play round,
+00:12 that kind of seems like it, but think
+00:14 about how you want that game to play
+00:16 if you chose something other than Hi-Low,
+00:18 well, then I can't really guess, I can't really help you.
+00:20 You don't need to write any client code,
+00:22 you can just use Postman right here
+00:24 then you can get it right there.
+00:25 Of course, you use Postman like we did
+00:28 to get it entirely working.
+00:29 Remember, by the time we even created
+00:31 our client code, we never touched
+00:33 the web app again, it was totally working,
+00:36 and that's partly 'cause I had prepared
+00:38 a few of the tricky bits beforehand,
+00:40 and that's also to a large degree
+00:42 'cause we tested it out with Postman.

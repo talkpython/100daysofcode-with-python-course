@@ -1,0 +1,31 @@
+00:00 Are you ready to have some fun playing with the database?
+00:03 Well, we're going to talk about an
+00:04 amazing technology called SQLAlchemy.
+00:07 And this is probably the best way,
+00:09 and also, probably the most popular way
+00:12 to access relational databases.
+00:15 Previously, you learned about SQLite,
+00:17 and SQLAlchemy will of course talk to SQLite,
+00:20 but it'll talk to all kinds of databases.
+00:23 You can find it at SQLAlchemy.org.
+00:26 It's an object relational mapper.
+00:28 So when we saw SQLite before, you just created strings,
+00:31 and you said, "Create this table,"
+00:33 or, "Select this from wherever."
+00:36 You would write in line SQL, and that was tied to SQLite.
+00:40 Well, SQLAlchemy works in a much higher level.
+00:42 What we're going to do is we're going to create classes,
+00:44 and we're going to model the database shape in our classes.
+00:49 SQLAlchemy will actually even create
+00:51 the database from the classes, alright?
+00:53 So this is really, really powerful.
+00:55 We can point at almost any relational database,
+00:57 and then we work in these high level Python constructs,
+01:00 making it very, very easy for us to write the code.
+01:03 We don't have to think in the SQL query language,
+01:05 we just think in Python, and it just works.
+01:08 It's up to SQLAlchemy to convert that
+01:10 to the SQL query language.
+01:12 It's really, really easy to get started.
+01:14 It's extremely flexible and powerful.
+01:16 And we're going to have a lot of fun building an app with it.

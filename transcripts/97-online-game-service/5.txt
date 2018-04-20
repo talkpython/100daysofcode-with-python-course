@@ -1,0 +1,72 @@
+00:00 Alright so, this simple little bit of code
+00:02 is a pretty decent Flask application
+00:05 running in debug mode.
+00:08 What's going to be important for us is not
+00:09 to return HTML, not really HTML, just text,
+00:13 but not really is it to return
+00:15 text and HTML for the browsers,
+00:17 but is instead to return JSON to communicate.
+00:21 Remember, several times throughout this course,
+00:24 we've interacted with JSON APIs,
+00:26 we had the Movie Search app,
+00:27 we had searching talk Python.fm,
+00:30 we've worked with GitHub, we've worked with other things,
+00:33 and all that was consuming JSON APIs.
+00:35 Now we need to build one.
+00:36 So how does that work?
+00:38 Turns out to be not too hard here.
+00:40 So let's come over here and this will just be api/test.
+00:44 And you got to make sure that you name this,
+00:46 let's just call this test api_test.
+00:49 Like that.
+00:52 Now if we call this, it's just going to return
+00:55 Hello world. Or Hello API test.
+00:58 Let's just see that that actually is working.
+01:00 And we're going to use Postman over here.
+01:02 So, if we go and just get a request,
+01:05 straight like that, we can look at the headers.
+01:07 The content type is HTML and it's a 200.
+01:11 What if we go to api/test?
+01:15 Look we got a 200 again.
+01:17 That's really cool.
+01:18 Right now we're getting HTML and the body is just this.
+01:20 So we have the routing working,
+01:22 and notice it automatically detected that change,
+01:24 that's super cool.
+01:25 But, what we want to do is instead let's suppose
+01:28 we have some data.
+01:31 So this'll be name is Michael.
+01:36 Day, it's going to be 97.
+01:38 What if we want to return this,
+01:40 like we could've gotten that from our database, for example,
+01:42 but we want to return this as JSON.
+01:46 Super easy. So we're going to return flask.jsonify(data).
+01:52 Let's try that.
+01:54 Now if we do a get.
+01:55 Boom.
+01:56 There's our raw JSON coming back
+01:59 and the type is application JSON.
+02:01 So that's all it takes really to build these APIs.
+02:04 Is we put in a route and then we have some data
+02:07 and we jsonify it.
+02:09 The other aspect that we're going to need to work with
+02:11 is how do we work with whether this a
+02:15 HTTP GET or POST or PUT.
+02:17 Because when you're working with the APIs remember,
+02:19 creational type things are done with POST and PUT.
+02:22 Read only stuff is done with GET, and so on.
+02:24 So you'll see, we can go over here
+02:26 and say method=GET, or POST, or PUT, or both.
+02:30 We could actually handle GET and POST.
+02:34 Like that.
+02:35 This one's only going to be for GET.
+02:37 Okay, so these are the building blocks that we need
+02:39 to build the seven operations that we've talked about.
+02:43 The other stuff that we're going to need is the actual data,
+02:46 and the game play, and so on.
+02:47 And we've already written that
+02:49 and we're just going to move that in,
+02:50 and copy some code over, and adapt it.
+02:53 Because we've already spent a lot of time
+02:54 working with that code.
+02:55 And then we're going to adapt it to methods just like this.

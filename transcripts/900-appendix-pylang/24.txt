@@ -1,0 +1,51 @@
+ 0:01 Python has a great declarative way to process a set of items 
+0:05 and either turn it into a list, a dictionary, a set or a generator. 
+0:09 Let's look at the list version through an example.
+0:13 Here we have some get_active_customers method, 
+0:16 maybe it goes to a database, maybe it just goes to some data structure, 
+0:19 it doesn't really matter, but it comes back with an iterable set of users, 
+0:23 so we could loop over all of the users, using a "for...in" loop to find the users 
+0:29 who have paid today and get their usernames and put that into a list. 
+0:33 So what we do is we create a list, some name paying usernames 
+0:38 and we'd "for...in" over those to loop over all of them and then we do a test, 
+0:41 we'd say if that particular user's last purchase was today 
+0:45 then append to their username to this paying usernames list. 
+0:50 And then in the end, we'd have a list, which is all the usernames 
+0:53 of the customers you bought something from us today.
+0:56 This would be an imperative users' search, 
+0:59 an imperative style of programming, where you explicitly say all the steps, 
+1:02 let's see how we could do this instead with the list comprehension. 
+1:05 Here you'll see many of the same elements, 
+1:09 and it looks like we are declaring a list, so [ ] in Python means declare an empty list, 
+1:14 but there is stuff in the middle. 
+1:16 The way you read this you kind of got to piece it together, 
+1:18 maybe top to bottom is not necessarily the best way to put this all together 
+1:22 but let's go top to bottom for a minute and then I'll pull out the pieces for you. 
+1:25 So, we are going to get the name of the user, 
+1:27 and we are going to later introduce a variable called "u", 
+1:30 which is the individual user for the set we are going through, so we'd say u.name, 
+1:33 that's like our projection that we want, and there is a "for...in" statement, 
+1:37 like we had before, where we get the active customers
+1:40 and we are going to process them, 
+1:42 and then there is some kind of test whether or not that particular user should be in this set.
+1:46 So, we set the source, that's going to be out get_active_customers 
+1:50 and we are going to express that we are iterating over that for "u" in that set 
+1:55 and "u" declares the local variable that we are going to work with, 
+1:58 we are going to filter on that with an "if" test, 
+2:00 and finally we are going to do some kind of projection, 
+2:03 we could just say "u" to get all the users, here we want all the usernames 
+2:06 so we say u.name. Now, there are multiple structures like this in Python, 
+2:11 we could have parenthesis that would generate a generator, 
+2:13 but as I said before, [ ] represents list, and so when you have the [ ] here, 
+2:18 you know what is going to come out is a list, and this is a list comprehension. 
+2:23 Once you get used to it, you'll find this style of programming is a little cleaner 
+2:26 and a little more concise. 
+2:29 It's also different in another important way, 
+2:31 because this can be just part of a larger expression, 
+2:34 this could be say in inline argument to a method you are calling. 
+2:38 Or, you could chain it together with other comprehensions, 
+2:42 or other types of processing. 
+2:44 The imperative style of programming required separate language structures 
+2:48 that required their own blocks, 
+2:51 so you can't really compose "for...in" loops but you can compose these comprehensions 
+2:54 which makes then really useful in places the "for...in" loop wouldn't be. 

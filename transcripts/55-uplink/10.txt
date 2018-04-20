@@ -1,0 +1,89 @@
+00:00 Now when we called service.create new entry,
+00:03 let's just type it again.
+00:04 And we saw Python kind of freaked out,
+00:06 and what could we put in here?
+00:08 Well, this **kwargs just means,
+00:10 you can put anything and so much for the
+00:12 help here.
+00:14 You're just kind of on your own.
+00:15 You have to know this is exactly how it goes,
+00:17 but it doesn't have to be this way.
+00:19 Let's go over here and fix this.
+00:21 Let's rename this to double underscore,
+00:25 under here it will say create new underscores.
+00:26 A, no that's fine.
+00:28 And then we'll define, __create_new_entry.
+00:32 So why the double underscore?
+00:33 This hides it from being used from the outside.
+00:36 When we say service., we'll never see this function.
+00:39 Right.
+00:40 Almost private, almost.
+00:42 So here we can just say return self.__create_new_entry
+00:50 and then we need to put some stuff in here.
+00:51 Let's go borrow this real quick.
+00:53 And up here,
+00:54 we don't have to have this unpleasant **kwargs.
+00:57 We can have real values like title,
+00:59 which is a string,
+01:01 content which is a string,
+01:03 view count.
+01:05 Let's just call them views, which isn't it?
+01:07 And published which is a string.
+01:15 And we could even put some values like this.
+01:19 I'll say if published is None, then we'll go and
+01:24 set it to be the current value right here,
+01:30 like that.
+01:31 Of course we're going to have to import that here,
+01:33 and this was views and so on.
+01:36 Now this one still is kind of doing this
+01:38 free count thing so we can suppress it internally,
+01:40 but nobody outside of here will have to know.
+01:44 You could specify tighter on content
+01:46 or if you want to override the views,
+01:47 you can do so here and then this
+01:49 is actually going to go to the service.
+01:52 And we might as well go ahead and tell it.
+01:54 Then it also returns this.
+01:56 Okay, so now if we come back over here,
+01:59 let's write this again.
+02:01 So svc.__create_new_entry,
+02:03 oh look, did we get any help with visitor?
+02:05 Of course we do.
+02:06 We put title, we put content,
+02:08 we could put the view count.
+02:10 I'll go ahead and do that.
+02:11 We'll leave the published off like this.
+02:14 Don't need that warning.
+02:16 This is much cleaner.
+02:17 Now we know how to work with the API.
+02:19 We put reasonable defaults
+02:20 and have it work really well.
+02:22 So let's see what's here.
+02:24 Let's do one more post.
+02:25 Let's write it.
+02:27 Of course, there's that lack
+02:29 of error handling.
+02:30 Let's write a post. This will be the final post.
+02:33 It was Final Frontier
+02:36 and say 7,001.
+02:40 Okay, created just like before.
+02:41 If we go and read them,
+02:42 it should be there.
+02:43 You want to see details about it,
+02:44 it's exactly what we wrote.
+02:45 But we have this much nicer way to work with it.
+02:48 Okay so that's uplink.
+02:50 If you're going to work with this well
+02:52 structured API, it really lets you control
+02:55 the way you interact with it.
+02:56 Let's just look over here really quickly
+02:59 at a few more variations.
+03:00 We talked about how you can pass at the
+03:03 query strings.
+03:04 You can do things like specify the headers.
+03:07 You can pass in an authorization,
+03:09 which then gets stored in the header.
+03:11 You could even run synchronous and asynchronous versions.
+03:15 Okay, so there's a lot more to go,
+03:17 but I think we're going to leave that exploration
+03:19 up to you.

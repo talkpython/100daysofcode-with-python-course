@@ -1,0 +1,45 @@
+00:00 I just thought I'd give a quick overview
+00:02 for anyone who hasn't dealt with Beautiful Soup 4 before.
+00:06 So if you haven't, feel free to keep watching,
+00:09 but if you have,
+00:10 skip on over because I'm just going to be repeating myself.
+00:13 Now, Beautiful Soup 4 allows you to parse web pages.
+00:18 Okay, we've all dealt with requests by now
+00:21 and we know that we're using requests,
+00:23 we can pull down the code behind their web page, right?
+00:27 And we can then use Beautiful Soup 4
+00:30 to parse that data.
+00:32 All right, I'll tell you what I mean.
+00:34 So, let's view the page source
+00:36 for our PyBites Code Challenges page.
+00:40 And here you'll see all of your HTML.
+00:44 Now, if I wanted specifically
+00:46 to get all of our code challenge names
+00:50 and just put them in a list to make
+00:52 in some sort of an email
+00:54 or whatever application I can think of, right.
+00:57 Well, how am I going to do that?
+00:59 If you go into the page source,
+01:01 you need to find,
+01:02 the first thing you need to do
+01:03 is you need to find that data in the code
+01:07 and here it is.
+01:08 It's an unordered list
+01:09 with ID of article list, and a class of article list.
+01:13 Okay, and then all of our different challenge headers
+01:18 are stored in list elements, okay?
+01:22 Now, with that information in hand,
+01:25 we can then use Beautiful Soup 4 to search this page,
+01:29 remembering that requests will pretty much pull down
+01:32 this page looking like this,
+01:34 and Beautiful Soup 4 will parse that,
+01:37 and we can then tell it what to look for.
+01:40 And now you can start thinking,
+01:42 imagining the cool things you can do with this.
+01:44 So, we can skip all of this junk up here,
+01:48 all of this code that we don't care about,
+01:50 and drill straight down to the list that we do care about.
+01:54 And you can use this on any site that you can think of.
+01:57 You can search by all sorts of different criteria.
+02:00 And we're going to show that in the next video.
+02:04 So, get excited, because this is really, really fun stuff.

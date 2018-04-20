@@ -1,0 +1,40 @@
+00:00 First things first,
+00:01 let's go through the ReadMe file.
+00:03 Quick word of warning,
+00:04 feedparser is a very very quick topic.
+00:08 As you can see by this stuff on your screen,
+00:10 this is not going to take you very long.
+00:12 And yeah, reality is,
+00:14 that's what feedparser is.
+00:16 It's just that simple, that it's quick to learn.
+00:18 So Day 1, you are going to pretty much do everything.
+00:23 You're going to watch the videos,
+00:25 set up your environment,
+00:26 pull the feed and then parse it.
+00:29 Okay, so it'll involve using requests.
+00:32 Day 2, I'm going to show you how
+00:34 to do a quick, sort of tricky sanity check
+00:39 when parsing your feed.
+00:41 So, watch the Feedparses and the Check video
+00:45 and then that's pretty much everything you
+00:49 need to know by that point.
+00:51 So, I'd like you to pull and parse
+00:54 an RSS feed of your choice.
+00:56 A bit of practice for you on Day 2.
+01:00 Now on Day 3,
+01:02 just wrap it up by watching the concepts video
+01:05 and then I want you to come up with something to do
+01:09 with the data you're pulling from feedparser, okay.
+01:13 So, again, the usual stuff is there,
+01:15 like store it in the database or email it out.
+01:18 Build some sort of application around it,
+01:21 but I like the idea of maybe letting the user
+01:25 specify from a list
+01:27 what RSS tags they want to pull down, okay.
+01:31 So, that could be a cool little project.
+01:33 So, day three is just testing it.
+01:36 Playing it around, seeing how you go,
+01:38 but that's the three days for feedparser.
+01:40 They're going to be very quick
+01:42 and very small in size,
+01:45 but enjoy them nonetheless.

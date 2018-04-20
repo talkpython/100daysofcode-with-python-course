@@ -1,0 +1,31 @@
+ 0:01 In Python we have a fantastically simple way 
+0:04 to work with collections and sequences. 
+0:06 It's called the "for...in" loop and it looks like this. 
+0:08 You just say for some variable name in some collection, 
+0:13 so here we have "for item in items" and that creates the variable called item 
+0:16 and we are looping over the collection items, 
+0:18 it just goes through them one at a time, so here it will go through this loop three times, 
+0:22 first time it will print the item is "cat", the second time it will print the item is "hat" 
+0:26 and then finally the item is "mat". 
+0:29 And then it will just keep going, it will break out the loop and continue on. 
+0:31 Some languages have numerical "for" loops, or things like that, 
+0:34 in Python there is no numerical "for" loop, 
+0:37 there is only these for in loops working with iterables and sequences. 
+0:41 Because you don't have to worry about indexes and checking links 
+0:44 and possible off-by-one errors, you know, 
+0:46 is it less than or less than or equal to, it goes in the test in the normal "for" loop. 
+0:50 This is a very safe and natural way to process a collection. 
+0:54 Now, there may be times when you actually need the number, 
+0:57 if you want to say the first item is "cat", the second item is "hat", 
+0:59 the third item is "mat", this makes it a little bit challenging. 
+1:04 Technically, you could do it by creating an outside variable, and incrementing,
+1:06 but that would not be the proper Pythonic way. 
+1:09 The Pythonic way is to use this enumerate function, which takes a collection 
+1:13 and converts it into a sequence of tuples 
+1:17 where the first element in the tuple is this idx value, that's the index, the number. 
+1:21 And the second item is the same value that you had above. 
+1:24 So first time through its index is zero, item is cat; 
+1:27 second time through, index is one, item is hat, and so on. 
+1:30 So these are the two primary ways to loop over collections in Python.
+1:35 Remember, if you need to get the index back, 
+1:38 don't sneak some variable in there, just use enumerate. 

@@ -1,0 +1,186 @@
+00:00 Time for some code.
+00:02 We need to think about what we're going to do first.
+00:05 The first thing we need to do is actually pull down
+00:07 our website, and what are we going to use for that?
+00:10 We're going to use requests because we pip installed it,
+00:13 didn't we, that was a bit of a dead giveaway.
+00:16 We're also going to import bs4.
+00:19 That's it.
+00:22 Let's specify the actual URL that we're going to be
+00:25 dealing with here, I'm just going to copy and paste it.
+00:28 This is the URL of
+00:31 our Pybites projects page.
+00:34 Looking here,
+00:37 we have out PyBites Code Challenges.
+00:41 What we're going to do with this one is bring down
+00:44 all of these PyBites
+00:47 projects headers,
+00:48 so, our 100 days.
+00:50 Our 100 Days Of Code, our 100 Days Of Django.
+00:53 These different headers.
+00:54 We're going to pull all of those down
+00:56 and we're just going to use that as a nice,
+00:58 simple example for this script.
+01:03 Let's start off our code with the standard
+01:08 dum dum.
+01:11 Now, what are we going to do?
+01:12 The first thing, obviously, as I said, is to pull down
+01:15 the website, so let's create a function for that.
+01:19 def pull_site, nice and creative.
+01:24 We're going to use requests, so I'm going to do this
+01:26 really quickly
+01:28 just so that we can get a move on
+01:30 because we've dealt with requests before.
+01:33 So, requests.get URL.
+01:36 That will get the page and store it
+01:38 in the raw site page object.
+01:41 So, raw site page .raise_for_status
+01:47 Now, this is just to make sure that it works.
+01:50 If it doesn't work, we'll get an error.
+01:53 And then, we're just going to return, raw site page.
+01:57 Nice and easy.
+02:00 Let's just assign that to something
+02:02 down here called site.
+02:04 This will
+02:06 assign the raw site page
+02:09 to a variable called site.
+02:13 Now, we'll record a video after this explaining why
+02:16 this is not a good idea, what we're doing .
+02:19 But, for now, as just a nice little explainer, this will do.
+02:25 Let's create another function.
+02:27 This function we're going to call scrape.
+02:29 It's going to be used against our site object.
+02:37 We need to think ahead a little bit.
+02:39 I'm going to think ahead by putting this list here.
+02:42 If you think about our page,
+02:47 as we pull this data out of the page, these headers,
+02:51 we need to store them somewhere, don't we?
+02:53 We must store them in a header list.
+02:58 We create the empty list.
+03:00 Now we get to the Beautiful Soup 4 stuff,
+03:03 and this is really, really easy, so don't worry
+03:06 if you don't wrap your head around it.
+03:08 But it's only a couple of lines of code,
+03:09 which is why we all love Python, right?
+03:13 We're going to create a soup object,
+03:15 and it's not a bowl of soup, it's just a normal object.
+03:19 bs4.BeautifulSoup4,
+03:23 .BeautifulSoup, sorry.
+03:26 We're going to take the text of the site.
+03:29 So, site.text, we're going to take that.
+03:33 That's going to be called against our Beautiful Soup 4.
+03:38 We're going to use the Beautiful Soup 4
+03:40 HTML parser
+03:43 in order to get our sort of HTML code
+03:48 nicely into this soup object.
+03:52 Once we do that we have our soup object
+03:56 and HTML header list.
+04:01 This is going to be a list of our HTML headers.
+04:05 You can see what we're doing.
+04:06 This is already really, really simple.
+04:09 We've taken
+04:11 Beautiful Soup 4 and we've told it
+04:14 to get the text of the site using the HTML parser
+04:18 because site is going to be a HTML document,
+04:21 pretty much, right?
+04:23 We're going to store that in soup.
+04:27 We're creating an object here
+04:30 that is going to be...
+04:32 I'll show you.
+04:33 HTML header list equals
+04:36 soup.select.
+04:40 What are we selecting?
+04:41 The select option here for soup,
+04:45 it allows us to pull down exactly what we need.
+04:48 We get to select something out of the HTML source.
+04:53 Let's look at the HTML source again.
+04:57 We'll go view page source.
+05:01 We'll get to these headers.
+05:03 The first header
+05:05 is called
+05:07 zero.PyBites apps.
+05:11 We find that on the page, it's going to be
+05:13 in a nice little h3 class.
+05:16 What's unique about it, and this is where you really
+05:19 have to get thinking and analyzing this page,
+05:22 the thing that's unique about all of our headers here,
+05:25 so, here's zero,
+05:27 here's number one down here,
+05:30 but they all have the project header CSS class.
+05:36 Playing with bs4 does need some tinkering.
+05:40 Occasionally, you'll find someone will have reused
+05:43 the same CSS class somewhere else
+05:46 in the same page, so when you select it you'll get more
+05:50 than just what you wanted.
+05:51 But in this case, I know, because this is our site,
+05:54 we've only used project header against these headers
+05:59 that we want to see, these ones here.
+06:03 We're going to select everything that has
+06:07 the project header class.
+06:10 Let's copy that.
+06:11 We'll go down here, this is what we're selecting.
+06:13 We have to put the dot because it is a CSS class.
+06:18 And let's see it.
+06:19 All this has done is we've created the soup object
+06:23 of the site using the HTML parser, and then we've selected,
+06:28 within our soup object, everything with the CSS class
+06:32 project header.
+06:34 We've stored those, we've stored everything that it finds
+06:37 into HTML header list.
+06:41 Easy peasy.
+06:43 Now all we need to do is iterate over this and store
+06:48 the information that we need into this header list.
+06:53 We'll do that.
+06:54 We'll go, for headers in HTML
+06:59 header_list
+07:02 we're going to go header_list.append,
+07:06 as we know how to do that.
+07:08 headers.get text.
+07:13 We're saying, just get the text.
+07:17 Just to show you what that means.
+07:19 Everything in here, in the class project header,
+07:25 we actually got the whole h3 tag.
+07:29 That soup select pulled the whole tag,
+07:32 but all we wanted was the text.
+07:37 That's what the get text option does, that's what this
+07:40 get text does right here.
+07:41 It strips out the tags, the HTML code, and gets you
+07:46 just the plain string text that we asked for.
+07:51 That's it.
+07:52 We want to see these headers, so let's just quickly create
+07:55 another for loop here.
+07:57 For headers in header_list
+08:02 print, ooo, what did I do there?
+08:05 Print headers.
+08:07 And that's it.
+08:09 Save that, and what this will now allow us to do
+08:12 is print out the headers that we have stored
+08:16 in header list in this for loop here.
+08:20 Let's have a look at that and see what it looks like.
+08:22 Silly me, I've forgotten one thing, we actually have to call
+08:26 our scrape function.
+08:28 So now we will write scrape
+08:33 site.
+08:34 Simple.
+08:36 Save that, and let's give it a crack.
+08:39 I'll just move the screen to the right.
+08:42 There's my command prompt.
+08:44 Let's just run Python scraper.py.
+08:48 Hit Enter.
+08:51 And it worked, look at that.
+08:53 There's that plain text that we asked for with the get text.
+08:58 We got the first header, PyBites apps.
+09:02 We got second header 100 Days Of Code, 100 Days Of Django,
+09:06 and so on, and so forth.
+09:08 Now we have a list with just our headers.
+09:11 This is really cool. If you think about it,
+09:12 you could use this to create a newsletter.
+09:14 You could use this to save your website's headers for
+09:18 who knows what, to print out in a list and stick on the wall
+09:20 as a trophy.
+09:22 But this is the idea of Beautiful Soup 4.
+09:25 You can get a website and you can just strip out
+09:28 all the tags and find the information you want,
+09:31 pull it out, and then, do things with it.
+09:33 So, it's really, really cool.
+09:35 The next video we're going to cover some more interesting...

@@ -1,0 +1,27 @@
+00:00 Welcome back to the 100 days of Python,
+00:02 and the third day of the collections module.
+00:05 Now it's time to get some more practice yourself,
+00:07 so I encourage you to try to use
+00:10 the new collection's data types in your scripts.
+00:13 We did the #100DaysOfCode ourselves
+00:15 and we made a module index script
+00:18 which lists all the modules we used
+00:21 and the days we used them,
+00:22 so you can go to our log and look up those days
+00:25 and look at the scripts that used the collections
+00:28 in one way or the other.
+00:30 This was the script to identify if a tip
+00:32 was already submitted to pytip,
+00:34 and here we use the name namedtuple.
+00:37 And this was the script I was just showed you
+00:38 about the module indexer,
+00:40 and here we used defaultdict and Counter.
+00:43 So you can look at more examples
+00:44 for where we used those data types,
+00:46 but maybe you can refer to some of your code
+00:48 to start using collections more.
+00:51 And don't forget to mention 100 days of Python
+00:54 when you tweet out your progress.
+00:56 That's a great way to keep on track.
+00:58 Good luck, enjoy, and remember,
+01:01 keep calm and code in Python.

@@ -1,0 +1,26 @@
+00:00 For the learning section of today,
+00:01 what we're going to do is we're going to write an app
+00:03 that takes a CSV file, and answers a
+00:05 set of questions around it.
+00:08 The data that we're going to use is
+00:10 from the 538 data set, data/us-weather-history.
+00:16 It's not very clear what this means,
+00:17 but this is the weather history from different cities.
+00:20 You can even actually see here's the
+00:22 the data that they,
+00:24 the code that they used to visualize it.
+00:26 Here's the web scraping, they go to Wunderground
+00:29 which is the weather site to get the data, pretty awesome.
+00:32 So we're going to use this data set,
+00:33 this is the Seattle weather data
+00:36 for 2014 and 2015, I believe.
+00:39 Yeah, there's the dates right there.
+00:41 This should look familiar, right?
+00:42 Date, actual mean, actual man, actual temp and so on.
+00:45 So we're going to take this data and
+00:47 we're going to work with it.
+00:48 Now, let's make sure we start with the raw,
+00:51 we do not want GitHub html, you want the raw.
+00:54 So we're going to save this.
+00:55 And I'll just save this as seattle.csv.
+00:59 Now let's go write some code to work with this data file.

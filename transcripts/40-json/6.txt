@@ -1,0 +1,115 @@
+00:00 Okay, so that was JSON.
+00:02 I hope you enjoyed it.
+00:03 I know it seemed a bit basic, but the reality is
+00:07 that's most of the work with JSON
+00:09 that you'll end up doing, right,
+00:10 just passing the code, passing the output to find
+00:14 the tags that you need and pulling it out really.
+00:17 So let's recap everything we did.
+00:21 For the first bit of code, it was just pulling down
+00:24 and viewing the JSON files.
+00:26 We just had a sort of overview of what it looked like,
+00:29 the format and what we were looking for and so on.
+00:33 So we begin by putting JSON, okay.
+00:36 Then we pull down the file using requests.
+00:39 Then we used json.loads.
+00:43 And this essentially decodes the JSON code that is,
+00:48 or the JSON output that's in the odd.text.
+00:52 Okay so the request pulls down the JSON output
+00:55 and then json.loads decodes it,
+00:58 makes it readable for our code, okay.
+01:01 Then we just handle the data similar to a dictionary, okay,
+01:06 and we saw that if we would adjust at the top level
+01:09 for the output that we had, if we had just run
+01:13 standard four loop iteration over the data,
+01:17 we got spammed with a lot of data, okay.
+01:21 Now that was because we were just doing
+01:23 a standard print, yeah, so it didn't format it at all.
+01:28 Now that's why we were importing it,
+01:31 the top there you can see from pprint import pprint
+01:34 and that is pretty print.
+01:36 And that formats our JSON decoded output
+01:40 in a really nice way.
+01:42 Pretty much the way that you would expect to see it
+01:44 if you had an in-browser JSON decoder or JSON viewer.
+01:49 And this is a nice way of presenting it
+01:51 on our Python command line.
+01:54 Then we had a look at the JSON nested dictionaries.
+01:57 This is where things get a little more complicated
+02:00 and you can definitely see that with the data
+02:03 that we had.
+02:04 So when we looked at our dataset, we saw that
+02:07 there was a mouse key sitting there, right.
+02:09 So to iterate over that, we run four item in data mounts
+02:15 and then we p print the item.
+02:17 And that got our next level of keys.
+02:23 And specifically we then had a collected key
+02:27 which then underneath that had another dictionary
+02:30 and list below.
+02:31 Okay, so we stared working our way down
+02:35 through the hierarchy of dictionaries,
+02:38 through the nested dictionaries.
+02:40 Next from there we found we wanted to look for
+02:44 the specific names of the mounts
+02:47 and that's where we used the name key.
+02:49 We specified that in the tag, okay.
+02:52 And that p printed a really nice list of names for us.
+02:56 Then we challenged ourselves to sit there
+02:59 and go okay out of all the mounts
+03:01 that we had collected, let's just print out
+03:05 the ones that are considered flying, okay.
+03:08 And that's what this bit of code here does.
+03:11 We have an empty list called IsFlying
+03:14 and then it goes through, checks to see
+03:16 if IsFlying is True, and remembering Python,
+03:20 you don't necessarily need to keep saying
+03:23 if something is true.
+03:25 You can just say if something,
+03:27 and that is True in itself.
+03:30 So if mount IsFlying, then we add the mount data,
+03:34 all of it, we add all of that mount data
+03:36 to the IsFlying list.
+03:39 And then we can just iterate over that
+03:41 as we so pleased.
+03:45 So this is the JSON data example
+03:48 that we've just gone over just as a little reminder for you.
+03:52 It was quite in depth.
+03:54 It just dug deep a little bit, okay.
+03:58 You could see now everything if you've forgotten already,
+04:01 everything sort of makes sense.
+04:05 So now it's your turn.
+04:06 So what next?
+04:07 Well for this one, there is actually something
+04:10 very specific I'd like you to try.
+04:12 You're welcome to do whatever you want with JSON obviously,
+04:15 but I think a really good challenge for you
+04:18 at this point would be to go to our Code Challenge platform
+04:24 and just look at this code challenge on
+04:29 Code Challenger Number 16.
+04:30 Query your favorite API, okay.
+04:34 Now in this challenge we ask you to go out
+04:37 onto the internet to your favorite API
+04:39 and just do anything, okay.
+04:41 Do any sort of a pull as long as you're querying the API.
+04:45 But as we've discussed, APIs tend to return
+04:48 a lot of JSON data.
+04:50 So a specific one you could try
+04:52 rather than going through all of these
+04:54 looking for one that might interest you
+04:55 is the OMDB API.
+04:59 If you click this OMDB API link
+05:02 from our Challenge 16, you end up on this website here,
+05:07 OMDB Open Movie Database, okay.
+05:10 And it actually returns JSON data
+05:14 and you can do some examples here
+05:16 and see what that will look like for you.
+05:19 So if you want something to challenge yourself
+05:21 for day three, go through this here, OMDB,
+05:24 query the API, and see what you can do
+05:27 with the return data.
+05:29 Just play with it, manipulate it,
+05:31 just like we did with our other code.
+05:33 Maybe turn it into an app of some sort.
+05:36 Just whatever you have time for
+05:38 and whatever you're willing to try.
+05:40 And other than that, keep calm and

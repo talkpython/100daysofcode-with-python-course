@@ -1,0 +1,34 @@
+ 0:01 Packages and modules must be imported in Python before they can be used. 
+0:06 It doesn't matter if it's in external package of the package index, 
+0:09 in module from the standard library or even a module or package
+0:12 you yourself have created, you have to import it. 
+0:16 So code as it's written right here likely will not work, 
+0:20 you will get some kind of NameError, "os doesn't exist, path doesn't exist". 
+0:23 That's because the os module and the path method contained within it have not been imported. 
+0:29 So we have to write one of two statements above, 
+0:33 don't write them both, one or the other. 
+0:35 So, the top one lets us import the module and retains the namespace, 
+0:39 so that we can write style one below, so here we would say os.path.exist 
+0:44 so you know that the path method is coming out of the os module. 
+0:47 Alternatively, if you don't want to continue repeat os.this, os.that, 
+0:52 and you just want to say "path", you can do that by saying this other style, 
+0:56 from os import path. 
+0:58 And then you don't have to use the namespace, 
+1:00 you might do this for method used very commonly
+1:02 whereas you might use style one for methods that are less frequently used. 
+1:07 Now, there is the third style here, where we could write "from os import *", 
+1:10 that means just like the line above, where we are importing path, 
+1:14 but in fact, import everything in the os module. 
+1:17 You are strongly advised to stay away from this format 
+1:19 unless you really know what you are doing, this style will import and replace 
+1:24 anything in your current namespace that happens to come out of the os. 
+1:28 So for example, if you had some function that was called register, 
+1:33 and maybe there is a register method inside os module, 
+1:37 this import might erase your implementation, depending where it comes from. 
+1:41 So, modules must be imported before you use them, 
+1:44 I would say prefer to use the namespace style, it's more explicit 
+1:48 on where path actually comes from, 
+1:50 you are certain that this is the path from the os module, 
+1:52 not a different method that you wrote somewhere else 
+1:54 and it just happens to have the same name. 
+1:56 Style two also works well, style three- not so much. 

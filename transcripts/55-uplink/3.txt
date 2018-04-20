@@ -1,0 +1,24 @@
+00:00 Now, let me just put one final warning out there
+00:02 before we jump into building these API's with Uplink.
+00:05 Uplink is great for creating structured clients
+00:07 against HTTP services,
+00:08 works really, really well.
+00:10 However, if the API you're working with already has
+00:14 a Python implementation, use that.
+00:17 It's likely implemented and maintained by the company
+00:20 that actually controls the API.
+00:22 It'll continually be upgraded, and so on.
+00:26 So, for example, over here at Stripe, they have an API.
+00:28 We could use Uplink to build our very
+00:31 own client to talk to it.
+00:32 But, we can just pip install stripe,
+00:34 and they'll maintain that and upgrade that over time,
+00:37 and we don't have to worry about it.
+00:39 So, Uplink really fits in the place where you have this
+00:41 structured API you want to work with,
+00:43 however, it doesn't have like an official
+00:46 PyPI package that is the API wrapper.
+00:49 Which there are many, many of those of course,
+00:51 but first check and see if there's something from the
+00:54 company or organization to already access that API
+00:57 and use that, but if not, Uplink, that's where we're goin'.

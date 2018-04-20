@@ -1,0 +1,11 @@
+00:00 Good day everyone.
+00:01 This is Julian Sequeira and welcome
+00:03 to Python Data Structures.
+00:05 So this series of lessons in going to walk you through
+00:08 the basics of lists, tuples, and dictionaries.
+00:13 So hopefully stuff you've seen before,
+00:16 but this should be a good refresher.
+00:17 There'll be a couple of videos to watch,
+00:20 but then there'll be some exercises as well.
+00:22 So, nothing left to say.
+00:24 Let's get cracking.

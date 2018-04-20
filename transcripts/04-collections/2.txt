@@ -1,0 +1,33 @@
+00:00 Get Pythonic with a collections module.
+00:03 We are all familiar with dict, list, set, and tuple.
+00:05 The collections module
+00:07 adds a few other specialized ones that are very useful.
+00:12 Let's import the modules we're going to use.
+00:20 A namedtuple is a convenient way
+00:22 to define a class without methods.
+00:24 We all familiar with a normal tuple,
+00:28 which you can define with parenthesss,
+00:30 and one or more elements.
+00:35 The thing with the classic tuple,
+00:36 though, is that the order is not
+00:38 really meaningful, so if you print
+00:43 the user name and the user role,
+00:48 user index zero is a user index one,
+00:54 and you already notice that the indexing
+00:56 is not really saying that much.
+00:59 Is there a more readable way
+01:00 to define these kinds of tuples?
+01:04 And yes, you can use a namedtuple, so let's define one.
+01:08 User equals namedtuple, and you give it a name,
+01:14 and the fields or arguments it takes, so name and role.
+01:22 And let's create a user,
+01:27 with user and I give it a name
+01:32 Bob and role equals coder.
+01:36 The nice thing, then, is that you can
+01:38 access the entries like this, instead of
+01:41 indexing with zero, one, etc.
+01:44 So this is much more meaningful
+01:49 And to see that in a print statement.
+01:57 So, use namedtuples.
+02:00 It's very easy to set up,
+02:02 and it definitely makes your code more readable.

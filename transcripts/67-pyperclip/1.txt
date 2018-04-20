@@ -1,0 +1,17 @@
+00:00 Welcome back, this is Julian Sequeira
+00:02 and I am going to be walking you through a very simple
+00:06 yet awesome module named pyperclip.
+00:09 This is a module that we'll simply copy and paste
+00:13 from your code, there we go, done.
+00:16 May as well not watch the next three videos.
+00:19 This is a module I actually can't live without.
+00:21 It has made so many scripts
+00:24 just that little bit easier for me
+00:26 and it's just a wonderful, wonderful script.
+00:30 So, module I should say.
+00:32 So, I reckon you're going to enjoy the next couple of days.
+00:35 We're going to do a couple of really simple scripts
+00:38 after we walk through how to use pyperclip.
+00:40 Don't worry that takes about two seconds, copy and paste.
+00:43 So, click the next button,
+00:46 watch the next video, and let's create some fun scripts.

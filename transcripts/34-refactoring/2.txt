@@ -1,0 +1,63 @@
+00:01 Alright, let's do this.
+00:03 Let's look at 10 ways to make your code
+00:06 more Pythonic.
+00:07 Let's start with these typical
+00:09 big if, elif, elif, elif,
+00:13 elif constructs.
+00:14 You must've seen code like this, right?
+00:18 You have the typical workout scheme.
+00:20 We check it Monday, elif Tuesday, Wednesday etc.
+00:24 And if it's not a day we raise the ValueError.
+00:28 Now this is pretty ugly
+00:30 but it's also not extensible
+00:32 in the sense that if want another
+00:34 maybe combination of Thursday and Friday
+00:37 to do something we have to add another elif.
+00:40 What if we change this in using a dictionary.
+00:43 So that we can just look up the key
+00:45 and return a value?
+00:46 I got this picture from the Code Complete Book
+00:49 which is an awesome read about code quality.
+00:51 So to refactor that,
+00:53 let's start with defining a workouts dictionary.
+00:58 And I'm just going to copy these in
+01:00 because it's quite some typing.
+01:03 Alright.
+01:06 And that gives us a workout scheme.
+01:09 And note that the dates are in random order
+01:12 because it's a dictionary.
+01:13 By the way there's another way
+01:14 to make this dictionary.
+01:16 And that is to use zip two sequences.
+01:19 So if I define a list of days
+01:21 and a list of routines,
+01:23 we can do something like
+01:25 workouts
+01:28 equals dict of a zip
+01:31 and a zip takes one or more sequences.
+01:34 So days, routines
+01:36 and here you can
+01:38 see we have an equal dict.
+01:42 Alright, now to go back
+01:44 to this refactoring example.
+01:46 Now with the dictionary in place
+01:48 you can see how much shorter
+01:50 and nicer this function looks.
+01:55 So note I can now just do a get
+01:58 on the dictionary.
+02:00 Looking up the day,
+02:01 and it gives me the routine
+02:03 or None, if today was not found.
+02:06 So we can explicitly check routine is None.
+02:11 And raise that ValueError,
+02:13 as we've seen before.
+02:19 And otherwise, just return the routine.
+02:26 Let's try it.
+02:34 Chest and biceps.
+02:37 What about
+02:41 Saturday rest
+02:45 and call it on nonsense.
+02:51 Yes I get a ValueError
+02:52 because nonsense is not a day.
+02:54 Alright, that's our first refactoring.
+02:56 And let's look at counting inside a loop next.

@@ -1,0 +1,24 @@
+00:00 You've seen how profiling
+00:01 can make your application faster.
+00:04 It turns you into a detective,
+00:06 hunting for performance problems in your application.
+00:08 Now, it's your turn to work on your applications
+00:12 using the cProfile and the techniques
+00:14 that you've learned here.
+00:15 We're going to start on Day 1
+00:17 by just watching these videos, of course,
+00:20 and then picking an application
+00:22 that you're going to optimize.
+00:23 Pick some app that you've previously built.
+00:25 At this point in the course
+00:26 you should have built many little applications.
+00:28 You can totally pick one of those.
+00:29 Or if you've built something outside the course, use that.
+00:32 That's all fine, as long as it's the Python app,
+00:34 this should work just fine.
+00:36 So for today just think about the app
+00:38 that you want to work with,
+00:39 that you want to try to profile
+00:40 and understand the performance,
+00:42 and we're going to work on the next two days
+00:43 on making it faster.

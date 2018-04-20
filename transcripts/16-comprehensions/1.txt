@@ -1,0 +1,27 @@
+00:00 Welcome back to the 100 days of Python.
+00:02 In the coming three days I will guide you
+00:04 through list comprehensions and generators
+00:07 two of my favorite features of the language.
+00:09 We're going to look at how you can make
+00:12 a for loop with an embedded if statement
+00:15 more Pythonic by using list comprehensions,
+00:19 then we will load in Harry Potter
+00:21 and use list comprehensions to filter out
+00:23 non valid and stop words.
+00:26 Next up, generators.
+00:28 We start very simple with the concept
+00:31 of the yield statement writing a simple generator,
+00:34 we look at the stop iteration exception,
+00:37 and how the for loop catches that for you.
+00:40 We move on to more interesting examples
+00:43 and finally compare performance of lists
+00:46 and generators, because if your data set grows
+00:50 you definitely want to know about generators.
+00:52 The second day I have practical exercises
+00:56 to train your new gained list comprehension
+00:59 and generator skills.
+01:01 The third day I will show you solutions to those
+01:04 exercises and I challenge you to take
+01:07 a more advanced generator exercise
+01:10 replicating Unix pipelines and it will be a lot of fun.
+01:14 So, lets dive straight into those two Python power tools.

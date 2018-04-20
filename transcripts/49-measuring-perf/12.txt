@@ -1,0 +1,24 @@
+00:00 Second day, you've already chosen your application.
+00:03 So what we're going to do is we're going to use c profile
+00:05 or if you're using PyCharm Pro, you can use
+00:08 the visual profiling tools there, as well.
+00:10 Understand your applications performance.
+00:12 So run the cProfile module against your app.
+00:16 You can either use the api for very fine-grained stuff
+00:19 or just run it against your entire application
+00:21 like we saw in the command line.
+00:23 Sort probably by cumulative time, cumtime.
+00:27 That'll make it much easier to understand
+00:29 actually where it's slow.
+00:30 So you're job for today is to use cProfile
+00:33 to find the five slowest methods in your application.
+00:37 Write them down, make a little chart,
+00:39 put them in a text file, something like that.
+00:40 And be sure to include the millisecond times
+00:43 that were recorded.
+00:45 That way when you try to improve it on the next day
+00:47 you could actually see if that's an improvement
+00:50 or maybe even makes it worse.
+00:51 So just go through, do a little bit of detective work
+00:54 and find the five slowest methods that you control,
+00:56 that you might be able to change.

@@ -1,0 +1,47 @@
+00:00 For our application, we're going to return to something
+00:03 you've seen on day 10 and on day 25.
+00:07 Let's go over here to the GitHub repository.
+00:09 We're going to go back to our Movie Search application
+00:11 that's going to call a web service and talk to the server;
+00:15 talk to the Movie Search service that we've already talked
+00:18 about in terms of using JSON APIs, and in terms
+00:21 of air handling.
+00:22 There's no record of what happened with this app, so
+00:24 we're going to extend it further by adding logging to
+00:27 this simple application.
+00:29 Over here on the logging section, you can see we have
+00:32 a starter movie search in case you want to recreate this
+00:35 for some reason, and then here we have what's going to be
+00:38 the final version.
+00:39 Before I open this in PyCharm, let's create the virtual
+00:41 environment.
+00:42 Here we are in the directory we're going to work in.
+00:46 Create our little virtual environment here, and we'll be
+00:49 done with that. We're just going to open this in PyCharm.
+00:56 Here we are in this application.
+00:58 We should have our virtual environment active; we do.
+01:02 We don't have anything installed; we have a requirements
+01:05 file that says we have to have requests, so let's go
+01:07 ahead and install that.
+01:08 In fact, we're going to use Logbook, so I'll go ahead and add
+01:11 Logbook here as well, and then we can say "pip install
+01:14 -r requirements".
+01:17 Or, I could just click this.
+01:19 Great, now we have Logbook and we have requests and
+01:22 their various dependencies.
+01:25 Let's just go ahead and run this real quick here, so:
+01:27 Run the Program.
+01:31 It's going to go off to the server; let's search for Capital:
+01:35 we found three movies there.
+01:37 We could search for Action, and we're getting stuff back.
+01:41 However, if we turn off our internet,
+01:44 we try this again with anything,
+01:47 Boom: "Error. Could not find server. Check your network
+01:49 connection".
+01:51 Recall, over here, we added our try-except block
+01:54 and we have these various pieces there.
+01:57 What we're going to do is take this application and record
+02:00 a couple of things: what people are searching for, maybe
+02:04 how many results were found, the time of day when that was
+02:07 done, and of course if there's any errors, we're going
+02:10 to record those errors as well.

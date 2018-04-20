@@ -1,0 +1,51 @@
+00:00 Right, next up is the with statement.
+00:02 You all have worked with files by now, I suppose.
+00:05 The way to open and close files is like this.
+00:12 That's fine, that's not optimal
+00:14 but if an exception occurs between the open
+00:17 and close statements.
+00:18 Let's demo that here.
+00:20 So we write hello and for some reason an exception happens.
+00:25 The problem here is that the file
+00:27 handle called f stayed open.
+00:29 So if I check now for is f closed?
+00:33 False, it's still open.
+00:34 So it's leaking resources into your program
+00:37 which is a problem, right?
+00:38 One way to avoid this is to use try
+00:40 and use except finally block.
+00:41 Try an operation, you catch the exception, if there's one
+00:44 and the finally block always execute,
+00:47 so you could put f.close in
+00:48 there to make sure it always closes, right?
+00:51 You would write something like this.
+00:56 Let's just trigger an exception.
+00:58 I divide by zero which is going to
+01:00 give me a ZeroDivision error.
+01:03 Let's catch that here.
+01:12 Finally, I will always close my file handle
+01:17 and I do that here.
+01:19 Open the file, write something,
+01:21 trigger ZeroDivision error, catch it
+01:23 and either working or failing, I always get f.close.
+01:27 Let's see if the file handle now is closed.
+01:31 And indeed it is closed.
+01:32 That's cool, right?
+01:33 This is much better code, but there's even
+01:36 a better, more pathonic way to do the above
+01:38 and it's to use a context manager or the with statement.
+01:42 I can rewrite the previous code as with open
+01:50 This is the same code and the nice thing
+01:52 about with is once you go out of the block
+01:54 it auto-closes your resource.
+01:57 In this case the file handle f.
+01:58 This raises the exception as we told it to do.
+02:01 Let's see if f is closed.
+02:06 And True.
+02:07 Look at that.
+02:08 I mean although I like try except finally,
+02:10 it's definitely a good feature.
+02:13 This is just shorter, more pathonic way to do it.
+02:16 Use with statements or context manager if
+02:19 you have to deal with resources that
+02:21 have some sort of closure at the end.

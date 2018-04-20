@@ -1,0 +1,62 @@
+00:00 Next up, refactoring 5.
+00:02 Tuple unpacking and intervals.
+00:04 So, what if you need to do a swap of variables?
+00:07 We got a and b
+00:10 are 1 and 2.
+00:12 In other language you have to keep
+00:14 a temporary variable so you store a into tmp
+00:18 then you can override, a with b.
+00:23 Then you can put the temporary variable
+00:24 back into b and now they're swapped.
+00:27 Right, so a now became 2 and b became 1.
+00:31 Well in Python, it just takes one line of code.
+00:35 Let's restore them.
+00:39 Let's just do
+00:43 just swap them like this.
+00:46 And there you go.
+00:48 No temporary variable needed.
+00:49 So that's step one, unpacking in action.
+00:51 Another example of that is the
+00:53 earlier max function returning two values.
+00:57 Here we had legs 55 minutes, so you can assign them
+01:02 or tuple unpack them by assigning them to two variables.
+01:06 So in this case, routine and minutes.
+01:11 There you go.
+01:12 A function that returns two values can
+01:15 just be unpacked by specifying
+01:18 an equal number of variables before the equal sign.
+01:21 In this case, routine and minutes.
+01:23 N tuples, I will just do a quick demo
+01:26 because I already discussed them
+01:28 in more detail in a previous lesson.
+01:34 That's not really saying that much
+01:35 because if I have to refer to them
+01:37 I would have to access them on
+01:43 day, what is that?
+01:45 The second?
+01:46 Okay, so it's zero base so I do 1.
+01:49 I train, what do I train?
+01:52 Workout.
+01:55 Where's my training?
+01:56 Okay, it's the first element at 0.
+02:02 Okay, at least I got that right.
+02:06 Okay, so if you do it that with n tuple.
+02:15 Let's create one with workout
+02:20 equals workout with uppercase, which is the n tuple.
+02:24 I always uppercase, unless because I see them kind
+02:27 of as classes without behaviors
+02:29 and classes you uppercase in Python.
+02:31 You can either give them an args list.
+02:45 You can also do that more verbose
+02:49 with a keyword argument list.
+02:56 Now the print statement becomes a lot cleaner
+02:59 because I don't have to think about indexes.
+03:01 I can just do workout.day,
+03:07 workout.routine,
+03:11 workout.duration, and it's much easier to type.
+03:17 It's much clearer to the reader of your code
+03:19 what you're actually referring to
+03:21 and hence you'll probably make less mistakes.
+03:24 N tuples, they're very easy to define and use.
+03:27 It makes your code much more readable.
+03:29 I would encourage you to use them whenever you can.

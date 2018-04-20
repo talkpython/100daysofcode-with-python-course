@@ -1,0 +1,69 @@
+00:00 Alright, one thing we saw in the decorator
+00:02 was the args and keyword args being passed in
+00:06 and if you're new to python you might not be 100% aware
+00:10 of all the different options you have to call a function.
+00:14 So there's this great guide,
+00:15 The Hitchhiker's Guide to Python
+00:17 and it explains very well that you have positional,
+00:21 keyword, and two arbitrary kind of arguments,
+00:25 one is a list called *args and the other is a
+00:28 keyword argument dictionary, which is **kwargs
+00:32 and I just wanted to show a quick example
+00:35 how this all works, so let's define a get profile function
+00:41 and the only thing it's going to do is to
+00:43 bounce the different kind of arguments
+00:46 first let me just call it without anything
+00:48 and it should error because name is a positional argument
+00:52 which is required.
+00:55 You see that doesn't work
+00:56 and the error is pretty self explanatory
+00:59 so let me then call it with a positional argument
+01:04 and that worked, so the second type is keyword argument
+01:07 which is not required and at set here to the default value
+01:10 you can also set it to False, of course
+01:12 saying active equals False, and that works
+01:16 and then lets look at those two arbitrary kind of arguments
+01:19 which is list and dictionary, so first
+01:22 lets first do the arbitrary argument list
+01:25 so that allows me to, for example, here we do sports
+01:29 define one or more sports.
+01:34 And I really like basketball.
+01:38 Oops, yeah this is kind of strange that,
+01:41 well it says positional argument follows keyword argument
+01:45 so if you want to do it this way
+01:47 you have make sure this not to be a keyword argument
+01:50 so now it works. The reason is that the fourth
+01:52 type of arguments is an arbitrary keyword dictionary
+01:56 which goes towards the end. So let's pass in some words,
+02:06 and they go last, right? So we here have the dictionary
+02:10 of Pythonista and Topcoder, and that was the reason
+02:12 we got the error before because the keyword arguments
+02:15 always should go last, and to show arguments in action
+02:19 I define this show args decorator that prints the args
+02:23 before calling the function and prints the keyword arguments
+02:27 after calling the function,
+02:28 so just to put it into the context of the decorators
+02:31 we are dealing with here. So we have show args
+02:36 and I'm going to redefine the function, and this time
+02:41 not to confuse it with the behavior of the decorator
+02:45 I'm just going to print something else.
+02:47 Hi from
+02:50 the get profile
+02:53 function
+02:56 okay now lets see what happens
+02:57 if I call and get profile again, now that it is decorated
+03:01 of course I need to run the cell.
+03:09 And here you see, so in the decorator it first
+03:13 brings the args, then it does the actual function work
+03:16 which is printing 'hi' from the get profile function
+03:19 and then we're at the after stage of the decorator
+03:23 printing the keyword arguments.
+03:25 So here we see that the *args contains
+03:27 the position arguments, keyword arguments, and the arbitrary
+03:31 argument list, and the **kwargs contains then
+03:36 the arbitrary keyword argument dictionary, so here you see
+03:40 all those arguments actually being passed into the decorator
+03:44 and hopefully now you have a better understanding what
+03:47 *args and **kwargs means
+03:50 and the different kind of ways
+03:51 we can call function in python

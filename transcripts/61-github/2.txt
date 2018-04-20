@@ -1,0 +1,54 @@
+00:00 Alright, let's get started.
+00:03 First, we need to pip install pygithub,
+00:06 which is the module we are going to use
+00:08 to query the API and post to it.
+00:12 So, let's head over to my terminal,
+00:14 and create a virtual environment.
+00:18 Let's create a directory, CD into it,
+00:22 and, as explained in other videos, I have an alias
+00:26 to create virtual environments based on my use of Anaconda.
+00:30 So I found a virtual env with the path
+00:34 pointing to my Python binary in Anaconda,
+00:37 that's the best way for me to do it,
+00:39 but as you've probably seen in other videos,
+00:42 another way to do it is Python -m
+00:46 venv, and the name of your venv,
+00:48 which I usually call venv by convention.
+00:51 That's totally cool as well.
+00:54 But I'm going to go with my setup.
+00:59 Then you have to enable the virtual environment.
+01:02 So, I'm doing that often because I use virtual environments
+01:05 for every project I work on, I have an alias.
+01:09 So, I can just type ae, and I'm in.
+01:13 So as you see we are starting from a clean slate,
+01:16 and I'm going to do pip install pygithub.
+01:31 So with that done, head over to the notebook,
+01:33 and note that I have the virtual environment enabled.
+01:38 Here's how you can do that.
+01:42 You need to pip install ipykernel,
+01:45 and then there's a command that you can
+01:47 set your virtual environment inside the notebook.
+01:52 That's why you see me using venv here,
+01:55 and having access to pygithub.
+01:57 So, let's import the modules we are going to use.
+02:03 And it's a bit inconsistent,
+02:04 so the package is called pyGitHub, camel-cased,
+02:07 but you actually use it as github lowercased.
+02:12 Now, let's make a Github object.
+02:23 And now I can work with that object.
+02:25 Notice that we didn't log in, so we're a bit limited
+02:28 in the amount of calls we can make to the API at this point.
+02:38 And you will see later that
+02:39 when we make this object with a token,
+02:41 we can make many more calls to the API.
+02:44 And let's work with our PyBites user.
+02:51 So, I'm going to store the user in pb.
+03:01 And there you go, and before retrieving data from the API,
+03:05 let's take a little bit of a detour
+03:08 to show you the help functions in Python.
+03:10 And that's because I've found the documentation
+03:13 not very complete and helpful for this module,
+03:16 so, when I worked with this module
+03:19 for a co-challenged platform, I used help and there
+03:22 to inspect the module and see what was available for use.
+03:26 So that's why I want to give you those tips as well.

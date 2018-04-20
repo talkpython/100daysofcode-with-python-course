@@ -1,0 +1,25 @@
+00:00 A common use case I find for generators
+00:02 is to build up my sequence.
+00:04 So, let's define a list of options.
+00:07 Red, yellow, blue, white, black, green, purple.
+00:12 And in my older code, I will do something like,
+00:22 And that's fine, we just keep an internal list,
+00:26 and append to it and return it.
+00:30 Just to show you how you can do this in a more
+00:32 concise way with a generator.
+00:35 I'm just calling it the same name,
+00:38 but appending _gen.
+00:40 It's the same for loop,
+00:42 but instead of building up a new list,
+00:44 I'm going to use the yield keyword
+00:46 to yield the values one by one.
+00:52 Alright, let's see what that gives us, a generator.
+00:59 And a way to materialize the generator
+01:03 at one go is to convert it into a list,
+01:12 and there you go. So this is a shorter, more concise way
+01:14 to build up a list or sequence,
+01:16 and it's also faster if your data set grows,
+01:20 because it's evaluated lazily.
+01:23 And actually to show that in practice,
+01:24 in the next section, I will compare a list
+01:27 and a generator in performance.

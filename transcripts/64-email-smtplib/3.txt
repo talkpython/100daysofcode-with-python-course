@@ -1,0 +1,19 @@
+00:00 Alrighty, this one's nice and quick,
+00:02 the setup, so just go ahead
+00:04 and create yourself an emailer folder.
+00:06 whatever you want to call it for this project,
+00:08 and install your virtual environment.
+00:12 Now, with this, smtplib and the mime modules
+00:16 they're all built in, it's all standard Lib.
+00:19 So you actually won't need to pip install anything extra.
+00:22 Not for this, but as always let's just
+00:27 activate our virtual environment
+00:29 just so we have a nice clean environment to run in.
+00:34 And in this directory go ahead and create yourself
+00:37 two files, I'm separating them just for ease
+00:40 of explanation right.
+00:42 So we're going to create an emailer file
+00:45 and an emailer-mime file.
+00:49 Call them whatever you want,
+00:51 that's just what I'm naming them.
+00:52 And let's populate the files.

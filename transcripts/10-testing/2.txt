@@ -1,0 +1,54 @@
+00:00 Before getting into the nitty gritty,
+00:02 why do you want to test your code?
+00:05 And here I have a useful link that introduces
+00:08 testing in Python,
+00:10 and from my own experience I think the main
+00:12 thing you want is to have a regression test suite.
+00:16 As your software grows, it becomes more complex
+00:19 and you need to make sure that all the previous
+00:21 code keeps running.
+00:23 If you have a suite of tests that are fast
+00:25 and you can run every time you make changes,
+00:27 you have a much more reliable application.
+00:30 Down here, what I like about this link is that
+00:32 there are rules about testing,
+00:35 and I'll highlight a few.
+00:36 So every test should test one thing
+00:39 and be small and independent.
+00:42 One test should not influence the other test.
+00:44 And set up and tear down,
+00:46 which we will see towards the end with fixtures,
+00:48 is a way to guarantee that.
+00:51 Tests need to be fast.
+00:52 Your test suite will be growing,
+00:54 and you will run them often.
+00:55 You don't want slow tests to delay your development.
+00:59 Testing should be automated.
+01:00 Again, because you run them often,
+01:02 it should be as hands off as possible.
+01:05 Fixing bugs.
+01:06 If you find a bug in your application
+01:08 you usually want to write a test first
+01:10 to show that the bug, or even document the bug,
+01:13 and then fix it, and then you always have that test
+01:16 to verify that that bug does not occur again.
+01:19 And there are couple of other items.
+01:21 This is good link to go through when
+01:23 testing is really new to you.
+01:26 There are various frameworks in Python
+01:28 to facilitate you writing tests.
+01:31 We have unittest, doctest, pytest, hypothesis,
+01:34 and tools like talks that lets you
+01:37 test various configurations or environments,
+01:40 unittest2, and mock.
+01:42 In this lesson we are going to focus on my favorite,
+01:45 which is pytest.
+01:46 pytest is a framework that allows you to
+01:49 write test for your Python code,
+01:51 and it specifies a set of rules,
+01:53 and it has a couple of features that really
+01:56 helps you write better test code.
+01:58 Alright, enough theory, let's move on
+02:00 to the next video where I pip install pytest
+02:02 and pytest coverage, and we look at
+02:04 the example for this lesson.

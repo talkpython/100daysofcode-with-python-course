@@ -1,0 +1,45 @@
+00:00 Let's review what we've learned so far.
+00:04 In this lesson we used a guessing game to write pytest.
+00:08 And the game went like this.
+00:09 There were a maximum of 5 attempts to guess a number
+00:12 and you got feedback if the number was too low or too high.
+00:17 We compared pytest to unittest
+00:19 and saw that it's pretty succinct.
+00:23 For unittest you need a class and self-serve
+00:26 equal syntax.
+00:28 pytest just lets you write functions.
+00:30 And this is a very simple example,
+00:32 but you're already see that pytest requires far less code.
+00:37 pytest has nicely formatted outputs.
+00:41 For example, if a fail,
+00:44 then we pass.
+00:48 We saw pytest code to show how much of our code
+00:51 was on our test and where tests were missing
+00:54 it showed the lines in our script.
+00:58 We saw mocking in action, by mocking out the building input.
+01:04 Because we wanted to control what the input function
+01:07 returned when playing a game.
+01:10 We also saw an example of mocking out the randint() function.
+01:17 We also saw how to test exceptions
+01:19 with pytest, which is pretty easy.
+01:21 And we saw how to get your outputs
+01:23 from your program using the capfd.
+01:26 And that's nice because then we can check
+01:29 if the output was as expected.
+01:34 And here we have a complete game,
+01:37 wrapped into a test.
+01:40 And then we did some TDD on Fizz Buzz,
+01:46 writing tests, writing a bit of code,
+01:49 writing for more tests, some more code,
+01:53 some more tests
+01:55 and some more code.
+01:57 And notice here we used the parameterize
+01:59 feature to prevent duplicating a lot of test code.
+02:03 So it takes a list of typals and in the body
+02:06 of the test function, I can just do one assert.
+02:09 So, that's how we kept it dry.
+02:15 And again, the output is very nice.
+02:17 Alright, that was quite some material to take in.
+02:21 I hope you are more comfortable with pytest now.
+02:23 And now, it's your turn.
+02:24 Keep calm and code in Python.

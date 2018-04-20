@@ -1,0 +1,107 @@
+00:00 It's great the we created this document
+00:01 but the experience wasn't super,
+00:02 like it didn't tell us the thing was created,
+00:05 we put a bunch of code right into our form,
+00:09 things like that.
+00:10 So let's clean this up a little bit
+00:11 and let's begin by going over here
+00:13 and creating a new module.
+00:15 I'll call this...
+00:18 I'll just call this utilities.
+00:20 Now over here we right code, this runs on the client-side
+00:24 and it's going to do...
+00:25 This basically lets us put these methods wherever we need.
+00:28 So one the things we're going to need to do,
+00:30 this will take a moment before it's obvious why,
+00:32 but we need to, when we're over here
+00:35 When we want to go home, we need the home form,
+00:37 which we don't have access to,
+00:39 to basically run this code again, okay?
+00:43 How do we do that?
+00:45 Well what we can do is we can come over here
+00:47 and say, import utilities
+00:52 We can go the the utilities and say,
+00:53 home_form = self
+00:56 so that we can always get back to it
+00:58 from within code over here.
+01:00 So we'll have a home_form
+01:04 as None
+01:05 but of course it will be set soon the application starts.
+01:08 And let's just add a method, "Go home".
+01:12 How do we do that?
+01:13 We say,
+01:15 home_form.
+01:16 Now it doesn't know what this is.
+01:19 We want to call this function here.
+01:26 Like that.
+01:27 That's all we got to do, super easy right?
+01:29 We just wanted to call this function
+01:31 go here from wherever.
+01:32 So we need this import utilities over in
+01:35 our add_doc_form as well.
+01:41 And let's go over here and we can just say,
+01:42 .go_home
+01:45 We've already created the document but
+01:46 let's take some of this code and make a little simpler.
+01:49 Let's go over here and say, utilities.create.
+01:59 And let's pass that in there, okay?
+02:02 So we basically need to call this function
+02:04 over in this utilities.create_doc,
+02:06 but there's a reason I want to do this.
+02:07 You'll see in just a second that it makes sense
+02:09 to try to put these together.
+02:10 So it's find this.
+02:14 Remove that one simple call over here.
+02:19 Like that.
+02:20 And it's going to accomplish the same thing,
+02:22 but we also would like to have one more function.
+02:27 refresh_data
+02:29 Now what I want to store is I want to store
+02:34 the docs as a list and the categories as a list.
+02:45 And when we call this, I'd like to write that code
+02:47 that we had over here again.
+02:49 Remember I said I didn't like this?
+02:50 Let's take this code and get rid of it
+02:53 and put it over here as well.
+03:00 So here we're going to go to the server
+03:01 and we'll also do this for the documents.
+03:03 If you had a ton of documents that's not a good idea,
+03:08 but since we only have a few we'll go like
+03:12 this.
+03:13 Okay, so we're going to set the categories and the documents
+03:17 and that means over here we can just go...
+03:21 We've got our list, let's say
+03:24 utilities
+03:27 not categories.
+03:29 Now how do we know this is refreshed?
+03:31 Let's call it once when the app starts up
+03:33 and that's all we're going to do.
+03:40 Alright so that should refresh the data
+03:42 and then any of the sub-forms will have access
+03:45 to the utilities dot categories or documents.
+03:50 And here we'll call create_document
+03:52 and then we'll call go_home.
+03:53 And within create_document, final thing,
+03:54 the reason it's nice to have this here
+03:56 is we can call refresh_data again and make sure
+03:59 that whenever the data is modified,
+04:01 we automatically get it updated
+04:03 but otherwise, it just stays like it is.
+04:06 Let's go and test this, that it's still working.
+04:12 Apparently spelling is hard.
+04:19 Alright, what happens when I click this?
+04:20 It's going to go to the utilities client-side module,
+04:24 call the create_document.
+04:26 On the server it's going to create and insert the document,
+04:28 it'll come back and then it'll call Refresh
+04:30 so if for some reason the categories,
+04:32 definitely the documents will have changed,
+04:34 we'll get those new ones.
+04:35 And then it's going to go to the home form, call go_home,
+04:37 it should reload this and it will all work.
+04:39 Let's try it.
+04:42 Boom!
+04:43 On the server we created this new document, now we're home.
+04:46 We can add more of course.
+04:48 I think it's about time to do the other ones
+04:50 where we can actually see the documents right?

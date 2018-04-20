@@ -1,0 +1,98 @@
+00:00 So it's time to get started writing our search app
+00:02 that's going to talk to the movie search API.
+00:05 Now over here in our repository,
+00:06 I've got Day 10 to 12 selected
+00:09 and I've opened up the terminal here.
+00:12 We want to open this in PyCharm.
+00:14 You don't have to use PyCharm,
+00:16 but I'm going to open in in PyCharm.
+00:17 I'm going to go through a couple of steps.
+00:19 Whenever you depend upon external packages,
+00:21 it's a good idea to have a virtual environment.
+00:24 In order to create one of those over here,
+00:25 let's call this app, let's make a folder really quick.
+00:30 So call this Movie Search.
+00:32 And go in here.
+00:33 Then, I'm going to create a virtual environment here.
+00:37 If we call it .env or venv,
+00:40 then PyCharm will automatically detect it and use it,
+00:42 so might as well call it that.
+00:45 Now open this in PyCharm,
+00:46 can't seen anything because dot creates hidden files on Mac
+00:49 and Linux, but we're going to open this
+00:52 on Mac and Linux, you have to say file, open, directory
+00:56 and Mac, you can just drop it here.
+00:59 Let's go ahead and tell PyCharm about about git,
+01:02 so everything I create is going to be put
+01:04 into the git repository for you.
+01:06 And that'll be a little easier here,
+01:08 go ahead and also tell it to ignore this directory.
+01:12 Maybe someday it'll do that on it's own.
+01:13 Now I want to create two files,
+01:15 I don't like to cram everything into one Python file.
+01:19 When I'm creating an application
+01:20 I want to partition it into pieces so let's go over here
+01:23 and create two things.
+01:24 We're going to create a program
+01:26 and we're going to create an API.
+01:31 And go ahead and tell PyCharm it can add stuff to git.
+01:34 Okay so what we're going to do
+01:35 is we're going to write the code to access the service
+01:38 in the API file and we're going to work with it
+01:41 from the user interaction perspective
+01:43 and orchestrate it from over here.
+01:45 So let's define a quick method over here, main.
+01:48 And we'll just have pass.
+01:50 Now we want to follow the convention for running this program
+01:54 if and only if it's the target of execution.
+01:57 And in PyCharm, the way that,
+01:58 or, in Python, the way that you do that
+02:00 is you use this if dunder name equals dunder main,
+02:03 then that means it's supposed to run
+02:05 and I'll just call this method here.
+02:09 This is a little bit set up and ready to go.
+02:11 We're going to use something over in the API
+02:14 so we're going to create a method here
+02:16 that's going to take a string
+02:18 and it's going to return some search results.
+02:19 So create.
+02:21 And say find movie by title, let's say,
+02:25 because that's what we're actually searching for here.
+02:27 And the keyword, and it's going to do some stuff
+02:31 and return some movies, that's going to be great.
+02:33 How do we do that?
+02:34 Well first we have to work with requests.
+02:36 So we'll come over here and say import requests.
+02:38 Now let me go ahead and run this,
+02:41 it's not going to work out so well,
+02:43 we're going to right click and create a run configuration
+02:45 in PyCharm, or you just type Python 3, you know,
+02:48 program.py.
+02:51 That didn't actually import it so nothing actually happened.
+02:53 But let's do, if we come over here and say import api
+02:56 as we're going to need to, now we try that again, boom,
+03:00 there is no requests. So of course we have to install requests.
+03:03 Now if you look in our terminal,
+03:05 notice we have the virtual environment activated here,
+03:08 so we could say, see what's in there.
+03:11 And there's nothing really in there.
+03:14 So one of the conventions people like to follow
+03:16 is when they have dependencies
+03:19 they'll have a file called requirements.txt.
+03:23 And in there, they'll put library names like requests.
+03:27 requests, like this.
+03:29 And notice, PyCharm already knows,
+03:31 hey, you need to say pip install requests,
+03:33 or you can just click this and that'll do it for you.
+03:37 If you wait for a second down here
+03:38 and then we do the pip list again,
+03:39 there should be more stuff including requests,
+03:42 our program should now run.
+03:44 Ta-dah, okay.
+03:45 So we have just the basic structure of this thing
+03:47 hanging together, right?
+03:49 We've installed requests, we've created the program,
+03:52 and the api separation, we've got our requirements,
+03:54 and it's all kind of hanging together.
+03:57 Next up, we actually have to write
+03:59 our method here, about how we find movies.

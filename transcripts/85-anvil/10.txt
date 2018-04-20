@@ -1,0 +1,48 @@
+00:00 Alright, our next goal is going to work on,
+00:02 to be working on this add_doc_form here.
+00:06 So what we want to do is we want to be able to drop in
+00:09 some pieces, so we're going to come over
+00:11 and add a little sublabel, and this is going to control,
+00:15 this is going to basically be the label in our form.
+00:17 We don't really program against it,
+00:18 so we don't need to set the name,
+00:20 but this'll be document name.
+00:23 And let's make it a little more standout, make it bold.
+00:26 Okay.
+00:27 And then, we're going to have a text area where they can type.
+00:30 Notice I can drop it in these different locations.
+00:32 I'll drop it right here.
+00:35 We can tighten that up by dragging that bit over.
+00:41 Now this one, let's give this a name,
+00:43 such as, like, textbox_doc_name.
+00:47 And let's give it a placeholder
+00:52 document_name like that.
+00:54 I'll do exactly the same thing for the rest of the elements.
+01:03 Okay, so I've done a little draggy droppy magic,
+01:05 and gotten this far.
+01:08 We have a document name, we have a category,
+01:10 and this is going to be a dropdown, we'll fill that up.
+01:12 This is going to be a text area, and we should
+01:14 go ahead and give this a placeholder
+01:17 so people see and document this little placeholder,
+01:21 which'll only be there until they type text,
+01:23 and we have this button, create document.
+01:25 Let's do a little more work on this.
+01:26 We want this to align to the right over here.
+01:31 We want an icon.
+01:33 Little plus sign, and let's change the color here.
+01:40 Go with this blue, which I just grabbed
+01:42 off somewhere on my screen, and let's make this,
+01:44 you can type hex here if you want.
+01:46 Three F's for white.
+01:47 Okay, so there's our create document.
+01:49 Let's go ahead and run this, see how it works.
+01:51 Again, we can click around.
+01:53 And now we can add a new document.
+01:55 It says document name, the name,
+01:57 look how cool that is, it's got nice little bootstrap forms,
+01:59 nothing in our dropdown yet, contents here.
+02:02 Nothing happens when we click,
+02:03 but that's going to be what we do next,
+02:05 is we're going to make this interactive
+02:07 and do a little validation.

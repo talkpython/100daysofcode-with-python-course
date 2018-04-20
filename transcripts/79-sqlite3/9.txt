@@ -1,0 +1,75 @@
+00:00 Okay, done and done.
+00:02 Let's look over everything we've covered
+00:04 in the past couple of days
+00:05 before you move onto the third day.
+00:08 So the first thing you had to do
+00:10 was install the SQLite browser,
+00:13 and this little application
+00:15 just lets you load up your database files
+00:17 so you could see everything that was stored in your database
+00:21 in a nice GUI environment.
+00:25 Now then, the next thing we did was we created
+00:27 a simple database, so I've outlined, I've highlighted
+00:30 the important things you need to keep in mind here.
+00:33 So first thing, you begin
+00:35 by importing sqlite3 as you'd expect.
+00:38 Then we connected to the database
+00:41 using the sqlite3.connect, okay?
+00:44 And if the database that you specify
+00:49 between the brackets doesn't exist,
+00:51 it creates the database for you,
+00:54 very important to remember.
+00:56 So if you make a typo there, it's going to create
+00:58 a new database rather than connect to the existing one.
+01:03 Alright, then we actually take the cursor
+01:06 that allows you to talk to your database.
+01:08 So you've connected to it.
+01:09 Now you have to be able to type into it,
+01:11 and you use a cursor for that,
+01:13 and you assign that to the variable c, which just makes it
+01:17 a bit easier to type further on within your application.
+01:21 Alright, then we execute the SQL commands,
+01:24 and this is true for any SQL command that you want to run,
+01:28 not just to create one.
+01:30 In this specific instance, we created a table
+01:33 with two text columns
+01:37 and one integer column, alright?
+01:41 And then we always close the connection when we're done.
+01:45 Very important to remember to close it,
+01:47 'cause if you don't, then the database may still be in use
+01:50 and may prevent other connections
+01:52 and potentially cause corruption,
+01:56 so we'll always close it when we're done.
+01:59 Next one, we wanted to add data to the database.
+02:03 So again we connected to the database
+02:06 using the connect command,
+02:08 and we loaded the cursor into the c variable.
+02:13 Alright, and more SQL syntax.
+02:16 This time we're inserting the data into the database
+02:20 and we were inserting a couple of values there.
+02:22 We were doing two text values.
+02:24 That was the name and the address columns,
+02:27 and then the integer column of the phone number.
+02:32 And then we can close the connection.
+02:34 Now the more Pythonic way to do this
+02:37 is to use a with statement, okay?
+02:40 And this will allow you to run
+02:43 your cursor and your execute commands,
+02:46 but then it will actually close it by itself.
+02:50 It'll close it for you, it'll auto-close
+02:52 once the commands have finished running,
+02:55 once the with statement has completed, okay?
+02:58 So in this instance, it inserts the contents of the list
+03:04 using the wildcards of the three question marks,
+03:07 and you saw that in our slightly automated script for this.
+03:12 And that's it, so now it's your turn for Day 3.
+03:16 Go ahead and implement your own database.
+03:18 Try to come up with something interesting,
+03:20 and see what other abilities you can try and run.
+03:24 So for example, maybe try editing the data
+03:28 inside the database, so we inserted and we selected
+03:31 the data, but now maybe try
+03:33 and actually edit the data.
+03:36 I think that's a great challenge for you.
+03:38 So enjoy, that's SQLite databases,
+03:41 and keep calm and code in Python.

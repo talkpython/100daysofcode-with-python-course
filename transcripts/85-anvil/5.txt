@@ -1,0 +1,72 @@
+00:00 Before we start building our application with Anvil,
+00:02 lets look at the building blocks, all the pieces,
+00:04 the little Lego bricks that we have to put together
+00:07 because they're really easy to fit together and use.
+00:10 So, let's do a quick survey.
+00:12 Probably the first thing you'll notice is forms.
+00:14 And forms are the HTML pages and components.
+00:17 You have a nice visual designer with a set of components
+00:20 you can drag over and visually line up
+00:22 and click on them and set their properties and so on.
+00:24 So, that's really nice.
+00:25 There's also a code behind thing that goes with them
+00:28 that you can run some code as part of
+00:30 interacting with the form.
+00:33 Now, some code doesn't belong within the UI,
+00:35 it belongs elsewhere.
+00:36 Maybe it's shared across forms or it just doesn't really
+00:39 belong there and so, that would be in
+00:41 this client module section.
+00:43 So here you can create these Python modules that you write
+00:45 arbitrary Python code that can
+00:47 be called from within the forms,
+00:49 can interact with each other and so on.
+00:50 So, it's kind of a nice way to separate stuff out there.
+00:53 We'll also have server modules.
+00:55 So, this client code in the form code behind
+00:58 actually runs on the client side.
+01:01 Think about that for a minute.
+01:02 Python code running a client side.
+01:04 That means in the browser, so it actually converts
+01:06 to JavaScript and runs there.
+01:08 Sometimes you need code to run on the server to interact
+01:11 with your database in certain ways or to work with secrets,
+01:14 or validate stuff that nobody can mess with.
+01:16 So, that's server modules.
+01:17 And there's nice integration here.
+01:19 And of course you need data, a database.
+01:21 So there's this concept of data tables
+01:23 which is really nice and easy and integrated.
+01:26 On top of these four things we have services.
+01:28 So, things like user management,
+01:30 storing users with passwords
+01:33 and registration and stuff like that.
+01:35 Secrets like API keys you don't want to put in your code
+01:37 but still make accessible to your web app.
+01:39 And Google and Facebook APIs,
+01:40 so if you want to get to say like Google Drive, for example.
+01:43 Stripe if you want to accept payments.
+01:45 And finally, this thing called uplink.
+01:47 Now, uplink, we talked about a thing called uplink,
+01:50 a Python package for services but this is not that.
+01:53 Put these entirely out of your mind
+01:55 they're totally unrelated.
+01:56 This is just the same name they have here as the thing
+01:59 that we played with earlier.
+02:00 The idea is, if you would like your web application to reach
+02:04 out and get inside some other thing and interact with it
+02:09 you can do this thing called uplink.
+02:10 Here's an example.
+02:11 Suppose I have a Raspberry Pi that's running some
+02:13 Python code that controls my house.
+02:16 Inside that Raspberry Pi, I don't want to have a service that
+02:19 things integrate with but I would, somehow, like my
+02:23 web application to initiate a call into that Raspberry Pi.
+02:27 Like, let's say to turn on the lights or
+02:29 open the garage door by clicking a button on my web app.
+02:32 Uplink would make that happen.
+02:33 So, really, really cool.
+02:34 We're not going to use it at all.
+02:35 We're not going to use any of these services
+02:37 for what we're doing
+02:38 but we are going to work with the top four items for sure.

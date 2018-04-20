@@ -1,0 +1,95 @@
+00:00 Let's take a quick look at itertools product.
+00:03 Now product actually is short for Cartesian product
+00:08 or it's a Cartesian product, I suppose.
+00:11 Now, what does that mean?
+00:12 Well, it's not another language.
+00:13 It actually means it is every
+00:16 possible combination of values.
+00:20 Alright, so think of it this way.
+00:21 Let's say you had a string.
+00:23 Let's say you had my name
+00:25 and you wanted to see how many different possible
+00:29 combinations you could get of the letters.
+00:33 Now you can change that slightly.
+00:36 So, the first thing that comes to mind is that you
+00:39 might think how many combinations of six letters.
+00:43 So my name, J-U-L-I-A-N.
+00:46 How many combinations of those six letters can you get?
+00:52 Now with itertools product,
+00:54 that is exactly what it calculates for you.
+00:57 That's what it prints out on the screen for you.
+01:00 So, let me demonstrate that for you.
+01:01 Okay, so we've done from itertools import product.
+01:05 For letter, and we'll use my name
+01:07 just because we've discussed that.
+01:09 For letter in product, now in product,
+01:12 look at that tool tip, we choose the iterable,
+01:14 the item that we're iterating over and the repeat.
+01:18 Now the repeat, it's actually quite easy.
+01:21 It's much easier to show it to you.
+01:22 But the repeat is essentially how many of those letters
+01:27 or those items in that iterable
+01:30 you want to show up as a product.
+01:33 Okay, so let me show you.
+01:34 So, we're going to use my name.
+01:38 Julian.
+01:39 And then, for the repeat, we're going to say 1,
+01:42 just like the tall tip.
+01:43 And when we hit enter, or when we, sorry I should say
+01:47 when we print out the letter.
+01:51 You'll see we, because we repeat it only 1,
+01:54 we're only saying, well we only want one group,
+01:58 1 grouping, we're only going to use how many iterations
+02:01 of this, how many combinations of this are we getting to
+02:07 a maximum of 1 character or 1 object?
+02:12 Okay, so you can see here
+02:14 Julian, the J can only show up once.
+02:17 Okay, because it's only repeated once.
+02:19 So, if we change this, let's just copy this back out.
+02:26 And we change this to 2,
+02:29 we can go print, letter.
+02:33 Now, watch what happens.
+02:35 We get a lot more as a result.
+02:37 Okay, so the first thing it does is it takes the letter J.
+02:41 Well, we're repeating 2.
+02:42 We're going to use a combination of 2 letters.
+02:44 We want to maximum of 2, it can repeat twice, okay.
+02:48 So, we're going to have J with J.
+02:51 We're going to have J with U.
+02:52 We're going to have J with L.
+02:53 We're going to have J with I.
+02:54 And so on through the list.
+02:55 And once it exhausts, J being in the first position
+03:00 and this other combination being in the second position
+03:05 it then moves down to the U.
+03:07 And then it repeats it all over again.
+03:09 And then, L and so on.
+03:11 And it keeps going.
+03:13 Now one thing you'll notice,
+03:16 is that we're talking about the positioning here.
+03:18 Okay, so U and I appear together here.
+03:23 But they also appear together here.
+03:26 I and U.
+03:28 The difference being obviously that because they're in a
+03:30 different order, it counts as a different combination.
+03:35 Remember, this is every possible combination.
+03:38 While yes, they're still returned as U and I
+03:42 you're still getting a U and an I returned,
+03:44 because they're in a different order,
+03:45 because they're in a
+03:46 different technical combination, I suppose.
+03:49 They are capable of showing up twice.
+03:52 Okay, what you will also notice,
+03:56 is that J, J, does not show up twice.
+04:02 Okay, it shows up once, because it doesn't matter.
+04:06 These aren't treated as different J's.
+04:09 It is a J, plain and simple.
+04:11 Okay, so it shows up J, J, just once.
+04:16 And that is editor's product.
+04:19 It's so simple, but just imagine trying to code this
+04:25 yourself with a for loop
+04:26 and looking at if statements and everything like that.
+04:29 It's disgusting, right.
+04:31 So, this is the power of itertools with just two lines of
+04:34 code you can get every possible combination,
+04:39 the Cartesian product of an iterable.

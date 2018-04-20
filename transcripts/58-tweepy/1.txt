@@ -1,0 +1,21 @@
+00:00 Hello and welcome back to the 100 Days of Python.
+00:03 The next three days, I will be your guide,
+00:05 teaching you how you can do
+00:07 Twitter data analysis with Python.
+00:09 First, we set up an application with the Twitter API.
+00:12 Next, we set up a virtual environment and import
+00:15 the Twitter key secret and access tokens.
+00:18 Then, we dive straight in using the cursor object
+00:21 of the tweepy module to get all our tweets.
+00:24 Then we show our most popular tweets
+00:26 based on an average of the number of likes and retweets.
+00:29 Then we look at the top hashtags and mentions,
+00:32 and finally, we feed all our tweets into an awesome module
+00:36 called Wordcloud, which makes a nice visual representation
+00:40 of our Twitter usage.
+00:42 And the second and third day, I got a lot of
+00:44 interesting projects lined up to solidify
+00:47 your newly gained Twitter data analysis skills.
+00:50 This will be a lot of fun
+00:52 and I'm exciting to teach you this.
+00:54 See you in the next video.

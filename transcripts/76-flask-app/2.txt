@@ -1,0 +1,42 @@
+00:00 Alrighty, before we start any of the programming
+00:03 we need to do a little bit of set up, okay?
+00:06 You can have a look at the, what you see on the screen here,
+00:08 and you'll see that I've got
+00:09 a bit of a folder hierarchy set up.
+00:12 Now Flask, in order to operate,
+00:14 it needs the route directory.
+00:15 Now we're sticking really basic here, okay?
+00:19 What you need to do is you'll have an,
+00:21 I want you to create two files, first and foremost.
+00:25 Wherever you're creating your Flask app,
+00:26 I've created it in this directory here.
+00:29 I want you to create an app.py file,
+00:32 so that's this one here, app.py,
+00:34 and a data file, that's for the next video.
+00:38 All right, and then also create a templates folder,
+00:41 like this one here,
+00:42 and inside create a file called index.html.
+00:46 You can use whatever editor you want
+00:48 to create these files, just go ahead and create them,
+00:50 and leave them empty, all right?
+00:53 When you're done, it should look something like this.
+00:57 And the one thing we're missing is
+00:58 we haven't actually installed Flask,
+01:00 so let's install that now using pip install.
+01:04 Actually, what have I forgotten?
+01:06 I've forgotten my virtual environment.
+01:09 So shame on me, shame on me.
+01:12 So, python -m venv venv
+01:15 I'm just creating a virtual environment called venv.
+01:18 And there it is there.
+01:21 Now we can activate that, activate, and now it's running.
+01:27 Now we can install Flask.
+01:31 pip install flask, installs everything it needs,
+01:34 including those lovely Jinja2 templates,
+01:37 and there we go.
+01:40 As I mentioned the Jinja2 templates,
+01:42 that is what this directory is for.
+01:46 So technically yes, this is a html file,
+01:48 but it's going to behave like a Jinja2 template
+01:50 when we get to it.
+01:51 All right, move on to the next video and let's get cracking.

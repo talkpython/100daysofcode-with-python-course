@@ -1,0 +1,22 @@
+00:00 Probably time that we talked about error handling.
+00:02 I'm sure that you've encountered some issues
+00:05 with your Python code and you may wonder
+00:08 what is the right way to catch these errors in Python.
+00:12 Well, that's what this next three day section is all about.
+00:16 Have you encountered Python's errors?
+00:18 Have you seen what's called a traceback here?
+00:21 This is the report from trying to run the Python program
+00:25 when something actually went wrong on line 21 of api.py.
+00:30 Let me get a little info here,
+00:31 there's a type error : and this
+00:34 gives us a description of what that is.
+00:35 The type thing on the left here, the type error
+00:37 is an exception type and it tells us the category of error.
+00:41 On the right is the actual message
+00:43 of what went wrong within that category.
+00:45 So None type, object is not iterable.
+00:48 Turns out that in this case, the data return
+00:51 from the server was empty and we tried to loop over it.
+00:53 That doesn't work so well.
+00:55 So we're going to see how to deal with a variety of errors
+00:58 the proper way in Python.

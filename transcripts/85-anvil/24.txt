@@ -1,0 +1,33 @@
+00:00 Finally, we're going to round this whole section out
+00:03 by putting it all together.
+00:04 You've built the UI,
+00:05 you've built the data access layer and storage,
+00:07 now, it's just a matter of making the UI come to life.
+00:10 Is that form supposed to fill up with data when it loads?
+00:13 Implement that.
+00:15 Is the button supposed to do something when you click it?
+00:17 Implement that.
+00:18 Right, so, you'll double click on the designer,
+00:20 it'll flip you over to the code here
+00:21 and you just write the code that happens
+00:23 when you click the button,
+00:25 or when the thing loads, or whatever.
+00:28 Just make your app come to life.
+00:29 Fill the interaction pieces that you need,
+00:31 and you should be done.
+00:33 So if this is something you really enjoyed building,
+00:35 and you think is kind of cool, you want to share,
+00:36 be sure to publish your app.
+00:38 You can share with a private link but be aware
+00:39 if you change it ever so slightly,
+00:41 that private link will expire.
+00:43 So it's very, very touchy.
+00:45 You could come up with a public link here if you'd like.
+00:48 So this is what we came up with,
+00:49 you can choose yours however you like.
+00:51 All right, that's it.
+00:52 I hope you enjoyed building this full stack web app the easy way.
+00:55 Be sure to share it on Twitter and Facebook #100DaysOfCode,
+00:58 and @mention both TalkPython and PyBites so we can
+01:02 share in the glory of what you've created.
+01:04 All right, get out there and build somethin' fun.

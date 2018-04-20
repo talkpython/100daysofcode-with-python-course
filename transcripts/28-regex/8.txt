@@ -1,0 +1,37 @@
+00:00 So, let's do a quick wrap of what we've learned so far.
+00:04 When to not use regexes.
+00:07 Well if simple string operations do, use those.
+00:12 Re.search versus re.match,
+00:14 re.match matches the whole string,
+00:16 re.search matches part of the string.
+00:19 Those are probably the main methods
+00:21 you will be using on the re module.
+00:24 Capturing parentheses,
+00:25 to access part of the match use parentheses
+00:29 and you can use groups on the matching object
+00:33 to get to the string.
+00:35 Your new best friend findall, one of my favorites.
+00:38 To get all the occurrences of a pattern in a string,
+00:42 you can us findall and I showed you two examples.
+00:45 One is to get all the days or numbers out of the string
+00:50 and it returns a list, and findall combined with counter
+00:54 one line of code a lot of stuff gets done.
+00:57 Compile for regexes, so you can use re.compile
+01:00 to compile a regex to use over and over again.
+01:04 And you can add a verbose switch to make regular expressions
+01:08 none space sensitive so you can line 'em out
+01:13 over multiple lines, making 'em more readable.
+01:17 String replacements, resub.
+01:19 Again if you can use string replace do that
+01:21 but sometimes the pattern you want to match
+01:24 is more sophisticated and you need a regular expression.
+01:27 The way to use read outsub methods
+01:30 is to define your pattern.
+01:34 Again I prefer you using a raw string
+01:37 to not to escape the back slashes.
+01:41 And the second argument is to put in your replacement.
+01:44 And here's a little bit more advanced example.
+01:47 Where you use capturing parentheses to
+01:49 port part of the matching string
+01:51 to the replacement arguments.
+01:54 And now it's your turn.

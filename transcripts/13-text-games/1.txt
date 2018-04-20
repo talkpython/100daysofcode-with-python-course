@@ -1,0 +1,37 @@
+00:00 Michael Kennedy here and I'm going to be your guide
+00:02 for the next three days.
+00:04 We're going to have a lot of fun working
+00:06 with classes and objects.
+00:09 This is one of the fundamental ways to model
+00:13 things, concepts in your application.
+00:15 And you'll see that classes very naturally map to
+00:19 sort of real world ideas and more general stuff,
+00:23 that gets more specialized like, say,
+00:25 a car versus a Ferrari.
+00:27 Right, a car is this general idea.
+00:29 A Ferrari also is a car but a more specialized type of car.
+00:33 And we're going to actually build some really fun games.
+00:36 We'll build one in the demo and then I'll hand off
+00:38 a separate game for you to build.
+00:40 So we're going to build this little
+00:42 Dungeons and Dragons wizard game.
+00:45 It comes in just says, "Hello, it's the wizard game."
+00:47 And we have this wizard, Gandalf.
+00:49 And he will encounter various creatures in his little world.
+00:54 And he has three options:
+00:55 he can attack, or run away, or look around.
+00:58 And so you can see we're entering various commands.
+01:00 R, A and L.
+01:02 So, first we run away and then the wizard sees a bat.
+01:05 It's not very strong so he thinks
+01:06 he can attack the bat and win. He does.
+01:08 And was very, very close actually.
+01:10 They basically hide but he had the element of surprise,
+01:13 so he beat the bat.
+01:14 And then he can look around and see what else is there.
+01:18 The toad, the tiger; not so scary.
+01:20 Level 1000 evil wizard then he's probably
+01:24 getting away from that thing.
+01:25 Alright, so, this is what we're going to build and we're
+01:27 going to build it by modeling these ideas
+01:30 in this little game using classes.

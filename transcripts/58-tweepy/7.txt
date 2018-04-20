@@ -1,0 +1,81 @@
+00:00 Alright, our last part,
+00:02 building a Wordcloud.
+00:04 I left this in the notebook, although we prepped
+00:07 and we have all the requirements installed.
+00:10 One way you could also do it is to run
+00:13 pip install inside the notebook using an exclamation mark,
+00:17 but make sure that your virtual environment is enabled
+00:21 to not install it in your global namespace.
+00:24 But we have already Wordcloud,
+00:25 so let's move on and get all the Tweets,
+00:28 but this time we filter out all the retweets I mentioned.
+00:31 And as the code is pretty similar as the last video,
+00:33 I'm just going to copy-paste it here.
+00:36 It looks over the tweets, and it excludes the retweets
+00:39 that start with "RT" and with the at sign.
+00:42 So, retweet and mention.
+00:46 And that should give us a clean list for the Wordcloud.
+00:49 Now, here's the wordcloud module.
+00:52 It's a little Wordcloud generator in Python
+00:54 and you can just feed it a bunch of text
+00:57 and it comes up with this nice output.
+01:00 You can put a mask on it to get the words
+01:03 in the shape you want.
+01:05 And I'm going to use that to put the words
+01:08 in the shape of our PyBites logo.
+01:10 So let's make the Wordcloud.
+01:12 I'm going to type it out because it's a bit of code
+01:15 and I come back and explain it line by line.
+01:31 And this takes a while.
+01:33 It's doing a lot of processing in the background.
+01:35 So let's wait for it to come back.
+01:37 Cool.
+01:38 We got a Wordcloud object.
+01:40 Let me quickly highlight what happened.
+01:42 First, we made a PyBites mask by doing an image.open
+01:46 on a PyBites logo I have in my directory.
+01:49 An image is from the Pillow library.
+01:52 Then we make a set of stop words,
+01:55 and stop words we imported in the beginning
+01:58 which is part of the Wordcloud module.
+02:00 I add, and that was basically by doing some
+02:03 trial and error, I had to add co and https
+02:07 because those were common tags.
+02:09 They're false positives because those are
+02:11 related to Twitter links, and, yeah.
+02:13 We don't want to have these misrepresent
+02:16 our Twitter word populations, so we add them
+02:18 to the stop words.
+02:19 Then we make the Wordcloud object.
+02:22 We give it a white background, max words 2000,
+02:25 you would have to try it on your own data set
+02:27 what the best value is here.
+02:29 We pass it in the mask and the stop words.
+02:32 Then we generate the Wordcloud, passing in the string
+02:35 of all the Tweets we defined earlier.
+02:38 Next up, I want to show the Wordcloud in the browser.
+02:42 And we're going to use a little bit
+02:43 of matplotlib to do that.
+02:51 This might take a bit as well.
+02:55 Alright.
+02:58 That looks better.
+03:00 And look at that!
+03:02 We got the Wordcloud in the form of our PyBites logo.
+03:05 By the way, this is our logo and mask,
+03:09 so you see the similar shape.
+03:12 And look at that.
+03:13 I mean, what's cool about this is that you really
+03:16 see what we're all about:
+03:17 100 Days Of Code, Python, Code Challenge,
+03:20 API, Django, PacktPub, Twitter.
+03:25 So they're really things that stand out,
+03:27 flask, of course, so very cool.
+03:29 And nice that you can just import the module.
+03:32 Three lines of code to create the object
+03:34 and four lines of code to make the image, basically,
+03:38 and you're set.
+03:39 I mean, it's pretty impressive.
+03:41 That's a wrap of this lesson.
+03:42 I hope you like it and you got a taste of how
+03:45 to get data from the Twitter API
+03:47 and do a bit of analysis on that data.

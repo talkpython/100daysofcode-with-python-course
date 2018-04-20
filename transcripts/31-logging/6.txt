@@ -1,0 +1,55 @@
+00:00 Now we've logged at the general top level of our app,
+00:02 let's log down into our API interaction here.
+00:05 So let's do a couple things,
+00:07 let's do some time tracking here
+00:09 so we'll import this.
+00:12 We'll do this time thing so we know how long this takes.
+00:17 So that'll give us a start
+00:18 and end time we come down here
+00:20 and we say something like this api_log.trace
+00:23 we'll do some verbose things
+00:25 like "starting search for keyword"
+00:32 and then let's put this bookend here,
+00:33 "finished search for keyword".
+00:37 Some results in some number seconds.
+00:41 Put colon g grouping, okay.
+00:42 So what're we going to have?
+00:44 How many results? That's going to be len of movies
+00:47 and the duration is going to be t1 minus t0.
+00:51 So this is great.
+00:53 We can also come down here
+00:54 and say api_log.warn("no keyword supplied")
+01:03 We could come down here and maybe store the status.
+01:07 That's probably a traced type of thing.
+01:10 Request finished.
+01:16 There's our status code before
+01:17 we potentially throw in exception
+01:18 so we know instead of 500 is it 404, things like that.
+01:22 Okay, I feel like this is pretty good,
+01:23 let's run it one more time and see if our app is ready.
+01:26 So we started our logging, that's good.
+01:27 We're going to search for "test",
+01:29 see what do we get down here.
+01:30 API started the search for test.
+01:33 The request finished, status code 200.
+01:35 That's good.
+01:36 And then it finished in this amount of time,
+01:38 that's seems like a huge weird number
+01:40 so we'll do some clean up on that number
+01:42 and then it finished and it came over here.
+01:44 So, that's all pretty cool.
+01:46 Let's switch this to milliseconds
+01:50 and do an integer times 1,000.
+01:55 One more to see how that works, quick test.
+01:57 There we go, that looks a little more clean to me.
+02:00 193 milliseconds for our request, everything was good.
+02:04 Let's try some sort of error.
+02:06 Starting search for nothing, warning no thing.
+02:10 Now noticed over here we have our API levels
+02:12 and we have our app level and we have our start up code.
+02:15 So it really tells you like
+02:16 what part of your application is talking
+02:18 to you on this particular message.
+02:21 Alright, so I feel like we've pretty much
+02:22 added really nice logging to our application.
+02:25 But we're not quiet done yet.

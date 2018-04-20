@@ -1,0 +1,46 @@
+ 0:01 Dictionaries are essential in Python. 
+0:03 A dictionary is a data structure that very efficiently stores 
+0:07 and can rapidly look up and retrieve items by some kind of key. 
+0:11 You can think of this as kind of a primary key in a database 
+0:14 or some other unique element representing the thing that you want to look up. 
+0:18 Dictionaries come in a couple of forms, the form you see on the screen here
+0:22 we put multiple related pieces of information together that we can lookup, 
+0:27 so here maybe we have the age of a person and their current location. 
+0:31 Other types of dictionaries are maybe long lists of homogeneous data 
+0:35 maybe a list of a hundred thousand customers 
+0:37 and you can look them up by key which is say their email address,
+0:41 which is unique in your system. 
+0:43 Whichever type you are working with, the way they function is the same. 
+0:45 We can create dictionaries in many ways, three of them here are on the screen; 
+0:49 the first block we initialize a dictionary by name and then we set 
+0:53 the value for age to 42, we set the location to Italy. 
+0:56 We can do this in one line by calling the dict initializer 
+0:59 and pass the key value argument, we can say dict age and location 
+1:04 or we can use the language syntax version, if you will, 
+1:07 with curly braces and then key colon value, 
+1:10 and it turns out all three of these are equivalent, 
+1:13 and you can use whichever one makes the most sense for your situation, 
+1:15 so here the created and then populated, 
+1:18 here created via the name and keyword arguments 
+1:21 or here created via the language structures. 
+1:24 The fact that this is so built-in to the language to tell you dictionaries are pretty important.
+1:28 Now, if we want to access an item, from the dictionary, 
+1:31 we just use this index [ ] and then we pass the key whatever the key is. 
+1:36 In this case, we are using the location or the name of the property 
+1:40 we are trying to look up so we are asking for the location. 
+1:43 My other example if we had a dictionary 
+1:45 populated with a hundred thousand customer objects,
+1:47 and the keyword is the email address, you would put in the email 
+1:51 for the specific customer you are looking for. 
+1:53 Now, if we ask for something that doesn't exist, this will crash with a KeyError exception, 
+1:57 so for example if I said "info['height']", there is no height, so it will crash. 
+2:01 there is a wide range of ways in which we can get the value out 
+2:05 or check for the existence of a value, 
+2:07 but the most straightforward is to use it in this "in" operator, 
+2:10 so here we can test whether age is in this info object 
+2:14 we can say "if age in info" and then it's safe to use info of age. 
+2:18 So this is just scratching the surface of dictionaries, 
+2:22 you'll see that they appear in many places and they play a central role 
+2:25 to many of the internal implementations in Python, 
+2:28 so be sure to get familiar with them. 
+

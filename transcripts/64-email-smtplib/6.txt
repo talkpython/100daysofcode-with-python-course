@@ -1,0 +1,78 @@
+00:00 One last thing I wanted to show you really really quickly,
+00:03 was the BCC, okay?
+00:06 A lot of the times, if you send, if you're automating
+00:08 this sort of thing, you don't want everyone to see
+00:10 everyone who this e-mail is being sent to, right?
+00:13 So imagine you have a mailing list of something.
+00:16 Imagine sending out all 100 to 2,000 e-mails
+00:21 and everyone's seeing each other on the e-mail.
+00:23 Not great, okay?
+00:25 So you can actually BCC this.
+00:29 As I mentioned before, MIME does not honor BCC by default,
+00:35 it's actually by design.
+00:36 Go figure, right?
+00:37 If you were to create
+00:39 an object in here, message...
+00:42 BCC, for that field, it actually works in that,
+00:46 that field is populated with the e-mail addresses
+00:50 that you put in there.
+00:51 The problem is, it doesn't honor the nature of BCC
+00:54 in that it's blind.
+00:56 It may as well be a CC field,
+01:00 tagged as a BCC field.
+01:02 It's kind of crazy, right?
+01:03 And it was something I struggled with for,
+01:05 for a while.
+01:06 So the way I get around this using MIME and
+01:09 SMTPLib is by throwing it into
+01:13 your SMTP server line.
+01:16 This send mail line I should say.
+01:18 Okay?
+01:19 So let's say...
+01:22 I have three e-mail addresses.
+01:23 I'm just going to copy them and paste them in here, right?
+01:29 Done.
+01:31 So we've got Codewright's blog, we got my e-mail at Gmail,
+01:34 and which doesn't actually work,
+01:36 and we've got e-mail at Gmail, which I'm hoping
+01:38 doesn't work either.
+01:39 Now...
+01:41 If we again, if we were to do it this way,
+01:44 with the message building in the multi part,
+01:47 all of these e-mails would see each other when they get
+01:50 your e-mail, right?
+01:52 So what we actually want to do,
+01:55 is rather than do it in specified
+01:58 in your header information,
+02:00 because that gets displayed by default by design.
+02:04 We'll just throw it down here
+02:06 into the send mail section.
+02:10 In order to do this though,
+02:12 if you think of it this way.
+02:14 Think about your types here.
+02:17 Your Python types.
+02:19 to_address is a string,
+02:23 which means you can't easily
+02:26 add these onto it, because BCC is a list.
+02:31 So how do we get around that?
+02:33 Well, we make to_address
+02:37 a list down here, and then we add on to it with BCC.
+02:42 That's it, okay?
+02:44 All you need to do is send this now,
+02:46 and everyone on your BCC list
+02:51 will get the e-mail and they won't be able
+02:53 to see each other.
+02:55 And furthermore, in the production environment
+02:58 or something more official than this demo,
+03:00 you'll probably make your BCC list of e-mails.
+03:04 This will be an e-mail list.
+03:05 You'll pull from a database or something like that,
+03:07 and then you'll just pull in the list, all right?
+03:10 You won't have to type them all into your script,
+03:13 because that'd be ridiculous.
+03:14 So there's our send mail with from_address
+03:18 to_address, as a list.
+03:21 With BCC added on to it, and then our text body,
+03:26 and that's it.
+03:27 So enjoy, and good luck with all your
+03:30 e-mail automated needs.

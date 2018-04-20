@@ -1,0 +1,20 @@
+00:00 Welcome to SQLite 3 Databases.
+00:03 I'm Julian Sequeira and I'll be walking you through
+00:06 possibly one of the most fun and satisfying libraries
+00:09 you'll deal with on your Python journey.
+00:11 I say that because at this point you'll be looking
+00:14 at persistent data, more so than just a simple text file
+00:20 or what have you.
+00:21 SQLite 3 Databases allow you to actually use your SQL
+00:25 knowledge to give you self-persistent databases.
+00:29 It's as simple as that.
+00:30 It's exactly what you expect if you've ever dealt
+00:33 with databases before and it's really, really simple.
+00:37 So these three days you're going to be creating your first
+00:40 SQLite 3 database
+00:43 and then you'll be learning how to inject data into a...
+00:47 Print the data out and I've also included a couple of really
+00:50 cool scripts that you should help you automate some
+00:53 of your SQL journeys and also it should help you,
+00:58 help guide you through your SQLite 3 learning.
+01:00 So enjoy and get cracking.

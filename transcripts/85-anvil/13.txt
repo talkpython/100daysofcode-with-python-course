@@ -1,0 +1,110 @@
+00:00 We have our data and we know
+00:01 we can get to it from the server modules,
+00:03 but not the forms cause we want to make sure
+00:05 that's safe.
+00:06 How do we write a server module?
+00:08 Let's go and add one.
+00:10 So it's called server_module1.
+00:12 Not a super name.
+00:13 Let's give it something better.
+00:14 Let's call it data_layer
+00:17 or something like that.
+00:18 Now check this out over here.
+00:20 It says okay we are going to import
+00:21 some server and data stuff.
+00:22 And all you really have to do is just
+00:24 create any function that is callable,
+00:27 has parameters, and return something
+00:29 and we can call it.
+00:30 So for example to say hello,
+00:32 how would we get to that?
+00:33 Let's go to our home form really quick.
+00:35 And let's just in this lib we'll say print.
+00:38 anvil.server.call
+00:42 Now look what just happened here.
+00:44 It takes a string, the server name,
+00:46 but Anvils integrated to know what server
+00:49 methods are available and is helping us
+00:51 right here.
+00:52 So say, say hello.
+00:54 And then I could put my name,
+00:56 which if you look back here it accepts a name.
+00:59 It should say, "Hello there."
+01:00 So that'll be the input in return 42
+01:03 as it should. So let's run that.
+01:08 See some output.
+01:10 Server is yellow.
+01:11 Client is clear or white.
+01:13 It says, "Hello Michael 42."
+01:15 How awesome is that?
+01:16 Alright that is an incredibly simple
+01:17 way to have a service.
+01:19 Put that on there, done.
+01:20 Then already host a service,
+01:21 host a client, connects them, done.
+01:23 So we don't want this.
+01:24 We want code that talks to our database.
+01:27 We put that here and I'll talk you through it.
+01:30 So we're going to come over here
+01:31 and we're going to talk to our
+01:33 app tables and we say dot.
+01:35 You see we have our 2 databases
+01:37 that we created. Our 2 data tables and the data table service
+01:40 we created, and we can go to them
+01:43 and we can say, "Search"
+01:44 and we can even do an order by.
+01:45 And I'm going to convert that to a list
+01:47 and then we'll turn it back.
+01:48 Over here I'm going to do something
+01:49 similar for categories.
+01:51 And categories we're doing by name
+01:52 so it's alphabetical.
+01:54 Also can find individual documents by name.
+01:56 Instead of doing a search,
+01:57 you can do a get.
+01:58 So here we're doing a where the name is
+02:00 equal to what we pass.
+02:02 So we're going to leave 4 categories.
+02:03 Okay so these 4 functions are now
+02:05 available to our code.
+02:07 Let's try to add them into our add_doc_form.
+02:10 So up here, we got our categories.
+02:12 Let's go over here and say, "Categories",
+02:15 call them all_categories.
+02:18 We're going to go anvil.server.call
+02:21 Now look.
+02:22 All categories takes no parameters.
+02:25 Now these are going to return rows
+02:28 which are dictionaries which have things
+02:29 and so what I really want is categories
+02:32 is going to be c, it's going to be one of the rows.
+02:35 And it's going to be named,
+02:36 remember we had that in there,
+02:38 for c in raw_cats.
+02:41 So now we have Docs, Science, News, and Social,
+02:44 but remember we put like press releases
+02:46 and stuff.
+02:47 Let's see what we get now.
+02:49 Oh, whoops,
+02:50 I got to take that out, don't I?
+02:51 It's really cool how you can
+02:52 click that to get back.
+02:53 Alright that was just test run,
+02:54 forgot about that.
+02:56 Let's go to add a document,
+02:59 and look at that.
+03:00 That's now out of our database.
+03:02 How slick is this?
+03:03 Okay super, super cool.
+03:05 One of the challenges there,
+03:06 this is going to keep reloading it
+03:07 if I do this, and do this.
+03:09 Hitting the database again.
+03:10 Turns out this is probably not going to
+03:12 change that often, so we'll be able to do something slightly
+03:14 better, but this is really really cool.
+03:18 Add the name.
+03:20 Add some stuff here.
+03:21 Hit create.
+03:22 And then we should be able to call one
+03:24 more function on that server.

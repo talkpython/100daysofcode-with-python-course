@@ -1,0 +1,37 @@
+00:00 Right, let's review what we've learned so far.
+00:03 The most basic example
+00:05 of Selenium, the hello world, so to say.
+00:08 You create a driver object.
+00:10 You go to python.org.
+00:12 You find the search field, named queue.
+00:14 You populated the data and we submit it by hitting return.
+00:20 We saw that Selenium actually opens your browser.
+00:22 You see it doing it in real time which is pretty cool.
+00:31 And here we make assertions based
+00:34 on the page source that changed after the action.
+00:38 Now we're going to do a more fun and practical example,
+00:41 scraping my Packt account which you see here
+00:43 in the logged in state.
+00:47 We retrieve the login URL and loaded user and password
+00:50 from the environment variables
+00:52 and send them to the login form.
+00:54 We submitted the form by hitting enter.
+00:58 Then we found the My eBooks link and clicked it
+01:01 to actually go to the my eBooks site you see at the left.
+01:05 We identified the HTML that contains the books
+01:08 and did some parsing to get all the titles and their ids.
+01:12 And this is pretty cool to further extend
+01:14 to make a download app or whatever.
+01:17 And the second app was the PyBites banner generator
+01:21 which we fully automated using Selenium.
+01:24 Again, we logged in with the credentials.
+01:29 We found the corresponding HTML.
+01:31 In this case, we had to populate the form
+01:34 to send data to the server.
+01:38 And finally we closed the driver.
+01:41 This led to an automated banner.
+01:43 Awesome because, imagine you have
+01:45 to create like 200 for some campaign.
+01:47 Well, with Selenium, it becomes very easy.
+01:51 And now it's your turn.
+01:52 Keep calm and code in Python.

@@ -1,0 +1,29 @@
+00:00 Now that you're just about to complete this class,
+00:02 I want to give you a couple of resources
+00:04 to help you dig deeper
+00:05 and connect further with the community.
+00:08 First of all, the Talk Python to Me podcast.
+00:10 You probably know this podcast,
+00:11 maybe you subscribe to it but if you don't,
+00:14 head over to talkpython.fm and check out the podcast.
+00:18 You will the hear the stories and the people behind
+00:21 so many of the projects that you worked with.
+00:23 You want to hear about SQLAlchemy?
+00:26 Well, I had Mike Bayer on the show,
+00:28 who was the guy who created it and continues to maintain it.
+00:30 Want to learn about contributing to open source?
+00:32 I did a whole panel on that.
+00:34 Looking to get your first job in Python?
+00:36 I actually did a two episode, 12-person panel,
+00:40 both people who just got their jobs
+00:42 and who are hiring managers.
+00:45 Whatever it is you want to dig deeper
+00:47 into in Python and the community,
+00:49 you can probably find it over here.
+00:52 Also, stay up on the latest news,
+00:53 check out my other podcast Python Bytes.
+00:55 Over at Python Bytes, Brian Okken and I
+00:58 share the latest headlines and news
+01:00 in what's hot and what's happening in the Python space.
+01:03 A great way to keep up on new packages in libraries
+01:06 that maybe you haven't heard of.

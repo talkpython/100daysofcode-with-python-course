@@ -1,0 +1,21 @@
+00:00 As you advance further in your Python projects,
+00:03 you're inevitably going to hit a point
+00:05 where you write some code and it's just slower
+00:08 than you want it to be.
+00:09 This happens all the time,
+00:11 when you're doing scientific computation,
+00:13 you're calling services,
+00:14 maybe you're talking to a database.
+00:16 It really happens a lot on the web 'cause,
+00:18 for popular websites, performance is critical.
+00:21 We're going to spend the next couple of days focusing
+00:24 on how to get Python to tell us exactly
+00:29 where it's spending its time.
+00:31 Making things faster, that's a different problem.
+00:33 How do we optimize our code, use the right data structures,
+00:36 and so on? That's what you might do after this,
+00:39 but this will tell you where things are slow,
+00:41 where you need to focus your effort.
+00:43 This whole concept is called profiling
+00:45 and you'll see a lot of it is built right into Python.
+00:47 And there's some great external tools, as well.

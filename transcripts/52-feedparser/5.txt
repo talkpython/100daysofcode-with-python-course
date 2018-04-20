@@ -1,0 +1,47 @@
+00:00 Okay, one last little thing for you
+00:02 which is a bit of a best practice
+00:04 as always with Python scripts, you would
+00:06 normally put in some sort of an error check,
+00:08 just to make sure or a conditional check,
+00:10 just to make sure everything is in place
+00:13 before you run your script, right.
+00:16 So in this case, what happens if one
+00:19 of these tags doesn't exist in the feed?
+00:23 Well, sometimes these RSS feeds out there
+00:28 don't always include the default tags,
+00:32 like title and link or description
+00:34 or whatever else, okay, if that happens
+00:37 well then your script's going to break.
+00:38 So you should try and capture those errors
+00:41 but right now, I'm not going to walk you
+00:42 through error catching and testing
+00:45 and trying except and everything that's
+00:47 another module in itself, right.
+00:50 So what I will show is just a really
+00:53 quick, if statement that just works, okay.
+00:57 So you could do if and then your tag name,
+01:01 now I would definitely insist on title being in there,
+01:05 so if title in feed.entries, we're looking at the
+01:11 first item in feed.entries there.
+01:16 Then we want you to run the full loop and that's it,
+01:21 okay, that's all I'm looking at now then you can put
+01:26 ls break or something like that or you could run your
+01:30 try and except and what if you want to wrap around it.
+01:32 But in this case, that's all we need, so we can save that
+01:37 and then we can run that, so Python
+01:40 and we'll get the same output as last time.
+01:45 Okay, we can go and see all of that data
+01:51 now just to prove that this actually worked,
+01:53 here's what we can do, let's clear and let's
+02:01 change the actual tag we're looking for.
+02:04 So let's come up with something that's
+02:05 definitely not going to be in there.
+02:09 Let's see if I can spell, so that should be in every feed
+02:12 right but unfortunately not so if Julian rocks
+02:16 in feed.entries then run your forward.
+02:20 Okay, let's run that and bang, nothing
+02:25 happened, let's put title back in and there we have it,
+02:32 okay, so that's it if you want to do some
+02:35 sort of testing against it before you run
+02:38 it, well that's the way to do it.
+02:40 Okay, and that's pretty much feed parser nice and simple.

@@ -1,0 +1,48 @@
+00:00 Well, our app is basically working.
+00:02 Let's publish it.
+00:03 Let's make it so you can get to it.
+00:04 'Cause right now, when you click run,
+00:06 there's no URL I can go to.
+00:08 Now, I probably won't publish this
+00:10 and leave it live for you.
+00:12 Maybe I will, we'll see.
+00:14 You can check the URL when I get there,
+00:15 but notice right now there's publish this app
+00:17 while it's running,
+00:19 and we can either copy this private link,
+00:22 or I could share it via public link.
+00:25 If I do this let's call this.
+00:27 That seems decent, right?
+00:28 How about that?
+00:30 You could use your own custom domain,
+00:32 but I'm not going to do that. I'm going to just hit OK.
+00:34 Now, if we close this, and we go open something else,
+00:38 actually let's just open this in a private window.
+00:43 Go to Anvil app.net.
+00:47 What do we get?
+00:54 We get our app, up and running, on the Internet!
+00:57 It is now hosted as a web server, as a back end,
+01:00 all of the stuff, super cool.
+01:02 So we go over all docs, pull this up,
+01:05 we can search, everything is working.
+01:07 It's really fun, right?
+01:08 Obviously so are those.
+01:10 We can even add a final document.
+01:12 And where are we going to put this?
+01:14 Let's put it under press releases.
+01:16 The amazing app is now alive.
+01:19 Pair document, boom, takes us home right there at the top,
+01:24 a final document.
+01:25 The most recent one.
+01:26 And we click on it, there's the details.
+01:30 It was a little more than half-an-hour,
+01:32 but not terribly long.
+01:33 I mean we've built a non-trivial application,
+01:37 and published it to the Internet
+01:39 in a pretty short amount of time.
+01:41 So, hopefully this application platform
+01:45 is inspiring to you.
+01:46 I don't know if it makes sense for all of your apps,
+01:48 but for certain types of apps it's really,
+01:50 really a cool one.
+01:52 That's Anvil and full stack web apps made easy.

@@ -1,0 +1,32 @@
+ 0:01 You'll hear it frequently said that Python is an ecosystem 
+0:06 or a language that comes with batteries included, 
+0:06 and what that means is you don't have to start with a little bit of Python 
+0:10 and pull in a bunch of different pieces from here and there 
+0:13 and implement your own version of this algorithm or that feature. 
+0:17 Oftentimes, the things you need are built already into Python. 
+0:21 You should think this batteries included is kind of like an onion with many layers, 
+0:25 so at the core, the language itself is quite functional and does many things for us, 
+0:31 the next shell out is the standard library,
+0:35 and in the standard library we have file io, regular expressions, 
+0:39 HTTP capabilities, things like that.
+0:42 In the next shell outside of that are all of the packages 
+0:45 and external projects written for and in Python, 
+0:49 so for example when we want to add credit card capabilities to our website, 
+0:52 we are going to reach out and grab the stripe Python package. 
+0:56 The web framework we are using itself, is built around many packages, 
+0:59 centered around Pyramid, the database access layer is SQLAlchemy. 
+1:03 Everything I just named does not come included in Python, 
+1:06 but is in the broader ecosystem.
+1:09 If it's in the broader ecosystem and it is a package or library for Python developers to use,
+1:13 chances are extremely high you will find it in this place called 
+1:16 the Python Package Index, which you can find at pypi.org. 
+1:20 Notice that there are over 88 thousand packages at PyPi. 
+1:24 This means, you can go on and type something in that search box, 
+1:28 and there is a very good chance that what you are looking for 
+1:31 will return a bunch of results that you can then grab one of them, 
+1:35 install into your environment and then use in your project.
+1:38 So here is what you do- when you think you need some piece of functionality or
+1:42 some library, before you go to start and write that yourself, 
+1:46 do yourself a favor and do a few searches at pypi.org, 
+1:49 and see if there is already a really great open source project 
+1:52 or package that supports it. 

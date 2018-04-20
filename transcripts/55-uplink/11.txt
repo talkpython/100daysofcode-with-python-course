@@ -1,0 +1,45 @@
+00:00 Let's review what we built.
+00:02 We defined a client to interact
+00:05 with our HTTP service by creating a class
+00:08 and having it derive from uplink.Consumer.
+00:11 So we created blog_client and its consumer
+00:13 so uplink can do its magic.
+00:16 The next thing that we needed to do
+00:17 was pass it the base url.
+00:20 Here's one way to do that.
+00:21 We could tell this class, it's always going to work
+00:24 with that API, so you don't have
+00:26 to pass this base url every time.
+00:28 It's really nice to have this
+00:29 if you're doing testing against your own APIs.
+00:32 You could, say if you're in debug mode,
+00:35 then you say, like a local host version,
+00:37 otherwise use production or staging, whatever, right?
+00:40 So this is really nice, it sort of sets it up.
+00:42 And then anytime we want to have an API point called,
+00:46 we just write a method, decorate it with one of
+00:49 the HTTP verbs, here we're using uplink.get/api/blog/post_id,
+00:56 and that post_id is one of the arguments.
+00:58 Now of course what we get back
+00:59 is a request version of a response.
+01:02 And notice, there's no real implementation,
+01:04 but here's a nice chance to add a doc string
+01:07 and add a little documentation.
+01:08 So this is what I would think of as a raw API method.
+01:12 Down here, we saw when we want to pass the body
+01:15 sometimes that's a little cumbersome, doesn't really
+01:17 give the consumer of the client a lot of help
+01:21 on what to put, so we wrote this wrapper function.
+01:23 It takes meaningful arguments, creates
+01:25 some default values for us, and then calls
+01:27 this hidden internal one that routes to our url/api/blog.
+01:31 To create a new one, we just kind of pass on through.
+01:34 Really really nice, and for that last part to work
+01:37 when we did uplink.body, we had to specify JSON,
+01:40 otherwise it's going to pass it as form encoded,
+01:42 which, the server, if it doesn't want that,
+01:44 it's going to get upset.
+01:46 Here's what we got to do to built data servers,
+01:48 and now we can just use it as if it was
+01:50 a standard class, and all these things flow over
+01:53 to the service, really really nice.

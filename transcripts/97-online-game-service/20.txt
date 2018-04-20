@@ -1,0 +1,20 @@
+00:00 You saw how easy these are to add.
+00:02 Let me just drop in the other however many more,
+00:04 five methods or whatever it is.
+00:07 So we've got play_round, which has the body.
+00:09 We've got top_scores.
+00:10 We've got game_status, and so on.
+00:13 That rounds out our little game service.
+00:15 And we'll come over here,
+00:17 we'll create one of these.
+00:19 Create the top of our main method, actually,
+00:20 let's do that.
+00:22 And then we can call things like all_rolls
+00:24 or Top Scores, and see what we get.
+00:29 There's all_rolls, these are the top scores.
+00:31 Michael apparently has scored one,
+00:33 which beats, I guess everything else was score zero.
+00:36 Yeah, it looks like it.
+00:37 Okay, so, really, really cool!
+00:39 This lets us interact with this service.
+00:42 Now let's add in the logic.

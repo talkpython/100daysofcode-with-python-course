@@ -1,0 +1,32 @@
+00:01 Let's look at what we've learned so far.
+00:03 List comprehensions.
+00:05 For both ways of doing a loop and conditional,
+00:09 we loop over list and store all the modifications
+00:12 in a new list.
+00:13 Five lines of code.
+00:15 The more Pythonic ways to use a list comprehension.
+00:19 One line of code.
+00:20 And it reads like English.
+00:22 We went through another sample cleaning up a word list,
+00:25 and you can do multiple checks.
+00:28 in the conditional part over list comprehension.
+00:32 Secondly, generators.
+00:35 The simplest generator would be something like this.
+00:39 For in range, yield the value.
+00:42 Generators, pause.
+00:44 So, after every call it stops at the yield,
+00:47 and comes back.
+00:50 Use a generator to build up a sequence.
+00:53 Here I made a bunch of options for a fictional website.
+00:57 And instead of building up a list in the function,
+01:01 we use the yield statement
+01:02 to just generate a sequence of items.
+01:06 And lastly,
+01:07 we look at list and generators,
+01:12 and we saw that when your data set grows
+01:15 your really want to know about generators
+01:17 because the items are lazily loaded,
+01:20 not taking up the whole memory footprint.
+01:23 And that's it for the basics.
+01:26 And now it's your turn for day two and three
+01:29 to get more practical exercise.

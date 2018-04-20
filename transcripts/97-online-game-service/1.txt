@@ -1,0 +1,89 @@
+00:00 Welcome to Day 97.
+00:02 Michael again here with you and we're going to bring
+00:05 a bunch of things together that we've previously done
+00:08 and what I think is actually a really cool way
+00:11 of pushing and combining what you know.
+00:14 So we're going to build an online game.
+00:17 And it's going to be a multiplayer game,
+00:19 not multi-interactive real time game,
+00:22 but multiple players from multiple places
+00:23 log in and play this game online
+00:26 and you get things like high scores,
+00:27 who's won the most games, active players, things like that.
+00:31 And what's really cool is you basically
+00:33 already know like 80% of what you need to do this.
+00:37 The final bit we're going to put together here
+00:39 with a little bit of APIs and Flask.
+00:43 Online games are fun, right?
+00:45 Here's a cool one, Eve Online.
+00:47 This is actually powered by Python on the backend
+00:50 in some really, really important ways
+00:52 and it's this MMO, massively multiplayer online game.
+00:57 And I actually interviewed the guys from Eve
+00:59 over on Talk Python in Episode 52
+01:01 if you want to learn about that.
+01:02 That's all pretty interesting.
+01:04 So we're going to build an online game.
+01:06 Now, it's not as amazing as this, right?
+01:08 This is incredibly cool, taking hundreds of people
+01:10 working on it for a really long time.
+01:12 But let's see what we have and how we can piece it together.
+01:15 So over here, on Days 13, 14, and 15,
+01:19 we talked about text games.
+01:21 And the thing we actually built
+01:22 was a Dungeons & Dragons wizard game.
+01:24 Remember that?
+01:25 It was a long time ago, I know,
+01:27 but that was one of the first things we built.
+01:28 It was really fun, we learned about classes and so on.
+01:31 We also discussed this 15-way Rock Paper Scissors.
+01:36 And we've come back to this 15-way Rock Paper Scissors
+01:39 several times so we're going to do that again today
+01:42 for the thing we're going to build together.
+01:44 You don't necessarily have to build that one.
+01:46 Actually you probably won't build that one yourself
+01:48 but that's the one we're going to build together.
+01:50 What else do we have?
+01:51 Well, we saw that we can consume structured APIs
+01:55 with Uplink, recall this?
+01:56 We actually went to our movie search service
+01:59 and created this Uplink client
+02:00 to communicate with that and we're going to again
+02:02 use Uplink to build the client side,
+02:06 the playing the game side, the user side of this app.
+02:09 Not the service side but consuming the service side
+02:11 stuff that we build.
+02:12 So Uplink's coming back, that'll be fun.
+02:14 On Day 76, Julian told us all about Flask
+02:17 and how simple and easy it is to get started.
+02:19 We're going to take our Flask knowledge
+02:22 and use Flask as the web framework for hosting
+02:25 our application that is our game server.
+02:28 It has the various operations that we need to use
+02:31 in order to make our client applications run.
+02:35 Finally and really, really importantly, we have databases.
+02:40 In order to scale out our server,
+02:43 make it survive reboots and all sorts of stuff,
+02:45 we need to save our data and have data integrity
+02:49 across the various requests and executions
+02:53 of our web server.
+02:54 So we're going to use SQLAlchemy.
+02:56 In fact we're going to use already the exact same model
+02:58 that we already added here.
+03:00 So over in our demo recall we built
+03:02 our persistent Rock Paper Scissors.
+03:04 So we're going to take our persistent Rock Paper Scissors
+03:07 and convert it to a server side version
+03:10 and use the database to keep that information
+03:13 going back and forth and then we're going to write
+03:14 a little client to use it, that way everybody
+03:17 plays on the same server, we have all the shared data
+03:19 about who's played what, what were the history high scores,
+03:23 things like that.
+03:24 I hope you see that we have all the pieces
+03:26 with the exception of building just the API methods
+03:30 which turn out to be pretty simple in Flask
+03:31 if you're not trying to do too much.
+03:33 It's going to be an ambitious 3 days
+03:36 but we can do it and it's going to be super rewarding.
+03:39 So let's get started.

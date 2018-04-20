@@ -1,0 +1,65 @@
+00:00 And that's it, I told you it was simple.
+00:02 So Feedparser is awesome.
+00:05 A very, very simple and small lightweight thing to use
+00:09 but really helps you out if you want to automate things
+00:12 like feeds.
+00:13 So, let's just recap quickly what we did without going
+00:16 into too much detail.
+00:18 We import requests and this is for pulling down
+00:21 the XML feed.
+00:22 Okay.
+00:23 Specify the feed that we want to pull down, okay.
+00:27 We actually get the feed using that URL
+00:31 and we store it in r.
+00:34 Okay.
+00:35 We then open a file, you can call this whatever you want,
+00:38 and then we write the contents of that XML file,
+00:44 that feed, into
+00:46 the file that you specified there, okay.
+00:50 Simple.
+00:52 And now, onto the Feedparser stuff.
+00:55 So obviously the first thing we do
+00:57 is import feedparser.
+01:00 Okay.
+01:01 Then we specify that actual file that we created
+01:05 in the last step.
+01:06 Okay, remember we separated these two processes of pulling
+01:10 the file and then parsing it just in case you had
+01:13 a scenario where, let's say you couldn't pull the file.
+01:17 Well, if you couldn't pull it, at least you have
+01:19 an existing file and you can continue parsing that.
+01:21 The whole thing doesn't fall over, alright.
+01:24 Now we parse it using feedparser.parse and throw that
+01:29 into the feed, all right.
+01:31 And then we have the little sanity check there to make
+01:33 sure the feed is okay to parse,
+01:35 that it has that title tag that we want
+01:38 and that we did necessary again.
+01:40 You can wrap some sort of a try except or whatever
+01:44 you know, error checking you want around that.
+01:48 Then for every entry within that feed we're going to take
+01:52 the data stored against publish in the publish tag,
+01:56 in the title tag and the link tag and then we're going to
+01:59 print that in a nice little string
+02:02 and that's it, okay.
+02:04 Now, very exciting.
+02:07 It's your turn.
+02:08 So for the next day I would like you,
+02:11 instead of printing out that data,
+02:14 so in the previous step you saw we printed out
+02:16 the publish, the title and the link.
+02:20 Instead of printing it out,
+02:22 why not do something interesting with it?
+02:24 What can you think that you might be able to do with it?
+02:26 So just some ideas, maybe you could e-mail that data
+02:31 which is exactly what I'm doing with this steam stuff.
+02:33 That's the script I'm running.
+02:37 You could e-mail that to yourself.
+02:38 You could potentially store it in a database.
+02:42 There's a nice little challenge for you.
+02:43 You figure out a way to store that data in a database.
+02:46 Or you could just think of something else.
+02:48 Anything you can think of, any other libraries that
+02:50 you could use to do something interesting with that.
+02:54 Come up with it, try your own feed and have fun with it
+02:58 and go parse those feeds.

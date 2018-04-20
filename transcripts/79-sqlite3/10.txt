@@ -1,0 +1,42 @@
+00:00 All right, here's how we're going to break down
+00:02 these 3 Days on SQLite3 Databases.
+00:05 So to start off with you're going
+00:07 to install SQLite db browser.
+00:11 All right watch the video on that, get it done.
+00:13 Then you're going to create your first database,
+00:16 or your first sqlite three database, anyway.
+00:19 And that's going to quickly be followed by
+00:21 a script that generates a database for you.
+00:25 So I'm going to demonstrate that for you,
+00:26 and it's actually quite useful so, enjoy that one.
+00:30 For Day 2, what I'd like you to start doing
+00:33 is inserting data into the address book.
+00:37 Okay this is the address book database
+00:40 that you were going to create in Day 1.
+00:42 So Day 2 is, so Day 1 is going to be create the database
+00:47 Day 2 is going to be insert data into the database, okay?
+00:52 And it's then going to quickly be followed up with
+00:56 extracting that data, so pulling the data out with select.
+01:01 Okay, all that's explained in the videos.
+01:04 Now, Day three, what you're going to do is
+01:09 apply everything you've learned into your own project.
+01:14 Okay, so by the end of Day 2 you'll have created
+01:17 the address book and you'd be able to pull data out
+01:20 and insert data into it as you wish.
+01:23 So now, try and replicate that
+01:25 with something else you can think of.
+01:26 Okay copy as much as you want.
+01:28 Remember the purpose here is to just practice
+01:31 with the code and once you have that down
+01:33 if you still have time for Day three,
+01:35 figure out how to edit the data in the database, okay.
+01:41 So a quick one here is we are inserting
+01:44 and extracting the data, we're not editing it.
+01:48 Okay we don't cover that in the video,
+01:51 so that's a nice little stretch goal for you.
+01:52 So do your googling and play around with it
+01:55 and see if you can edit the data,
+01:57 that's your challenge for Day three.
+01:59 And that's it, so those are really
+02:01 the basics of sqlite three, move on to the first video
+02:05 and enjoy the next couple of Days.

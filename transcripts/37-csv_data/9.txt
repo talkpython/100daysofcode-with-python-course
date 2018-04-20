@@ -1,0 +1,41 @@
+00:00 Recall there were two basic steps
+00:02 that we had to go through to work with this CSV data,
+00:05 and they were both pretty simple.
+00:06 We're going to start by importing the csv
+00:09 module, so that will let us actually create
+00:11 this dictionary reader to run through it,
+00:14 and we're going to open a file stream
+00:16 that we hand to the dictionary reader
+00:18 to actually get the data.
+00:21 Then we just create one of these dictionary readers
+00:24 based on the file,
+00:25 and gives us this thing that we can loop over
+00:28 and each item that comes out of the loop
+00:31 is going to be one of those rows in there.
+00:34 And we get this row back and we work with it one at a time.
+00:37 Now you saw the data's always text,
+00:39 so you may need to upgrade it to something more usable
+00:43 if you're working with numbers and dates
+00:44 and things that are not just plain text.
+00:47 The other thing that makes this really, really nice,
+00:49 makes a big difference in terms of working with this data,
+00:52 is to give it a little more structure,
+00:55 and we saw that we could really easily use
+00:58 something called a namedtuple.
+01:01 This comes out of the collections
+01:02 and then we're going to create the namedtuple here
+01:06 and we call it whatever you want,
+01:08 we make up the name. I said I'm going to call it record, so record it is.
+01:11 Just remember it appears in two places,
+01:13 and in that second part, we actually put the
+01:17 basically the header from the CSV,
+01:19 it just so happens that format works perfectly there.
+01:22 And then we can, if we have some data,
+01:24 we can create one of the by setting the keyword values.
+01:27 So we set all the values there.
+01:29 We actually have a shorter way to do it
+01:31 if the dictionary exactly matches the items,
+01:33 which it does in this case.
+01:34 So we could use the **row,
+01:37 because often there's a ton of keyword values to set,
+01:40 and this will just do it in a super, nice shortcut here.

@@ -1,0 +1,50 @@
+00:00 There is some prework necessary to
+00:02 get to plotting, but we can now do it.
+00:04 Let's start by transposing the
+00:06 post by month in X and Y axis.
+00:09 Then it becomes pretty easy.
+00:13 You can just type data
+00:17 equals a list,
+00:19 bar, taking, X equals X,
+00:22 Y equals Y.
+00:28 You can then say plotly offline,
+00:32 you have to specify the mode, iplot,
+00:36 data, and you can give it a file name.
+00:42 Look at that.
+00:44 Even has numbers if you hover over the months.
+00:48 It also posted when I was preparing to a URL
+00:53 so you can access those here.
+00:55 That's a nice feature of plotly that
+00:57 you can make your work easily accessible.
+01:01 Let's move on to the breakdown of the blog categories.
+01:04 The code is very similar actually.
+01:07 I'm going to use my transpose helper.
+01:09 X and Y now make a bit better naming labels and values.
+01:14 Again I use the go object but this time I calls with pie
+01:20 and I give it labels equals labels and values equals values.
+01:25 Then we call plotly again, offline mode, iplot,
+01:33 put the pie object in the list and give it a file name.
+01:42 Look at that.
+01:44 Challenges is our big thing, you probably know by now
+01:48 but we do as many articles, relatively.
+01:52 We have news and some special and guests.
+01:57 Thirdly, the comment tags, similar code
+02:01 and to transpose list of tuples,
+02:04 and here I have to take the top tags as we find before.
+02:13 Tags equals go, again I do a pie chart
+02:17 and I could be using other types of graph
+02:21 but I find a pie chart being adequate for this type of data.
+02:26 I also want to keep it simple.
+02:27 So, in the coming days you can
+02:29 explore the library further yourself.
+02:32 Similarly, has to have labels and values defined.
+02:37 Plotly, offline, iplot, and it's important
+02:42 to put this in a list, filename,
+02:45 just going to say tags for now.
+02:51 Cool, right?
+02:52 Python learning Twitter Code Challenges.
+02:56 Of course similar to the categories
+02:58 but here you see also, when we get to a bit
+03:01 more granular level you get into Flask and Django.
+03:04 It's true that we write quite a bit about those.
+03:07 There's even some machine learning, etc.

@@ -1,0 +1,45 @@
+00:00 All right, now that we have our lovely table
+00:02 with Mike, Bob, and myself in it,
+00:04 and our very realistic addresses,
+00:08 let's actually print some of that data out.
+00:11 So we're going to do that within the Python shell.
+00:13 Again, import sqlite3, getting tedious by now.
+00:18 So, we will run our connection,
+00:21 con equals sqlite3.connect.
+00:28 addressbook.db.
+00:31 'Kay, c = con.cursor to get our cursor.
+00:37 Now to print the actual data within the database,
+00:40 we need to put this into a for loop, okay?
+00:44 Just bear with me, because we're going to
+00:45 iterate over these three rows, okay?
+00:50 So, the way we do that, is we go for row in c.execute.
+00:57 We're going to select data.
+01:00 Now what data were we going to select?
+01:02 We're going to select everything from our details table,
+01:07 all right, so for row in c.execute.
+01:09 Select all from details.
+01:12 What next?
+01:14 Well, once it's got the row,
+01:17 we want to print the row.
+01:19 And that's it.
+01:22 And there are our three lines.
+01:24 You've got these, the formatting's a bit off,
+01:26 it's actually taking that data,
+01:30 or the literal, the tuple for that, for that row, you know?
+01:33 So it doesn't look that great.
+01:36 So to actually make that look a little bit better,
+01:39 let's just bring that back up to save me some time.
+01:42 We can actually choose which column to view,
+01:46 so we can go print row...
+01:50 Zero.
+01:54 Julian, Bob, Mike.
+01:56 And once we have this sort of information,
+01:59 you can start to pop a few strings together,
+02:03 you know, start making sentences from these,
+02:05 these sorts of database pulls.
+02:08 So let's do one really quickly here.
+02:13 And there we go.
+02:14 So Julian lives at 123 Fake Street, blah blah blah,
+02:16 and his phone number X, okay?
+02:19 And that's the sort of manipulation we can do
+02:21 by pulling the data out of the database.

@@ -1,0 +1,17 @@
+00:00 Good day guys, this is Julian Sequeira again
+00:03 and welcome to Day 76, 77, and 78.
+00:07 In this three part segment,
+00:09 we are going to be building a Flask app.
+00:11 For those of you who may have taken other courses,
+00:14 this is one of my favorite themes.
+00:16 So, I'm really excited to be teaching you this one.
+00:19 The basics here, we are going to just build
+00:21 a really simple Flask app
+00:23 but we're going to use Jinja2 templates
+00:25 straight off the bat.
+00:26 We're not just going to deal with the basics.
+00:29 And then we're going to deal with dictionaries
+00:31 and how to print those variables,
+00:33 how to print that data straight into a Jinja2 template
+00:37 that way your actual website has some functionality.
+00:40 So, let's get right into it and start coding.

@@ -1,0 +1,75 @@
+00:00 So I'm sure a few of you had a question from the
+00:02 last video, which was "What happens if we don't know
+00:07 the end cell for the range?"
+00:10 So in the last video we did a sort of range check.
+00:13 We went from cell 2,
+00:15 down to 101 in our column,
+00:19 and we just added all of the values up.
+00:22 Now what happens if we don't know that, you know
+00:25 that end value, that end range number - 101.
+00:29 You know spreadsheets are constantly growing,
+00:31 so you know we can't hard code our end value in.
+00:36 This is where openpyxl really shines,
+00:39 it's got something awesome that I absolutely love,
+00:43 and that is max_row.
+00:47 What we do is, we go ws1, we've specified our worksheet
+00:50 as Finances 2017.
+00:52 We go ws1.max_row 705.
+01:02 So what this looks at is it goes into the spreadsheet,
+01:06 goes down here and it just pops down.
+01:09 I'll let it scroll,
+01:11 pops down to the last active cell. Okay?
+01:17 It's not the last fully populated one just like that
+01:20 but wherever the lowest, or the highest,
+01:22 rather, the highest cell happens to be.
+01:26 So I just popped this in here to show that,
+01:28 while yes, in the nicely formatted sort of
+01:33 rows that we've got here.
+01:34 Because I've entered something here, max_row is 705.
+01:39 Okay?
+01:40 So we'll just delete that, not that it really matters.
+01:43 And we'll just do a quick demonstration
+01:45 printing out something really quick.
+01:48 So we'll go for row, we can actually let's just do
+01:51 max_row=ws1.max_row.
+01:56 That way we don't need to type it out every time.
+01:58 Let's grab pretty much all of the country data I reckon.
+02:02 Let's just double check the file here.
+02:05 And yes, B is the country,
+02:09 so we'll go four row, in range
+02:14 two, 'cause we don't want the header, right?
+02:17 So two max row, mkay?
+02:22 And we'll just create the cell quickly,
+02:25 so we'll go with B, 'cause that's the country,
+02:27 try something different rather than money.
+02:30 And that's string of the row.
+02:34 Okay, and then we'll just print it out.
+02:35 So this is going to give us one heck of a list,
+02:37 but for the sake of this, let's do it.
+02:41 So remember, we still have to specify ws1.
+02:43 Even though we have got the cell here,
+02:46 we still need to say this is worksheet 1,
+02:48 otherwise he's not going to know.
+02:50 So ws1 cell.value.
+02:54 And before I hit enter, this for-loop,
+02:57 it's gone row two, over to the maximum row,
+03:01 which we know is 705.
+03:03 So this is going to do the 705 times, build this cell number,
+03:07 and then print out the value, okay?
+03:10 So ready? Here we go.
+03:14 And there, we now have None,
+03:16 but that's because, we have,
+03:21 no data down here, okay.
+03:24 So we can expect that, that's okay.
+03:27 But, we see all of them,
+03:29 United States, Canada, Mexico, France, Germany, and so on.
+03:33 That's another way of accessing
+03:35 all of the cells that you need,
+03:37 in a row you can see here, you can combine things now.
+03:40 You can combine that with other rows as well.
+03:44 So we could obviously build in the code,
+03:48 we could build the B, we could build that cell,
+03:52 we could also build that along with A.
+03:54 So we know the government in Germany,
+03:56 the mid-market in France, and so on.
+03:59 You can see I could start to build these.

@@ -1,0 +1,120 @@
+00:00 All right, let the fun start.
+00:03 Let's look at a more practical example.
+00:05 You're probably familiar with packtpub.com.
+00:07 They have a daily free eBook I've been collecting
+00:10 the last months, and I got a bunch of eBooks on my account,
+00:15 but my account obviously is behind a login.
+00:17 So let's write a script to log in to Packt.
+00:21 Reach out to my account details.
+00:23 Go to my eBooks, this link here
+00:25 and make a list of all the books it finds here.
+00:28 Then, we retrieve the book titles and URLs,
+00:31 so, let's get coding.
+00:33 First of all, I don't want to store any password
+00:37 and login into my script,
+00:39 so we need to load them from the environment.
+00:42 One way you can do that in Python is with import os,
+00:45 os.environ get and let's say
+00:50 we call it packt_user
+00:54 and Packt_password.
+00:56 We store them in user and password.
+01:02 And you see, I already set them in the environment.
+01:05 I will show you how to do that next,
+01:07 so let's go back to the terminal
+01:08 and make sure you have your virtual environment deactivated.
+01:11 And go into venn/bin/activate.
+01:16 And go to the end and do an export
+01:20 of packt_user
+01:25 and export packt_password.
+01:31 And if you want to follow along, make those the values
+01:34 of your login, save that.
+01:37 Activate the virtual environment again,
+01:39 and I'm using this alias, and now, you should have them
+01:43 in your environment variables.
+01:52 And it means they will be accessible to your script.
+01:56 All right with the user and password set,
+01:57 let's log in to the site.
+01:59 So this is the login site
+02:02 and let's initialize a driver.
+02:10 And let's get the page,
+02:14 then on the page, let's find
+02:17 the actual login form which we can do with
+02:21 find_element_by_id.
+02:23 And first I looked at the page source
+02:24 to see how the user and password fields are named.
+02:27 And they have them named as edit name,
+02:33 and you want to send the keys, basically sending data
+02:37 into that form input fields, user.
+02:40 Here we do the same for password,
+02:44 and the password field is named pass,
+02:47 and here we want to send it our password,
+02:51 and importantly we want to make sure we hit enter
+02:53 after that last value, so by running Selenium it
+02:58 opens the browser and goes to the login page,
+03:02 and there's my email and my password,
+03:05 and click enter.
+03:08 Look at that it logged into my account.
+03:11 How cool is that?
+03:15 Now we're logged into the page and move on
+03:18 to find my eBooks.
+03:20 As we saw there is a link on the page, My eBooks,
+03:24 so we just need to find that link and click it.
+03:31 Before running that cell let me show you
+03:33 where we are now and what that page looks after clicking.
+03:37 Now, we are in account details.
+03:41 Click the cell.
+03:46 Now we're in my eBooks. How cool is that?
+03:48 I'm navigating this side through Selenium.
+03:52 Let's move on and extract the books.
+03:59 I'm going to use find_elements again,
+04:02 but now by class names because I saw
+04:06 that the books are in a class product-line
+04:14 and that's in elements.
+04:19 Right, couple of Selenium web elements, cool.
+04:24 I can write a dictionary comprehension to
+04:27 actually I extract the nid, N-I-D,
+04:32 kind of the identifier, practice using and the title.
+04:35 I'm going to store that in books.
+04:41 I'm using the get_attribute,
+04:45 nid as key,
+04:49 and
+04:53 title as value.
+04:56 for e in elements.
+05:02 Look at that all the books of my account.
+05:05 Good I think we're done now, so let's close the driver,
+05:10 and that actually closed the browser.
+05:12 Alright, so and boom.
+05:14 You cannot see it, but that closed my Chrome Browser
+05:17 I had open.
+05:18 Now that we have the data in a structure,
+05:21 I can just write a little bit of code to get the book.
+05:24 And to keep the focus on Selenium,
+05:26 I'm just going to copy that code in.
+05:29 We have to download URL which I extracted from HTML.
+05:32 We have that id and the format of the book we want.
+05:36 Possible formats are PDF, EPUB, and MOBI.
+05:39 We write a function called get_books,
+05:41 grabbing my books for a string and checks
+05:45 if the book format is correct and then it just looks
+05:48 through the titles.
+05:49 Does a regular expression match on the title
+05:52 and it gives me the title and URL.
+05:54 The next step would then be to actually download
+05:57 the book to my desktop, but that's out of the scope
+05:59 of this lesson.
+06:01 Let's try it out.
+06:06 As just a regular expression I can get a regular expression
+06:10 like searches.
+06:11 I want all the MOBI files for Python Data Books.
+06:15 Nice.
+06:18 I want the books for machine learning
+06:24 and I want the format of PDF.
+06:27 It should also work in uppercase.
+06:29 There you go.
+06:31 A little useful script.
+06:32 I don't spend too much time on them here
+06:34 because I want to really focus on Selenium,
+06:36 but the point is that once Selenium loaded your data
+06:39 into a structure or you can dump it to your
+06:42 database table or whatever then it's just easy to write
+06:45 a function to work with that data.

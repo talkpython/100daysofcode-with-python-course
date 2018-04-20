@@ -1,0 +1,35 @@
+00:00 A common task is to capture strings using a regex.
+00:05 Here we have two strings, 100 and 200.
+00:08 What if we want to extract number days of code
+00:13 out of these strings.
+00:16 Here's how you would do it.
+00:18 First, I do a research.
+00:25 And I use the capturing parentheses.
+00:28 What this will do, any regex inside these parentheses
+00:32 that matches the string will be stored in a match object,
+00:36 which we can access with groups.
+00:39 Hashtag, one or more digits, days of code.
+00:46 As it is searched, re is happy to just match the substrings.
+00:50 So I don't need make sure that the whole string matches.
+00:53 If this would be match.
+00:57 Let's do it actually.
+00:59 I would have to account for anything that comes before,
+01:03 and anything that comes after.
+01:06 Of course I need to give it a string.
+01:09 And let's see what happens.
+01:11 So first of all we have a match object,
+01:14 and to get the actual matching string I can do groups.
+01:19 And it gives me a tuple of the matches.
+01:24 So to get the actual string, I can just use indexing.
+01:28 And I got 100 days of code.
+01:31 Now this will work the same for 200.
+01:36 Let me show search, that was my initial intent.
+01:40 Search, then I don't have to account for end time,
+01:43 so I those wild cards out.
+01:46 I'm going to use 200 to show the match object first.
+01:56 And again, 200 days of code.
+02:01 So you see the power of regular expressions,
+02:02 this is still very simple.
+02:05 I can just say one or more digits, followed by a string,
+02:08 and it will match both 100 and 200 days of code.
+02:12 So that's how you capture strings with the re module.

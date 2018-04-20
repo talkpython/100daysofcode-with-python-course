@@ -1,0 +1,30 @@
+00:00 Okay and that is it.
+00:01 Hopefully by now you've got
+00:02 a nice fully functional home inventory app going
+00:05 and you learned something on the way, okay.
+00:07 Especially with SQLite and with the generator
+00:10 and whatever other cool little ways
+00:13 you've managed to make this app your own.
+00:15 I'm not going to bother going through any slides
+00:17 for the finale of this lesson set,
+00:20 just because we did go through
+00:21 quite a lot of content.
+00:23 What I will do is,
+00:24 I will show you the ReadMe
+00:26 one more time,
+00:28 just so you know what you can do with this
+00:30 if you haven't done it already,
+00:32 is run yourself a GUI or a web interface.
+00:36 I think that's the next logical step for this app
+00:39 because it would be a lot of fun to be able
+00:40 to bring up a website
+00:41 and enter in your entire room into one form
+00:45 and have it submitted to a database, okay.
+00:48 So, this is your turn.
+00:50 Obviously, go ahead and identify the pitfalls
+00:53 and the bugs as per that video
+00:55 and make them your own.
+00:57 Solve them, resolve them.
+00:59 See if you can turn it into something great
+01:02 other than just a CLI app.
+01:04 And that's your home inventory app.

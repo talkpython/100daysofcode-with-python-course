@@ -1,0 +1,29 @@
+00:01 Welcome back.
+00:02 In this second and third day,
+00:04 I encourage you to take our Code Challenge 30.
+00:07 It's The Art of Refactoring: Improve Your Code.
+00:11 And, the task of today and tomorrow is
+00:13 to get some of your code, run tests
+00:16 and do some refactorings, making it more Pythonic.
+00:20 Also, I would recommend to start looking at Flake8,
+00:23 or Pylint.
+00:24 I personally use Flake8.
+00:27 And integrate that into your editor.
+00:29 And have a check upon each save.
+00:31 Or, what I did, for example, in the vimrc,
+00:34 I have a shortcut: , f.
+00:36 And when I press that,
+00:38 it runs Flake8 and it opens a new editor window
+00:41 where it highlights my PEP8 violations.
+00:44 So that way I keep my files clean during development.
+00:47 Optionally, you can look at Code Challenge 35
+00:52 and use Better Code Hub
+00:54 to look at your code quality overall.
+00:59 Using how we use the tool
+01:02 to improve a couple of our projects.
+01:16 And don't forget to tweet out your progress.
+01:19 You can mention Talk Python and PyBites in your tweets,
+01:22 and we would love to see what refactorings you come up with,
+01:25 or what your favorite Pythonic concept is
+01:27 you learned from this lesson.
+01:29 Alright, good luck and have fun.

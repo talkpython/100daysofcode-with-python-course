@@ -1,0 +1,20 @@
+00:00 G'day everyone, welcome back.
+00:01 This is Julian Sequeira again
+00:03 and welcome to Sending Emails with SMTPLib.
+00:06 This is one of my favorites
+00:09 just because I love automating stuff, right.
+00:12 And this is one of the first cool things
+00:14 that you're going to automate with Python.
+00:17 Sending emails virus stripped
+00:19 is extremely gratifying and awesome
+00:21 if you want to spam your friends
+00:23 and I think you're really going to enjoy it, too.
+00:26 So, the point of these videos
+00:28 is to teach you how to send an email
+00:30 using a script, SMPTLib
+00:32 and the Python MIME modules
+00:35 which I'll explain in a bit.
+00:38 So, click next and carry on with the videos.
+00:41 Next, we're going to set up your Gmail application ID
+00:44 and then straight from there,
+00:46 create a script.

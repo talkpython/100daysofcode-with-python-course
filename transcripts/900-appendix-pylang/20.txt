@@ -1,0 +1,17 @@
+ 0:00 By leveraging inheritance, we can crate 
+0:02 a wide range of types that model our world very well, 
+0:06 in this example on the screen we have a wizard 
+0:08 and the wizard knows how to battle a variety of creatures, 
+0:11 we have small animals that are easier to defeat, 
+0:13 we have standard creatures, we have dragons, we have wizards. 
+0:16 All of these types are derived from the creature type. 
+0:20 Now, the wizard class, you can see, can attack any of these creatures,
+0:24 and the reason the wizard class can attack them 
+0:26 is it's built, it's programmed to understand what a creature is 
+0:30 and attack it and any of the derived classes can be used interchangeably. 
+0:34 So this means we can continue to evolve and generate 
+0:38 new and interesting creature derived types 
+0:41 and we don't have to change our wizard code to understand how to battle them. 
+0:45 That's great, polymorphism is essential in any object-oriented language, 
+0:50 and that's absolutely true in Python as well. 
+

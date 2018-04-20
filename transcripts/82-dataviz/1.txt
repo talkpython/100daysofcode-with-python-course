@@ -1,0 +1,21 @@
+00:00 Welcome back to the 100 Days of Python,
+00:02 Day 82, data visualization with Plotly.
+00:06 Coming three days, I will be your guide
+00:08 teaching you how you can make beautiful plots
+00:11 in Python using this library.
+00:13 We're going to take some data from our PyBites blog
+00:16 and I will show you how to first get that data
+00:19 in the right shape so it's easy to
+00:22 just hand it off to Plotly and make some cool graphs
+00:25 that show some insights about what the blog is about,
+00:29 and hopefully that will inspire you
+00:32 to then roll your own, be it with Plotly,
+00:35 or another awesome library, which I will mention,
+00:37 which is Bokeh, and yes, this will be a lot of fun.
+00:41 It's one of my favorite topics,
+00:42 and having data visualization skills goes a long way.
+00:46 I mean, there's a lot of data out there,
+00:48 even more now with big data,
+00:50 but if you can show it in a nice way,
+00:52 it's way more powerful.
+00:54 So, let's dive straight in and learn some new skills.

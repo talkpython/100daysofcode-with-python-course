@@ -1,0 +1,90 @@
+00:00 Alright, let's go back to our code here
+00:01 and we're going to do a little bit of work with the API.
+00:04 So what we can do, is we can come up here
+00:06 and say we're going to try to, as much as possible,
+00:09 ignore the start up time and all those kinds of things
+00:12 and we just want to measure all our important code.
+00:14 So what we're going to do is import cProfile
+00:17 and this is not great, but, before we even
+00:20 try to go and import this
+00:21 we're going to create a profiler
+00:23 and disable further profiling.
+00:26 So we'll go like so.
+00:31 There we go, we're going to say
+00:32 profiler disable and probably we'll just actually
+00:35 take this code out once we're done
+00:36 playing around with it, 'cause, you know,
+00:38 these are supposed to go to the top.
+00:39 But I don't want to time that stuff.
+00:40 We're going to say, disable.
+00:43 What we want to do is we want to time this method,
+00:45 I want to time this one, and this one,
+00:47 and we're just going to straight up time it at first
+00:48 and then we're going to reorganize it
+00:50 so we get a better look at it here.
+00:51 Alright so let's go to our profiler and say enable.
+00:55 And then as soon as we're done down here,
+00:58 we'll go down and say profiler disable.
+01:02 Okay. Now if we run this
+01:03 are we going to see some great profiler output?
+01:06 Eh, probably not, let's try.
+01:09 Well we ran it 25 times, that was cool.
+01:11 But nah, where'd our stats go?
+01:13 None.
+01:14 Okay, so what we actually need to do down here
+01:17 at the end
+01:18 is say profiler.printstats
+01:23 and this will give us basically
+01:24 the same graph as we had before.
+01:26 There it is.
+01:27 Now, of course, it's sorting by
+01:29 heck I don't actually know what it's sorting by.
+01:30 But not what we want.
+01:32 So we come down here and say sort.
+01:34 Now this is annoying, I guess I'll say it that way.
+01:38 It says the sort is an integer
+01:40 and its default value is -1.
+01:43 Do you know what you put here?
+01:44 Cumtime as a string.
+01:46 Yeah let's go ahead and tell PyCharm
+01:47 that's spelled correctly.
+01:49 That's what it is, that's how it works.
+01:51 Okay, so down here, now
+01:53 you can see the cumulative time is descending.
+01:56 It looks like we're sorting correctly there.
+01:58 We've had 115,000 function calls.
+02:02 That's non-trivial, apparently.
+02:04 Look at this, look how much cleaner
+02:06 and realistic this looks.
+02:07 Alright, we're spending time in research and net,
+02:09 and parse row, this is kind of the whole startup time bit.
+02:12 This next stuff, this is definitely in there.
+02:15 We're spending some time in sorted.
+02:17 That's pretty cool.
+02:18 And here we have our three,
+02:19 our hot days, wet days, and cold days.
+02:23 Okay, that's pretty cool, and then here you can see
+02:25 some of these lambdas, or our sort functions
+02:27 that we're passing along in research, and so on.
+02:29 So this gives us a much more clean and pure view
+02:33 of what's going on here.
+02:35 Let's actually crank this up to 100.
+02:38 Just to make it stand out a little bit more.
+02:42 Here we go.
+02:43 So now we're spending a decent amount of time in
+02:46 these places, and here we're spending like,
+02:49 not quite 20 milliseconds in the three,
+02:52 data reporting sections.
+02:54 Okay this is all well and good
+02:56 and these numbers right here,
+02:57 the stuff I've highlighted, is great.
+03:00 However, this method here,
+03:03 it's kind of hiding, this main, where's main?
+03:08 Main's not showing up because we didn't,
+03:10 we didn't call it directly,
+03:11 we basically disabled profiling
+03:13 but there's still some stuff going on here
+03:14 like this looping, and this numarray
+03:16 and this string formatting,
+03:18 all this junk is still being profiled.
+03:20 We're going to use the API to clean that up as well.

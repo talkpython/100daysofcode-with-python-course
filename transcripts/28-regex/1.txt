@@ -1,0 +1,13 @@
+00:00 Welcome back to 100 Days of Python.
+00:02 In the coming three days I will be your guide
+00:04 explaining regular expressions in Python.
+00:07 First we will look at when not to use them
+00:09 when we can use simple string methods.
+00:12 Then we will dive into search and match,
+00:15 capturing strings.
+00:17 Final, compiling your regexes,
+00:21 and advanced string replacements.
+00:23 Day 2 I will give you some more material
+00:26 to read and practice online,
+00:29 and the third day I have some really good exercises
+00:32 to get your hands dirty with regular expressions.

@@ -1,0 +1,34 @@
+00:00 Right a quick overview of what we're doing for the next
+00:03 couple of days.
+00:04 For the first day of your datetimes lessons you're going to
+00:08 watch the videos, okay?
+00:10 A couple of videos for you to watch to do with datetime,
+00:12 date, and timedelta.
+00:15 Alright after you've done, after you've completed watching
+00:17 the videos go ahead and just play around in the shell.
+00:21 So do some timestamp calculations as per the content
+00:25 in the videos.
+00:26 So we won't dwell on that too much.
+00:28 The second day I want you to head to our challenges,
+00:32 our challenges platform I should say and sign up with your
+00:36 GitHub account.
+00:37 It's free and then follow this link here and this will
+00:40 unlock this datetimes challenge, okay?
+00:46 This bite here is going to be based around parsing dates
+00:50 from logs.
+00:52 Okay so have a play with it, code in the browser
+00:55 and have fun.
+00:56 That's your day two.
+00:58 Then day three.
+01:00 That is all going to be up to you.
+01:02 Create something for yourself.
+01:04 I reckon you should give a Pomodoro timer a chance.
+01:08 Use datetime for it.
+01:10 I know you can just use a time module for these
+01:12 examples here but the idea is to include some timestamps.
+01:16 Do some calculations and see what you can wrap around date
+01:19 time okay so the Pomodoro timer is quite simple.
+01:24 You can do that or you can do a stop watch.
+01:26 Anything like that.
+01:28 So if you have any ideas yourself now is your time to
+01:30 test it out on day three.

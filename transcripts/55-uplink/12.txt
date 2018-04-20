@@ -1,0 +1,32 @@
+00:00 You've seen how fun it is
+00:01 to build API clients with uplink.
+00:04 Now it's your turn,
+00:05 and we're going to have you build an API client against
+00:08 an API which has several endpoints.
+00:10 You've seen this service before,
+00:11 over at movie_service.talkpython.fm,
+00:14 and it has these three endpoints.
+00:16 Recall we did this in one of our service demos previously
+00:19 but we're going to take an entirely different approach
+00:21 and you're going to write that from scratch.
+00:23 So over here,
+00:24 we've seen that we can go /api/search/something,
+00:29 here we're searching for all movies that have Run
+00:32 as a substring on keywords,
+00:34 or we can find them by director.
+00:36 Here's all of the movies written by,
+00:38 or directed by James Cameron. Things like that.
+00:40 So we're going to take this
+00:42 and let you model it with uplink.
+00:45 So the first day,
+00:46 really is just mostly watching the videos
+00:49 and if you've gotten this far, you're pretty much there.
+00:51 So you're mostly done.
+00:52 Go ahead and just create a shell project,
+00:56 an empty project that has a virtual environment,
+00:59 it has uplink installed,
+01:01 and program.py and an api.py.
+01:05 And then just you know import uplink inside the api.py,
+01:07 import api inside program.py, run program.
+01:09 Make sure it's all hanging together, right?
+01:11 So you'll be ready to start for the next day.

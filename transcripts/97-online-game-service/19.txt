@@ -1,0 +1,28 @@
+00:00 So we're over here, and we're calling service all_rolls,
+00:04 and then we have to, remember you have to basically say,
+00:07 service.all_rolls. Store that," and another thing
+00:11 you have to say, raise_for_status
+00:15 and then call JSON if that worked.
+00:17 So that was really cumbersome.
+00:20 So we created this thing called The uplink_helpers,
+00:26 which had this basically uplink response handler
+00:30 raise_for_status.
+00:32 So if we go over here to our game,
+00:34 oh sorry, api, excuse me, and we say this,
+00:38 then it won't let any code through that fails.
+00:42 So we know that it's safe to say .json right here,
+00:45 'cause it's already tested it.
+00:47 We can do better though.
+00:48 We make it all of these methods return the dot.
+00:50 JSON will response a result by adding one other thing.
+00:55 This response to data.
+00:56 So given a response, we just call response.json.
+00:59 Otherwise, they throw a format error.
+01:02 If we also put this at the top,
+01:06 on the outside, not the inside.
+01:08 The outside; That's important.
+01:10 And this one goes on the inside.
+01:11 Then we can come down here, and just print this.
+01:15 And we should be our little devil, all the various pieces.
+01:19 We do. Very nice. So I feel like our game service is in place,
+01:23 and that really makes working with it nice and easy.

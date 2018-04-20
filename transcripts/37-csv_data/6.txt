@@ -1,0 +1,59 @@
+00:00 We were able to read our file as text,
+00:02 and that gets us really close,
+00:04 but it doesn't really let us work with it.
+00:05 And now, technically, we could do,
+00:07 like a crazy bunch of string operations and parse this.
+00:10 But, it turns out it is entirely unnecessary.
+00:13 So we can import the csv module.
+00:15 This is a built in in Python.
+00:17 I'll call this reader, and I'll say csv.DictReader.
+00:21 There's a couple of kind if readers.
+00:23 DictReader is the best one.
+00:25 And you pass it this file stream.
+00:27 And what this thing is, is it is something that
+00:29 you can loop over, and every time you loop over it,
+00:33 you get the values out, okay.
+00:35 So, let's do just something really, really quick, and,
+00:39 just for row in reader, and just so
+00:42 you can see it working I'll print out, let's say.
+00:47 So if we run this,
+00:48 looks like it's working,
+00:49 and what we get is something called
+00:51 an Ordered Dictionary.
+00:52 Doesn't matter that it's ordered,
+00:53 all that matters to us I can ask it for
+00:55 the date, or the actual mean temperatures.
+00:57 Like, if just want to print out this part,
+00:59 I can go, because this is a dictionary,
+01:03 let's comment that out, I can just print here,
+01:08 row.get the actual mean temperature.
+01:13 Great, it looks like we already got a lot of data,
+01:15 and we could work with it.
+01:16 There's one super, super challenging problem, though.
+01:20 If I really want to work with this data,
+01:23 you very likely want to ask,
+01:25 is this thing less than that other thing, right.
+01:28 Is this temperature less than that?
+01:29 So we can answer our questions.
+01:31 What's the hottest day, what's the coldest day?
+01:32 Things like this.
+01:34 So, let's print out the type, right.
+01:36 This is going to tell us the actual underlying data type here.
+01:40 Strings, everything that comes back
+01:42 from CSV files are strings.
+01:43 Even if they look like dates, or they look like,
+01:46 you know, numbers or something.
+01:48 And so in order to actually work with these,
+01:51 we're going to have to do something a little bit different.
+01:55 So, we're going to actually write a function
+01:57 that takes this sort of raw row that we have here,
+02:02 and instead of just saying we're going to store the text,
+02:07 we're actually going to convert the numbers to numbers,
+02:09 the dates to dates, things like that.
+02:10 So we can actually answer questions like,
+02:12 is this number less than that number?
+02:15 Alright, the string less than or greater than
+02:17 is not the same thing
+02:18 as numerical less than or greater than, right?
+02:20 Like, 100 is less than 7, for example,
+02:25 if those were strings, but obviously not as number.

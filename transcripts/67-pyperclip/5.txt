@@ -1,0 +1,101 @@
+00:00 It's time to create something useful.
+00:03 This is a script we use, Bob and I use for PyBites,
+00:06 to actually put our affiliate code
+00:09 into some of the Amazon links that we use on the website.
+00:13 This is really cool because it's a great demonstration
+00:15 of how you can make a script for yourself
+00:19 that is useful day to day and is really
+00:22 just a nice, cool, dirty script.
+00:25 You know, it doesn't have to be pretty
+00:26 and it doesn't have to have
+00:27 all the cool Pythonic formation around it.
+00:32 It's not going to be any functions.
+00:34 It's not going to be anything, just a couple of lines of code.
+00:38 So let's start off by importing pyperclip,
+00:43 and what this code's going to do is it's going to take a URL
+00:46 and it's going to tack on our Amazon affiliate code
+00:52 onto the end of your URL.
+00:54 So it's going to paste it in, edit it,
+00:57 and then copy it back out to the clipboard.
+01:00 So the first thing we need is our affiliate code.
+01:03 That's a constant, it's not going to change.
+01:06 Let me just copy that.
+01:10 Now you'll notice that the affiliate code
+01:12 is this here, right?
+01:15 But this here, if you were to inspect
+01:17 any of the affiliate links that we have,
+01:21 you need to tack this onto the end of the URL,
+01:25 or somewhere in the URL, and this will then
+01:29 provide the correct affiliate link.
+01:31 You can't just put this in there.
+01:33 You have to have this there too, okay?
+01:36 Alright, so we'll move on.
+01:39 Now we want the URL, so the URL you're bringing in
+01:42 is going to be the pyperclip.paste, right?
+01:48 Now obviously, we're not going to do
+01:50 any huge amount of testing here,
+01:54 because this is just, again, a dirty script.
+01:56 I'm not going to sit here and say,
+01:58 well, if it's not a link that's being pasted in,
+02:00 you know, and all that sort of rubbish.
+02:02 We just want to go quick and dirty, okay?
+02:05 So the most we're going to do is check for the word Amazon
+02:09 in the URL, so if Amazon is not in our URL,
+02:15 well then, let's just return a message.
+02:18 What are we going to say?
+02:20 Sorry, invalid link, okay?
+02:23 Nice and simple, don't want to go over the top,
+02:28 and now what are we going to do?
+02:29 This is where we're going to manipulate the URL,
+02:32 so we've called in the URL with pyperclip.paste.
+02:36 We've checked to see if it has the word Amazon in it,
+02:39 and if it does have Amazon in it, we can then,
+02:42 let's create a new variable called new_link.
+02:47 And it's just going to be simple string manipulation.
+02:50 We're going to go URL, which is the paste,
+02:54 plus affiliate code.
+02:59 That's it , so pyperclip.copy
+03:04 as we saw in the other video,
+03:07 new_link, and then print.
+03:13 Alright, we're going to say
+03:15 affiliate link generated
+03:20 and copied to clipboard.
+03:25 Oops, close that off.
+03:27 Alright, so not much to it.
+03:30 It's actually very, very simple, isn't it?
+03:33 So we like that, so we're pasting it in.
+03:36 We're checking to see if it has Amazon in it.
+03:38 If it does, we're appending the affiliate code on,
+03:43 then we're copying it back to the clipboard, okay?
+03:46 Let's save that.
+03:47 Now if we need to run that, we just have to copy
+03:51 something to the clipboard, so let's copy my Gmail link,
+03:56 mail.google.com, and let's run the script, see what happens.
+04:02 Alright, it says sorry, invalid link.
+04:04 That's exactly what we wanted.
+04:06 And now I've just copied an Amazon link
+04:09 for one of those Fire Stick devices,
+04:11 and we're going to run the script again.
+04:15 And it'll go affiliate link generated
+04:17 and copied to clipboard, so let's just paste that in here.
+04:21 And there's all the standard Amazon URL,
+04:25 and then right on the end there we see
+04:27 end tag equals 0fpython20,
+04:31 which is our affiliate code.
+04:33 And then just to be sure, we can go check that
+04:35 in on Amazon and see if it works, and it does.
+04:37 I don't expect you to do that.
+04:39 This isn't some sort of cheap sales trick .
+04:43 Yeah, so it all works really well, and this is, again,
+04:46 a nice simple script.
+04:48 Obviously there's a lot of checking that could be done.
+04:51 For example, if I take amazon.com.au,
+04:57 copy that to clipboard, and then run this again,
+05:01 it's going to say it's generated, but when I hit paste,
+05:04 you can see we've just got amazon.com.au and the tag,
+05:08 which is not a valid link, so obviously this isn't something
+05:12 for production use for the rest of the world.
+05:15 This is just something that you're going to use
+05:17 just as a little hack job when you know you have
+05:19 the proper type of URL copied to the clipboard.
+05:22 So there you have it, nice little use case of.

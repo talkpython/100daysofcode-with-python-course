@@ -1,0 +1,17 @@
+00:00 Good day everyone, I'm Julian Sequeira.
+00:02 Welcome back and this time we're going to look at Feedparser.
+00:06 This is a library that is really cool
+00:08 and I absolutely love it.
+00:10 I use it in a few scripts
+00:12 and it's actually designed to parse RSS feeds.
+00:15 Go figure.
+00:16 It's really, really fun to use,
+00:18 very simple, very satisfying.
+00:20 So let's move on to the first video
+00:22 and what we're going to do
+00:24 is first we're going to pull down an XML file
+00:26 in our RSS feed.
+00:27 And in the next video after that,
+00:29 we're then going to parse it.
+00:31 Really simple and quick.
+00:33 Let's get to it!

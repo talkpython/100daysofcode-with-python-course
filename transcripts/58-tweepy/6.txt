@@ -1,0 +1,41 @@
+00:01 Next up are common hashtags and mentions.
+00:04 I mean, we tweet out a lot of stuff,
+00:05 but what is the hashtag that we mention the most?
+00:09 Let's define two regular expressions,
+00:11 one for hashtag and one for mention.
+00:14 And we covered regex more extensively in Day 28,
+00:17 so you should be familiar with this syntax.
+00:20 Then, I'm going to join all the tweets together
+00:23 in one big string.
+00:26 And if the mentions can be skewed
+00:29 by having retweets in them, I'm going to define
+00:31 another string with all the tweets excluding retweets.
+00:39 Next, I'm going to use the find_all method,
+00:41 which we also covered in Day 28, to get
+00:44 all the hashtags.
+00:49 Cool.
+00:50 Then we can use the calendar, which we covered in Day 4,
+00:53 in the collections module, to see the most common hashtags.
+00:58 Look at that. Obviously we tweet a lot of about Python,
+01:01 but also 100 Days of Code. And web frameworks like Django
+01:05 and Flask. Oh yeah, Python and 100 Days of Code.
+01:10 Let's look at the mentions.
+01:15 Look at that.
+01:16 Yeah, we really like the work @python_tip is doing
+01:19 by tweeting out every day a Python tip or trick.
+01:22 @PacktPub, we tweet out the new free e-book every day,
+01:26 which is awesome. And of course, @TalkPython,
+01:29 we really like the show and
+01:31 all the stuff they put out there.
+01:32 Then Bader, @RealPython, they have excellent articles,
+01:34 etc. So this makes a lot of sense, and it's nice
+01:38 to see this in numbers. Although the results are
+01:41 definitely correct, I just want to show you how
+01:45 the results are if I exclude the retweets.
+01:47 So I can just copy this code,
+01:52 and instead of "all tweets",
+01:54 I'm going to call it on, "all tweets excluding retweets".
+02:01 Yeah, that's more or less the same, but there are
+02:04 some other users here that bubble up to the top.
+02:08 So next up, you're going to make a Wordcloud of
+02:10 all our tweets. And it's going to be awesome.

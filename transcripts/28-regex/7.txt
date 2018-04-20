@@ -1,0 +1,56 @@
+00:00 Welcome back to the last section on the regex lesson.
+00:03 This video will show you advanced string replacing
+00:06 using re.sub.
+00:08 For example, we have a string here
+00:09 on doing the 100 days of code, 200 days of Django,
+00:12 and, of course, 365 days of PyBites.
+00:16 So you're doing a simple string replacement.
+00:20 It's a bit ugly, right.
+00:22 So this will work but.
+00:25 When you start to do things multiple times,
+00:28 you have to think about a better way to do it.
+00:31 So let's use re.sub
+00:34 to make a more flexible replacement regex.
+00:38 So re.sub...
+00:40 raw string
+00:42 and I want one or more digits
+00:44 and I just want to replace those by 100.
+00:48 And I do that on the text
+00:50 and this works as well and it's more flexible
+00:54 because if there are will be like five or six
+00:57 of these hashtags with different integers,
+01:00 they all would work.
+01:03 Now let's look at a more advanced example
+01:07 where we also want to capture the thing we replaced.
+01:12 Say, for the same string,
+01:14 I want to replace the thing after the days off.
+01:17 So all should be Python, but we want to respect the integer
+01:21 so I want to have 100 days of Python,
+01:23 200 days of Python, and 365 days of Python.
+01:26 Doesn't really make sense in a sentence
+01:28 but it does for our exercise.
+01:30 And the way to do that is to write a re.sub...
+01:35 raw string.
+01:37 And let's define the regular expression as a literal hash.
+01:45 One or more digits.
+01:47 Hard-code days of
+01:51 one or more alphanumeric characters.
+01:55 Here, you see these capturing parenthesis again.
+02:00 I'm going to use that in a replacement part
+02:02 which is the second argument
+02:04 and I can reference that with backslash one.
+02:08 So what this does is it takes the...
+02:12 match of hashtag...
+02:15 digits days off
+02:17 and I'm going to put that in the replacement string.
+02:21 And then I want to hard-code Python
+02:25 and I want to do this on text.
+02:28 And there you go.
+02:29 Awesome, I'm doing 100 days of Python, 200 days of Python,
+02:33 and, of course, 365 days of Python.
+02:35 That's a wrap.
+02:37 I hope you enjoyed this and got a better feeling
+02:40 of how to write your regexes in Python.
+02:44 Of course it's not a complete list of all the features
+02:47 and that's why in day two I will provide you
+02:50 some more resources and things you can check out.

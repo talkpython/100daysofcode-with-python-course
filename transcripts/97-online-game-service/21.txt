@@ -1,0 +1,76 @@
+00:00 You saw us write the game,
+00:01 interaction of the game loop previously.
+00:04 We've consumed a bunch of API's with Uplink already.
+00:07 So let me just drop in some code here that is going to
+00:11 be basically, the same thing but using the service,
+00:15 just for the sake of time.
+00:18 So what do we got?
+00:19 We're going to print out the top scores,
+00:20 and we're going to call top_scores and then we'll loop
+00:22 over them, and remember everything that comes back is a
+00:24 dictionary so we've got to get the values and then
+00:28 this is a nested dictionary,
+00:29 so we've got to get the name from the player that we got,
+00:31 and so on.
+00:32 So we're going to print out the top scores,
+00:35 we're going to create a new game that's going to return
+00:37 that dictionary which we're going to get the game id.
+00:39 We could do some work to make this much easier to consume,
+00:41 but just keep it focused on more the server side.
+00:44 Kind of just roll with what we got.
+00:46 Give us all the rolls, get us the player list.
+00:48 Suppose we want to be the player Charles.
+00:52 And then we're just going to say while the game is not over,
+00:54 we're just going to go through and play a round,
+00:55 pass the game id,
+00:57 the user being Charles, and the roll which we're randomly
+01:00 choosing from the various options we got from the server.
+01:05 Right up there.
+01:06 Okay, so we're just going to go run and do that, and when
+01:08 it's over we're going to get the game status,
+01:10 and print the outcome which the game status has the winner.
+01:13 Oh, okay, so let's run this.
+01:16 By the way, it doesn't ask us what we want to do.
+01:19 It just randomly chooses rolls for Charles,
+01:21 and makes him play those.
+01:22 But it could just as well, this could be an input or
+01:25 some other type of UI.
+01:29 Oh, Charles is not found.
+01:33 Yeah, I guess we got to create Charles.
+01:34 Let's go ahead and just create him this way,
+01:35 it's probably the easiest way.
+01:43 All right, try again.
+01:45 Boom, look at that.
+01:48 Top scores, Michael scored 1, Charles scored 0,
+01:51 so Charles threw rock, computer threw scissors,
+01:54 that resulted in a win for the player which is Charles.
+01:57 We got a tree and a sponge, win.
+02:00 Lightning does not beat the devil,
+02:02 water does not beat humans,
+02:03 but finally the end, humans beat scissors and that takes it.
+02:07 The game is over and Charles is the winner.
+02:10 Let's run it again.
+02:11 At the top you see now Charles and Michael have 1.
+02:13 One score each in the top score, in the leaderboard there.
+02:17 Come down here, game is over, the computer won.
+02:20 Let's try again.
+02:21 Leaderboard should now be 1, 1, 1.
+02:24 How come Charles winner, is the winner.
+02:26 So if we run it this time,
+02:27 Charles now has the global high score.
+02:32 Pretty amazing.
+02:33 It might feel like we're kind of playing the same game,
+02:35 but this is totally different, right?
+02:36 We could put this on a phone app,
+02:38 we could distribute this around the world.
+02:40 And if we were hosting that website somewhere
+02:42 like Heroku, or Digital Ocean, or Linode,
+02:45 or something like that.
+02:46 Put it out there, and this would be shared for the world.
+02:49 Pretty cool.
+02:50 Hopefully this has inspired you to see what you could build.
+02:55 I know it's not the super simplest demo,
+02:57 but it's pretty realistic, and it does cover a lot of
+03:00 interesting use cases, and it really opens another world
+03:04 for you guys to build cool applications that are
+03:07 data driven remotely.

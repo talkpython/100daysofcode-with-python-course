@@ -1,0 +1,139 @@
+00:00 All right, I got another cool project
+00:02 to show you Selenium in action.
+00:04 A while ago we made a banner generator
+00:07 with Pillow and Flask.
+00:09 And you can read about that in this blog post.
+00:11 And, the thing was, as we were making banners repeatedly,
+00:15 we just made a little Flask app,
+00:17 we enter some data, and it generates a banner.
+00:20 What if you can automate that using Selenium?
+00:24 So, again, it's pretty similar as last time.
+00:27 We need to look into the site.
+00:30 Well this one is actually cooler
+00:31 because we are going to provide data in a form.
+00:34 So we're actually going to submit this form
+00:36 doing a post request with some data,
+00:39 and then it will return our banner.
+00:41 Let's get that working.
+00:42 Similar as last time,
+00:44 you need your login to be loaded from the environment.
+00:47 You don't want to hardcode that in your script.
+00:49 So, in this case, already done that.
+00:51 So, I got my user and my password.
+00:54 I'm keeping secret here see the last video
+00:56 how you load those into your environment,
+00:58 putting them into your virtual environment's
+01:00 activation script.
+01:02 At this notebook I'm not going to do much validation,
+01:04 but you could add something like this.
+01:07 Class, no login.
+01:12 Extends exception.
+01:14 Pass exception.
+01:18 And then, if user is None,
+01:22 or password is None,
+01:25 raise a no login...
+01:27 exception,
+01:29 and tell the user to set...
+01:37 in your end.
+01:38 Right, so that's a little extra
+01:39 if it would be like a script you're going to run.
+01:42 But let's focus on Selenium again.
+01:44 Here's the site. It's an app we host on the Heroku app
+01:47 and the route to the login page.
+01:51 Again we need to initialize web driver, Chrome.
+01:58 We get to the login page
+02:02 and, again, this is pretty similar as last time.
+02:05 We need to look at the HTML.
+02:07 Let's actually do that.
+02:11 Right, so we want to right-click here
+02:14 and go to inspect.
+02:19 There you see that this is an input field.
+02:22 And, the name is username.
+02:25 And the name of the second field is password.
+02:28 And those are the fields you want to specify
+02:31 for Selenium to go find.
+02:34 So, try, find, element...
+02:38 by id...
+02:41 username...
+02:43 and we want to send it my user...
+02:48 string.
+02:51 And the same for password
+02:55 with the difference that we need to send our password
+03:01 and hit enter.
+03:05 Return.
+03:07 Running this opens the browser.
+03:10 It logs in and that's it.
+03:12 Next up, needing a little helper to create a title.
+03:15 And if it's not core Selenium,
+03:17 I'm going to just paste it in.
+03:19 In this exercise I want to make a PyBites news banner
+03:22 and they're typically of the format news, year, week.
+03:27 And to get a week, I use isocalendar.
+03:30 So, basically what this does is, it gets me news
+03:33 and then the current year and the current week.
+03:36 The same for the variables.
+03:38 I'm going to copy them in.
+03:39 The news option corresponds to the dropdown.
+03:43 So here we have a dropdown of different types of logos
+03:46 or banner types.
+03:47 So we have special, news, article and challenge.
+03:49 And we want the news one, so we have to specify that
+03:51 in the script.
+03:52 So the news option is pybites-news.
+03:55 That's the literal option of that select box.
+03:57 I defined the background image
+03:59 that will show up on the banner
+04:01 and we're going to call the banner from PyBites import news
+04:05 to enter digest and we pass in the year and the week.
+04:08 Which is nice.
+04:10 We have strings that you can just embed your variables.
+04:12 And now the actual Selenium coding.
+04:15 Driver.
+04:16 find_element_by_id.
+04:19 Going to find a name, oh that's this guy.
+04:23 We're going to send the get title
+04:26 which is the function that this is actually stored at.
+04:33 Just pass it around.
+04:34 That's better.
+04:38 Then I'm going to find...
+04:40 element...
+04:44 by xpath.
+04:51 I'm going to copy this over.
+04:53 It's a bit tricky.
+04:56 That's something I needed to work with select options.
+05:01 So go find the select box called image URL one.
+05:05 And again, you can use the web tools
+05:09 to see what the actual HTML looks like.
+05:12 So the select box is image on the score URL one.
+05:16 Go grab that one and take the option
+05:18 with the text news option and click it.
+05:21 So an input field is easier,
+05:24 but a select box is actually two actions, right.
+05:27 You have to find it and click on the right option
+05:29 to get that value, to get it selected.
+05:33 Compare that to, again, another input element
+05:37 where I can just say...
+05:41 send keys.
+05:42 It's just way easier, right?
+05:46 And I send the banner text.
+05:48 So I'm sending that here.
+05:49 And finally,
+05:52 I want to set the background image
+05:54 to that beautiful snake we saw
+05:56 and that field is called image_url2.
+06:00 I'm going to send that to keys background image.
+06:05 As it's the final one, I'm going to hit enter.
+06:14 Alright, seems I didn't have year and week
+06:17 in the global scope, so let's define those quickly here.
+06:25 And look at that, the banner got created.
+06:28 Let's show that once more.
+06:31 It logged in.
+06:33 Put all the data in the form and submitted it.
+06:35 And it created this banner all automatically.
+06:39 And let's not forget to close the driver when we're done.
+06:46 And that closed my window.
+06:47 Okay, how cool is that, right?
+06:49 A banner completely automated with Selenium.
+06:52 And I hope this gave you a taste
+06:54 of what you can do with Selenium
+06:56 and let's review next what we've learned.

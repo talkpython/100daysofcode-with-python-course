@@ -1,0 +1,64 @@
+00:00 Right.
+00:01 Next up, use built in, learn the standard library.
+00:04 There's some very powerful built in functions
+00:07 you can use that save you a lot of code.
+00:09 For example, you run the range of numbers.
+00:11 Well instead of for e in, or do this classical for loop.
+00:16 I'm not even sure how to do it anymore.
+00:22 Now, in Python you can just numbers equals range
+00:26 1 11 and the first.
+00:27 The start is inclusive, and the end is exclusive.
+00:31 So just issue a numbers range of 1 through 11
+00:35 which doesn't say much but if I convert that
+00:39 into a list there you go, 1 to 10.
+00:41 And I didn't have to go through a for loop
+00:43 specifying end boundary, etc.
+00:46 So very nice.
+00:48 What about sum?
+00:50 Let's sum up those numbers.
+00:56 But in Python, you can just use sum,
+00:59 and look at that.
+01:02 It's easier, and less code, and saves you time.
+01:05 Let's look at max and min.
+01:07 So let's create some data.
+01:10 Again to stay at the gym,
+01:11 I have routines and I have timings.
+01:13 Let's make a dictionary.
+01:15 Workout times.
+01:20 Now see before I can use the zip with routines
+01:23 and timings and put that into the dict constructor
+01:29 to make a dictionary.
+01:33 So here are the workouts, and the times
+01:36 and minutes they should take.
+01:38 What I want to do next is to get the workout
+01:40 that takes most time and less time.
+01:43 Let's do it in the proposed way,
+01:46 if you wouldn't know about max.
+02:02 Yeah, legs was 55 minutes which was easily visible here.
+02:06 Now let's see the max building in action,
+02:10 and you will see that we can do this in one line of code.
+02:14 Workout times.
+02:16 items.
+02:18 Again items gets me a tuple, a list of tuples
+02:22 of key value, in this case routine and timing.
+02:25 Then I can use the key optional arguments
+02:27 to give it a or callable or lambda.
+02:29 In the lambda, I'm just saying what I want to sort 'em
+02:33 which is the value, the timing, the minutes.
+02:35 So this is basically telling max,
+02:37 that I want to get the maximum value based on the value
+02:41 which in this case is minutes.
+02:43 There you go.
+02:44 Boom.
+02:45 That returns a tuple of key value.
+02:46 Look at that.
+02:47 Compare one, two, three, four, five, six, seven,
+02:50 eight lines of code with one line of code
+02:52 accomplishing exactly the same thing.
+02:54 You can use min in the same way.
+02:57 It should get me the core workout of 30 minutes.
+03:01 I mean it takes the same inner logic,
+03:04 but as it is min it takes the min value.
+03:08 Look at that.
+03:09 Less code.
+03:10 Leveraging the built in functions from the standard library.

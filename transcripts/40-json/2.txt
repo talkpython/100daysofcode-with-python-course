@@ -1,0 +1,40 @@
+00:00 And here's how your next 3 days are going to look.
+00:04 So, for the first day working JSON,
+00:07 you're going to watch two videos.
+00:08 You're going to inspect some JSON schema,
+00:11 and then you're going to watch how
+00:13 to pull down and decode JSON data.
+00:16 Now, the data set you're going to
+00:17 be pulling down does need an API key
+00:20 which I don't think you'll have,
+00:23 and you don't have to get it for this;
+00:24 you can just follow along.
+00:25 I've also actually put the data set
+00:28 that we pull down into the repo,
+00:30 so within this repo you can find it.
+00:34 Now for Day 2, you're going to look at how to
+00:37 pass the nested dictionaries within that same data set.
+00:42 So for Day 1 you were just playing around with it
+00:45 with what you found in the video.
+00:47 Now for Day 2, that's when you drill down
+00:50 further into the actual JSON nested dictionary part.
+00:55 Now once you've watched the video on how to do it,
+00:58 I'd like you to spend the rest
+00:59 of this day, Day 2, playing with it.
+01:02 So you're going to actually just use that data,
+01:05 pop it into your script, into your shell,
+01:07 whatever it is that you're going to be using,
+01:09 and then go ahead and just play with it.
+01:12 Follow the same advice and have a go.
+01:15 And Day 3 is your turn, so what I'd like you
+01:19 to do on this one, little more interesting,
+01:21 is I would like you to go to our PyBites Code Challenge 16.
+01:27 We'll bring that up here, and that's all
+01:30 about querying you favorite API.
+01:33 A lot of APIs, as we know, will return JSON data,
+01:37 so what you can do is, and a good example is the OMDB API.
+01:42 You can use that to return JSON-formatted data on
+01:46 your favorite movies and then come up with an inventive
+01:49 way to present or request that data.
+01:54 So have a read-through, have a go,
+01:56 and share whatever it is that you come up with.

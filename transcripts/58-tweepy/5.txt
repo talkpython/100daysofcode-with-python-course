@@ -1,0 +1,56 @@
+00:00 And let's see, in particular,
+00:03 what tweets were most popular.
+00:05 And I'm going to first use a list comprehension,
+00:08 which I showed you on Day 16,
+00:10 to exclude the retweets.
+00:15 And a retweet is easy to see
+00:18 because it always starts with a RT.
+00:21 Next, let's get the top 10.
+00:25 And for that I need to do some sorting.
+00:33 Okay, so how does sorted work?
+00:35 You give it a sequence, which is the list of tweets
+00:38 and we use the key argument that can take a function
+00:41 or callable and we give it a lambda,
+00:43 which is basically a just a simple function in a one-liner.
+00:46 And we give it a tweet,
+00:47 and then it will average
+00:49 of the number of likes and retweets.
+00:51 That's sorts the list of tweets by highest average.
+00:55 And if you then do it reversed=True,
+00:57 you get the highest at the top.
+00:59 Alright?
+01:00 Got already with this format.
+01:02 So, let's try the for loop to make it nicer.
+01:05 First, I'll do a specify a format,
+01:09 which I will then use for every row.
+01:15 I got a column of five.
+01:19 Separator...
+01:23 Another column of five...
+01:26 And the text.
+01:28 You can use f-strings.
+01:30 When I was preparing this notebook,
+01:31 I will still using the older formats,
+01:33 so I'm going with that for now.
+01:36 Besides, if you're not on 3.6, you might still need it.
+01:40 I use some nice icons.
+01:44 Then I do a dashed line
+01:48 which I can just say
+01:50 dash times 100
+01:52 and then the loop.
+01:53 For tweet in top 10,
+01:57 I'm going to print, format, format,
+02:01 and then I can just fit in those keyboard arguments
+02:04 likes...
+02:08 and just for the fun of it,
+02:09 let's use a return icon instead of the new line.
+02:14 Oops.
+02:19 And I have to close this.
+02:21 Look at that.
+02:22 Our first tweet was the launch of our co-tennis platform.
+02:25 And the second one was our Flash course, etc, etc.
+02:30 So we have the likes, number of retweets
+02:33 and the text of the tweets.
+02:35 So here you already see the benefits
+02:37 of doing a bit of data analysis to explore your data set.
+02:40 And it's not taking that much of code.
+02:43 Once we have the data loaded in, it's fairly easy.

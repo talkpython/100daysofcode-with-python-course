@@ -1,0 +1,38 @@
+00:00 Now, off scenes, behind the scenes,
+00:02 I've put a bunch more content
+00:04 into our little document server.
+00:06 And when we run it our all forms shows all the documents,
+00:09 but I'd kind of like, at the front here, or home,
+00:14 I like the recent, like the most three recent ones.
+00:16 So let's put the little thing like this,
+00:21 so it'll show the recent documents there.
+00:23 Now, we're going to do again one of these repeating panels.
+00:25 Now check this out, let's go down here,
+00:27 and say, you know what, use this template
+00:29 that we already had, right there.
+00:32 Notice how it's like this.
+00:33 All we have to do is put a different sent of documents,
+00:36 and we'll have this thing totally written.
+00:38 How awesome is that?
+00:39 Let's do this.
+00:44 Like, a few seconds this page will be implemented.
+00:46 Self.repeating_panel1.
+00:48 Don't love the name, but for now I'm going to go with it.
+00:50 Items is utilities.docs.
+00:53 And let's just say, we'll just take the top three,
+00:55 use this twice, try that.
+01:00 That is incredible, isn't it?
+01:02 With literally one minute I wrote this page,
+01:04 because I was able to reuse these components,
+01:06 both in code and draggy droppy style,
+01:09 and how awesome. Look, if I click on it, it even takes me
+01:12 to the one that we clicked on.
+01:14 So this is super cool.
+01:16 We got our all documents view with all of 'em,
+01:19 and our home view, there.
+01:20 And then, the last thing we want to do
+01:22 in this part is to basically
+01:24 let us search within here,
+01:26 if I type things like science,
+01:28 or I type week, I want this
+01:30 to filter down. Let's do that now.

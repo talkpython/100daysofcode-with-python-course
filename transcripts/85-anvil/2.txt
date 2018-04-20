@@ -1,0 +1,58 @@
+00:00 The title of this chapter is Full Stack
+00:02 Web Apps Made Easy.
+00:03 So, what the heck is Full Stack anyway?
+00:04 You may have heard this term. It's definitely floating
+00:07 around there as a buzzword out in the industry, but let's
+00:09 try to put some structure to it so you really know
+00:12 what I'm talking about.
+00:13 Now, let's look at the pieces involved in a standard
+00:15 Web App.
+00:16 We got our browser, we have some kind of cloud hosting,
+00:18 there's really some sort of server, maybe it's a virtual
+00:21 machine or set of virtual machines we manage, and
+00:23 there's typically a database.
+00:26 A request comes in, goes over to the server, goes off
+00:29 to the internet; somehow finds its way magically through
+00:32 the magic of the internet to our server, our server
+00:34 talks to the database, and so on.
+00:37 For most deployments, most applications you build,
+00:40 what do you need to know?
+00:42 It's actually incredibly daunting, I mean you're taking
+00:44 100 Days Of Python here, but there's a lot of languages
+00:48 and technologies involved.
+00:49 We have tried to help with this, but still, let's see.
+00:53 On the server side, we got to know Python, we have to know
+00:55 HTML and CSS, some kind of templating like Jinja2
+00:59 or Chameleon, some web framework like Flask or Pyramid,
+01:03 a data access layer like SQLAlchemy or MongoEngine
+01:06 or something like this. The actual infrastructure,
+01:08 typically that's Linux, and if you aren't in Linux, probably
+01:11 you got to configure the front-end web server,
+01:14 which is NGINX.
+01:15 You also got to configure the app server which runs your code
+01:18 itself, which is uWSGI or Gunicorn, or something
+01:21 like that.
+01:22 There's just like, "That is just the server!
+01:23 Do we forget about the database?"
+01:25 Nope.
+01:26 There's more stuff that goes over here; you got to know
+01:27 the server that is the database, SQLite or MySQL or
+01:30 something like that.
+01:32 Got to know the query language, the SQL query language.
+01:34 In practice, you got to know migrations, how do we evolve
+01:37 your database?
+01:39 Are we done? No, We still got the front-end code.
+01:41 Over here, we've got Javascript, HTML, CSS, Bootstrap,
+01:44 a front-end Javascript framework like AngularJS.
+01:49 This is an insane amount of stuff to know, and this is why
+01:53 building web apps is both really fun but also
+01:56 really challenging because you don't just learn the one
+01:58 thing and then go build the app; it's all these technologies
+02:01 put together.
+02:02 Once you master them, this is a super fun way to build
+02:04 applications, but it can be really daunting.
+02:06 Whatever it is, it's not quick to get started.
+02:10 We're going to see that what we're using for this set of
+02:12 three days takes many of these things and makes them nearly
+02:16 trivial or automatic or just puts them behind the scenes
+02:19 for us.

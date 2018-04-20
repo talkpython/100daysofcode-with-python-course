@@ -1,0 +1,100 @@
+00:00 So here's our skeleton of our app,
+00:02 let's go ahead and start by defining the client
+00:05 for the service we're going to use over in a separate
+00:08 class file, so we'll call this blog_client,
+00:11 something like that, actually, call it like this,
+00:15 and then create the class as BlogClient.
+00:18 You just entered Python class, we talked about this
+00:20 in the text game, where we built our wizard
+00:22 and dragon and stuff.
+00:23 The way Uplink works is,
+00:25 of course we're going to import uplink,
+00:27 and then, we need to derive from this thing called
+00:30 an uplink.Consumer.
+00:32 Now this will tell Uplink it's going to work with
+00:34 our particular methods.
+00:35 However, we still need to do a few things.
+00:38 We need to define the operations that we're going to see,
+00:41 and then have those map to the service.
+00:43 So let's go over here and define a method,
+00:45 just all_posts.
+00:47 It doesn't take any argument, it's just going to go up there
+00:49 and download them, that's what we saw
+00:52 when we clicked right here.
+00:54 Now notice the whole URL is like so,
+00:58 and then, for the various pieces, the part that changes
+01:01 as you know, basically this little end part, okay,
+01:05 so we can actually go and say this, we can say
+01:08 define it dunder init, and we can set that at one place
+01:11 so we can say super.__init__, so this is going to
+01:14 pass this information off to the Uplink consumer,
+01:17 notice there's the base_url, so we'll say base_url is,
+01:21 alright so we don't have to say that anywhere.
+01:23 Down here we can say what we're going to do,
+01:25 this is actually going to be an HTTP GET,
+01:30 let's just put the details really quick here,
+01:31 so, the way that works is we put a little docstring
+01:34 here that just says gets all posts, called blog_entries.
+01:39 I know they're typically called posts, but the word,
+01:42 let's just call all_entries.
+01:44 We're going to use HTTP verbs, GET POST and so on,
+01:47 and that's, you know,
+01:48 nomenclature can be challenging there.
+01:50 So we've got this, now this is not
+01:52 going to do anything for us right,
+01:54 it's just going to return nothing basically,
+01:56 but what we can do down here is we can say
+01:58 add uplink.get, and this tells it convert this
+02:01 to some sort of method that's going to go to the server
+02:04 and it's just going to be, let's take that part off there,
+02:07 and say api/blog.
+02:12 This is literally all we have to do.
+02:14 So, we're ready to use this thing.
+02:16 Let's come over here and just test it out on one
+02:19 and then we'll look at some more interesting pieces,
+02:21 so I'm not going to go and write a lot of code here
+02:24 to make a print out, I'm just going to show you that it works.
+02:26 So let's come over here and we'll say response equals,
+02:29 actually we'll have to create our client say svc equals
+02:32 blog_client like that, import at the top,
+02:35 and then we'll say svc.all_entries, let's just say
+02:39 what is this, and let's just say what value does it have?
+02:43 Okay, so let's run this and see if any of it works.
+02:47 What went wrong?
+02:48 Well, I forgot one little detail, we need to call main.
+02:55 Let's read our posts.
+02:57 Oh my goodness, look at this,
+03:00 we got a response from the server 200,
+03:02 everything is A okay,
+03:03 and it's actually a requests response,
+03:07 now it turns out you can use
+03:08 other underlying network providers other than requests,
+03:11 but if you don't do anything, that's what you get,
+03:13 so requests is pretty cool,
+03:14 we already talked about that previously,
+03:16 that's what we used before.
+03:17 So, what we can do, if we come over here and we type
+03:19 response., you get no, no help, nothing.
+03:22 So let's go over here and quickly add a little
+03:24 type annotation that says this returns this,
+03:28 and import at the top.
+03:30 If we do that, and now we come over here and
+03:32 type response. we get lots of good stuff
+03:36 so we can say raise_for_status,
+03:38 just to make sure this worked.
+03:40 If it doesn't work, that line's going to sort of crash,
+03:43 and then we can just come down here and say post equals
+03:46 response.json,
+03:49 and let's just do a quick print out for this one.
+03:53 Let's show the view count, and these things have come
+03:55 back here, when we say JSON converts to a dictionary,
+03:58 well a list of dictionaries,
+03:59 so it does do dictionary stuff, so be a view count,
+04:02 you can get this from looking just at
+04:04 the JSON that actually comes back,
+04:06 and we're going to have title,
+04:09 so let's run this one more time.
+04:11 Let's read the posts.
+04:13 Bam, how awesome is that.
+04:15 So, we're off to a really, really good start,
+04:18 let's go and implement the rest of the features.

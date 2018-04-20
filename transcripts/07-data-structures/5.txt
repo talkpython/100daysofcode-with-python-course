@@ -1,0 +1,123 @@
+00:00 Alright.
+00:01 Next up we're going to talk about dictionaries,
+00:03 or dicts for short,
+00:06 let's keep saying dictionaries, just to be safe.
+00:09 And they're made up of pretty much two different things.
+00:13 The easiest way to demonstrate it is to just create one
+00:16 in its simplest form.
+00:19 So we'll create a dictionary called pybites,
+00:22 and let's just add a few things to it.
+00:25 The first thing we need to add is a key,
+00:29 and the second thing we need to add is a value.
+00:32 Alright.
+00:33 Looking at it here, there's a separator here, your colon.
+00:37 And that separates your key, the key comes first,
+00:40 from your value on the end.
+00:43 Alright, and this here is technically a dictionary.
+00:48 It may only have one item in it, but it's a dictionary
+00:51 all the same.
+00:52 Let's make it a little more interesting.
+00:54 When you're adding a second item into your dictionary,
+00:57 you separate it with a comma.
+01:00 Alright, so we've got Julian, now let's add Bob,
+01:05 and let's just say he's 33, then we have Mike,
+01:09 let's say he's also 33.
+01:12 Let's just say I'm being super generous with those ages
+01:15 guys, anyway , there's our dictionary.
+01:21 So to view what it looks like, we just type in,
+01:24 pybites.
+01:27 And there it is there, the three different items.
+01:31 And these link to each other.
+01:32 So the key is Mike, the value is 33.
+01:36 The key is Bob, the value is also 33.
+01:40 Now notice when we printed it out, it printed out
+01:44 in this order.
+01:47 Well this order is not explicit.
+01:50 With a dictionary, when you're passing it,
+01:53 when you're listing it out, when you're displaying it,
+01:56 there's no guarantee that the data is going to remain
+02:01 in the order, okay?
+02:03 That's very important to remember with dictionaries,
+02:05 they are unordered, okay?
+02:10 Now let's say we wanted to create a dictionary
+02:15 but we didn't know what values we were going to put into it
+02:18 from the start.
+02:19 We'll just do a quick little side track demonstration here.
+02:22 You would start off just as you would do with a list
+02:25 that's empty, except you're using two curly brackets
+02:28 instead of the square ones.
+02:32 So people is now an empty dictionary.
+02:35 There's absolutely nothing in it.
+02:37 To add someone to it, this is the tricky part, this is where
+02:41 it gets a bit different.
+02:43 What you need to do, you need to actually pretty much
+02:46 in square brackets, you need to choose the key, alright?
+02:52 In this instance the key for a list of people is going
+02:55 to be Julian, and we're going to assign that key a value
+03:00 of 30.
+03:01 So the dictionary people, we're creating an entry,
+03:06 a key, of Julian, and we're assigning it the value of 30.
+03:11 We list out people, there we go, we see that exact same
+03:18 formatted dictionary as we did when we explicitly
+03:22 defined it up here, okay?
+03:24 We can add to it again.
+03:26 We can go, people, Bob, and we can assign Bob
+03:34 the age this time of 103.
+03:39 And there we go.
+03:42 So same thing, right?
+03:45 This time we just populated an empty dictionary.
+03:48 But either way it all comes out the same.
+03:51 Now the way you interact with the dictionaries is a bit
+03:53 different to lists.
+03:56 The way we view just the keys, just these keys here,
+04:01 forget the values for a minute,
+04:02 is we use keys.
+04:05 So we can go pybites.keys, and there are our
+04:10 dictionary keys.
+04:12 Julian, Bob, Mike.
+04:14 The same things for the values.
+04:16 pybites.values, and there we go, the three values.
+04:20 30, 33, and 33.
+04:23 Now what if we wanted to see all of this?
+04:26 Now this is all well and good because we're in the shell.
+04:29 But if this was an actual application you can't just
+04:31 type in the name of your dictionary and expect it
+04:34 to print out, right?
+04:35 This is just all standard out through the shell.
+04:39 So the way we would actually print out, first of all,
+04:42 the way we actually see each pair of dictionary items
+04:48 is to use items().
+04:53 We can see Julian 30, Bob 33, Mike 33.
+04:59 These are our three different dictionary key value
+05:04 combinations or items.
+05:06 Now how do we pass over all of that?
+05:08 Well we do it just how we would with a normal list.
+05:11 We can go for keys in pybites.keys, print keys.
+05:22 There we go.
+05:24 We can do for values in PieBites.values, print values.
+05:33 Okay?
+05:36 This is all very similar, you can see the similarities
+05:39 between dictionaries and lists.
+05:42 But last but not least, what if we want to print out
+05:45 all of this information, not just keys, not just values,
+05:48 without having to run two separate for loops, which would
+05:53 be quite un-pythonic right?
+05:55 Well, God love Python, we can go for keys values in
+06:02 pybites.items(), so for keys and values in PieBites.items
+06:10 Print keys, and remember we have to do the string thing
+06:13 here, values, and there we go.
+06:18 Julian 30, Bob 33, Mike 33.
+06:22 Now obviously that is not very pleasant on the eye,
+06:25 so we can do our standard string formatting.
+06:28 So we can go, for keys, values in pybites.items(),
+06:35 print, string is digit years of age, keys, values, okay?
+06:53 And there we go. We can see Julian is 30 years of age,
+06:56 Bob is 33 years of age, Mike is 33 years of age.
+07:00 And that's dictionaries.
+07:01 It's actually that simple to iterate over dictionary,
+07:04 and that's pretty much it.
+07:06 You've got your key, and your value.
+07:09 And you just do it over and over again,
+07:12 just like a list.
+07:14 So enjoy your dictionaries, and get used to them,
+07:17 because you'll be playing with them.

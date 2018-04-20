@@ -1,0 +1,147 @@
+00:00 We saw this parse row is where we're spending most
+00:02 of the time in the code that we wrote,
+00:04 that we're actually interacting with.
+00:07 We're also, just for completeness' sake,
+00:09 taking every element of this file and converting it,
+00:13 and storing it and working with it.
+00:14 But what we've learned is that our program actually
+00:16 only uses four fields; three of which we're converting.
+00:20 Why do we need to convert all the others, right?
+00:22 If we're never going to look at the average min temperature,
+00:25 why do we need to convert it?
+00:27 Now, this is not something you want to start with,
+00:29 'cause this could cause all sorts of problems,
+00:31 but once you know the data you're working with
+00:33 and how you're going to use it,
+00:35 you probably want to come along here and say,
+00:36 well, actual mean temp, don't use that,
+00:39 actual min and max, those we are,
+00:41 these averages are out, these records are out,
+00:45 we're down to average precipitation, and those.
+00:49 So now we're down to just these three.
+00:51 So this is going to be faster.
+00:54 However, we're still creating this record
+00:55 which stores 12 values,
+00:57 and we're sort of passing them all along here.
+00:59 Let's do a little bit better.
+01:03 What do we want, we want a date, actual, not actual mean,
+01:06 so we can not even put them into our data structure.
+01:09 Take out actual mean, put our min, our max,
+01:12 a bunch of average stuff we're not using,
+01:14 actual precipitation,
+01:18 and that's it.
+01:19 So we have one, two, three, four, those are our four values.
+01:22 Now this trick is not going to work anymore
+01:24 because there's more data in the dictionary than it accepts.
+01:27 Okay, so we got to go back
+01:28 and do this a little more manual now.
+01:31 So we're going to say row.get date,
+01:34 and we'll just do this for each one.
+01:38 Okay.
+01:39 A little bit more verbose,
+01:40 but we're only storing the four values,
+01:42 we're only getting them from the dictionary,
+01:44 initializing them, all that kind of stuff.
+01:47 Now let's just look really quickly here
+01:49 at how long we spend on these two.
+01:50 I'll put these into a comment right up here.
+01:57 Alright let's run it and see if that makes any difference.
+02:00 It's so fast, really, that you probably
+02:02 wouldn't actually visually tell but like I said,
+02:05 if you can take it down from 300,
+02:07 what are we looking at here?
+02:09 We're looking at quite a bit here, 750,
+02:13 this is the one that probably matters.
+02:15 350 milliseconds, that is a lot of time.
+02:17 What if it's something interactive in real time,
+02:19 like a webapp for example.
+02:21 Let's try again.
+02:23 Now look at this.
+02:24 This part actually stepped up and got in the way of this.
+02:27 It used to be those were next to each other, and why?
+02:30 'Cause that got way, way better.
+02:33 So let's go down here and print this out.
+02:35 I'm going to delete this CSV row,
+02:37 there's not a lot we can do about that for the moment.
+02:41 Look at this; 350 to 159.
+02:45 That's more than 50% reduction,
+02:48 just by looking at the way we're creating
+02:50 or reading our data, and working like this, right?
+02:53 We don't need to load and parse that other data.
+02:56 We could actually go and simplify our original data source,
+02:58 really, but that probably doesn't make a lot of sense.
+03:02 This is probably the way to do it.
+03:04 So we used profiling to say,
+03:06 well, this function is where we're spending so much time.
+03:10 If we look at the other ones,
+03:11 look at the part where our code is running,
+03:13 this next and sorted, like this stuff we don't control,
+03:16 these are the other important ones,
+03:18 but they're like 20 milliseconds for 100,
+03:22 so that's one fifth of one millisecond?
+03:28 .21?
+03:29 .21 milliseconds?
+03:31 That's fast enough, alright?
+03:32 We probably just don't care to optimize that any faster,
+03:36 and you know, we look at that code,
+03:41 we look at that code down here, like,
+03:44 you could try some stuff to try to make it faster, right,
+03:46 we could maybe store our data re-sorted
+03:50 based on some condition, right,
+03:52 like we pre-sort this on the max,
+03:55 maybe it's less sorting for the min,
+03:57 you know certainly this one would be crazy fast,
+04:01 how much better can we make it, right?
+04:03 If it's .2 milliseconds and we make it .18 milliseconds,
+04:06 no one's going to know.
+04:07 Especially when you look at the fact that there's
+04:10 a total of 600 milliseconds in this whole experience,
+04:15 so really, this is probably as good as it's going to get.
+04:19 The other thing we can do, the final thing we can do,
+04:21 and just notice that we're still spending
+04:23 a very large portion,
+04:26 five sixths out of that, whatever that is,
+04:29 a very large portion of our time in this init function.
+04:32 Because we happen to be calling it over and over.
+04:35 So now that we've got it's individual run
+04:37 at about as good as we're going to get,
+04:39 let's just add one more thing.
+04:45 Super simple, like, hey, have you already initialized it?
+04:47 We're just going to keep the data,
+04:48 it's unlikely to have changed since then.
+04:51 Now we run it, and we get different answers still.
+04:54 It's now down to these three that are the actual slow ones.
+04:57 But like I said,
+04:58 I don't think we can optimize that any faster.
+05:03 Here's the research.init, and that's six milliseconds.
+05:08 I don't think we can do better than that.
+05:09 We're loading a pretty large text file and parsing it;
+05:12 six milliseconds, we're going to be happy with that.
+05:14 So you can see how we went through this process
+05:16 of iteration with profiling,
+05:18 to actually come to make our code much, much faster.
+05:22 It used to take almost half a second,
+05:24 now it takes 55 milliseconds.
+05:27 And that's actually to call it,
+05:29 how many times did we call it, 100 times,
+05:31 is that what I said?
+05:33 Yeah, so in the end we're sort of running the whole program
+05:35 100 times and we've got it down to 55 milliseconds.
+05:39 Less than one millisecond to run that whole analysis;
+05:43 load that file, do that, and so on.
+05:45 That's not quite right because
+05:46 we're only technically loading parts of the file once,
+05:48 and caching that, right,
+05:51 but you can see how we go through this process
+05:52 to really look at where our code is slow,
+05:55 think about why it's slow,
+05:57 and whether or not we can change it.
+05:59 Sometimes we could, parse row,
+06:01 other times, hot days, cold days, wet days,
+06:03 we're kind of there, like,
+06:04 there's not a whole lot more we can do.
+06:06 If we want that to be faster,
+06:07 maybe we have to pre-compute those and store them, like,
+06:11 basically cache the result of that cold days list and so on.
+06:15 But that's, that adds a bunch of complexity
+06:17 and it's just not worth it here.

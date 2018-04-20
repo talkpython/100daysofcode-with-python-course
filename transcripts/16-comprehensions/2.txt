@@ -1,0 +1,68 @@
+00:00 List comprehensions and generators.
+00:02 Let's import the modules we are going to use.
+00:09 Let's start making a list of names.
+00:15 We've got a bunch of names
+00:17 and let's loop over the names.
+00:20 for name in names
+00:24 and we're going to title case each name.
+00:28 There you go.
+00:30 Then let's do something more interesting
+00:32 involving an if statement.
+00:34 So, let's keep the names that start
+00:37 with the first half of the alphabet.
+00:39 An easy way to do that is to use the strings module,
+00:42 which has helpers like ascii.lowercase.
+00:51 So here, I used the strings ascii.lowercase,
+00:55 I converted it into a list,
+00:57 and took a slice of the first 13 elements.
+01:01 Great, and the purpose, by the way, of this exercise
+01:04 is to first do a classic for loop and if statement
+01:08 to later refactor that into a list comprehension.
+01:20 Right, so, Mike, Bob, Julian, Guitto,
+01:24 but this seems a bit for both, right?
+01:26 We looked through the names,
+01:28 we do an if statement,
+01:30 and it takes like 5 lines of code.
+01:33 Before we move on, I have to warn you though,
+01:35 if you see the elegance of list comprehensions,
+01:37 there is no way back
+01:38 and you want to use them everywhere,
+01:40 and that's awesome because it reads like English
+01:42 and I don't know any reason why not to use them.
+01:46 Let's write a simple list comprehension
+01:48 to do the same as I did here.
+01:51 The very basic level of this comprehension
+01:54 uses for inside the square brackets,
+01:56 so for name in names.
+01:59 And before the for, just returns the name.
+02:02 So, this would just bounce the same list we had before
+02:05 and the nice thing then,
+02:07 is that you can add an if statement after the list.
+02:10 So here, first character is in
+02:15 first half of the alphabet,
+02:18 that's got to stay
+02:20 and a result, I want title cased,
+02:22 so I can do that here,
+02:24 and now we get the same result.
+02:26 So, if I call this new names2,
+02:30 I can say new_names asserted,
+02:34 new_names equals new_names2,
+02:38 and they're exactly the same thing.
+02:41 So look at that, five lines of code, one line of code,
+02:44 and they read pretty well.
+02:45 You just have to read from the inside out.
+02:48 Have a loop over the names.
+02:49 For every loop, I check this if statement
+02:53 and I return the name title case,
+02:57 if that if statement is true.
+02:59 That's all there is to the basics of list comprehensions.
+03:02 You can nest them,
+03:04 but they might become unreadable,
+03:06 so I would definitely stay at this level.
+03:08 The other way to write this
+03:10 is to use map and filter,
+03:12 like the functional programming construction Python,
+03:16 and those work equally as well.
+03:18 Although, I find this more readable,
+03:20 this more like English.
+03:22 So, let's move on to another example.

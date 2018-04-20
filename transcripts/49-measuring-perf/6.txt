@@ -1,0 +1,87 @@
+00:00 Now we're turning off the profile
+00:01 until we get to our code.
+00:03 Run this little bit and then we disable it again.
+00:05 Right up here we have profile enable
+00:07 and we have profile disable.
+00:08 But there's still a lot of reporting stuff
+00:10 and do you really care how fast the thing prints out?
+00:12 Like, it's print to the console,
+00:14 you really can't control that.
+00:16 That's not the essence.
+00:17 So let's just reorganize this code,
+00:19 refactor it so that we can group the analytics
+00:23 and the data bits of it and then we'll move on.
+00:27 Okay, so let's come over here and we'll say
+00:29 we'll get those days and get those days and those days.
+00:34 Now clearly, there's a problem here.
+00:36 We can't just keep calling the days like we were.
+00:38 So, we've have to call this hot days,
+00:40 cold days, and wet days.
+00:42 And we got to replace in that here,
+00:44 hot days, cold days, and wet days.
+00:49 Okay, so now we can take this profile bit
+00:52 and disable it way sooner, like this.
+00:55 So here we can do a little bit of work
+00:58 in this block of code here and only profile that.
+01:01 Let's run this one more time.
+01:04 All right now, how things are looking.
+01:06 Okay, that looks even a little bit cleaner.
+01:08 They didn't change the numbers for this obviously
+01:10 because that's outside of what we were doing,
+01:12 and it wouldn't change this either, right.
+01:15 But it does clean things up just a little bit.
+01:17 Let's look at what is the worst case scenario here.
+01:21 Well there's init right here,
+01:24 this is obviously the worst function.
+01:25 It's at the top. But let's go look at it.
+01:29 It's doing this line right here.
+01:33 Chances are we can't really do any better than that.
+01:35 It turns out that we can call it less often,
+01:39 that's one thing we could try to do
+01:41 is check and see if it's already been initialized,
+01:43 then don't do it, that's actually a massive,
+01:45 massive performance gain, but let's make
+01:46 what we already have faster before we add that.
+01:50 Over here, we're basically parsing the row
+01:53 and we're pinning the data.
+01:54 Remember parsing row down here actually
+01:56 does all sorts of conversions and then
+01:58 assigns it to this record and so on.
+02:02 So, there's this init, but really the thing that is
+02:04 the problem here, this parse row
+02:07 that we're calling 36,135 times.
+02:10 That is a ton of times that we're calling this.
+02:13 Can we make it faster? Answer is, probably, yes, yes we can.
+02:19 How can we do that?
+02:21 One thing we could realize is, it's really
+02:24 this all this conversion these are taking strings
+02:28 and converting them to integers,
+02:30 the dictionary read and write is like crazy fast.
+02:33 So, you could look at that and figure this out,
+02:36 but it, that's not really the problem, the problem is the
+02:40 string conversion to numbers ints and floats.
+02:43 And then also this, we're allocating this record
+02:46 and we're signing well over however elements
+02:49 there are in this named tuple and we're giving it back.
+02:52 What can we do here to make this faster?
+02:55 Well it turns out, if you look at the way our program works,
+02:59 first up here that we're working
+03:02 with actual max temperature, actual precipitaion,
+03:05 and over in the programming we're working
+03:07 with actual min temp and we should have been sorting by min
+03:13 temp here as well.
+03:16 Okay, so minor little bug, but really
+03:18 highs on a cold day are pretty close to the lows as well.
+03:21 Alright so we're working with these three values,
+03:23 max temp, min temp, and precipitation.
+03:26 If you look at the little reports we're running
+03:28 we're also working with date, nothing else.
+03:32 However, just for completeness sake,
+03:34 we said we're going to convert everything,
+03:36 we're going to convert the mean temperature,
+03:38 the record temperature, the average temperature,
+03:40 you name it we're converting that.
+03:42 Well if we know our program isn't actually
+03:45 going to touch those pieces of data let's not do that.
+03:48 So let's see what we can do about improving performance
+03:50 by reducing some of the data we're working with here.

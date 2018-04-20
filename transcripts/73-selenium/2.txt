@@ -1,0 +1,46 @@
+00:00 Alright, o get started,
+00:02 you need to install Selenium.
+00:04 So I suggest you make a virtual environment.
+00:06 So I made a selenium subdirectory.
+00:09 And I'm using Anaconda.
+00:11 So I have a special alias to do this.
+00:13 If you're on a typical Python 3 installation,
+00:16 you probably use something like this.
+00:18 Which is fine, right?
+00:19 It's not working for me.
+00:21 So, I'm using...
+00:26 all right.
+00:27 That makes my venv,
+00:28 and let's enable it.
+00:30 I have an alias for that.
+00:33 Because I'm working with
+00:34 virtual environments all the time.
+00:35 And deactivate is under tabs.
+00:39 and activate is not.
+00:45 So, that that,
+00:48 There's nothing installed.
+00:49 So now I'm doing pip install selenium.
+00:55 And that should be all we need.
+01:00 No dependencies, just a clean install one package.
+01:03 All right,
+01:04 one other thing though is,
+01:06 before I was using PhantomJS.
+01:08 But using Selenium again after awhile,
+01:11 I got this Selenium support for
+01:13 PhantomJS has been deprecated error.
+01:16 So I downloaded this Chrome driver.
+01:19 And the only thing you have to do
+01:20 is put that in your path.
+01:23 So here you download the binary.
+01:28 So with that driver downloaded,
+01:30 I can extract that somewhere that's under my path.
+01:38 And if that directory's not in your path,
+01:40 you can put it there by doing in your batch rc
+01:44 just for now here on the command line.
+01:46 export path = whatever is in path already.
+01:50 Appending home/bin.
+01:52 Now I'll do a which Chrome driver,
+01:56 you see it's in my path.
+01:58 That's all you need so that Selenium can work
+02:00 with a headless browser.
+02:02 And with that, you should be all set up.

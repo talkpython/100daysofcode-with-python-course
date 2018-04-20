@@ -1,0 +1,110 @@
+00:00 Okay are we ready to start adding
+00:01 logging to our application?
+00:02 There's two steps.
+00:03 One, we have to globally configure
+00:05 how we want to log things.
+00:08 Do we want our log messages to go to just standard out,
+00:11 so the terminal or console?
+00:12 Do we want them to go to a file,
+00:13 if it's a file do you want that file based on a date
+00:16 and roll as the days change,
+00:18 or do you want that to just be one big file?
+00:20 Or do you want to send that somewhere crazy, like,
+00:23 email or desktop notifications, as you saw is possible.
+00:27 So we're going to configure logging
+00:29 and then we're just going to add the log actions
+00:31 as a separate way.
+00:33 That actually turned out to be super easy;
+00:34 the only thing that's a little bit complicated
+00:36 is setting this up.
+00:37 So let's write a function over here
+00:38 that will let us do that.
+00:42 So we're going to pass in a filename,
+00:43 and it can be ,
+00:46 let's give it a default value of None.
+00:48 It can mean nothing, or we could pass in a filename.
+00:51 So what we're going to do, is we're going to go over here
+00:54 and we're going to actually set the level first.
+00:56 So here's how this works;
+00:57 we're going to say our current application is operating
+00:59 at level of notice and above.
+01:02 So there's like a hierarchy of levels in the logging,
+01:06 there's like, trace, which is just super-verbose stuff,
+01:10 there's error, which you almost never want to skip,
+01:13 but maybe under normal operations
+01:14 you don't want to show the trace.
+01:16 Only the notices and the warnings and the errors.
+01:18 So we're going to set this here.
+01:20 So we're going to use logbook,
+01:21 which needs to be imported at the top,
+01:23 which we've just had PyCharm do,
+01:25 and then we can come over here and let's say,
+01:27 let's set it to 'trace' for just a minute.
+01:29 So we have it absolutely verbose,
+01:30 then we'll dial it back when we're done.
+01:33 Alright, so we're going to choose a level,
+01:35 and then based on whether we have a filename or not,
+01:37 we're going to assume the fact that there's no filename,
+01:40 or one was not specified,
+01:42 that that just means 'send it to the console'.
+01:44 But if there is a filename, we want to do that.
+01:46 So we'll say this; if filename, we want to put it in the file.
+01:49 So we'll say; logbook, now there's
+01:51 all these little handlers in here.
+01:54 There's a file handler, a 'fingers crossed' handler,
+01:56 a Gmail handler, hashing, mixing, mail, etc. etc.
+02:02 The one that we want, is we want a filename
+02:04 that is based on the days.
+02:05 So it has the date involved in the filename.
+02:08 When the date changes, it automatically creates a new file,
+02:11 and goes from there.
+02:12 So that's going to be real nice.
+02:13 So to accomplish that, what we need to use
+02:15 is a time-rotating file handler.
+02:19 And this takes a couple of things.
+02:21 We have to obviously give it the filename,
+02:23 we're going to set the level, be the level,
+02:25 and then we want to set the date format so it knows
+02:28 how to roll that out, and it has a default there,
+02:32 and actually that default is totally fine,
+02:33 so we're going to leave this off but
+02:35 if you want to change that it's year, month, day,
+02:38 is how it's going to print that out.
+02:40 Okay, so we'll go like this,
+02:42 and that's going to create the handler
+02:44 and then we would just say, 'push to application'.
+02:48 That means every action we do with logging
+02:50 is going to use this underlying system here,
+02:53 so if that's not the case,
+02:55 we're going to say, 'logbook not stream handler',
+02:59 we'll give it a stream, which we need to import this at the top,
+03:02 'standard out'.
+03:04 That's just like what happens when you say 'print'.
+03:07 And the level is equal to level again,
+03:09 and in this case we're going to push that to the application.
+03:14 That's it. Long as we call this function, things will be initialized.
+03:17 But before we get on, let's make our first log message
+03:20 to be something that says,
+03:22 here's how we've configured logging.
+03:24 So here's a little message that we might have,
+03:27 we'll say, great, the logging is initialized
+03:29 and the level is trace, or something like that,
+03:33 and the mode is either standard out mode or file mode,
+03:36 and we can create one of these logs
+03:42 and we'll have this little startup logger,
+03:44 and then we can just say 'logger.'
+03:46 let's say it's going to be a notice.
+03:49 Okay, so this should be our very first message,
+03:52 and let's just come down here and say we're going,
+03:54 before we even call main we're going to say,
+03:55 'init logging but no filename'.
+03:58 Let's run this and see that we've got everything working.
+04:02 Woo-hoo, look at that!
+04:04 We have our time, we have the level, 'notice',
+04:10 this comes from the log category, it's the start-up log,
+04:14 this is the message that we actually wrote.
+04:17 Logging initialized, level is nine,
+04:19 which is a stand-in for 'trace',
+04:22 and the mode is standard out,
+04:23 that's why you see it here and not in a file,
+04:25 and of course our app still works.

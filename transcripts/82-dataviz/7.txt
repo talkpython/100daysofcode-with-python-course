@@ -1,0 +1,34 @@
+00:01 And, a quick video on some extra pointers
+00:04 Plotly is cool but there are others.
+00:07 Matplotlib probably the best known.
+00:09 You can do awesome stuff with that as well
+00:12 and we have a notebook here integrated on our blog
+00:15 as showing some more examples.
+00:23 We like Bokeh, and we even had a code challenge
+00:27 and there were some submissions
+00:30 historical exchange rates for BitCoin
+00:32 using Bokeh, integrated in Flask.
+00:35 By the way that was the challenge,
+00:36 to integrate it into Flask.
+00:38 Weather data, look at how nice that looks.
+00:42 Life expectancies in countries, very cool.
+00:45 Versus Australia, so that's Bokeh.
+00:48 And actually the Bokeh side is very well,
+00:51 I mean look at this, this is awesome, simple
+00:54 text is up high.
+00:56 Look at these visualizations that's amazing.
+00:59 Bokeh has really great documentation
+01:02 and user guide so definitely check it out.
+01:05 Then we have Seaborn as well, and we had
+01:07 a guest post here looking at Marvel data
+01:10 which was a code challenge we did
+01:12 and this uses Panda in combination with Seaborn
+01:16 and again this is a very nice library.
+01:20 Look at these visualizations, very nice.
+01:25 And one other example, this was one I did.
+01:28 Analyzing Brexit data with pandas uses matplotlib
+01:32 it integrates very nicely with pandas
+01:34 so it's a very powerful combination.
+01:38 One cool thing is scatter plots on demographics.
+01:47 And that hopefully gives you some extra inspiration
+01:50 to start using data visualizations yourself.

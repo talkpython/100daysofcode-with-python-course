@@ -1,0 +1,110 @@
+00:00 Alright, we are down to the big method,
+00:03 this play_round.
+00:04 It turns out this one is fairly complicated,
+00:06 but its important right?
+00:07 This is the way that you play a round in the game.
+00:10 Okay I'm going to put some code here.
+00:12 Its not going to be quite complete at first.
+00:14 So, here we're going to get this thing called Game Round.
+00:18 I've updated this Game Class, to have this game filed.
+00:22 To have this Game Round,
+00:23 and it basically stores all the information about who
+00:26 rolled what, whether that roll is winning, or losing,
+00:31 and who won that Round, and things like that.
+00:33 It'll record it in the database,
+00:35 and I'm not really going to go into it because it's
+00:38 exactly the same logic as we had before but its just
+00:40 kind of rewritten.
+00:42 Okay, so we're going to use that here.
+00:45 And we also have to do some validation.
+00:46 Remember, up here, in our create_user.
+00:50 We have ff not flask.json give the user and someone...
+00:54 Turns out this is way more complicated.
+00:56 So let me write one more method that will do this.
+00:59 We'll just put that at the bottom here.
+01:00 Look at all this validation.
+01:01 Okay, so, we're going to come in and validate that we have a
+01:04 JSON body.
+01:05 That the game id was passed.
+01:07 That the user was passed.
+01:09 That if we try to get the user from the database the user exists
+01:12 That a rule was passed.
+01:13 That if we try to get the rule from the database by name,
+01:15 the rule exists.
+01:17 The game is not already over, etc...
+01:19 We could just validate that and then re-ask those questions
+01:22 above, but when you're doing web maps and you're doing
+01:25 these data access things, if you already have a hold of
+01:27 the roll and the user, just give them back.
+01:30 What we're going to do is we're going to get those three pieces
+01:32 as valid data or we'll have an exception and we'll just
+01:35 return a response again, saying what went wrong.
+01:39 And then we're going to jsonify the roll, the computer roll,
+01:43 the player, the opponent, outcome, all the stuff we need to
+01:45 basically keep track of the client and at least report to
+01:48 the client what happened there.
+01:50 Looks like that reload worked so let's go and see if we
+01:54 can Play roll.
+01:55 Lets verify that we have Michael.
+01:58 Michael is there so Michael can play a game.
+02:02 Lets go here and we can create another new game.
+02:04 Turns out that it doesn't matter what we actually use there.
+02:07 Let's look at the body.
+02:09 We're going to pass in.
+02:10 Some game id.
+02:12 Doesn't have to exist it turns out.
+02:14 Michael, and a Roll.
+02:16 And let's see what we get.
+02:19 Whoa, it worked, look at that.
+02:20 We got a 200, response is JSON, very good.
+02:24 So, what did we get down here.
+02:27 Computer rolled water.
+02:29 Is it the Final Round? No.
+02:30 The opponent is the computer.
+02:32 It's kind of not the best name, is it?
+02:33 But the opponent is the computer,
+02:35 the player is Michael.
+02:36 We have our IDs.
+02:37 Michael rolled rock.
+02:39 Computer rolled water.
+02:41 This is the First Round and the outcome is,
+02:43 The Player loses.
+02:44 Ugh, well, I'm not rolling rock anymore.
+02:47 I'm going to roll human.
+02:49 Let's try again. This time, they rolled scissors,
+02:53 I rolled human, and I win.
+02:55 Awesome. 2 for 2.
+02:57 Let me just roll human a bunch of times.
+02:59 And one of these times, its going to be the Final Round.
+03:03 Final Round is True,
+03:05 so if we go over here and ask for the status of this game,
+03:08 now we can see if this thing actually works.
+03:10 Oh, look, oh no, not quite the same.
+03:12 Let's do that.
+03:13 Boom, look at that, here's our status.
+03:15 It's over, the moves are, you know,
+03:18 Michael played rock, Computer played water,
+03:20 Michael played human, Computer played scissors,
+03:23 and then Michael just went human on it all the way the end.
+03:27 Computer lost by trying to throw the sponge at us.
+03:29 Okay.
+03:30 Here's the players that were participating,
+03:32 and the winner of this whole outcome is Michael.
+03:35 How awesome is that?
+03:37 And let's just do one more thing.
+03:38 Let's do our error handling here.
+03:40 Check our error handling.
+03:42 What happens if we try to play a Round that's finished?
+03:45 Remember there was an exception?
+03:46 Boom, Invalid Request.
+03:48 The game is already over, 400 bad requests.
+03:51 Maybe it should be Invalid Operation? I don't know.
+03:53 There's probably something better than bad requests.
+03:54 But 404 is not it so we're going to go with 400 just for the
+03:57 sake of time.
+03:58 That probably felt like a lot, but the entire server is written
+04:02 That's it, we're done.
+04:03 We have play_round, top_scores, game_status, all_rolls,
+04:07 now it's just a matter of literally going and writing
+04:10 the client that's going to consume it.
+04:12 And that turns out to be quite easy.

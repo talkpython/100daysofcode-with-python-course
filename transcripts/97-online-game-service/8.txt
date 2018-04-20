@@ -1,0 +1,119 @@
+00:00 Now, we're going to do something that makes
+00:02 my skin crawl a little bit.
+00:03 We're going to write a ton of code into this one,
+00:06 ginormous, what's going to become
+00:07 a ginormous single file web app, yuk.
+00:11 Afterwards, I'll refactor it in a way
+00:14 that I think is much cleaner and simpler.
+00:17 If you don't like the refactored one I do,
+00:19 you can just stop with what we're going to do
+00:21 this time around and leave it organized this way.
+00:23 I think you'll find it to be a lot nicer.
+00:25 Okay, so what is the goal of this particular video?
+00:29 We're going to go in here, and we're going to define
+00:32 7 API methods, the 7 that we talked about
+00:35 at the beginning, and recall down here,
+00:37 we saw how to do this.
+00:38 We have some kind of route, some kind of HTTP verb.
+00:43 These are very important in RESTful services.
+00:45 We get the data; this, we're going to get
+00:47 from the database in the end.
+00:49 And, we're going to return just the JSON response
+00:54 of that dictionary.
+00:57 So, just to keep things movin' along,
+00:59 I'm going to go down here, and I'm going to,
+01:01 let's put these at the very bottom.
+01:05 I'm going to paste in some stuff, and we'll talk about it.
+01:10 These are not implementations.
+01:12 These are just getting started.
+01:13 So, the first one is going to be: find a particular user.
+01:17 So, we want to have api/game/users.
+01:21 And then, you'll put the name here.
+01:23 So, api/game/users/{name}, /computer /jeff or /jennifer.
+01:29 You say, whatever you want, there at the end,
+01:30 and that becomes this argument, right here.
+01:34 So, let's just do something like: return would find,
+01:40 just to make sure everything's working.
+01:42 We'll see.
+01:44 So, we still got to put the details of what that means.
+01:46 It turns out this one's quite simple.
+01:48 Some are really easy, some, not so much.
+01:50 So, what is the next one?
+01:53 So, down here, we're going to create a user.
+01:56 And, we're going to do an HTTP PUT to the user's collection.
+02:00 Why?
+02:01 Well, there's only two reasonable options, here.
+02:03 GET, get is out.
+02:05 Delete is obviously out.
+02:06 PATCH, obviously, they're out.
+02:07 But, POST or PUT, and if you think you can do the operation
+02:12 again and again and it shouldn't affect the state
+02:14 of the system, well then,
+02:15 PUT is probably what you want to do
+02:17 if you know where it goes.
+02:18 So, it's kind of, we're creating the /user,
+02:21 whatever we paste in here.
+02:23 So, this is going to create a user,
+02:24 and it's going to be interesting.
+02:25 I'll just say, we'd create_user.
+02:26 It's going to be interesting how we get to that data,
+02:29 and that's not too hard.
+02:32 Next, we're going to create a new game.
+02:37 So, over here, we have game.
+02:38 And then, you're going to just do a POST to game.
+02:40 You don't know where the ID or the link
+02:43 of that game is going to go.
+02:44 So, we're using POST as opposed to here,
+02:47 we know the name of the user we're creating,
+02:48 which drives the URL.
+02:49 That's the reason PUT.
+02:50 You don't have to be this nuanced with the rest,
+02:52 but this is the way I'm doin' it.
+02:55 Next one up, we're just going to be able to get all the rules.
+02:57 Remember, we want to be able to change the rules,
+02:59 potentially, in the server and have all the clients
+03:01 immediately adapt.
+03:03 And, this is a read operation, so we're going to do a GET,
+03:06 very, very straightforward.
+03:08 We'll implement that momentarily.
+03:11 Next step, we want to get the game status.
+03:13 This is a read operation, so it's GET.
+03:15 We have api/game, and then here, in this part,
+03:18 we're going to do the game ID.
+03:20 So, API/gameS223/status.
+03:25 And, that's going to be passed in here,
+03:27 and then we'll just say, almost there, with our methods.
+03:32 So, the next thing we want to do is just get the top scores.
+03:34 Again, this is a read operation.
+03:36 So, we'll just return.
+03:39 And finally, comes our most complicated
+03:41 but also most important method.
+03:44 Those often go together, don't they?
+03:45 Called play_round.
+03:48 And, because this is modifying, it's doing a POST.
+03:51 That's not where it goes, so this one is,
+03:53 it's ready to POST.
+03:55 Okay, so we have all of these methods, here,
+03:57 if I can get my little green helper thing
+03:59 to get out of the way.
+04:00 You notice that somewhere along the way,
+04:03 it was detecting changes, and it said,
+04:05 "A view mapping over ID.
+04:06 "Existing end point: find_user."
+04:11 That just happened 'cause I duplicated something
+04:13 before I typed it in.
+04:14 That happens, sometimes, when Flask gets into bug mode,
+04:16 is you can be messin' with it, and if you put, like,
+04:18 junk and you accidentally save it, it tries to reload.
+04:21 But then, it detects some kind of error,
+04:23 and if I actually take that away and save again,
+04:26 it's, the process is gone, got to restart it.
+04:30 Okay, so let's just test one of these:
+04:39 would find user jeff.
+04:40 How cool, huh?
+04:41 And, it's workin' pretty well.
+04:43 This works pretty well because this is a get operation,
+04:45 but how do you test this users by doing a PUT operation
+04:50 in the browser? Now, it's super easy.
+04:51 So, we're going to employ Postman to configure
+04:54 all this stuff for us.

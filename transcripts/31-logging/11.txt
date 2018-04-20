@@ -1,0 +1,32 @@
+00:00 Alright, final day, Day 3, of this block.
+00:03 You're going to use logbook, and you're going to
+00:05 add logging to your application.
+00:07 Now this is an external requirement,
+00:09 so I recommend you have a virtual environment
+00:11 dedicated to this application.
+00:13 Once you have it and you've activated it,
+00:14 you'll pip install logbook to get started right here.
+00:18 And then, you're going to need
+00:20 to do a one time register of the logging,
+00:23 and then you'll be able to use it over and over.
+00:25 So here's the basic steps of how we did it in ours.
+00:28 You could choose other handlers
+00:30 and do other interesting things.
+00:32 The StreamHandler and timed, rotating FileHandler,
+00:35 those are the two that I like, but pick whatever you want.
+00:40 And then once you're ready to log something,
+00:42 you can create this sort of once.
+00:44 You can create as many times as you want, but also can be
+00:45 just queried the NAT level in the application.
+00:48 And then you're going to use it and, say, "log.notice.
+00:51 log.warn, log.critical" and so on.
+00:54 So, take that little bit of information there,
+00:56 and what you planned on logging and tracking
+00:59 the day before, combine them, and make your app
+01:01 production ready with logging.
+01:04 I hope you enjoyed learning about Logbook and logging.
+01:07 Be sure to share what you did with us
+01:09 on Twitter, and hashtag it appropriately.
+01:12 And that's it, you now have this new skill.
+01:14 You can do really cool logging in your application.
+01:17 And it's one of those things that pays off in the end.

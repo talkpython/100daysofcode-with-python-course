@@ -1,0 +1,51 @@
+00:00 So we've seen that we've downloaded the data
+00:02 from our search service and we have created
+00:04 the right URL that works, we already tested that
+00:07 in our browser and printed out the text.
+00:09 So the next thing we need to do is convert
+00:11 the text from JSON format into Python dictionaries.
+00:15 Now we could use the json library in Python
+00:19 but request has a little goody for us here
+00:21 so we can say results equals response.json,
+00:25 that's all we need, it's converted to JSON
+00:27 so we could print out, it's converted to Python
+00:30 dictionary so we could print out the type of results
+00:33 and we could also print out the results themselves
+00:35 so if we do that, notice we get a dictionary and here
+00:38 we have the keyword and then we have the hits,
+00:41 which is a list of objects that have titles.
+00:45 Let's try to print out, let's try to return those
+00:47 and then at the program level, print them out.
+00:50 So, get rid of that and we'll just return
+00:52 results.get hits.
+00:56 Right, we don't care about the extra data,
+00:57 we just want the results.
+00:59 And then over here, we're going to get those results back
+01:03 and we can say, for are in results print,
+01:07 let's just print out the title.
+01:09 Title is, let's, keep going with the f-strings, huh?
+01:15 Say are .get, now notice we have to treat this
+01:18 as a dictionary, we'll prove this in a moment,
+01:22 like that.
+01:23 Okay, let's run this and see what we get.
+01:27 Man, look at that, title.
+01:29 Blade Runner, Maze Runner, Kite Runner,
+01:31 something else, Logan's Run and so on.
+01:34 Awesome and we could even do a little
+01:36 bit better, we could say, print,
+01:39 there are length of results,
+01:46 movies found, something like that.
+01:50 There are six movies found, okay.
+01:53 Excellent, you might want to do a little test movie,
+01:55 1 movie, 2 movies, 0 movies, things like that
+01:58 but we're going to just keep it always plural here.
+02:01 Alright so this is pretty good but notice this,
+02:04 I'm not loving this at all and the more we have to write
+02:07 out there, we could say something like that and IMDB score,
+02:15 let's say we're going to write
+02:16 that out so we'll say, are .get what,
+02:18 what do you put here?
+02:20 I have no idea.
+02:21 It's completely annoying that you get no help
+02:23 about this, we could go look this up but let's go
+02:26 and actually improve that in the next video.

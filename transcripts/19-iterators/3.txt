@@ -1,0 +1,86 @@
+00:00 All right, so let's discuss what iteration is in Python.
+00:06 When we say something is iterable, we're saying
+00:09 that you're able to iterate over it,
+00:10 you're able to move through it one item by item, okay?
+00:16 So the easiest way to demonstrate this
+00:19 is just to get a simple list.
+00:21 So we'll create a quick list here of numbers.
+00:26 Let's go with the numbers 1 through 10.
+00:31 Okay, oops, what am I doing?
+00:35 1 through 10.
+00:37 And we know that,
+00:41 and we know that number is 10 digits, right?
+00:44 Nice and easy.
+00:45 Now if we're iterating over that,
+00:49 we're going to run a full loop, so for i in numbers,
+00:54 in number, I should say, print i.
+00:59 This is something we've all done before, we all know
+01:02 what this is, but what's happening behind the scenes?
+01:05 Okay, yes we're running a full loop,
+01:07 but really what is that full loop doing
+01:09 to iterate over the number list
+01:14 and give you the numbers?
+01:17 Well, it's actually calling the iter dunder method,
+01:21 or iter protocol, okay?
+01:24 So we can see this if we actually
+01:27 drill in to the number list.
+01:30 We can see that it is actually calling iter
+01:35 or it's capable of being iterated over.
+01:38 Okay, so we've got iter and dur number
+01:43 and we get true, so it's in there.
+01:45 This is an iterable item, we can iterate over it, okay?
+01:50 Now another way to demonstrate
+01:52 an iterable item is to use next.
+01:56 We've all seen next before, or hopefully you've seen next.
+01:59 And what happens is when you run next on an iterator,
+02:03 when it finishes iterating over the sequence,
+02:07 over the list or the string or whatever it happens to be,
+02:10 when it finishes this, it then gives you an error,
+02:15 okay, it gives you a StopIteration error
+02:18 because it's only going to iterate through it
+02:20 up until the end and then it will stop.
+02:24 So now that we know that iter is actually
+02:26 what's being called in the background, we can use that,
+02:30 okay, we can use that with next.
+02:32 Now if you haven't heard of next,
+02:34 next is a little function you can run against an iterator.
+02:41 And what it will do is it will pass over,
+02:44 it will iterate over that iterator,
+02:47 that list or that string or whatever it is,
+02:50 and it will continue through it until it hits the end.
+02:53 When it hits the last item, when it hits the last character,
+02:57 it will actually give you a StopIteration error, okay?
+03:01 So we'll demonstrate that with a string called,
+03:04 let's call it string, okay?
+03:06 So it equals iter, we're actually
+03:09 calling iter now over the word string.
+03:14 Okay, so we know that when you iterate
+03:16 over this word here, over this string,
+03:19 you're going to get the letters one by one, right?
+03:22 So if we call next on that, we'll get the letter S, okay?
+03:29 Now let's copy and paste this a few times,
+03:31 just so we can demonstrate.
+03:34 We get the T, we get the R, I, N, G.
+03:38 But then, when we run it one more time,
+03:42 we get the stop iteration, okay?
+03:45 And that is because we're calling next directly.
+03:51 That's because it's hit the end and it's taken care of.
+03:53 It gets to the end but then it's not going to go any further
+03:57 because it knows it's already finished.
+03:59 Now, when you run a full loop,
+04:01 so for character in string,
+04:07 print character,
+04:09 we get the letters, but we don't get this error,
+04:13 we don't get the StopIteration error,
+04:15 and that's because it's actually built in to the full loop
+04:18 so that it's not going to give you that error.
+04:21 It's expected, okay, so it knows
+04:25 that it's hit the end and it's not going to actually
+04:28 sit there and give you the error.
+04:30 And that's it, that's a basic coverage of iteration.
+04:33 You see it's just going through each object,
+04:36 each item, one by one, to get to the end.
+04:39 Now, there is iter tools, a nice series of functions
+04:44 that are just so cool and make iteration
+04:48 a lot more interesting and a lot easier,
+04:51 so that's what we're going to look at.

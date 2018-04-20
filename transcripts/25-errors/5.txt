@@ -1,0 +1,47 @@
+00:00 Let's quickly review the concepts
+00:01 of try and except blocks in Python.
+00:05 Python's primary error handling style
+00:08 is what's called it's easier to ask
+00:10 for forgiveness than permission.
+00:13 As opposed to, say, C style of look before you leap.
+00:16 In C you check, check, check, check, check,
+00:18 and then you just try to do the thing and hope it works.
+00:21 Typically what happens when it doesn't work
+00:23 is either you get a false sort of return value there
+00:26 or just the program just goes away, it's really bad.
+00:28 Python is a little bit safer in that
+00:30 it's more carefully captures up the errors
+00:33 and converts them to exceptions.
+00:35 So if it's going to do that anyway,
+00:36 let's just try and make it work.
+00:38 And if it doesn't work, well,
+00:39 we'll catch it and deal with it in that case.
+00:40 So it's kind of an optimistic way of handling errors.
+00:44 so what we're going to do is we're
+00:45 going to say try and do all the stuff,
+00:47 and we're going to hope that it all just works
+00:49 and kind of assume that it will just go through that block.
+00:51 But if it doesn't, we're going to
+00:53 drop into one of the specific error handling sections.
+00:56 Here we have two possible errors,
+00:58 really one that we're dealing with,
+00:59 and the rest is kind of a catch all.
+01:01 So we're saying except connection error as CE,
+01:04 and then we're going to deal with that.
+01:06 And in this case we might need to look inside the error
+01:09 to see, well, was there a DNS problem,
+01:11 is there a network problem,
+01:13 did it not respond, things like that,
+01:15 did we get a 500 back from the server, all kinds of things.
+01:18 So this connection error,
+01:19 we're going to catch and deal with that
+01:21 and then we do this more general except block
+01:24 where here's something we maybe didn't think of,
+01:26 we're going to catch that and at
+01:27 least try to somewhat not crash.
+01:30 As we talked about before, the order matters.
+01:31 Most specific goes first, most general last.
+01:34 If you get that order wrong,
+01:35 you'll never get to your specific errors.
+01:37 So most specific, most general.
+01:40 This is error handling in Python.

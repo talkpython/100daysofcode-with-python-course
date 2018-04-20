@@ -1,0 +1,14 @@
+00:00 First we want to make an app using the Twitter API,
+00:04 so head over to apps.twitter.com/app/new,
+00:09 I'm going to call it Twitter API Demo
+00:13 to work on the small Tweepy Python code example.
+00:17 We can just put in our website and callback
+00:19 URL's not needed.
+00:21 After I agree with the terms and create your
+00:25 Twitter application.
+00:26 With the app created you'll want to head over
+00:28 to keys and access tokens,
+00:31 and note down the consumer key, consumer secret,
+00:35 and your access token, and secret.
+00:37 And we will need to export those as variables,
+00:40 which I will show you in the next video.

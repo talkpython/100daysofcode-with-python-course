@@ -1,0 +1,56 @@
+00:00 A second data type I want to show you,
+00:02 today about, is defaultdict.
+00:05 And it's very useful when you're building up a nested data
+00:09 structure and you have to account for keys not being there.
+00:14 Now first of all, what's the problem with keys?
+00:16 Let's define a very simple dictionary,
+00:20 just one user and role,
+00:22 and let's do a lookup by key.
+00:24 So...
+00:26 Bob is there.
+00:28 Julien is...
+00:30 Oops, not there and that gives you a key error.
+00:33 There's a way around it by using users get.
+00:38 Oop, get Bob..
+00:41 and users get...
+00:44 Julien...
+00:46 which returns none.
+00:49 But how do you deal with that
+00:51 when you're building up a collection?
+00:53 Now let's get some data.
+00:54 I'm going to define a list of tuples.
+00:57 A challenge is done.
+01:00 And it has...
+01:03 tuples of name,
+01:06 and a number of the challenge that has been completed.
+01:12 Let me type that out.
+01:17 So the goal is to convert this into a dictionary.
+01:20 Let me show you what happens if I use a normal dictionary.
+01:25 For name challenge in...
+01:28 challenges done.
+01:32 Challenges dictionary...
+01:34 name append...
+01:38 challenge.
+01:40 Oops, it says Mike is not in the dictionary.
+01:43 In the first round, he is indeed not in the dictionary.
+01:48 So here is where is you really want to use a defaultdict.
+01:52 So to define one, challenges...
+01:57 Equals defaultdict, and you need to define
+02:01 what type the values hold.
+02:02 So in this case, the key is the user
+02:06 and the value is a list of challenge numbers.
+02:10 So I put list here and the rest is kind of the same.
+02:13 For name challenge in challenges done.
+02:19 Challenges...
+02:22 Name...
+02:23 append...
+02:25 challenge.
+02:27 I'm almost sure this works.
+02:29 So, yes, we have a defaultdict which holds lists
+02:33 and here you see keys are Bob, Julien, and Mike
+02:36 and values are list of challenge ids.
+02:41 So you see here, we work around the key error.
+02:44 The defaultdict has the mechanisms to use a factory
+02:49 to initialize the data type that the values need to hold
+02:52 and yes, it's safer, it's cleaner, and for this type
+02:57 of task, I highly recommend that you use this data type.

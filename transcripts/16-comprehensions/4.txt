@@ -1,0 +1,36 @@
+00:00 Next up are generators,
+00:02 sometimes building up a big list
+00:04 hits your performance right?
+00:06 It doesn't fit into memory and you can write
+00:08 a generator that yields values one by one.
+00:11 Its like a function that pauses itself.
+00:15 You call it you get one value, it pauses,
+00:17 you call it again, it gets you another value
+00:20 and it keeps your memory footprint small.
+00:22 Its best to write the simplest of generators next,
+00:26 lets do a number generator, so def num_10
+00:31 for e in range 5,
+00:34 and then we use the yield keyword
+00:36 and that's it, that's like the
+00:38 smallest easiest generator is,
+00:41 that's stored in a variable,
+00:47 and that's it.
+00:48 Now you can get the next value from the generator
+00:51 using the next keyword and that's zero
+00:56 and you can loop through them, like this
+01:04 and notice that the for loop took of at one
+01:07 because zero was already used or returned,
+01:12 and another important thing to know about generators
+01:16 is that they consume their sequence once
+01:18 and once you get to the end and try to go beyond
+01:22 that limit you get a StopIteration.
+01:24 If I now do next gen, boom
+01:26 it doesn't work, it says StopIteration
+01:29 because we've exhausted the sequence right?
+01:32 And again, for handles this for us,
+01:35 so if I initiate this again,
+01:41 and do again the for loop,
+01:46 we don't get this exception
+01:49 because for is smart enough to catch this for us.
+01:51 So, that's the simplest generator example
+01:54 I could come up with.

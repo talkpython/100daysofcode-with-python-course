@@ -1,0 +1,30 @@
+00:00 Hi everyone and welcome to JSON in Python.
+00:04 This is Julian Sequeira and I'm going to be walking you
+00:06 through some of the more interesting ways
+00:09 of dealing with detailed JSON output.
+00:13 So JSON, if you're not familiar with it,
+00:15 stands for JavaScript Object Notation
+00:18 and it's pretty much just a way
+00:20 of formatting data, okay.
+00:22 One of the most common ways of seeing JSON
+00:25 when you're working with Python
+00:27 is through contacting APIs.
+00:30 Through working with numerous APIs out
+00:33 through the web.
+00:34 And one of the things about that
+00:37 is that you actually get
+00:38 really complex dictionary nested situations going on.
+00:43 So the JSON output,
+00:44 if you haven't seen it before,
+00:45 just looks like a little dictionaries and lists
+00:48 and if you get
+00:49 really deeply nested lists and dictionaries,
+00:53 it gets really complicated
+00:55 to try and pull out that data,
+00:57 which is why JSON can sort of screw with you, pretty much.
+01:00 So, what we're going to do
+01:01 is we're going to go through that
+01:02 in the next couple of days,
+01:04 have some fun with it and see what other cool APIs
+01:08 you can talk to by the end of it.
+01:10 So, let's move on.

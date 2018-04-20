@@ -1,0 +1,5 @@
+00:00 Day 2 or Day 38, if you're adding them,
+00:03 is to actually create the skeleton of that program
+00:07 and just open a CSV reader to that file.
+00:11 If you can just load it up and just print out the rows,
+00:14 you're done with day 2.

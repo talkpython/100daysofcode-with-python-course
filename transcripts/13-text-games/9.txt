@@ -1,0 +1,32 @@
+00:00 Alright third day,
+00:01 if you're not done with the first two days,
+00:03 just finish that up.
+00:04 Just get your standard 3-way
+00:06 Rock, Paper, Scissors working.
+00:07 However, if you feel like you want to like,
+00:09 take this to the next level and you got done really quickly,
+00:12 if you've got some extra time left over,
+00:13 try this 15-way Rock, Paper, Scissors.
+00:16 This diagram is actually really hard to understand,
+00:19 so I put together a battle CSV here
+00:23 that tells you if the attacker is a gun
+00:25 and the attacker attacks a dragon,
+00:27 will a gun defeat a dragon?
+00:29 Or does the dragon, over here dragon defeat a gun,
+00:33 note the dragon loses to the gun,
+00:35 but the gun defeats the dragon.
+00:37 So you can think of this like,
+00:38 sort of halfway redundant.
+00:40 You really only need half this table,
+00:42 but having that table is super helpful.
+00:45 And here's a little bit of code,
+00:46 we haven't gotten to CSVs yet,
+00:47 but here's a little bit of code that will read that in
+00:50 and you can use it to sort of parse that
+00:52 and probably build from.
+00:54 Okay, so if you're feeling super adventurous
+00:57 and you've got extra time,
+00:58 work on this  Rock, Paper, Scissors 15-way,
+01:01 otherwise just build standard 3-way rock-paper-scissor
+01:03 and hope you have a lot of fun modeling these little games
+01:06 with classes.

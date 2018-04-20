@@ -1,0 +1,32 @@
+00:00 Let's review the concepts in our search API.
+00:03 We started out by consuming the MovieDb service,
+00:06 at movie_service.talkpython.fm.
+00:10 We saw that we could get postmen,
+00:12 which is a really nice way to
+00:14 explore and interact with the API,
+00:16 the full spectrum of HTTP APIs.
+00:19 And we use requests in Python to actually
+00:22 do the direct interaction in code.
+00:26 When we zoom down to the code level,
+00:28 you can see that we start by importing requests.
+00:31 We're going to need to use this library,
+00:32 so we got to import it, and remember we had to install it
+00:34 with pip as well, or make it part of the requirements
+00:38 and PyCharm helped us,
+00:40 but we could have also said pip install -r requirements.txt
+00:43 and achieve the same effect.
+00:45 Then we're going to go and actually download the data.
+00:49 Take the URL and say, request.get URL.
+00:51 Like, this is a response, this is what we work with
+00:53 for the rest of the time.
+00:55 We want to make sure everything worked,
+00:56 so we're going to check for success with raise for status,
+00:59 and then we want to take that string of JSON
+01:02 and turn it into a Python dictionary.
+01:04 So we do that by calling .json.
+01:07 Notice if the format is not actually JSON, this will crash.
+01:10 But it was JSON in our example, so it completely worked.
+01:13 After this it's plain Python,
+01:15 there's no more HTTP service involved,
+01:17 we just have a Python dictionary,
+01:19 and you work with it like you do regular data in Python

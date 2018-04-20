@@ -1,0 +1,14 @@
+00:00 Day 2 you're goal will be to take the application
+00:03 you chose yesterday and look at the flow,
+00:07 and think about what type of things
+00:11 do you want to keep track of.
+00:12 Do you want to track errors?
+00:14 Would you want to track timing?
+00:15 Do you want to track inputs, outputs?
+00:17 All that kind of stuff.
+00:19 So think about what you're going to try to log
+00:21 and how you're going to do it.
+00:22 Do you want this to go to a file system,
+00:24 do you want it to go to the console,
+00:26 all those considerations.
+00:27 So just kind of plan out what you're going to do the next day.

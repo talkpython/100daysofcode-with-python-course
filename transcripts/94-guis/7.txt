@@ -1,0 +1,46 @@
+00:00 Now comes the exciting part,
+00:02 you get to write some code and
+00:04 build a GUI in Python as well.
+00:06 So here's the demos you've already seen from the videos.
+00:11 And down here we have the various steps.
+00:13 So a quick warning for Anaconda users,
+00:16 I've heard some people say that
+00:18 installing wxPython has been causing some
+00:20 compatibility issues with their install of Anaconda,
+00:24 actually I have no idea what they're really referring to,
+00:26 but just consider using a plain old Python 3 environment,
+00:30 or a separate virtual Conda environment.
+00:33 Okay, today, Day N, we're going to start out
+00:37 and mostly it's just about watching the videos
+00:39 and learning the material you've already done.
+00:41 So congratulations, you're basically done.
+00:43 But let's take one little step along with,
+00:47 I guess you would call it code, we're going to create
+00:49 some files that contain code, anyway.
+00:51 So create a new virtual environment, activate it,
+00:53 this is pretty standard at this point, nothing special here.
+00:56 You're going to install Gooey and Cookiecutter.
+00:59 And just go ahead and make a program file,
+01:01 because we're going to put some stuff in there,
+01:03 that's where all the code is going to go,
+01:05 just have one this time.
+01:07 And just to make sure everything's hanging together,
+01:10 inside your program file, just import Gooey at the top,
+01:14 and maybe also import Cookiecutter and run it,
+01:16 and just see that it exits with code zero,
+01:18 no errors or anything like that.
+01:21 This step here about pip install gooey and pip install cookiecutter,
+01:24 this is fine on Windows and Mac OS,
+01:26 but I did run into trouble trying
+01:28 to get that to work on Ubuntu.
+01:31 So I had to run this set of prerequisites
+01:35 before I could even get it to install and build and so on.
+01:38 So you want to make sure that you run these steps here
+01:41 if you're on Ubuntu.
+01:42 This is going to trigger and install wxPython,
+01:45 which is what was causing the trouble,
+01:47 that takes a long time on Ubuntu for some reason.
+01:50 I mean, like 10 minutes for that
+01:52 to just be on that one line.
+01:54 But don't give up, eventually you'll get there
+01:57 and then you'll be golden.

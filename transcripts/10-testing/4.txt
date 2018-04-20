@@ -1,0 +1,79 @@
+00:00 Right, before diving into writing
+00:02 tests for that program,
+00:04 let's just quickly look at
+00:05 how to write a test
+00:06 with pytest in the first place,
+00:07 and how to run it from the command line.
+00:11 And first of all I want to contrast
+00:13 it with unittest,
+00:14 which is in the standard library.
+00:16 So here at left you have a super simple program,
+00:20 it's almost ridiculous.
+00:21 But it's Hello name, takes a name
+00:24 and just returns the hello name string.
+00:27 And look at the amount of code you
+00:28 have to write in unittest to get a test
+00:31 for that running.
+00:33 Because it's class-based,
+00:34 so you have to subclass another class,
+00:37 write a function,
+00:38 and use a self.assert notation
+00:41 so let's show that next.
+00:53 Alright, so import unittest,
+00:55 import the program,
+00:56 make a class,
+00:58 inherit from unittest test case,
+01:01 write a method, which needs to start with test
+01:03 to be recognized as a valid test,
+01:06 use self.assert equal notation,
+01:09 call the function,
+01:10 and check for hard coded output.
+01:13 If the files run as a main script,
+01:15 call the main method on unittest.
+01:18 Right, and it works.
+01:22 And it fills if I change the return,
+01:24 and that's good,
+01:26 and notice that pytest can run unittest code,
+01:31 so pytest can be run from the command line,
+01:34 without any switches,
+01:36 if you'll look for files that start with test,
+01:38 and run the methods or functions in there
+01:41 that start with test.
+01:43 So that means that I can even
+01:46 leave out this main block
+01:47 and it should still work.
+01:51 Right, but here comes the first benefit
+01:54 of pytest is that you can write
+01:55 test code in a much shorter way.
+01:57 I don't need unittest, I don't need the class,
+02:00 I can just define functions.
+02:02 They do need to start with test,
+02:03 and instead of the self.assert equal,
+02:07 I can just use the classic assert.
+02:12 And this should work.
+02:14 It does not.
+02:15 Self is still in the program
+02:16 because it was still in the function.
+02:22 Same output.
+02:23 Make it fail,
+02:27 and here is the second advantage of pytest.
+02:30 The output is much nicer.
+02:36 unittest was definitely not bad,
+02:39 but pytest,
+02:40 especially if you go into
+02:41 more complex operations and errors,
+02:44 it's a great debugging tool.
+02:47 So look at that. Instead of what was it?
+02:52 Oh that doesn't count
+02:53 one two three, well it was
+02:54 still short because this is
+02:55 an easy program,
+02:56 but you can already see that
+02:58 this is way cleaner.
+03:06 So that's the simplest
+03:07 of pytest programs
+03:08 and I just wanted to show you
+03:10 how it differs from unittest and
+03:12 how you can run it from the command line.
+03:14 Just the basic steps to get you
+03:15 up and running.

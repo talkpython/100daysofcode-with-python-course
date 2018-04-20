@@ -1,0 +1,25 @@
+ 0:01 One of the unique concepts in Python is to minimize the number of symbols 
+0:05 and control structures in the language. 
+0:08 For example, in C and C-based languages like C# and JavaScript, 
+0:12 you have lots of curly braces, and variable declarations and so on,
+0:16 to define structures and blocks. 
+0:19 In Python, it's all about the white space, and indentation. 
+0:23 So here we have two particular methods, 
+0:26 one called main and one called run and they both define a code block 
+0:31 and the way you do that is you say define the method , (colon), 
+0:34 and then you indent four spaces. 
+0:36 So the purple blocks here these are also code blocks 
+0:39 and they are defined because they are indented 
+0:42 four spaces the "if" and the "else" statement. 
+0:44 But within that "if" statement, we have a colon ending it, 
+0:46 and then more indentation, and that defines the part that runs in the "if" case, 
+0:50 and then we have the "else" unindented, so that's another piece, 
+0:54 another code suite or block, and then we indent again to define 
+0:58 what happens when it's not the case that the argument is batch or whatever that means. 
+1:02 And we saw that these are spaces, the convention is to use four spaces 
+1:06 for each level of indentation, it's generally discouraged to use tabs. 
+1:10 Now, if you have a smart editor that deeply understands Python, 
+1:13 like PyCharm or Sublime text or something like that, 
+1:16 it will manage this indentation and those spaces for you, 
+1:19 so it's much, much easier in practice 
+1:22 than it sounds before you actually get your hands on it.

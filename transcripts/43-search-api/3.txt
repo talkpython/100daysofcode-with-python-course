@@ -1,0 +1,38 @@
+00:00 To truly work with APIs,
+00:02 you need to be able to interact with the entire spectrum
+00:04 of the HTTP protocol, and browsers,
+00:07 while they technically do that,
+00:08 they don't let you as a consumer, as a user of the browser,
+00:12 really easily do that.
+00:13 So we're going to look at this tool called Postman.
+00:15 And I've already installed it,
+00:16 you can see it works on all the OSs, it's easy to install.
+00:19 Let me come over here, and if we wanted to go
+00:20 to that same URL we had before,
+00:23 we could come over here and enter this,
+00:25 and hit Go.
+00:27 And you see here's the same JSON that we got.
+00:29 Here's the status code, what it means,
+00:32 okay versus other things, how long it took,
+00:34 how much data there was, what headers were sent back.
+00:38 That's interesting.
+00:39 We could even come over here and we could pass additional data,
+00:41 like user id is 72,
+00:44 or something like that.
+00:45 Now that's not going to have any effect on this service,
+00:47 but it could, right?
+00:49 We could even come over here and say,
+00:50 we're going to set the accept type,
+00:52 notice the auto-completion.
+00:54 And accept application, let's just say JSON.
+00:57 Right? So be a little more explicit,
+00:59 this is the same thing we're getting.
+01:01 We come over here and do a PUT and POST.
+01:03 So as you interact with APIs,
+01:05 here and in other challenges,
+01:06 I encourage you to check out Postman.
+01:09 It's free, and it's really nice,
+01:11 and you can even create an account, notice mine is nsync,
+01:13 and save these so you can sort of set up a structured way
+01:16 to interact with things, and go back and forth,
+01:19 save for testing.

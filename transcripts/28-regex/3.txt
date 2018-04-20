@@ -1,0 +1,35 @@
+00:00 Now those string operations were pretty basic,
+00:03 but usually we need something more advanced.
+00:06 Meet, regex.
+00:07 The re module has two main methods.
+00:11 search and match.
+00:14 match, matches from start to end.
+00:17 Search can match a substring.
+00:19 It's best to use an example.
+00:23 I'm using raw strings by the way,
+00:25 because then I can just use special characters
+00:27 with a single backslash and not having to escape them
+00:31 which makes my regexes more readable.
+00:34 So again, we have the same awesome I'm doing a 100 days
+00:37 of code challenge and let's...
+00:41 do a re.search first.
+00:43 So I'm going to...
+00:46 match a...
+00:48 part of that string
+00:50 and you can do this as well with just I am in
+00:53 but the point is to just show how you would make a regular
+00:57 expression and what a match object would look like.
+01:02 To contrast that with match,
+01:07 this won't work.
+01:09 Oops.
+01:10 Match takes two arguments.
+01:13 So this is None because match ends end to end
+01:17 so I am is not the full string.
+01:21 So to do a proper match we would be doing,
+01:27 start with awesome,
+01:30 end with challenge.
+01:33 On text and that works.
+01:37 And here you see the first part of a pattern
+01:40 which is '.' which matches any character,
+01:44 zero or more of them
+01:47 up until challenge.

@@ -1,0 +1,21 @@
+00:00 Let's move on with Counter.
+00:02 Let's say we have a text which is split into words,
+00:06 and we want to count the most common words.
+00:11 Before I knew about collections,
+00:14 I would write something like this.
+00:26 There you go.
+00:28 I had to loop over words, keep a dictionary,
+00:32 see if the key was in the dictionary,
+00:35 if not, initialize to zero.
+00:38 If it's in there do plus one.
+00:39 Then I had to loop over the items over the key value pairs,
+00:45 sort them and use lambda to sort by value.
+00:49 In reversed order and take a slice to get it to five.
+00:53 Now compare that with using Counter,
+00:55 and its most common method.
+01:00 It's like magic, right?
+01:02 One line of code, you pass the words list into the Counter,
+01:06 and you call most common and you give the number
+01:09 of top words you want to see and compare that
+01:13 with all the work I had to do here and how easy it gets
+01:17 by using the collections, Counter.

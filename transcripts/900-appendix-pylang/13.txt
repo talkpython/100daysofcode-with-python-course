@@ -1,0 +1,70 @@
+ 0:01 One of the challenges of installing packages globally has to do with the versioning. 
+0:05 The other really has to do with managing deployments and dependencies. 
+0:09 Let's talk about the versioning part first. 
+0:11 Suppose my web application I am working on right now 
+0:14 requires version 2.9 of requests. 
+0:18 But somebody else's project required an older version with older behavior, 
+0:22 version 2.6 let's say. I don't think those are actually incompatible, 
+0:25 but let's just imagine that they were. 
+0:28 How would I install via pip version 2.6 and version 2.9 and keep juggling those, 
+0:33 how would I run those two applications on my machine without continually reconfiguring it-
+0:37 the answer is virtual environments. 
+0:39 And, virtual environments are built into Python 3 
+0:43 and are also available through a virtual env package 
+0:46 that you can install for Python 2 
+0:48 and the idea is this- we can crate basically a copy, 
+0:52 change our paths and things like that around so that when, 
+0:55 you ask for Python or this looks for Python packages, 
+0:58 it looks in this little local environment, we create one of these small environments 
+1:02 just for a given application, so we would create one for our web app 
+1:06 that uses request 2.9 and another one for the one that uses request 2.6 
+1:10 and we would just activate those two depending on which project we are trying to run, 
+1:14 and they would live happily side by side. 
+1:17 The other challenge you can run into is if you look 
+1:19 at what you have installed on your machine, 
+1:21 and you run some Python application and it works, 
+1:24 how do you know what listed in your environment is actually required to run your app, 
+1:28 if you need to deploy it or you need to give it to someone else, 
+1:31 that could be very challenging. So with virtual environments
+1:34 we can install just the things a given application requires to run 
+1:37 and be deployed so when we do something like "pip list", 
+1:41 it will actually show us exactly what we need to set up 
+1:44 and use for our app to run in production. 
+1:47 Typically we tie virtual environments one to one to a given application. 
+1:51 So how do we create one?
+1:53 This example uses virtual env which we would have to install via pip, 
+1:57 you could also use venv, just change virtual env to venv in Python 3 
+2:01 and it will have the same effect, but this works, 
+2:03 like I said in Python 2 and 3, so here you go. 
+2:06 So we are going to run Python 3 and we are going to say run the module, virtual env, 
+2:09 and create a new environment into ./localenv. 
+2:14 Here you can see it creates a copy from Python 3.5. 
+2:17 Then we go into that environment, there is a bin directory 
+2:20 and there is an activate program that we can run and notice, 
+2:23 we'll use the . (dot) to apply that to this shell 
+2:26 and not to create a new separate shell environment for that when it runs
+2:30 because we wanted to modify our shell environment, not a temporary one. 
+2:34 So we say . activate and that will actually change our environment, 
+2:38 you can see the prompt change, if we say "pip", we get the local pip,
+2:41 if we ask "which python", you'll see it's this one that is in my user profile 
+2:45 not the one in the system. 
+2:47 Now, few changes for Windows, if I did exactly the same thing in Windows, 
+2:51 I would have .\localenv of course, I might not use Python 3, 
+2:56 I just say Python and make sure I have the right path to Python 3 
+2:59 because that is not a feature in the Python 3 that comes on Windows,
+3:03 and I wouldn't use the source activate you don't need to do that in Windows, 
+3:06 but you would call activate.bat, otherwise, 
+3:10 it's pretty much the same. Also, the "which" command doesn't exist on Windows, 
+3:13 use "where" and it gives you the same functionality. 
+3:16 So we can create one of these virtual environments in the terminal, 
+3:18 but you might suspect that PyCharm has something for us as well, 
+3:21 and PyCharm actually has the ability to create 
+3:24 and manage virtual environments for us,
+3:26 basically it does what you just saw on the screen there. 
+3:30 So here we give it a name, we give it a location here, 
+3:32 we say blue_yellow_python, this is going to be for a Blue / Yellow band web application, 
+3:37 we are going to base this on Python 3.5.1 
+3:39 and we are going to put into my Python environments and under this name. 
+3:43 Then I just say OK and boom, off it goes, set it as the active interpreter 
+3:46 and manage it just the same as before in PyCharm 
+3:49 using its ability to install packages and see what is listed and so on. 

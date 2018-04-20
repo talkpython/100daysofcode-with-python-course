@@ -1,0 +1,27 @@
+00:00 Finishing the 100 Days of Python is both
+00:03 an ending and a start of a great Python journey.
+00:07 We encourage you to go to PyBites
+00:10 and subscribe to our monthly newsletter.
+00:13 And keep an eye on the articles, news and code challenges
+00:17 we launch on our website.
+00:19 We are here to teach you Python.
+00:21 Of course, we are learning Python ourselves.
+00:24 It's a never ending journey,
+00:26 and we're super passionate about it.
+00:28 And we are not planning to stop any time soon.
+00:31 So, we hope to salute you at PyBites.
+00:34 Additionally, a couple of months ago,
+00:36 we launched Code Challenges,
+00:38 where we integrated a year of blog challenges.
+00:41 And we also launched a new line of Bites of Py,
+00:44 which are smaller exercises you can code up in a browser.
+00:47 We are stoked about this platform.
+00:49 It's not only teaching you programming and Python,
+00:52 it also shows how to do it in the most Pythonic way.
+00:55 And we are rapidly expanding this platform
+00:58 adding bites and code challenges.
+01:00 So this is a great way to keep up the momentum you gained
+01:03 throughout this course
+01:04 by keeping calm and code in Python,
+01:07 every single day.
+01:09 Good luck and we hope to see you there.

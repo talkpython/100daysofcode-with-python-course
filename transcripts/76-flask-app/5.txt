@@ -1,0 +1,49 @@
+00:00 Alright.
+00:01 Let's quickly cover off everything we've learned
+00:03 and leave it to you,
+00:05 So, a basic Flask app,
+00:08 that's pretty much what we did.
+00:09 Okay?
+00:10 We did add some data in there,
+00:12 which is what made it a little more fun
+00:13 and approachable and usable.
+00:15 So the first thing we had to do is import Flask
+00:18 and render_template, as well as the dictionary information.
+00:24 The render_template we will get to.
+00:26 We then declared the Flask app object and importantly,
+00:32 we added that app.route decorator to the index function
+00:38 and that allowed us to get to the URL of route
+00:41 and execute this code,
+00:45 and then we returned the dictionary to this index html,
+00:51 using render_template.
+00:53 That was very important for us to talk to the Jinja template
+00:57 and finally we ran the app with app.run().
+01:00 Remember, you need that line.
+01:02 Don't forget it or your app is not going to run.
+01:05 As for the Jinja template, the html,
+01:08 I've narrowed in on just the important parts here.
+01:11 Alright, we create the table using our normal html and css,
+01:14 whatever it is you might use,
+01:17 and then we execute the Python code.
+01:20 Alright, so we've got our for loop there,
+01:23 to pass through, to iterate through the dictionary
+01:29 and the items so keys and values,
+01:32 and remember, super important,
+01:34 your curly brace with the percentage sign
+01:38 that denotes the code that will be executed.
+01:42 We then use these substitution brackets,
+01:45 these double curly brackets on either side
+01:47 and that's how we print or display the data in this key
+01:53 and this value within this for loop,
+01:56 remembering that every pass of this for loop
+01:58 is going to create this table row with the data.
+02:03 Alright, and finally, just as important,
+02:07 you have to close the for loop.
+02:09 You have to end it using this syntax, endfor.
+02:13 And when we run it on 127.0.0.1 local host, port 5000,
+02:20 this is what we got, really, really awesome stuff.
+02:25 Okay? And now it is your turn.
+02:29 Take everything you've learned and try to make your own app.
+02:33 Try and make your own custom app based on some sort of a
+02:36 dictionary or list or whatever you can think of
+02:39 and enjoy that for day three and move on to the next video.

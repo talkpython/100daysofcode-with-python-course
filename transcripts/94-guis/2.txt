@@ -1,0 +1,62 @@
+00:00 All right, let's jump right into writing some code.
+00:02 Now we're going to start with some already existing code.
+00:05 In fact, you've seen the application we're
+00:07 going to write already, just in an entirely different form.
+00:10 Remember way back when, for the movie search app,
+00:14 where we consumed JSON APIs?
+00:17 So this would be the 'set of days' base that we worked
+00:19 with the JSON APIs.
+00:22 We're going to take that application, which was definitely
+00:24 just a terminal, text based interactive application,
+00:28 and we're going to turn that into a Gooey app.
+00:30 So here you can see I've made basically a copy
+00:34 of those and I've changed it just a little bit.
+00:36 We're going to open this in PyCharm,
+00:38 but before we do, let's just go over here and
+00:40 set up a virtual environment, like so,
+00:42 and we'll just all it venv
+00:46 and we'll just drop this folder onto PyCharm.
+00:49 Now, while it's loading, notice over here,
+00:51 I have this starter search app in the file.
+00:54 So this is the starter code.
+00:56 I'm going to leave it exactly as what you're about to see.
+00:59 I'm going to take this one and
+01:00 evolve it into the final version.
+01:02 Alright, so let's go over here and get started.
+01:04 So I'll add the root, look over here,
+01:07 and we'll pip install -r requirements.txt
+01:10 because we have a couple of things
+01:12 that we need for that application.
+01:14 Namely, we really needed requests, right there.
+01:18 Later we're going to add more to this,
+01:20 but for now it's requests.
+01:21 These files are red because they're not yet staged in Git,
+01:24 which we'll do shortly.
+01:25 Now I've changed this just a little tiny bit.
+01:28 I've gone over here and I've added the ability--
+01:30 Originally what we could only do was find by keyword,
+01:33 now we can also find by director
+01:35 and we can find by IMDB code.
+01:38 So let's try to run this.
+01:43 So here's the command line addition.
+01:45 So let's search by director, I'll say Cameron,
+01:49 so Avatar, that kind of stuff.
+01:51 There we go, Almost Famous, Jerry Maguire, Avatar,
+01:56 so our search is working, and this is finding all the ones
+02:00 that James Cameron directed.
+02:02 Okay, so this is working just fine,
+02:04 and notice, right now we can pass it, or we can select
+02:06 at the moment in this input mode,
+02:10 We can select whether or not it's a director,
+02:14 or it's the IMDB code, or when we started to fall through.
+02:18 The last case is just a generic search here.
+02:21 So we're going to do a couple of things.
+02:23 The first thing we're going to look at is we're going to see
+02:26 how do we make this a Gooey application?
+02:29 And then we'll package it all up.
+02:31 So we're not going to change the functionality
+02:34 of this application hardly at all.
+02:35 In fact, we're going to more or less just leave it like it is,
+02:39 but instead of getting the inputs from the user via these
+02:42 input statements here, we're going to get them
+02:45 from a beautiful Gooey.

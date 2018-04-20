@@ -1,0 +1,22 @@
+00:00 Day 3, it's time to take those
+00:02 errors that you've discovered
+00:03 and put in specific error handling for each one of them.
+00:07 So here I've written out a little try-except block
+00:10 that shows the standard error handling
+00:12 in Python, you can use this as a template,
+00:14 take the various types of errors you found on Day 2,
+00:17 figure out how you might either deal with them or at least
+00:19 let the user know, keep your application running.
+00:23 Add the error handling to your code,
+00:25 make sure that it actually does handle the errors,
+00:27 you know, get the thing to fail in whatever ways
+00:30 you were doing before to find the errors,
+00:31 but now you should have some kind of nice response
+00:35 that's not a full-on crash,
+00:36 maybe it even keeps running
+00:37 and just asks the question again, something like that.
+00:40 Now that you know how to do error handling,
+00:42 you have some practice with it,
+00:43 when you're writing your applications,
+00:45 be sure to think of the errors that can happen,
+00:47 put the error handling in place, and fail gracefully.

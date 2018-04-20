@@ -1,0 +1,16 @@
+00:00 Okay, so the first thing we need to do,
+00:02 as usual, is set up our environment.
+00:05 So we're going to create ourselves a virtual environment,
+00:12 called venv,
+00:14 and once that's installed, we are going to launch it.
+00:21 Okay, and then we're going to pip install openpyxl
+00:28 That's all we're going to need for this lesson.
+00:30 The other thing you can do, if you wish,
+00:33 is create a python file in this directory
+00:36 called excel_automation.
+00:40 Furthermore, if you want to follow along with the
+00:43 commands, as I type them,
+00:45 you'll want to download the financial sample.
+00:49 Okay, this is a document that you'll see in the repo.
+00:53 Pull that Excel file across and you should be able
+00:56 to follow along with that.

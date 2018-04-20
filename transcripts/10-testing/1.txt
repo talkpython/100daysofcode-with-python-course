@@ -1,0 +1,20 @@
+00:00 Welcome back to the Hundred Days of Python.
+00:02 In the coming three days I will show you
+00:04 how you can test the program with pytest.
+00:06 It's a popular testing framework,
+00:08 often preferred over the standard libraries unittest.
+00:11 And you will see why.
+00:13 For this lesson I prepared a guessing game,
+00:15 which lets you guess a number from the command line.
+00:18 And although is a simple program,
+00:20 it has a lot to offer in showing how to use pytest,
+00:24 for example to fall out of errors,
+00:26 capture standard output,
+00:28 mocking certain functionality, and more.
+00:31 By writing the test, I will also show you
+00:34 how you can use coverage, to see how much
+00:37 of your code base, or in this case,
+00:39 the script is covered by tests.
+00:41 And by the end of this session,
+00:42 it should be easy for you
+00:44 to write tests for your code, an important skill.

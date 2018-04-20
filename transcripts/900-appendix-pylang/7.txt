@@ -1,0 +1,19 @@
+0:01 Functions are reusable blocks of functionality. 
+0:04 And of course, they play an absolutely central role in Python. 
+0:07 Now, in Python we can have functions that are just stand alone, isolated functions, 
+0:11 and these are quite common, 
+0:13 or we can have functions bound to classes and objects
+0:16 that bind together specific data about an object along with those behaviors, 
+0:21 we call those methods. 
+0:23 The way we define them, interact with them, is basically the same, 
+0:26 regardless whether they are functions or methods. 
+0:28 Here you can see we have a main method, we want to call it, 
+0:31 it takes no parameters, and returns nothing or nothing that we care about,
+0:35 so we just say main open close parenthese, like so,
+0:37 we can also call functions that take arguments, 
+0:40 here is a function called input, and it gathers input from the user, on the consoles, 
+0:44 it will give them a prompt, and this argument we are passing here is a string, 
+0:48 and this is the prompt to share to the user, 
+0:50 pauses the input on the console and waits for them to type something and hit enter, 
+0:54 when they do, the return value comes back 
+0:57 and is stored in this new variable called "saying". 

@@ -1,0 +1,142 @@
+00:00 Given datetime is part of the Python standard lib,
+00:04 we don't actually have to do any setup here.
+00:07 You'll see in the coming videos
+00:09 that you will have to do setup steps,
+00:12 create virtual environments and whatnot,
+00:14 but given this is datetime, we don't really have to.
+00:17 And, I think it'd be best for us to just work
+00:20 in the Python shell here.
+00:21 This is IDLE, the default Python IDE
+00:25 that it ships with.
+00:27 So, let's have a play with that.
+00:29 Now, the first thing we're going to do
+00:31 is we're going to import datetime.
+00:34 But, we're actually going to do
+00:37 from datetime import datetime, okay?
+00:44 And, this is just going to make it a bit easier for us
+00:46 when we're typing in the rest of our code.
+00:48 And, just to get yourself prepared, let's just
+00:52 from datetime import date
+00:54 that's for a bit later in this video.
+00:58 Alright so what is datetime, alright.
+01:00 For those who are unaccustomed and unaware
+01:03 datetime is just the Python library module that allows
+01:07 you to deal with dates and times.
+01:11 Pretty self-explanatory, right?
+01:14 So, if you want to deal with just the dates
+01:18 so, you know, today's date, let's call it
+01:21 the 23rd of February 2018, not very specific.
+01:26 Or if you want to deal with the time
+01:29 that you've got to think about that
+01:30 from a programming perspective, there is a difference, okay.
+01:35 So, datetime allows us to deal with
+01:38 the entire time set, the entire timeframe.
+01:41 You're talking seconds, minutes, hours, days
+01:44 all the way through to years, okay?
+01:47 We can visualize that with datetime.today().
+01:52 If we hit enter, there we go, we can see today's date.
+01:57 The 24th of February 2018
+02:01 but we also get this timestamp.
+02:03 It's 10:17pm
+02:05 and these are the extra seconds here.
+02:08 So seconds, milliseconds and whatnot, okay?
+02:12 Now I'm going to show you this, what kind of an object is this?
+02:16 Well let's go, well first actually we have to assign that
+02:20 to something that way so, we'll just go with today.
+02:24 Here's datetime.today()
+02:28 alright and then we'll type it out, so type today.
+02:32 So it's a datetime object, okay?
+02:35 And that's important because you can't mix these objects.
+02:39 I'll point that out in just a minute.
+02:42 So with this timestamp, there is more you can do with that.
+02:46 And I'll show you that in the next video with timedelta.
+02:51 Alright, but for now just understand that this is what your
+02:53 standard datetime format will look like.
+02:56 This is the sort of data you're going to get back.
+02:59 And this is really useful for times when you want to
+03:03 deal with say, subscriptions or anything like that
+03:06 where it has to do with exact timestamps, or logging
+03:10 or anything where you need to know
+03:13 the time that something happened.
+03:15 Going by the date of say, the 24th of February
+03:19 is not accurate enough, okay, there is 24 hours
+03:22 within that day so, a lot of things could have happened.
+03:25 Alright, so we'll move on to the date part here.
+03:30 So we'll just go today date, we'll create that variable.
+03:34 Here's date.today(), so you can see straightaway
+03:38 we're not using datetime, we're using the date section
+03:43 okay, we're using the date option here.
+03:45 So date.today()
+03:48 and if we type that out
+03:53 Today date, we can see
+03:56 the different type of object here.
+03:58 First one was a datetime and now it's a date object, okay?
+04:04 And we can see what that looks like with today date.
+04:09 And we have just the date string, okay?
+04:12 So we don't have the extra time on the end.
+04:15 And this is, again, very useful.
+04:18 So you can see the distinction between the two of them.
+04:21 Alright let's get ourselves a little bit of white space.
+04:25 Now one really cool thing that I love about date
+04:30 is that we can drill into it a little more, so we can go
+04:36 today.month is 2.
+04:41 So you can see we can actually tear it apart a bit.
+04:44 So today.day
+04:47 is 24 and then
+04:51 today.year, and we get 2018.
+04:57 So now you can sort of visualize how date can help you
+04:59 in your projects, right, if you're not already using it.
+05:03 It's actually really cool.
+05:04 So one really, really cool thing that
+05:07 has come in handy over time,
+05:10 is the fact that you can do
+05:11 a bit of math with your dates, alright.
+05:15 So we'll go, let's just go something easy.
+05:18 So Christmas, what's the date for Christmas?
+05:21 It's the, we'll go year first, so 2018.
+05:25 It's the month next, so 12.
+05:29 And then it's the day, so 25th, alright.
+05:35 Now one thing, if you had a look, this is ...
+05:40 us specifying a date, this is us
+05:42 assigning a date to a variable.
+05:45 So now the Christmas variable is always going to
+05:50 have this date assigned to it.
+05:54 You can see that there, okay.
+05:57 Now, this is really cool, so
+06:00 We can actually go Christmas, cause we know that's
+06:04 the end of this year, minus, today date.
+06:10 Kay, and that's 304 days, it automatically called
+06:15 on timedelta, so that's giving away something for the next
+06:18 video but, carry on, 304 days.
+06:22 Alright, and we can see that visualized a different way.
+06:25 We can, and this is again giving more away
+06:27 we can go Christmas
+06:31 minus today
+06:35 in days, so .days.
+06:39 304 days, alright and this is really cool for something
+06:43 such as this, I'm just going to copy and paste here
+06:46 rather than type it all out for you, alright.
+06:50 So if Christmas is not today date
+06:55 well what can we do?
+06:56 We can print a certain message.
+06:58 Again, you can see this is useful for certain other projects
+07:03 so print, sorry there are still this many days
+07:09 (christmas minus today).days, until Christmas.
+07:13 Okay, and then else ...
+07:16 We'll copy and paste this as well.
+07:20 We're going to print some sort of message, alright.
+07:25 "Yay, it's Christmas."
+07:27 So, by hitting enter, sorry there are still 304
+07:32 the same value here, until Christmas.
+07:35 I've obviously left out the word 'days'
+07:37 so that's my mistake, but
+07:38 sorry there are still 304 days until Christmas.
+07:42 If I happen to wait another, you know, ha ha ha ha
+07:46 that many days, 304 days
+07:48 we would then get this message here.
+07:51 So this is date and this is datetime.
+07:54 Very, very tedious at times, I want to say
+07:59 but so useful, so this is a great place to start
+08:02 manipulating your code, manipulate your dates
+08:06 and have some fun with it.
+08:08 And in the next video we're going to look at datetime.

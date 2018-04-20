@@ -1,0 +1,35 @@
+00:00 Next up, let's talk about how
+00:02 you can stack decorators.
+00:05 And I've found an image of Russian dolls,
+00:07 which might clarify how this "nesting" works.
+00:12 So let's define another decorator
+00:14 that shows the args and keyword args being passed in,
+00:17 and we're going to stack that
+00:19 together with the timeit decorator.
+00:37 Alright, let's modify generate report
+00:40 from the last video to take some arguments.
+00:47 And now, let me show you how you can stack
+00:49 the two decorators we've defined so far,
+00:52 and note that the order matters.
+00:55 So I put timeit as the outer decorator,
+00:57 because I want to time the whole operation,
+00:59 including the use of the print args decorator.
+01:05 Let's now call it, but first let's
+01:06 give it some parameters, so let me quickly
+01:10 find a dictionary of some keyword arguments.
+01:16 And now, all should come together,
+01:18 because when I call generate report
+01:20 with some args and some keyword args,
+01:25 look at that.
+01:26 We see two decorators in action.
+01:28 First a timer, starting the timer,
+01:30 doing stuff, ending the timer,
+01:32 and printing how long it took,
+01:33 and then we see the inner decorator,
+01:35 print args, printing the args and the keyword args.
+01:39 And here you see that decorators
+01:41 can become pretty powerful, because each decorator is doing
+01:44 a specific task, which can be applied
+01:46 to multiple functions, yet it's all abstracted
+01:49 in their definition.
+01:51 And, yes, this is how you can stack decorators.

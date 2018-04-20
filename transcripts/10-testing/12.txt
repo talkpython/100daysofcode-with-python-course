@@ -1,0 +1,40 @@
+00:01 Welcome back to the 100 Days of Python.
+00:03 Day three of pytest.
+00:05 And the final day
+00:06 where I want you to get some more exercise.
+00:09 And in all honestly, I recorded this lesson
+00:13 and something was bugging me.
+00:14 Fixtures.
+00:15 I mean, fixtures are described
+00:18 as the killer feature of pytest
+00:19 and I did not cover them.
+00:21 But no worries, you will learn them today.
+00:24 I made this article explaining
+00:26 everything you need to know
+00:27 to start to use them in your test code.
+00:29 And okay, it's a pretty long article,
+00:32 but it's not too hard to actually learn and do.
+00:36 There's a practical example in this article.
+00:39 If you read through this, then you will see that
+00:41 it's pretty easy to set up.
+00:43 But it will make your test code a lot better.
+00:45 So, I ask you today to come up with a use case,
+00:50 so it can be to set up and tear down a database,
+00:54 but it doesn't have to be a database.
+00:55 It can also be an object of any kind,
+00:58 a class, or something that requires
+01:00 setUp and tearDown or even only setUp.
+01:03 But I really want you to try to learn this skill.
+01:05 As you know from unittest,
+01:07 setUp and tearDown are commonly used,
+01:09 and pytest fixtures are the way to do that.
+01:11 So it's critical to understand this.
+01:13 That's another day of practical exercises
+01:16 and I think by the end of this day,
+01:18 you'll have a good grasp on pytest.
+01:20 Which will go a long way, because as we mentioned before,
+01:23 writing test is a very important skill.
+01:26 Good luck and let us know what you come up with.
+01:28 Use the #100DaysOfCode and feel to include
+01:31 TalkPython or PyBites in your tweets.
+01:34 All right, have fun.

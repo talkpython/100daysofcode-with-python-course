@@ -1,0 +1,132 @@
+00:01 Let's use feedparser to get the
+00:03 RSS feed of our blog.
+00:04 And I'm not going to do the live feed
+00:07 because I want you to see the same results
+00:10 if you go through this exercise.
+00:12 So, I'm going to paste in the actual copy I made.
+00:15 That said, if you do want the live data,
+00:18 then just go to our blog, pybit.es, or PyBites.
+00:22 Go to 'view page source' and search for RSS,
+00:27 and we have two feeds: all.atom and all.rss.
+00:30 I'm using the latter.
+00:31 The nice thing about feedparser is that
+00:34 you can just call ".parse" and it does a lot
+00:37 of stuff behind it.
+00:38 Let's see what it does.
+00:39 Okay, so entries.
+00:41 Blog feed, my variable.
+00:43 And let's look at what "entries" has.
+00:45 And it gives me a lot,
+00:47 so let's look at the first one.
+00:51 Actually, if you want to pretty-print this, just do from
+00:57 pprint import pprint,
+00:59 and I usually give it an alias.
+01:03 And now it's spaced out a bit better.
+01:05 Look at that, what feedparser did
+01:06 behind the scene.
+01:07 It took that RSS feed and put it in
+01:09 a comprehensible data structure.
+01:12 Although this is a nice format,
+01:14 there is still some work to do.
+01:15 For example, the publish date is a string.
+01:18 But we also have publish parse,
+01:20 but it's at a time, a struc time.
+01:22 Now, the most convenient way to work with dates
+01:25 is to use datetime.
+01:27 So, let's write a helper to convert to a datetime.
+01:31 And I call it just that.
+01:32 It takes a date string.
+01:34 A date string here has some time zone stuff,
+01:37 plus zero one.
+01:40 So, the first thing is to strip that off.
+01:45 Just put it here so we can see it while I'm writing this.
+01:52 Date string.
+01:54 I can split it on plus and take the first element.
+02:00 We can see this live.
+02:09 And you cannot see this, but there's still
+02:11 a pending space here, so it's best to always
+02:15 strip spaces that are not really needed.
+02:19 So, you can see here that it disappeared.
+02:21 And then, we do a datetime conversion.
+02:24 And we can do that by strptime.
+02:28 It takes a string, and the only tricky thing is that
+02:31 you have to give it the format of the date string.
+02:35 This case, it's a week day, a day,
+02:37 a string month, so like a three-char. month,
+02:40 Jan., Feb., March,
+02:42 four digits here, uppercase Y,
+02:45 hour, minute, seconds,
+02:47 and let's see what they'll give me.
+02:48 Okay, the nice thing about a datetime
+02:50 is that it actually prints us a string.
+02:52 So it's a bit tricky.
+02:53 And if I look at what the datetime actually is,
+02:57 it's the datetime.
+02:58 And that's cool because datetime makes it then
+03:00 very easy to work with dates.
+03:02 For example, let's just return this.
+03:06 So, I'm getting a datetime back.
+03:07 What's cool about this is you can now
+03:09 do calculations with datetimes.
+03:13 So, let's make sure that
+03:14 timedelta also here.
+03:16 What if I want to...
+03:18 So, this is the seventh of January.
+03:20 But if I want to add like three days, right,
+03:23 I could do datetime + timedelta(days=3)
+03:29 And look at that.
+03:30 I just added three days.
+03:32 I mean, you don't even want to imagine
+03:34 doing that on strings, right?
+03:36 It's just not done, and... no.
+03:39 It's totally no way to go.
+03:41 So, when you're working with dates,
+03:43 have it in a datetime format.
+03:44 Have it in a standardized way that you can
+03:47 easily do calculations with it.
+03:49 And, actually, for this exercise
+03:51 I just want to have the datetime.year.
+03:53 That's another advantage you see here.
+03:56 Ones I have the datetime, I can just pull out
+03:58 different elements from that, right?
+04:00 So here, I want the year and the month,
+04:02 and I can just access that attribute wise.
+04:05 So, now I just get a string.
+04:08 We will use this later to plot the data.
+04:11 The second helper I need is a get category.
+04:14 Takes a link.
+04:18 So, it takes a link, and it extracts the category
+04:20 out of that.
+04:21 And we have these known categories,
+04:23 code challenge, new, special, and guest.
+04:26 So, that's the dictionary.
+04:28 The default. should be an article.
+04:33 And here I use a bit of regular expressions
+04:36 to pull the category out of the link.
+04:39 A raw string, any characters.
+04:42 A literal .es/
+04:48 one or more lower-case letters.
+04:51 + says one or more, and anything after that.
+04:55 Now the parentheses will capture this
+04:58 one or more letters into a match,
+05:00 and I can access that in the second argument
+05:03 by the \1.
+05:06 And I'm doing that on link.
+05:09 And then, I can just do a nice get on the dictionary,
+05:14 which will look for that category.
+05:18 So it matches code challenge Twitter,
+05:20 special or guest,
+05:21 if it finds it's cool.
+05:23 If not, get will return None.
+05:25 And it then goes to the or,
+05:27 which returns default.
+05:29 So this will always return something relevant, right?
+05:31 Or, I find the key in the dictionary.
+05:34 If not, I will return default.
+05:37 And that's it.
+05:38 That's the pre-work we are going to do
+05:41 to important helpers.
+05:42 Next up, we will go through the feed data,
+05:46 putting it into some useful data structures.
+05:49 And with that second part of the preparation done,
+05:51 the plotting should be easy.

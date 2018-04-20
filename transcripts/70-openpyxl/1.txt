@@ -1,0 +1,12 @@
+00:00 Good day and welcome to Excel automation with openpyxl.
+00:05 I'm Julian Sequeira and I'm going to be walking you
+00:07 through a couple of days of playing
+00:09 with a really boring finance Excel spreadsheet.
+00:14 But, unfortunately that's the way,
+00:16 that's its trial by fire, right.
+00:18 We need to be able to play with an actual,
+00:21 really well populated spread sheet
+00:23 in order to make working with openpyxl doable, really.
+00:29 So get your Excel boots on and get prepared to play
+00:33 with Excel, manipulate some cells,
+00:35 insert some data, all with openpyxl.

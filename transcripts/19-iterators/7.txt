@@ -1,0 +1,162 @@
+00:00 Alrighty, in this video we are going to create
+00:03 some traffic lights.
+00:05 As discussed in the ReadMe from the three-day overview,
+00:09 I strongly urge you to try this yourself.
+00:12 It's not too difficult, it's a nice little challenge
+00:15 for your second day.
+00:17 This video is going to walk you through
+00:18 how I've created it.
+00:22 If you haven't done it,
+00:23 if you haven't attempted it yourself,
+00:25 just pause it here, or hit stop and minimize.
+00:28 Avert your eyes, children, and just give it a try yourself.
+00:32 This is the best way to learn.
+00:34 You're going to need itertools cycle, I'll give you that tip,
+00:38 and that's it.
+00:40 Out of all the stuff we've covered so far,
+00:42 itertools cycle is all you're going to need for this.
+00:46 Then, just think about how traffic lights work
+00:48 and go from there.
+00:50 Now, into the code.
+00:53 We're going to just import some modules here.
+00:56 For me, I'll discuss this in a minute, we're going to import
+01:01 from time import sleep because we do want our traffic lights
+01:06 to sleep when you're going between the colors.
+01:13 Now let's import itertools
+01:15 and let's import random
+01:19 because I have an idea.
+01:22 First thing we're going to need is we're going to need
+01:24 our colors, aren't we?
+01:25 What are the three colors on a traffic light?
+01:28 We've got red, green, amber, or yellow,
+01:32 whatever you want to call it.
+01:35 You know what I mean, I can't type this bit, can I?
+01:38 And that gets our colors list.
+01:41 Now, the rotation between those colors.
+01:45 Again, if you haven't done this yet, hit pause now.
+01:51 The rotation of going through those lights,
+01:53 we're going to use cycle, remember the spinny thing
+01:56 from the other video.
+01:57 We're going to use itertools.cycle, but this time
+02:02 we're going to call colors,
+02:06 just like we have here.
+02:08 We're calling this and we know it's now going to cycle
+02:11 through red, green, and amber because by using split
+02:14 we created a list of these three strings.
+02:18 So that's what rotation is.
+02:21 Alrighty, so let's create our function.
+02:25 You know what, before we start any of that,
+02:28 let's throw this in so we know where we're starting.
+02:33 What do we want our function to be called?
+02:36 Let's call it light rotation.
+02:42 We're going to pass in rotation.
+02:49 Not that, well, I suppose, we have to,
+02:50 but we'll just do that anyway.
+02:53 We'll go def light(rotation)
+02:57 We're reading in the rotation.
+03:02 So, what's this app going to do?
+03:03 What's this little traffic light going to do?
+03:05 It's pretty much going to have three if statements.
+03:10 It's going to be, what do we see when it's amber?
+03:12 What do we see when it's red?
+03:14 And what do we see when it's green?
+03:18 So, we'll create a for loop for color
+03:23 in rotation.
+03:27 Now, remember, that's pretty much,
+03:28 we're not saying this here, we're saying just for the item
+03:33 in rotation, and rotation is returning each one of these,
+03:38 for the item in rotation, for the color in the rotation.
+03:42 Let's just make it really simple.
+03:44 If color equals amber,
+03:47 this is a direct match now,
+03:50 we're asking for a direct match.
+03:51 At this point, we have to know
+03:53 it's going to say exactly that.
+03:56 Let's go print.
+03:58 Caution.
+04:01 The light
+04:03 is...
+04:05 Where's percent?
+04:07 Okay.
+04:10 And then we just close it off with color.
+04:14 This is now going to print, if the color is amber,
+04:17 caution, the light is amber.
+04:22 Then, at this point, we want it to sleep
+04:27 because, if you think about it,
+04:29 when a traffic light goes yellow, or amber,
+04:32 it doesn't just go to red straight away, does it?
+04:35 It takes a few seconds, so let's just put in a sleep
+04:39 of 3 seconds.
+04:42 That's it for that.
+04:44 Just because we're only dealing with 3 colors here,
+04:48 let's just go with an elif statement.
+04:50 If the color is, now, red, or, elif color is red.
+04:55 We're going to go print, stop,
+04:59 the light is...
+05:03 Oops.
+05:05 S and then we go color.
+05:11 Now we can do a sleep of, let's go 2 seconds.
+05:18 And then we can go else because in any other case
+05:21 it's going to be green, isn't it?
+05:23 Print, go.
+05:26 The light is...
+05:30 Oops.
+05:31 Color.
+05:34 And we'll do another sleep of 3 seconds.
+05:37 Believe it or not, that's our app.
+05:40 This function here is going to go
+05:44 through editor's dot cycle of colors, red, green, and amber,
+05:48 and it's going to say, well, if amber, do that.
+05:51 If red, do that.
+05:53 And then, if all else fails, it's going to be green,
+05:56 it's going to be the other option,
+05:57 and we're going to get green.
+06:01 Let's run that.
+06:03 Save it, F5 it.
+06:05 Stop, the light is red.
+06:07 Go, the light is green.
+06:10 Caution, the light is amber.
+06:12 Now, the catch here is that it's going to actually be
+06:15 the same few seconds every single time,
+06:19 so we can anticipate that.
+06:20 That's not how traffic lights work.
+06:22 So to make it a little more interesting,
+06:26 a little more complicated, let's get rid of these static
+06:32 sleep seconds.
+06:33 We know with yellow lights, those are always going to be
+06:36 3 seconds, or 5 seconds,
+06:38 because it's the standard every time.
+06:41 This is why I imported random at the start.
+06:44 Let's make it a little randomly generated timer.
+06:51 We're going to go return, random.randint.
+06:56 And what are we going to put the...
+06:58 See, here we go, return a random integer in the range.
+07:00 So what do we want the range to be?
+07:03 Let's go 3 to 7 seconds.
+07:08 So it's going to return those integers, anywhere between
+07:12 three and seven, so we should just call this
+07:16 in sleep
+07:20 right there
+07:21 and right there.
+07:22 What that will do is it's going to generate a random number
+07:26 between 7 and 7 every time, and this should change.
+07:31 You can't predict what that's going to be.
+07:34 Let's run it.
+07:35 The light is red, okay.
+07:38 We have no idea how long it's going to take.
+07:40 There we go, so it actually took longer than before,
+07:42 same with the light being green.
+07:45 That was very quick, that was only about 3 seconds.
+07:47 Amber, default, 3 seconds.
+07:49 Then we're back on red, and it's sitting there
+07:53 for quite a while, so there you go.
+07:54 Now this is more of an accurate street traffic light,
+07:59 where it's a bit more randomly generated.
+08:01 But all of this,
+08:04 due to the awesomeness of itertools.cycle.
+08:09 There's your traffic light.
+08:10 Hopefully, your code looked something like that.
+08:14 Hopefully it was a little cleaner.
+08:16 But other than that I think we've just made an awesome
+08:19 little nifty app and a little tool, something that you'll
+08:23 probably never use , but that's itertools.cycle.

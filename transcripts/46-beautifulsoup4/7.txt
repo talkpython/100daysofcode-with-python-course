@@ -1,0 +1,99 @@
+00:00 And that my friends, is the basic overview
+00:03 of web scraping with Beautiful Soup 4.
+00:06 There is so much to it as I said,
+00:07 but this should get you up and running,
+00:09 and I hope it was enough to really get you excited
+00:12 about web scraping and get you creating some cool stuff.
+00:16 So just a quick re-cap of everything we did.
+00:20 Well we scraped a website, and the first thing we did,
+00:24 was we imported Beautiful Soup 4,
+00:26 simple, simple, simple stuff.
+00:29 Now, we then scraped the site, okay,
+00:35 and then we created an empty header list,
+00:38 all right, the first step was to create an empty list
+00:41 so that when we got all the headers,
+00:43 we could pop them there.
+00:46 All right, now this is the important part.
+00:47 We're creating the soup object,
+00:49 the Beautiful Soup 4 object and we do that by
+00:53 running that bs4.BeautifulSoup
+00:56 and we tell it to get the text of the site, site.text
+01:00 and pass it using the HTML passer.
+01:04 All right, and then, we decided to select,
+01:09 okay so we're being very specific here,
+01:13 we were selecting the css .projectheader class,
+01:18 so anything in our document; in our HTML document;
+01:22 that had that class was going to appear,
+01:25 and we were very lucky, we did the research,
+01:27 and we found that our H3 headers,
+01:30 were the only tags that use that CSS class,
+01:35 okay, that's why it could work.
+01:37 So just be careful again in case you pull a class
+01:40 that quite a few HTML objects are using,
+01:44 'cause then you're going to get a lot of unexpected results.
+01:48 All right, and then after that
+01:49 the only thing worth noting here,
+01:51 is as we were creating our list, our header list,
+01:55 we were using get text on all of those headers,
+01:59 on all of those items that we selected
+02:02 using the projectheader class, to just get the text,
+02:06 we wanted the get text option there.
+02:09 Okay, and that's the scraping a website,
+02:13 pretty simple, next we did some funky command line stuff,
+02:17 using the Python Shell, and that was just to demonstrate
+02:21 some very simple, yet effective Beautiful Soup 4 features.
+02:26 All right, so the first thing we did was
+02:28 we imported bs4 of course and then we
+02:31 created that soup object again, so skipping through that.
+02:35 The first cool thing we did is we were able to
+02:37 search the entire site, that soup object that we created
+02:42 for the very first ul tag,
+02:45 remembering that this sort of search,
+02:48 only brings up the first tag, okay
+02:50 and that didn't work for us.
+02:52 Then we wanted to find all of the ul,
+02:55 the unordered list tags and while that works,
+02:59 that brought up everything and again,
+03:01 that's not what we wanted, so find_all,
+03:04 will search the entire HTML site, for that specific tag.
+03:12 All right, now, this time we decided to
+03:15 drill down into the main tag, so as we've covered,
+03:19 you have that nice little nested feature here,
+03:23 where you search soup for the main tag
+03:25 and then we went, within the main tag,
+03:27 drilled down to the unordered list,
+03:30 and the first unordered list it pulled,
+03:32 was the list we wanted, but again it had ul tags in there
+03:37 which we didn't actually need for our purposes.
+03:40 So then we did something very similar,
+03:43 but in this case we wanted find_all,
+03:46 because if we had just specified soup.main.li,
+03:51 we would have only gotten the first list object within main,
+03:55 so this time we go soup.main.findall list tags,
+04:01 find all of the li tags within that HTML document,
+04:06 okay, that fall underneath the main tag.
+04:10 And then we stored all of that into an object called all_li,
+04:17 and then we just iterated over it using a for loop,
+04:20 pulled all of the items within there,
+04:23 the individual li tags, and then we used .string
+04:28 to simply pull, that plain text, the plain text,
+04:32 the headers of our articles and that was it.
+04:35 Nice and easy, pretty simple stuff,
+04:37 the more practice you do, the better you'll get.
+04:39 And that was it, so your turn, very cool stuff.
+04:44 Go out, I reckon the challenge for you should be
+04:47 to go out to one of your favorite sites, okay,
+04:50 find maybe the news article section
+04:54 and try and pull down all of their news articles.
+04:57 Maybe just on one page, maybe across multiple pages,
+05:00 do something like that.
+05:02 Even try and pull, rather than just the header,
+05:04 maybe try and pull the very first blurb of the news article.
+05:09 Do that maybe it's a game news website,
+05:12 could be anything you want, but just give it a try.
+05:15 This is now your chance to go out there
+05:17 and try and pass a website.
+05:20 If you want a really fun one,
+05:21 try going to talkpython.fm and try
+05:24 and pull down maybe all the episodes.
+05:26 Either way, have fun, keep calm and code.

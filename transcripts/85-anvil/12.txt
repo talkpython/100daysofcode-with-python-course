@@ -1,0 +1,63 @@
+00:00 Our add document form is taking us through the steps here,
+00:03 it loads up looking nice.
+00:04 We click the button and it validates
+00:06 and then down here we'd have to write to do
+00:10 create document
+00:12 to do go to home or something to that affect.
+00:16 Well let's talk about these,
+00:17 go home is easy we'll figure that out in a minute.
+00:20 Create document, that means we need a database
+00:22 and we've talked about SQLAlchemy,
+00:24 we've talked about SQLite and
+00:27 all of those probably didn't feel super super easy.
+00:30 So let's see how it is over here.
+00:32 Alright this is probably that
+00:33 full stack made easy thing I talked about.
+00:36 So we go over here to services,
+00:37 expand that out and go to data tables.
+00:40 So create a datable service
+00:43 and take it back out if we don't like it
+00:45 and we're going to add a table.
+00:47 Let's create a new table.
+00:48 Let's call this categories, lower case.
+00:51 And then you define a schema,
+00:53 this is just going to have a text column called name
+00:57 and it's just going to be text.
+00:59 We could add another column like id and so on
+01:03 but I think name is actually enough.
+01:05 Let's go over here and have
+01:06 another table called documents.
+01:08 So these are, the documents that our
+01:10 little document web app manages.
+01:12 Let's give this also a name.
+01:14 Give them a date time called created.
+01:18 Let's give them a text column called content.
+01:23 We could even add, like, a numerical thing for like views,
+01:26 how many times they've been viewed or downloaded.
+01:28 And now, do this last one that gets pretty interesting.
+01:31 Go over here and add link to categories one or many rows.
+01:36 How's that?
+01:37 Call this category.
+01:39 Isn't that awesome?
+01:40 So this is your foreign key relationship back over there,
+01:43 that's automatically taken care of for us.
+01:45 So this is pretty much ready to go,
+01:47 let's go and check this part out.
+01:48 Let's just add a couple things
+01:50 like science
+01:53 science news press release documentation.
+01:55 So there's a few items.
+01:57 Now check this out here, permissions.
+02:00 Do you want your server code to be able to get to them?
+02:02 Which is pretty safe.
+02:04 Or even your client side JavaScript
+02:06 which your Python code becomes to get access to them.
+02:09 This is not super safe.
+02:12 People can mess with the JavaScript
+02:13 in your browser when they view the page
+02:15 and potentially, especially if this is edit, mess with it.
+02:18 So we're going to say only this, only server modules.
+02:22 Okay so server modules can talk to this
+02:24 and we can talk to those server modules
+02:26 that operate on our behalf.
+02:28 We have no documents yet but we have our categories.

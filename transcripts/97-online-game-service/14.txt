@@ -1,0 +1,64 @@
+00:00 Next up, let's implement game status.
+00:03 So, if we're in Postman, we can pull this up, check.
+00:06 I would get the details for this game
+00:09 that actually doesn't even exist.
+00:10 Okay, so we have a little bit of work to do.
+00:12 Now, on a couple of these going forward,
+00:16 I'm going to take some code and just put it in here.
+00:18 I'm not against typing it out as you guys
+00:20 can probably tell, I'd love to do that for you.
+00:22 But there's times when it's just not really worth
+00:26 you watching me write these details,
+00:27 'cause we really already computed this,
+00:29 but we need to change the way which we're computing it
+00:33 because we can't store the state between
+00:35 rounds in a particular game like we did before.
+00:37 So we got to go back to the database and compute it.
+00:39 It's kind of clumsy.
+00:41 If we change our data model, we could do
+00:43 this much more simply, but remember one
+00:46 of my goals is to actually not change
+00:47 the data model, 'cause I think that's adding too much.
+00:51 This is going to be a little bit less pretty,
+00:52 but let's have a look.
+00:56 And when we ask for the game status,
+00:57 we want to give several pieces of information.
+01:00 Is the game over, what moves were there?
+01:04 What players were involved in the game?
+01:07 And, who won the game if the game is over?
+01:11 So, here, we're grabbing, up here we have
+01:14 the history, these are all the moves played.
+01:16 We have, is the game over?
+01:17 These are all things that we've wrote before.
+01:20 We need to quickly, give it an id,
+01:22 find a roll and find a player so
+01:25 that we can use the names and stuff
+01:26 in some of these methods down here, like this to_json.
+01:30 So, we've built to sort of look up
+01:31 that we can just quickly pass id
+01:33 instead of going back and back and back to the database,
+01:36 we can just store those here.
+01:37 This works for a small number of players,
+01:39 for hundreds or thousands, but not millions.
+01:42 Alright, we'd change the way this is written
+01:43 if that were the case.
+01:45 Find the player, count how many times
+01:47 they've won, because that actually helps us,
+01:50 I don't need this anymore.
+01:51 That actually helps us know whether
+01:52 the game is over, things like that.
+01:54 Okay, so let's go and run this.
+02:00 It shouldn't be super-interesting,
+02:01 because there's going to be no game,
+02:03 it might even crash, index out of range, yes.
+02:08 Yeah, I thought so, so there's no history here.
+02:10 So let's say we need to do our little 404 thing.
+02:13 We'll say this level, I'm going to just say abort 404,
+02:20 flask.abort(404), and that should throw
+02:24 an exception and stop it right away.
+02:25 Let's try that again.
+02:29 Ooh, page not found.
+02:30 So we don't have any games created
+02:32 'cause we have to be able to play a game,
+02:34 but I think it's going to work.
+02:35 We'll come back to this and test it again.

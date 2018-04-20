@@ -1,0 +1,99 @@
+00:00 Our goal is to read that CSV file.
+00:03 We technically could do that right here,
+00:05 but I would like one part of my application to just be
+00:08 dedicated to reading, and parsing,
+00:10 and working with the data.
+00:11 And another to do with this, kind of, UI business.
+00:13 So let's make another Python file called research,
+00:17 and we'll put that at the top of level of our program here.
+00:20 Now we're going to want to work with the CSV file.
+00:23 So let's come over here and define a function called init.
+00:27 And this is going to basically load up the data,
+00:30 the data file and then get it into memory
+00:34 and we can answer questions about it later.
+00:36 We're going to have this global shared piece of data like this,
+00:40 and we're just going to make that a list.
+00:44 So we're going to initialize this, and now what we need to do
+00:46 is we need to determine this file.
+00:48 It would be very tempting to say file
+00:50 name is just
+00:52 ./data/seattle.csv,
+00:57 or back slashes if you're on windows.
+01:00 Now, be careful, backslashes and strings
+01:02 don't mean quite what you think they mean.
+01:04 This, if you said something like \t,
+01:06 notice how it changed colors, or \n.
+01:08 Backslash and strings is used as a,
+01:11 what's called an escape character,
+01:13 and it means \n actually stands for a return,
+01:16 and \t for a tab and so on.
+01:18 You can use double backslashes to say,
+01:21 no no, I just mean the backslash.
+01:22 All right, so be a little careful there.
+01:24 But, even so, that withstanding,
+01:27 this, and the spelling as well,
+01:30 this is not going to be working out really well.
+01:32 It'll work if we'd run it actually,
+01:35 but only if the working directory is this folder.
+01:38 If you run it from the command prompt,
+01:40 or terminal, and you're somewhere else,
+01:42 this isn't going to work.
+01:43 So we're going to take a slightly more complicated step
+01:46 to determine this location.
+01:49 So we're going to come up here and import the os module,
+01:52 which let's us ask cool questions.
+01:54 And we'll say folder, let's call it basefolder,
+01:59 = os.path.dirname of where.
+02:04 Well, one of the things we have to work with that's
+02:07 in variant is where this file is located.
+02:10 And what we want to do is go to where this file is
+02:12 located, go into the data folder, and go here.
+02:14 And there's a way to always get to that in any Python
+02:16 file just say dunder file like this.
+02:18 So, this is a file,
+02:20 dir name, we'll drop the file part,
+02:22 and just keep the directory,
+02:23 and then we need to say filename, here is
+02:26 actually going to be os.path.join,
+02:30 and we want to put together the basefolder and data,
+02:33 no slashes, and seattle.csv, okay?
+02:40 So this will do that in a platform independent,
+02:44 location independent way.
+02:45 And it's really, you know, not that much work
+02:48 above what we were maybe going to type in the first place.
+02:50 So let's just open this, we'll use a with block,
+02:54 we'll say open file name, and we can give it a read,
+02:56 and one can even say encoding=UTF-8,
+03:03 that's the safest guess, and we'll say as fin,
+03:05 that'll name our variable.
+03:06 Let's just do a quick print,
+03:07 forget CSV for a minute, we just want to see what's in here.
+03:10 So we can say, read lines, or just read,
+03:14 look at all the text.
+03:15 So now, let's call this function,
+03:17 it's not done, it's not even close, it doesn't do
+03:20 anything with the data, it just pulls it in as text,
+03:22 but it's going to verify this one aspect of what we've done,
+03:24 reading the file.
+03:26 So let's go over here, and let's, before we do any of this,
+03:30 let's go do our initialization.
+03:32 So we want to go to the very top, say import research,
+03:36 all right, and then down here we can say research.
+03:39 forget data, we're not going to work with that directly,
+03:41 but we'll say init.
+03:42 Now, let's run this and see what we get.
+03:45 Boom, we saw a whole bunch
+03:48 of CSV data scream by, just like that.
+03:51 How cool is this?
+03:52 So this is totally working well.
+03:54 We've got our research, it can find the file,
+03:57 and I can tell you it will find it from
+03:59 anywhere on the computer.
+04:01 It doesn't matter, it's going to just use the location
+04:04 relative from here to there, based
+04:06 on this thing that we did.
+04:07 All right, so that's how we load the file up
+04:10 and get a file stream, that's one half of the problem.
+04:13 The other half is to take that giant string
+04:15 and convert it into data we can work with.
+04:18 That's the next step.

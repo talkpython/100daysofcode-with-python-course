@@ -1,0 +1,82 @@
+00:00 Let's review some of the core concepts around Anvil.
+00:02 We saw that we start be defining these forms.
+00:05 We drag the components over, we set their properties,
+00:07 their names, their bindings, all that kinds of stuff.
+00:09 Here's our add document UI and we also have the code,
+00:13 so on the flip side we could look
+00:15 at the code behind in the form
+00:17 and hook into the events for like
+00:19 the button click or link click
+00:21 or page load or this thing shown
+00:23 all sorts of cool tuff.
+00:25 And this Python code is actually converted
+00:28 into Javascript and runs on the client side.
+00:31 So all the code you write here
+00:32 doesn't ever touch your server at all.
+00:34 It's just, we write it in Python
+00:36 but it actually runs locally
+00:38 which is actually really amazing
+00:39 and takes a lot of the load off your server.
+00:41 One thing we wanted to do was navigate between sub forms,
+00:45 so to load a different sub form
+00:47 but effectively in this case
+00:48 navigate the home_details_form.
+00:50 We go to the content panel
+00:52 and clear out whatever happens to be there
+00:54 and then we add a new instance of
+00:56 the sub form that we want to show.
+00:58 Sometimes it's parameterless like this one,
+01:00 other times like our document details
+01:02 we actually passed in the
+01:04 particular document that was selected
+01:07 and then it showed the details of that.
+01:08 It's a really really nice way to navigate between these.
+01:12 Of course you're going to likely need a database.
+01:15 You can go to the data table service
+01:17 and create these tables and fill them up with data.
+01:20 It's really easy, you can even link between them.
+01:22 Don't forget to set the permissions,
+01:23 in this example it's no access from Javascript
+01:26 but on the server side there is access.
+01:30 To do that server side code,
+01:31 we're going to write a server module
+01:33 and make it callable back on the client
+01:35 so here we created all docs method
+01:37 and we added a callable decorator,
+01:40 we just write whatever code we want and return it
+01:42 and this magically finds its way back
+01:44 linked in with all sorts of auto complete
+01:46 in various places back on the client side code.
+01:50 Speaking of client side code,
+01:51 here's a little bit of our refresh data
+01:53 we just say anvil.server.call and we type in the name
+01:56 and then we put in the perimeters
+01:57 if they're more after that.
+01:59 Now we just work with the documents, right?
+02:01 So it's just a list of dictionary's, off we go.
+02:04 Once you get your app built,
+02:05 you want to put it on the internet.
+02:07 It's so amazing.
+02:08 So you can click publish
+02:09 and it pulls up either a little trial link,
+02:11 you want to try the mobile version on your phone
+02:13 or I clicked share via public link.
+02:17 We also saw that there's version history
+02:19 which is really nice, you can clone that with git
+02:21 but what's relevant here is you can click publish
+02:25 at the different save points.
+02:26 So you name these like to present,
+02:28 that's one I named
+02:29 and if for some reason you make
+02:30 a new change you don't like it
+02:31 just go click publish and instantly
+02:33 roll it back to an old version.
+02:34 Really awesome, right there.
+02:37 Finally, if you want to get the whole story, the back story on Anvil,
+02:39 I had Meredydd Luff on Talk Python
+02:42 on Episode 138 and we talk about all the
+02:44 internal workings of how this is built,
+02:47 how he makes all the pieces work together
+02:50 and it's pretty cool.
+02:51 So if you enjoyed this and want to learn more,
+02:52 check out that episode of Talk Python.

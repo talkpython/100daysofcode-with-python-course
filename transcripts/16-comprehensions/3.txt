@@ -1,0 +1,49 @@
+00:00 Let's do a more interesting example.
+00:02 I'm going to load in the text of Harry Potter,
+00:05 split it into words, and use list comprehensions to filter
+00:10 out stop words, or other words that are not meaningful.
+00:15 So let's load in Harry Potter, and parse the response,
+00:20 which is response.text, I lowercase it,
+00:25 and I split it into a list of words.
+00:28 And you can see that by just getting a slice.
+00:34 Cool. And let's see the most common words so far.
+00:47 Right, well here are stop words
+00:50 we're not really interested in,
+00:52 and the dataset also has a couple of other characters,
+00:56 that should not really be taken into account,
+00:59 for example, do we have a dash in words?
+01:06 Right, so we need to filter that out as well.
+01:08 So let's clean out any non-alphabetic characters first.
+01:17 So this looks over the words, and any word that contains
+01:20 one or more non-alphabetic, or alphanumeric even,
+01:24 characters gets stripped out, and I do realize
+01:28 that that might lead to empty words in the result list,
+01:31 but next we will have another list comprehension that
+01:35 takes care of that. So is the dash gone?
+01:42 And yes its gone, but we still have stop words,
+01:46 for example "the", which we're not really interested in.
+01:50 So let's do another list comprehension to filter those out,
+01:54 but for that I need a list of stop words.
+01:57 I already prepared it, and the code is the same
+02:00 as loading in Harry, I'm just going to copy/paste that.
+02:05 And here you have a list of all the stop words.
+02:11 Let's wipe those stop words out of the words list so far.
+02:16 So words equals word for word in words.
+02:22 If word strip, and that's what I said before.
+02:26 There might be some empty strings in there,
+02:28 and by checking if word strip is true,
+02:32 you're basically saying, discard any empty strings.
+02:37 So if you have a non empty string,
+02:40 and the word is not in stop words, then it's a go.
+02:47 So we need non empty words, and a word
+02:49 that's not a stop word. If so, store that into the new list.
+02:54 And then we can do a simple check.
+02:57 If "the" is still in words, and now it's gone.
+03:01 Now let's do the counter again,
+03:06 and see if we have a more relevant result.
+03:12 And there you go, there's the Dumbledore.
+03:15 I have to confess I didn't read Harry Potter,
+03:18 but this sounds more like Harry Potter.
+03:21 So, I think this was a great example to show you
+03:25 how you can use list comprehension to clean up data
+03:29 for analysis using few lines of code.

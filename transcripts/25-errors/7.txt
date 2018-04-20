@@ -1,0 +1,29 @@
+00:00 Day 2, your goal is to discover all the
+00:02 error conditions that you might need to catch,
+00:05 and actually determine the exception type that
+00:08 that results in, in Python.
+00:10 Are you working with something that talks to a database?
+00:12 What kind of errors could you get from the database?
+00:15 Are you talking to something that goes across the network?
+00:18 What type of errors come across, from say, the
+00:20 network being down or DNS not working,
+00:22 or the network being on,
+00:24 but not being able to reach the host,
+00:26 all those sorts of things.
+00:28 So come up with that list,
+00:29 and figure out what type,
+00:31 what actual exception type in Python does it surface as.
+00:35 All right, if it's a connection error it could be
+00:37 something built into the standard library,
+00:38 or it could be something in say, requests,
+00:41 as we saw in our example.
+00:42 So, you're going to have know exactly what those types are
+00:44 so that you can actually write the
+00:46 probably error handling code.
+00:47 That's it for today,
+00:49 it might be a little bit tricky to get your app
+00:51 into all the different situations that it's going
+00:53 to encounter, all right?
+00:55 Some of these errors are hard to trigger,
+00:56 but do your best to figure out all the various
+00:58 error cases you're going to run into.

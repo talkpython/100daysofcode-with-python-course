@@ -1,0 +1,64 @@
+00:00 Now let's turn our attention to finding a user.
+00:03 This is pretty straightforward,
+00:04 but it does introduce an entirely new concept.
+00:08 I could ask for a user that doesn't exist, right?
+00:11 Over here, we can go to our get_user,
+00:14 and Mark, I don't think Mark exists in the database,
+00:16 it just says, hey, we would find him.
+00:19 I'm sure that Mark doesn't exist.
+00:21 Eh, it still thinks it would find him.
+00:23 And the status code is 200 OK.
+00:25 So what we need to do is say,
+00:27 yes, this user was found and here's their details,
+00:30 or no, the user was not found, and here's what happened.
+00:34 So it's really easy to do this with the code
+00:36 we've already written and encapsulated in our service.
+00:46 Alright, so, there's our user.
+00:48 And if it wasn't null, we could return it.
+00:51 Be super easy.
+00:52 Let's go ahead and write that code really quick.
+00:56 Now, to all these database entities
+00:58 that need to be returned, if I just try to return Player,
+01:01 let's try to make this work here.
+01:04 We know Computer exists, let's try to get them.
+01:06 What happens? Boom.
+01:08 Player is not JSON serializable.
+01:09 Failure.
+01:11 What we have to put here is not
+01:13 a random object out of the database, but a dictionary.
+01:20 I've added this to_json method for every one of these.
+01:23 The one that's most interesting is this,
+01:26 this move here, so you can see this to_json,
+01:29 that is going to create this dictionary to be sent back,
+01:33 right, and it's kind of encapsulated here with this class,
+01:35 which I think is pretty cool.
+01:37 So what we got to go over here and say to_json now,
+01:40 we do that, boom, there's our computer, ID is 1.
+01:47 What about Michael, does he exist?
+01:49 None type has no attribute to JSON.
+01:51 No, there is no Michael, so what we need to do
+01:53 instead of let it crash, is we need to say,
+01:55 sorry, that user wasn't found.
+01:56 So we'll say if not player,
+01:59 and we can just say this, abort, sorry flask.abort(404), Not Found
+02:06 Alright, now let's try it for one that doesn't exist.
+02:09 Okay, the page was not found, 404, that's fine.
+02:12 Maybe we could give a better message about the user,
+02:14 but notice this is a little bit off.
+02:18 What we need to do is actually return a response
+02:20 and set the status to be 404
+02:22 in our little not found handler.
+02:26 Alright, there we go, 404 not found.
+02:28 That's what our client can use
+02:29 to say no no no, that didn't work.
+02:30 We could put a little JSON message in here if we want,
+02:33 but it doesn't really matter for what we're doing.
+02:35 Okay, go back to working one.
+02:39 Here we go.
+02:40 Okay, so our get user is implemented,
+02:43 and the interesting thing that we learned here
+02:45 is this response message, a flask.abort(404)
+02:49 which really redirects over to this not found handler,
+02:52 and does whatever it's going to do.
+02:54 So this is really important when people are trying
+02:56 to interact with things that don't exist.

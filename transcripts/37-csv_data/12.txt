@@ -1,0 +1,13 @@
+00:00 And on Day 3 you're going to want to
+00:02 actually work with the data.
+00:04 So you need to transform it into
+00:05 a way that you can work with.
+00:06 If you need to work with that particular field,
+00:09 I think my Thanksgiving example might not actually need it
+00:12 because of the way that that works.
+00:14 Depending on your data you might have to, you know,
+00:16 sort of upgrade it to the numbers or numbers
+00:19 and then, you know, ask the user questions
+00:21 and try to basically provide an answer based on the data.
+00:25 When you're done, share what you learned
+00:27 as always, and thanks, hopefully you enjoyed this section.

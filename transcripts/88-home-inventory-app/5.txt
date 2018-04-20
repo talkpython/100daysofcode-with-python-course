@@ -1,0 +1,102 @@
+00:00 What we're looking at here is the add room function.
+00:03 Now the reason I'm showing you this is because
+00:06 it was a bit tricky to get around this.
+00:09 We want our users of this application to be able
+00:13 to add rooms and what that means is
+00:15 they're going to be adding tables to our database.
+00:20 Each room is going to be a table
+00:23 and each room is going to be able to have certain items
+00:27 added to it.
+00:28 A name and then a value.
+00:31 You can see that here.
+00:32 We've got our item, meaning the item we're adding
+00:35 to the room, which is text
+00:36 and then a value which is a real, as in pretty much a float.
+00:41 A real dollar value, a real number value.
+00:45 The catch is we want the user to be able to specify
+00:50 the name which means the user is essentially telling us
+00:54 what our table name is.
+00:57 That in SQLite3 is actually not allowed.
+01:02 It's not Pythonic and it's actually unsafe
+01:05 from a database standpoint because it allows people
+01:08 to inject malicious code into your database,
+01:12 into your execute command.
+01:16 You can see here what we've done is
+01:19 just ignore this line here.
+01:21 Input, what would you like?
+01:23 What name would you like to give the room?
+01:25 Let's say we gave the room the name Living Room
+01:28 or just Kitchen we'll go with Kitchen.
+01:31 When the cursor executes to our SQLite database,
+01:35 it creates the table.
+01:38 Normally, you would just type the table name in here
+01:41 within the quotes.
+01:43 But we can't do that because we don't know
+01:46 what the user is going to specify.
+01:48 We need to parse it.
+01:49 The variable that the input was assigned to.
+01:53 So, name, we need to parse name into SQLite 3.
+01:57 That's what actually incorrect.
+02:00 That's what actually unsafe.
+02:02 By going name.lower and essentially injecting it
+02:07 into our SQLite 3 code here,
+02:12 we run the risk of actually injecting malicious code
+02:16 into our database, which could be very dangerous.
+02:22 To get around this, SQLite recommends you use
+02:26 question mark substituting.
+02:29 On investigation, you can't use that for the table name.
+02:34 You can use it for the rest of the query.
+02:36 You can use it after that when you're talking about
+02:38 data to add into the table,
+02:41 which you'll see we use later
+02:42 but you can't use it to actually specify the table name,
+02:46 which is very frustrating.
+02:48 But the way to get around this and it's a bit of a hack job
+02:53 is to scrub the data that goes in.
+02:57 So the user will add a name and we're going to scrub that name
+03:03 to remove anything that's malicious.
+03:06 We're going to define anything as malicious as spaces,
+03:10 any non-alphanumeric characters.
+03:15 Could be back slashes, could be apostrophes,
+03:19 could be a percentage sign, plusses,
+03:23 anything like that.
+03:24 We're going to scrub all that out.
+03:26 We have this simple one-liner here that does that for us.
+03:32 So any name that gets parsed into scrub,
+03:36 so let's say we're going to scrub name,
+03:38 scrub of table name.
+03:41 What we're going to go is we're going to return,
+03:42 this is all in one line, Bob would love this,
+03:46 and essentially what it's doing is
+03:49 for every character in this table name,
+03:53 if it is a alphanumeric number
+03:59 or an alphanumeric character, I should say
+04:02 then it's going to join it.
+04:05 If not, it leaves it out.
+04:08 So we could use this function here to then scrub
+04:12 any word we want and turn it into the safe format
+04:17 that our SQLite database will actually approve of.
+04:21 So to demonstrate, let's run this up in the shell.
+04:26 All right, so I've used a bit of magic and just copied
+04:28 and pasted it in there.
+04:29 So now we can scrub anything we want.
+04:32 So let's scrub this string here.
+04:38 We'll go Julian-Bob, oops.
+04:44 And it comes back as just JulianBob.
+04:45 It gets rid of that dash.
+04:47 So let's scrub an actual room
+04:51 and we'll go scrub Living Room.
+04:56 You see, it gets rid of the space because all it's doing
+04:58 is just capturing the letters and the numbers
+05:02 and putting them together.
+05:05 Let's try one more thing.
+05:08 Mike99+.
+05:16 Just mushed some rubbish in there
+05:20 and it strips out all the stuff
+05:22 that could potentially hurt us.
+05:24 This is a nice little workaround to get around
+05:27 the SQLite3 restriction on table names
+05:32 and not being able to substitute them with variables.
+05:37 So this is what I've put in there.
+05:39 Hopefully, that'll help you out in the future, as well.
+05:43 But that's just a quick explanation of the scrub.

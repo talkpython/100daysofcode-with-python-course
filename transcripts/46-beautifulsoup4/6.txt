@@ -1,0 +1,186 @@
+00:00 Alrighty, now we want to actually do something interesting
+00:04 so let's go to our article page here on PyBites.
+00:08 I want to do something like pull down every single article
+00:12 name that we have written.
+00:15 Very, very daunting so the first thing we want to do
+00:18 is view the page source.
+00:22 If you, just a quick tip, if you ever get stuck
+00:24 and you're not too sure what is what in this page here,
+00:30 you can click on inspect.
+00:34 As you scroll down through inspect through the code
+00:37 the HTML code within the inspect, you'll actually be able
+00:41 to see what is which part of the page.
+00:45 We need to lower this down here, lower this down here.
+00:49 And here is our HTML code that runs the page.
+00:53 As we hover down through these little tabs,
+00:56 these little arrows here, these drop downs,
+00:59 you'll see parts of the page get highlighted.
+01:02 That's how you know which code is actioning which part
+01:06 of the page.
+01:07 We know this is our main here.
+01:09 We find the main tag and sure enough that's highlighted.
+01:13 Now we can click on article here.
+01:15 You can see that's highlighted the section in the middle
+01:17 that we want, right?
+01:19 We can keep drilling down.
+01:21 Here is the unordered list, ul, that is our list
+01:25 of article names.
+01:27 Then here are all the list elements, the li.
+01:30 Open them up and there is our href link
+01:37 and the actual name of the article.
+01:40 That's what we want to pull down.
+01:42 We can look at that quite simply here.
+01:45 But in case this was a much more complex page
+01:47 such as news websites and game websites and whatever,
+01:51 you might want to use that inspect methodology.
+01:56 Alright, now that we know we want to get the unordered list,
+02:01 let's do some playing in the Python shell.
+02:05 I've started off by importing Beautiful Soup 4
+02:08 and requests.
+02:09 I've already done the requests start get
+02:11 of our articles page.
+02:14 We've done the raise_for_status to make sure it worked.
+02:17 Now let's create our soup object.
+02:21 So soup equals bs4.BeautifulSoup,
+02:27 oops, don't need the capital O.
+02:29 site.text.
+02:31 So this is very similar to our other script.
+02:33 And HTML parser.
+02:38 Alright, and with that done what can we do?
+02:41 We can search.
+02:43 We don't have to use that select object.
+02:44 That was very specific and that was very CSS oriented.
+02:48 But now we're going to look at tags, alright?
+02:50 Back on our webpage, how's this for tricky?
+02:53 The individual links don't have specific CSS classes.
+02:59 Uh-oh, so how are we going to, how are we going to find them?
+03:02 Alright, we're going to have to do some searching right?
+03:05 How about we search for the unordered list.
+03:10 We could just do soup.tagname, isn't that cool?
+03:14 Now you just have to specify the tag that you want to find.
+03:17 You don't even have to put anything around it.
+03:19 It doesn't need to be in brackets, nothing special.
+03:22 Soup.ul.
+03:24 Hang on a minute, what do we get?
+03:27 Now look at this, we got an unordered list.
+03:30 Ah but, we got this unordered list.
+03:36 We got the actual menu bar on the left.
+03:38 We didn't get this one.
+03:41 Now why is that?
+03:43 That is because soup.ul,
+03:47 or soup.tag only returns the very first tag
+03:52 that it finds that matches.
+03:55 If we look at that source code again you'll find
+03:58 we actually have another unordered list on the page.
+04:02 That is our menu here, okay.
+04:06 That's not going to work using soup.ul is not going to work,
+04:09 because we're only pulling this one here.
+04:13 What do we need to do to find the next one?
+04:16 Well we need to do a little bit more digging.
+04:19 We could try the soup.find_all options.
+04:26 Let's see what that returns.
+04:27 So soup.find_all.
+04:30 Then we specify the name of the tag that we want.
+04:33 We're going to specify ul.
+04:35 Let's hit enter and see what happens.
+04:37 Look at that, we've got everything.
+04:40 We got all of the article names.
+04:42 Let's scroll up quickly here.
+04:44 But no we also got the very first unordered list as well.
+04:50 We got that same menu bar.
+04:52 How do we strip that out?
+04:53 Well, I suppose we could go through and do regex
+04:58 and all sorts of crazy stuff.
+05:00 But Beautiful Soup actually let's you drill down
+05:03 a little bit further.
+05:05 What makes our unordered list here unique?
+05:10 On our page, on PyBites, it's the only unordered list
+05:15 that lives within our main tag.
+05:19 Look up here, here's main.
+05:22 That's the opening of main and we saw that closing of main
+05:24 down on the bottom.
+05:25 And look, it's the only unordered list.
+05:28 What we can do is we can do soup.main.ul.
+05:37 You can see how far we can actually drill down.
+05:39 Isn't this really cool?
+05:41 We run that and what do we get?
+05:45 Let's go back up to where we ran the command
+05:47 and from soup.main.ul, we got the unordered list
+05:51 and we got all of the list elements with the atags,
+05:56 the hrefs, and the actual plain text in the middle.
+06:01 There we go, we've already gotten exactly what we want.
+06:05 But we actually don't need all of these tags
+06:09 around the side.
+06:10 We don't even need the URL.
+06:13 How are we going to get around that?
+06:15 Well let's see what we can do.
+06:18 We don't actually need the unordered list, do we?
+06:21 We don't need this whole UL tag,
+06:23 we only need the list elements and we know
+06:26 from looking at the code that these are the only
+06:30 list elements within the main tag.
+06:33 Main tag ends here, there's no more list elements.
+06:36 What if we do that same, find_all, but just on list.
+06:42 Let's go soup.manin.find_all,
+06:46 because we're only going to search within the main element.
+06:53 There we go, look at that.
+06:54 It's not formatted as nicely as the other one
+06:56 that we saw, but it is the information that we want.
+07:01 You've got your list elements, you've got a URL,
+07:04 and they you've got your title, and then it closes off.
+07:09 Let's give ourselves some white space to make this
+07:13 a little easy to read.
+07:15 What can we do, we want to store all of that.
+07:18 Let's store that in a list called all_li.
+07:22 We're getting all of the li options.
+07:26 We do soup.main.find_all li.
+07:34 Now all of that is stored in all_li.
+07:39 Now how cool is this?
+07:42 The text in here in each one of these list elements
+07:49 is actually the stream, right?
+07:51 You know that, we discussed it in the previous video.
+07:54 What we can do, we can do for title in all_li
+08:01 I guess for items for each one of these items.
+08:04 I shouldn't really use the word title.
+08:06 Let's actually change that to be for item
+08:10 in all_li.
+08:13 It's this we're going for each one of these
+08:18 just so you can follow along.
+08:21 What do we want?
+08:22 Well we want just the subject line.
+08:24 We just want this string, we just want the text.
+08:27 How do we specify that?
+08:29 We go print, now this is going to be really easy
+08:33 and I'll tell you what, it's just crazy sometimes
+08:36 how simple they make it.
+08:39 item.string, and that is it.
+08:44 Can you believe it?
+08:45 To strip out all of this, all the HTML and all we want
+08:50 is that, item.string.
+08:53 You ready?
+08:58 How cool is that?
+08:59 We've just gone through I think it's like 100 objects,
+09:03 100 articles that we've written.
+09:05 We've just printed out all the names.
+09:07 This would be so cool to store in a database
+09:10 and check back on it from time to time.
+09:13 Email it out, keep it saved somewhere.
+09:16 I love this sort of stuff.
+09:18 There you go, we've look at quite a few things here.
+09:22 We've looked at find_all.
+09:24 We've looked at using just a tag name,
+09:30 and we've looked at using a sort of nested tag name.
+09:36 So you can actually drill down through your HTML document
+09:40 which is super cool to help you find nested
+09:44 or children objects within your HTML.
+09:48 That's Beautiful Soup 4.
+09:50 That's pretty much it and it's absolutely wonderful.
+09:55 There's obviously so much more to cover
+09:57 and that could be a course in itself.
+09:59 The documentation is wonderful.
+10:02 Definitely have a look through that if you get stuck.
+10:04 But for most people this is pretty much the bread
+10:08 and butter of Beautiful Soup 4,
+10:10 so enjoy it, come up with cool stuff.
+10:12 If you do make anything cool using bs4, let us know.
+10:16 Send us an email or something like that.

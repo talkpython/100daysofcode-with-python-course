@@ -1,0 +1,38 @@
+00:00 Over here at movie_service by talkpython.fm
+00:04 we have a service that has, I guess probably a couple
+00:06 thousand movies.
+00:08 Notice down here this does not have all the movie data that
+00:11 you might want, it only has some of the movies, but it's
+00:14 more than enough for us to play with.
+00:17 There's three things that this service will let you do.
+00:20 It will let you basically search by keyword, so we come over
+00:25 here and call API search, and here we're searching for run.
+00:29 And firefox likes to give you this pretty view here,
+00:32 let's go in and just look at the raw, so you can know what
+00:33 you're getting.
+00:35 So here, the keyword is run, and we've got some hits.
+00:38 And hits were for things like 'The Rundown',
+00:41 and 'Runaway Bride', and 'Bladerunner' and 'Chicken Run',
+00:44 and all these movies here.
+00:46 So we'll be able to put whatever we want in the
+00:49 here, if we wanted away, boom.
+00:51 'Flushed Away' is the first result.
+00:53 It apparently has to do with sewers and rats and frogs.
+00:56 Anyway, we can search for these movies using the service,
+00:59 and what we get back is this format here called JSON,
+01:02 which is the JavaScript Object Notation.
+01:06 This is probably the most popular format for data exchange
+01:10 over these HTP services.
+01:12 So it's great we can do it here, but we also want to do this
+01:16 in a slightly more structured way.
+01:19 So we're going to look at two ways.
+01:21 One using a tool specifically for accessing and working with
+01:25 APIs, cause it is pretty simple to go up here and type enter
+01:29 but what if our interaction required us to change the
+01:32 headers?
+01:33 If our interaction required us to do an HTTP POST rather than
+01:35 a GET, which is what you normally do in browsers.
+01:38 That gets tricky.
+01:39 So we're going to see a tool that helps us explore the full
+01:42 spectrum of APIs, and then we're going to interact with it
+01:44 from Python.

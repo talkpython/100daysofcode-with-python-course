@@ -1,0 +1,20 @@
+00:00 Welcome back to the third and final day
+00:02 of data visualization.
+00:03 I hope you are making great progress.
+00:06 And let me just share you one more pointer.
+00:09 Randy Olson sends out very cool Tweets
+00:13 about data visualization.
+00:14 And here's his Twitter account.
+00:17 And it's chuck-full of awesome visualizations.
+00:24 So that's probably somebody,
+00:26 if you like data visualization, who you want to follow.
+00:29 And you can also look at the data
+00:31 of his hashtag on Twitter.
+00:40 Look at that, carots , very cool.
+00:43 Right, so, apart from that, keep on coding.
+00:46 Keep on using these cool libraries
+00:48 that I've shown you in this lesson.
+00:50 And don't forget to share your work.
+00:52 You can use the hashtag #100DaysOfCode
+00:55 and feel free to mention TalkPython and PyBites
+00:58 in your Tweets. Good luck and have fun.

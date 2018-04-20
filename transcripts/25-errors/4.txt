@@ -1,0 +1,107 @@
+00:00 So we've stopped the errors from crashing our program
+00:02 but we can't do anything meaningful,
+00:04 we can only say, you know, that didn't work, sorry.
+00:08 Let's be a little more prescriptive here.
+00:11 So up the top,
+00:12 we need to work with the various exception types,
+00:15 so we have to import some stuff.
+00:16 So we'll say request.exceptions down here.
+00:20 Now in this area, we want to catch
+00:22 the different types of problems that can occur,
+00:25 and the way we do that is we say except:
+00:27 and then we say 'different types',
+00:29 remember when we looked at that trace back,
+00:31 the first thing is the category, or the type of error,
+00:33 and the second part after the colon was the description,
+00:36 just more details.
+00:38 So what we need to do is,
+00:39 we could have potentially multiple ones of these,
+00:41 we'll say this, we'll say,
+00:43 request.exceptions.connectionerror, okay?
+00:48 We be able to just go like this,
+00:50 and just do a little print here and say,
+00:54 so maybe we'll say something like,
+00:55 'couldn't find the server, check your network connection',
+00:58 make this really obvious like that,
+01:01 and print that out here.
+01:02 Now, it could be if this was like a web browser
+01:05 they could've typed it in wrong,
+01:06 but we've hard-coded the URL, we know that that's correct,
+01:09 so if they can't connect it's not the server doesn't exist,
+01:12 it's really that there's some problem
+01:14 getting to this one known server.
+01:16 So let's try this again with my internet off.
+01:22 We'll come down here and search for test.
+01:23 'Could not find server, check your internet connection.'
+01:26 Oh, how cool, that's way more helpful,
+01:28 we know exactly what went wrong
+01:30 when we want to handle that problem here.
+01:33 Now the network is back and we have another problem.
+01:36 If we enter no search term it's going to freak out
+01:39 and throw what's called a ValueError, and say,
+01:41 'hey that didn't work.'
+01:43 But all we get is, oh, that didn't work.
+01:45 So we could do a little bit better here,
+01:47 we could say,
+01:48 put this core exception here,
+01:51 and we could put some details like so.
+01:54 This is kind of going to be our fallback,
+01:56 we don't really know what's going on,
+01:57 so we're going to try this.
+01:58 Let's try again.
+02:00 Oh, that didn't work, 'you must specify a search term',
+02:03 and if you're just debugging it to try to figure out
+02:05 what's going on here you'd say,
+02:06 what is the actual thing that I'm getting here?
+02:08 What is this actual error?
+02:11 It's a ValueError.
+02:12 Okay.
+02:13 So now let's go add an except clause for that.
+02:19 Now notice this is gray because we're not using it,
+02:21 and when we're not, we can just leave it off like,
+02:24 as we did with the request here.
+02:26 So we don't need any details, so now,
+02:28 try to run this with nothing,
+02:29 'error, you must specify a search term.'
+02:31 Now we can really tell the user what's going on.
+02:34 We have a few more errors
+02:35 that we could potentially deal with,
+02:38 I wouldn't leave this here like that,
+02:43 and these other errors are just kind of random stuff
+02:45 that I threw in there to make the program crash.
+02:47 One is a StopIteration,
+02:49 and the other is the one that you saw at the opening,
+02:50 which is a TypeError I believe.
+02:53 So we'll just let those fall through here
+02:54 because there's not anything we can particularly do,
+02:57 they're just sort of random noise in the system
+02:59 to make sure you get some interesting crashes.
+03:01 These have real fixes,
+03:03 so we have a special message for them.
+03:06 The final important thing to see here
+03:07 in this whole try except block,
+03:10 is the order in which we specify the errors.
+03:13 If we change this around
+03:15 and we put this up here at the front,
+03:17 PyCharm's probably going to freak out
+03:18 and say, "no no no, you'll never be getting to these."
+03:22 If we have something general,
+03:24 and this is a derivative of exception,
+03:27 this is not going to work.
+03:28 It's actually just going to stop.
+03:29 The way it works is, it runs,
+03:31 if there's an error it just looks, goes, 'is the error this type, is the error this type,
+03:34 is the error that type?'
+03:35 And, if it comes along here,
+03:37 this is going to catch almost everything,
+03:39 and so, even though we have this,
+03:41 you'll see if I run it and I hit enter,
+03:43 that didn't work.
+03:44 I mean, we still did sort of print this out,
+03:45 but it's not letting us get to the part where we expect it.
+03:51 So it's super important that this goes
+03:52 from most specific to most general.
+03:55 So, here we have it;
+03:57 we've figured out what types of errors
+03:58 our program might throw,
+04:00 and then we can handle them independently based on the type.

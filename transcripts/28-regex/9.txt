@@ -1,0 +1,46 @@
+00:00 Welcome back to 100 days of Python.
+00:02 This is the second day of the 3 day regEx blog.
+00:05 And today I want to give you some pointers
+00:08 to get more familiar with regxxes
+00:11 and start to write your own.
+00:13 So we did an article,
+00:15 10 Tips to Get More Out of Your RegExes.
+00:18 I recommend you read through it.
+00:20 One thing I didn't touch on is greediness,
+00:23 which is important and can prevent nasty bugs.
+00:27 And if you're still more a beginner in regex land,
+00:31 there's a nice talk at the end by Al Sweigart.
+00:35 Who by the way wrote an awesome Python beginner book,
+00:39 called How to Automate the Boring Stuff,
+00:40 and it's called Yes, It's Time to Learn
+00:42 Regular Expressions.
+00:43 And that gives you a very nice overview
+00:46 of regular expressions.
+00:48 Secondly, there's a nice how-to on the
+00:51 Python documentation page.
+00:53 Very refreshing how-to.
+00:54 I read this when I wrote the 10 Tips post,
+00:56 it's pretty dense, but it is a very good
+00:59 primer into regular expression,
+01:01 and what all the specific syntaxes mean, etc.
+01:07 If that's too much reading, which I can totally get,
+01:10 there's a nice online RegEx tester.
+01:13 And you just select Python,
+01:16 and you can write here your regular expression,
+01:18 and test it in real time.
+01:20 For example, I have some HTML with two paragraphs.
+01:23 And let's experiment a little bit
+01:25 with that greediness I mentioned.
+01:28 So let's match all of it.
+01:31 So that's greediness because it takes everything
+01:34 from the starting paragraph tag to the ending one.
+01:38 If I do a question mark, the match becomes shorter.
+01:41 It only takes the first paragraph.
+01:43 And you see all this nice feedback and explanations here.
+01:47 So that's a really great tool to experiment
+01:50 writing regular expressions in Python,
+01:53 because you get instant feedback.
+01:55 So that will be the third resource I have for you today.
+01:59 Just spend 20 or 30 minutes experimenting with regexes,
+02:03 and you'll see that they become a lot easier.
+02:06 Good luck.

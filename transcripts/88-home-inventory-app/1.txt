@@ -1,0 +1,16 @@
+00:00 Good day everyone, welcome back.
+00:02 This is Julian Sequeira and I'm going to be walking you through
+00:05 the next 3 days of creating a home inventory app.
+00:10 This is designed to just sort of get you thinking about
+00:13 the whole app creation process,
+00:16 even though I know you've done it by now.
+00:18 But also to get you using a few different things in Python.
+00:23 So in this specific app we are going to use SQLite3
+00:27 as the database.
+00:28 But we're going to cover a little bit of generators.
+00:30 And we're just going to do some basic Python to get you through
+00:35 creating your own sort of storage app
+00:37 that recalls data, takes input,
+00:39 and you can imagine what it's going to be like.
+00:42 So, carryon through the next three days
+00:44 and let's see what we can come up with.

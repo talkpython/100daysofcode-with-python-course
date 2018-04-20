@@ -1,0 +1,32 @@
+00:00 Day 2, on the second day it's all about data.
+00:03 So what we're going to do is going to
+00:04 create a data table service,
+00:06 so just go to the services and say +,
+00:08 choose data tables, and then this thing down here
+00:10 will pop up like this.
+00:12 Create as many tables as you need up here,
+00:14 define their schema, and you can even
+00:16 enter down here some starter data.
+00:19 For example, if it's something that's
+00:20 kind of static or you just want a little data to start with.
+00:23 That's great, remember no access from forms,
+00:25 access from the server modules.
+00:27 Once you have that you're going to need
+00:28 a way to get that data down to your application
+00:31 so go ahead and add a server module
+00:33 and then define the functions that you're going to need
+00:36 to send the data down.
+00:37 You can look in the demo code
+00:39 that I put in this repository in this particular day
+00:42 if you want to see how we did the queries there.
+00:45 It's pretty easy because they basically have
+00:47 a commented section when you create a new server module
+00:49 that shows you both how to use it on the client
+00:51 and how to define it on the server,
+00:53 so just follow along what they have in the comments.
+00:55 Once you've got that going, that's Day 2.
+00:57 You might want to just call those
+00:58 functions from your main form
+01:00 as a little test just to see that they're working
+01:02 and then throw those away,
+01:03 but that's what you did today, it's all about the data.

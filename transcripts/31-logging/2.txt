@@ -1,0 +1,38 @@
+00:00 Python has built in log in
+00:01 and you can do log in without
+00:03 any external dependencies.
+00:05 But I would like to introduce you to
+00:07 this concept to this package logbook.
+00:10 Now this as you can see here replaces
+00:13 python's standard library for logging
+00:16 and it does so in a way that makes it really easy
+00:19 to work with logs in our application
+00:21 but also super flexible.
+00:23 So for example, we can come over here
+00:25 and import the logger and we can just say
+00:27 "I would just like to push all
+00:28 the log messages to standard out",
+00:30 could be a file also for example,
+00:33 now we'll create a logbook
+00:34 and then we just log.info,
+00:35 log.trace,
+00:36 log.error,
+00:38 we sort of categorize the response,
+00:41 the message we'll send that way
+00:42 and you get something like,
+00:43 well see below but also what you see in stock python.
+00:47 Why not just use the built in one?
+00:49 Well, this is nice and clean and
+00:50 it creates a nice hierarchy,
+00:52 really really cool for when you use it your application.
+00:54 But also it's way more flexible,
+00:57 look at this,
+00:58 how about getting a notification to your phone
+01:00 or pushing notifications or something like that
+01:02 under certain log message situations.
+01:04 Really cool.
+01:05 So we'll see the logbook is really powerful
+01:09 and it's actually created by Armin Ronacher
+01:11 who is the creator of Flask,
+01:13 one of the most popular and well liked
+01:16 Python web frameworks out there.

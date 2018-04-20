@@ -1,0 +1,21 @@
+00:00 The last day is adding polish.
+00:02 We're going to use a namedtuple.
+00:04 Now here's an example from our movie one.
+00:06 You want to create a corresponding one
+00:08 for a search result.
+00:10 The other thing we're going to do,
+00:11 this is really, really simple and slick,
+00:13 is, if we look over here
+00:14 you'll see that there is a URL
+00:16 that you can get to for every result.
+00:19 What you're going to do is you're going to write
+00:20 a little bit of code that asks the user
+00:24 which one of these would you like to view
+00:25 in your web browser.
+00:27 Maybe give 'em a number,
+00:28 and they can put 3, and so then you're goal
+00:30 is to write a little bit of code
+00:31 that will open the web browser
+00:33 and a new window at that URL,
+00:35 and literally those two lines of code
+00:37 is all it takes across platform.

@@ -1,0 +1,28 @@
+00:00 I've said it a couple of times now that generators
+00:03 can gain you performance when your data set grows.
+00:06 So why not see that in action, and define a million years,
+00:10 and loop over them and see which years are leap years.
+00:14 So let me write it out and I will explain it next.
+00:28 Okay so, first I have a leap years list
+00:31 that builds up the list of a million years,
+00:34 checking the isleap(), and I'm using calendar.isleap(),
+00:37 which is a nice built in way to do that.
+00:39 And the second function uses a generator,
+00:41 so it's the same loop, but it yields the year.
+00:44 So it's not building up the whole list in one go.
+00:47 So let's use the timeit module tool,
+00:49 time both functions.
+00:56 And it's taking a bit.
+00:58 Let's do the same for the generator.
+01:06 Wow, look at that, that's milliseconds
+01:09 versus nanoseconds.
+01:11 So the generator is way faster.
+01:14 And again, that's because it's not taking up
+01:17 so much memory.
+01:18 It's yielding the years one by one,
+01:21 doing that lazily and saving you memory.
+01:24 So that's why generator's faster.
+01:27 And when you're working with large data sets,
+01:29 you should definitely know about them.
+01:32 And that's a wrap of day one of the list comprehension
+01:35 generators lesson.

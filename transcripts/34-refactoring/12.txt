@@ -1,0 +1,50 @@
+00:00 In this video I'll provide you some extra resources
+00:03 to read up about refactoring
+00:05 and how to make your code more Pythonic.
+00:08 Read about the topic of refactoring,
+00:10 we have a whole dedicated post
+00:12 on the importance of refactoring code.
+00:15 Errors should not pass silently, as we've seen.
+00:19 So a lot of this we've discussed in this notebook,
+00:22 but it shows you some more examples.
+00:24 This is an important one, there's some Python mistakes
+00:28 the beginner is likely to make.
+00:30 And we listed them here
+00:31 so you can know about them in advance.
+00:34 There's string formatting we discussed
+00:38 and Julian had a very nice article here.
+00:41 From going from the terribly un-Pythonic method
+00:44 to the nicer way.
+00:45 And I think he come to the same conculsion
+00:47 that you really want to use f-strings if you can,
+00:50 if you're on 3.6.
+00:52 There's an awesome talk about beautiful idiomatic Python,
+00:55 by Raymond Hettinger.
+00:57 I learned a lot from this talk,
+00:59 there's a lot of good tips and tricks in it.
+01:01 And we've made a summary in this blog post.
+01:04 And when we talk about modules, and splitting your code,
+01:08 it becomes important to know about packaging your code.
+01:11 So here we have a post about how to do that
+01:14 on a practical project, like her Karma Bot.
+01:17 And it's not that hard, I mean basically
+01:19 you have to make an init.py file
+01:22 and know how to import your stuff.
+01:24 That's important.
+01:25 The imports mights be confusing,
+01:27 but with this article it should become clearer.
+01:30 So when we're talking about splitting code
+01:32 and making it maintainable, know how to work with modules
+01:35 and packaging is important.
+01:37 And generic code quality resources, I have two.
+01:41 First of all Martin Fowler's Refactoring Book,
+01:44 and yes, the examples are in Java, not Python.
+01:47 But it's about the general principles.
+01:50 And this book really teaches you how to write better code.
+01:53 It shows you very practical examples
+01:56 how you can refactor bad code
+01:58 into much more maintainable code.
+02:00 It's a great read.
+02:02 And of course, Uncle Bob's Clean Code, a classic.
+02:06 And also shows you a lot of ways
+02:08 to write professional quality code.

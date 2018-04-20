@@ -1,0 +1,66 @@
+00:00 Next up are deques.
+00:02 deques are stacks and queues.
+00:04 They're useful if you want to insert and append
+00:08 on both sides of the sequence.
+00:10 In this section, I will compare them to lists.
+00:12 I mean, lists are your best friends.
+00:14 You will use them everywhere.
+00:15 They're easy to use and for 80% of your use cases,
+00:19 or maybe 90%, they're just adequate.
+00:22 But lists come with a downside which if you have
+00:25 to move items around, they get less performant.
+00:28 And in this exercise, I will create a list and a deque
+00:32 of ten million ints and a function to do random inserts
+00:36 and deletes and then we're going to use timeit,
+00:39 to see how they perform.
+00:41 So let's create the two sequences.
+00:44 First I want a list.
+00:47 I can just use the range.
+00:50 Let me the get the zeros right.
+00:52 One, two, three, one, two three.
+00:54 That's ten million.
+00:56 And let's make a deque.
+00:58 You create that big deque.
+01:01 Range, one, two, three, one, two three.
+01:05 Next, we create an insert and delete function
+01:11 that takes a sequence...
+01:14 and we do, for...
+01:18 Underscore...
+01:19 In braces..
+01:21 Index equals random...
+01:24 Choice.
+01:29 And a random choice takes a sequence
+01:33 and just randomly chooses one item.
+01:36 I store that into index
+01:38 and I remove it.
+01:42 So that index is like a random location in the sequence.
+01:46 I'm going to remove the item that's at that index.
+01:51 And I'm going to do an insert of index
+01:55 at index and I'm just going to insert
+01:58 the same value of index, doesn't really matter.
+02:01 I'm going to use timeit to time this function
+02:05 for both the list and the deque.
+02:07 Here we have the timeit module.
+02:10 And we're going to call it with insert and delete
+02:14 on the list, and the list we defined here above.
+02:21 You can see this took a little bit.
+02:24 And now let's do the same for the deque
+02:29 which we defined here.
+02:35 And although it seems to take a little bit as well.
+02:38 Here we're talking about milliseconds
+02:42 and here we're talking about microseconds.
+02:45 Here it also run like 10,000 loops.
+02:47 This one was slower so it reduced to one loop.
+02:51 So deque performs at a fraction of the list
+02:54 and that's because inserting and removing
+02:57 at both sides of the sequence are more efficient
+03:00 in a deque than a list.
+03:02 A list has to move all the items around
+03:05 and that's expensive.
+03:06 I encourage you to look at the docs because there are a few
+03:10 other data types that are interesting
+03:13 and you can read about ChainMap, for example.
+03:16 An OrderedDict is another good data type to know about.
+03:19 Although I think in Python 3.6,
+03:21 dicts are becoming ordered by default.
+03:25 That concludes day one.

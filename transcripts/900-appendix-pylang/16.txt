@@ -1,0 +1,30 @@
+0:01 In the previous section we discussed tuples, and how they are useful. 
+0:04 Sometimes these anonymous tuples that we discussed are exactly what you need, 
+0:08 but oftentimes, it's very unclear what values are stored in them, 
+0:12 especially as you evolve the software over time. 
+0:15 On the second line here, we have "m", a measurement we are defining 
+0:18 this time it's something called a named tuple 
+0:21 and just looking at that definition there on what we are instantiating 
+0:24 the measurement, it's not entirely clear the first value is the temperature, 
+0:28 the second value is the latitude, this third value is a longitude, and so on.
+0:32 And we can't access it using code that would treat it like a plain tuple, 
+0:36 here we say the temperature is "m" of zero 
+0:39 which is not clear at all unless you deeply understand this 
+0:42 and you don't change this code, but because we define this as a named tuple, 
+0:47 here at the top we define the type by saying 
+0:50 measurement is a collections.namedtuple, 
+0:53 and it's going to be called a measurement, 
+0:55 for error purposes and printing purposes and so on, 
+0:58 and then you define a string which contains all the names for the values. 
+1:02 So over here you are going to say this type of tuple temperature's first, then latitude, 
+1:06 then longitude, then quality, and what that lets us do is access those values by name. 
+1:11 So instead of saying "m" of zero temperature, 
+1:13 we say m.temp is the temperature, and the quality is m.quality. 
+1:16 Named tuples make it much easier to consume these results 
+1:20 if you are going to start processing them 
+1:23 and sharing them across methods and things like that.
+1:25 Additionally, when you print out a named tuple it actually prints a friendlier version 
+1:29 here at the bottom you see measurement of temperature, latitude, longitude, and quality. 
+1:33 So most of the time if you are thinking about creating a tuple, 
+1:36 chances are you should make a named tuple. 
+1:39 There is a very small performance overhead but it's generally worth it. 

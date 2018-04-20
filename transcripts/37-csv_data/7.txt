@@ -1,0 +1,161 @@
+00:00 Now, we've actually parsed the CSV file
+00:02 and we're ready to go.
+00:03 But we saw that everything that comes back
+00:06 is actually just a bunch of strings.
+00:09 And we can't really do data analysis.
+00:11 When you want to do numerical operations
+00:13 or date time operations.
+00:14 But the data type is a string.
+00:17 So what we have to do is that we need
+00:19 to write a function that will take one of these rows.
+00:21 And kind of upgrade it to its types
+00:23 that we know exists in there.
+00:25 So let's go down here,
+00:26 we're going to write a function called parse_row
+00:30 And we'll give it a row
+00:32 and it's going to return some kind of item.
+00:35 So, first of all, let's write one
+00:37 that just actually upgrades the values.
+00:39 And we'll do one more step beyond that.
+00:42 So, we know, if we look over here.
+00:45 That we have a date, we have an actual mean
+00:48 and all of these things.
+00:50 So, let's start by coming over here
+00:52 and we're going to upgrade the rows date.
+00:56 Let's upgrade the temperature, it's a little simpler, first.
+00:58 So we'll come over here and we'll say actual mean temp,
+01:02 that's from the header.
+01:05 Now, see, this value is actually the result
+01:08 of converting it to an integer.
+01:11 And we also have the actual min temp.
+01:13 Now, you want to be careful here, of course
+01:17 that you don't cross those over
+01:18 but also, that you're using integers with the integers
+01:21 and the floats where there are floats and so on.
+01:24 Now, this is not fun to watch me type this out for each one,
+01:27 and there's a lot of it,
+01:28 it's quite tedious so let me write this out.
+01:30 And then we'll come back to it.
+01:35 Alright, here we are. So now we've taken everything that we found in the header
+01:39 and we've done a conversion from strings to numbers.
+01:42 Sometimes those are integers, sometimes those are floats
+01:44 we paid careful attention to when that was the case.
+01:46 If you're unsure just use floats
+01:48 and then we're going to return this row
+01:52 but by getting the value out
+01:53 and then replacing the value with the integers
+01:56 we should be able to come over here and print this.
+01:57 So if I do this and, kind of what we did before
+02:00 we do a little type of that.
+02:02 We print those.
+02:03 Now, if I write on it,
+02:04 Actually... Excuse me if I do this parse_row.
+02:08 And we kind of upgrade this row here
+02:11 And notice these are now integers
+02:14 if I change the column to the actual precipitation
+02:19 you'll see these are floats.
+02:22 Here they are.
+02:23 Those look like floats, don't they?
+02:25 Great, so we've upgraded this
+02:28 and, it's already in a really good shape.
+02:31 There's one other thing I want to do to make it nicer.
+02:34 And that is to use a data type that's built into Python
+02:38 that helps you work directly with sort of these values
+02:43 in a really simple way, and it's called a namedtuple.
+02:46 So let's go to the top here and we'll say
+02:49 import, collections
+02:51 and inside Collections there's this thing called
+02:53 the namedtuple.
+02:54 So we can actually define another type
+02:58 something better than this basic dictionary
+03:00 which is cumbersome to work with.
+03:01 You got to do the .get, the value might not be there,
+03:04 things like that, so let's define a record,
+03:07 like a weather record, and we're going to
+03:09 do that by saying, collections.namedtuple.
+03:11 Now, you give it two pieces of information.
+03:14 One, you...
+03:17 You basically replicate this, so you tell it,
+03:20 I'm calling you this, but, your name is what I'm calling you
+03:24 it's sort of so it knows what its name is.
+03:27 And then the next thing you give it is simply this
+03:31 giant thing up here, okay, like so.
+03:35 Now, PyCharm says, whoa whoa whoa, what're you doing,
+03:37 that's like line, or column 200, this is insane.
+03:40 So why don't you do some line wrappings,
+03:43 just so people can read what's going on, right.
+03:45 And this Python will turn that back into one long string
+03:49 because there's no comma separating it.
+03:52 These might look like they're separating it,
+03:53 but they're on the inside, not the outside.
+03:56 Okay, so this is going to let us define a type,
+03:58 so come down here, and I could actually upgrade this,
+04:01 so I could say, r equals record,
+04:06 and if you look and see what it takes,
+04:07 it takes a date, a temperature,
+04:09 all the temperatures and so on.
+04:11 And I could say date equals this,
+04:13 mean temperature equals this,
+04:15 min temperature equals that.
+04:17 So I could say date equals row.getdate comma.
+04:24 Did I say data?
+04:25 Oh, no, date, yeah, date.
+04:27 So date equals that and actual mean temperature equals
+04:35 row.get, this is starting to feel tedious isn't it?
+04:39 And we got to do this for every one of those.
+04:41 It turns out these rows are dictionaries,
+04:44 there's a shorthand to say this statement,
+04:47 for every element in the dictionary.
+04:50 So if I want to say, if date is in there,
+04:52 go get the value assigned as date.
+04:53 If mean, actual mean temp is in there,
+04:56 go get that value and assign it to this,
+04:57 and the way you do that is you say **row.
+05:01 Star star row just says, well, do what I erased, right.
+05:05 Set this value to the value from the dictionary,
+05:07 set this argument value to the value of the dictionary,
+05:09 and because what's in the dictionary
+05:12 is literally what we put right here,
+05:14 this is going to match exactly and this will work.
+05:17 Alright, so now let's return
+05:18 this little record thing instead
+05:20 and we can rename it better to record.
+05:24 There we go.
+05:25 And so we'll call it record here.
+05:28 Now we go over here record and say .,
+05:30 and notice it gives us a nice,
+05:31 beautiful list of all the stuff that's in there,
+05:34 we don't have to do this this style over here,
+05:37 I'll just say, I don't have to know it's a string
+05:39 and is the actual precipitation,
+05:40 I just say record.actual_precipitation.
+05:45 Then into print out the value,
+05:47 then we'll do it again.
+05:48 So now it should work just the same, boom, it does.
+05:52 Okay, whew, so we've now converted our data,
+05:56 the last thing to do is to store it.
+05:58 So instead of printing out, which is kind of fun,
+06:00 but generally not helpful,
+06:02 we're going to go to our data and say, data, append record.
+06:07 Alright and just in case somebody goes
+06:09 and calls this a second time, right,
+06:12 we don't want to over do this, whoops not record,
+06:15 we'll say data.clear.
+06:17 So we'll reset the data and then we'll load the new data
+06:20 from this file just in case you run it twice,
+06:23 probably not going to happen.
+06:25 Alright, so now we're basically ready,
+06:28 let's just check and see that this worked.
+06:29 Let's go over here and just print research.data,
+06:33 just to see that we got something that looks meaningful.
+06:37 And look at that, we did.
+06:38 Record, the dataset, the mean is,
+06:41 we actually didn't parse the date,
+06:42 but just keeping it simple.
+06:44 Actual mean temperature and so on,
+06:46 you can see this goes on to the right for very long.
+06:49 But it did exactly what we wanted.
+06:51 So it looks like we're off to the races.
+06:53 Now the final bit, actually this is the easy part,
+06:56 let's answer the questions now that data
+06:57 is super structured to work with.

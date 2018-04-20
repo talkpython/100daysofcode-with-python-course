@@ -1,0 +1,46 @@
+00:03 Now notice, if we were creating a top level item,
+00:05 this might be good, maybe this,
+00:06 but for stuff that's nested inside other forms,
+00:10 then this blank panel is probably what we want.
+00:15 Give it a name.
+00:19 add_doc_form.
+00:20 So this is going to be the one we'll see
+00:21 for when we add a document.
+00:23 Now for each one of these,
+00:24 I'm going to put a title on them,
+00:26 but I'll skip over in the next set,
+00:28 so you don't necessarily need to see
+00:30 how to put a title every time.
+00:32 So we're going to put this over here,
+00:33 and let's just put a nice little title,
+00:35 called this label subtitle.
+00:41 Make it a line center, make it bold,
+00:43 make the font size 28 points,
+00:46 and the text will be add a new document.
+00:50 That's not going to change so we don't need to do any code,
+00:52 but we want to be able to see what form do we have active.
+00:56 So, we'll have this here.
+00:59 Next up, we're going to add
+01:06 a doc_details_form.
+01:07 So once you click on a particular one,
+01:09 we'll get that.
+01:12 We want a place where we can filter
+01:14 and see all the documents.
+01:15 So let's create an all_documents_form.
+01:21 Now you might think we're done.
+01:22 We have our home_form,
+01:23 we have the ability to add a doc,
+01:25 go to doc_details and see all of them.
+01:28 However, we also want to put something here.
+01:31 And the way the interaction's going to work,
+01:33 its better of what goes into this section,
+01:35 even on the home page,
+01:36 is encapsulated as one of these little sub-documents.
+01:39 So, let's add one more here.
+01:50 And for lack of a better name,
+01:51 I'm going to use home_details_form here.
+01:55 And there we have it.
+01:56 We have all the forms and they have
+01:59 a little bit of information on each one of them.
+02:01 The next thing we need to do
+02:02 is actually make this navigation work.

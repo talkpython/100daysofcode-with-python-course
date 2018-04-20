@@ -1,0 +1,42 @@
+00:00 How's our create game operation working,
+00:02 here we're going to do a post of this.
+00:04 This says we would create a new game.
+00:07 If you think about how the way that
+00:09 our data base actually works,
+00:11 there's not actually a lot of integrity
+00:12 around this game concept and
+00:14 we maybe could create some more models
+00:16 and put them in there but one of my goals of this
+00:18 is to change as little as possible
+00:20 about the models and data access layer
+00:22 and the other stuff we've already done
+00:24 and just to adapt it to online.
+00:26 Not exactly possible but it is very, very close.
+00:29 What we really need to do here
+00:30 is to just create a unique id that can be shared.
+00:35 Okay? And it turns out we can do that super easily.
+00:43 So we're going to create a dictionary.
+00:44 In our dictionary we're going to have a game id
+00:46 and how do we get it it?
+00:47 It's going to be a UUID,
+00:49 which is a standard library thing
+00:50 we got to import at the top
+00:52 and there's UUID4,
+00:53 which is a great random thing we could use
+00:56 but we're just going to create
+00:57 a string representation of it
+00:59 and give that back.
+01:00 Let's save this,
+01:01 it should reload if everything worked out.
+01:03 Instead of saying "would create a game"
+01:04 what do we get?
+01:06 Boom. There is a very unique looking game id
+01:09 that we can then use for all subsequent requests
+01:11 to correlate or relate the various operations
+01:14 between say playing around,
+01:16 getting the game status,
+01:17 things like that.
+01:18 So that's it.
+01:19 Create a game,
+01:20 just create a random identifier that we can use
+01:22 that is pretty unique.

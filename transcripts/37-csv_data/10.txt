@@ -1,0 +1,44 @@
+00:00 Now that you know all about working with CSVs,
+00:03 it's time to do some data journalism.
+00:05 You're going to come up with an amazing question,
+00:07 and find a data set, and answer some questions about it.
+00:10 So, let's get you the steps here.
+00:12 First day is, you're basically done with the first day.
+00:15 It's more or less to watch the videos,
+00:16 but the final thing to do, I hope you're inspired,
+00:19 is to head over to the GitHub repo,
+00:21 fivethirtyeight/data.
+00:23 And sort of look through there
+00:24 and find one of the data sets that looks interesting to you,
+00:28 and think about answering some questions.
+00:30 So, here's what an example of that may look like.
+00:33 Alright, so you might want to write these three things down.
+00:35 So, here's the goal, is, I found,
+00:38 maybe I should put data set first in terms of the order,
+00:41 but I found this data set on
+00:43 where you live in the United States
+00:45 you eat different things on the U.S. holiday Thanksgiving.
+00:50 So, if you live in the American South,
+00:52 you'd have one type of thing,
+00:53 if you live in the North, in like the Northwest,
+00:56 you eat something different.
+00:58 It also varies by income, so pretty interesting.
+01:01 So, you go over here and the goal is going to be to predict,
+01:05 you know, ask two questions of the user,
+01:06 and then predict what they have for Thanksgiving.
+01:09 So, you ask them where do they live
+01:11 and how much money does their family make,
+01:13 and you're going to use this data set to basically,
+01:17 generate a set of things they're going to eat, right.
+01:20 You're going to eat turkey, and stuffing,
+01:22 and mashed potatoes, and things like that.
+01:24 And they answer the questions differently,
+01:27 that menu that you provide to them might be different.
+01:30 So, here's sort of the steps that you need
+01:33 to do for those few things, alright.
+01:35 I think that's going to be fun.
+01:36 You don't write the program on day one.
+01:37 You've already watched all those videos
+01:39 and listened to me talk,
+01:40 so you're goal is to just find the data set
+01:42 and have a question.

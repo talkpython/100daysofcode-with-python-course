@@ -1,0 +1,68 @@
+00:00 Let's jump right into our demo here.
+00:02 Over in the GitHub repository, we're going to start
+00:04 with a movie search app.
+00:07 And this is called "movie search error edition."
+00:10 Later, we're going to actually build this app from scratch.
+00:13 We're going to talk about the underlying API
+00:14 and all that kind of stuff.
+00:16 Right now, we're just going to run it and try to solve
+00:18 the errors that it might encounter.
+00:20 Now, there's two parts here: there's the starter,
+00:21 exactly where I'm starting from, and I'll leave this here,
+00:24 in case you want to play with it.
+00:26 This one, we're going to involve into the final one.
+00:28 Now, before we open this up,
+00:30 let's create a virtual environment, there we go,
+00:33 and I'm going to throw it into PyCharm,
+00:34 and use whatever editor you want.
+00:36 This is one we're using.
+00:38 This one actually depends upon a package called "requests"
+00:42 So, if we come over here with our
+00:44 virtual environment active, we can say pip install requests
+00:48 or you can just click this little
+00:49 hyperlink thing right there.
+00:51 Either way, we're going to have to do that before this will run
+00:54 because that's how we're getting to the internet.
+00:56 So, here's how this program works.
+00:58 Like I said, we're going to, in a different set of three days,
+01:01 we're going to build this thing from scratch
+01:02 and really focus on the API.
+01:04 We don't actually care how the API works.
+01:06 All that matters is, we pass a keyword here,
+01:09 and it's going to go over to a service
+01:11 over at movie_service.talkpython.fm.
+01:14 Do a search, get back some JSON data,
+01:17 and then return those here as results
+01:20 and we're going to loop over them.
+01:21 Now, I've introduced some extra errors here, alright,
+01:24 sort of a chance of something going really, really wrong,
+01:28 just to give us some variety.
+01:29 The most likely error you're going to run into
+01:32 is a network error.
+01:33 Let's just see if this runs correctly.
+01:35 How about "Capital?"
+01:38 Cool. There.
+01:39 We've gotten three movies back
+01:40 and see their IMBD score right there.
+01:44 It looks like it's working, except for sometimes it's not.
+01:47 It actually has these errors baked into it.
+01:48 But the one that we're definitely going to hit
+01:50 as we come over here, we turn off the wifi,
+01:53 this won't be so good.
+01:54 So, now if I try to run this, let's see what we get.
+01:57 Test, maybe?
+01:59 Uh-huh.
+02:00 request.exceptions.connectionerror.
+02:03 And what went wrong, the connection pool
+02:05 had some kind of problem.
+02:07 Max retries exceeded with URL, caused by ...
+02:12 We couldn't get to the server, right?
+02:13 So we turned off the internet, it crashed.
+02:15 Instead, what we'd like to have happen
+02:17 is our program go, hey, couldn't get to the server.
+02:21 Is your wifi off? Check your internet connection.
+02:23 Are you at a coffee shop?
+02:24 Then you have to maybe authenticate to the local network,
+02:27 where you say you agree to their terms or whatever, right?
+02:30 So we want to catch these errors instead of having
+02:32 this nasty crash and give a helpful message to the users.

@@ -1,0 +1,37 @@
+00:00 Let's review some of the concepts around measuring
+00:02 performance with profiling and Python's cProfile module.
+00:07 Now from any project, regardless of your editor,
+00:11 if you just want to measure the overall performance
+00:14 of your app, this is probably the best thing you can do.
+00:17 python -m cProfile,
+00:20 so run Python, make sure that's the right version.
+00:23 Instruct it to run the module cProfile, capital P,
+00:28 and while you're at it, the most useful one
+00:30 is sorting by cumtime.
+00:32 So do a -S, cumtime and then give it
+00:35 to a entry point into your Python program to run.
+00:38 Here program notqi, and you automatically get
+00:40 that nice output that you can start working with it,
+00:43 iterating on.
+00:45 One, to run just a section of code
+00:47 there's two options, there's one I'm showing you here
+00:50 and you could also create a unit test
+00:53 that just run that code and then
+00:55 run the unit test with profiling.
+00:57 But we're going to focus on the more general case here.
+00:59 So what you do is you import the profiler,
+01:02 and tell it to start up disabled
+01:04 stop tracking anything, just import yourself
+01:07 and go from there.
+01:09 Run whatever startup code you got to do
+01:11 to get into the state you want to profile,
+01:14 and then enable profiling, run your code
+01:17 and go back and disable it.
+01:19 And in our example you saw we actually moved the reporting
+01:21 outside of this block and the data generation
+01:25 within it so that we could measure really precisely
+01:28 just the part we were working on.
+01:30 Some other stuff here at the end
+01:31 you probably don't care about.
+01:32 And at some point you want to see the stats
+01:34 so you'll say, profiler.print_stats.

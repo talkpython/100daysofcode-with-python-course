@@ -1,0 +1,119 @@
+00:00 Okay, just like the previous day,
+00:02 we're going to look at something
+00:04 but we're going to use the Python shell for this one.
+00:06 And specifically today we're looking at timedelta.
+00:11 So what is timedelta?
+00:12 Well, timedelta is pretty much a gap in time measured out.
+00:18 So, for example, if you want to calculate something such as
+00:22 how many hours from now until a certain point in time,
+00:25 you can use timedelta for that to specify
+00:28 what it's going to be.
+00:30 A real world example.
+00:31 How many hours until I go to bed?
+00:33 Well, let's say it's going to be four hours.
+00:36 So my timedelta, you can specify for this calculation,
+00:40 is four hours.
+00:42 And four hours from now could be two in the morning, okay?
+00:46 So it's different...
+00:49 That's how you calculate things like that,
+00:51 you use timedelta.
+00:53 All right, so how do we do that?
+00:55 Well, we go from datetime import datetime just like usual,
+01:01 from datetime import timedelta.
+01:06 All right, so let's represent our timedelta as a variable t
+01:12 timedelta and let's work on days and hours.
+01:17 So let's say we have four days and 10 hours
+01:20 until my next day off work, it's pretty depressing.
+01:24 And how do we deal with this? How do we work with this?
+01:28 Well, let's first of all confirm we have a timedelta
+01:31 object there, excellent.
+01:33 And what next? What can we do with this?
+01:36 Well, we can go how many days in there.
+01:38 So t.days.
+01:41 That gives us four days, okay?
+01:44 One important thing to note here, watch this next one.
+01:48 T.seconds.
+01:50 36,000.
+01:51 So 36,000 seconds is not four days 10 hours.
+01:58 36,000 seconds is just the 10 hours.
+02:02 And why is that?
+02:03 Well, this timedelta is just like...
+02:07 Imagine the stopwatch on your watch,
+02:10 it's only able to go up to a certain amount of time, right?
+02:12 Maybe 23 hours and 59 minutes.
+02:15 So with timedelta, the seconds, it's only able to go up
+02:19 to a maximum of one day, okay?
+02:23 So we have four full days here,
+02:26 so it's not going to show us the seconds in four full days.
+02:29 It's only going to show us the seconds in the hours.
+02:33 So you have to take that into account and your calculation.
+02:36 Okay?
+02:38 We could calculate the hours but not like this.
+02:43 Okay?
+02:44 It doesn't allow us to do this because it has seconds,
+02:46 it's not going to bother with hours, all right?
+02:50 So in order to get around this,
+02:52 well, you have to do a bit of maths,
+02:53 unfortunately for people like me.
+02:56 So t.seconds divided by 60
+03:01 and divided by 60 again.
+03:03 Well, because we have 60 seconds in a minute
+03:06 and then 60 minutes in an hour.
+03:08 And that gives us that 10 hours.
+03:10 Alternatively, you could write that as t.seconds
+03:14 / 3,600.
+03:16 Same thing, okay?
+03:19 That's a really important gotcha
+03:21 because it definitely got me.
+03:25 back at the start.
+03:26 So here is an example of a sort of scenario
+03:30 you could use it in,
+03:31 but just keep in mind, timedelta is that gap,
+03:35 it's that sort of way of representing the time
+03:38 between two points in time, okay?
+03:42 All right, so we have an ETA.
+03:44 Well, let's just say it's the ETA until
+03:49 I wake up.
+03:50 So hours equals six.
+03:53 We're not even going to talk days here, okay?
+03:57 We can go today.
+03:59 We'll give ourselves a datetime today, variable, okay?
+04:04 We're not dealing with just date,
+04:06 we're dealing with day time because we want the time,
+04:08 we want the minutes, the seconds, the hours, right?
+04:11 So there we go, we've got two variables, ETA and today.
+04:16 All right? So today, let's just show you what that is.
+04:19 It's currently 10:39 p.m., okay?
+04:25 Let's get rid of that.
+04:28 All right.
+04:29 We can go what is ETA?
+04:32 Is our timedelta, all right?
+04:35 Now, what next?
+04:38 We want to add these two together, okay?
+04:42 So we can go today + ETA,
+04:46 this is the beauty, the absolute beauty of timedelta,
+04:51 we can just add it straight to a datetime object
+04:55 which is so cool and so handy and it makes it so easy.
+05:00 So today plus ETA.
+05:03 And look at that time.
+05:05 It actually changed the date to the 25th
+05:09 because we'd cross over midnight
+05:11 and it says six hours from now is 4:39 a.m., okay?
+05:17 And this is really, really cool
+05:19 because you don't have to worry about any conversions,
+05:21 you don't have to change anything.
+05:24 It's so easy.
+05:25 And even better than that,
+05:27 we can format it, so today + ETA as a string.
+05:34 Look at that, it's glorious.
+05:37 We have an actual nicely formatted date string
+05:42 and time stamp.
+05:45 How awesome is that?
+05:47 And that's timedelta,
+05:49 that's really the bread and butter of timedelta.
+05:51 You're dealing with just setting yourself a static time,
+05:55 a static amount of time
+05:56 and then you can add it, subtract it,
+05:58 do whatever you want with it.
+05:59 And this is really useful in a lot of programs,
+06:03 so keep this one in your belt

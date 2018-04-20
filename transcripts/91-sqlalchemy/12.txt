@@ -1,0 +1,38 @@
+00:00 On Day 2, you're going to focus on building out
+00:03 the database models and the database structure.
+00:05 So, recall from the presentation, that what you need to do
+00:08 is use some kind of base class that comes from
+00:12 SQLAlchemy, and have all of your models derive from that.
+00:15 So, here's the example we had for our move, in our game,
+00:18 and it derived from model base, we controlled the table,
+00:21 by putting table name in there.
+00:23 This is optional, but I like to do it.
+00:26 And then we just defined all the columns.
+00:27 Has integers, or has date times or strings,
+00:30 and then be sure to give it a primary key,
+00:33 and auto-increment if that's an integer, nice and easy.
+00:36 And then you're going to need to actually go and create
+00:40 the database, using your base model there.
+00:43 And create a session factory for use later.
+00:46 Alright, so if you run this code, already,
+00:48 you should actually have some kind of database file,
+00:50 and whatever you call it here, you'll have down here.
+00:54 And then, you can either look at it,
+00:55 if you're using Pycharm Pro, in Pycharm Pro,
+00:58 or you can use a DB Browser for SQLite.
+01:01 Either way, this is going to get your database structure
+01:04 all up and running.
+01:05 Final warning, or final note here:
+01:07 Beware, you cannot modify existing tables, so for example,
+01:11 this move, if I decided I also wanted some other value here,
+01:16 like the opponent's role, or you know, whatever,
+01:19 if I want to change this, at all, once I run this bit here,
+01:24 it's fixed, can't change it.
+01:26 SQLAlchemy will just ignore it, and it probably will crash
+01:29 when you try to work with it, who knows.
+01:30 So, if you want to do that, you need to use what's called
+01:32 migrations, or for this little example, the easiest way
+01:35 would be to just delete the database file, and start over
+01:38 and it will create it, new.
+01:39 But in production, migrations, or some kind of
+01:42 database script to do the change, is what's required.

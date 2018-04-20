@@ -1,0 +1,74 @@
+00:00 Let's review what we've learned so far.
+00:03 Adding the RSS data, you really want
+00:05 to use feedparser to get the RSS data.
+00:08 We pip install that as well as Plotly
+00:10 to do the data visualization.
+00:14 Then we imported the modules
+00:16 and I used feedparser to parse the RSS feed.
+00:19 Which you can see one line of code
+00:21 and it wraps this in a nice data structure.
+00:23 Which you can even access with a dot notation.
+00:27 Then we prepare to data.
+00:30 We wrote two helpers.
+00:32 One to convert the date string into datetime object.
+00:36 I made a little detour explaining a bit
+00:38 why you would want to use datetime
+00:40 when you want to calculate the dates.
+00:43 But in this example, it was merely to extract year and month
+00:45 to have a consistent value for our graphs.
+00:49 Then we extracted the categories from the blog links
+00:52 making them another helper.
+00:54 Using a regular expression to extract the category.
+00:56 If it's in the dictionary,
+00:58 we return it, otherwise return to default set to article.
+01:02 Next we converted the data so far to usable structures.
+01:06 All the graphs have counting in common
+01:08 and that's where counter is your best friend.
+01:12 You can see we generated a big list
+01:15 of all the publication dates
+01:16 and we can just put them into counter
+01:18 which makes this nice, frequency counter.
+01:22 We prepare all three graphs.
+01:24 This was the first one.
+01:27 The second one were the categories
+01:29 and the third one were the tags.
+01:31 You can already see that this starts to
+01:34 paint a picture of what our PyBites blog is about.
+01:37 The final trick we needed was transposing the data,
+01:41 making X and Y axis.
+01:43 I used a nice trick from Raymond Hettinger to
+01:47 use*data in combination with zip to make
+01:51 a date-like object or a list of tuples.
+01:53 Transposing the data to X and Y axis'
+01:56 which made it way more easy to plot.
+02:02 Then I extenuate Plotly object,
+02:05 giving it the offline mode
+02:06 and calling the innate notebook mode method
+02:10 to make it work inside my Jupiter notebook.
+02:13 Then the three plots.
+02:14 Post for months frequency with all the prep
+02:17 data done, a small amount of code with a nice graph.
+02:20 Here you see the activity per month
+02:22 and number of entries in the blog.
+02:24 Secondly, the common blog categories.
+02:27 We went and made a pie chart, which makes a nice visualization
+02:30 what kind of categories our blog posts are.
+02:33 You can see that challenging articles
+02:34 trumped the other categories.
+02:36 For common blog tags, it's kind of similar as categories
+02:40 but it's a bit more granular.
+02:42 There you can also see that we blogged quite a bit about
+02:45 Flask and Django, github code automations,
+02:49 but this is a way nicer way to
+02:50 demonstrate it in any presentation.
+02:53 Check out other libraries, Bokeh,
+02:57 this is from Panda's in combination with Matplotlib,
+03:00 a very powerful combination.
+03:03 This is a print screen from the Seaborn library.
+03:09 As mentioned before, Matplotlib is
+03:11 also a very robust library
+03:13 and there might be many others
+03:15 but mostly I use Panda's and some Bokeh.
+03:17 I decided to use Plotly for this lesson
+03:20 as it's simple to use and has nice graphs.
+03:23 Now it's your turn, keep calm and code in Python.

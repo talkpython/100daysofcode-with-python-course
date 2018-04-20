@@ -1,0 +1,99 @@
+00:00 So for this video, I just wanted to show you
+00:02 a cool little script that you can create to
+00:05 sort of generate your own database files.
+00:08 Just for testing purposes, right?
+00:10 'Cause that's one of the great things about SQLite3.
+00:13 It's super lightweight, and you can use it for testing.
+00:16 So just create a new file.
+00:19 All right, and, I'd like you to
+00:22 pretty much use the file, I mean, you could
+00:24 edit whichever way you wish, of course.
+00:27 But you'll find this file in the course materials.
+00:29 So don't feel like you have to copy everything
+00:31 I'm typing here, in fact, I'm going to use
+00:33 some of my black magic to make it appear on the screen.
+00:37 So, I'm going to explain this text to you in just a minute.
+00:40 But what we will do is, let's save the file as
+00:44 so, create this Python file for yourself.
+00:47 generate_db.py, all right?
+00:55 Now, here comes the magic.
+00:58 Okay, so I know this looks daunting.
+01:00 So, just don't panic, if you don't know
+01:02 what you're looking at here.
+01:04 I'll explain things in a simple way, but,
+01:06 I'm going to try and skip over the stuff that isn't
+01:08 really SQLite3 relative, but just bear with me.
+01:12 Okay.
+01:13 So we're creating a context manager here.
+01:15 We're creating a generator.
+01:16 And that uses a with statement, well that's one way.
+01:19 It uses a with statement.
+01:20 And it'll have a function in there with this decorator.
+01:24 And you can read this stuff up.
+01:25 We'll link to that in the course notes.
+01:28 And it will yield something.
+01:30 In this case, it's going to yield that cursor.
+01:34 That we use here.
+01:36 So you've got your connection.cursor, right?
+01:38 Well, we have that here.
+01:41 We've just abbreviated it down to con.
+01:43 Which is generally a standard, right?
+01:45 So, the first thing that this script if going to do is
+01:47 it's going to prompt you for a name.
+01:49 So when you run it, it's going to say, well,
+01:51 what's the name of your database?
+01:52 What would you like to name your database file, all right?
+01:55 And, you enter in a name.
+01:57 It returns the name.
+01:59 And your context manager, this with statement,
+02:03 will create the database using that name.
+02:07 All right, so runs create_db which is here.
+02:10 And create_db when invoked is going to
+02:13 set up your connection cursor, all right?
+02:15 It's going to yield that cursor line right here,
+02:20 with create_db() as cursor so it returns,
+02:23 it yields the cursor into here.
+02:27 And then now, your width statement, runscursor.execute.
+02:32 Okay, so this is just a generator, very simple generator.
+02:35 And then it goes cursor.execute,
+02:37 and it creates a table called test table.
+02:40 With three columns.
+02:43 Sorry, four columns.
+02:44 Column one, two, three and four.
+02:46 Three as text, and one as int.
+02:49 And when it's done, it prints.
+02:51 The database has been created.
+02:53 This is just a simple, string formatting.
+02:56 And, again, substitutes the name in,
+02:59 you can see that here as well.
+03:01 And that's it, that's literally all this script does.
+03:04 Now, as you can tell, this is hard coded.
+03:07 And this is why I said this is great for testing.
+03:10 And this is something I use.
+03:11 And I will just quickly pop in here
+03:13 and change this if I have to, but for the most part,
+03:16 three text columns and an integer column
+03:18 is more than enough for me.
+03:20 And I've used this on multiple occasions.
+03:21 Just to create a really quick, simple SQLite3 database.
+03:25 Without having to go through, and create it myself
+03:28 manually using these connection commands, all right?
+03:32 So let's save this file.
+03:34 And, with that out of the way.
+03:37 We will run, let's just make sure it's in here.
+03:40 python generate_db.py
+03:44 What would you like to name your test DB file?
+03:48 Well, let's just call it Julian.
+03:52 Julian.db has been created.
+03:55 There we go.
+03:57 Right down there.
+03:58 Open up our database browser, again.
+04:02 Let's close this database.
+04:06 Open up Julian.
+04:09 And there we go.
+04:10 We've got test table, with one, two, three, four columns.
+04:14 It is a very useful script.
+04:16 You can edit it to something that's much more, there we go.
+04:20 You can edit it to something that's much more
+04:22 appropriate for you, and for your testing purposes.
+04:24 But it's a really cool one just to keep handy just in case.

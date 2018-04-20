@@ -1,0 +1,27 @@
+00:00 Recall way back
+00:01 when we worked on the search API,
+00:03 consuming the search API,
+00:05 and we were using requests to interact with HTTP services.
+00:10 That worked pretty well,
+00:12 but it turns out if you're working with complex APIs,
+00:16 and they're very structured,
+00:18 they want you to do things like pass certain headers,
+00:21 some things go into query parameters,
+00:23 others go into a JSON body,
+00:25 and it's this sort of rich, known, fixed API,
+00:29 you may well be better off using this thing called Uplink.
+00:32 And that's what we're going to focus on now.
+00:35 Instead of consuming HTTP services in an ad hoc fashion,
+00:39 we're going to use the Uplink library to create
+00:40 very structured and predictable APIs.
+00:43 So once you implement it,
+00:44 you kind of forget that it's there,
+00:46 and you just treat it like another part of Python.
+00:49 So, Uplink is a really great API for building
+00:53 what here they describe as declarative http clients.
+00:57 So instead of implementing all the details,
+00:59 you just say,
+01:00 "I want to do a get request against this URL
+01:03 with these variables and parameters,
+01:05 and Uplink, make that happen.
+01:07 Make this all work for us."

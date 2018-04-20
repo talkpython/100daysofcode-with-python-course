@@ -1,0 +1,99 @@
+00:00 When you saw me get started with Flask here, and I created
+00:03 a main method, and the main method we call run.
+00:05 And then down here where if the,
+00:07 the main convention where I call main,
+00:09 you might have thought,
+00:10 "Well, why don't you just run down there?
+00:11 Come on.
+00:12 Like, what are you doing?"
+00:13 It turns out that in real web applications,
+00:15 there's tons of startup and configuration code.
+00:17 Configuring the logger, configuring the
+00:18 database connections, etc., etc.
+00:21 So I did this with that fact in mind.
+00:23 So one of the things that we're going to need to do is
+00:26 we actually need to make sure that the starter data that
+00:30 they application is going to use exists.
+00:33 All the rules have have been created in the database.
+00:35 There's always going to need to be a computer,
+00:39 sort of opponent user, like a built-in user.
+00:41 We are going to create that as just a standard user
+00:43 in the database with a special lookup and things like that.
+00:47 So let's go over here,
+00:49 and maybe we can make this more obvious.
+00:51 We can say...
+00:55 "Run web app,"
+00:56 and we can take this and put that down there.
+01:01 And up here, we'll say, "Run web app" as the last thing,
+01:04 but let's call another one, let's say, "Build starter data."
+01:07 And we'll define Builder Starter Data.
+01:10 Well, what goes in here?
+01:11 Well, we can go to our game decider.
+01:19 Go up here and say, "from game_logic import game_decider"
+01:26 We're also going to need GameService later
+01:28 in just a second.
+01:34 So we'll come down here and say,
+01:35 game_decider.all_rollnames."
+01:42 We can just print out roll names, just to see what's
+01:44 coming along really quick here.
+01:47 And let's just throw a quick return so the app
+01:49 doesn't actually start.
+01:52 Here you can see we are getting all the roll names.
+01:54 That's really cool.
+01:56 So it looks like that's working.
+01:58 And then the GameService,
+02:00 this is the thing that talks to the database.
+02:01 It has an init rolls, and if you give it the roll names,
+02:04 it will make sure that all these are created in the
+02:06 database, have ID's and things like that.
+02:10 If they're already existing,
+02:11 this is just going to bail out of that.
+02:14 The other thing has to do with that computer users.
+02:16 So let's come over here and say,
+02:17 Computer = GameService()
+02:22 Find player by computer."
+02:24 And if the computer already exists, that's great.
+02:26 But if it doesn't, we're going to create this one.
+02:35 We'll create the player called computer.
+02:37 Okay, so we want to make sure this happens
+02:40 every single time.
+02:41 Now, it's kind of silly because, really,
+02:43 it only has to happen once, and then the
+02:44 database is initialized.
+02:45 But have this here to make any changes,
+02:47 make any additions to, will be really, really nice.
+02:50 So, before we run our web app, we're going to make sure that
+02:53 the starter date, or like the rolls,
+02:54 and the computer player, and so on, are all there.
+02:57 Let's go ahead and run this and see how it works.
+02:59 Run it and nothing happens.
+03:01 Well, not nothing.
+03:02 It built the starter data and then I,
+03:04 sure, sure I could do this right here, right?
+03:06 So if we run it now, it should be running the web app.
+03:08 But let's look in here.
+03:11 Woo, look what we got over here.
+03:13 We have our Rock Paper Scissors SQLite database.
+03:16 Let's put over into here and see what we got.
+03:29 There are all the rolls.
+03:31 Created that time: rock, gun, lightning, devil, and so on.
+03:34 If we run it again and again, we're never going to have
+03:36 more than 15 rolls.
+03:37 The other thing that we might want to look at
+03:40 is from players.
+03:42 And now we just have our computer that we created, as well.
+03:44 So we have our starter data.
+03:46 Now our system is just going to check.
+03:52 Like this init_rolls, if we go to there, you'll see.
+03:55 It says, "Look, if we have some here, let's just get out."
+03:57 Right?
+03:58 Similarly, we check to see if the player already exists,
+04:01 and if they do, we're just not going to do anything.
+04:04 But if they don't exist, we're going to
+04:05 create them the one time.
+04:07 All right, so now we have our models imported.
+04:10 And remember, this is effectively just what we did
+04:14 in the previous demo. There's nothing changed here.
+04:16 We just dropped it in here and called a couple of functions
+04:19 in the beginning of our web app before we let it run every
+04:21 time it starts up, to make sure out database is all set up.

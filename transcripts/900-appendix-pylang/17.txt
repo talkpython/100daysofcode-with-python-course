@@ -1,0 +1,34 @@
+ 0:01 Classes and object-oriented programming are very important parts 
+0:04 of modern programming languages and in Python, they play a key role. 
+0:08 Here we are creating a class that we can use in some kind of game 
+0:12 or something that works with creatures. 
+0:15 So to create a creature class, you start with the keyword class,
+0:18 and then you name the type and you say colon 
+0:21 and everything indented into that block 
+0:23 or that code suite to do with the class is a member of the class. 
+0:27 Most classes need some kind of initialization to get them started, 
+0:30 that's why you create a class, we want them to start up all ready to go 
+0:34 and bundled up with their data and then combine that with their methods, 
+0:38 their behaviors and they make powerful building blocks in programming. 
+0:42 So most classes will have an initializer, 
+0:45 and the initializer is where you create the variables and validate 
+0:48 that the class is getting setup in correct way, for example making sure the name is not empty, 
+0:52 the level is greater than zero, but less than a 100, something like that. 
+0:56 Now this is often refered to as __init__ sometimes just init, 
+1:01 or even a constructor and these dunder methods 
+1:04 because they have double underscores at the beginning and at the end, 
+1:07 they are part of the Python data model which lets us control many things about classes, 
+1:10 so you'll see a lot of methods like this but the __init__ method 
+1:13 is probably the most common on classes. 
+1:16 If you want to create behaviors with your class, 
+1:19 and if you have a class that's almost certainly part of what you are going to do, 
+1:22 you are going to define methods just like functions that are standalone, 
+1:26 methods or functions that are parts of classes 
+1:29 and you define them in exactly the same way, 
+1:32 the only difference is typically they take a self parameter, 
+1:35 the self parameter is passed explicitly everywhere when you are defining the class, 
+1:40 some languages have a "this" pointer, that's sort of implicit but in Python, 
+1:45 we call this self and it refers to the particular instance of the creature that exists, 
+1:50 you might have many creatures but the self is the one that you are working with currently. 
+1:54 So just be aware you have to pass that explicitly everywhere 
+1:58 unless you have what is called a class method or a static method. 

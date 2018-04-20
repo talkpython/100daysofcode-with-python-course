@@ -1,0 +1,14 @@
+00:00 Right now, you're certainly familiar
+00:01 with the GitHub Repository.
+00:03 That's where all the instructions and the starter code
+00:05 and the data and what not has been for
+00:08 all the 100 Days projects.
+00:10 But I still want to emphasize one more time:
+00:13 maybe you haven't starred, maybe haven't forked this,
+00:15 I want you to at least go to GitHub and start
+00:18 and probably fork it,
+00:19 so you have a permanent history of this.
+00:21 You've done 100 days!
+00:23 You've gone on this entire journey.
+00:24 Make sure you take the source code with you.
+00:26 I'm sure you'll find it useful down the line.

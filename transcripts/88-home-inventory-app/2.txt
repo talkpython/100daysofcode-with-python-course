@@ -1,0 +1,60 @@
+00:00 All right, for the next 3 days,
+00:02 creating this home inventory app,
+00:04 it's going to be a bit different to everything
+00:05 you've done so far and the reason is
+00:07 is that we're not actually going to live code
+00:10 the app line by line because that would just be
+00:13 pretty boring and might take you forever.
+00:15 So, take a look at this.
+00:18 This is the ReadMe.
+00:20 What I'd like you to do for the first day,
+00:23 I should say, is watch 3 videos.
+00:26 Watch them, one about the main menu,
+00:28 the SQLite3 database access,
+00:31 and then scrubbing malicious data.
+00:33 Watch those 3.
+00:34 That should take a significant amount
+00:36 of time, maybe 15 minutes or so,
+00:38 depending on how much time you have.
+00:40 And, after that, start visualizing
+00:43 how you're going to form and write your own app.
+00:46 So after taking all of those things into account,
+00:49 how are you going to do this yourself?
+00:51 Feel free to copy along and copy
+00:52 exactly what we've got in the repo, but obviously it will be
+00:56 more beneficial if you write this yourself,
+00:59 taking guidance from what we have, okay?
+01:03 Get coding if you have the time.
+01:05 Remember, I know we're all short of time,
+01:07 so if you don't have the time, don't worry if you can't
+01:09 get coding today 'cause these videos can be a bit lengthy.
+01:13 But go ahead and code if you can, all right?
+01:17 Day 2, I'm going to walk you through
+01:20 an entire run-through of the app.
+01:22 We're going to see how it functions,
+01:24 how everything works together to form the final product.
+01:28 Alright? And that's in the app demonstration video.
+01:32 If you haven't already by this point,
+01:34 start coding up your own solution
+01:36 'cause you've only got another day and a bit
+01:37 until you have to move onto the next lesson.
+01:39 So, start coding your own app up.
+01:41 Again, take guidance where you need to, all right?
+01:44 And on the last day, there's another video for you to watch.
+01:48 I'm not going to leave up to you just yet.
+01:51 Watch the pitfalls and bugs issues, okay?
+01:55 That video.
+01:56 This is actually going to show you where the app fails,
+01:59 and there are quite a few points that fails
+02:01 because to make a fully functional,
+02:03 bug-free app can take a fair bit of time,
+02:06 and that's part of the learning process, okay?
+02:08 I'm going to walk you through what fails,
+02:11 and if you can, go through and see what you can fix, okay?
+02:15 They're all issues that you'll need to take into account
+02:18 in your own app, so this is a worthy exercise, okay?
+02:22 And then if you're super quick, and you have even more time,
+02:25 we'll get it out of the command line.
+02:27 See if you can give it a GUI or even a web interface, okay?
+02:31 And those are your 3 days,
+02:33 a lot of watching, a lot of coding.

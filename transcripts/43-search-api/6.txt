@@ -1,0 +1,56 @@
+00:00 So we have the basic structure
+00:01 of our application written here,
+00:04 but now we want to actually go,
+00:05 when somebody calls this function,
+00:07 we want to go and download this result
+00:09 from our search service, so, recall over here
+00:11 in our movie search service, we put something like this.
+00:17 We say api/search/{keyword},
+00:21 and then the search will happen.
+00:22 So let's go over here and first create the URL.
+00:26 And the URL we're going to use f-strings.
+00:28 This is a Python 3.6 feature, if you don't have
+00:31 Python 3.6 or above, then you're going to need to
+00:35 do the older style format.
+00:36 So we'll say like this, and we want to replace
+00:39 that little part with the variable keyword,
+00:41 so in Python 3.6 with these f-strings,
+00:44 you can say, {keyword}.
+00:47 Notice the autocomplete.
+00:49 So, let's begin just by printing out URL,
+00:52 and just make sure that we're on the right path.
+00:54 So we're going to come over here,
+00:56 and we're going to call result...
+00:59 Spelling is hard.
+01:00 Results equalsapi., notice there's our little thing,
+01:03 and let's just, for now, say this is going to be runner.
+01:06 Going to search for runner.
+01:08 So if we run this,
+01:10 that looks pretty good, we can click it and test.
+01:13 Okay, looks like we got the maze runner and runner runner,
+01:16 that's a lot of running.
+01:17 And so this is working.
+01:19 Now instead of printing out this, let's actually use it.
+01:22 So we'll say response equals requests,
+01:25 which we've already installed,
+01:27 get, and we'll pass the URL.
+01:30 We could go ahead and just work with this.
+01:32 We could say response.text,
+01:34 unless that failed, unless the, say,
+01:36 wireless is down or something.
+01:37 So we need to be careful and say,
+01:38 I want to make sure there was no error.
+01:40 There's a status code, you could check it.
+01:42 But requests has this cool method called raise_for_status.
+01:45 So if anything went wrong for whatever reason,
+01:47 you'll get an error, otherwise you can just keep going.
+01:51 So now we have, and we can print out, what we got back
+01:56 here, and then again.
+01:59 And notice, there's all the results coming back,
+02:02 well, at least all the ones the server would give us.
+02:04 That's pretty cool.
+02:05 Now, we actually, not to like...
+02:08 We don't want to work with strings, we want to work with data.
+02:11 So the next thing that we need to do
+02:13 is convert this text into Python dictionaries
+02:17 from the JSON source.

@@ -1,0 +1,18 @@
+00:00 Final day of SQLAlchemy,
+00:01 you've got your app selected,
+00:04 got it running, you've modeled your classes
+00:06 and created your database structure.
+00:08 Now you just need to work with your data.
+00:10 So you're going to insert some records,
+00:12 save some data and insert it,
+00:14 and then somewhere do a query.
+00:16 Do a session.query of the type of query you want,
+00:19 and just look back at the example.
+00:21 We should have a variety of types of queries.
+00:23 You should be able to make one of those
+00:24 adaptable to what you're doing.
+00:26 So just use this database, put some data in it,
+00:30 and make your application more awesome from it.
+00:33 All right, I hope enjoyed SQLAlchemy.
+00:34 It's really a wonderful way to work with databases,
+00:37 one of the more popular and flexible ones at that.

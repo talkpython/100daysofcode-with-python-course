@@ -1,0 +1,137 @@
+00:00 Lists are actually pretty simple.
+00:02 They're probably one of the things you're
+00:03 going to deal with the most in your Python journey
+00:06 and the easiest way to demonstrate it is
+00:09 to just create one right here of numbers.
+00:13 So let's create a stereotypical list, all right.
+00:17 We do that by using the square brackets
+00:20 and we're going to create five entries in that list.
+00:26 So this list contains five items.
+00:29 Okay. Now, because we're dealing with numbers specifically,
+00:32 we don't have to put the quotes around it, okay.
+00:38 If we were dealing with strings that's what we do,
+00:41 but we're dealing with just numbers
+00:43 so let's just leave it plain like that.
+00:46 So that's our numlist.
+00:48 We'll just call it back so you can see what it looks like.
+00:51 There you go.
+00:53 So it's now a list of five numbers, okay.
+00:55 1, 2, 3, 4, 5.
+00:57 One of the cool things you can do
+00:58 with a list is you can actually reverse it.
+01:01 Okay.
+01:02 So, now need to write some nifty code
+01:04 that will go through, parse it,
+01:06 and put all the values in back to front.
+01:10 We can just do numlist.reverse()
+01:13 Call numlist back and there you go,
+01:16 5, 4, 3, 2, 1.
+01:19 Now we can do that again.
+01:25 Okay, and we're back to one, two, three, four, five.
+01:29 Now, if we actually go back,
+01:34 one thing we can do, is we can actually sort the list.
+01:40 So numlist.sort(), okay.
+01:45 And there you go 1, 2, 3, 4, 5 again.
+01:47 And this is very handy because you can actually sort
+01:49 with letters as well.
+01:52 Now let's say we want to actually print out all
+01:54 of the values inside num list.
+01:57 How do we do that?
+01:58 We can use a four loop, okay?
+01:59 So we can go four num in numlist, print(str(num)).
+02:08 So we hit enter and there are our five numbers,
+02:12 1, 2, 3, 4, 5
+02:14 So it's pretty powerful.
+02:15 There's with just this basic ideology you can get a lot
+02:18 of stuff done in Python code.
+02:22 Now one of the other ways you can actually create a list is
+02:25 to call the list function against a certain string.
+02:31 Let's say we have a string called -
+02:33 we have a variable called mystring.
+02:36 And we assign it to string Julian.
+02:41 Okay, so mystring is Julian.
+02:44 Well how do we convert that into a list?
+02:46 We simply call list against it.
+02:49 So list(mystring) is Julian.
+02:53 And there you go, you see my name has just been chopped up
+02:57 so that each letter, or each character I should say,
+03:01 is now a string value inside this list.
+03:06 Right. So, what can we do?
+03:08 We can assign that so l = list(mystring).
+03:16 So we're assigning this here to the variable l, alright.
+03:23 And we'll just call that back.
+03:25 And it's Julian.
+03:26 Now what are some interesting things we can do with this?
+03:28 Well, there's actually quite a lot.
+03:30 We can actually reference the values
+03:32 by their position, by their index, inside that list.
+03:37 So we can go l[0] is J.
+03:42 We can go l[4] is A.
+03:47 You can see we got J there, we got A there.
+03:51 Very handy.
+03:52 What else can we do?
+03:53 Well there are a few other functions we can call here.
+03:55 We can go pop, and what pop will do it's actually going
+04:00 to return the last letter from this list.
+04:08 So, the letter N is going to be returned.
+04:11 But at the same time,
+04:13 it's going to be removed from the list.
+04:16 So my name is now Julia.
+04:18 Right.
+04:21 We can then insert it back in.
+04:23 And we use insert for that.
+04:28 Now when we insert, we actually,
+04:30 if you look at this tool tip here that's cheating,
+04:33 you can see we have to specify an index and then the object.
+04:37 So what position are we inserting the letter N
+04:42 into this list?
+04:43 Well, we're going to insert it into position 0,
+04:47 1, 2, 3, 4, and 5
+04:51 5 is going to be on the end, so position five.
+04:54 And what are we inserting?
+04:55 We're inserting the letter N.
+04:57 All right, it's an actual string.
+05:02 Now when we call the list, there we go,
+05:05 it's rebuilt with the letter N.
+05:07 Another interesting this we can do is
+05:09 we can actually replace any of these with any other letter.
+05:15 So we can go l[0], which we know will actually return J,
+05:20 but we can replace J.
+05:22 So L[0] is going to be B.
+05:30 So, l is now Bulian.
+05:35 Okay?
+05:36 Ya, a little play on words.
+05:37 Let's go with that.
+05:39 Now if we wanted to get rid of the B,
+05:42 we could actually delete it or we could pop it.
+05:45 The difference is, as I've said before,
+05:47 pop will return the letter in that position,
+05:53 where as now with the delete option
+05:56 it will actually delete it.
+05:58 You won't even know what you're deleting.
+06:00 It doesn't return anything, it just deletes.
+06:03 So if we want to delete that zero we just have
+06:05 to type del(l[0]
+06:13 and there's the B gone.
+06:15 All right?
+06:16 Next we can do l.insert().
+06:21 We'll choose index position zero.
+06:24 And this time we'll put an M in.
+06:28 l is now Mulian, okay.
+06:31 And now, even better, with pop,
+06:34 let's say we do want to return something, we can go l.pop(),
+06:39 but now we can actually specify a position, an index.
+06:43 So we can go l.pop(0), we get the M returned,
+06:49 and the M has also been removed
+06:51 from position 0 in the list.
+06:54 So those are some cool little nifty tricks
+06:57 you can keep up your sleeve, add them to your book,
+07:00 because when it comes to lists, you'll end up dealing
+07:02 with them quite a lot.
+07:03 So knowing how to pop and how to delete and insert
+07:07 and append, which is another one I'll show you quickly.
+07:11 l.append(), let's add S.
+07:21 We can append, append will always add right at the end
+07:26 into the last position.
+07:29 So definitely keep all of these handy.
+07:31 You'll be using them quite a lot.

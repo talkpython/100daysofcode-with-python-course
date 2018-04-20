@@ -1,0 +1,67 @@
+00:00 This is working pretty well,
+00:01 but this constant need to call raise_for_status,
+00:03 super annoying.
+00:04 So if it came back with a 404, this would give us an error
+00:07 and say 404, you didn't get the right response value.
+00:10 So let's go fix that real quick.
+00:13 Let's do that by adding another little helper thing,
+00:15 I'll call this uplink_helpers.
+00:18 Now this is not to do with Uplink, this is us.
+00:20 Okay, so we're going to write an import uplink,
+00:23 and what we're going to do is we're going to define
+00:24 what's called a response handler.
+00:27 So we'll say @uplink.responsehandler,
+00:31 and define a method called raise_for_status.
+00:34 You can call it whatever you want.
+00:35 And here, it takes the response.
+00:37 So, if we put this somewhere in our service description,
+00:41 it will be called automatically,
+00:43 and we can just do this, response.raise_for_status.
+00:47 And that's like calling,
+00:48 this is a response which comes from requests,
+00:53 this is it's way to check for errors,
+00:55 and if it works then we'll just return this and carry on.
+00:59 Because it's one of these Uplink response handlers,
+01:02 it lets is do this little bit,
+01:04 this little trick here,
+01:05 that's going to make everything wonderful.
+01:10 Let's go over here and put blog 2 right there.
+01:13 So let's try to see if we can make it break.
+01:16 I want to read,
+01:18 fails, could not find this URL,
+01:20 and where did this happen?
+01:21 It happened on this raise_for_status.
+01:25 And what we need to do, is we need to actually call
+01:28 that all over the place,
+01:29 if for some reason we don't,
+01:32 it'll give us some weird value about the JSON not matching.
+01:36 Why, because it gave us a 404 not JSON.
+01:38 But we don't want to have to call this everywhere.
+01:40 So let's get rid of these,
+01:42 any it yet, not yet.
+01:44 There would be more but we're going to skip them.
+01:46 So now what we can do, is we can take,
+01:47 from our little helper,
+01:49 we come over here and say,
+01:52 @raise_for_status.
+01:58 Have to import that from our little helpers we wrote here.
+02:01 Python is saying this should be listed in requirements.
+02:03 It's not technically required, because it's a dependency,
+02:06 but yeah, sure, let's go ahead and list it.
+02:08 Now this means all of these functions will all of a sudden
+02:11 start validating, so if I run this again we should not see
+02:14 that JSON error,
+02:15 in fact we should see, well it worked 'cause I changed it.
+02:18 Let's put it back so it's broken one more time.
+02:23 See 404 client error, where did this happen?
+02:27 If you go,
+02:29 here,
+02:31 it's just right when we try to access it, right?
+02:33 Even though we're not checking this raise_for_status
+02:35 thing that we added, it's really really nice.
+02:37 We're going to need to do one more thing like this.
+02:38 When you apply these decorators to the whole class,
+02:41 it applies to every method.
+02:43 If you apply them to a method,
+02:44 it applies only to that method.
+02:46 Whew, okay, so now we have our error handling in place.

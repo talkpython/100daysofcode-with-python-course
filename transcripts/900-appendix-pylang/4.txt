@@ -1,0 +1,25 @@
+ 0:02 The most common control flow structure in programming has to be the "if" statement. 
+0:06 Let's see how we do "if" statements in Python. 
+0:09 Here we have a simple console program, 
+0:12 probably this bit of code is running in some kind of a loop or something like that, 
+0:15 and we are asking the user for input saying "what is your command?", 
+0:19 either list the items by typing L or exit from the program by hitting x. 
+0:23 And we capture that string and we say "if", so simple keyword "if"... some boolean test, 
+0:29 so in this case the command is == 'L' 
+0:32 so that means is the command equal to L: (colon) 
+0:34 and then define what we are going to do in that case. 
+0:37 In this case we are going to list the items, we could do multiple lines, 
+0:40 we are just doing one here. 
+0:42 Now we don't say "else if", in Python we say "elif", for short, 
+0:45 but then we just have another test, 
+0:48 so if it's not L and the command happens to be x, then we are going to exit. 
+0:51 And those are the two options that we are expecting,
+0:54 but if we get something that we don't expect, like "hello there", 
+0:57 or empty enter or something like that, 
+1:00 we'll be in this final bit here where it says "Sorry, that wasn't understood". 
+1:04 So we start with "if" some kind of boolean expression, and remember, 
+1:08 we could just say "if" command: and leverage the truthiness of that value, 
+1:12 and that would run if they provided some kind of input at all, 
+1:15 but if we want to test for else, we say if command == 'L', 
+1:18 we have these additional as many as you want "else if" tests 
+1:21 and there is a final optional "else" clause. 

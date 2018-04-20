@@ -1,0 +1,152 @@
+00:00 Okay, blank slate, here we go.
+00:03 The first thing you need to do
+00:04 is create a Python file called simpledb.py.
+00:09 That's this file here in your project directory that
+00:13 you're going to use for this video.
+00:15 So you see I've got simpledb.py.
+00:17 Next up, we're going to start our virtual environment,
+00:21 so python -m venv venv
+00:26 Now we're not actually going to be
+00:27 installing any third party modules
+00:28 or anything crazy so,
+00:30 I suppose technically the virtual environment
+00:32 isn't necessary but,
+00:35 for me, I always do it no matter how little the project is.
+00:39 So we'll activate that,
+00:42 venv\scripts\activate
+00:46 and now we're safe.
+00:47 Now what we can do is we will actually launch
+00:51 the python shell just so that we're using it in here.
+00:54 There we go, python 3.6.
+00:57 Now technically what we're about to do here
+00:59 is we're about to use commands
+01:02 that we could sort of run in this virtual shell here.
+01:07 But I'd like to actually run these commands
+01:09 in a script just to show you how it works
+01:13 in a different sort of way.
+01:15 So just bear with me.
+01:17 The first thing we're going to do is
+01:19 create a database.
+01:21 It's the first day of SQLite 3,
+01:23 so let's create a database.
+01:25 We have to do that to work with one, right?
+01:29 What we will do is
+01:30 we'll just throw this in the top,
+01:33 and we'll import sqlite3.
+01:36 That's it, that's pretty much all we need to do
+01:38 to create our database.
+01:40 It's all we're actually importing.
+01:43 Now, I want you to visualize this.
+01:46 Don't just read what I'm going to be typing here
+01:47 and what you'll be following along,
+01:49 I'm going to use the full form words
+01:51 just so that it makes sense.
+01:53 Alright?
+01:55 We're going to create a connection object
+01:58 and that object is going to store
+02:01 our actual connection to the database.
+02:05 Think of the database as, you know,
+02:07 some sort of a, something you have to tap into, right?
+02:11 And in order to do that you need to create
+02:13 a connection to it just like you connect
+02:14 to the internet or what have you.
+02:17 So we're going to connect using
+02:19 the SQLite3.connect command and
+02:23 this is now where we specify the name of our database.
+02:28 So let's, for this exercise, let's create an address book.
+02:31 Address book with your name,
+02:32 your phone number, your address, maybe.
+02:35 And let's call it addressbook.db.
+02:40 There's our database.
+02:42 Now what this command does is
+02:45 sqlite3.connect addressbook
+02:48 that is actually going to create this database
+02:52 if it doesn't exist.
+02:55 If this database did exist, it would just connect us to it.
+03:00 Which is really cool in that if it doesn't exist
+03:02 it thinks "Well, hey, you just want me to create it,
+03:04 "so I'll create it."
+03:06 And we're going to store this connection,
+03:08 this connection to this database,
+03:10 in the connection object.
+03:14 Now,
+03:16 in order to parse the database,
+03:18 P-A-R-S-E,
+03:20 in order to parse the database,
+03:21 we need to have a cursor.
+03:24 So just like this cursor here allows us
+03:26 to move through text and say Microsoft Word document,
+03:30 or what have you,
+03:31 we need this cursor for the database.
+03:36 And using this cursor we can execute commands.
+03:40 We can send commands to the database
+03:43 to do certain things such as
+03:45 select information, overwrite information,
+03:48 create things, hint hint.
+03:52 But we need to store that inside another variable.
+03:57 Generally the rule of thumb is to just
+03:59 call this cursor c, and that cursor is part of connection.
+04:05 So part of our actual SQLite 3 connection.
+04:09 So, connection.cursor.
+04:12 c =, or c is assigned connection.cursor.
+04:18 Now, as I hinted, we want to execute commands.
+04:23 So c.execute.
+04:25 Now in the brackets here, what are we actually executing?
+04:30 This is where you actually start to use your SQL commands.
+04:34 We're going to put those within a few of these,
+04:38 'cause it's going to be multi-line.
+04:42 And the first SQL command is create.
+04:47 Because, what are we doing?
+04:48 We're creating a table.
+04:50 And now, this next word we're going to type in
+04:54 is going to be the name of your table.
+04:57 So within our address book database,
+05:00 we have a table named, let's call it details
+05:04 because I have no imagination.
+05:08 Now, we have a table named details.
+05:10 That's what this command is creating.
+05:13 Now what do we want to be in that table?
+05:17 Well, I can imagine in my address book
+05:20 I might have a name.
+05:22 So creating, pretty much we're creating
+05:24 a column here named "name" in our table.
+05:28 And that name, what kind of information
+05:31 is going into that name?
+05:33 What type of information is going into that name column?
+05:36 Well, it's going to be text.
+05:39 Same with the address.
+05:41 We want an address column.
+05:43 And that's also going to be text.
+05:45 But our phone number,
+05:47 while that could be text let's just
+05:49 shake things up a little.
+05:51 That's going to be an int, an integer.
+05:54 So that's it. Or so you think.
+05:57 But then last thing as you know
+05:59 from some of you other python work so far
+06:01 is that you actually need to close your connection.
+06:04 Now, to do that, as you'd expect,
+06:07 connection.close.
+06:09 Nice and straightforward.
+06:12 And that is so simple.
+06:13 So as I mentioned before, all of this,
+06:16 all of these commands that we're typing in here,
+06:18 all of this python code,
+06:19 it's actually stuff you can run on your python shell,
+06:24 in your python shell, I should say.
+06:26 But we'll put it in a script.
+06:29 That way, we can just run the script
+06:32 from the command line.
+06:34 We'll go directory here, let's see,
+06:37 there's our simple db.py,
+06:39 and let's run python simpledb.py.
+06:45 And look how quickly that returned.
+06:47 I hope it actually did something.
+06:49 Now we should have a database called addressbook.db.
+06:53 Now this database is completely empty
+06:58 because all we've done is create a table
+07:00 with name, address, and phone number,
+07:03 but no data.
+07:04 So let's open up SQLite database field,
+07:08 the application you installed,
+07:10 and let's have a look at that.

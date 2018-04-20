@@ -1,0 +1,24 @@
+00:00 Day 3, what you're going to do is
+00:01 you're going to package up your app, so you're going to
+00:03 install PyInstaller, and you're going to run this
+00:06 build.spec, so the way to get started with these
+00:08 is to just copy one, so here I've linked to the one
+00:11 that I used for my demos.
+00:13 You can take this and just change it ever so slightly,
+00:16 so here's where I specify the name,
+00:19 here's where I specify the name of the sort of entry point,
+00:23 the main Python program we're going to run.
+00:25 I think those are the only two things you need to change,
+00:27 right, so take this, put it there,
+00:31 and then just after you've installed PyInstaller,
+00:33 you're going to run this line a little bit later.
+00:35 In distribution app name, you should have either
+00:38 an exe or a .app or, you name it.
+00:42 Right, on Linux, you'll have
+00:43 a Linux binary that you can run.
+00:46 Zip it up and run it.
+00:47 I hope you really enjoyed this experience building
+00:50 simple, fire and forget, GUI applications in Python.
+00:54 When you're done, as usual, share with the world
+00:57 all the fun and joy of what you've had building this thing,
+01:00 and I hope you have a great time and get to it.

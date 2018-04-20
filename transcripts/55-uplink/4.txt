@@ -1,0 +1,81 @@
+00:00 Alright, here we are in our GitHub Repo.
+00:03 In the Uplink directory, we're going to
+00:05 quickly create a virtual environment.
+00:06 We're going to want to install some third party packages,
+00:09 namely uplink and all of its dependencies.
+00:11 So, you want to have this here, so you don't mess
+00:14 with the global one.
+00:17 Now that that's done, we can just drop this into PyCharm,
+00:20 open it however you like.
+00:23 Alright, it's open, there's no files,
+00:25 we're starting from an entirely blank project.
+00:28 So let's do two things,
+00:29 let's go over here and add a program
+00:33 and let's add a requirements.txt.
+00:36 So, in order to work with Uplink,
+00:39 it probably won't surprise you to know,
+00:40 you have to install Uplink.
+00:42 So we'll come over here and say uplink.
+00:43 Now, we're going to install this,
+00:45 however, let's quickly look at the Uplink documentation.
+00:49 So, you can see it's really targeting
+00:50 all the versions of Python,
+00:52 great code coverage, really nice,
+00:54 however, there is this sort of note here:
+00:57 warning, until this becomes an official version one,
+01:01 maybe don't depend on the exact stability of the API.
+01:05 Chances are, what we're doing
+01:06 is really pretty basic and won't change,
+01:09 but I'll show you how we can hedge for that in a second.
+01:11 So let's go over here.
+01:15 Install our requirements,
+01:17 and notice, we got Uplink 0.4.0
+01:20 and we can actually...
+01:22 This will go away in a second.
+01:23 We can come over here and say this is actually
+01:25 == to this.
+01:26 And when we do this, it should still just say:
+01:29 "No, no we're all good, everything's installed."
+01:31 That way, when you get this project,
+01:34 you can put this and it won't change.
+01:36 In case that API really is unstable,
+01:38 this will let you work with exactly
+01:40 what we're using for this video.
+01:42 Now this little green here is just PyCharm saying
+01:44 this is misspelled.
+01:46 We can just save it, tell it no, leave us alone.
+01:48 Okay, so we are ready, actually to write some code.
+01:52 And let's just put a little bit of structure in place.
+01:56 What we're going to do it we're going to work with a blog service.
+01:58 So, imagine this is a program that
+02:00 lets us edit our own blog, but not from the web.
+02:04 We're going to log into our application here
+02:07 and we can say view our existing post,
+02:09 edit our post, we can create new posts,
+02:13 really kind of a toy example but,
+02:14 it has much of the RESTful components
+02:17 that any API would have.
+02:18 So, it accepts POST, PUT, DELETE,
+02:21 the various verbs and JSON bodies,
+02:24 and other types of interesting things,
+02:26 authentication and headers,
+02:27 and it'll let you play around
+02:28 with many of the capabilities without
+02:30 getting into a really super complicated service.
+02:33 So let's just write the skeleton here
+02:35 and then we'll go check out the service.
+02:36 Alright, so I'm going to just copy something in
+02:38 and it's just going to like this.
+02:40 So, what we're going to do, is we're going to define
+02:42 basically a couple of operations here.
+02:44 We'll use this one first.
+02:45 So we're going to have a main method
+02:47 and it's just going to go around and around
+02:48 as long as you don't enter a blank line,
+02:51 it's going to ask you, would you like to write a post?
+02:54 Or, read the existing ones?
+02:55 The service starts out with some already there.
+02:57 And then it just says each time through,
+02:59 do they say write, do they say read, if not exit.
+03:04 We're going to fill this out with the implementation
+03:06 of talking to the API.

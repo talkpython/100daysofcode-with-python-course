@@ -1,0 +1,54 @@
+00:00 There's still one extra step to take.
+00:03 As you see the data now,
+00:04 it's in dictionaries or list of tuples.
+00:08 And usually for a graph,
+00:10 you want to have two dimensions, right?
+00:12 You want to have an X and a Y axis.
+00:14 So it's better to have two lists.
+00:16 One is the keys,
+00:17 and one is the values.
+00:18 When I was preparing this notebook,
+00:20 I saw a great tip from Raymond Hettinger to use the zip,
+00:24 with star arguments,
+00:25 transposing to the data.
+00:27 So this is exactly the kind of data we have.
+00:29 We have a list of tuples.
+00:32 And here, he's using a zip with a star
+00:35 on that data structure.
+00:37 And he gets to transpose the data.
+00:39 And I'm going to use that too.
+00:41 Make our list of tuples,
+00:42 in an axis of keys,
+00:44 and a Y axis of values.
+00:46 So let's write a transpose
+00:50 list of tuples,
+00:53 and takes data.
+00:56 And it's a little bit of type checking I had to do.
+00:59 Because data can come in as a list of tuples.
+01:02 But it can also be a date.
+01:03 So, if it's date,
+01:04 then I make us as list of tuples.
+01:07 I'm just making sure that all the data
+01:08 we're going to transpose is of the same structure.
+01:11 So dictionary should be a list of tuples.
+01:15 And then I'm going to use Hettinger's trick
+01:17 to do transposed, list,
+01:20 zip, *data.
+01:27 And I'm going to return the new data.
+01:30 Let's see this connection.
+01:39 How cool. So here we got the X axis,
+01:42 and here got the Y axis.
+01:44 And this is kind of format you want,
+01:46 to make it easy to plot.
+01:48 Before going in to plot, one final thing,
+01:51 and you want probably read up the beginner documentation,
+01:55 plotly can be used in offline and online mode.
+01:59 And for this tutorial,
+02:00 we are going to use it in offline mode.
+02:03 And there's a special switch
+02:04 to use this in my notebook.
+02:06 I can set that all with one line of code.
+02:09 So I do plotly offline init.
+02:12 Notebook mode, connected equals true.
+02:18 And with that done,
+02:19 we can start plotting in the next video.

@@ -1,0 +1,77 @@
+00:00 Okay, and that was the basic overview
+00:02 of datetimes.
+00:04 How cool was that?
+00:05 Not too bad, not too hard.
+00:06 Nice way to start your #100DaysOfCode on Python, right?
+00:10 Alright, so let's do a quick recap of what we covered.
+00:13 There wasn't a lot so this will be pretty quick.
+00:16 So we began by importing datetime and date.
+00:19 And we then started to look at the differences
+00:22 between datetime and date.
+00:24 So a datetime object, well when we ran datetime.today(),
+00:28 it included the date and the time,
+00:31 so we had a timestamp in that object.
+00:34 Whereas when we ran that with just date,
+00:37 we only get the actual date, the calendar date.
+00:40 So we the 19th of February 2018, alright.
+00:44 And we found that you can't actually easily combine the two,
+00:48 do maths between the two.
+00:50 Okay, not without a lot of conversion.
+00:55 First we gave ourselves a Christmas variable,
+01:00 and we gave it its' actual date,
+01:02 which is something you can do with date.
+01:04 You can assign an actual date to an object.
+01:08 Once we did that, we were then actually able to calculate
+01:12 the amount of days between Christmas and the current date.
+01:16 So that was just a bit of a little scenario
+01:18 for you to use datetime and date.
+01:21 Okay, next we played with timedelta.
+01:27 Now we began by importing timedelta
+01:29 and then we gave ourselves a timedelta object.
+01:33 So we set the timedelta length as 4 days and 10 hours.
+01:39 Then we discussed the fact that you can view your timedelta
+01:44 in those days and you can view it in seconds,
+01:49 but you can't view it in hours, okay.
+01:52 And that's because it only works in days and seconds.
+01:55 And the seconds only go up to a max
+01:57 of the 24 hours of a day.
+02:00 They expect you to do the calculations yourself.
+02:04 And that's what we see here.
+02:07 t.seconds / 60 / 60,
+02:10 and then we get our ten hours, okay, matches up there.
+02:15 As a little scenario to try, we wanted to look at the ETA.
+02:20 We wanted to add the estimated time of arrival
+02:23 onto the current time.
+02:26 So the current time plus six is that there,
+02:31 that's the object there.
+02:33 That's the response there I should say, the calculation.
+02:37 And we were able to add and subtract
+02:39 timedelta from datetimes which is really, really cool
+02:45 and makes it really easy.
+02:48 And using string on that, converting it to a string,
+02:51 we got a really nicely formatted timestamp here.
+02:55 Very useful for log files right.
+02:58 Alright, your turn.
+03:02 This is where it gets a lot of fun.
+03:04 What I'd like you to do for day three
+03:06 is come up with something cool for you to make
+03:09 with datetime or timedelta.
+03:12 Think about perhaps making it a stopwatch,
+03:16 maybe a timer application.
+03:19 I actually think a really fun one to make
+03:20 would be a Pomodoro timer.
+03:22 So if you're not familiar with Pomodoro,
+03:23 just go and google it.
+03:25 But that would be a really cool way
+03:27 of setting specific timestamps that a user could choose
+03:32 using datetime and what have you.
+03:34 So that would be really, really fun.
+03:36 Now I know what you're thinking,
+03:37 datetime is a really deep and in-depth topic,
+03:41 but unfortunately we just don't have the time
+03:45 to run it in this course.
+03:48 So I hope you really enjoyed it.
+03:50 Move onto the next video,
+03:51 we are keeping it nice and simple for the first day.
+03:54 Expect things to take it up a notch going forward.
+03:57 So enjoy, get cracking, don't waste any time.

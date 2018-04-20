@@ -1,0 +1,40 @@
+00:00 Okay, for the next three 3 with ppenpyxl,
+00:03 here's what you're going to do.
+00:05 For the first day, obviously, there's going to be a bit
+00:07 of setup for it and I will be going through
+00:10 explaining the workbooks and worksheets.
+00:13 Okay, that's in that video there.
+00:15 And after we do that we're then going to deal with
+00:18 pulling some cell values,
+00:19 so pulling data out of the spreadsheet.
+00:22 It's going to be pretty simple,
+00:24 but it's going to be pretty useful, okay?
+00:27 So use the financial sample xlsx file,
+00:31 it's located in this repo, okay?
+00:34 For Day 2, you're going to actually expand on everything
+00:38 you learned in day one with max row,
+00:41 and then on inserting data into the spreadsheet, okay?
+00:46 That's a very useful one, as you can imagine.
+00:48 So that's going to be a lot of fun.
+00:50 Once you're done watching the videos, obviously,
+00:52 play around again with that spreadsheet,
+00:55 and play with inserting data.
+00:57 So maybe do it one cell at a time.
+01:00 And then try populating an entire column, okay?
+01:04 For Day 3, this again as usual,
+01:06 is where you're going to do it yourself.
+01:08 Okay, come up with something cool.
+01:10 Ideas, perhaps try editing an employee shift roster.
+01:16 Okay, so imagine a roster in a spreadsheet
+01:19 of people's names and times and dates and whatever,
+01:23 and maybe monitor it for changes, okay?
+01:26 So there's a script that
+01:27 does something when something changes,
+01:28 or perhaps a script that allows an employee to update it.
+01:33 So your spreadsheet is almost like your data base.
+01:36 Okay, you could also try doing that with a financial budget,
+01:40 something similar, so when you get a list, or a dictionary,
+01:44 of spending data, it updates the spreadsheet, okay?
+01:48 You could even populate the spreadsheet with data,
+01:50 pull down from an API of some sort.
+01:53 Okay, so have a go, enjoy it, and excuse the pun.

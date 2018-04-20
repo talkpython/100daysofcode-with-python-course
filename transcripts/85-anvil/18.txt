@@ -1,0 +1,78 @@
+00:00 Now what we want to do is go to our all_documents_form.
+00:04 Which is hiding. Let's make some room here.
+00:08 And when you type in this thing,
+00:09 which is called TextBox Filter,
+00:11 we want this to change.
+00:12 So, we need to hook the change event down here.
+00:14 Check this out. Change event.
+00:17 And what we want to do is we want to basically set
+00:20 the south.repeating_items
+00:25 equal to filtered_docs.
+00:28 We don't have this written yet.
+00:29 We're going to write that.
+00:30 And what we're going to do is I'm going to have a function
+00:32 that'll take a document and turn it into text.
+00:37 So, if I have this function, and I give it
+00:38 one of these documents and it just says
+00:41 convert into a string.
+00:42 I can do a string search on that.
+00:45 So, let's write this filtered documents
+00:47 leveraging this little bit of code here.
+00:52 Here we go.
+00:53 So, what we're going to do is going to go to our TextBox Filter.
+00:57 Grab the text.
+00:58 And if they're not searching for anything,
+01:00 we're going to return all the docs.
+01:03 We're going to return all the documents.
+01:08 Otherwise, we're going to create a list of documents
+01:10 that if we converted to text and then lower case it,
+01:13 and we do a find on the txt here,
+01:16 then, then we're going to get it.
+01:19 I guess we want to also say txt = txt.lower().
+01:23 Like that.
+01:24 In case you type something upper case
+01:25 that wouldn't work well right there. Would it?
+01:27 So, we' re just going to go through and say
+01:28 literally as a string,
+01:30 does that piece of text you typed in the filter,
+01:32 does it appear in the document?
+01:33 And then we're going to give that back right there.
+01:36 Whew. Okay, and let's see if our filtering works.
+01:41 So, here's our home. It's got all the documents.
+01:44 Some of these, like the space photos and Higgs,
+01:47 these are in the science category.
+01:49 They have things like exotic materials.
+01:52 This one is logging. So, this is logbook.
+01:54 Let's just look where we talked about logbook.
+01:59 Oh, filtered docs. What did I do wrong here?
+02:01 Ah, self.
+02:02 Self, self, self.filtered_docs.
+02:05 So, let's try this again.
+02:06 How about logbook.
+02:08 Oh my goodness. Is that cool or what?
+02:11 What about the ones that have to do with science?
+02:15 Oh, I think the ones that have to do with science
+02:16 might not be coming in there quite right.
+02:18 This part right here, we have to get the name out.
+02:22 Okay. One more time.
+02:24 'Cause the category is actually a row. Right?
+02:28 So, now let's try our science.
+02:30 Those are the ones with that tag.
+02:32 And about the ones with documentation. Those.
+02:35 What about the ones have to do with datetime.
+02:37 Which is what we talked about in Day 1.
+02:39 datetime.
+02:41 How about the word the?
+02:42 That appears a lot.
+02:43 How about RSS? Feedparser?
+02:45 See how incredibly easy that is?
+02:47 Watch how quick it is to go back and forth
+02:49 between all of these.
+02:50 Because we've downloaded this,
+02:51 we're not hitting the server again.
+02:53 It's just all running off of that cash thing.
+02:56 Right there. Super cool.
+02:57 So, we can come over and just search for RSS.
+02:59 Bam, find it. Go pull out the details.
+03:01 I guess the last thing for us to do
+03:02 is put the details page in here.

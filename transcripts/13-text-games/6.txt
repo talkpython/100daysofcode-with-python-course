@@ -1,0 +1,23 @@
+00:00 Let's quickly review the concepts around classes
+00:02 and remember that classes
+00:03 are the blueprints from which we create objects
+00:06 and those objects are the things that act
+00:09 and take on the data of our application.
+00:12 So we start by using them in the class keyword
+00:14 and then we just make up a name,
+00:15 this is going to be the name of the blueprint,
+00:18 or the type that we create, here we called it a creature.
+00:21 And then we add a dunder init,
+00:24 in one of these magic methods here
+00:25 and every method that is on a class
+00:27 has this self message what's called
+00:29 a static method or a class method
+00:31 and they always have self but,
+00:33 but we don't have to explicitly pass those,
+00:34 Python takes care of that for us.
+00:36 If we want additional premiers, they go after self,
+00:38 so name and the level and we're going to assign new fields
+00:43 to this by saying self.name equals name
+00:45 and the new ones for self.level equals the level.
+00:49 We also can add behaviors by adding additional functions,
+00:52 so get_defensive_role() for example.

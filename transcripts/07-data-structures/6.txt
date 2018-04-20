@@ -1,0 +1,70 @@
+00:00 So that's Python data structures.
+00:02 I hope you enjoyed that little overview of lists,
+00:05 tuples, and dictionaries.
+00:07 For the next couple of days, you will be working
+00:09 through the exercises outlined in the three-day overview
+00:15 which was the second video for this lesson set.
+00:18 But before we get to that, let's just quickly
+00:20 quickly recap everything we've done.
+00:23 So for lists, lists can be sorted with sort, go figure.
+00:29 And then worked through how to iterate
+00:31 over a list using a for loop.
+00:35 We also discovered pop.
+00:37 Okay, if we remember, pop just returns the item
+00:40 in the index specified.
+00:41 It actually removes it from your list
+00:45 and then returns it.
+00:47 del simply deletes it from the list,
+00:50 doesn't even return it.
+00:51 insert does exactly as its name implies.
+00:55 It will insert the second argument
+00:58 into the index specified in the first argument.
+01:01 And then append will just tack whatever it is
+01:04 right on to the end of the list.
+01:08 Now immutable tuple, okay, we know that this means
+01:12 we can't edit, it can't change, okay.
+01:16 So we've got a tuple.
+01:17 We've created it using tuple itself, okay.
+01:21 Now we print out the contents just so you can see
+01:24 that we have the six items in this tuple, my name,
+01:30 the letters of my name.
+01:31 And then when we try to manually override it
+01:34 with a simple list substitution there,
+01:38 t[0] we're going to assign the letter m
+01:42 and then we get the fact that it's a type error,
+01:45 it's a tuple.
+01:46 You cannot change it, it's immutable, okay.
+01:51 Now onto dictionaries.
+01:52 We created it manually.
+01:54 We manually created a dictionary, okay, simple.
+01:58 And then this is how you return the keys using .keys.
+02:02 Okay this is just the keys at the front, just the names.
+02:07 Then we returned the values in the same way
+02:09 that we do with the keys.
+02:10 We can get just those values, the 30 and the 33s.
+02:14 And then we can get everything as a whole.
+02:17 We can get each item, so the key and the value.
+02:21 We can do that using items().
+02:24 And then we showed you how to iterate over,
+02:27 over the item itself so we can get the keys
+02:30 and the values, not just one or the other.
+02:33 And using a forloop, we can then substitute those keys
+02:38 and values into some sort of a string,
+02:40 into some sort of text.
+02:42 And that's really useful, something you'll probably do
+02:44 quite a lot.
+02:48 Okay, your turn.
+02:49 So for this next couple of days,
+02:51 as we discussed in the ReadMe earlier,
+02:53 we are going to work through the code challenges bite
+02:58 that you have a free code for so go ahead and use that.
+03:01 And then for day three, you're going to work
+03:04 through that data.py file which in the repo.
+03:07 So if you have any sort of thoughts on that
+03:09 or any confusion on that, just head back to video two
+03:12 where you look at the ReadMe and there's a good
+03:16 explanation there as to what you're going to do
+03:18 for days two and three.
+03:20 So that's Python data structures.
+03:22 I hope you enjoyed it.
+03:24 Keep calm and...

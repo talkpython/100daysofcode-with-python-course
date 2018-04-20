@@ -1,0 +1,67 @@
+00:00 Finally, let's wrap up with a pro tip.
+00:03 Use pdb to inspect GitHub objects.
+00:06 Let's say I want to see all the gists of PyBites.
+00:14 So we do a get_user on the GitHub object from before.
+00:23 And I call get_gists.
+00:28 And I look over them.
+00:30 Let's copy this in.
+00:31 I'm just going to print the description
+00:33 created at and the link to the gist.
+00:42 So now I knew about these attributes already,
+00:46 but if you don't and you want to inspect the gist,
+00:48 what you can do is break
+00:53 at this point using pdb.
+00:57 This would be the same from the REPL
+01:00 and this allows me to inspect the objects
+01:03 that are currently in the program's execution.
+01:05 It's like if the current frame of the execution
+01:09 has been paused and you can just inspect all of that.
+01:12 It's like, "Time out," and only you are in
+01:14 and you can see all the things.
+01:16 Nothing is moving.
+01:17 I can look at the object.
+01:21 This not really, this doesn't look very nice.
+01:23 I can use pp.
+01:25 And here you see a better representation of the object,
+01:30 nicely laid out.
+01:32 So here is the section I'm interested in.
+01:36 The files, for example, that are associated with this one.
+01:40 And look at that how, you can drill down
+01:42 how rich the objects are in the API.
+01:46 For example, the owner, I can go
+01:48 all the way to his avatar, his URL.
+01:52 I could inspect the owner,
+02:05 etc.
+02:06 It's worth to spend a little time
+02:08 reading up on pdb.
+02:10 It's very useful, not only to debug issues,
+02:13 but also to inspect your program and its objects
+02:16 as you're building it.
+02:17 And we did an article in PyBites about pdb
+02:21 which, if you are interested, is an interesting read.
+02:28 Back to the example.
+02:29 You can also use help from pdb.
+02:34 And you have to actually use exclamation mark.
+02:38 And look at that.
+02:39 Here's the gist class with its methods and attributes.
+02:43 So, here, for example, we have a fork of
+02:46 and that we can use to see if
+02:48 the gist was forked off somebody else's gist.
+02:52 So let's try that next.
+02:53 I'm going to copy and paste the previous for loop,
+02:57 that used that new attribute that we found in help.
+03:02 Right, this hangs because I still,
+03:04 that's important and maybe less obvious here in
+03:08 the Jupyter notebook.
+03:09 When I'm still in pdb, I do need to exit the prompt.
+03:13 And there you see that it then finishes the cell
+03:16 and I'm ready now to execute the next cell.
+03:21 So here we see that some of the gists we have
+03:24 we're based off forks.
+03:27 This one was not.
+03:30 And this one, for example, was forked.
+03:34 And you can see that here.
+03:36 Cool.
+03:38 And just because we can.
+03:44 And that's a wrap!
+03:45 I hope you enjoyed this lesson of the GitHub API.

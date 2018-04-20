@@ -1,0 +1,75 @@
+00:00 And now my favorite
+00:02 method of the re module: findall.
+00:06 findall is useful to match a pattern
+00:09 in a string,
+00:10 and to get all the occurrences of that pattern.
+00:13 In 100 Days of Code, we wrote a script module in that,
+00:15 which returned three columns:
+00:18 a module, if it was standard lib,
+00:20 and the days that we used it.
+00:22 As you see in the re module,
+00:24 we used quite a lot.
+00:26 And it will
+00:27 give a link to the actual scripts at the end of this lesson.
+00:30 Let's write a
+00:32 regular expression to extract all the days,
+00:35 and findall really shines in this kind of task.
+00:39 So we do re.findall ...
+00:42 raw string.
+00:45 One or more digits,
+00:47 and we have to specify
+00:49 the string as the second argument.
+00:52 And look at that.
+00:53 One simple statement
+00:55 and we got all the days.
+00:57 That's awesome.
+00:58 Let's do a second example.
+01:00 Here is some text,
+01:01 and let's extract the words
+01:04 with a regular expression first.
+01:08 re.findall, if I could type.
+01:14 raw string.
+01:16 One or more characters.
+01:18 Text, and I first need to load that in.
+01:22 Bang.
+01:24 Now you can do this,
+01:25 also with text split.
+01:30 I'm going to make it just the first five one.
+01:33 So you don't really need a regular expression to
+01:36 split a text string into a list.
+01:40 Let's say we want to find out the most common words,
+01:43 but only the ones that start with an uppercase character.
+01:47 So, then you can use a regular expression like,
+01:53 and I'm using character classes
+01:54 which are in square brackets,
+01:57 so let's define an uppercase
+02:00 and then we have
+02:01 one or more lowercase
+02:04 characters or digits,
+02:07 and the plus is one or more,
+02:09 if you want zero more you do an asterisk.
+02:12 And we want to do that on the text.
+02:15 And here we have all the words
+02:18 starting with an uppercase.
+02:20 Now just for the fun of it,
+02:22 let's wrap that in a counter
+02:24 to get the most common words.
+02:26 So we are going to use from collections
+02:31 import counter,
+02:33 and don't worry I will cover counter
+02:36 more in detail in the collections lesson.
+02:40 Counter receives a list,
+02:42 so re.findall returns a list as we
+02:46 saw earlier.
+02:47 So we can just make a counter object,
+02:51 passing that into the counter,
+02:55 and as you see we get some counts here.
+02:58 And to find out the most common words,
+03:01 we can then do the most common method
+03:04 on that counter object.
+03:06 And lorem and ipsum are the winners.
+03:09 So very powerful tool.
+03:11 I really like findall.
+03:12 This typical Python example, that in
+03:15 one line of code you can
+03:17 do a lot of good stuff.

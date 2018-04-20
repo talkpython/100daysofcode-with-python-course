@@ -1,0 +1,15 @@
+00:00 All right, it's your turn to do some logging.
+00:02 Let's look at all the steps that I'm recommending for you.
+00:06 So there's a little summary of why you care about logging,
+00:09 but we're going to focus on the three things,
+00:12 the three days, and what you're going to do on them.
+00:13 Today, you're basically done.
+00:15 It's watch the videos as usual.
+00:18 What you're going to do is you're going to pick an application
+00:20 that either you've built in this course or previously built
+00:23 that you think could use some logging.
+00:25 It would be nicer if it had some logging
+00:27 much like we just added to the movie search app.
+00:29 So your goal for today is just to pick an app
+00:32 that you're going to study and add logging to
+00:34 over today and the next two days that follow.

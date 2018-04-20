@@ -1,0 +1,113 @@
+00:00 Now that we have logging configured
+00:02 and we are calling that to set everything up
+00:05 let's go and actually create a app level
+00:08 and an API level logger, so let's call this
+00:11 the app_log and this, we already saw me say
+00:14 Logbook.logger and we give it the category
+00:17 so I'll call this App right and then
+00:19 we can use that throughout this part
+00:21 of our program and we'll know not
+00:23 just what the message was but
+00:24 generally where it came from and let's do
+00:27 something similar over in the API section.
+00:32 So we'll call it api_log to import log
+00:34 book again and this will be API
+00:37 Okay, so when we're doing an accents
+00:39 with the API, maybe the timing and so on
+00:42 we could track that over here.
+00:45 Let's start with the app log.
+00:47 Now, I always find there's a super tricky
+00:50 balance between too much logging code getting
+00:54 into your application and making it hard to read
+00:56 being too verbose and not capturing what
+00:58 you need so this is a pretty simple example
+01:01 so it's a little bit hard to find that balance
+01:04 but ,you can see that it's pretty easy to read.
+01:06 Let's deal with the error cases first.
+01:08 Let's come down here and say app_log
+01:11 It's going to be an error.
+01:13 So this could either be error or it could be a
+01:15 warning right like our program isn't broken it's
+01:18 just in an environment that it can't operate in.
+01:21 So I'm going to call this actually a warning.
+01:23 I'll do a bore in here and it'll say same message.
+01:26 So we can come out here and refactor that
+01:28 to a variable and just call that message
+01:31 more in the same little message like that.
+01:34 Actually, we already have a classifier there
+01:37 so we'll say like this...
+01:41 Same thing here...
+01:47 You see it's getting harder to read but we will
+01:49 have a record of this so that's pretty cool.
+01:51 Now this one, like these two we anticipate right.
+01:54 This is if the internet is off.
+01:55 This is if they don't type anything
+01:57 and they just hit enter.
+01:58 This is kind of standard stuff so that's why
+01:59 it's a warning but down here
+02:01 this is like we didn't expect this.
+02:03 We have no idea what went wrong.
+02:04 Something went wrong.
+02:06 We could say this error and give it the message
+02:09 with the formatted exception details
+02:12 added in there right?
+02:13 Or there's actually a way to say
+02:15 there's some kind of unknown exception.
+02:16 Just record that as an error so we can actually say
+02:19 exception and just give it the exception like this.
+02:22 Okay, so let's go and try to run our program now
+02:25 and see what we can get to happen on it.
+02:31 File just search for T, looks like it works
+02:33 so I'll just run a few searches
+02:35 see if I can get that exception error to hit.
+02:38 Okay here, there's a very rare chance that
+02:40 some random error's going to be thrown.
+02:42 Recall that from day 25 and I got it finally
+02:45 after a bunch of attempts to throw
+02:48 a StopIteration exception.
+02:49 So here you can see it recorded as an error.
+02:52 It said this isn't a category app and then it just
+02:54 put the trace back right there.
+02:56 That is... this section right here.
+03:00 Let's try some other errors.
+03:04 We know that it's an error to hit enter
+03:06 and that's going to be a ValueError
+03:07 because we're searching for nothing.
+03:09 Here you can see error, you must search for a term.
+03:11 This is just the print statement right there.
+03:15 And then here, this is the log
+03:16 statement that we put as a warning.
+03:18 Right, warning ,the app says you must search
+03:20 for a search term and that's because we put it
+03:24 in the log as warning 'cause we
+03:25 know it's not technically broken.
+03:28 The user's just using it wrong.
+03:30 So the final thing to test is to
+03:31 turn off the internet.
+03:36 Alright look, we got our standard print and
+03:38 then we got our log message which is warning
+03:40 app at the app level we could not
+03:43 find a server, check your network connection.
+03:50 Alright, let's just add one
+03:51 final sort of success message here.
+03:54 Let's go down here and say like app_log this info trace
+03:59 I don't know.
+04:00 Let's put it at trace so this is super verbose
+04:02 but we can say something to the effect of..
+04:07 Clean that up a little now let's see how this works.
+04:09 Run it successfully, search for action.
+04:13 Perfect, it worked and we logged the fact that
+04:15 trace app search is successful.
+04:18 The keyword is action.
+04:19 There were eight results.
+04:20 Let's search for runner.
+04:23 Here we go, search, we got six results.
+04:26 Keyword runner.
+04:27 Alright, so I feel like we're getting some
+04:29 decent logging at this level.
+04:31 The other thing I'd like to do
+04:32 before we call this done is to look in here and
+04:35 maybe see if there's something we want to put in here
+04:38 in terms of logging at a lower level
+04:40 just to show how we can work with
+04:42 different parts of our application.

@@ -1,0 +1,30 @@
+00:00 Now something that will probably
+00:01 catch you off guard at some point
+00:03 is that your intuition is actually really bad
+00:07 for guessing where program is slow
+00:09 and where it spends its time.
+00:11 This has happened to me many, many times
+00:13 and I've been doing programming for a long while.
+00:17 Sometimes you get it right, but often you don't.
+00:19 So the first thing that you need to do
+00:21 before you try to improve
+00:22 the performance of your application,
+00:24 is measure, measure, measure, and that's profiling.
+00:28 So what we're going to do is we're going to run
+00:29 a built in command that's built in to Python itself
+00:33 to measure where our code is working.
+00:35 And we're going to do this in two particular ways.
+00:38 We're also going to have some nice output.
+00:40 Now in the beginning the output that we're going to work with
+00:43 is actually going to be just sort of a
+00:45 text table type thing in the terminal
+00:48 or just in the program output.
+00:50 And at the end, I'll show you actually how to get
+00:52 PyCharm to draw these little graphs
+00:55 where it shows you we start up program and call main,
+00:58 main calls go, and then go is calling these 3 functions
+01:01 and even the color tells you where you're spending the time.
+01:03 Like, the red is worse than the yellow
+01:05 which is worse than the green, and so on.
+01:07 So we're going to be able to get this
+01:08 kind of output and understanding from our program.

@@ -1,0 +1,20 @@
+00:00 Number 8.
+00:01 PEP 8 and the Zen of Python.
+00:03 Any Python developer should become familiar
+00:06 with PEP 8 and use it in their code.
+00:09 So here's the Style Guide for Python
+00:11 and you really should read this end-to-end
+00:14 and make a habit of formatting your code
+00:16 in the proper way, using variable names with underscore,
+00:19 so all these conventions.
+00:20 There's even a recent initiative, pep8.org,
+00:24 which should make this even easier to digest.
+00:26 And it's really nicely formatted
+00:28 and gives you some more context.
+00:31 And, of course, if you do import this from your Python REPL,
+00:35 you get the Zen of Python.
+00:36 And the more you write Python,
+00:38 the more you see how this applies
+00:40 to the language and it's design.
+00:42 It's really where you start to better understand
+00:45 and appreciate the language.

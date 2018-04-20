@@ -1,0 +1,48 @@
+00:00 Second day, is we're going to write
+00:01 standard Rock, Paper, Scissors.
+00:03 And you're going to model this with classes.
+00:05 There's going to be a roll and the roll has a name.
+00:09 It knows what rolls defeat it.
+00:12 And, alright, so you store the name
+00:17 that other rolls, that the names of the rolls that you
+00:20 can defeat as a roll and the rolls that defeat you.
+00:24 Also, we have player concept.
+00:26 And the player is really just going to have a name.
+00:27 So it says, player Sarah rolls this.
+00:32 Player Computer rolls that, and so on.
+00:34 Alright, so nothing major there.
+00:35 You could also keep a history of the rolls.
+00:38 You could show like, sort of replay the game if you wanted,
+00:41 and each player could remember what they played
+00:43 at each stage, that'd be fun.
+00:45 And then the basic program flow looks like this.
+00:47 This is not perfectly exactly what you necessarily need.
+00:50 It's not totally implemented but, we're going to
+00:52 print out the header, we're going to initialize the game here
+00:55 by getting the various rolls, in this case
+00:58 there's only the three: Rock, Paper, Scissors.
+01:00 And then we're going to get the name of the player,
+01:03 Add the computer and then we'll have an automatic player
+01:06 here, and then we're going to run this little game loop,
+01:08 by passing them off.
+01:09 And the game loopers need to go round-and-round,
+01:11 until somebody has won.
+01:13 We'll go around three times, and basically
+01:15 just have the computer randomly roll.
+01:18 And then have the real player ask them what they
+01:20 want to roll, Rock, Paper, Scissors,
+01:21 and then have them do that roll correctly.
+01:24 And then finally, you can just sort of do this comparison.
+01:26 Does the one roll defeat the other?
+01:28 I don't know, right?
+01:29 And then just do a little output here,
+01:31 and increment the count so that you'll know,
+01:33 like you just played best of three.
+01:35 So you'll know who won, figure out who won and then
+01:37 print out so-and-so won 2 to 1 or
+01:41 3 to 0 or something like that.
+01:45 If you get a tie somewhere in the middle,
+01:46 this doesn't work so, you know,
+01:48 maybe once you get it working, not considering ties,
+01:51 then come back and address the possibility
+01:53 there might be ties.

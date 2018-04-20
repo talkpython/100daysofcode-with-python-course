@@ -1,0 +1,14 @@
+00:00 Hello, it's Michael Kennedy,
+00:01 and I'm going to be your guide for day 37, 38, and 39.
+00:06 And this time we're going to work with structured data
+00:10 called CSV files.
+00:12 So anything that can be stored in something like Excel
+00:15 or Tabular, data like that that you might work with
+00:19 in some kind of Excel spreadsheet.
+00:21 Much of the data you'll find out
+00:23 on the internet lives in this form,
+00:25 and we're going to find some really,
+00:27 really interesting data sets,
+00:28 and we're going to build some programs to ask
+00:30 and answer some pretty powerful questions.
+00:34 Let's get started.

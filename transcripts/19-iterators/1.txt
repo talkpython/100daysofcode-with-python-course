@@ -1,0 +1,11 @@
+00:00 Good day guys, this is Julian Sequeira,
+00:02 and welcome to iteration with itertools.
+00:06 This is going to be a three day series
+00:08 just touching on the more common,
+00:11 arguably more common, usages of itertools.
+00:15 We'll start off with a bit of a coverage
+00:17 of what iteration is, very basic stuff,
+00:20 and then we'll get straight on into itertools.
+00:23 So carry on, move on to the three day overview
+00:26 for some more detail,
+00:28 and then we'll get straight into the code.

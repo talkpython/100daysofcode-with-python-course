@@ -1,0 +1,105 @@
+00:00 So, for this video, we're going to look at
+00:02 some JSON data that is returned by an API.
+00:06 Okay, we're not going to just download a file and parse that.
+00:10 What I'd like to do is show you that a lot of APIs
+00:12 respond with JSON data, okay, JSON formatted data.
+00:17 So, what we need to do in order to look through all of that
+00:21 is, first, we need to import json,
+00:24 obviously, so we can decode the data.
+00:27 We also need to import requests,
+00:29 because that's how we're going to get the actual data.
+00:32 All right?
+00:33 And, for later on in this video, we're going to get pprint,
+00:39 all right, and we'll discuss that in a bit.
+00:42 Now, there will be some magic here,
+00:44 because I don't want you to see my API key,
+00:47 but, essentially, we're going to go r., r is requests, .get.
+00:54 Okay, let me do some magic here.
+00:57 Copy and paste the key and get this JSON data pulled down,
+01:01 and then we'll carry on.
+01:04 All right, now I've just given us some white space
+01:06 here to work with, get it out of the screen.
+01:08 So, r has been pulled down, the actual JSON
+01:12 has been pulled down, and we're going to assign that
+01:15 to the data variable.
+01:19 Now, data = json.loads, all right?
+01:25 Loads allows us to actually decode the JSON output.
+01:30 Okay, so the JSON output is pretty ugly,
+01:33 and using json.loads, that allows us to actually decode it,
+01:37 and make it readable.
+01:39 So, we're going to load in r.text, okay?
+01:45 Now, if I was to hit data, and enter, and show you that,
+01:49 it would probably kill my session
+01:51 because there's so much data in this.
+01:52 So what I've actually done is,
+01:53 I've copied and pasted this output into a text file for you.
+02:03 And that is here, okay?
+02:06 So you can see this is all the data
+02:07 for my character in the game.
+02:12 Now, you can see the sort of nested dictionaries
+02:14 I was discussing before.
+02:16 Okay, you've got, at the highest level,
+02:20 you've got a dictionary key there, and a value,
+02:23 and then we move on to the next one, and so on.
+02:26 Keep on filtering down, until we get to mounts.
+02:29 Now mounts is just, long story short,
+02:31 mounts is a sort of creature you can ride on
+02:34 in the game to get around.
+02:36 So, under the mounts key, we have a large dictionary here,
+02:41 called "collected," okay?
+02:43 And within that collected key,
+02:46 we have our list of dictionaries as the value.
+02:52 So, you can see how far it drills down,
+02:55 so we've got the parent key here,
+02:57 whose value is another dictionary,
+03:02 with the key to a list of more dictionaries, okay?
+03:06 And each mount, each animal that you ride on
+03:10 in this output, has these keys, okay?
+03:15 So it's a whole array of data and it just
+03:17 goes on and on and on and on, and then you can see
+03:22 number collected, we drop out of that list here,
+03:25 at the end, and we get back into that,
+03:28 we go up one level, and we see number collected,
+03:31 number collected, number not collected,
+03:33 and then we go up to the parent level.
+03:35 I want to call it the parent level, the top level,
+03:38 and we see realms and whatnot.
+03:40 Okay?
+03:41 So that is what that data looks like,
+03:43 the stuff we just pulled down,
+03:46 so how do we work with that data, okay?
+03:49 Well, to look at that data, we need to
+03:52 treat it just like a dictionary, okay,
+03:54 there's a little bit of difference,
+03:56 and we'll get to that in the next video,
+03:58 but, for example, we now know what the data looks like,
+04:02 so it allows us to figure out how we're going
+04:04 to flesh it out in the Python code.
+04:07 So for item in data.items, I'm just going to do a standard,
+04:12 sort of, dictionary parse here.
+04:15 We're just going to print item, okay,
+04:18 and watch what happens.
+04:21 We get all of that data here and
+04:23 it is, honestly, disgusting.
+04:27 It does not format correctly, okay.
+04:30 Now, I've just scrolled that out of the buffer
+04:31 to get the distraction away.
+04:34 We can then go for item in data.items,
+04:41 okay, same as we just did, but this time,
+04:43 we're going to use pretty print, or pprint, okay,
+04:46 and the beauty of pprint is that it actually
+04:49 knows what JSON data looks like,
+04:52 and it formats it nicely for us.
+04:55 Okay, and this is the same output we saw
+04:59 in our Notepad file just then.
+05:03 Wait for it to continue flooding my screen,
+05:06 probably overloading my computer,
+05:09 and it's going to look just like this.
+05:11 Okay, so there it is there, and that's pretty much how
+05:14 I got that Notepad file in the first place.
+05:17 So this is JSON data.
+05:19 This is importing it into Python,
+05:21 into your Python application, and this is pretty much
+05:24 printing the entire thing in a nicely formatted way.
+05:28 So, in the next video, we will cover how to drill into this,
+05:33 but for now, have fun.

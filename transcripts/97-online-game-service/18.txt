@@ -1,0 +1,58 @@
+00:00 Okay, let's come over here
+00:01 and close the story on the web
+00:03 and go to our client.
+00:04 And we're going to use Uplink,
+00:06 so we're going to put that in our requirements on txt
+00:09 and let's add a game app, call it game_app.
+00:13 That's the thing that you're going to play.
+00:15 And let's separate our API definition
+00:18 from our UI, which is kind of this.
+00:21 So let's do a quick main.
+00:29 Do a little bit of skeleton code here,
+00:31 get that running.
+00:32 Okay, this is our little game_app.
+00:33 Let's add another one called api.
+00:37 And this over here is where we're going to use Uplink.
+00:40 So we're going to import uplink
+00:44 and we have not installed those have we?
+00:47 So let's go over here to client
+00:48 and run the same code.
+00:53 There PyCharm is less unhappy, let's say.
+00:57 So what we're going to do is we're going to
+00:58 define a class over here using Uplink
+01:00 and remember the way it goes,
+01:01 this is going to be a GameService
+01:04 and the way it works is it's going to be uplink.consumer
+01:09 and then we just define methods.
+01:11 Like def find_user.
+01:15 We put in the user name
+01:16 and then down here we just have nothing
+01:18 but we put in this at uplink.get
+01:21 and then it's something like
+01:22 API game users username.
+01:26 Now they use curly braces which I prefer over here,
+01:29 where as Flask uses angle brackets
+01:31 but whatever it's all the same.
+01:33 The other little trick that
+01:34 we'll have to do here is to define an init
+01:38 and set the base URL to wherever it is.
+01:43 Something like 5000.
+01:46 Let's add another one here.
+01:47 This time for all rolls,
+01:48 remember that's doing a get against api/games/rolls.
+01:53 It gets more interesting, code word for complicated.
+01:56 If we're going to do a create game,
+01:58 we're going to do a post up to API games game games
+02:02 and we're going to pass a body
+02:04 of just a dictionary as a body.
+02:06 But let's just go over here
+02:07 and let's just see if we can get this
+02:09 all rolls thing to work for a second.
+02:13 You've got to import that and we'll just say all_rolls.
+02:16 Now remember what we get back here
+02:18 is we're going to get a response.
+02:20 It's going to be okay but not amazing.
+02:23 200 response, 200 that's already good right?
+02:26 And if that's true we could do a JSON here like this
+02:31 and we get boom, look at that.
+02:33 It's already working, that is so super cool.

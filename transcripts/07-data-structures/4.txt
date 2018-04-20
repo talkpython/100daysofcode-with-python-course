@@ -1,0 +1,57 @@
+00:00 If you're learning Python
+00:01 you're going to come across two words
+00:02 that may or may not make sense to you,
+00:04 and they are mutability, and immutability.
+00:08 Okay, type them out on screen,
+00:11 mutability, immutability.
+00:17 And what do they mean?
+00:18 Well, mutability means it's something that can be changed,
+00:22 it's an object that can be changed.
+00:24 You saw in the previous video that we were manipulating
+00:27 the mystring variable, and we were dropping j,
+00:32 we were dropping n, we were doing all sorts of things
+00:35 to that list.
+00:37 Now, immutable lists, okay, let's just go with that
+00:41 for one second, are lists that cannot be edited,
+00:45 so if you tried to edit it, if you tried to
+00:48 pop out that j, or pop out that n,
+00:51 you'd actually get an error,
+00:52 and they're not actually called lists,
+00:54 they're called tuples, okay, you've probably heard
+00:58 that terminology by now, but we're just covering it again,
+01:01 and I'll just quickly demonstrate
+01:02 the difference between the two.
+01:04 So we're going to say l, again, for list, is
+01:10 a list of mystring, so we can see mystring is my name,
+01:15 okay, and t for tuple
+01:18 is a tuple of mystring.
+01:22 So let's just show what the two of them look like.
+01:26 And the big difference here is you've got
+01:28 the square bracket versus the rounded bracket,
+01:33 and that's the telltale sign
+01:34 that you're dealing with a tuple, okay?
+01:37 Now watch what happens when we try to edit the two,
+01:41 okay, we can go, l, let's actually overwrite,
+01:45 just like we did in the last video, so,
+01:47 l[0], we're going to assign the word,
+01:52 or the letter, T, so my name
+01:56 is now Tulean, no that wasn't a name I was called in school,
+02:01 so don't laugh, and now if we try and do that to the tuple,
+02:05 we can go t[0],
+02:09 is, let's just go with the B from the other video,
+02:15 and we get this error.
+02:17 Tuple object does not support item assignment,
+02:20 and that's because the tuple is immutable,
+02:23 we cannot edit it.
+02:26 We can still talk to it, imagine a hard drive or something,
+02:31 or your SD card in your camera is read-only,
+02:34 that's pretty much what a tuple is,
+02:36 so we can go t zero, we can return that,
+02:41 you know, we can read it, we can talk to it,
+02:43 we can iterate over it we can go,
+02:45 four letter in t,
+02:51 print letter.
+02:56 And there we go, we can still iterate over it,
+02:58 just like we do with the list, the difference is,
+03:01 we can't edit it, and that is what a tuple is,
+03:04 and that's a demonstration of immutability.

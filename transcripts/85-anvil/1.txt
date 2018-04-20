@@ -1,0 +1,18 @@
+00:00 Hello and welcome to Day 85, Michael here again.
+00:02 We're going to build a really cool interactive web application.
+00:06 And we're going to do it the easy way.
+00:08 You've already seen Flask,
+00:09 and Flask is super powerful, and super flexible.
+00:12 In fact, we're going to come back to Flask again,
+00:15 maybe one or two more times in this course still,
+00:18 but I want to show you an alternative way to build web apps,
+00:21 and especially if you think to yourself,
+00:23 I'm not a web developer, I'm not super good with CSS,
+00:26 I'm not great with html, layout doesn't work for me,
+00:29 I can't put together the web pieces,
+00:32 these tables are crazy, I'm not great with databases.
+00:35 All of these things?
+00:36 I'm going to show you a way to build
+00:38 quite a wide spectrum of apps
+00:40 in a super easy and accessible way
+00:42 that you can be up and running, literally in a day or two.

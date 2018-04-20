@@ -1,0 +1,39 @@
+00:00 Welcome back to the hundred days of Python.
+00:02 This is day two of the pytest lesson.
+00:05 Yesterday, we went over quite some concepts,
+00:08 and now it's time to get practical.
+00:10 So here, I pointed to a code challenge,
+00:17 which is, not surprisingly, writing tests with pytest,
+00:22 and it consists of going through your code,
+00:25 see where tests are missing, and add them.
+00:28 Another option is to test a Flask API,
+00:31 or even contribute to open source.
+00:34 There's a lot of great work being done,
+00:36 and not all might have test coverage.
+00:38 It might be a useful way to get into those projects,
+00:41 to start adding tests.
+00:43 So basically that, if you want to follow along,
+00:45 you can clone our challenges repo
+00:48 and make a branch and PR your work,
+00:51 because we're always curious to see what you come up with.
+00:54 Another way, if you want to just look at some tests,
+00:58 is to head over to our bites.
+00:59 Every bite is tested with a couple of pytests,
+01:02 so each bite under the tests tab shows you pytest in action.
+01:16 And a day generator...
+01:24 And here is the exceptions being tested by pytest again.
+01:28 One syntax we did not see is the pytest .fail.
+01:32 This basically where it raises an exception
+01:34 when it should not have, alright.
+01:39 Then I want to point you to one more resource
+01:42 and that's Brian Okken's Test and Code.
+01:47 He has this podcast dedicated to testing in Python
+01:52 and he is the author of Python Testing with Pytest
+01:57 which is a great book.
+01:58 I only showed you a couple of things.
+02:01 This book goes in detail on how
+02:03 to set up pytest configuration, fixtures, and a lot more.
+02:08 So if you're serious about pytest, this is a great resource.
+02:12 And that's it, today is all about getting practical
+02:15 and tomorrow I'll check back in with you how it is going.
+02:18 Good luck.

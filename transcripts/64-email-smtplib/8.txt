@@ -1,0 +1,33 @@
+00:00 For the next few days, we're going to be working with
+00:03 sending emails with the SMTPLib.
+00:06 And to do that, we're going to break it down,
+00:08 obviously, across a couple of things.
+00:11 The first day is mainly preparation,
+00:13 and again, across both days, it's going to be a bit taxing,
+00:17 but just bear with it.
+00:19 So you'll need a Gmail account,
+00:21 and you'll need to obtain your Gmail application ID.
+00:25 There is a video on exactly how to do that,
+00:28 and it'll walk you through it from start to finish.
+00:31 Then, you're going to, pretty much still on Day 1,
+00:35 send an email with SMTPLib.
+00:39 So it's very cool, you get to send that email using code,
+00:42 so that's fantastic, all right?
+00:46 Day 2, you're going to actually
+00:48 make things a little bit nicer,
+00:50 and learn what you can about
+00:52 the Multipurpose Internet Mail Extensions module.
+00:58 So, you'll learn a couple of little things there,
+01:01 you'll also learn a little trick,
+01:03 which will allow you to maintain or honor your BCC rules.
+01:09 Okay, I'll explain that in the video, you'll find out.
+01:12 And lastly, Day 3, what I would like you to do is,
+01:17 now that you have your perfect
+01:21 basic email script, okay, and it works,
+01:25 I'd like you to start adding data to it.
+01:27 So figure out somewhere to pull the data from,
+01:29 it could be from a previous challenge
+01:31 in this entire 100 Days Of Code course, could be anything.
+01:34 But what I'd like you to do is
+01:36 get that data into an email and email it off to yourself.
+01:41 And that's it, so have fun, enjoy the next 3 days.

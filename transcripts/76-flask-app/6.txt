@@ -1,0 +1,39 @@
+00:00 This is the ReadMe for the course,
+00:02 for the Python Flask introduction.
+00:04 This is going to guide you through the next 3 days,
+00:08 so obviously we have the videos coming,
+00:11 but there are some little things you should know
+00:13 before you get cracking, so looking at these days here,
+00:18 the first thing you're actually going to do is set up
+00:20 your environment and then create your first Flask app, okay?
+00:25 It's quite simple.
+00:27 You'll probably complete these very quickly,
+00:29 but there are a few concepts that you should know,
+00:31 so just follow along with the videos
+00:34 and then play around with your Flask app.
+00:36 What I'd like you to do on the first day
+00:39 is start thinking about potential CLI scripts,
+00:43 maybe apps that you've already written for the command line,
+00:47 and then see how you can Flaskify them,
+00:50 turn them into Flask apps.
+00:52 Just have a think about that one.
+00:54 For the second day, what I'd like you to do
+00:57 is go through the videos, and you're going to be working
+01:00 through dictionary data, how to pass that data
+01:03 from your Flask app into your Jinja template.
+01:07 This is very, very critical, so it's a good day
+01:10 to dedicate just to that, alright?
+01:13 And play around with that, see what else you can do with it.
+01:18 If you want to dive into the more advanced functionality,
+01:20 you can, with databases and whatnot.
+01:24 But really, that is your Day 3,
+01:26 so freestyle, go nuts.
+01:29 The CLI app that you would've thought about on day one,
+01:33 actually try applying Flask to it.
+01:36 Try that on Day 3 and maybe throw in the database thing
+01:40 that you probably played around with on Day 2.
+01:43 So see what other cool advanced techniques
+01:46 you can discover and learn with Flask,
+01:48 and see what you can implement on existing apps.
+01:51 That's your Day 3.
+01:53 And with that, just pop on over to the next video.
