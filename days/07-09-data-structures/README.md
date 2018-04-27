@@ -35,8 +35,6 @@ Perform the following tasks on the list and dict. The less you look at them, the
 
 - Print out the 27th value in the dictionary.
 
-- Replace the 15th key in the dictionary with the 28th item in the list.
-
 
 ### Time to share what you've accomplished!
 
