@@ -19,7 +19,9 @@ Here's an example of how you might get started.
 
 **Goal**: Predict the menu items at an (American) Thanksgiving meal for a random region in the US.
 
-**Data set**: [Thanksgiving 2015](https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015)
+**Data set**: [Thanksgiving 2015](https://github.com/mikeckennedy/data-1/tree/master/thanksgiving-2015)
+
+(Note: I forked FiveThirtyEight's data and edit it here due to an encoding error)
 
 **Implementation**: Write a program that 
 
