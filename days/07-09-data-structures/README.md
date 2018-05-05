@@ -18,9 +18,9 @@ Feel free to watch the *What we learned* video as well as a recap!
 
 Click this link: [https://codechalleng.es/bites/promo/datastructures](https://codechalleng.es/bites/promo/datastructures)
 
-This will take you to our CodeChalleng.es platform and give unlock a Bite for free.
+This will take you to our CodeChalleng.es platform and unlock a Bite for free.
 
-Follow the instructions on page once you've redeemed the Bite and see if you can solve the problem!
+Follow the on page instructions once you've redeemed the Bite and see if you can solve the problem!
 
 
 ## Day N+2: Your Turn!
