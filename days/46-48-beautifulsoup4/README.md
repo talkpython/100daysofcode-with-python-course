@@ -4,7 +4,7 @@ Web Scraping! It's one of the main reasons we all love and hate to code.
 
 BeautifulSoup4 (BS4) thankfully makes it a bit easier for us Pythonistas.
 
-Over the following couple of days you're going to learn how to use BS4 to website data pulled down using the Requests module.
+Over the following couple of days you're going to learn how to use BS4 to work with website data pulled down using the Requests module.
 
 
 ## Day N: Setup, Overview and Making your first BS4 Scraper
