@@ -16,6 +16,10 @@ After watching the first 4 videos pop into your Python shell and start playing a
 
 Yep that's right! For your second day, use itertools to create a script that simulates traffic lights!
 
+The idea is to perhaps... *cycle* (hint hint!) through the different colours of a set of traffic lights - red, amber and green - printing the name of the colour every time the cycle occurs. 
+
+For bonus points: traffic lights normally cycle between green and red based on traffic levels so you never know exactly when the change will happen. This is a great chance to throw some randomness into your script.
+
 If you get absolutely stuck, watch the *Traffic Lights* video to see how we did it.
 
 
