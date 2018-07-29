@@ -1,0 +1,26 @@
+# This file can be used by Anaconda users in order to create their virtual
+# environment. If you open up the command prompt/shell in the 
+# 100daysofcode-with-python-course directory, simply use this command:
+#
+# conda env create -f requirements/bob-environment.yml
+name: 100days
+channels:
+  - defaults
+dependencies:
+  - cython
+  - feedparser
+  - ipykernel
+  - jupyter
+  - matplotlib
+  - numpy
+  - pillow
+  - plotly
+  - pytest
+  - pytest-cov
+  - python=3.6.6
+  - requests
+  - selenium
+  - pip:
+    - tweepy
+    - wordcloud
+    - PyGithub
