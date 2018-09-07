@@ -22,7 +22,7 @@ Work on *Bite 7 - Parsing dates from logs* for your second day of learning datet
 
 Edit: We decided to simplify Bite 7 slightly after some feedback we received from students. We've now removed the requirement to read in the file which should keep the Bite focused on the theme.
 
-Additionally, we've added another Bite that should be more appropriate for beginners. Unlock it here: [https://codechalleng.es/bites/promo/datetimes_starter](https://codechalleng.es/bites/promo/datetimes_starter)
+Additionally, we've added another TWO free Bites that should be more appropriate for beginners. Unlock them here: [https://codechalleng.es/bites/promo/datetimes_starter](https://codechalleng.es/bites/promo/datetimes_starter) and [https://codechalleng.es/bites/promo/more-datetimes](https://codechalleng.es/bites/promo/more-datetimes).
 
 
 ## Day N+2: Your Turn!
