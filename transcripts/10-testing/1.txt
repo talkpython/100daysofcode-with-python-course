@@ -8,7 +8,7 @@
 00:15 which lets you guess a number from the command line.
 00:18 And although is a simple program,
 00:20 it has a lot to offer in showing how to use pytest,
-00:24 for example to fall out of errors,
+00:24 for example to validate errors,
 00:26 capture standard output,
 00:28 mocking certain functionality, and more.
 00:31 By writing the test, I will also show you
