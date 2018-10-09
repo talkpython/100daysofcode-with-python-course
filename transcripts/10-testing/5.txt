@@ -9,17 +9,17 @@
 00:26 What I do need is to import the actual program.
 00:29 So from guess import get random number and the game class.
 00:35 Now, one thing I want to show you in this video is how to
-00:38 mark an object. Because Get Random Number, as you can see
+00:38 mock an object. Because Get Random Number, as you can see
 00:42 at the right, uses a random integer from start to end.
 00:45 And random returns to something randomly every time.
 00:49 So how do you actually test that? And the way to do that
-00:52 in testing land is to mark an object.
+00:52 in testing land is to mock an object.
 00:54 And for this I'm just going to use the unittest
-00:57 patch method on the mark module
+00:57 patch method on the mock module
 01:00 because it's a perfect fit for this scenario.
-01:05 So from unittest.mark, import patch.
+01:05 So from unittest.mock, import patch.
 01:10 I actually need to import to random module
-01:12 because that's the one we're going to mark.
+01:12 because that's the one we're going to mock.
 01:15 And you can use it as patch object
 01:20 and that's to random module. Just specify the function
 01:24 or method you want to patch.
@@ -38,7 +38,7 @@
 02:14 cannot really control and I have another example later
 02:17 about the input function where we ask for user input,
 02:21 which is another area that can be anything,
-02:24 so you want to mark that out.
+02:24 so you want to mock that out.
 02:27 So with this code written,
 02:28 let's go back to the command line and run this test.
 02:31 And I'm using Control Z on a Mac with foreground to
