@@ -53,7 +53,7 @@ There are 7 matching episodes:
 
 Your app is basically working. Today we'll polish it up a bit with some code cleanup and user interaction.
 
-Start with code cleanup. We have been passing dictionaries around. These are not so much fun. Let's use `nametuples`. You create one link this:
+Start with code cleanup. We have been passing dictionaries around. These are not so much fun. Let's use `namedtuples`. You create one like this:
 
 ```python
 import collections
