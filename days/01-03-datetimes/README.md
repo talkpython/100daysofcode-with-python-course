@@ -33,6 +33,7 @@ A fun project would be to create yourself a Pomodoro Timer that incorporates dat
 
 This could also be applied to a stopwatch app. Use time of course but also throw in the timestamps and even some basic calculations on the difference between the start and end timestamps.
 
+We encourage you to _pull request_ your work via [PyBites Code Challenge #52](https://codechalleng.es/challenges/52/). Have fun!
 
 ### Time to share what you've accomplished!
 
