@@ -74,7 +74,7 @@ def game_loop(player1, player2, rolls):
     # Compute who won
 ```
 
-Bonus points for address the possibility of a tie after three rounds.
+Bonus points if you address the possibility of a tie after three rounds.
 
 ## Day 15: Tidy up standard **Rock, Paper, Scissors**
 
