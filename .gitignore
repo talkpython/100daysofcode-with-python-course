@@ -111,3 +111,5 @@ rock_paper_scissors.sqlite
 
 # TexturePacker
 *.tps
+
+**.DS_Store
