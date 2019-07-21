@@ -4,7 +4,7 @@
 
 ## Day 1: Quick overview
 
-This first day we will explore the basics of the `re` module (in Python's standard libary), so you can start adding this powerful skill to your Python toolkit.
+In today's videos I will teach you the 80/20 you need to know about Python's `re` (regular expression) module. It's a powerful skill to add Python toolkit, but I will also show when not to use regexes. 
 
 ## Day 2: Solidify what you've learned
 
