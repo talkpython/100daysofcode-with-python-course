@@ -4,7 +4,7 @@
 
 Welcome to this lesson. Today you will learn about some powerful new data structures: `namedtuple`, `defaultdict`, `Counter` and `deque`.
 
-I prepared a [Jupyter notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/04-06-collections/collections.ipynb) so you can follow along with this lesson.
+Today you watch the videos. I also prepared a [Jupyter notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/04-06-collections/collections.ipynb) so you can follow along with this lesson.
 
 ## Day 2: Practice using movie data
 
