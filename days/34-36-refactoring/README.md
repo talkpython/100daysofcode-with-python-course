@@ -1,6 +1,6 @@
 # Refactoring / Pythonic code
 
-In [this lesson's notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/34-36-refactoring/refactoring.ipynb) I will show you 10 ways to improve your Python code. 
+In today's videos I will show you 10 ways to improve your Python code. The accompanying Jupyter notebook is [here](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/34-36-refactoring/refactoring.ipynb).
 
 This is by no means a complete list, just some tips to get you started. The more time you spend with Python the more patterns you start to recognize and the more elegant your code will become.
 
