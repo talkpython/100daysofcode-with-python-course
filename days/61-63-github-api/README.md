@@ -1,12 +1,10 @@
-# Using Python + Github API¶
+# Using Python + Github API
 
-Welcome to this lesson. I prepared [a notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/61-63-github-api/github-api.ipynb) so you can follow along.
+In this lesson I will show you how to use [PyGithub](https://github.com/PyGithub/PyGithub) to retrieve public data from Github profiles and how to automatically create [a gist](https://help.github.com/en/articles/creating-gists).
 
 ## Day 1: Exploring the PyGithub module
 
-In this lesson I will show you how to use [PyGithub](https://github.com/PyGithub/PyGithub) to retrieve public data from Github profiles. Secondly I will show you how to automatically create a gist.
-
-Today you follow along with the videos and my notebook.
+Today you watch the videos, the accompanying notebook is [here](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/61-63-github-api/github-api.ipynb).
 
 ## Day 2 and 3: Practice
 
