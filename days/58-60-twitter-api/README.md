@@ -6,7 +6,7 @@ In today's lesson we will do some analysis of Twitter data! If you want to follo
 
 First you will set up a [virtual environment](https://pybit.es/the-beauty-of-virtualenv.html), install `tweepy` and set some ENV variables.
 
-Then we will retrieve PyBites tweets which we will put in a [nice wordcloud]() in the shape of [our PyBites logo](https://codechalleng.es/static/img/pybites-premium.png).
+Then we will retrieve PyBites tweets which we will put in a [nice wordcloud](https://github.com/amueller/word_cloud) in the shape of [our PyBites logo](https://codechalleng.es/static/img/pybites-premium.png).
 
 ![pybites wordcloud](wordcloud-image.png)
 
