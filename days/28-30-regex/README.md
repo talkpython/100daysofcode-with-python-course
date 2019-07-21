@@ -16,7 +16,7 @@ The best way to learn though is to get practical: try to write some regexes inte
 
 ## Day 3: Put your new skill to the test
 
-Take [Bite 2. Regex Fun](https://codechalleng.es/bites/2/) on our platform. It let's you write 3 regexes. 
+Take [Bite 2. Regex Fun](https://codechalleng.es/bites/2/) on our platform. It lets you write 3 regexes. 
 
 Do you prefer to work on your desktop? Maybe you can try [blog challenge 42 - Mastering Regular Expressions](https://codechalleng.es/challenges/42/) which is similar but lets you solve 6 regex problems!
 
