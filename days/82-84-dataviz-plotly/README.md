@@ -24,7 +24,7 @@ It should not be that hard, data is everywhere! You probably need some parsing a
 
 Pick one of many data viz libraries and create some cool visualizations and share them with us on Twitter.
 
-Lack inspiration? [Randy Olson](https://twitter.com/randal_olson) tends to tweet really cool [#dataviz stuff](https://twitter.com/hashtag/dataviz?src=hash), but remember start simple, this topic alone could cover a 100 Days :)
+Lack inspiration? [Randy Olson](https://twitter.com/randal_olson) tends to tweet really cool [#dataviz stuff](https://twitter.com/hashtag/dataviz?src=hash), however remember to start simple, data viz alone could fill a 100 Days of Code :)
 
 Enjoy and remember: keep calm and code in Python!
 
