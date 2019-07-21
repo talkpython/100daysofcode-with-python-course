@@ -4,7 +4,7 @@
 
 Welcome to this lesson. Decorators are a sometimes overlooked and more advanced feature. They support a nice way to abstract your code. Although hard to grasp at first there is not that much to it. 
 
-I prepared a [Jupyter notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/22-24-decorators/decorators.ipynb) so you can follow along with this lesson.
+In today's videos you will watch me explain this powerful concept. You can follow along with my Jupyter notebook [here](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/22-24-decorators/decorators.ipynb).
 
 ## Day 2: A practical exercise
 
