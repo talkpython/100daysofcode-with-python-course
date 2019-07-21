@@ -4,7 +4,7 @@
 
 > List comprehensions and generators are in my top 5 favorite Python features leading to clean, robust and Pythonic code.
 
-Welcome to this lesson. Today you will learn about two powerful techniques you can use in Python: list comprehensions and generators.
+Welcome to this lesson. In today's videos you will learn two powerful techniques you can use in Python: list comprehensions and generators.
 
 I prepared a [Jupyter notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/16-18-listcomprehensions-generators/list-comprehensions-generators.ipynb) so you can follow along with this lesson.
 
