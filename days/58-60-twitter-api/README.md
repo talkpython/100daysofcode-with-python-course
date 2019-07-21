@@ -1,6 +1,6 @@
 # Twitter Data Analysis with Python
 
-Welcome to this lesson. I prepared [a notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/58-60-twitter-api/twitter-api.ipynb) so you can follow along.
+In today's lesson we will do some analysis of Twitter data! If you want to follow along with the videos of this lesson, you can use [this notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/58-60-twitter-api/twitter-api.ipynb).
 
 ## Day 1: Retrieving tweets with Tweepy
 
