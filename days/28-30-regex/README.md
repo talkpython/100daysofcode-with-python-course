@@ -4,7 +4,7 @@
 
 ## Day 1: Quick overview
 
-In today's videos I will teach you the 80/20 you need to know about Python's `re` (regular expression) module. It's a powerful skill to add Python toolkit, but I will also show when not to use regexes. 
+In today's videos I will teach you the 80/20 you need to know about Python's `re` (regular expression) module. It's a powerful skill to add to your Python toolkit, however I will also show you when not to use them. 
 
 ## Day 2: Solidify what you've learned
 
