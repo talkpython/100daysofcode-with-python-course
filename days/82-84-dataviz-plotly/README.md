@@ -1,12 +1,12 @@
 # Data Vizualization with Plotly
 
-Welcome to this lesson. I prepared [a notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/82-84-dataviz-plotly/data-viz.ipynb) so you can follow along.
-
 [Plotly](https://plot.ly/python/) is a data visualization library that lets you create beautiful graphs and is easy to use. 
 
-In this lesson we use it to analyze PyBites' blog feed data.
+In this lesson we use it to analyze some PyBites blog feed data.
 
 ## Day 1: Getting the data
+
+Today you watch the videos. You can follow along with the examples [using my notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/82-84-dataviz-plotly/data-viz.ipynb).
 
 We use `feedparser` and `collections.Counter` to prepare PyBites feed data, then use `plotly` to look at:
 
@@ -14,9 +14,7 @@ We use `feedparser` and `collections.Counter` to prepare PyBites feed data, then
 2. what categories we post most often in, and
 3. what are tags we commonly use on our posts.
 
-Today you watch the videos and follow along with [my notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/82-84-dataviz-plotly/data-viz.ipynb).
-
-At the end of today's lesson, I provide some additional links to data viz work we've done on our blog.
+At the end of today's lesson, I provide some additional links to data viz work we've done on our PyBites blog.
 
 ## Day 2 and 3: Roll your own!
 
