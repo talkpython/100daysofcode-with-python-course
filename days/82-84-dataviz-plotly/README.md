@@ -11,8 +11,8 @@ Today you watch the videos. You can follow along with the examples [using my not
 We use `feedparser` and `collections.Counter` to prepare PyBites feed data, then use `plotly` to look at:
 
 1. how often we post,
-2. what categories we post most often in, and
-3. what are tags we commonly use on our posts.
+2. what categories we post most often in,
+3. and what tags we commonly use on our posts.
 
 At the end of today's lesson, I provide some additional links to data viz work we've done on our PyBites blog.
 
