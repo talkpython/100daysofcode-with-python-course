@@ -14,7 +14,7 @@ Be warned: mastering `pytest` might feel like possessing a super power!
 
 ## Day N: Setup + Learn pytest
 
-Today you will pip install `pytest` and `pytest-cov` and watch the video lectures. 
+Today you will pip install `pytest` and `pytest-cov` (best practice is to use a [virtual environment](https://pybit.es/the-beauty-of-virtualenv.html)) and watch the video lectures. 
 
 Start thinking about how you can write tests for your code ...
 

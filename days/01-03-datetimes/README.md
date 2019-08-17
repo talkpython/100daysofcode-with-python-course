@@ -22,7 +22,7 @@ Work on *Bite 7 - Parsing dates from logs* for your second day of learning datet
 
 Edit: We decided to simplify Bite 7 slightly after some feedback we received from students. We've now removed the requirement to read in the file which should keep the Bite focused on the theme.
 
-Additionally, we've added another Bite that should be more appropriate for beginners. Unlock it here: [https://codechalleng.es/bites/promo/datetimes_starter](https://codechalleng.es/bites/promo/datetimes_starter)
+Additionally, we've added another TWO free Bites that should be more appropriate for beginners. Unlock them here: [https://codechalleng.es/bites/promo/datetimes_starter](https://codechalleng.es/bites/promo/datetimes_starter) and [https://codechalleng.es/bites/promo/more-datetimes](https://codechalleng.es/bites/promo/more-datetimes).
 
 
 ## Day N+2: Your Turn!
@@ -33,6 +33,7 @@ A fun project would be to create yourself a Pomodoro Timer that incorporates dat
 
 This could also be applied to a stopwatch app. Use time of course but also throw in the timestamps and even some basic calculations on the difference between the start and end timestamps.
 
+We encourage you to _pull request_ your work via [PyBites Code Challenge #52](https://codechalleng.es/challenges/52/). Have fun!
 
 ### Time to share what you've accomplished!
 
