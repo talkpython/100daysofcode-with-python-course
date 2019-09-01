@@ -15,7 +15,7 @@ def read_roll(row: dict):
     print("Roll: {}".format(name))
     for k in row.keys():
         can_defeat = row[k].strip().lower() == 'win'
-        print(" * {} will default {}? {}".format(name, k, can_defeat))
+        print(" * {} will defeat {}? {}".format(name, k, can_defeat))
 
     print()
 
