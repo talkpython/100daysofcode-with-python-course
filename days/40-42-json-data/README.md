@@ -7,7 +7,7 @@ This lesson will walk you through importing, decoding, understanding and parsing
 
 ## Day N: Understand and download JSON output
 
-Two videos to watch today: *Inspecting JSON schema* and *Pulling and decoding JSON data*.
+Two videos to watch today: *Inspecting JSON schema* and *Request JSON data from an API*.
 
 These videos will demo some basic JSON schema as well a complex data set. After watching, feel free to play around with your own data sets or use the example in the repo code.
 
