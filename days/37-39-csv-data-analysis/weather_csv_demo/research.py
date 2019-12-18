@@ -53,7 +53,7 @@ def hot_days() -> List[Record]:
 
 
 def cold_days() -> List[Record]:
-    return sorted(data, key=lambda r: r.actual_max_temp)
+    return sorted(data, key=lambda r: r.actual_min_temp)
 
 
 def wet_days() -> List[Record]:
