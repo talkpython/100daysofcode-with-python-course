@@ -7,7 +7,7 @@ It's a wonderful tool for copying and pasting to the clipboard using your Python
 
 ## Day N: Pyperclip usage and an Affiliate script
 
-Get your environment setup and learn how to use Pyperclip with the setup and usage videos.
+Get your environment setup and learn how to use Pyperclip with the setup and usage videos. Note to **Linux** users: You likely need to install `xclip` to get `Pyperclip` to work on your system, [more info here](https://github.com/talkpython/100daysofcode-with-python-course/issues/46).
 
 Once done, move onto *Generate affiliate links with Pyperclip* to see a solid use case for Pyperclip (something we use ourselves!).
 
