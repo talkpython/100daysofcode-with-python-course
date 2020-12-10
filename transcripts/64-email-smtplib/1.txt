@@ -5,7 +5,7 @@
 00:09 just because I love automating stuff, right.
 00:12 And this is one of the first cool things
 00:14 that you're going to automate with Python.
-00:17 Sending emails virus stripped
+00:17 Sending emails via a script
 00:19 is extremely gratifying and awesome
 00:21 if you want to spam your friends
 00:23 and I think you're really going to enjoy it, too.
