@@ -1,41 +1,40 @@
 #!python3
 
-from datetime import datetime
 from datetime import date
+from datetime import datetime
 
 datetime.today()
-#datetime.datetime(2018, 2, 19, 14, 38, 52, 133483)
+# datetime.datetime(2021, 1, 19, 14, 38, 52, 133483)
 
 today = datetime.today()
 
-
 type(today)
-#<class 'datetime.datetime'>
+# <class 'datetime.datetime'>
 
 
-todaydate = date.today()
+today_date = date.today()
 
-todaydate
-#datetime.date(2018, 2, 19)
+today_date
+# datetime.date(2021, 1, 19)
 
-type(todaydate)
-#<class 'datetime.date'>
+type(today_date)
+# <class 'datetime.date'>
 
-todaydate.month
-#2
+today_date.month
+# 1
 
-todaydate.year
-#2018
+today_date.year
+# 2021
 
-todaydate.day
-#19
+today_date.day
+# 19
 
 
-christmas = date(2018, 12, 25)
+christmas = date(today_date.year, 12, 25)
 christmas
-#datetime.date(2018, 12, 25)
+# datetime.date(2021, 12, 25)
 
-if christmas is not todaydate:
-    print("Sorry there are still " + str((christmas - todaydate).days) + " until Christmas!")
+if christmas != today_date:
+    print("Sorry there are still " + str((christmas - today_date).days) + " until Christmas!")
 else:
     print("Yay it's Christmas!")
