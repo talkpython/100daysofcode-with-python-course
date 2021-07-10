@@ -22,7 +22,7 @@ def find_movie_by_title(keyword: str) -> List[Movie]:
         api_log.warn("No keyword supplied")
         raise ValueError('Must specify a search term.')
 
-    url = f'http://movie_service.talkpython.fm/api/search/{keyword}'
+    url = f'https://movieservice.talkpython.fm/api/search/{keyword}'
 
     resp = requests.get(url)
     api_log.trace("Request finished, status code {}.".format(resp.status_code))

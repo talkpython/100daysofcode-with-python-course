@@ -12,7 +12,7 @@ def find_movie_by_title(keyword: str) -> List[Movie]:
     if not keyword or not keyword.strip():
         raise ValueError('Must specify a search term.')
 
-    url = f'http://movie_service.talkpython.fm/api/search/{keyword}'
+    url = f'https://movieservice.talkpython.fm/api/search/{keyword}'
 
     resp = requests.get(url)
     resp.raise_for_status()
