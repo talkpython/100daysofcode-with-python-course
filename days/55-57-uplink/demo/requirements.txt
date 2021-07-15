@@ -1,2 +1,3 @@
 requests
-uplink==0.4.0
+# Moving to the latest version of uplink to keep things fresh and relevant.
+uplink==0.9.4

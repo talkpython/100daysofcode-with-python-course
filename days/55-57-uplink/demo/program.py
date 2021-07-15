@@ -50,7 +50,8 @@ def write_post():
     resp = svc.create_new_entry(title, content, view_count)
 
     print()
-    print("Created new post successfully: {}".format(resp.json().get('id')))
+    resp = resp.json()
+    print("Created new post successfully: {}".format(resp.get('id')))
     print()
 
 
