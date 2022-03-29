@@ -8,7 +8,7 @@ Course details page: [**talkpython.fm/100days**](https://talkpython.fm/100days?u
 
 ## Course Summary
 
-#100DaysOfCode in Python is your perfect companion to take the 100 days of code challenge and be successful. This course is 1-part video lesson, 2-parts guided projects. You will be amazed at how many Python technologies and libraries you learn on this journey. Join the course and get started.
+#100DaysOfCode in Python are your perfect companion to take the 100 days of code challenge and be successful. This course is 1-part video lesson, 2-parts guided projects. You will be amazed at how many Python technologies and libraries you learn on this journey. Join the course and get started.
 
 ## What's this course about and how is it different?
 
@@ -35,13 +35,13 @@ View the [full course outline](https://training.talkpython.fm/courses/explore_10
 
 This course is for anyone who wants to immerse themselves in Python for 100 days worth of learning and hands-on projects.
 
-We don’t start from absolute zero in terms of programming but if you are new to Python we have a language appendix and we start somewhat slow. By the end of the course, we get into intermediate-level Python projects.
+We don’t start from absolute zero in terms of programming, but if you are new to Python we have a language appendix and we start somewhat slow. By the end of the course, we get into intermediate-level Python projects.
 
 ## Course flow and the 33 projects
 
 ![Course flow](readme_resources/100days-course-flow.png)
 
-We have broken the 100 days worth of coding into 33 3-day segments. As you can see, the first day is largely learning the new topics (HTTP APIs, web scraping, databases, etc.). The following two days have some guidance but is much more hands-on than the first day.
+We have broken the 100 days worth of coding into 33 3-day segments. As you can see, the first day is largely learning the new topics (HTTP APIs, web scraping, databases, etc.). The following two days have some guidance, but is much more hands-on than the first day.
 
 ## Get the full course details
 
