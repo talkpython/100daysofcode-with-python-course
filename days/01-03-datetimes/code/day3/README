@@ -1,0 +1,3 @@
+
+How to run (25 minutes focus time):
+python3 pomodoro_timer.py -t 25
