@@ -34,7 +34,7 @@ On the topic of more complex code, one thing I did not cover are `pytest` fixtur
 
 > The purpose of test fixtures is to provide a fixed baseline upon which tests can reliably and repeatedly execute. pytest fixtures offer dramatic improvements over the classic xUnit style of setup/teardown functions - [pytest fixtures: explicit, modular, scalable](https://docs.pytest.org/en/latest/fixture.html)
 
-A typical example is a database app that needs to setup and tear down its state before each test. Today try to come up with a use case to use `@pytest.fixture` after checking out our article: [All You Need to Know to Start Using Fixtures in Your pytest Code](https://pybit.es/pytest-fixtures.html).
+A typical example is a database app that needs to setup and tear down its state before each test. Today try to come up with a use case to use `@pytest.fixture` after checking out our article: [All You Need to Know to Start Using Fixtures in Your pytest Code](https://pybit.es/articles/pytest-fixtures/).
 
 Ready to become a `pytest` ninja? You can do it!
 
