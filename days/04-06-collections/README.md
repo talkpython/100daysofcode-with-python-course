@@ -8,11 +8,9 @@ Today you watch the videos. I also prepared a [Jupyter notebook](https://github.
 
 ## Day 2: Practice using movie data
 
-You get to use these new data structures I encourage you to code an exercise: [PyBites Code Challenge 13 - Highest Rated Movie Director](https://pybit.es/articles/codechallenge13). 
+You get to use these new data structures I encourage you to code an exercise: [PyBites Code Challenge 13 - Highest Rated Movie Director](https://pybit.es/articles/codechallenge13).
 
 See the [notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/04-06-collections/collections.ipynb) for more info how to complete this exercise.
-
-You can also take a slimmed down version of this exercise [on our platform](https://codechalleng.es/bites/30/).
 
 ## Day 3: More practice on your own data
 

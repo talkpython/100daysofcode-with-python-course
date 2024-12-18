@@ -25,7 +25,7 @@ Ideally you combine this lesson with [Day 10-12 `pytest`](https://github.com/tal
 
 ## Day 2 and 3: Refactor your code
 
-Take our [Blog Code Challenge 30: The Art of Refactoring: Improve Your Code](https://codechalleng.es/challenges/30/)
+Take our [Blog Code Challenge 30: The Art of Refactoring: Improve Your Code](https://pybit.es/articles/codechallenge30/)
 
 Check out [the notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/34-36-refactoring/refactoring.ipynb) for further instructions.
 
