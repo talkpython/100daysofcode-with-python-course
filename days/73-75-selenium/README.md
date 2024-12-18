@@ -10,9 +10,9 @@ Today you watch the videos. You can follow along with my notebook [here](https:/
 
 ## Day 2 and 3: Practice time!
 
-Now it's your turn. The goal is to have you get your hands dirty using Python Selenium. 
+Now it's your turn. The goal is to have you get your hands dirty using Python Selenium.
 
-Try to complete [PyBites Code Challenge 32 - Test a Simple Django App With Selenium ](https://codechalleng.es/challenges/32/) and PR your work. [My notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/73-75-selenium/python-selenium.ipynb) has some more pointers as well.
+Try to complete [PyBites Code Challenge 32 - Test a Simple Django App With Selenium ](https://pybit.es/articles/codechallenge32/) and PR your work. [My notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/73-75-selenium/python-selenium.ipynb) has some more pointers as well.
 
 ## Time to share what you've accomplished!
 

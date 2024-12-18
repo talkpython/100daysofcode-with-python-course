@@ -4,7 +4,7 @@
 
 ## Day 1: Quick overview
 
-In today's videos I will teach you the 80/20 you need to know about Python's `re` (regular expression) module. It's a powerful skill to add to your Python toolkit, however I will also show you when not to use them. 
+In today's videos I will teach you the 80/20 you need to know about Python's `re` (regular expression) module. It's a powerful skill to add to your Python toolkit, however I will also show you when not to use them.
 
 ## Day 2: Solidify what you've learned
 
@@ -16,9 +16,9 @@ The best way to learn though is to get practical: try to write some regexes inte
 
 ## Day 3: Put your new skill to the test
 
-Take [Bite 2. Regex Fun](https://codechalleng.es/bites/2/) on our platform. It lets you write 3 regexes. 
+Take [Bite 2. Regex Fun](https://pybitesplatform.com/bites/regex-fun/) on our platform. It lets you write 3 regexes.
 
-Do you prefer to work on your desktop? Maybe you can try [blog challenge 42 - Mastering Regular Expressions](https://codechalleng.es/challenges/42/) which is similar but lets you solve 6 regex problems!
+Do you prefer to work on your desktop? Maybe you can try [blog challenge 42 - Mastering Regular Expressions](https://pybit.es/articles/codechallenge42/) which is similar but lets you solve 6 regex problems!
 
 B. More fun: `wget` or `request.get` your favorite site and use regex on the output to parse out data (fun trivia: [a similar exercise](https://pybit.es/js_time_scraper_ch.html) is where our code challenges started).
 

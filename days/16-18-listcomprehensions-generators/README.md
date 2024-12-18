@@ -18,11 +18,12 @@ Look at your code and see if you can refactor it to use list comprehensions. Sam
 
 I will detail the solution of yesterday's exercise [in my notebook](https://github.com/talkpython/100daysofcode-with-python-course/blob/master/days/16-18-listcomprehensions-generators/list-comprehensions-generators.ipynb)
 
-Today if you have time left, I encourage you to try 2 extra exercises [on our platform](https://codechalleng.es):
-- [Bite 5. Parse a list of names](https://codechalleng.es/bites/5/) (use a set comprehension in first function)
-- [Bite 26. Dictionary comprehensions are awesome](https://codechalleng.es/bites/promo/awesome-dict-comprehensions)
+Today if you have time left, I encourage you to try another exercise [on our platform](https://pybitesplatform.com):
 
-If you still have time left, or you prefer to practice generators check out this cool blog code challenge: [Code Challenge 11 - Generators for Fun and Profit](https://codechalleng.es/challenges/11/)
+- [Parse a list of names](https://pybitesplatform.com/bites/parse-a-list-of-names/)
+- [Dictionary comprehensions are awesome](https://pybitesplatform.com/bites/dictionary-comprehensions-are-awesome/)
+
+If you still have time left, or you prefer to practice generators check out this cool blog code challenge: [Code Challenge 11 - Generators for Fun and Profit](https://pybit.es/articles/codechallenge11/)
 
 ## Time to share what you've accomplished!
 
